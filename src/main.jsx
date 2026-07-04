@@ -260,10 +260,10 @@ function App() {
     <main className="appShell">
       <header className="hero">
         <div className="topLine">
-          <p className="eyebrow">Sungmi Chinese Drill</p>
+          <p className="eyebrow">Chinese Drill</p>
           <p className="headerStats"><Sparkles size={14} /> {statsText}</p>
         </div>
-        <h1>중국어 단어를 외워보자</h1>
+        <h1>중국어 단어를 외워보자😆</h1>
         <PromptModeButtons promptMode={promptMode} onChange={changePromptMode} />
       </header>
 
