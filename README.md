@@ -1,48 +1,33 @@
-# 중국어 랜덤 카드 단어장 웹앱
+# 성미 중국어 랜덤 카드 - 모바일 암기장 업데이트
 
-Vercel Hobby 무료 플랜에 올려서 사용할 수 있는 개인용 중국어 랜덤 카드 웹앱입니다.
+이 업데이트는 기존 `vocab.json` 데이터는 그대로 두고 화면 구조만 바꿉니다.
 
-## 들어있는 기능
+## 변경 내용
 
-- 한자/중국어, 한어병음, 한글 뜻 중 하나가 랜덤으로 먼저 표시
-- `정답 보기` 버튼을 누르면 나머지 정보 표시
-- `다음 랜덤 카드` 버튼으로 무한 랜덤 반복
-- 단어, 표현, 문법 항목과 예문 문장을 함께 랜덤 출제
-- HSK/Lesson/유형/학습상태 필터
-- 검색 기능
-- `알아요` / `복습 필요` 표시
-- Space 또는 Enter 키로 정답 보기/다음 카드 진행
+- 모바일에서 카드 글자 크기를 크게 조정
+- 한자만 / 병음만 / 뜻만 / 랜덤 출제 모드 버튼 추가
+- 헤더와 카드 영역을 컴팩트하게 재배치
+- 모바일 화면에서 페이지 전체가 아래로 스크롤되지 않도록 100svh 고정 레이아웃 적용
+- 긴 문장이나 긴 뜻은 자동으로 작은 글자 크기로 표시
+- 필터, 검색, 복습 버튼은 계속 제거 상태 유지
 
-## 단어 데이터 수정 위치
+## 업로드 방법
 
-`src/data/vocab.json`
+GitHub `chinaword` 저장소에서 `Add file → Upload files`를 누른 뒤 이 폴더 안의 아래 항목을 업로드하세요.
 
-기본 데이터 형식:
-
-```json
-{
-  "id": 1,
-  "level": "HSK1",
-  "lesson": "Lesson 1",
-  "category": "인사",
-  "hanzi": "你好",
-  "pinyin": "nǐ hǎo",
-  "meaningKo": "안녕하세요",
-  "partOfSpeech": "표현",
-  "exampleZh": "你好，我是韩国人。",
-  "examplePinyin": "Nǐ hǎo, wǒ shì Hánguó rén.",
-  "exampleKo": "안녕하세요, 저는 한국 사람입니다.",
-  "tags": ["인사", "기초"]
-}
+```text
+src
+README.md
 ```
 
-예문이 있는 항목은 앱에서 자동으로 별도 `문장` 카드로도 출제됩니다.
+커밋 메시지 예시:
 
-## Vercel 설정
+```text
+Make mobile compact quiz layout
+```
 
-- Framework Preset: Vite
-- Build Command: `npm run build`
-- Output Directory: `dist`
-- Install Command: `npm install`
+업로드 후 Vercel이 자동으로 재배포합니다.
 
-`package-lock.json`은 포함하지 않았습니다.
+## 유지되는 데이터
+
+이번 ZIP에는 `src/data/vocab.json`이 포함되어 있지 않습니다. 기존 HSK 1급/2급 및 교재 단어장 데이터는 유지됩니다.
