@@ -323,7 +323,7 @@ function App() {
       <section className="hero">
         <div>
           <p className="eyebrow">Sungmi Chinese Random Drill</p>
-          <h1>성미 중국어 랜덤 카드</h1>
+          <h1>중국어 랜덤 카드</h1>
           <p className="heroText">
             한자, 한어병음, 한글 뜻 중 하나가 무작위로 먼저 나오고, 정답 보기를 누르면 나머지 정보가 열립니다.
             단어와 예문 문장이 함께 랜덤 출제됩니다.
