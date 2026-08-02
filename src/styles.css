@@ -240,6 +240,76 @@ h1 {
   line-height: 1.22;
 }
 
+/* 발음 듣기 */
+.speakablePrompt {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font-family: inherit;
+  text-align: center;
+  transition: transform 0.16s ease, opacity 0.16s ease;
+}
+
+.speakablePrompt:active {
+  transform: scale(0.97);
+}
+
+.speakablePrompt.speaking,
+.answerRowSpeak.speaking {
+  animation: speakPulse 0.9s ease-in-out infinite;
+}
+
+@keyframes speakPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.58; }
+}
+
+.speakHint {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin: 0;
+  padding: 4px 11px;
+  border-radius: 999px;
+  background: #f2e4d4;
+  color: var(--accent-strong);
+  font-size: 0.76rem;
+  font-weight: 850;
+}
+
+.answerRowSpeak {
+  width: 100%;
+  border: 1px solid var(--accent);
+  color: inherit;
+  text-align: left;
+  font-family: inherit;
+  transition: transform 0.16s ease;
+}
+
+.answerRowSpeak:active {
+  transform: scale(0.99);
+}
+
+.answerRowSpeak span {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--accent);
+}
+
+.voiceNotice {
+  margin: 10px 0 0;
+  padding: 8px 12px;
+  border-radius: 14px;
+  background: rgba(143, 95, 63, 0.1);
+  color: var(--accent-strong);
+  font-size: 0.76rem;
+  font-weight: 750;
+  line-height: 1.4;
+  text-align: left;
+}
+
 .hiddenGuide {
   display: flex;
   justify-content: center;
@@ -481,6 +551,17 @@ code {
     font-size: 0.78rem;
   }
 
+  .speakHint {
+    padding: 3px 9px;
+    font-size: 0.68rem;
+  }
+
+  .voiceNotice {
+    margin-top: 7px;
+    padding: 6px 9px;
+    font-size: 0.66rem;
+  }
+
   .answerPanel {
     gap: 7px;
     padding: 8px;
@@ -553,7 +634,8 @@ code {
   }
 
   .promptLabel,
-  .hiddenGuide {
+  .hiddenGuide,
+  .speakHint {
     display: none;
   }
 

@@ -1,7 +1,8 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import { createRoot } from 'react-dom/client';
-import { Eye, Shuffle, Sparkles } from 'lucide-react';
+import { Eye, Shuffle, Sparkles, Volume2 } from 'lucide-react';
 import vocabData from './data/vocab.json';
+import { speakChinese, stopSpeaking, useChineseVoice } from './speech';
 import './styles.css';
 
 const PROMPT_TYPES = ['hanzi', 'pinyin', 'meaningKo'];
@@ -106,20 +107,41 @@ function lengthClass(text) {
   return 'textShort';
 }
 
-function HiddenAnswer({ card, promptType }) {
+function HiddenAnswer({ card, promptType, canSpeak, speaking, onSpeak }) {
   const answerRows = PROMPT_TYPES
     .filter((type) => type !== promptType)
-    .map((type) => ({ label: PROMPT_LABELS[type], value: card[type] }))
+    .map((type) => ({ type, label: PROMPT_LABELS[type], value: card[type] }))
     .filter((row) => String(row.value ?? '').trim());
 
   return (
     <div className="answerPanel">
-      {answerRows.map((row) => (
-        <div className="answerRow" key={row.label}>
-          <span>{row.label}</span>
-          <strong className={lengthClass(row.value)}>{row.value}</strong>
-        </div>
-      ))}
+      {answerRows.map((row) => {
+        const speakable = canSpeak && row.type === 'hanzi';
+
+        if (!speakable) {
+          return (
+            <div className="answerRow" key={row.label}>
+              <span>{row.label}</span>
+              <strong className={lengthClass(row.value)}>{row.value}</strong>
+            </div>
+          );
+        }
+
+        return (
+          <button
+            type="button"
+            key={row.label}
+            className={`answerRow answerRowSpeak ${speaking ? 'speaking' : ''}`}
+            onClick={() => onSpeak(card.hanzi)}
+            aria-label={`${row.value} 발음 듣기`}
+          >
+            <span>
+              {row.label} <Volume2 size={12} /> 눌러서 듣기
+            </span>
+            <strong className={lengthClass(row.value)}>{row.value}</strong>
+          </button>
+        );
+      })}
     </div>
   );
 }
@@ -141,8 +163,11 @@ function PromptModeButtons({ promptMode, onChange }) {
   );
 }
 
-function StudyCard({ card, promptType, revealed, onReveal, onNext }) {
+function StudyCard({ card, promptType, revealed, onReveal, onNext, canSpeak, speaking, onSpeak }) {
   const promptText = card?.[promptType] || '';
+  // 뜻만 보고 맞히는 중이면 발음이 정답을 알려주므로, 정답을 연 뒤에만 읽어줍니다.
+  const promptSpeakable = canSpeak && promptType !== 'meaningKo';
+  const promptClassName = `promptText prompt-${promptType} ${lengthClass(promptText)}`;
 
   return (
     <section className={`studyCard ${revealed ? 'revealed' : ''}`} aria-label="랜덤 학습 카드">
@@ -153,11 +178,33 @@ function StudyCard({ card, promptType, revealed, onReveal, onNext }) {
 
       <div className="promptArea">
         <p className="promptLabel">먼저 보고 맞혀보세요</p>
-        <h2 className={`promptText prompt-${promptType} ${lengthClass(promptText)}`}>{promptText}</h2>
+        {promptSpeakable ? (
+          <button
+            type="button"
+            className={`${promptClassName} speakablePrompt ${speaking ? 'speaking' : ''}`}
+            onClick={() => onSpeak(card.hanzi)}
+            aria-label={`${promptText} 발음 듣기`}
+          >
+            {promptText}
+          </button>
+        ) : (
+          <h2 className={promptClassName}>{promptText}</h2>
+        )}
+        {promptSpeakable ? (
+          <p className="speakHint">
+            <Volume2 size={13} /> 눌러서 발음 듣기
+          </p>
+        ) : null}
       </div>
 
       {revealed ? (
-        <HiddenAnswer card={card} promptType={promptType} />
+        <HiddenAnswer
+          card={card}
+          promptType={promptType}
+          canSpeak={canSpeak}
+          speaking={speaking}
+          onSpeak={onSpeak}
+        />
       ) : (
         <div className="hiddenGuide">정답을 떠올린 뒤 버튼을 눌러 확인하세요.</div>
       )}
@@ -190,6 +237,8 @@ function App() {
     resolvePromptType(studyItems[currentIndex], promptMode)
   );
   const [revealed, setRevealed] = useState(false);
+  const [speaking, setSpeaking] = useState(false);
+  const { supported: speechSupported, checked: voiceChecked, voice: chineseVoice } = useChineseVoice();
 
   const todayKey = studyDayKey();
   const todayCount = todayCountState.day === todayKey ? todayCountState.count : 0;
@@ -209,6 +258,21 @@ function App() {
   }, [promptMode]);
 
   const currentCard = studyItems[currentIndex] ?? studyItems[0];
+  const canSpeak = Boolean(chineseVoice && String(currentCard?.hanzi ?? '').trim());
+
+  const handleSpeak = useCallback((text) => {
+    speakChinese(text, {
+      onStart: () => setSpeaking(true),
+      onEnd: () => setSpeaking(false)
+    });
+  }, []);
+
+  // 카드가 바뀌면 이전 카드 음성은 끊습니다.
+  useEffect(() => {
+    stopSpeaking();
+    setSpeaking(false);
+  }, [currentIndex]);
+
   const statsText = useMemo(() => {
     const breakdown = typeBreakdown(studyItems);
     return `전체 ${studyItems.length}개 · ${breakdown} · 오늘 넘긴 카드 ${todayCount}장`;
@@ -234,10 +298,19 @@ function App() {
 
   useEffect(() => {
     function handleKeydown(event) {
+      // 버튼에 포커스가 있을 때의 Enter는 그 버튼이 처리하게 둡니다.
+      if (event.key === 'Enter' && event.target instanceof HTMLButtonElement) return;
+
       if (event.key === ' ' || event.key === 'Enter') {
         event.preventDefault();
         if (revealed) moveNext();
         else setRevealed(true);
+        return;
+      }
+
+      if ((event.key === 's' || event.key === 'S') && canSpeak && (promptType !== 'meaningKo' || revealed)) {
+        event.preventDefault();
+        handleSpeak(currentCard.hanzi);
       }
     }
 
@@ -265,6 +338,13 @@ function App() {
         </div>
         <h1>중국어 단어를 외워보자😆</h1>
         <PromptModeButtons promptMode={promptMode} onChange={changePromptMode} />
+        {voiceChecked && !chineseVoice ? (
+          <p className="voiceNotice">
+            {speechSupported
+              ? '이 기기에 중국어 음성이 없어 발음 듣기가 꺼져 있어요. 설정 → 접근성 → 텍스트 음성 변환에서 중국어(간체) 음성을 설치하면 켜집니다.'
+              : '이 브라우저는 음성 읽기를 지원하지 않아요. 크롬이나 사파리에서 열어보세요.'}
+          </p>
+        ) : null}
       </header>
 
       <StudyCard
@@ -273,9 +353,12 @@ function App() {
         revealed={revealed}
         onReveal={() => setRevealed(true)}
         onNext={moveNext}
+        canSpeak={canSpeak}
+        speaking={speaking}
+        onSpeak={handleSpeak}
       />
 
-      <p className="keyboardHint">Space 또는 Enter: 정답 보기 / 다음 카드</p>
+      <p className="keyboardHint">Space 또는 Enter: 정답 보기 / 다음 카드 · S: 발음 듣기</p>
     </main>
   );
 }
