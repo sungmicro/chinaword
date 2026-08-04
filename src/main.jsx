@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import { createRoot } from 'react-dom/client';
-import { Eye, Shuffle, Sparkles, Volume2 } from 'lucide-react';
+import { Eye, Search, Shuffle, Sparkles, Volume2 } from 'lucide-react';
 import vocabData from './data/vocab.json';
 import { speakChinese, stopSpeaking, useChineseVoice } from './speech';
 import './styles.css';
@@ -19,6 +19,13 @@ const MODE_OPTIONS = [
   { key: 'pinyin', label: '병음만' },
   { key: 'meaningKo', label: '뜻만' }
 ];
+
+const VIEW_OPTIONS = [
+  { key: 'study', label: '랜덤 학습' },
+  { key: 'list', label: '단어장' }
+];
+
+const LESSON_ORDER = ['HSK1 150', 'HSK2 추가 150', 'Lesson 1', 'Lesson 2', 'Lesson 3', 'Lesson 4'];
 
 function loadJson(key, fallback) {
   try {
@@ -100,6 +107,20 @@ function typeBreakdown(items) {
     .join(' · ');
 }
 
+// 성조 부호를 떼서 "ni hao"처럼 검색해도 "nǐ hǎo"가 걸리게 합니다.
+function normalizeForSearch(text) {
+  return String(text ?? '')
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/\s+/g, '');
+}
+
+function lessonSortKey(lesson) {
+  const index = LESSON_ORDER.indexOf(lesson);
+  return index >= 0 ? index : LESSON_ORDER.length;
+}
+
 function lengthClass(text) {
   const size = String(text ?? '').length;
   if (size > 40) return 'textLong';
@@ -143,6 +164,107 @@ function HiddenAnswer({ card, promptType, canSpeak, speaking, onSpeak }) {
         );
       })}
     </div>
+  );
+}
+
+function VocabList({ items, canSpeak, speakingText, onSpeak }) {
+  const [query, setQuery] = useState('');
+  const [lesson, setLesson] = useState('전체');
+
+  const lessons = useMemo(() => {
+    const unique = [...new Set(items.map((item) => item.lesson).filter(Boolean))];
+    unique.sort((a, b) => lessonSortKey(a) - lessonSortKey(b));
+    return ['전체', ...unique];
+  }, [items]);
+
+  const visibleItems = useMemo(() => {
+    const needle = normalizeForSearch(query);
+
+    return items.filter((item) => {
+      if (lesson !== '전체' && item.lesson !== lesson) return false;
+      if (!needle) return true;
+      return (
+        normalizeForSearch(item.hanzi).includes(needle) ||
+        normalizeForSearch(item.pinyin).includes(needle) ||
+        normalizeForSearch(item.meaningKo).includes(needle)
+      );
+    });
+  }, [items, lesson, query]);
+
+  return (
+    <section className="listPanel" aria-label="단어장">
+      <div className="listControls">
+        <label className="searchBox">
+          <Search size={16} />
+          <input
+            type="search"
+            value={query}
+            onChange={(event) => setQuery(event.target.value)}
+            placeholder="한자 · 병음 · 뜻으로 검색 (예: 你好, ni hao, 안녕)"
+            aria-label="단어 검색"
+          />
+        </label>
+
+        <div className="lessonChips" aria-label="단원 선택">
+          {lessons.map((option) => (
+            <button
+              key={option}
+              type="button"
+              className={`lessonChip ${lesson === option ? 'active' : ''}`}
+              onClick={() => setLesson(option)}
+            >
+              {option}
+            </button>
+          ))}
+        </div>
+
+        <p className="listCount">{visibleItems.length}개</p>
+      </div>
+
+      <div className="listBody">
+        {visibleItems.length ? (
+          <ul className="vocabList">
+            {visibleItems.map((item) => {
+              const speakable = canSpeak && String(item.hanzi ?? '').trim();
+
+              const body = (
+                <>
+                  <div className="vocabTexts">
+                    <p className={`vocabHanzi ${lengthClass(item.hanzi)}`}>{item.hanzi}</p>
+                    {item.pinyin ? <p className="vocabPinyin">{item.pinyin}</p> : null}
+                    {item.meaningKo ? <p className="vocabMeaning">{item.meaningKo}</p> : null}
+                  </div>
+
+                  <div className="vocabSide">
+                    <span className="vocabTag">{item.itemType}</span>
+                    {speakable ? <Volume2 className="vocabSpeakIcon" size={20} /> : null}
+                  </div>
+                </>
+              );
+
+              return (
+                <li key={item.id}>
+                  {speakable ? (
+                    <button
+                      type="button"
+                      className={`vocabRow vocabRowSpeak ${speakingText === item.hanzi ? 'speaking' : ''}`}
+                      onClick={() => onSpeak(item.hanzi)}
+                      aria-label={`${item.hanzi} 발음 듣기`}
+                    >
+                      {body}
+                    </button>
+                  ) : (
+                    <div className="vocabRow">{body}</div>
+                  )}
+                </li>
+              );
+            })}
+          </ul>
+        ) : (
+          <p className="listEmpty">검색 결과가 없어요.</p>
+        )}
+      </div>
+    </section>
   );
 }
 
@@ -237,7 +359,8 @@ function App() {
     resolvePromptType(studyItems[currentIndex], promptMode)
   );
   const [revealed, setRevealed] = useState(false);
-  const [speaking, setSpeaking] = useState(false);
+  const [speakingText, setSpeakingText] = useState(null);
+  const [view, setView] = useState(() => loadJson('sungmi-vocab-view-v1', 'study'));
   const { supported: speechSupported, checked: voiceChecked, voice: chineseVoice } = useChineseVoice();
 
   const todayKey = studyDayKey();
@@ -257,21 +380,26 @@ function App() {
     saveJson('sungmi-vocab-prompt-mode-v1', promptMode);
   }, [promptMode]);
 
+  useEffect(() => {
+    saveJson('sungmi-vocab-view-v1', view);
+  }, [view]);
+
   const currentCard = studyItems[currentIndex] ?? studyItems[0];
-  const canSpeak = Boolean(chineseVoice && String(currentCard?.hanzi ?? '').trim());
+  const hasChineseVoice = Boolean(chineseVoice);
+  const canSpeak = hasChineseVoice && Boolean(String(currentCard?.hanzi ?? '').trim());
 
   const handleSpeak = useCallback((text) => {
     speakChinese(text, {
-      onStart: () => setSpeaking(true),
-      onEnd: () => setSpeaking(false)
+      onStart: () => setSpeakingText(text),
+      onEnd: () => setSpeakingText(null)
     });
   }, []);
 
-  // 카드가 바뀌면 이전 카드 음성은 끊습니다.
+  // 카드를 넘기거나 탭을 옮기면 이전 음성은 끊습니다.
   useEffect(() => {
     stopSpeaking();
-    setSpeaking(false);
-  }, [currentIndex]);
+    setSpeakingText(null);
+  }, [currentIndex, view]);
 
   const statsText = useMemo(() => {
     const breakdown = typeBreakdown(studyItems);
@@ -298,6 +426,8 @@ function App() {
 
   useEffect(() => {
     function handleKeydown(event) {
+      // 단어장 탭에서는 검색 입력을 방해하지 않도록 단축키를 끕니다.
+      if (view !== 'study') return;
       // 버튼에 포커스가 있을 때의 Enter는 그 버튼이 처리하게 둡니다.
       if (event.key === 'Enter' && event.target instanceof HTMLButtonElement) return;
 
@@ -337,7 +467,26 @@ function App() {
           <p className="headerStats"><Sparkles size={14} /> {statsText}</p>
         </div>
         <h1>중국어 단어를 외워보자😆</h1>
-        <PromptModeButtons promptMode={promptMode} onChange={changePromptMode} />
+
+        <div className="viewTabs" role="tablist" aria-label="화면 선택">
+          {VIEW_OPTIONS.map((option) => (
+            <button
+              key={option.key}
+              type="button"
+              role="tab"
+              aria-selected={view === option.key}
+              className={`viewTab ${view === option.key ? 'active' : ''}`}
+              onClick={() => setView(option.key)}
+            >
+              {option.label}
+            </button>
+          ))}
+        </div>
+
+        {view === 'study' ? (
+          <PromptModeButtons promptMode={promptMode} onChange={changePromptMode} />
+        ) : null}
+
         {voiceChecked && !chineseVoice ? (
           <p className="voiceNotice">
             {speechSupported
@@ -347,18 +496,31 @@ function App() {
         ) : null}
       </header>
 
-      <StudyCard
-        card={currentCard}
-        promptType={promptType}
-        revealed={revealed}
-        onReveal={() => setRevealed(true)}
-        onNext={moveNext}
-        canSpeak={canSpeak}
-        speaking={speaking}
-        onSpeak={handleSpeak}
-      />
+      {view === 'study' ? (
+        <StudyCard
+          card={currentCard}
+          promptType={promptType}
+          revealed={revealed}
+          onReveal={() => setRevealed(true)}
+          onNext={moveNext}
+          canSpeak={canSpeak}
+          speaking={Boolean(speakingText)}
+          onSpeak={handleSpeak}
+        />
+      ) : (
+        <VocabList
+          items={studyItems}
+          canSpeak={hasChineseVoice}
+          speakingText={speakingText}
+          onSpeak={handleSpeak}
+        />
+      )}
 
-      <p className="keyboardHint">Space 또는 Enter: 정답 보기 / 다음 카드 · S: 발음 듣기</p>
+      <p className="keyboardHint">
+        {view === 'study'
+          ? 'Space 또는 Enter: 정답 보기 / 다음 카드 · S: 발음 듣기'
+          : '단어를 누르면 발음이 재생됩니다'}
+      </p>
     </main>
   );
 }
