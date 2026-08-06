@@ -25,7 +25,15 @@ const VIEW_OPTIONS = [
   { key: 'list', label: '단어장' }
 ];
 
-const LESSON_ORDER = ['HSK1 150', 'HSK2 추가 150', 'Lesson 1', 'Lesson 2', 'Lesson 3', 'Lesson 4'];
+const LESSON_ORDER = [
+  'HSK1 150',
+  'HSK2 추가 150',
+  'HSK2 공식문제',
+  'Lesson 1',
+  'Lesson 2',
+  'Lesson 3',
+  'Lesson 4'
+];
 
 function loadJson(key, fallback) {
   try {
@@ -128,6 +136,12 @@ function lengthClass(text) {
   return 'textShort';
 }
 
+// 한자는 한 글자가 정사각형이라 같은 글자 수라도 병음·한글보다 자리를 훨씬 많이 먹습니다.
+// 긴 문장이 카드를 넘치지 않도록 한자에만 한 단계 더 작은 구간을 둡니다.
+function hanziLengthClass(text) {
+  return String(text ?? '').length > 20 ? 'textLong' : lengthClass(text);
+}
+
 function HiddenAnswer({ card, promptType, canSpeak, speaking, onSpeak }) {
   const answerRows = PROMPT_TYPES
     .filter((type) => type !== promptType)
@@ -138,12 +152,14 @@ function HiddenAnswer({ card, promptType, canSpeak, speaking, onSpeak }) {
     <div className="answerPanel">
       {answerRows.map((row) => {
         const speakable = canSpeak && row.type === 'hanzi';
+        const sizeClass =
+          row.type === 'hanzi' ? hanziLengthClass(row.value) : lengthClass(row.value);
 
         if (!speakable) {
           return (
             <div className="answerRow" key={row.label}>
               <span>{row.label}</span>
-              <strong className={lengthClass(row.value)}>{row.value}</strong>
+              <strong className={sizeClass}>{row.value}</strong>
             </div>
           );
         }
@@ -159,7 +175,7 @@ function HiddenAnswer({ card, promptType, canSpeak, speaking, onSpeak }) {
             <span>
               {row.label} <Volume2 size={12} /> 눌러서 듣기
             </span>
-            <strong className={lengthClass(row.value)}>{row.value}</strong>
+            <strong className={sizeClass}>{row.value}</strong>
           </button>
         );
       })}
@@ -230,7 +246,7 @@ function VocabList({ items, canSpeak, speakingText, onSpeak }) {
               const body = (
                 <>
                   <div className="vocabTexts">
-                    <p className={`vocabHanzi ${lengthClass(item.hanzi)}`}>{item.hanzi}</p>
+                    <p className={`vocabHanzi ${hanziLengthClass(item.hanzi)}`}>{item.hanzi}</p>
                     {item.pinyin ? <p className="vocabPinyin">{item.pinyin}</p> : null}
                     {item.meaningKo ? <p className="vocabMeaning">{item.meaningKo}</p> : null}
                   </div>
@@ -289,7 +305,9 @@ function StudyCard({ card, promptType, revealed, onReveal, onNext, canSpeak, spe
   const promptText = card?.[promptType] || '';
   // 뜻만 보고 맞히는 중이면 발음이 정답을 알려주므로, 정답을 연 뒤에만 읽어줍니다.
   const promptSpeakable = canSpeak && promptType !== 'meaningKo';
-  const promptClassName = `promptText prompt-${promptType} ${lengthClass(promptText)}`;
+  const promptClassName = `promptText prompt-${promptType} ${
+    promptType === 'hanzi' ? hanziLengthClass(promptText) : lengthClass(promptText)
+  }`;
 
   return (
     <section className={`studyCard ${revealed ? 'revealed' : ''}`} aria-label="랜덤 학습 카드">

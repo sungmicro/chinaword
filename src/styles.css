@@ -188,6 +188,8 @@ h1 {
   gap: 12px;
   padding: 8px 4px;
   text-align: center;
+  /* 아주 긴 문장이 들어와도 잘리는 대신 그 안에서 스크롤되게 합니다. */
+  overflow-y: auto;
 }
 
 .promptLabel {
@@ -353,6 +355,8 @@ h1 {
   border-radius: 24px;
   border: 1px solid var(--line);
   background: rgba(255, 255, 255, 0.74);
+  min-height: 0;
+  overflow-y: auto;
 }
 
 .answerRow {

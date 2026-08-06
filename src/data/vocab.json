@@ -11332,5 +11332,2505 @@
       "Lesson 4",
       "Lesson 4 — 양사 예문"
     ]
+  },
+  {
+    "id": "HSK2EX-001",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "我买了一个新电视。",
+    "pinyin": "Wǒ mǎile yí ge xīn diànshì.",
+    "meaningKo": "저는 새 텔레비전을 한 대 샀습니다.",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-002",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "对不起，我错了。",
+    "pinyin": "Duìbuqǐ, wǒ cuò le.",
+    "meaningKo": "미안합니다, 제가 잘못했습니다.",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-003",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "再见，欢迎您下次再来。",
+    "pinyin": "Zàijiàn, huānyíng nín xià cì zài lái.",
+    "meaningKo": "안녕히 가세요, 다음에 또 오세요.",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-004",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "这是他给妻子买的。",
+    "pinyin": "Zhè shì tā gěi qīzi mǎi de.",
+    "meaningKo": "이것은 그가 아내에게 사 준 것입니다.",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-005",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "女儿让我回家的时候买些鸡蛋。",
+    "pinyin": "Nǚ’ér ràng wǒ huí jiā de shíhou mǎi xiē jīdàn.",
+    "meaningKo": "딸은 제가 집에 올 때 달걀을 좀 사 오라고 했습니다.",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-006",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "他回来的时候，我正在洗衣服呢。",
+    "pinyin": "Tā huílai de shíhou, wǒ zhèngzài xǐ yīfu ne.",
+    "meaningKo": "그가 돌아왔을 때 저는 한창 빨래를 하고 있었습니다.",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-007",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "服务员，请给我来一杯咖啡。",
+    "pinyin": "Fúwùyuán, qǐng gěi wǒ lái yì bēi kāfēi.",
+    "meaningKo": "종업원, 커피 한 잔 주세요.",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-008",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "爸爸，你别走。",
+    "pinyin": "Bàba, nǐ bié zǒu.",
+    "meaningKo": "아빠, 가지 마세요.",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-009",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "王小姐的猫是黑色的。",
+    "pinyin": "Wáng xiǎojiě de māo shì hēisè de.",
+    "meaningKo": "왕 씨의 고양이는 검은색입니다.",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-010",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "今天要做的事情真多。",
+    "pinyin": "Jīntiān yào zuò de shìqing zhēn duō.",
+    "meaningKo": "오늘 해야 할 일이 정말 많습니다.",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-011",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "后面，最右边的是我，找到了吗？",
+    "pinyin": "Hòumian, zuì yòubian de shì wǒ, zhǎodào le ma?",
+    "meaningKo": "뒤쪽 맨 오른쪽이 저예요, 찾았어요?",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-012",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "找到了，你旁边那个女孩子是谁？",
+    "pinyin": "Zhǎodào le, nǐ pángbiān nàge nǚháizi shì shéi?",
+    "meaningKo": "찾았어요. 당신 옆의 그 여자아이는 누구예요?",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-013",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "生日快乐！这是我送给你的。",
+    "pinyin": "Shēngrì kuàilè! Zhè shì wǒ sòng gěi nǐ de.",
+    "meaningKo": "생일 축하해요! 이것은 제가 당신에게 주는 거예요.",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-014",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "谢谢你！",
+    "pinyin": "Xièxie nǐ!",
+    "meaningKo": "고마워요!",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-015",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "谁来回答这个问题？",
+    "pinyin": "Shéi lái huídá zhège wèntí?",
+    "meaningKo": "누가 이 질문에 대답할래요?",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-016",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "老师，我！",
+    "pinyin": "Lǎoshī, wǒ!",
+    "meaningKo": "선생님, 저요!",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-017",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "再来点儿米饭吧，你吃得太少了。",
+    "pinyin": "Zài lái diǎnr mǐfàn ba, nǐ chī de tài shǎo le.",
+    "meaningKo": "밥을 좀 더 드세요, 너무 적게 먹었어요.",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-018",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "好的，你也吃。",
+    "pinyin": "Hǎo de, nǐ yě chī.",
+    "meaningKo": "좋아요, 당신도 드세요.",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-019",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "这几件怎么样？你试一试？",
+    "pinyin": "Zhè jǐ jiàn zěnmeyàng? Nǐ shì yi shì?",
+    "meaningKo": "이 몇 벌은 어때요? 입어 볼래요?",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-020",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "好，我喜欢这个颜色的。",
+    "pinyin": "Hǎo, wǒ xǐhuan zhège yánsè de.",
+    "meaningKo": "좋아요, 저는 이 색깔이 마음에 들어요.",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-021",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "你那儿有今天的报纸吗？",
+    "pinyin": "Nǐ nàr yǒu jīntiān de bàozhǐ ma?",
+    "meaningKo": "당신 쪽에 오늘 신문이 있어요?",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-022",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "有。我现在很忙，你五分钟后再打，好吗？",
+    "pinyin": "Yǒu. Wǒ xiànzài hěn máng, nǐ wǔ fēnzhōng hòu zài dǎ, hǎo ma?",
+    "meaningKo": "있어요. 지금 아주 바쁘니 5분 뒤에 다시 전화할래요?",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-023",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "告诉我，哪个最漂亮？",
+    "pinyin": "Gàosu wǒ, nǎge zuì piàoliang?",
+    "meaningKo": "말해 봐요, 어느 것이 가장 예뻐요?",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-024",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "我觉得都漂亮。",
+    "pinyin": "Wǒ juéde dōu piàoliang.",
+    "meaningKo": "제 생각에는 모두 예뻐요.",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-025",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "您做什么工作？",
+    "pinyin": "Nín zuò shénme gōngzuò?",
+    "meaningKo": "무슨 일을 하세요?",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-026",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "我是小学老师。",
+    "pinyin": "Wǒ shì xiǎoxué lǎoshī.",
+    "meaningKo": "저는 초등학교 선생님입니다.",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-027",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "现在是八点，不是七点。",
+    "pinyin": "Xiànzài shì bā diǎn, bú shì qī diǎn.",
+    "meaningKo": "지금은 8시예요, 7시가 아니에요.",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-028",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "真的吗？我的手表慢了？",
+    "pinyin": "Zhēn de ma? Wǒ de shǒubiǎo màn le?",
+    "meaningKo": "정말이에요? 제 손목시계가 느려졌나요?",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-029",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "这是李小姐的电影票，你能帮我给她吗？",
+    "pinyin": "Zhè shì Lǐ xiǎojiě de diànyǐngpiào, nǐ néng bāng wǒ gěi tā ma?",
+    "meaningKo": "이것은 이 씨의 영화표인데, 저 대신 그녀에게 줄 수 있어요?",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-030",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "没问题。",
+    "pinyin": "Méi wèntí.",
+    "meaningKo": "문제없어요.",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-031",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "天气太热了，家里有西瓜吗？",
+    "pinyin": "Tiānqì tài rè le, jiālǐ yǒu xīguā ma?",
+    "meaningKo": "날씨가 너무 더운데 집에 수박이 있어요?",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-032",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "没了，我现在出去买吧。",
+    "pinyin": "Méi le, wǒ xiànzài chūqu mǎi ba.",
+    "meaningKo": "없어요, 제가 지금 나가서 살게요.",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-033",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "女的要去买什么？",
+    "pinyin": "Nǚ de yào qù mǎi shénme?",
+    "meaningKo": "여자는 무엇을 사러 가려고 합니까?",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-034",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "您是第一次来我们这儿吗？",
+    "pinyin": "Nín shì dì-yī cì lái wǒmen zhèr ma?",
+    "meaningKo": "여기에 처음 오셨습니까?",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-035",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "不是，去年九月我来过一次。",
+    "pinyin": "Bú shì, qùnián jiǔ yuè wǒ láiguo yí cì.",
+    "meaningKo": "아닙니다, 작년 9월에 한 번 왔었습니다.",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-036",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "男的来过这里几次？",
+    "pinyin": "Nán de láiguo zhèlǐ jǐ cì?",
+    "meaningKo": "남자는 여기에 몇 번 와 봤습니까?",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-037",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "你妹妹现在还住在学校里？",
+    "pinyin": "Nǐ mèimei xiànzài hái zhù zài xuéxiào lǐ?",
+    "meaningKo": "당신 여동생은 지금도 학교에 살아요?",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-038",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "对，她住学校里，上班很近。",
+    "pinyin": "Duì, tā zhù xuéxiào lǐ, shàngbān hěn jìn.",
+    "meaningKo": "네, 학교에 살면 출근하기 아주 가까워요.",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-039",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "妹妹现在住哪儿？",
+    "pinyin": "Mèimei xiànzài zhù nǎr?",
+    "meaningKo": "여동생은 지금 어디에 삽니까?",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-040",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "今天你准备几点起床？",
+    "pinyin": "Jīntiān nǐ zhǔnbèi jǐ diǎn qǐchuáng?",
+    "meaningKo": "오늘 몇 시에 일어날 예정이에요?",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-041",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "我不睡了，现在就起。",
+    "pinyin": "Wǒ bú shuì le, xiànzài jiù qǐ.",
+    "meaningKo": "저는 이제 안 잘 거예요, 지금 바로 일어날게요.",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-042",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "男的是什么意思？",
+    "pinyin": "Nán de shì shénme yìsi?",
+    "meaningKo": "남자의 뜻은 무엇입니까?",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-043",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "小刘，中午有人给我打电话吗？",
+    "pinyin": "Xiǎo Liú, zhōngwǔ yǒu rén gěi wǒ dǎ diànhuà ma?",
+    "meaningKo": "샤오류, 점심때 누가 나에게 전화했어요?",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-044",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "您儿子打了个电话，问您晚上在哪儿吃饭。",
+    "pinyin": "Nín érzi dǎle ge diànhuà, wèn nín wǎnshang zài nǎr chīfàn.",
+    "meaningKo": "아드님이 전화해서 저녁을 어디서 드시는지 물었습니다.",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-045",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "电话是谁打的？",
+    "pinyin": "Diànhuà shì shéi dǎ de?",
+    "meaningKo": "전화는 누가 했습니까?",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-046",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "今天太晚了，我们别去小张家了。",
+    "pinyin": "Jīntiān tài wǎn le, wǒmen bié qù Xiǎo Zhāng jiā le.",
+    "meaningKo": "오늘 너무 늦었으니 샤오장의 집에 가지 맙시다.",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-047",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "好，明天再去吧。",
+    "pinyin": "Hǎo, míngtiān zài qù ba.",
+    "meaningKo": "좋아요, 내일 다시 갑시다.",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-048",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "他们今天为什么不去小张家？",
+    "pinyin": "Tāmen jīntiān wèishénme bú qù Xiǎo Zhāng jiā?",
+    "meaningKo": "그들은 오늘 왜 샤오장의 집에 가지 않습니까?",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-049",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "鱼真便宜，现在三块钱一斤了。",
+    "pinyin": "Yú zhēn piányi, xiànzài sān kuài qián yì jīn le.",
+    "meaningKo": "생선이 정말 싸네요, 지금 한 근에 3위안이에요.",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-050",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "我买两斤。",
+    "pinyin": "Wǒ mǎi liǎng jīn.",
+    "meaningKo": "저는 두 근 살게요.",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-051",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "鱼多少钱一斤？",
+    "pinyin": "Yú duōshao qián yì jīn?",
+    "meaningKo": "생선은 한 근에 얼마입니까?",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-052",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "你多穿件儿衣服，外面阴天，可能会下雨。",
+    "pinyin": "Nǐ duō chuān jiànr yīfu, wàimian yīntiān, kěnéng huì xià yǔ.",
+    "meaningKo": "옷을 한 벌 더 입어요, 밖이 흐려서 비가 올 수도 있어요.",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-053",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "没事儿，我很快就回来。",
+    "pinyin": "Méi shìr, wǒ hěn kuài jiù huílai.",
+    "meaningKo": "괜찮아요, 금방 돌아올게요.",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-054",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "现在天气怎么样？",
+    "pinyin": "Xiànzài tiānqì zěnmeyàng?",
+    "meaningKo": "지금 날씨는 어떻습니까?",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-055",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "吃点儿水果吧？水果在桌子上。",
+    "pinyin": "Chī diǎnr shuǐguǒ ba? Shuǐguǒ zài zhuōzi shang.",
+    "meaningKo": "과일 좀 먹을래요? 과일은 탁자 위에 있어요.",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-056",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "不，我想喝点儿茶。",
+    "pinyin": "Bù, wǒ xiǎng hē diǎnr chá.",
+    "meaningKo": "아니요, 저는 차를 좀 마시고 싶어요.",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-057",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "桌子上有什么？",
+    "pinyin": "Zhuōzi shang yǒu shénme?",
+    "meaningKo": "탁자 위에는 무엇이 있습니까?",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-058",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "明天下午你去唱歌吗？",
+    "pinyin": "Míngtiān xiàwǔ nǐ qù chànggē ma?",
+    "meaningKo": "내일 오후에 노래하러 갈 거예요?",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-059",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "我想去，但是我明天下午有课。",
+    "pinyin": "Wǒ xiǎng qù, dànshì wǒ míngtiān xiàwǔ yǒu kè.",
+    "meaningKo": "가고 싶지만 저는 내일 오후에 수업이 있어요.",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-060",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "男的明天下午做什么？",
+    "pinyin": "Nán de míngtiān xiàwǔ zuò shénme?",
+    "meaningKo": "남자는 내일 오후에 무엇을 합니까?",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-061",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "你学汉语多长时间了？",
+    "pinyin": "Nǐ xué Hànyǔ duō cháng shíjiān le?",
+    "meaningKo": "중국어를 배운 지 얼마나 됐어요?",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-062",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "快两年了。",
+    "pinyin": "Kuài liǎng nián le.",
+    "meaningKo": "거의 2년 됐어요.",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-063",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "你说得很不错。",
+    "pinyin": "Nǐ shuō de hěn búcuò.",
+    "meaningKo": "말을 아주 잘하네요.",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-064",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "听和说还可以，读和写不好。",
+    "pinyin": "Tīng hé shuō hái kěyǐ, dú hé xiě bù hǎo.",
+    "meaningKo": "듣기와 말하기는 괜찮지만 읽기와 쓰기는 잘 못해요.",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-065",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "他的汉语怎么样？",
+    "pinyin": "Tā de Hànyǔ zěnmeyàng?",
+    "meaningKo": "그의 중국어는 어떻습니까?",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-066",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "这个椅子怎么样？",
+    "pinyin": "Zhège yǐzi zěnmeyàng?",
+    "meaningKo": "이 의자는 어때요?",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-067",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "颜色很好，但是，它太高了。",
+    "pinyin": "Yánsè hěn hǎo, dànshì, tā tài gāo le.",
+    "meaningKo": "색깔은 좋지만 너무 높아요.",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-068",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "没关系，前面还有几个。",
+    "pinyin": "Méi guānxi, qiánmian hái yǒu jǐ ge.",
+    "meaningKo": "괜찮아요, 앞에 몇 개 더 있어요.",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-069",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "走，我们过去看看。",
+    "pinyin": "Zǒu, wǒmen guòqu kànkan.",
+    "meaningKo": "가요, 건너가서 봅시다.",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-070",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "他们为什么没买这个椅子？",
+    "pinyin": "Tāmen wèishénme méi mǎi zhège yǐzi?",
+    "meaningKo": "그들은 왜 이 의자를 사지 않았습니까?",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-071",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "听说你们学校很大，老师很多。",
+    "pinyin": "Tīngshuō nǐmen xuéxiào hěn dà, lǎoshī hěn duō.",
+    "meaningKo": "당신들 학교는 크고 선생님이 많다고 들었어요.",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-072",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "是的，我们有两百多个老师。",
+    "pinyin": "Shì de, wǒmen yǒu liǎngbǎi duō ge lǎoshī.",
+    "meaningKo": "네, 선생님이 200명 넘게 있어요.",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-073",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "那学生呢？",
+    "pinyin": "Nà xuésheng ne?",
+    "meaningKo": "그럼 학생은요?",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-074",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "学生有两千多人。",
+    "pinyin": "Xuésheng yǒu liǎngqiān duō rén.",
+    "meaningKo": "학생은 2천 명 넘게 있어요.",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-075",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "这个学校有多少学生？",
+    "pinyin": "Zhège xuéxiào yǒu duōshao xuésheng?",
+    "meaningKo": "이 학교에는 학생이 몇 명 있습니까?",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-076",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "吃药了吗？现在身体怎么样？",
+    "pinyin": "Chī yào le ma? Xiànzài shēntǐ zěnmeyàng?",
+    "meaningKo": "약 먹었어요? 지금 몸은 어때요?",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-077",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "吃了，现在好多了。",
+    "pinyin": "Chī le, xiànzài hǎo duō le.",
+    "meaningKo": "먹었어요, 지금은 훨씬 좋아졌어요.",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-078",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "什么时候可以出院？",
+    "pinyin": "Shénme shíhou kěyǐ chūyuàn?",
+    "meaningKo": "언제 퇴원할 수 있어요?",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-079",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "医生说下个星期。",
+    "pinyin": "Yīshēng shuō xià ge xīngqī.",
+    "meaningKo": "의사가 다음 주라고 했어요.",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-080",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "他们最可能在哪儿？",
+    "pinyin": "Tāmen zuì kěnéng zài nǎr?",
+    "meaningKo": "그들은 어디에 있을 가능성이 가장 높습니까?",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-081",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "请问，十四号到北京的车票还有吗？",
+    "pinyin": "Qǐngwèn, shísì hào dào Běijīng de chēpiào hái yǒu ma?",
+    "meaningKo": "실례합니다, 14일 베이징행 표가 아직 있나요?",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-082",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "对不起，十四号的已经卖完了。",
+    "pinyin": "Duìbuqǐ, shísì hào de yǐjīng mài wán le.",
+    "meaningKo": "죄송합니다, 14일 표는 이미 다 팔렸어요.",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-083",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "那十五号早上的还有吗？",
+    "pinyin": "Nà shíwǔ hào zǎoshang de hái yǒu ma?",
+    "meaningKo": "그럼 15일 아침 표는 있나요?",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-084",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "有，您要几张？",
+    "pinyin": "Yǒu, nín yào jǐ zhāng?",
+    "meaningKo": "있습니다, 몇 장 필요하세요?",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-085",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "两张。",
+    "pinyin": "Liǎng zhāng.",
+    "meaningKo": "두 장이요.",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-086",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "男的买了哪天的票？",
+    "pinyin": "Nán de mǎile nǎ tiān de piào?",
+    "meaningKo": "남자는 어느 날 표를 샀습니까?",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-087",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "给您介绍一下，这是我们公司的李先生。",
+    "pinyin": "Gěi nín jièshào yíxià, zhè shì wǒmen gōngsī de Lǐ xiānsheng.",
+    "meaningKo": "소개해 드리겠습니다. 이분은 우리 회사의 리 선생님입니다.",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-088",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "看书时间长了，眼睛得休息休息。",
+    "pinyin": "Kàn shū shíjiān cháng le, yǎnjing děi xiūxi xiūxi.",
+    "meaningKo": "책을 오래 보면 눈을 쉬게 해야 합니다.",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-089",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "那是我孩子，她爱跳舞。",
+    "pinyin": "Nà shì wǒ háizi, tā ài tiàowǔ.",
+    "meaningKo": "저 아이는 제 아이인데 춤추기를 좋아합니다.",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-090",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "今天下雪了，天气很冷。",
+    "pinyin": "Jīntiān xià xuě le, tiānqì hěn lěng.",
+    "meaningKo": "오늘 눈이 내려서 날씨가 매우 춥습니다.",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-091",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "因为我不会游泳，所以，小鱼，你好！",
+    "pinyin": "Yīnwèi wǒ bú huì yóuyǒng, suǒyǐ, xiǎoyú, nǐ hǎo!",
+    "meaningKo": "저는 수영을 못하니, 작은 물고기야, 안녕!",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-092",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "这个船非常大，可以坐几千人。",
+    "pinyin": "Zhège chuán fēicháng dà, kěyǐ zuò jǐ qiān rén.",
+    "meaningKo": "이 배는 매우 커서 수천 명이 탈 수 있습니다.",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-093",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "请进，这就是我的房间。",
+    "pinyin": "Qǐng jìn, zhè jiù shì wǒ de fángjiān.",
+    "meaningKo": "들어오세요, 여기가 바로 제 방입니다.",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-094",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "昨天的考试题太多，我没有做完。",
+    "pinyin": "Zuótiān de kǎoshì tí tài duō, wǒ méiyǒu zuò wán.",
+    "meaningKo": "어제 시험 문제가 너무 많아서 다 풀지 못했습니다.",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-095",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "我没去过中国，我希望今年能去中国旅游。",
+    "pinyin": "Wǒ méi qùguo Zhōngguó, wǒ xīwàng jīnnián néng qù Zhōngguó lǚyóu.",
+    "meaningKo": "저는 중국에 가 본 적이 없어서 올해 중국 여행을 갈 수 있기를 바랍니다.",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-096",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "对不起，我不能和你一起去买自行车了。",
+    "pinyin": "Duìbuqǐ, wǒ bù néng hé nǐ yìqǐ qù mǎi zìxíngchē le.",
+    "meaningKo": "미안해요, 당신과 함께 자전거를 사러 갈 수 없게 됐어요.",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-097",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "没关系，我知道你很忙。",
+    "pinyin": "Méi guānxi, wǒ zhīdào nǐ hěn máng.",
+    "meaningKo": "괜찮아요, 당신이 아주 바쁜 것을 알아요.",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-098",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "我上午去外面买了个新手机，九百多块钱，很便宜。",
+    "pinyin": "Wǒ shàngwǔ qù wàimian mǎile ge xīn shǒujī, jiǔbǎi duō kuài qián, hěn piányi.",
+    "meaningKo": "저는 오전에 밖에 나가 새 휴대전화를 샀는데, 900위안 남짓으로 아주 쌌습니다.",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-099",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "时间过得真快，我来北京十年了。",
+    "pinyin": "Shíjiān guò de zhēn kuài, wǒ lái Běijīng shí nián le.",
+    "meaningKo": "시간이 정말 빨리 지나, 제가 베이징에 온 지 10년이 됐습니다.",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-100",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "我女儿已经五岁多了，都开始学习写汉字了。",
+    "pinyin": "Wǒ nǚ’ér yǐjīng wǔ suì duō le, dōu kāishǐ xuéxí xiě Hànzì le.",
+    "meaningKo": "제 딸은 이미 다섯 살이 넘어 한자를 쓰는 공부를 시작했습니다.",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-101",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "今天是七月十二日，再有三天就是我爸爸的生日了。",
+    "pinyin": "Jīntiān shì qī yuè shí’èr rì, zài yǒu sān tiān jiù shì wǒ bàba de shēngrì le.",
+    "meaningKo": "오늘은 7월 12일이고, 사흘 뒤면 아버지의 생신입니다.",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-102",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "我想送他一个电脑。",
+    "pinyin": "Wǒ xiǎng sòng tā yí ge diànnǎo.",
+    "meaningKo": "저는 아버지께 컴퓨터 한 대를 드리고 싶습니다.",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-103",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "喂，姐，我的飞机是十点零七的，再有二十分钟我就到机场了。",
+    "pinyin": "Wéi, jiě, wǒ de fēijī shì shí diǎn líng qī de, zài yǒu èrshí fēnzhōng wǒ jiù dào jīchǎng le.",
+    "meaningKo": "여보세요, 누나. 제 비행기는 10시 07분 것이고, 20분만 더 있으면 공항에 도착해요.",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-104",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "我们下午见。",
+    "pinyin": "Wǒmen xiàwǔ jiàn.",
+    "meaningKo": "우리 오후에 만나요.",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-105",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "昨天和朋友们在外面玩儿了一个晚上，很累，但是很高兴。",
+    "pinyin": "Zuótiān hé péngyoumen zài wàimian wánrle yí ge wǎnshang, hěn lèi, dànshì hěn gāoxìng.",
+    "meaningKo": "어제 친구들과 밖에서 저녁 내내 놀아 피곤했지만 아주 즐거웠습니다.",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-106",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "我们要向您学习！",
+    "pinyin": "Wǒmen yào xiàng nín xuéxí!",
+    "meaningKo": "저희는 선생님께 배워야 합니다!",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-107",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "她三年的时间里，写了四本书。",
+    "pinyin": "Tā sān nián de shíjiān lǐ, xiěle sì běn shū.",
+    "meaningKo": "그녀는 3년 동안 책 네 권을 썼습니다.",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-108",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "火车站离这儿远吗？",
+    "pinyin": "Huǒchēzhàn lí zhèr yuǎn ma?",
+    "meaningKo": "기차역은 여기서 멉니까?",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-109",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "很近，从这儿坐出租车，六七分钟就到了。",
+    "pinyin": "Hěn jìn, cóng zhèr zuò chūzūchē, liù-qī fēnzhōng jiù dào le.",
+    "meaningKo": "아주 가까워요. 여기서 택시를 타면 6~7분 만에 도착해요.",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-110",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "已经快八点了，你还出去做什么？",
+    "pinyin": "Yǐjīng kuài bā diǎn le, nǐ hái chūqu zuò shénme?",
+    "meaningKo": "벌써 거의 8시인데 또 나가서 뭐 하려고요?",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-111",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "小刘叫我一起去跑步。",
+    "pinyin": "Xiǎo Liú jiào wǒ yìqǐ qù pǎobù.",
+    "meaningKo": "샤오류가 저에게 함께 달리러 가자고 했어요.",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-112",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "小狗怎么了？为什么不吃东西？",
+    "pinyin": "Xiǎogǒu zěnme le? Wèishénme bù chī dōngxi?",
+    "meaningKo": "강아지가 왜 그래요? 왜 먹지 않아요?",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-113",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "它不认识你。",
+    "pinyin": "Tā bú rènshi nǐ.",
+    "meaningKo": "그것은 당신을 몰라요.",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-114",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "但是，你知道，你没有他高。",
+    "pinyin": "Dànshì, nǐ zhīdào, nǐ méiyǒu tā gāo.",
+    "meaningKo": "하지만 알다시피 당신은 그보다 키가 크지 않아요.",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-115",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "你比他大一岁。",
+    "pinyin": "Nǐ bǐ tā dà yí suì.",
+    "meaningKo": "당신은 그보다 한 살 많아요.",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-116",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "大家好！我姓王，是新来的汉语老师。",
+    "pinyin": "Dàjiā hǎo! Wǒ xìng Wáng, shì xīn lái de Hànyǔ lǎoshī.",
+    "meaningKo": "여러분 안녕하세요! 저는 왕 씨이고 새로 온 중국어 선생님입니다.",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-117",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "你们听懂我说的话了吗？",
+    "pinyin": "Nǐmen tīng dǒng wǒ shuō de huà le ma?",
+    "meaningKo": "여러분은 제가 한 말을 알아들었나요?",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-118",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "这个月真的非常忙。",
+    "pinyin": "Zhège yuè zhēn de fēicháng máng.",
+    "meaningKo": "이번 달은 정말 매우 바쁩니다.",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-119",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "他现在每天工作十个小时，星期六也不休息。",
+    "pinyin": "Tā xiànzài měi tiān gōngzuò shí ge xiǎoshí, xīngqīliù yě bù xiūxi.",
+    "meaningKo": "그는 지금 매일 10시간 일하고 토요일에도 쉬지 않습니다.",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-120",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "开门，快开门。",
+    "pinyin": "Kāi mén, kuài kāi mén.",
+    "meaningKo": "문 열어요, 빨리 문 열어요.",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-121",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "等一下。你怎么回来这么晚？",
+    "pinyin": "Děng yíxià. Nǐ zěnme huílai zhème wǎn?",
+    "meaningKo": "잠깐만요. 왜 이렇게 늦게 돌아왔어요?",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-122",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "她笑着对我说：“不客气。”",
+    "pinyin": "Tā xiàozhe duì wǒ shuō: “Bú kèqi.”",
+    "meaningKo": "그녀는 웃으며 저에게 “별말씀을요.”라고 말했습니다.",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-123",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "谢谢您给我们的帮助！",
+    "pinyin": "Xièxie nín gěi wǒmen de bāngzhù!",
+    "meaningKo": "저희에게 도움을 주셔서 감사합니다!",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-124",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "我的天！你们认识？这怎么可能？",
+    "pinyin": "Wǒ de tiān! Nǐmen rènshi? Zhè zěnme kěnéng?",
+    "meaningKo": "세상에! 당신들이 아는 사이예요? 이게 어떻게 가능하죠?",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
+  },
+  {
+    "id": "HSK2EX-125",
+    "level": "HSK2",
+    "lesson": "HSK2 공식문제",
+    "category": "HSK2 공식문제 문장",
+    "itemType": "문장",
+    "hanzi": "他是我弟弟的中学同学。",
+    "pinyin": "Tā shì wǒ dìdi de zhōngxué tóngxué.",
+    "meaningKo": "그는 제 남동생의 중학교 동창입니다.",
+    "partOfSpeech": "문장",
+    "exampleZh": "",
+    "examplePinyin": "",
+    "exampleKo": "",
+    "source": "HSK2 공식문제 발췌",
+    "tags": [
+      "HSK2",
+      "문장",
+      "공식문제"
+    ]
   }
 ]
