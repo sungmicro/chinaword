@@ -33,7 +33,9 @@ const LESSON_ORDER = [
   'Lesson 2',
   'Lesson 3',
   'Lesson 4',
-  'Lesson 5'
+  'Lesson 5',
+  'Lesson 6',
+  'Lesson 7'
 ];
 
 function loadJson(key, fallback) {
