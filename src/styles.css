@@ -589,6 +589,11 @@ h1 {
   font-weight: 850;
 }
 
+.vocabLessonTag {
+  background: rgba(91, 57, 39, 0.09);
+  color: var(--accent);
+}
+
 .vocabSpeakIcon {
   flex-shrink: 0;
   color: var(--accent-strong);
