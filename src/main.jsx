@@ -3,6 +3,8 @@ import { createRoot } from 'react-dom/client';
 import { Eye, Search, Shuffle, Sparkles, Volume2 } from 'lucide-react';
 import vocabData from './data/vocab.json';
 import { speakChinese, stopSpeaking, useChineseVoice } from './speech';
+import { buildLessonChips, lessonBadge, matchesLessonChip } from './lessons';
+import ToneQuiz from './ToneQuiz';
 import './styles.css';
 
 const PROMPT_TYPES = ['hanzi', 'pinyin', 'meaningKo'];
@@ -22,11 +24,9 @@ const MODE_OPTIONS = [
 
 const VIEW_OPTIONS = [
   { key: 'study', label: '랜덤 학습' },
-  { key: 'list', label: '단어장' }
+  { key: 'list', label: '단어장' },
+  { key: 'quiz', label: '시험보기' }
 ];
-
-// 교재 과(Lesson N)는 번호로 자동 정렬하므로, 여기엔 HSK 계열만 순서대로 적습니다.
-const LESSON_ORDER = ['HSK1 150', 'HSK2 추가 150', 'HSK2 공식문제'];
 
 function loadJson(key, fallback) {
   try {
@@ -117,35 +117,6 @@ function normalizeForSearch(text) {
     .replace(/\s+/g, '');
 }
 
-function lessonSortKey(lesson) {
-  const index = LESSON_ORDER.indexOf(lesson);
-  if (index >= 0) return index;
-
-  // 교재 과는 HSK 뒤에 번호 순으로 놓습니다. 새 과가 들어와도 손댈 곳이 없습니다.
-  const match = /^Lesson\s+(\d+)$/.exec(String(lesson ?? ''));
-  if (match) return LESSON_ORDER.length + Number(match[1]);
-
-  return Number.MAX_SAFE_INTEGER;
-}
-
-// 교재 과가 늘어날수록 필터 칩이 화면을 다 먹어서, 네 과씩 한 칩으로 묶습니다.
-// (Lesson 9가 들어오면 자동으로 "Lesson 9-12" 칩이 생깁니다.)
-const LESSONS_PER_CHIP = 4;
-
-function lessonChipLabel(lesson) {
-  const match = /^Lesson\s+(\d+)$/.exec(String(lesson ?? ''));
-  if (!match) return lesson; // HSK 계열은 원래 이름 그대로
-  const number = Number(match[1]);
-  const start = Math.floor((number - 1) / LESSONS_PER_CHIP) * LESSONS_PER_CHIP + 1;
-  return `Lesson ${start}-${start + LESSONS_PER_CHIP - 1}`;
-}
-
-// 교재 항목은 몇 과인지 목록에서 바로 보이게 합니다 (칩이 묶여서 과 구분이 사라졌으므로).
-function lessonBadge(lesson) {
-  const match = /^Lesson\s+(\d+)$/.exec(String(lesson ?? ''));
-  return match ? `${match[1]}과` : '';
-}
-
 function lengthClass(text) {
   const size = String(text ?? '').length;
   if (size > 40) return 'textLong';
@@ -204,24 +175,13 @@ function VocabList({ items, canSpeak, speakingText, onSpeak }) {
   const [query, setQuery] = useState('');
   const [lesson, setLesson] = useState('전체');
 
-  const lessons = useMemo(() => {
-    const unique = [...new Set(items.map((item) => item.lesson).filter(Boolean))];
-    unique.sort((a, b) => lessonSortKey(a) - lessonSortKey(b));
-
-    const chips = [];
-    unique.forEach((name) => {
-      const label = lessonChipLabel(name);
-      if (!chips.includes(label)) chips.push(label);
-    });
-
-    return ['전체', ...chips];
-  }, [items]);
+  const lessons = useMemo(() => buildLessonChips(items), [items]);
 
   const visibleItems = useMemo(() => {
     const needle = normalizeForSearch(query);
 
     return items.filter((item) => {
-      if (lesson !== '전체' && lessonChipLabel(item.lesson) !== lesson) return false;
+      if (!matchesLessonChip(item, lesson)) return false;
       if (!needle) return true;
       return (
         normalizeForSearch(item.hanzi).includes(needle) ||
@@ -551,19 +511,23 @@ function App() {
           speaking={Boolean(speakingText)}
           onSpeak={handleSpeak}
         />
-      ) : (
+      ) : view === 'list' ? (
         <VocabList
           items={studyItems}
           canSpeak={hasChineseVoice}
           speakingText={speakingText}
           onSpeak={handleSpeak}
         />
+      ) : (
+        <ToneQuiz items={studyItems} canSpeak={hasChineseVoice} onSpeak={handleSpeak} />
       )}
 
       <p className="keyboardHint">
         {view === 'study'
           ? 'Space 또는 Enter: 정답 보기 / 다음 카드 · S: 발음 듣기'
-          : '단어를 누르면 발음이 재생됩니다'}
+          : view === 'list'
+            ? '단어를 누르면 발음이 재생됩니다'
+            : '한자를 보고 들으면서 성조가 맞는 병음을 고르세요'}
       </p>
     </main>
   );
