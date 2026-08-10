@@ -130,6 +130,11 @@ function hanziLengthClass(text) {
   return String(text ?? '').length > 20 ? 'textLong' : lengthClass(text);
 }
 
+// 문장(itemType '문장')은 단어보다 글씨를 절반 크기로 표시합니다.
+function sentenceModifier(itemType) {
+  return itemType === '문장' ? ' sentenceHanzi' : '';
+}
+
 function HiddenAnswer({ card, promptType, canSpeak, speaking, onSpeak }) {
   const answerRows = PROMPT_TYPES
     .filter((type) => type !== promptType)
@@ -141,7 +146,9 @@ function HiddenAnswer({ card, promptType, canSpeak, speaking, onSpeak }) {
       {answerRows.map((row) => {
         const speakable = canSpeak && row.type === 'hanzi';
         const sizeClass =
-          row.type === 'hanzi' ? hanziLengthClass(row.value) : lengthClass(row.value);
+          row.type === 'hanzi'
+            ? hanziLengthClass(row.value) + sentenceModifier(card.itemType)
+            : lengthClass(row.value);
 
         if (!speakable) {
           return (
@@ -231,7 +238,7 @@ function VocabList({ items, canSpeak, speakingText, onSpeak }) {
               const body = (
                 <>
                   <div className="vocabTexts">
-                    <p className={`vocabHanzi ${hanziLengthClass(item.hanzi)}`}>{item.hanzi}</p>
+                    <p className={`vocabHanzi ${hanziLengthClass(item.hanzi)}${sentenceModifier(item.itemType)}`}>{item.hanzi}</p>
                     {item.pinyin ? <p className="vocabPinyin">{item.pinyin}</p> : null}
                     {item.meaningKo ? <p className="vocabMeaning">{item.meaningKo}</p> : null}
                   </div>
@@ -292,7 +299,9 @@ function StudyCard({ card, promptType, revealed, onReveal, onNext, canSpeak, spe
   // 뜻만 보고 맞히는 중이면 발음이 정답을 알려주므로, 정답을 연 뒤에만 읽어줍니다.
   const promptSpeakable = canSpeak && promptType !== 'meaningKo';
   const promptClassName = `promptText prompt-${promptType} ${
-    promptType === 'hanzi' ? hanziLengthClass(promptText) : lengthClass(promptText)
+    promptType === 'hanzi'
+      ? hanziLengthClass(promptText) + sentenceModifier(card?.itemType)
+      : lengthClass(promptText)
   }`;
 
   return (

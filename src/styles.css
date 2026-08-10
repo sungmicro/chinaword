@@ -227,6 +227,19 @@ h1 {
   line-height: 1.18;
 }
 
+/* 중국어 문장(itemType 문장)은 단어보다 글씨를 절반 크기로 표시합니다. */
+.prompt-hanzi.textShort.sentenceHanzi {
+  font-size: clamp(2.6rem, 9vw, 5rem);
+}
+
+.prompt-hanzi.textMedium.sentenceHanzi {
+  font-size: clamp(1.6rem, 5vw, 3.1rem);
+}
+
+.prompt-hanzi.textLong.sentenceHanzi {
+  font-size: clamp(0.9rem, 3vw, 1.8rem);
+}
+
 .prompt-pinyin.textShort {
   font-size: clamp(3.8rem, 13vw, 7.3rem);
   font-weight: 900;
@@ -388,6 +401,18 @@ h1 {
 
 .answerRow strong.textLong {
   font-size: clamp(0.98rem, 3.4vw, 1.42rem);
+}
+
+.answerRow strong.textShort.sentenceHanzi {
+  font-size: clamp(0.775rem, 2.9vw, 1.4rem);
+}
+
+.answerRow strong.textMedium.sentenceHanzi {
+  font-size: clamp(0.625rem, 2.2vw, 1.05rem);
+}
+
+.answerRow strong.textLong.sentenceHanzi {
+  font-size: clamp(0.49rem, 1.7vw, 0.71rem);
 }
 
 .primaryActions {
@@ -559,6 +584,18 @@ h1 {
 
 .vocabHanzi.textLong {
   font-size: 1.05rem;
+}
+
+.vocabHanzi.textShort.sentenceHanzi {
+  font-size: 0.8rem;
+}
+
+.vocabHanzi.textMedium.sentenceHanzi {
+  font-size: 0.65rem;
+}
+
+.vocabHanzi.textLong.sentenceHanzi {
+  font-size: 0.525rem;
 }
 
 .vocabPinyin {
@@ -1063,6 +1100,18 @@ code {
     line-height: 1.14;
   }
 
+  .prompt-hanzi.textShort.sentenceHanzi {
+    font-size: clamp(2.8rem, 14.5vw, 4.5rem);
+  }
+
+  .prompt-hanzi.textMedium.sentenceHanzi {
+    font-size: clamp(1.325rem, 7.5vw, 2.35rem);
+  }
+
+  .prompt-hanzi.textLong.sentenceHanzi {
+    font-size: clamp(0.66rem, 3.5vw, 1.075rem);
+  }
+
   .prompt-pinyin.textShort {
     font-size: clamp(3.45rem, 20vw, 6.5rem);
     line-height: 1.02;
@@ -1137,6 +1186,18 @@ code {
     font-size: clamp(0.82rem, 3.8vw, 1.12rem);
   }
 
+  .answerRow strong.textShort.sentenceHanzi {
+    font-size: clamp(0.675rem, 3.5vw, 1.125rem);
+  }
+
+  .answerRow strong.textMedium.sentenceHanzi {
+    font-size: clamp(0.525rem, 2.6vw, 0.875rem);
+  }
+
+  .answerRow strong.textLong.sentenceHanzi {
+    font-size: clamp(0.41rem, 1.9vw, 0.56rem);
+  }
+
   .listPanel,
   .quizPanel {
     padding: 10px;
@@ -1196,6 +1257,10 @@ code {
 
   .vocabHanzi.textShort {
     font-size: 1.42rem;
+  }
+
+  .vocabHanzi.textShort.sentenceHanzi {
+    font-size: 0.71rem;
   }
 
   .vocabPinyin {
