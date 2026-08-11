@@ -1,0 +1,88 @@
+{
+  "title": "자기소개",
+  "description": "실제로 쓸 수 있는 말로 만든 자기소개 대본. 듣고 따라 말하며 외웁니다.",
+  "sections": [
+    {
+      "id": "s1",
+      "label": "1 인사",
+      "title": "인사",
+      "lines": [
+        { "hanzi": "大家好，", "pinyin": "dàjiā hǎo,", "ko": "안녕하세요," },
+        { "hanzi": "很高兴认识大家。", "pinyin": "hěn gāoxìng rènshi dàjiā.", "ko": "만나서 반갑습니다." }
+      ]
+    },
+    {
+      "id": "s2",
+      "label": "2 전공·일",
+      "title": "전공과 하는 일",
+      "lines": [
+        { "hanzi": "我的专业是微生物，", "pinyin": "wǒ de zhuānyè shì wēishēngwù,", "ko": "제 전공은 미생물인데," },
+        { "hanzi": "其中主要研究细菌和病毒，", "pinyin": "qízhōng zhǔyào yánjiū xìjūn hé bìngdú,", "ko": "그중에서도 주로 세균과 바이러스를 연구했고," },
+        { "hanzi": "六年前取得了博士学位。", "pinyin": "liù nián qián qǔdé le bóshì xuéwèi.", "ko": "6년 전에 박사학위를 받았습니다." },
+        { "hanzi": "现在我利用这方面的知识，", "pinyin": "xiànzài wǒ lìyòng zhè fāngmiàn de zhīshi,", "ko": "지금은 그 지식을 활용해서," },
+        { "hanzi": "负责卫生微生物评价工作，", "pinyin": "fùzé wèishēng wēishēngwù píngjià gōngzuò,", "ko": "위생 미생물 평가 업무를 맡고 있습니다." },
+        { "hanzi": "也就是在产品上市前", "pinyin": "yě jiùshì zài chǎnpǐn shàngshì qián", "ko": "즉, 제품이 출시되기 전에" },
+        { "hanzi": "验证顾客能否安全地使用。", "pinyin": "yànzhèng gùkè néngfǒu ānquán de shǐyòng.", "ko": "고객이 안전하게 쓸 수 있는지 검증하는 일입니다." }
+      ]
+    },
+    {
+      "id": "s3",
+      "label": "3 계기",
+      "title": "중국어를 시작한 계기",
+      "lines": [
+        { "hanzi": "我喜欢学新东西，", "pinyin": "wǒ xǐhuan xué xīn dōngxi,", "ko": "저는 새로운 걸 배우는 걸 좋아해서," },
+        { "hanzi": "最近在学中文。", "pinyin": "zuìjìn zài xué Zhōngwén.", "ko": "요즘 중국어를 배우고 있습니다." },
+        { "hanzi": "起因是三国志。", "pinyin": "qǐyīn shì Sānguózhì.", "ko": "계기는 삼국지였습니다." },
+        { "hanzi": "小时候我玩了很多", "pinyin": "xiǎoshíhou wǒ wán le hěn duō", "ko": "어릴 때 정말 많이 했습니다," },
+        { "hanzi": "光荣公司的三国志游戏，", "pinyin": "Guāngróng gōngsī de Sānguózhì yóuxì,", "ko": "코에이의 삼국지 게임을요," },
+        { "hanzi": "漫画也看了无数遍。", "pinyin": "mànhuà yě kàn le wúshù biàn.", "ko": "만화도 수없이 읽었습니다." },
+        { "hanzi": "所以一直想去", "pinyin": "suǒyǐ yìzhí xiǎng qù", "ko": "그래서 늘 가보고 싶었습니다," },
+        { "hanzi": "长安、洛阳这样的古城看看，", "pinyin": "Cháng'ān, Luòyáng zhèyàng de gǔchéng kànkan,", "ko": "장안이나 낙양 같은 옛 도시를 둘러보고," },
+        { "hanzi": "也想去赤壁之战发生的赤壁，", "pinyin": "yě xiǎng qù Chìbì zhī zhàn fāshēng de Chìbì,", "ko": "적벽대전이 일어난 적벽에도 가보고," },
+        { "hanzi": "去那些真正打过仗的地方。", "pinyin": "qù nàxiē zhēnzhèng dǎ guo zhàng de dìfang.", "ko": "실제로 전투가 있었던 곳들에 가보고 싶습니다." }
+      ]
+    },
+    {
+      "id": "s4",
+      "label": "4 이유",
+      "title": "배우기로 한 이유",
+      "lines": [
+        { "hanzi": "听说在中国英语不太通，", "pinyin": "tīngshuō zài Zhōngguó Yīngyǔ bú tài tōng,", "ko": "중국에서는 영어가 잘 안 통한다고 들었습니다," },
+        { "hanzi": "所以我想，", "pinyin": "suǒyǐ wǒ xiǎng,", "ko": "그래서 생각했습니다," },
+        { "hanzi": "会中文的话旅行会有意思得多，", "pinyin": "huì Zhōngwén dehuà lǚxíng huì yǒu yìsi de duō,", "ko": "중국어를 할 줄 알면 여행이 훨씬 재미있겠다," },
+        { "hanzi": "至少能自己点菜。", "pinyin": "zhìshǎo néng zìjǐ diǎn cài.", "ko": "적어도 혼자 음식은 시킬 수 있겠다고요." },
+        { "hanzi": "就这样开始学，", "pinyin": "jiù zhèyàng kāishǐ xué,", "ko": "그렇게 배우기 시작해서," },
+        { "hanzi": "到现在大概三个月了。", "pinyin": "dào xiànzài dàgài sān ge yuè le.", "ko": "지금 3개월쯤 됐습니다." }
+      ]
+    },
+    {
+      "id": "s5",
+      "label": "5 여행",
+      "title": "여행 경험과 목표",
+      "lines": [
+        { "hanzi": "北京、上海和杭州我都去过，", "pinyin": "Běijīng, Shànghǎi hé Hángzhōu wǒ dōu qù guo,", "ko": "베이징, 상하이, 항저우는 다 가봤지만," },
+        { "hanzi": "但只是逛逛大城市、", "pinyin": "dàn zhǐshì guàngguang dà chéngshì,", "ko": "큰 도시를 둘러보고," },
+        { "hanzi": "吃点好吃的，仅此而已。", "pinyin": "chī diǎn hǎochī de, jǐncǐ'éryǐ.", "ko": "맛있는 것 좀 먹은 게 전부였습니다." },
+        { "hanzi": "下次再去中国，", "pinyin": "xiàcì zài qù Zhōngguó,", "ko": "다음에 중국에 가면," },
+        { "hanzi": "我希望以历史遗迹为主，", "pinyin": "wǒ xīwàng yǐ lìshǐ yíjì wéi zhǔ,", "ko": "역사 유적지 위주로 다니면서," },
+        { "hanzi": "在能真正用上中文的地方", "pinyin": "zài néng zhēnzhèng yòngshang Zhōngwén de dìfang", "ko": "중국어를 진짜로 쓸 수 있는 곳에서" },
+        { "hanzi": "开口说说看。", "pinyin": "kāikǒu shuōshuo kàn.", "ko": "입을 열어 말해보고 싶습니다." }
+      ]
+    },
+    {
+      "id": "s6",
+      "label": "6 업무·목표",
+      "title": "업무와 앞으로의 목표",
+      "lines": [
+        { "hanzi": "工作中也常常", "pinyin": "gōngzuò zhōng yě chángcháng", "ko": "일에서도 종종 마주칩니다," },
+        { "hanzi": "遇到和中国有关的事。", "pinyin": "yùdào hé Zhōngguó yǒuguān de shì.", "ko": "중국과 관련된 일들을요." },
+        { "hanzi": "产品出口或进口时", "pinyin": "chǎnpǐn chūkǒu huò jìnkǒu shí", "ko": "제품을 수출하거나 수입할 때" },
+        { "hanzi": "需要确认当地的法规，", "pinyin": "xūyào quèrèn dāngdì de fǎguī,", "ko": "현지 규정을 확인해야 하는데," },
+        { "hanzi": "以前拿到文件也看不懂，", "pinyin": "yǐqián ná dào wénjiàn yě kàn bu dǒng,", "ko": "예전엔 서류를 받아도 읽지 못해서," },
+        { "hanzi": "很难利用。", "pinyin": "hěn nán lìyòng.", "ko": "활용하기가 어려웠습니다." },
+        { "hanzi": "现在的水平还只是“不会慌张”而已，", "pinyin": "xiànzài de shuǐpíng hái zhǐshì \"bú huì huāngzhāng\" éryǐ,", "ko": "지금 수준은 '당황하지 않는' 정도지만," },
+        { "hanzi": "但我的目标是让自己更熟悉一些。", "pinyin": "dàn wǒ de mùbiāo shì ràng zìjǐ gèng shúxī yìxiē.", "ko": "조금 더 익숙해지는 것이 제 목표입니다." }
+      ]
+    }
+  ]
+}

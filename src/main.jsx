@@ -4,6 +4,7 @@ import { Eye, Search, Shuffle, Sparkles, Volume2 } from 'lucide-react';
 import vocabData from './data/vocab.json';
 import { speakChinese, stopSpeaking, useChineseVoice } from './speech';
 import { buildLessonChips, lessonBadge, matchesLessonChip } from './lessons';
+import MemorizeScript from './MemorizeScript';
 import ToneQuiz from './ToneQuiz';
 import './styles.css';
 
@@ -25,6 +26,7 @@ const MODE_OPTIONS = [
 const VIEW_OPTIONS = [
   { key: 'study', label: '랜덤 학습' },
   { key: 'list', label: '단어장' },
+  { key: 'memo', label: '암기' },
   { key: 'quiz', label: '시험보기' }
 ];
 
@@ -527,6 +529,8 @@ function App() {
           speakingText={speakingText}
           onSpeak={handleSpeak}
         />
+      ) : view === 'memo' ? (
+        <MemorizeScript canSpeak={hasChineseVoice} />
       ) : (
         <ToneQuiz items={studyItems} canSpeak={hasChineseVoice} onSpeak={handleSpeak} />
       )}
@@ -536,7 +540,9 @@ function App() {
           ? 'Space 또는 Enter: 정답 보기 / 다음 카드 · S: 발음 듣기'
           : view === 'list'
             ? '단어를 누르면 발음이 재생됩니다'
-            : '한자를 보고 들으면서 성조가 맞는 병음을 고르세요'}
+            : view === 'memo'
+              ? '문장을 누르면 재생됩니다 · 이어서 재생하면 한 줄씩 쉬어가며 들려줍니다'
+              : '한자를 보고 들으면서 성조가 맞는 병음을 고르세요'}
       </p>
     </main>
   );
