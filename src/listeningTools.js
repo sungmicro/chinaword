@@ -73,13 +73,18 @@ function itemAt(items, time) {
   return found?.no ?? null;
 }
 
-// 회차 음원 하나를 두고 문항 구간만 재생하거나(item), 여러 문항을 이어서 재생합니다(run).
-// 이어 듣기는 파일을 그냥 흘려보내므로 화면이 꺼져도 끊기지 않습니다.
+// 한 문항을 되풀이할 때 다시 처음으로 돌아가기 전 쉬는 시간(초).
+// 음원에는 문항마다 뒤에 2초 무음이 붙어 있어서, 그 무음 안에서 쉬고 돌아갑니다.
+const REPEAT_PAUSE = 1.2;
+
+// 회차 음원 하나를 두고 한 문항을 멈출 때까지 되풀이하거나(item), 여러 문항을 이어서 재생합니다(run).
+// 둘 다 파일을 그냥 흘려보내므로 화면이 꺼져도 끊기지 않습니다.
 export function useClipPlayer(src, items) {
   const audioRef = useRef(null);
   const endRef = useRef(null);
+  const loopStartRef = useRef(null);
   const itemsRef = useRef(items);
-  const [playing, setPlaying] = useState(null); // { mode: 'item' | 'run', no }
+  const [playing, setPlaying] = useState(null); // { mode: 'item' | 'run', no, round }
 
   itemsRef.current = items;
 
@@ -94,6 +99,11 @@ export function useClipPlayer(src, items) {
     function check() {
       const end = endRef.current;
       if (end !== null && audio.currentTime >= end) {
+        if (loopStartRef.current !== null) {
+          audio.currentTime = loopStartRef.current;
+          setPlaying((prev) => (prev ? { ...prev, round: prev.round + 1 } : prev));
+          return;
+        }
         endRef.current = null;
         audio.pause();
         return;
@@ -136,25 +146,30 @@ export function useClipPlayer(src, items) {
       audio.load();
       audioRef.current = null;
       endRef.current = null;
+      loopStartRef.current = null;
       setPlaying(null);
     };
   }, [src]);
 
-  const playSpan = useCallback((start, end, mode, no) => {
+  const playSpan = useCallback((start, end, mode, no, repeat = false) => {
     const audio = audioRef.current;
     if (!audio) return;
     endRef.current = end;
+    loopStartRef.current = repeat ? start : null;
     const seek = () => {
       audio.currentTime = start;
     };
     if (audio.readyState >= 1) seek();
     else audio.addEventListener('loadedmetadata', seek, { once: true });
-    setPlaying({ mode, no });
+    setPlaying({ mode, no, round: 1 });
     // play()는 버튼을 누른 그 순간에 불러야 아이폰에서도 소리가 납니다.
     audio.play()?.catch(() => setPlaying(null));
   }, []);
 
-  const playItem = useCallback((item) => playSpan(item.start, item.end + 0.05, 'item', item.no), [playSpan]);
+  const playItem = useCallback(
+    (item) => playSpan(item.start, item.end + REPEAT_PAUSE, 'item', item.no, true),
+    [playSpan]
+  );
 
   const playRun = useCallback(
     (list) => {
@@ -166,6 +181,7 @@ export function useClipPlayer(src, items) {
 
   const stop = useCallback(() => {
     endRef.current = null;
+    loopStartRef.current = null;
     audioRef.current?.pause();
   }, []);
 

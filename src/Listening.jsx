@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
-import { Check, ChevronLeft, ChevronRight, Eye, Headphones, Play, RotateCcw, Square, X } from 'lucide-react';
+import { Check, ChevronLeft, ChevronRight, Eye, Headphones, Play, Repeat, RotateCcw, Square, X } from 'lucide-react';
 import testIndex from './data/listening-index.json';
 import {
   UNKNOWN,
@@ -372,10 +372,13 @@ export default function Listening() {
               <button
                 type="button"
                 className={`listenPlay ${itemPlaying ? 'active' : ''}`}
-                onClick={() => (itemPlaying ? stop() : playItem(item))}
+                onClick={() => playItem(item)}
               >
-                {itemPlaying ? <Square size={18} /> : <Play size={18} />}
-                {itemPlaying ? '멈추기' : '문제 듣기'}
+                {itemPlaying ? <Repeat size={18} /> : <Play size={18} />}
+                {itemPlaying ? `반복 재생 중 · ${playing.round}회째` : '문제 듣기'}
+              </button>
+              <button type="button" className="listenStop" onClick={stop} disabled={!playing}>
+                <Square size={16} /> 멈춤
               </button>
             </div>
 

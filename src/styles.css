@@ -1187,6 +1187,7 @@ code {
 .listenPlayRow {
   display: flex;
   justify-content: center;
+  gap: 8px;
 }
 
 .listenPlay {
@@ -1205,7 +1206,29 @@ code {
 }
 
 .listenPlay.active {
-  background: #b3574f;
+  background: var(--accent);
+}
+
+.listenStop {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 48px;
+  padding: 0 18px;
+  border: 1px solid #b3574f;
+  border-radius: 16px;
+  background: #fceceb;
+  color: #7d322c;
+  font-size: 1rem;
+  font-weight: 900;
+}
+
+.listenStop:disabled {
+  border-color: var(--line);
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--muted);
+  opacity: 0.6;
+  cursor: default;
 }
 
 .listenChoices {
@@ -1592,7 +1615,8 @@ code {
     font-size: 0.74rem;
   }
 
-  .listenPlay {
+  .listenPlay,
+  .listenStop {
     min-height: 42px;
   }
 
