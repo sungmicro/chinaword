@@ -4,6 +4,7 @@ import { Eye, Search, Shuffle, Sparkles, Volume2 } from 'lucide-react';
 import vocabData from './data/vocab.json';
 import { speakChinese, stopSpeaking, useChineseVoice } from './speech';
 import { buildLessonChips, lessonBadge, matchesLessonChip } from './lessons';
+import Listening from './Listening';
 import MemorizeScript from './MemorizeScript';
 import ToneQuiz from './ToneQuiz';
 import './styles.css';
@@ -27,7 +28,8 @@ const VIEW_OPTIONS = [
   { key: 'study', label: '랜덤 학습' },
   { key: 'list', label: '단어장' },
   { key: 'memo', label: '암기' },
-  { key: 'quiz', label: '시험보기' }
+  { key: 'quiz', label: '시험보기' },
+  { key: 'listen', label: '듣기' }
 ];
 
 function loadJson(key, fallback) {
@@ -531,6 +533,8 @@ function App() {
         />
       ) : view === 'memo' ? (
         <MemorizeScript canSpeak={hasChineseVoice} />
+      ) : view === 'listen' ? (
+        <Listening />
       ) : (
         <ToneQuiz items={studyItems} canSpeak={hasChineseVoice} onSpeak={handleSpeak} />
       )}
@@ -542,7 +546,9 @@ function App() {
             ? '단어를 누르면 발음이 재생됩니다'
             : view === 'memo'
               ? '문장을 누르면 재생됩니다 · 이어서 재생하면 한 줄씩 쉬어가며 들려줍니다'
-              : '한자를 보고 들으면서 성조가 맞는 병음을 고르세요'}
+              : view === 'listen'
+                ? '문제 낭독만 남긴 음원입니다 · 이어 듣기는 화면을 꺼도 계속 재생됩니다'
+                : '한자를 보고 들으면서 성조가 맞는 병음을 고르세요'}
       </p>
     </main>
   );

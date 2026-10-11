@@ -95,7 +95,7 @@ h1 {
 
 .viewTabs {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 6px;
   margin-bottom: 10px;
   padding: 5px;
@@ -1131,6 +1131,481 @@ code {
   color: var(--accent-strong);
 }
 
+/* HSK 듣기 */
+.listenPanel {
+  min-height: 0;
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 10px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 34px;
+  background: var(--surface-strong);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.listenControls {
+  display: grid;
+  gap: 8px;
+}
+
+.listenControls .listCount {
+  margin: 0;
+}
+
+.listenToolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.listenToolbar .memoToggles {
+  flex-wrap: wrap;
+}
+
+.listenBody {
+  min-height: 0;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+}
+
+.listenCard {
+  display: grid;
+  gap: 12px;
+  padding: 2px 4px 8px 0;
+}
+
+.listenCard .quizProgress {
+  flex-wrap: wrap;
+}
+
+.listenPlayRow {
+  display: flex;
+  justify-content: center;
+}
+
+.listenPlay {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 48px;
+  padding: 0 22px;
+  border: 0;
+  border-radius: 16px;
+  background: var(--accent-strong);
+  color: #fff8ef;
+  font-size: 1rem;
+  font-weight: 900;
+  box-shadow: 0 8px 18px rgba(91, 57, 39, 0.18);
+}
+
+.listenPlay.active {
+  background: #b3574f;
+}
+
+.listenChoices {
+  display: grid;
+  gap: 10px;
+}
+
+.listenPicture {
+  width: 100%;
+  max-width: 460px;
+  justify-self: center;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #fff;
+}
+
+.listenLetters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.listenChoice {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 46px;
+  padding: 6px 14px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.86);
+  color: var(--text);
+  font-weight: 900;
+}
+
+.listenChoice:disabled {
+  opacity: 1; /* 채점 뒤에도 글자가 흐려지지 않게 */
+  cursor: default;
+}
+
+.listenChoice.letter {
+  min-width: 52px;
+  font-size: 1.1rem;
+}
+
+.listenChoice.wide {
+  min-width: 96px;
+}
+
+.listenChoice.unknownChoice {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.listenChoice.option {
+  width: 100%;
+  justify-content: flex-start;
+  gap: 12px;
+  padding: 10px 14px;
+  text-align: left;
+}
+
+.optionLabel {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  background: #f2e4d4;
+  color: var(--accent-strong);
+  font-size: 0.85rem;
+}
+
+.optionText {
+  flex: 1;
+  display: grid;
+  gap: 2px;
+  font-size: 1.15rem;
+}
+
+.listenChoice.right {
+  border-color: #3f7d54;
+  background: #e8f5ec;
+  color: #235535;
+}
+
+.listenChoice.wrong {
+  border-color: #b3574f;
+  background: #fceceb;
+  color: #7d322c;
+}
+
+.listenChoice.unknown {
+  border-color: var(--accent);
+  background: #fff4e6;
+  color: var(--accent-strong);
+}
+
+.listenStatement {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 12px 14px;
+  border-radius: 16px;
+  background: #fbf5ee;
+  font-size: 1.2rem;
+  font-weight: 900;
+}
+
+.listenStar {
+  color: var(--accent);
+  line-height: 1.6;
+}
+
+.listenVerdict {
+  margin: 0;
+  text-align: center;
+  font-weight: 900;
+}
+
+.listenVerdict.right {
+  color: #235535;
+}
+
+.listenVerdict.wrong {
+  color: #7d322c;
+}
+
+.listenVerdict.unknown {
+  color: var(--accent-strong);
+}
+
+.listenShow,
+.listenRetry {
+  justify-self: center;
+}
+
+/* 한자 아래 병음 (단어 단위) */
+.ruby {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  column-gap: 6px;
+  row-gap: 4px;
+}
+
+.rubyUnit {
+  display: inline-flex;
+  align-items: flex-start;
+}
+
+.rubyWord {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rubyPunct {
+  font-size: 1.25rem;
+  font-weight: 900;
+  line-height: 1.3;
+}
+
+.optionText .rubyPunct {
+  font-size: 1.15rem;
+}
+
+.rubyHanzi {
+  font-size: 1.25rem;
+  font-weight: 900;
+  line-height: 1.3;
+}
+
+.rubyPinyin {
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 800;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.optionText .rubyHanzi {
+  font-size: 1.15rem;
+}
+
+.listenKo {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 0.86rem;
+  font-weight: 780;
+  line-height: 1.4;
+}
+
+.listenReveal {
+  display: grid;
+  gap: 8px;
+  padding-top: 4px;
+  border-top: 1px solid var(--line);
+}
+
+.listenReveal h3 {
+  margin: 8px 0 0;
+  color: var(--accent-strong);
+  font-size: 0.84rem;
+  font-weight: 900;
+}
+
+.listenScript,
+.listenVocab,
+.listenGrammar {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.listenLine {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.86);
+}
+
+.listenSpeaker {
+  flex-shrink: 0;
+  min-width: 34px;
+  padding: 3px 7px;
+  border-radius: 999px;
+  background: #f2e4d4;
+  color: var(--accent-strong);
+  font-size: 0.74rem;
+  font-weight: 900;
+  text-align: center;
+}
+
+.listenSpeaker.question {
+  background: var(--accent-strong);
+  color: #fff8ef;
+}
+
+.listenLineBody {
+  min-width: 0;
+}
+
+.listenVocab {
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+}
+
+.listenVocab li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 8px;
+  padding: 9px 12px;
+  border-radius: 14px;
+  background: #fbf5ee;
+}
+
+.listenVocab strong {
+  font-size: 1.15rem;
+  font-weight: 950;
+}
+
+.vocabPinyinText {
+  color: var(--accent);
+  font-size: 0.86rem;
+  font-weight: 850;
+}
+
+.vocabMeaningText {
+  font-size: 0.86rem;
+  font-weight: 800;
+}
+
+.listenVocab em {
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-style: normal;
+  font-weight: 800;
+}
+
+.listenGrammar li {
+  padding: 10px 12px;
+  border-left: 4px solid var(--accent);
+  border-radius: 6px 14px 14px 6px;
+  background: #fbf5ee;
+}
+
+.listenGrammar strong {
+  font-size: 0.98rem;
+  font-weight: 950;
+}
+
+.listenGrammar p {
+  margin: 4px 0 0;
+  font-size: 0.86rem;
+  font-weight: 750;
+  line-height: 1.5;
+}
+
+.listenNav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 0.86rem;
+  font-weight: 850;
+}
+
+.listenNavButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  min-height: 42px;
+  padding: 0 14px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #f2e4d4;
+  color: var(--accent-strong);
+  font-weight: 900;
+}
+
+.listenNavButton:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+@media (max-width: 680px) {
+  .listenPanel {
+    padding: 10px;
+    border-radius: 24px;
+    gap: 8px;
+  }
+
+  /* 좁은 화면에서는 조작 줄을 가로로 밀어 보게 해서 문제 카드 자리를 넓힙니다. */
+  .listenControls {
+    gap: 6px;
+  }
+
+  .listenTests,
+  .listenToolbar .memoToggles {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .listenTests::-webkit-scrollbar,
+  .listenToolbar .memoToggles::-webkit-scrollbar {
+    display: none;
+  }
+
+  .listenTests .lessonChip,
+  .listenToolbar .memoToggle {
+    flex-shrink: 0;
+    min-height: 30px;
+    padding: 0 10px;
+    font-size: 0.76rem;
+  }
+
+  .listenToolbar {
+    flex-wrap: nowrap;
+  }
+
+  .listenToolbar .memoToggles {
+    min-width: 0;
+  }
+
+  .listenToolbar .memoPlay {
+    flex-shrink: 0;
+    min-height: 32px;
+    padding: 0 11px;
+    font-size: 0.78rem;
+  }
+
+  .listenControls .listCount {
+    font-size: 0.74rem;
+  }
+
+  .listenPlay {
+    min-height: 42px;
+  }
+
+  .rubyHanzi,
+  .rubyPunct {
+    font-size: 1.12rem;
+  }
+
+  .listenNavButton {
+    min-height: 38px;
+  }
+}
+
 @media (max-width: 680px) {
   html,
   body,
@@ -1192,7 +1667,7 @@ code {
     min-height: 33px;
     padding: 0 2px;
     border-radius: 10px;
-    /* 탭이 4개라 좁은 화면에서는 글자를 줄여야 한 줄에 들어갑니다. */
+    /* 탭이 5개라 좁은 화면에서는 글자를 줄여야 한 줄에 들어갑니다. */
     font-size: clamp(0.68rem, 3vw, 0.82rem);
     white-space: nowrap;
   }
