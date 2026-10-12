@@ -1,10 +1,10 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
-import { Check, ChevronLeft, ChevronRight, Eye, Headphones, Play, Repeat, RotateCcw, Square, X } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Eye, Headphones, Play, Repeat, RotateCcw, Square } from 'lucide-react';
 import testIndex from './data/listening-index.json';
+import { ChoiceButton, ExplainGrammar, ExplainVocab, Ruby, Verdict } from './hskParts';
 import {
   UNKNOWN,
   fetchTest,
-  gradeOf,
   loadAnswers,
   loadPrefs,
   saveAnswers,
@@ -26,65 +26,6 @@ const TRUE_FALSE = [
 function answerLabel(item) {
   if (item.choices.type === 'truefalse') return item.answer === '√' ? '✓ 맞다' : '✗ 틀리다';
   return item.answer;
-}
-
-const OPENING_PUNCT = new Set(['“', '‘', '《', '（']);
-
-// 문장부호가 혼자 다음 줄로 넘어가지 않게 앞 단어에 붙입니다 (여는 따옴표는 뒤 단어에).
-function groupWords(words) {
-  const units = [];
-  let prefix = '';
-  words.forEach(([hanzi, pinyin]) => {
-    if (!pinyin && OPENING_PUNCT.has(hanzi)) {
-      prefix += hanzi;
-    } else if (!pinyin && units.length && !prefix) {
-      units[units.length - 1].suffix += hanzi;
-    } else {
-      units.push({ prefix, hanzi, pinyin, suffix: '' });
-      prefix = '';
-    }
-  });
-  if (prefix) units.push({ prefix, hanzi: '', pinyin: '', suffix: '' });
-  return units;
-}
-
-// 한자 바로 아래에 병음을 붙여 단어 단위로 보여줍니다.
-function Ruby({ words, showPinyin = true }) {
-  return (
-    <span className="ruby">
-      {groupWords(words).map((unit, index) => (
-        <span className="rubyUnit" key={index}>
-          {unit.prefix ? <span className="rubyPunct">{unit.prefix}</span> : null}
-          <span className="rubyWord">
-            <span className="rubyHanzi">{unit.hanzi}</span>
-            {showPinyin ? <span className="rubyPinyin">{unit.pinyin || ' '}</span> : null}
-          </span>
-          {unit.suffix ? <span className="rubyPunct">{unit.suffix}</span> : null}
-        </span>
-      ))}
-    </span>
-  );
-}
-
-function ChoiceButton({ value, picked, item, revealed, onPick, className = '', children }) {
-  const answered = Boolean(picked);
-  const isPicked = picked === value;
-  const isAnswer = value === item.answer;
-  const state =
-    (answered || revealed) && isAnswer ? 'right' : isPicked && value === UNKNOWN ? 'unknown' : isPicked ? 'wrong' : '';
-
-  return (
-    <button
-      type="button"
-      className={`listenChoice ${className} ${state}`}
-      onClick={() => onPick(value)}
-      disabled={answered}
-    >
-      {children}
-      {state === 'right' ? <Check size={16} /> : null}
-      {state === 'wrong' ? <X size={16} /> : null}
-    </button>
-  );
 }
 
 function Choices({ item, picked, revealed, onPick }) {
@@ -156,18 +97,7 @@ function Choices({ item, picked, revealed, onPick }) {
   );
 }
 
-function Verdict({ item, picked }) {
-  const grade = gradeOf(item, picked);
-  if (!grade) return null;
-  const text = {
-    right: '정답이에요',
-    wrong: `아쉬워요 · 정답은 ${answerLabel(item)}`,
-    unknown: `정답은 ${answerLabel(item)}`
-  }[grade];
-  return <p className={`listenVerdict ${grade}`}>{text}</p>;
-}
-
-function Explanation({ item }) {
+function Explanation({ item, source }) {
   return (
     <section className="listenReveal">
       <h3>대본</h3>
@@ -188,26 +118,10 @@ function Explanation({ item }) {
       </ol>
 
       <h3>핵심 단어</h3>
-      <ul className="listenVocab">
-        {item.vocab.map((word) => (
-          <li key={word.hanzi}>
-            <strong>{word.hanzi}</strong>
-            <span className="vocabPinyinText">{word.pinyin}</span>
-            <span className="vocabMeaningText">{word.meaningKo}</span>
-            {word.partOfSpeech ? <em>{word.partOfSpeech}</em> : null}
-          </li>
-        ))}
-      </ul>
+      <ExplainVocab vocab={item.vocab} source={source} />
 
       <h3>문장 구조</h3>
-      <ul className="listenGrammar">
-        {item.grammar.map((note, index) => (
-          <li key={index}>
-            <strong>{note.pattern}</strong>
-            <p>{note.note}</p>
-          </li>
-        ))}
-      </ul>
+      <ExplainGrammar grammar={item.grammar} source={source} />
     </section>
   );
 }
@@ -383,11 +297,11 @@ export default function Listening() {
             </div>
 
             <Choices item={item} picked={picked} revealed={revealed} onPick={pick} />
-            <Verdict item={item} picked={picked} />
+            <Verdict item={item} picked={picked} answerText={answerLabel(item)} />
 
             {revealed ? (
               <>
-                <Explanation item={item} />
+                <Explanation item={item} source={`${testId} 듣기 ${item.no}번`} />
                 <button type="button" className="subButton listenRetry" onClick={retry}>
                   <RotateCcw size={15} /> 이 문제 다시 풀기
                 </button>

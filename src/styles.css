@@ -1536,6 +1536,41 @@ code {
   line-height: 1.5;
 }
 
+/* 해설의 «＋ 담기» (내 단어장) */
+.mineButton {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  min-height: 28px;
+  padding: 0 10px;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--accent-strong);
+  font-size: 0.74rem;
+  font-weight: 900;
+}
+
+.mineButton.saved {
+  border-color: transparent;
+  background: var(--accent-strong);
+  color: #fff8ef;
+}
+
+.grammarHead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 8px;
+}
+
+.grammarGloss {
+  color: var(--accent-strong);
+  font-size: 0.84rem;
+  font-weight: 850;
+}
+
 .listenNav {
   display: flex;
   align-items: center;
