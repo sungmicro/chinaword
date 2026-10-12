@@ -62,3 +62,12 @@ test('fetchCached: 같은 주소는 한 번만 받고, 실패하면 다음에 �
   assert.equal(second, first);
   assert.equal(calls, 2);
 });
+
+test('fetchCached: 네트워크·해석 오류도 한글 문구로 알린다', async () => {
+  globalThis.fetch = async (url) => {
+    if (url.includes('T2')) throw new TypeError('Failed to fetch');
+    return { ok: true, json: async () => { throw new SyntaxError("Unexpected token '<'"); } };
+  };
+  await assert.rejects(fetchCached('/reading/T2.json', 'T2'), /^Error: T2 데이터를 불러오지 못했어요/);
+  await assert.rejects(fetchCached('/reading/T3.json', 'T3'), /^Error: T3 데이터를 불러오지 못했어요/);
+});

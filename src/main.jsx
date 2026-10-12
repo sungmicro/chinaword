@@ -45,7 +45,11 @@ function loadJson(key, fallback) {
 }
 
 function saveJson(key, value) {
-  localStorage.setItem(key, JSON.stringify(value));
+  try {
+    localStorage.setItem(key, JSON.stringify(value));
+  } catch {
+    // 저장이 막힌 기기(사이트 데이터 차단·용량 초과)에서도 화면은 그대로 씁니다.
+  }
 }
 
 function studyDayKey(date = new Date()) {

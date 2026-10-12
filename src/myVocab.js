@@ -19,13 +19,23 @@ export function wordsToPinyin(words) {
   return out.charAt(0).toUpperCase() + out.slice(1);
 }
 
-export const wordKey = (hanzi) => `word:${hanzi}`;
+// 성조를 뗀 음절. 같은 한자라도 읽기가 다르면(还 hái/huán) 다른 단어로, 변조만 다르면(不 bù/bú) 같은 단어로 봅니다.
+function toneless(pinyin) {
+  return String(pinyin ?? '')
+    .toLowerCase()
+    .replace(/[üǖǘǚǜ]/g, 'v')
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z]/g, '');
+}
+
+export const wordKey = (hanzi, pinyin) => `word:${hanzi}:${toneless(pinyin)}`;
 export const patternKey = (pattern) => `pattern:${pattern}`;
 
 // 해설의 단어 하나를 담는 순간 그대로 저장합니다. 독해 단어에는 용법·예문이 있고 듣기 단어에는 없습니다.
 export function wordEntry(word, source, now = new Date()) {
   return {
-    key: wordKey(word.hanzi),
+    key: wordKey(word.hanzi, word.pinyin),
     kind: 'word',
     hanzi: word.hanzi,
     pinyin: word.pinyin ?? '',

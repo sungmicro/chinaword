@@ -37,6 +37,7 @@ function Lines({ item, showPinyin, revealed }) {
           <div className="listenLineBody">
             <Ruby
               words={line.words}
+              tight
               showPinyin={showPinyin || revealed}
               blank={line.blank ?? null}
               fillBlank={revealed}
@@ -54,7 +55,7 @@ function Question({ question, showPinyin, revealed }) {
     <div className="listenStatement">
       <span className="listenStar">★</span>
       <div>
-        <Ruby words={question.words} showPinyin={showPinyin || revealed} />
+        <Ruby words={question.words} tight showPinyin={showPinyin || revealed} />
         {revealed ? <p className="listenKo">{question.ko}</p> : null}
       </div>
     </div>
@@ -73,7 +74,7 @@ function Choices({ item, options, example, picked, revealed, showPinyin, onPick 
           <ChoiceButton key={option.label} value={option.label} className={kind} blocked={isExample} {...shared}>
             <span className="optionLabel">{option.label}</span>
             <span className="optionText">
-              <Ruby words={option.words} showPinyin={showPinyin || revealed} />
+              <Ruby words={option.words} tight showPinyin={showPinyin || revealed} />
               {revealed ? <span className="listenKo">{option.ko}</span> : null}
             </span>
             {isExample ? <span className="readExampleTag">예시</span> : null}
@@ -182,6 +183,7 @@ export default function Reading() {
   const [shown, setShown] = useState({}); // 고르지 않고 '해설 보기'로 펼친 문항
   const [test, setTest] = useState(null);
   const [error, setError] = useState('');
+  const [attempt, setAttempt] = useState(0); // '다시 받기'를 누를 때마다 늘려 같은 회차를 다시 받습니다.
   const bodyRef = useRef(null);
 
   useEffect(() => {
@@ -195,7 +197,7 @@ export default function Reading() {
     return () => {
       alive = false;
     };
-  }, [testId]);
+  }, [testId, attempt]);
 
   useEffect(() => {
     writeJson(PREF_KEY, { testId, part, positions, showPinyin });
@@ -293,7 +295,14 @@ export default function Reading() {
       </div>
 
       <div className="listenBody" ref={bodyRef}>
-        {error ? <p className="listEmpty">{error}</p> : null}
+        {error ? (
+          <div className="readError">
+            <p className="listEmpty">{error}</p>
+            <button type="button" className="subButton" onClick={() => setAttempt((count) => count + 1)}>
+              <RotateCcw size={15} /> 다시 받기
+            </button>
+          </div>
+        ) : null}
         {!error && !item ? <p className="listEmpty">불러오는 중…</p> : null}
         {item ? (
           <article className="listenCard">

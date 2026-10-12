@@ -1576,6 +1576,12 @@ code {
 }
 
 /* 독해 탭 */
+.readError {
+  display: grid;
+  justify-items: center;
+  gap: 8px;
+}
+
 .readLines {
   display: grid;
   gap: 8px;

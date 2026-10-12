@@ -28,9 +28,9 @@ function groupWords(words) {
 }
 
 // 한자 바로 아래에 병음을 붙여 단어 단위로 보여줍니다.
-// 병음을 감추면 시험지처럼 단어 사이를 붙입니다(띄어 쓰면 단어 경계가 힌트가 됩니다).
+// tight: 독해 문제처럼 병음을 감출 때 시험지처럼 단어 사이를 붙입니다(띄어 쓰면 단어 경계가 힌트가 됩니다).
 // blank: 빈칸 문제에서 정답 단어의 자리. 채우기 전에는 «（　　）»로 가리고, 채우면 강조합니다.
-export function Ruby({ words, showPinyin = true, blank = null, fillBlank = false }) {
+export function Ruby({ words, showPinyin = true, blank = null, fillBlank = false, tight = false }) {
   const marked =
     blank === null
       ? words
@@ -40,7 +40,7 @@ export function Ruby({ words, showPinyin = true, blank = null, fillBlank = false
         });
 
   return (
-    <span className={`ruby${showPinyin ? '' : ' plain'}`}>
+    <span className={`ruby${tight && !showPinyin ? ' plain' : ''}`}>
       {groupWords(marked).map((unit, index) => (
         <span className={`rubyUnit${unit.mark ? ` ruby-${unit.mark}` : ''}`} key={index}>
           {unit.prefix ? <span className="rubyPunct">{unit.prefix}</span> : null}
@@ -125,7 +125,7 @@ export function ExplainVocab({ vocab, source }) {
           <span className="vocabMeaningText">{word.meaningKo}</span>
           {word.partOfSpeech ? <em>{word.partOfSpeech}</em> : null}
           <MineButton
-            saved={mine.has(wordKey(word.hanzi))}
+            saved={mine.has(wordKey(word.hanzi, word.pinyin))}
             label={word.hanzi}
             onToggle={() => mine.toggle(wordEntry(word, source))}
           />

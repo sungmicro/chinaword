@@ -42,12 +42,20 @@ export function tally(items, picks = {}) {
 const cache = new Map();
 
 // 회차 데이터는 그 회차를 고를 때만 받아옵니다. 실패하면 캐시에서 지워 다음에 다시 받습니다.
+// 연결이 끊겼거나 파일이 JSON이 아니어도 브라우저 원문 대신 같은 한글 문구로 알립니다.
 export function fetchCached(url, label) {
   if (!cache.has(url)) {
-    const request = fetch(url).then((response) => {
-      if (!response.ok) throw new Error(`${label} 데이터를 불러오지 못했어요 (${response.status})`);
-      return response.json();
-    });
+    const failed = (detail) => new Error(`${label} 데이터를 불러오지 못했어요 (${detail})`);
+    const request = fetch(url)
+      .catch(() => {
+        throw failed('연결을 확인해 주세요');
+      })
+      .then((response) => {
+        if (!response.ok) throw failed(response.status);
+        return response.json().catch(() => {
+          throw failed('파일을 읽지 못했어요');
+        });
+      });
     request.catch(() => cache.delete(url));
     cache.set(url, request);
   }

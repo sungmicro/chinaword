@@ -53,7 +53,7 @@ test('wordsToPinyin: 예문 병음 한 줄', () => {
 
 test('wordEntry: 독해 단어는 용법·예문까지 담는다', () => {
   assert.deepEqual(wordEntry(READING_WORD, 'H31001 독해 63번', NOW), {
-    key: 'word:满意', kind: 'word', hanzi: '满意', pinyin: 'mǎnyì', meaningKo: '만족하다', partOfSpeech: '형용사',
+    key: 'word:满意:manyi', kind: 'word', hanzi: '满意', pinyin: 'mǎnyì', meaningKo: '만족하다', partOfSpeech: '형용사',
     note: '对A很满意', exampleZh: '我很满意。', examplePinyin: 'Wǒ hěn mǎnyì.', exampleKo: '나는 만족한다.',
     source: 'H31001 독해 63번', addedAt: '2026-10-12T05:00:00.000Z'
   });
@@ -81,7 +81,7 @@ test('patternEntry: 짧은 뜻이 있으면 뜻 자리에, 없으면 설명 전�
 test('toggleEntry: 같은 key는 하나만, 다시 누르면 뺀다, 새 항목이 앞', () => {
   let items = toggleEntry([], wordEntry(READING_WORD, 's1', NOW));
   items = toggleEntry(items, patternEntry(READING_GRAMMAR, 's2', NOW));
-  assert.deepEqual(items.map((i) => i.key), ['pattern:虽然A，但是B', 'word:满意']);
+  assert.deepEqual(items.map((i) => i.key), ['pattern:虽然A，但是B', 'word:满意:manyi']);
   items = toggleEntry(items, wordEntry(READING_WORD, '다른 문항', NOW));
   assert.deepEqual(items.map((i) => i.key), ['pattern:虽然A，但是B']);
 });
@@ -105,10 +105,10 @@ test('저장소: 담기·빼기가 기기에 남고 구독자에게 알린다', 
   });
   toggleMine(wordEntry(READING_WORD, 's', NOW));
   assert.equal(loadMine().length, 1);
-  assert.equal(JSON.parse(localStorage.getItem(MINE_KEY)).items[0].key, 'word:满意');
+  assert.equal(JSON.parse(localStorage.getItem(MINE_KEY)).items[0].key, 'word:满意:manyi');
   const snapshot = loadMine();
   assert.equal(loadMine(), snapshot); // 바뀌기 전에는 같은 배열 (useSyncExternalStore 조건)
-  removeMine('word:满意');
+  removeMine('word:满意:manyi');
   assert.equal(loadMine().length, 0);
   assert.equal(calls, 2);
   off();
@@ -123,4 +123,12 @@ test('저장소: 깨진 저장값은 버리고, 저장소가 없어도 빈 목�
   assert.deepEqual(loadMine(), []);
   assert.doesNotThrow(() => toggleMine(wordEntry(READING_WORD, 's', NOW)));
   assert.equal(loadMine().length, 1);
+});
+
+test('wordEntry: 다음자는 읽기로 구분하고, 성조 변조는 같은 단어로 본다', () => {
+  const hai = wordEntry({ hanzi: '还', pinyin: 'hái' }, 's', NOW).key;
+  const huan = wordEntry({ hanzi: '还', pinyin: 'huán' }, 's', NOW).key;
+  assert.notEqual(hai, huan);
+  assert.equal(wordEntry({ hanzi: '不', pinyin: 'bù' }, 's', NOW).key, wordEntry({ hanzi: '不', pinyin: 'bú' }, 's', NOW).key);
+  assert.equal(wordEntry({ hanzi: '绿', pinyin: 'lǜ' }, 's', NOW).key, 'word:绿:lv');
 });
