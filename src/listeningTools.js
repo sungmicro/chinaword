@@ -1,29 +1,11 @@
-// 듣기 탭 도우미: 회차 데이터 불러오기, 풀이 기록, 문항 구간 재생.
+// 듣기 탭 도우미: 풀이 기록, 문항 구간 재생. 독해와 같이 쓰는 부분은 practiceStore.js에 있습니다.
 import { useCallback, useEffect, useRef, useState } from 'react';
+import { fetchCached, readJson, writeJson } from './practiceStore';
+
+export { UNKNOWN, gradeOf, tally } from './practiceStore';
 
 const ANSWER_KEY = 'sungmi-vocab-listening-v1';
 const PREF_KEY = 'sungmi-vocab-listening-prefs-v1';
-
-// '모르겠음'은 기록에 '?'로 남깁니다. 틀린 것과 따로 셉니다.
-export const UNKNOWN = '?';
-
-function readJson(key, fallback) {
-  try {
-    const saved = localStorage.getItem(key);
-    const parsed = saved ? JSON.parse(saved) : null;
-    return parsed && typeof parsed === 'object' ? parsed : fallback;
-  } catch {
-    return fallback;
-  }
-}
-
-function writeJson(key, value) {
-  try {
-    localStorage.setItem(key, JSON.stringify(value));
-  } catch {
-    // 저장 실패가 학습을 막을 이유는 없습니다.
-  }
-}
 
 // { "H31001": { "23": "A", "24": "?" } }
 export const loadAnswers = () => readJson(ANSWER_KEY, {});
@@ -31,37 +13,8 @@ export const saveAnswers = (answers) => writeJson(ANSWER_KEY, answers);
 export const loadPrefs = () => readJson(PREF_KEY, {});
 export const savePrefs = (prefs) => writeJson(PREF_KEY, prefs);
 
-export function gradeOf(item, picked) {
-  if (!picked) return null;
-  if (picked === UNKNOWN) return 'unknown';
-  return picked === item.answer ? 'right' : 'wrong';
-}
-
-export function tally(items, picks = {}) {
-  return items.reduce(
-    (acc, item) => {
-      const grade = gradeOf(item, picks[item.no]);
-      if (grade) acc[grade] += 1;
-      return acc;
-    },
-    { right: 0, wrong: 0, unknown: 0 }
-  );
-}
-
-const testCache = new Map();
-
 // 회차 데이터(대본·해설, 약 85KB)는 그 회차를 고를 때만 받아옵니다.
-export function fetchTest(id) {
-  if (!testCache.has(id)) {
-    const request = fetch(`/listening/${id}.json`).then((response) => {
-      if (!response.ok) throw new Error(`${id} 데이터를 불러오지 못했어요 (${response.status})`);
-      return response.json();
-    });
-    request.catch(() => testCache.delete(id));
-    testCache.set(id, request);
-  }
-  return testCache.get(id);
-}
+export const fetchTest = (id) => fetchCached(`/listening/${id}.json`, id);
 
 // 이어 붙인 음원에서 지금 시각이 몇 번 문항인지 찾습니다 (문항 사이 쉼은 앞 문항에 붙입니다).
 function itemAt(items, time) {
