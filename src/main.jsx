@@ -1,9 +1,10 @@
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import { createRoot } from 'react-dom/client';
-import { Eye, Search, Shuffle, Sparkles, Volume2 } from 'lucide-react';
+import { Eye, Search, Shuffle, Sparkles, Volume2, X } from 'lucide-react';
 import vocabData from './data/vocab.json';
 import { speakChinese, stopSpeaking, useChineseVoice } from './speech';
 import { buildLessonChips, lessonBadge, matchesLessonChip } from './lessons';
+import { MINE_LESSON, mineToStudyItems, useMyVocab } from './myVocab';
 import Listening from './Listening';
 import Reading from './Reading';
 import MemorizeScript from './MemorizeScript';
@@ -141,6 +142,24 @@ function sentenceModifier(itemType) {
   return itemType === '문장' ? ' sentenceHanzi' : '';
 }
 
+// 내 단어장 카드는 담을 때 같이 저장한 용법·설명·예문·출처를 정답과 함께 보여줍니다.
+function MineDetails({ card }) {
+  if (!card.note && !card.exampleZh && !card.source) return null;
+  return (
+    <div className="mineDetails">
+      {card.note ? <p className="mineNote">{card.note}</p> : null}
+      {card.exampleZh ? (
+        <div className="mineExample">
+          <p className="mineExampleZh">{card.exampleZh}</p>
+          {card.examplePinyin ? <p className="vocabPinyin">{card.examplePinyin}</p> : null}
+          {card.exampleKo ? <p className="vocabMeaning">{card.exampleKo}</p> : null}
+        </div>
+      ) : null}
+      {card.source ? <p className="mineSource">{card.source}</p> : null}
+    </div>
+  );
+}
+
 function HiddenAnswer({ card, promptType, canSpeak, speaking, onSpeak }) {
   const answerRows = PROMPT_TYPES
     .filter((type) => type !== promptType)
@@ -180,21 +199,26 @@ function HiddenAnswer({ card, promptType, canSpeak, speaking, onSpeak }) {
           </button>
         );
       })}
+      {card.mineKey ? <MineDetails card={card} /> : null}
     </div>
   );
 }
 
-function VocabList({ items, canSpeak, speakingText, onSpeak }) {
+function VocabList({ items, mineItems, onRemoveMine, canSpeak, speakingText, onSpeak }) {
   const [query, setQuery] = useState('');
   const [lesson, setLesson] = useState('전체');
 
   const lessons = useMemo(() => buildLessonChips(items), [items]);
+  // «내 단어장»은 단원이 아니라 내가 담은 목록이라 «전체» 바로 뒤에 따로 둡니다.
+  const chips = useMemo(() => [lessons[0], MINE_LESSON, ...lessons.slice(1)], [lessons]);
+  const showingMine = lesson === MINE_LESSON;
 
   const visibleItems = useMemo(() => {
     const needle = normalizeForSearch(query);
+    const pool = showingMine ? mineItems : items;
 
-    return items.filter((item) => {
-      if (!matchesLessonChip(item, lesson)) return false;
+    return pool.filter((item) => {
+      if (!showingMine && !matchesLessonChip(item, lesson)) return false;
       if (!needle) return true;
       return (
         normalizeForSearch(item.hanzi).includes(needle) ||
@@ -202,7 +226,7 @@ function VocabList({ items, canSpeak, speakingText, onSpeak }) {
         normalizeForSearch(item.meaningKo).includes(needle)
       );
     });
-  }, [items, lesson, query]);
+  }, [items, mineItems, showingMine, lesson, query]);
 
   return (
     <section className="listPanel" aria-label="단어장">
@@ -219,14 +243,14 @@ function VocabList({ items, canSpeak, speakingText, onSpeak }) {
         </label>
 
         <div className="lessonChips" aria-label="단원 선택">
-          {lessons.map((option) => (
+          {chips.map((option) => (
             <button
               key={option}
               type="button"
               className={`lessonChip ${lesson === option ? 'active' : ''}`}
               onClick={() => setLesson(option)}
             >
-              {option}
+              {option === MINE_LESSON ? `${MINE_LESSON} ${mineItems.length}` : option}
             </button>
           ))}
         </div>
@@ -247,6 +271,13 @@ function VocabList({ items, canSpeak, speakingText, onSpeak }) {
                     <p className={`vocabHanzi ${hanziLengthClass(item.hanzi)}${sentenceModifier(item.itemType)}`}>{item.hanzi}</p>
                     {item.pinyin ? <p className="vocabPinyin">{item.pinyin}</p> : null}
                     {item.meaningKo ? <p className="vocabMeaning">{item.meaningKo}</p> : null}
+                    {item.mineKey && item.note ? <p className="mineNote">{item.note}</p> : null}
+                    {item.mineKey && item.exampleZh ? (
+                      <p className="mineExampleZh">
+                        {item.exampleZh} <span>{item.exampleKo}</span>
+                      </p>
+                    ) : null}
+                    {item.mineKey && item.source ? <p className="mineSource">{item.source}</p> : null}
                   </div>
 
                   <div className="vocabSide">
@@ -258,7 +289,7 @@ function VocabList({ items, canSpeak, speakingText, onSpeak }) {
               );
 
               return (
-                <li key={item.id}>
+                <li key={item.id} className={item.mineKey ? 'mineRow' : undefined}>
                   {speakable ? (
                     <button
                       type="button"
@@ -271,12 +302,24 @@ function VocabList({ items, canSpeak, speakingText, onSpeak }) {
                   ) : (
                     <div className="vocabRow">{body}</div>
                   )}
+                  {item.mineKey ? (
+                    <button
+                      type="button"
+                      className="mineRemove"
+                      onClick={() => onRemoveMine(item.mineKey)}
+                      aria-label={`${item.hanzi} 내 단어장에서 빼기`}
+                    >
+                      <X size={14} /> 빼기
+                    </button>
+                  ) : null}
                 </li>
               );
             })}
           </ul>
         ) : (
-          <p className="listEmpty">검색 결과가 없어요.</p>
+          <p className="listEmpty">
+            {showingMine && !mineItems.length ? '해설에서 ＋ 담기를 누르면 여기에 모여요.' : '검색 결과가 없어요.'}
+          </p>
         )}
       </div>
     </section>
@@ -300,7 +343,7 @@ function PromptModeButtons({ promptMode, onChange }) {
   );
 }
 
-function StudyCard({ card, promptType, revealed, onReveal, onNext, canSpeak, speaking, onSpeak }) {
+function StudyCard({ card, promptType, revealed, onReveal, onNext, canSpeak, speaking, onSpeak, mineToggle }) {
   const promptText = card?.[promptType] || '';
   // 뜻만 보고 맞히는 중이면 발음이 정답을 알려주므로, 정답을 연 뒤에만 읽어줍니다.
   const promptSpeakable = canSpeak && promptType !== 'meaningKo';
@@ -314,6 +357,7 @@ function StudyCard({ card, promptType, revealed, onReveal, onNext, canSpeak, spe
     <section className={`studyCard ${revealed ? 'revealed' : ''}`} aria-label="랜덤 학습 카드">
       <div className="cardMeta">
         <span>{card.itemType}</span>
+        {mineToggle}
         <span>출제: {PROMPT_LABELS[promptType]}</span>
       </div>
 
@@ -367,16 +411,20 @@ function StudyCard({ card, promptType, revealed, onReveal, onNext, canSpeak, spe
 
 function App() {
   const studyItems = useMemo(() => buildStudyItems(vocabData), []);
+  const mine = useMyVocab();
+  const mineItems = useMemo(() => mineToStudyItems(mine.items), [mine.items]);
+  const [mineOnly, setMineOnly] = useState(() => loadJson('sungmi-vocab-study-mine-v1', false) === true);
+  // 담은 것이 없으면 «내 단어장만»은 켜지지 않습니다. 켜 둔 채 마지막 항목을 빼면 꺼집니다.
+  const studyMine = mineOnly && mineItems.length > 0;
+  const pool = studyMine ? mineItems : studyItems;
   const [todayCountState, setTodayCountState] = useState(() =>
     loadJson('sungmi-vocab-daily-count-v4', { day: studyDayKey(), count: 0 })
   );
   const [promptMode, setPromptMode] = useState(() =>
     loadJson('sungmi-vocab-prompt-mode-v1', 'random')
   );
-  const [currentIndex, setCurrentIndex] = useState(() => randomIndex(studyItems.length));
-  const [promptType, setPromptType] = useState(() =>
-    resolvePromptType(studyItems[currentIndex], promptMode)
-  );
+  const [currentIndex, setCurrentIndex] = useState(() => randomIndex(pool.length));
+  const [promptType, setPromptType] = useState(() => resolvePromptType(pool[currentIndex], promptMode));
   const [revealed, setRevealed] = useState(false);
   const [speakingText, setSpeakingText] = useState(null);
   const [view, setView] = useState(() => loadJson('sungmi-vocab-view-v1', 'study'));
@@ -403,7 +451,18 @@ function App() {
     saveJson('sungmi-vocab-view-v1', view);
   }, [view]);
 
-  const currentCard = studyItems[currentIndex] ?? studyItems[0];
+  useEffect(() => {
+    if (mineOnly && !mineItems.length) setMineOnly(false);
+  }, [mineOnly, mineItems.length]);
+
+  useEffect(() => {
+    saveJson('sungmi-vocab-study-mine-v1', mineOnly);
+  }, [mineOnly]);
+
+  const currentCard = pool[currentIndex] ?? pool[0];
+  // 카드가 바뀌었는데(예: 내 단어장에서 뺌) 출제 칸이 비어 있으면 있는 칸으로 보여줍니다.
+  const cardPrompts = availablePromptTypes(currentCard);
+  const shownPrompt = cardPrompts.includes(promptType) ? promptType : cardPrompts[0] ?? 'hanzi';
   const hasChineseVoice = Boolean(chineseVoice);
   const canSpeak = hasChineseVoice && Boolean(String(currentCard?.hanzi ?? '').trim());
 
@@ -432,8 +491,8 @@ function App() {
   }
 
   function moveNext() {
-    const nextIndex = randomIndex(studyItems.length, currentIndex);
-    const nextCard = studyItems[nextIndex];
+    const nextIndex = randomIndex(pool.length, currentIndex);
+    const nextCard = pool[nextIndex];
     setCurrentIndex(nextIndex);
     setPromptType(resolvePromptType(nextCard, promptMode));
     setRevealed(false);
@@ -441,6 +500,16 @@ function App() {
       const normalized = prev.day === todayKey ? prev : { day: todayKey, count: 0 };
       return { ...normalized, count: normalized.count + 1 };
     });
+  }
+
+  function toggleMineOnly() {
+    const next = !studyMine;
+    const nextPool = next ? mineItems : studyItems;
+    const nextIndex = randomIndex(nextPool.length);
+    setMineOnly(next);
+    setCurrentIndex(nextIndex);
+    setPromptType(resolvePromptType(nextPool[nextIndex], promptMode));
+    setRevealed(false);
   }
 
   useEffect(() => {
@@ -457,7 +526,7 @@ function App() {
         return;
       }
 
-      if ((event.key === 's' || event.key === 'S') && canSpeak && (promptType !== 'meaningKo' || revealed)) {
+      if ((event.key === 's' || event.key === 'S') && canSpeak && (shownPrompt !== 'meaningKo' || revealed)) {
         event.preventDefault();
         handleSpeak(currentCard.hanzi);
       }
@@ -518,17 +587,30 @@ function App() {
       {view === 'study' ? (
         <StudyCard
           card={currentCard}
-          promptType={promptType}
+          promptType={shownPrompt}
           revealed={revealed}
           onReveal={() => setRevealed(true)}
           onNext={moveNext}
           canSpeak={canSpeak}
           speaking={Boolean(speakingText)}
           onSpeak={handleSpeak}
+          mineToggle={
+            <button
+              type="button"
+              className={`mineOnlyToggle${studyMine ? ' active' : ''}`}
+              onClick={toggleMineOnly}
+              disabled={!mineItems.length}
+              aria-pressed={studyMine}
+            >
+              내 단어장만 {mineItems.length}
+            </button>
+          }
         />
       ) : view === 'list' ? (
         <VocabList
           items={studyItems}
+          mineItems={mineItems}
+          onRemoveMine={mine.remove}
           canSpeak={hasChineseVoice}
           speakingText={speakingText}
           onSpeak={handleSpeak}
