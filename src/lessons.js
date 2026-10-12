@@ -1,7 +1,7 @@
 // 단원 이름 다루기. 단어장과 시험 탭이 같이 씁니다.
 
 // 교재 과(Lesson N)는 번호로 자동 정렬하므로, 여기엔 HSK 계열만 순서대로 적습니다.
-export const LESSON_ORDER = ['HSK1 150', 'HSK2 추가 150', 'HSK2 공식문제', 'HSK3 추가 300', 'HSK3 듣기'];
+export const LESSON_ORDER = ['HSK1 150', 'HSK2 추가 150', 'HSK2 공식문제', 'HSK3 추가 300', 'HSK3 듣기', 'HSK3 독해'];
 
 export function lessonSortKey(lesson) {
   const index = LESSON_ORDER.indexOf(lesson);
