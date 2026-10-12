@@ -95,7 +95,7 @@ h1 {
 
 .viewTabs {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   gap: 6px;
   margin-bottom: 10px;
   padding: 5px;
@@ -1378,6 +1378,10 @@ code {
   row-gap: 4px;
 }
 
+.ruby.plain {
+  column-gap: 0;
+}
+
 .rubyUnit {
   display: inline-flex;
   align-items: flex-start;
@@ -1571,6 +1575,169 @@ code {
   font-weight: 850;
 }
 
+/* 독해 탭 */
+.readLines {
+  display: grid;
+  gap: 8px;
+}
+
+.readLine {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.readBank {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.listenChoice.readWord {
+  flex-direction: column;
+  gap: 2px;
+  min-width: 76px;
+  padding: 8px 12px;
+}
+
+.listenChoice.readWord .optionLabel {
+  width: 22px;
+  height: 22px;
+  font-size: 0.75rem;
+}
+
+.listenChoice.readWord .optionText {
+  justify-items: center;
+}
+
+.listenChoice.blocked {
+  opacity: 0.45;
+  border-style: dashed;
+  cursor: default;
+}
+
+.readExampleTag {
+  margin-left: auto;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: #f2e4d4;
+  color: var(--accent-strong);
+  font-size: 0.7rem;
+  font-weight: 900;
+}
+
+.ruby-gap .rubyHanzi {
+  color: var(--muted);
+  letter-spacing: 0.1em;
+}
+
+.ruby-filled .rubyHanzi {
+  padding: 0 4px;
+  border-radius: 6px;
+  background: #e8f5ec;
+  color: #235535;
+}
+
+.readBasis,
+.readBreakdown li,
+.readDistractors li {
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: #fbf5ee;
+}
+
+.readBasis p,
+.readBreakdown p,
+.readDistractors p {
+  margin: 0;
+  font-size: 0.88rem;
+  font-weight: 750;
+  line-height: 1.55;
+}
+
+.readBasis .readQuote {
+  margin: 0 0 6px;
+  padding-left: 10px;
+  border-left: 3px solid var(--accent);
+  font-size: 1.05rem;
+  font-weight: 900;
+}
+
+.readDistractors,
+.readBreakdown {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.readDistractors li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.readDistractors .readDistractorText {
+  font-size: 1rem;
+  font-weight: 900;
+}
+
+.readChunks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+
+.readChunk {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 6px 8px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #fff;
+}
+
+.readChunkText {
+  font-size: 1.1rem;
+  font-weight: 900;
+}
+
+.readChunkRole {
+  color: var(--accent);
+  font-size: 0.7rem;
+  font-weight: 900;
+}
+
+.listenVocab.readVocab {
+  grid-template-columns: 1fr;
+}
+
+.readUsage {
+  flex-basis: 100%;
+  margin: 2px 0 0;
+  color: var(--accent-strong);
+  font-size: 0.84rem;
+  font-weight: 800;
+}
+
+.readExample {
+  flex-basis: 100%;
+  margin-top: 4px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.readExample .rubyHanzi,
+.readExample .rubyPunct {
+  font-size: 1.02rem;
+}
+
 .listenNav {
   display: flex;
   align-items: center;
@@ -1726,8 +1893,8 @@ code {
     min-height: 33px;
     padding: 0 2px;
     border-radius: 10px;
-    /* 탭이 5개라 좁은 화면에서는 글자를 줄여야 한 줄에 들어갑니다. */
-    font-size: clamp(0.68rem, 3vw, 0.82rem);
+    /* 탭이 6개라 좁은 화면에서는 글자를 줄여야 한 줄에 들어갑니다. */
+    font-size: clamp(0.62rem, 2.8vw, 0.82rem);
     white-space: nowrap;
   }
 

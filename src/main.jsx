@@ -5,6 +5,7 @@ import vocabData from './data/vocab.json';
 import { speakChinese, stopSpeaking, useChineseVoice } from './speech';
 import { buildLessonChips, lessonBadge, matchesLessonChip } from './lessons';
 import Listening from './Listening';
+import Reading from './Reading';
 import MemorizeScript from './MemorizeScript';
 import ToneQuiz from './ToneQuiz';
 import './styles.css';
@@ -29,7 +30,8 @@ const VIEW_OPTIONS = [
   { key: 'list', label: '단어장' },
   { key: 'memo', label: '암기' },
   { key: 'quiz', label: '시험보기' },
-  { key: 'listen', label: '듣기' }
+  { key: 'listen', label: '듣기' },
+  { key: 'read', label: '독해' }
 ];
 
 function loadJson(key, fallback) {
@@ -535,6 +537,8 @@ function App() {
         <MemorizeScript canSpeak={hasChineseVoice} />
       ) : view === 'listen' ? (
         <Listening />
+      ) : view === 'read' ? (
+        <Reading />
       ) : (
         <ToneQuiz items={studyItems} canSpeak={hasChineseVoice} onSpeak={handleSpeak} />
       )}
@@ -548,7 +552,9 @@ function App() {
               ? '문장을 누르면 재생됩니다 · 이어서 재생하면 한 줄씩 쉬어가며 들려줍니다'
               : view === 'listen'
                 ? '문제 듣기는 멈춤을 누를 때까지 되풀이합니다 · 이어 듣기는 화면을 꺼도 계속 재생됩니다'
-                : '한자를 보고 들으면서 성조가 맞는 병음을 고르세요'}
+                : view === 'read'
+                  ? '답을 고르면 정답 근거·끊어 읽기·단어·문법이 열립니다 · ＋ 담기로 내 단어장에 모아요'
+                  : '한자를 보고 들으면서 성조가 맞는 병음을 고르세요'}
       </p>
     </main>
   );
