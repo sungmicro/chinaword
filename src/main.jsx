@@ -578,21 +578,7 @@ function App() {
         </div>
 
         {view === 'study' ? (
-          <>
-            <div className="studyScope" aria-label="학습 범위 선택">
-              <div className="studyScopeButtons">
-                {STUDY_GROUP_OPTIONS.map((group) => (
-                  <button key={group} type="button" className={`modeButton ${!studyMine && studyGroup === group ? 'active' : ''}`}
-                    aria-pressed={!studyMine && studyGroup === group}
-                    onClick={() => { setStudyGroup(group); setMineOnly(false); }}>
-                    {group}
-                  </button>
-                ))}
-              </div>
-              <p className="studyScopeCount">현재 범위: {studyMine ? MINE_LESSON : studyGroup} · {pool.length}개</p>
-            </div>
-            <PromptModeButtons promptMode={promptMode} onChange={changePromptMode} />
-          </>
+          <PromptModeButtons promptMode={promptMode} onChange={changePromptMode} />
         ) : null}
 
         {voiceChecked && !chineseVoice ? (
@@ -615,15 +601,27 @@ function App() {
           speaking={Boolean(speakingText)}
           onSpeak={handleSpeak}
           mineToggle={
-            <button
-              type="button"
-              className={`mineOnlyToggle${studyMine ? ' active' : ''}`}
-              onClick={toggleMineOnly}
-              disabled={!mineItems.length}
-              aria-pressed={studyMine}
-            >
-              내 단어장만 {mineItems.length}
-            </button>
+            <div className="studyScope" aria-label="학습 범위 선택">
+              <div className="studyScopeButtons">
+                {STUDY_GROUP_OPTIONS.map((group) => (
+                  <button key={group} type="button" className={`mineOnlyToggle${!studyMine && studyGroup === group ? ' active' : ''}`}
+                    aria-pressed={!studyMine && studyGroup === group}
+                    onClick={() => { setStudyGroup(group); setMineOnly(false); }}>
+                    {group}
+                  </button>
+                ))}
+                <button
+                  type="button"
+                  className={`mineOnlyToggle${studyMine ? ' active' : ''}`}
+                  onClick={toggleMineOnly}
+                  disabled={!mineItems.length}
+                  aria-pressed={studyMine}
+                >
+                  내 단어장만 {mineItems.length}
+                </button>
+              </div>
+              <p className="studyScopeCount">현재 범위: {studyMine ? MINE_LESSON : studyGroup} · {pool.length}개</p>
+            </div>
           }
         /> : <section className="studyCard emptyState"><h2>이 범위에 단어가 없어요.</h2><p>다른 학습 범위를 선택해 주세요.</p></section>
       ) : view === 'list' ? (
