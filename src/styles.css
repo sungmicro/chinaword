@@ -97,7 +97,7 @@ h1 {
 
 .viewTabs {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   gap: 6px;
   margin-bottom: 10px;
   padding: 5px;
@@ -2227,3 +2227,20 @@ code {
     height: 44px;
   }
 }
+
+/* 쓰기: 중국어 Regular와 기존 시험 카드의 모바일 여백을 공유합니다. */
+.writingGuide { margin: 0; color: var(--muted); font-size: 0.88rem; line-height: 1.6; }
+.writingTokens { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; padding: 12px 0; }
+.writingToken { position: relative; min-height: 52px; padding: 12px 18px; border: 1px solid var(--line); border-radius: 14px; background: #fff; color: var(--text); font-family: var(--hanzi-font); font-weight: var(--hanzi-weight); font-size: 1.4rem; }
+.writingToken.selected { border-color: var(--accent); background: #fff4e6; }
+.writingToken:disabled { opacity: 1; cursor: default; }
+.writingBadge { position: absolute; right: -7px; top: -9px; display: grid; place-items: center; min-width: 24px; height: 24px; padding: 0 4px; border-radius: 50%; background: var(--accent-strong); color: white; font: 700 0.75rem system-ui; }
+.writingSentence { margin: 16px 0; font-family: var(--hanzi-font); font-weight: var(--hanzi-weight); font-size: clamp(1.4rem, 4vw, 1.8rem); line-height: 2.3; overflow-wrap: anywhere; }
+.writingSelected { min-height: 66px; padding: 10px 14px; border-radius: 14px; background: #fbf5ee; text-align: center; }
+.writingBlank { white-space: nowrap; color: var(--accent-strong); }
+.writingBlank rt { font-family: system-ui; font-size: 0.55em; font-weight: 500; }
+.writingActions { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; }
+.writingActions .listenPlay:disabled { opacity: 0.45; cursor: default; }
+.writingAnswer { display: grid; gap: 12px; padding: 18px; border-radius: 16px; background: #f1f7ef; }
+.writingAnswerText { margin: 0; text-align: center; overflow-wrap: anywhere; font-family: var(--hanzi-font); font-weight: var(--hanzi-weight); font-size: 1.6rem; line-height: 1.65; }
+.writingNote { margin: 0; font-size: 0.85rem; line-height: 1.6; color: var(--muted); }

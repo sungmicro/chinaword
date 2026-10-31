@@ -8,6 +8,7 @@ import { randomIndex, selectStudyPool } from './studyPool';
 import { MINE_LESSON, mineToStudyItems, useMyVocab } from './myVocab';
 import Listening from './Listening';
 import Reading from './Reading';
+import Writing from './Writing';
 import ToneQuiz from './ToneQuiz';
 import './styles.css';
 
@@ -31,7 +32,8 @@ const VIEW_OPTIONS = [
   { key: 'list', label: '단어장' },
   { key: 'quiz', label: '시험보기' },
   { key: 'listen', label: '듣기' },
-  { key: 'read', label: '독해' }
+  { key: 'read', label: '독해' },
+  { key: 'write', label: '쓰기' }
 ];
 
 function loadJson(key, fallback) {
@@ -637,6 +639,8 @@ function App() {
         <Listening />
       ) : view === 'read' ? (
         <Reading />
+      ) : view === 'write' ? (
+        <Writing />
       ) : (
         <ToneQuiz items={studyItems} canSpeak={hasChineseVoice} onSpeak={handleSpeak} />
       )}
@@ -650,7 +654,9 @@ function App() {
                 ? '문제 듣기는 멈춤을 누를 때까지 되풀이합니다 · 이어 듣기는 화면을 꺼도 계속 재생됩니다'
                 : view === 'read'
                   ? '답을 고르면 정답 근거·끊어 읽기·단어·문법이 열립니다 · ＋ 담기로 내 단어장에 모아요'
-                  : '한자를 보고 들으면서 성조가 맞는 병음을 고르세요'}
+                  : view === 'write'
+                    ? '어순을 배열하거나 병음을 보고 한자를 떠올려 보세요'
+                    : '한자를 보고 들으면서 성조가 맞는 병음을 고르세요'}
       </p>
     </main>
   );

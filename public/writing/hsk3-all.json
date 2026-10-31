@@ -1,0 +1,4044 @@
+{
+  "version": 1,
+  "items": [
+    {
+      "no": 71,
+      "kind": "reorder",
+      "tokens": [
+        "弟弟",
+        "笑了",
+        "高兴地"
+      ],
+      "id": "H31001-71",
+      "exam": "H31001",
+      "answers": [
+        "弟弟高兴地笑了。"
+      ],
+      "source": {
+        "file": "H31001.pdf",
+        "page": 13,
+        "sha256": "fafdab23a1a63a7f571bf44fb8dd0df8907f7c20d4b0c0840fac1c2b8ac3194f",
+        "answerFile": "H31001.pdf",
+        "answerPage": 22
+      },
+      "seq": 1
+    },
+    {
+      "no": 72,
+      "kind": "reorder",
+      "tokens": [
+        "简单",
+        "上午的考试",
+        "比较"
+      ],
+      "id": "H31001-72",
+      "exam": "H31001",
+      "answers": [
+        "上午的考试比较简单。"
+      ],
+      "source": {
+        "file": "H31001.pdf",
+        "page": 13,
+        "sha256": "fafdab23a1a63a7f571bf44fb8dd0df8907f7c20d4b0c0840fac1c2b8ac3194f",
+        "answerFile": "H31001.pdf",
+        "answerPage": 22
+      },
+      "seq": 2
+    },
+    {
+      "no": 73,
+      "kind": "reorder",
+      "tokens": [
+        "越来越好",
+        "变得",
+        "这个城市的环境",
+        "了"
+      ],
+      "id": "H31001-73",
+      "exam": "H31001",
+      "answers": [
+        "这个城市的环境变得越来越好了。"
+      ],
+      "source": {
+        "file": "H31001.pdf",
+        "page": 13,
+        "sha256": "fafdab23a1a63a7f571bf44fb8dd0df8907f7c20d4b0c0840fac1c2b8ac3194f",
+        "answerFile": "H31001.pdf",
+        "answerPage": 22
+      },
+      "seq": 3
+    },
+    {
+      "no": 74,
+      "kind": "reorder",
+      "tokens": [
+        "送给他",
+        "那位",
+        "医生",
+        "一个礼物"
+      ],
+      "id": "H31001-74",
+      "exam": "H31001",
+      "answers": [
+        "那位医生送给他一个礼物。"
+      ],
+      "source": {
+        "file": "H31001.pdf",
+        "page": 13,
+        "sha256": "fafdab23a1a63a7f571bf44fb8dd0df8907f7c20d4b0c0840fac1c2b8ac3194f",
+        "answerFile": "H31001.pdf",
+        "answerPage": 22
+      },
+      "seq": 4
+    },
+    {
+      "no": 75,
+      "kind": "reorder",
+      "tokens": [
+        "其他班的成绩",
+        "有",
+        "也",
+        "很大",
+        "提高"
+      ],
+      "id": "H31001-75",
+      "exam": "H31001",
+      "answers": [
+        "其他班的成绩也有很大提高。"
+      ],
+      "source": {
+        "file": "H31001.pdf",
+        "page": 13,
+        "sha256": "fafdab23a1a63a7f571bf44fb8dd0df8907f7c20d4b0c0840fac1c2b8ac3194f",
+        "answerFile": "H31001.pdf",
+        "answerPage": 22
+      },
+      "seq": 5
+    },
+    {
+      "no": 76,
+      "kind": "hanzi",
+      "sentence": "医院离这儿很远，我们坐___租车去吧。",
+      "pinyin": "chū",
+      "id": "H31001-76",
+      "exam": "H31001",
+      "answers": [
+        "出"
+      ],
+      "source": {
+        "file": "H31001.pdf",
+        "page": 14,
+        "sha256": "fafdab23a1a63a7f571bf44fb8dd0df8907f7c20d4b0c0840fac1c2b8ac3194f",
+        "answerFile": "H31001.pdf",
+        "answerPage": 22
+      },
+      "seq": 6
+    },
+    {
+      "no": 77,
+      "kind": "hanzi",
+      "sentence": "一___是10角，一角是10分。",
+      "pinyin": "yuán",
+      "id": "H31001-77",
+      "exam": "H31001",
+      "answers": [
+        "元"
+      ],
+      "source": {
+        "file": "H31001.pdf",
+        "page": 14,
+        "sha256": "fafdab23a1a63a7f571bf44fb8dd0df8907f7c20d4b0c0840fac1c2b8ac3194f",
+        "answerFile": "H31001.pdf",
+        "answerPage": 22
+      },
+      "seq": 7
+    },
+    {
+      "no": 78,
+      "kind": "hanzi",
+      "sentence": "我不认识他，你知道他姓什么、___什么吗？",
+      "pinyin": "jiào",
+      "id": "H31001-78",
+      "exam": "H31001",
+      "answers": [
+        "叫"
+      ],
+      "source": {
+        "file": "H31001.pdf",
+        "page": 14,
+        "sha256": "fafdab23a1a63a7f571bf44fb8dd0df8907f7c20d4b0c0840fac1c2b8ac3194f",
+        "answerFile": "H31001.pdf",
+        "answerPage": 22
+      },
+      "seq": 8
+    },
+    {
+      "no": 79,
+      "kind": "hanzi",
+      "sentence": "___间穿红裙子的一定是他妹妹。",
+      "pinyin": "Zhōng",
+      "id": "H31001-79",
+      "exam": "H31001",
+      "answers": [
+        "中"
+      ],
+      "source": {
+        "file": "H31001.pdf",
+        "page": 14,
+        "sha256": "fafdab23a1a63a7f571bf44fb8dd0df8907f7c20d4b0c0840fac1c2b8ac3194f",
+        "answerFile": "H31001.pdf",
+        "answerPage": 22
+      },
+      "seq": 9
+    },
+    {
+      "no": 80,
+      "kind": "hanzi",
+      "sentence": "我已经饱了，不想吃___饭了。",
+      "pinyin": "mǐ",
+      "id": "H31001-80",
+      "exam": "H31001",
+      "answers": [
+        "米"
+      ],
+      "source": {
+        "file": "H31001.pdf",
+        "page": 14,
+        "sha256": "fafdab23a1a63a7f571bf44fb8dd0df8907f7c20d4b0c0840fac1c2b8ac3194f",
+        "answerFile": "H31001.pdf",
+        "answerPage": 22
+      },
+      "seq": 10
+    },
+    {
+      "no": 71,
+      "kind": "reorder",
+      "tokens": [
+        "先",
+        "菜单",
+        "我们",
+        "看看"
+      ],
+      "id": "H31002-71",
+      "exam": "H31002",
+      "answers": [
+        "我们先看看菜单。"
+      ],
+      "source": {
+        "file": "H31002.pdf",
+        "page": 13,
+        "sha256": "dabdffaa230696ede19ec7fe2e529b2cc972b818918a7b8cf39787a99741820c",
+        "answerFile": "H31002.pdf",
+        "answerPage": 22
+      },
+      "seq": 11
+    },
+    {
+      "no": 72,
+      "kind": "reorder",
+      "tokens": [
+        "她",
+        "带",
+        "忘了",
+        "护照"
+      ],
+      "id": "H31002-72",
+      "exam": "H31002",
+      "answers": [
+        "她忘了带护照。"
+      ],
+      "source": {
+        "file": "H31002.pdf",
+        "page": 13,
+        "sha256": "dabdffaa230696ede19ec7fe2e529b2cc972b818918a7b8cf39787a99741820c",
+        "answerFile": "H31002.pdf",
+        "answerPage": 22
+      },
+      "seq": 12
+    },
+    {
+      "no": 73,
+      "kind": "reorder",
+      "tokens": [
+        "很",
+        "这些",
+        "葡萄",
+        "新鲜"
+      ],
+      "id": "H31002-73",
+      "exam": "H31002",
+      "answers": [
+        "这些葡萄很新鲜。"
+      ],
+      "source": {
+        "file": "H31002.pdf",
+        "page": 13,
+        "sha256": "dabdffaa230696ede19ec7fe2e529b2cc972b818918a7b8cf39787a99741820c",
+        "answerFile": "H31002.pdf",
+        "answerPage": 22
+      },
+      "seq": 13
+    },
+    {
+      "no": 74,
+      "kind": "reorder",
+      "tokens": [
+        "都",
+        "黑色的",
+        "熊猫的",
+        "眼睛和耳朵",
+        "是"
+      ],
+      "id": "H31002-74",
+      "exam": "H31002",
+      "answers": [
+        "熊猫的眼睛和耳朵都是黑色的。"
+      ],
+      "source": {
+        "file": "H31002.pdf",
+        "page": 13,
+        "sha256": "dabdffaa230696ede19ec7fe2e529b2cc972b818918a7b8cf39787a99741820c",
+        "answerFile": "H31002.pdf",
+        "answerPage": 22
+      },
+      "seq": 14
+    },
+    {
+      "no": 75,
+      "kind": "reorder",
+      "tokens": [
+        "你",
+        "冷水",
+        "洗澡",
+        "用",
+        "敢不敢"
+      ],
+      "id": "H31002-75",
+      "exam": "H31002",
+      "answers": [
+        "你敢不敢用冷水洗澡？"
+      ],
+      "source": {
+        "file": "H31002.pdf",
+        "page": 13,
+        "sha256": "dabdffaa230696ede19ec7fe2e529b2cc972b818918a7b8cf39787a99741820c",
+        "answerFile": "H31002.pdf",
+        "answerPage": 22
+      },
+      "seq": 15
+    },
+    {
+      "no": 76,
+      "kind": "hanzi",
+      "sentence": "他一直都很关心别___。",
+      "pinyin": "ren",
+      "id": "H31002-76",
+      "exam": "H31002",
+      "answers": [
+        "人"
+      ],
+      "source": {
+        "file": "H31002.pdf",
+        "page": 14,
+        "sha256": "dabdffaa230696ede19ec7fe2e529b2cc972b818918a7b8cf39787a99741820c",
+        "answerFile": "H31002.pdf",
+        "answerPage": 22
+      },
+      "seq": 16
+    },
+    {
+      "no": 77,
+      "kind": "hanzi",
+      "sentence": "你的头发___长了，像草一样。",
+      "pinyin": "tài",
+      "id": "H31002-77",
+      "exam": "H31002",
+      "answers": [
+        "太"
+      ],
+      "source": {
+        "file": "H31002.pdf",
+        "page": 14,
+        "sha256": "dabdffaa230696ede19ec7fe2e529b2cc972b818918a7b8cf39787a99741820c",
+        "answerFile": "H31002.pdf",
+        "answerPage": 22
+      },
+      "seq": 17
+    },
+    {
+      "no": 78,
+      "kind": "hanzi",
+      "sentence": "就在这条街的东边，有___眼镜店。",
+      "pinyin": "ge",
+      "id": "H31002-78",
+      "exam": "H31002",
+      "answers": [
+        "个"
+      ],
+      "source": {
+        "file": "H31002.pdf",
+        "page": 14,
+        "sha256": "dabdffaa230696ede19ec7fe2e529b2cc972b818918a7b8cf39787a99741820c",
+        "answerFile": "H31002.pdf",
+        "answerPage": 22
+      },
+      "seq": 18
+    },
+    {
+      "no": 79,
+      "kind": "hanzi",
+      "sentence": "今天是晴天，没有___。",
+      "pinyin": "yún",
+      "id": "H31002-79",
+      "exam": "H31002",
+      "answers": [
+        "云"
+      ],
+      "source": {
+        "file": "H31002.pdf",
+        "page": 14,
+        "sha256": "dabdffaa230696ede19ec7fe2e529b2cc972b818918a7b8cf39787a99741820c",
+        "answerFile": "H31002.pdf",
+        "answerPage": 22
+      },
+      "seq": 19
+    },
+    {
+      "no": 80,
+      "kind": "hanzi",
+      "sentence": "我来中国，除了学习汉语，还希望了解更多的中国___化。",
+      "pinyin": "wén",
+      "id": "H31002-80",
+      "exam": "H31002",
+      "answers": [
+        "文"
+      ],
+      "source": {
+        "file": "H31002.pdf",
+        "page": 14,
+        "sha256": "dabdffaa230696ede19ec7fe2e529b2cc972b818918a7b8cf39787a99741820c",
+        "answerFile": "H31002.pdf",
+        "answerPage": 22
+      },
+      "seq": 20
+    },
+    {
+      "no": 71,
+      "kind": "reorder",
+      "tokens": [
+        "送给",
+        "她决定",
+        "把手机",
+        "弟弟"
+      ],
+      "id": "H31003-71",
+      "exam": "H31003",
+      "answers": [
+        "她决定把手机送给弟弟。"
+      ],
+      "source": {
+        "file": "H31003.pdf",
+        "page": 13,
+        "sha256": "6cec3066b6f350417a71f047644f46519a6edee0f44eb9aa719d0a7a4ffb6a2f",
+        "answerFile": "H31003.pdf",
+        "answerPage": 22
+      },
+      "seq": 21
+    },
+    {
+      "no": 72,
+      "kind": "reorder",
+      "tokens": [
+        "见面",
+        "没",
+        "我和这个学生",
+        "很久",
+        "了"
+      ],
+      "id": "H31003-72",
+      "exam": "H31003",
+      "answers": [
+        "我和这个学生很久没见面了。"
+      ],
+      "source": {
+        "file": "H31003.pdf",
+        "page": 13,
+        "sha256": "6cec3066b6f350417a71f047644f46519a6edee0f44eb9aa719d0a7a4ffb6a2f",
+        "answerFile": "H31003.pdf",
+        "answerPage": 22
+      },
+      "seq": 22
+    },
+    {
+      "no": 73,
+      "kind": "reorder",
+      "tokens": [
+        "经常",
+        "的",
+        "春天",
+        "刮风",
+        "这个城市"
+      ],
+      "id": "H31003-73",
+      "exam": "H31003",
+      "answers": [
+        "这个城市的春天经常刮风。"
+      ],
+      "source": {
+        "file": "H31003.pdf",
+        "page": 13,
+        "sha256": "6cec3066b6f350417a71f047644f46519a6edee0f44eb9aa719d0a7a4ffb6a2f",
+        "answerFile": "H31003.pdf",
+        "answerPage": 22
+      },
+      "seq": 23
+    },
+    {
+      "no": 74,
+      "kind": "reorder",
+      "tokens": [
+        "他的汉字",
+        "写",
+        "很漂亮",
+        "得"
+      ],
+      "id": "H31003-74",
+      "exam": "H31003",
+      "answers": [
+        "他的汉字写得很漂亮。"
+      ],
+      "source": {
+        "file": "H31003.pdf",
+        "page": 13,
+        "sha256": "6cec3066b6f350417a71f047644f46519a6edee0f44eb9aa719d0a7a4ffb6a2f",
+        "answerFile": "H31003.pdf",
+        "answerPage": 22
+      },
+      "seq": 24
+    },
+    {
+      "no": 75,
+      "kind": "reorder",
+      "tokens": [
+        "花了",
+        "叔叔的",
+        "900块钱",
+        "太阳镜"
+      ],
+      "id": "H31003-75",
+      "exam": "H31003",
+      "answers": [
+        "叔叔的太阳镜花了900块钱。"
+      ],
+      "source": {
+        "file": "H31003.pdf",
+        "page": 13,
+        "sha256": "6cec3066b6f350417a71f047644f46519a6edee0f44eb9aa719d0a7a4ffb6a2f",
+        "answerFile": "H31003.pdf",
+        "answerPage": 22
+      },
+      "seq": 25
+    },
+    {
+      "no": 76,
+      "kind": "hanzi",
+      "sentence": "4___7号是我的生日，中午你们来我家吃饭吧。",
+      "pinyin": "yuè",
+      "id": "H31003-76",
+      "exam": "H31003",
+      "answers": [
+        "月"
+      ],
+      "source": {
+        "file": "H31003.pdf",
+        "page": 14,
+        "sha256": "6cec3066b6f350417a71f047644f46519a6edee0f44eb9aa719d0a7a4ffb6a2f",
+        "answerFile": "H31003.pdf",
+        "answerPage": 22
+      },
+      "seq": 26
+    },
+    {
+      "no": 77,
+      "kind": "hanzi",
+      "sentence": "看地图？很容易，上北、下南、左西、右东，明___了？",
+      "pinyin": "bai",
+      "id": "H31003-77",
+      "exam": "H31003",
+      "answers": [
+        "白"
+      ],
+      "source": {
+        "file": "H31003.pdf",
+        "page": 14,
+        "sha256": "6cec3066b6f350417a71f047644f46519a6edee0f44eb9aa719d0a7a4ffb6a2f",
+        "answerFile": "H31003.pdf",
+        "answerPage": 22
+      },
+      "seq": 27
+    },
+    {
+      "no": 78,
+      "kind": "hanzi",
+      "sentence": "一___万年前，动物们出现了吗？",
+      "pinyin": "qiān",
+      "id": "H31003-78",
+      "exam": "H31003",
+      "answers": [
+        "千"
+      ],
+      "source": {
+        "file": "H31003.pdf",
+        "page": 14,
+        "sha256": "6cec3066b6f350417a71f047644f46519a6edee0f44eb9aa719d0a7a4ffb6a2f",
+        "answerFile": "H31003.pdf",
+        "answerPage": 22
+      },
+      "seq": 28
+    },
+    {
+      "no": 79,
+      "kind": "hanzi",
+      "sentence": "外面下雪了，你让孩子路上小___点儿。",
+      "pinyin": "xīn",
+      "id": "H31003-79",
+      "exam": "H31003",
+      "answers": [
+        "心"
+      ],
+      "source": {
+        "file": "H31003.pdf",
+        "page": 14,
+        "sha256": "6cec3066b6f350417a71f047644f46519a6edee0f44eb9aa719d0a7a4ffb6a2f",
+        "answerFile": "H31003.pdf",
+        "answerPage": 22
+      },
+      "seq": 29
+    },
+    {
+      "no": 80,
+      "kind": "hanzi",
+      "sentence": "生病了要注意休息，___为健康最重要。",
+      "pinyin": "yīn",
+      "id": "H31003-80",
+      "exam": "H31003",
+      "answers": [
+        "因"
+      ],
+      "source": {
+        "file": "H31003.pdf",
+        "page": 14,
+        "sha256": "6cec3066b6f350417a71f047644f46519a6edee0f44eb9aa719d0a7a4ffb6a2f",
+        "answerFile": "H31003.pdf",
+        "answerPage": 22
+      },
+      "seq": 30
+    },
+    {
+      "no": 71,
+      "kind": "reorder",
+      "tokens": [
+        "我的包",
+        "药",
+        "在",
+        "里"
+      ],
+      "id": "H31004-71",
+      "exam": "H31004",
+      "answers": [
+        "药在我的包里。"
+      ],
+      "source": {
+        "file": "H31004.pdf",
+        "page": 13,
+        "sha256": "1d4c81eb65b98438f67bdac638f1c7620629750b5e321e37e4aae781f5d4f017",
+        "answerFile": "H31004.pdf",
+        "answerPage": 22
+      },
+      "seq": 31
+    },
+    {
+      "no": 72,
+      "kind": "reorder",
+      "tokens": [
+        "接女朋友",
+        "他",
+        "去",
+        "要",
+        "机场"
+      ],
+      "id": "H31004-72",
+      "exam": "H31004",
+      "answers": [
+        "他要去机场接女朋友。"
+      ],
+      "source": {
+        "file": "H31004.pdf",
+        "page": 13,
+        "sha256": "1d4c81eb65b98438f67bdac638f1c7620629750b5e321e37e4aae781f5d4f017",
+        "answerFile": "H31004.pdf",
+        "answerPage": 22
+      },
+      "seq": 32
+    },
+    {
+      "no": 73,
+      "kind": "reorder",
+      "tokens": [
+        "还",
+        "你",
+        "脚下的路",
+        "长",
+        "很"
+      ],
+      "id": "H31004-73",
+      "exam": "H31004",
+      "answers": [
+        "你脚下的路还很长。"
+      ],
+      "source": {
+        "file": "H31004.pdf",
+        "page": 13,
+        "sha256": "1d4c81eb65b98438f67bdac638f1c7620629750b5e321e37e4aae781f5d4f017",
+        "answerFile": "H31004.pdf",
+        "answerPage": 22
+      },
+      "seq": 33
+    },
+    {
+      "no": 74,
+      "kind": "reorder",
+      "tokens": [
+        "她",
+        "用铅笔写字",
+        "不",
+        "喜欢"
+      ],
+      "id": "H31004-74",
+      "exam": "H31004",
+      "answers": [
+        "她不喜欢用铅笔写字。"
+      ],
+      "source": {
+        "file": "H31004.pdf",
+        "page": 13,
+        "sha256": "1d4c81eb65b98438f67bdac638f1c7620629750b5e321e37e4aae781f5d4f017",
+        "answerFile": "H31004.pdf",
+        "answerPage": 22
+      },
+      "seq": 34
+    },
+    {
+      "no": 75,
+      "kind": "reorder",
+      "tokens": [
+        "怎么了",
+        "鼻子",
+        "你",
+        "的",
+        "丈夫"
+      ],
+      "id": "H31004-75",
+      "exam": "H31004",
+      "answers": [
+        "你丈夫的鼻子怎么了？",
+        "你的丈夫鼻子怎么了？"
+      ],
+      "source": {
+        "file": "H31004.pdf",
+        "page": 13,
+        "sha256": "1d4c81eb65b98438f67bdac638f1c7620629750b5e321e37e4aae781f5d4f017",
+        "answerFile": "H31004.pdf",
+        "answerPage": 22
+      },
+      "seq": 35
+    },
+    {
+      "no": 76,
+      "kind": "hanzi",
+      "sentence": "洗___间就在电梯左边。",
+      "pinyin": "shǒu",
+      "id": "H31004-76",
+      "exam": "H31004",
+      "answers": [
+        "手"
+      ],
+      "source": {
+        "file": "H31004.pdf",
+        "page": 14,
+        "sha256": "1d4c81eb65b98438f67bdac638f1c7620629750b5e321e37e4aae781f5d4f017",
+        "answerFile": "H31004.pdf",
+        "answerPage": 22
+      },
+      "seq": 36
+    },
+    {
+      "no": 77,
+      "kind": "hanzi",
+      "sentence": "黑板上的这只鸟___谁画的？",
+      "pinyin": "shì",
+      "id": "H31004-77",
+      "exam": "H31004",
+      "answers": [
+        "是"
+      ],
+      "source": {
+        "file": "H31004.pdf",
+        "page": 14,
+        "sha256": "1d4c81eb65b98438f67bdac638f1c7620629750b5e321e37e4aae781f5d4f017",
+        "answerFile": "H31004.pdf",
+        "answerPage": 22
+      },
+      "seq": 37
+    },
+    {
+      "no": 78,
+      "kind": "hanzi",
+      "sentence": "今晚的月亮让他想___了。",
+      "pinyin": "jiā",
+      "id": "H31004-78",
+      "exam": "H31004",
+      "answers": [
+        "家"
+      ],
+      "source": {
+        "file": "H31004.pdf",
+        "page": 14,
+        "sha256": "1d4c81eb65b98438f67bdac638f1c7620629750b5e321e37e4aae781f5d4f017",
+        "answerFile": "H31004.pdf",
+        "answerPage": 22
+      },
+      "seq": 38
+    },
+    {
+      "no": 79,
+      "kind": "hanzi",
+      "sentence": "这边太热了，我们去树下坐一___儿吧。",
+      "pinyin": "huì",
+      "id": "H31004-79",
+      "exam": "H31004",
+      "answers": [
+        "会"
+      ],
+      "source": {
+        "file": "H31004.pdf",
+        "page": 14,
+        "sha256": "1d4c81eb65b98438f67bdac638f1c7620629750b5e321e37e4aae781f5d4f017",
+        "answerFile": "H31004.pdf",
+        "answerPage": 22
+      },
+      "seq": 39
+    },
+    {
+      "no": 80,
+      "kind": "hanzi",
+      "sentence": "草地上开着五颜六色的___儿。",
+      "pinyin": "huā",
+      "id": "H31004-80",
+      "exam": "H31004",
+      "answers": [
+        "花"
+      ],
+      "source": {
+        "file": "H31004.pdf",
+        "page": 14,
+        "sha256": "1d4c81eb65b98438f67bdac638f1c7620629750b5e321e37e4aae781f5d4f017",
+        "answerFile": "H31004.pdf",
+        "answerPage": 22
+      },
+      "seq": 40
+    },
+    {
+      "no": 71,
+      "kind": "reorder",
+      "tokens": [
+        "黑色",
+        "李小姐的头发",
+        "是",
+        "的"
+      ],
+      "id": "H31005-71",
+      "exam": "H31005",
+      "answers": [
+        "李小姐的头发是黑色的。"
+      ],
+      "source": {
+        "file": "H31005.pdf",
+        "page": 13,
+        "sha256": "2f6b324419c46042a9236f1c218fd43f5cf84b0e5b69072c68899fed6f9cc578",
+        "answerFile": "H31005.pdf",
+        "answerPage": 22
+      },
+      "seq": 41
+    },
+    {
+      "no": 72,
+      "kind": "reorder",
+      "tokens": [
+        "时候",
+        "举行",
+        "会议",
+        "什么"
+      ],
+      "id": "H31005-72",
+      "exam": "H31005",
+      "answers": [
+        "会议什么时候举行？",
+        "什么时候举行会议？"
+      ],
+      "source": {
+        "file": "H31005.pdf",
+        "page": 13,
+        "sha256": "2f6b324419c46042a9236f1c218fd43f5cf84b0e5b69072c68899fed6f9cc578",
+        "answerFile": "H31005.pdf",
+        "answerPage": 22
+      },
+      "seq": 42
+    },
+    {
+      "no": 73,
+      "kind": "reorder",
+      "tokens": [
+        "努力",
+        "学习",
+        "很",
+        "他们班的学生"
+      ],
+      "id": "H31005-73",
+      "exam": "H31005",
+      "answers": [
+        "他们班的学生学习很努力。"
+      ],
+      "source": {
+        "file": "H31005.pdf",
+        "page": 13,
+        "sha256": "2f6b324419c46042a9236f1c218fd43f5cf84b0e5b69072c68899fed6f9cc578",
+        "answerFile": "H31005.pdf",
+        "answerPage": 22
+      },
+      "seq": 43
+    },
+    {
+      "no": 74,
+      "kind": "reorder",
+      "tokens": [
+        "喜欢",
+        "吃",
+        "都",
+        "马和羊",
+        "草"
+      ],
+      "id": "H31005-74",
+      "exam": "H31005",
+      "answers": [
+        "马和羊都喜欢吃草。"
+      ],
+      "source": {
+        "file": "H31005.pdf",
+        "page": 13,
+        "sha256": "2f6b324419c46042a9236f1c218fd43f5cf84b0e5b69072c68899fed6f9cc578",
+        "answerFile": "H31005.pdf",
+        "answerPage": 22
+      },
+      "seq": 44
+    },
+    {
+      "no": 75,
+      "kind": "reorder",
+      "tokens": [
+        "自己的",
+        "腿脚",
+        "老年人",
+        "要",
+        "关心"
+      ],
+      "id": "H31005-75",
+      "exam": "H31005",
+      "answers": [
+        "老年人要关心自己的腿脚。"
+      ],
+      "source": {
+        "file": "H31005.pdf",
+        "page": 13,
+        "sha256": "2f6b324419c46042a9236f1c218fd43f5cf84b0e5b69072c68899fed6f9cc578",
+        "answerFile": "H31005.pdf",
+        "answerPage": 22
+      },
+      "seq": 45
+    },
+    {
+      "no": 76,
+      "kind": "hanzi",
+      "sentence": "老师，黑板___间的这个词是什么意思？",
+      "pinyin": "zhōng",
+      "id": "H31005-76",
+      "exam": "H31005",
+      "answers": [
+        "中"
+      ],
+      "source": {
+        "file": "H31005.pdf",
+        "page": 14,
+        "sha256": "2f6b324419c46042a9236f1c218fd43f5cf84b0e5b69072c68899fed6f9cc578",
+        "answerFile": "H31005.pdf",
+        "answerPage": 22
+      },
+      "seq": 46
+    },
+    {
+      "no": 77,
+      "kind": "hanzi",
+      "sentence": "他不喜欢猫，也不喜欢狗，但他家有3___小鸟。",
+      "pinyin": "zhī",
+      "id": "H31005-77",
+      "exam": "H31005",
+      "answers": [
+        "只"
+      ],
+      "source": {
+        "file": "H31005.pdf",
+        "page": 14,
+        "sha256": "2f6b324419c46042a9236f1c218fd43f5cf84b0e5b69072c68899fed6f9cc578",
+        "answerFile": "H31005.pdf",
+        "answerPage": 22
+      },
+      "seq": 47
+    },
+    {
+      "no": 78,
+      "kind": "hanzi",
+      "sentence": "明天星期___，你作业写完没？还有几个题？",
+      "pinyin": "rì",
+      "id": "H31005-78",
+      "exam": "H31005",
+      "answers": [
+        "日"
+      ],
+      "source": {
+        "file": "H31005.pdf",
+        "page": 14,
+        "sha256": "2f6b324419c46042a9236f1c218fd43f5cf84b0e5b69072c68899fed6f9cc578",
+        "answerFile": "H31005.pdf",
+        "answerPage": 22
+      },
+      "seq": 48
+    },
+    {
+      "no": 79,
+      "kind": "hanzi",
+      "sentence": "不是左边，我说的是___边的那个帽子。",
+      "pinyin": "yòu",
+      "id": "H31005-79",
+      "exam": "H31005",
+      "answers": [
+        "右"
+      ],
+      "source": {
+        "file": "H31005.pdf",
+        "page": 14,
+        "sha256": "2f6b324419c46042a9236f1c218fd43f5cf84b0e5b69072c68899fed6f9cc578",
+        "answerFile": "H31005.pdf",
+        "answerPage": 22
+      },
+      "seq": 49
+    },
+    {
+      "no": 80,
+      "kind": "hanzi",
+      "sentence": "你带钱了吗？我还差3角5___。",
+      "pinyin": "fēn",
+      "id": "H31005-80",
+      "exam": "H31005",
+      "answers": [
+        "分"
+      ],
+      "source": {
+        "file": "H31005.pdf",
+        "page": 14,
+        "sha256": "2f6b324419c46042a9236f1c218fd43f5cf84b0e5b69072c68899fed6f9cc578",
+        "answerFile": "H31005.pdf",
+        "answerPage": 22
+      },
+      "seq": 50
+    },
+    {
+      "no": 71,
+      "kind": "reorder",
+      "tokens": [
+        "咖啡里",
+        "放糖",
+        "不要"
+      ],
+      "id": "H31006-71",
+      "exam": "H31006",
+      "answers": [
+        "咖啡里不要放糖。"
+      ],
+      "source": {
+        "file": "H31006.pdf",
+        "page": 13,
+        "sha256": "0de0423d68f70abddd31050a45e7c661f8408943ecb14d6202204df06ac58614",
+        "answerFile": "H31006.pdf",
+        "answerPage": 16
+      },
+      "seq": 51
+    },
+    {
+      "no": 72,
+      "kind": "reorder",
+      "tokens": [
+        "干净了",
+        "把",
+        "碗和筷子",
+        "洗",
+        "吗"
+      ],
+      "id": "H31006-72",
+      "exam": "H31006",
+      "answers": [
+        "把碗和筷子洗干净了吗？"
+      ],
+      "source": {
+        "file": "H31006.pdf",
+        "page": 13,
+        "sha256": "0de0423d68f70abddd31050a45e7c661f8408943ecb14d6202204df06ac58614",
+        "answerFile": "H31006.pdf",
+        "answerPage": 16
+      },
+      "seq": 52
+    },
+    {
+      "no": 73,
+      "kind": "reorder",
+      "tokens": [
+        "孩子",
+        "了",
+        "突然",
+        "发烧"
+      ],
+      "id": "H31006-73",
+      "exam": "H31006",
+      "answers": [
+        "孩子突然发烧了。"
+      ],
+      "source": {
+        "file": "H31006.pdf",
+        "page": 13,
+        "sha256": "0de0423d68f70abddd31050a45e7c661f8408943ecb14d6202204df06ac58614",
+        "answerFile": "H31006.pdf",
+        "answerPage": 16
+      },
+      "seq": 53
+    },
+    {
+      "no": 74,
+      "kind": "reorder",
+      "tokens": [
+        "这个句子",
+        "游戏结束",
+        "表示",
+        "看到"
+      ],
+      "id": "H31006-74",
+      "exam": "H31006",
+      "answers": [
+        "看到这个句子表示游戏结束。"
+      ],
+      "source": {
+        "file": "H31006.pdf",
+        "page": 13,
+        "sha256": "0de0423d68f70abddd31050a45e7c661f8408943ecb14d6202204df06ac58614",
+        "answerFile": "H31006.pdf",
+        "answerPage": 16
+      },
+      "seq": 54
+    },
+    {
+      "no": 75,
+      "kind": "reorder",
+      "tokens": [
+        "她",
+        "很",
+        "这条绿裤子",
+        "对",
+        "满意"
+      ],
+      "id": "H31006-75",
+      "exam": "H31006",
+      "answers": [
+        "她对这条绿裤子很满意。",
+        "对这条绿裤子，她很满意。"
+      ],
+      "source": {
+        "file": "H31006.pdf",
+        "page": 13,
+        "sha256": "0de0423d68f70abddd31050a45e7c661f8408943ecb14d6202204df06ac58614",
+        "answerFile": "H31006.pdf",
+        "answerPage": 16
+      },
+      "seq": 55
+    },
+    {
+      "no": 76,
+      "kind": "hanzi",
+      "sentence": "相信我，面包会有的，牛奶___会有的。",
+      "pinyin": "yě",
+      "id": "H31006-76",
+      "exam": "H31006",
+      "answers": [
+        "也"
+      ],
+      "source": {
+        "file": "H31006.pdf",
+        "page": 14,
+        "sha256": "0de0423d68f70abddd31050a45e7c661f8408943ecb14d6202204df06ac58614",
+        "answerFile": "H31006.pdf",
+        "answerPage": 16
+      },
+      "seq": 56
+    },
+    {
+      "no": 77,
+      "kind": "hanzi",
+      "sentence": "每个国家都有自己的节___、自己的文化。",
+      "pinyin": "rì",
+      "id": "H31006-77",
+      "exam": "H31006",
+      "answers": [
+        "日"
+      ],
+      "source": {
+        "file": "H31006.pdf",
+        "page": 14,
+        "sha256": "0de0423d68f70abddd31050a45e7c661f8408943ecb14d6202204df06ac58614",
+        "answerFile": "H31006.pdf",
+        "answerPage": 16
+      },
+      "seq": 57
+    },
+    {
+      "no": 78,
+      "kind": "hanzi",
+      "sentence": "请用铅笔把姓名写___照片后面。",
+      "pinyin": "zài",
+      "id": "H31006-78",
+      "exam": "H31006",
+      "answers": [
+        "在"
+      ],
+      "source": {
+        "file": "H31006.pdf",
+        "page": 14,
+        "sha256": "0de0423d68f70abddd31050a45e7c661f8408943ecb14d6202204df06ac58614",
+        "answerFile": "H31006.pdf",
+        "answerPage": 16
+      },
+      "seq": 58
+    },
+    {
+      "no": 79,
+      "kind": "hanzi",
+      "sentence": "要学好画画儿，第一，要老师教得好；第二，必须___练习。",
+      "pinyin": "duō",
+      "id": "H31006-79",
+      "exam": "H31006",
+      "answers": [
+        "多"
+      ],
+      "source": {
+        "file": "H31006.pdf",
+        "page": 14,
+        "sha256": "0de0423d68f70abddd31050a45e7c661f8408943ecb14d6202204df06ac58614",
+        "answerFile": "H31006.pdf",
+        "answerPage": 16
+      },
+      "seq": 59
+    },
+    {
+      "no": 80,
+      "kind": "hanzi",
+      "sentence": "我想请您___我写介绍信。",
+      "pinyin": "wèi",
+      "id": "H31006-80",
+      "exam": "H31006",
+      "answers": [
+        "为"
+      ],
+      "source": {
+        "file": "H31006.pdf",
+        "page": 14,
+        "sha256": "0de0423d68f70abddd31050a45e7c661f8408943ecb14d6202204df06ac58614",
+        "answerFile": "H31006.pdf",
+        "answerPage": 16
+      },
+      "seq": 60
+    },
+    {
+      "no": 71,
+      "kind": "reorder",
+      "tokens": [
+        "我",
+        "中国",
+        "文化",
+        "喜欢"
+      ],
+      "id": "H31007-71",
+      "exam": "H31007",
+      "answers": [
+        "我喜欢中国文化。"
+      ],
+      "source": {
+        "file": "H31007.pdf",
+        "page": 13,
+        "sha256": "f0bbe5a856a396245a540c4412eb2bb3b5b3a9f7361927b1f2f5d2470a4fdd20",
+        "answerFile": "H31007 정답.pdf",
+        "answerPage": 2,
+        "method": "PDF 2쪽 렌더를 직접 판독",
+        "answerSha256": "c4b8c76dddc229e34aed4a25754d8433584f0f22f7c44fdca988e93705ccdfb5"
+      },
+      "seq": 61
+    },
+    {
+      "no": 72,
+      "kind": "reorder",
+      "tokens": [
+        "被",
+        "写错",
+        "他的姓名",
+        "了"
+      ],
+      "id": "H31007-72",
+      "exam": "H31007",
+      "answers": [
+        "他的姓名被写错了。"
+      ],
+      "source": {
+        "file": "H31007.pdf",
+        "page": 13,
+        "sha256": "f0bbe5a856a396245a540c4412eb2bb3b5b3a9f7361927b1f2f5d2470a4fdd20",
+        "answerFile": "H31007 정답.pdf",
+        "answerPage": 2,
+        "method": "PDF 2쪽 렌더를 직접 판독",
+        "answerSha256": "c4b8c76dddc229e34aed4a25754d8433584f0f22f7c44fdca988e93705ccdfb5",
+        "officialAnswers": [
+          "他的名字被写错了。"
+        ]
+      },
+      "note": "문제지는 ‘姓名’, 공식 정답표는 ‘名字’로 표기가 다릅니다. 이 연습에서는 문제지의 단어에 맞춘 ‘他的姓名被写错了。’를 정답으로 사용합니다.",
+      "seq": 62
+    },
+    {
+      "no": 73,
+      "kind": "reorder",
+      "tokens": [
+        "不到",
+        "一米七",
+        "她",
+        "身高"
+      ],
+      "id": "H31007-73",
+      "exam": "H31007",
+      "answers": [
+        "她身高不到一米七。"
+      ],
+      "source": {
+        "file": "H31007.pdf",
+        "page": 13,
+        "sha256": "f0bbe5a856a396245a540c4412eb2bb3b5b3a9f7361927b1f2f5d2470a4fdd20",
+        "answerFile": "H31007 정답.pdf",
+        "answerPage": 2,
+        "method": "PDF 2쪽 렌더를 직접 판독",
+        "answerSha256": "c4b8c76dddc229e34aed4a25754d8433584f0f22f7c44fdca988e93705ccdfb5"
+      },
+      "seq": 63
+    },
+    {
+      "no": 74,
+      "kind": "reorder",
+      "tokens": [
+        "羊的",
+        "画",
+        "现在",
+        "耳朵和鼻子"
+      ],
+      "id": "H31007-74",
+      "exam": "H31007",
+      "answers": [
+        "现在画羊的耳朵和鼻子。"
+      ],
+      "source": {
+        "file": "H31007.pdf",
+        "page": 13,
+        "sha256": "f0bbe5a856a396245a540c4412eb2bb3b5b3a9f7361927b1f2f5d2470a4fdd20",
+        "answerFile": "H31007 정답.pdf",
+        "answerPage": 2,
+        "method": "PDF 2쪽 렌더를 직접 판독",
+        "answerSha256": "c4b8c76dddc229e34aed4a25754d8433584f0f22f7c44fdca988e93705ccdfb5"
+      },
+      "seq": 64
+    },
+    {
+      "no": 75,
+      "kind": "reorder",
+      "tokens": [
+        "如果",
+        "就",
+        "更好了",
+        "有面条"
+      ],
+      "id": "H31007-75",
+      "exam": "H31007",
+      "answers": [
+        "如果有面条就更好了。"
+      ],
+      "source": {
+        "file": "H31007.pdf",
+        "page": 13,
+        "sha256": "f0bbe5a856a396245a540c4412eb2bb3b5b3a9f7361927b1f2f5d2470a4fdd20",
+        "answerFile": "H31007 정답.pdf",
+        "answerPage": 2,
+        "method": "PDF 2쪽 렌더를 직접 판독",
+        "answerSha256": "c4b8c76dddc229e34aed4a25754d8433584f0f22f7c44fdca988e93705ccdfb5"
+      },
+      "seq": 65
+    },
+    {
+      "no": 76,
+      "kind": "hanzi",
+      "sentence": "这是谁的___机？",
+      "pinyin": "shǒu",
+      "id": "H31007-76",
+      "exam": "H31007",
+      "answers": [
+        "手"
+      ],
+      "source": {
+        "file": "H31007.pdf",
+        "page": 14,
+        "sha256": "f0bbe5a856a396245a540c4412eb2bb3b5b3a9f7361927b1f2f5d2470a4fdd20",
+        "answerFile": "H31007 정답.pdf",
+        "answerPage": 2,
+        "method": "PDF 2쪽 렌더를 직접 판독",
+        "answerSha256": "c4b8c76dddc229e34aed4a25754d8433584f0f22f7c44fdca988e93705ccdfb5"
+      },
+      "seq": 66
+    },
+    {
+      "no": 77,
+      "kind": "hanzi",
+      "sentence": "你看，这是几十年前的一___、一角和一分。",
+      "pinyin": "yuán",
+      "id": "H31007-77",
+      "exam": "H31007",
+      "answers": [
+        "元",
+        "圆"
+      ],
+      "source": {
+        "file": "H31007.pdf",
+        "page": 14,
+        "sha256": "f0bbe5a856a396245a540c4412eb2bb3b5b3a9f7361927b1f2f5d2470a4fdd20",
+        "answerFile": "H31007 정답.pdf",
+        "answerPage": 2,
+        "method": "PDF 2쪽 렌더를 직접 판독",
+        "answerSha256": "c4b8c76dddc229e34aed4a25754d8433584f0f22f7c44fdca988e93705ccdfb5"
+      },
+      "seq": 67
+    },
+    {
+      "no": 78,
+      "kind": "hanzi",
+      "sentence": "我不饿，不吃面包了，喝杯___奶吧。",
+      "pinyin": "niú",
+      "id": "H31007-78",
+      "exam": "H31007",
+      "answers": [
+        "牛"
+      ],
+      "source": {
+        "file": "H31007.pdf",
+        "page": 14,
+        "sha256": "f0bbe5a856a396245a540c4412eb2bb3b5b3a9f7361927b1f2f5d2470a4fdd20",
+        "answerFile": "H31007 정답.pdf",
+        "answerPage": 2,
+        "method": "PDF 2쪽 렌더를 직접 판독",
+        "answerSha256": "c4b8c76dddc229e34aed4a25754d8433584f0f22f7c44fdca988e93705ccdfb5"
+      },
+      "seq": 68
+    },
+    {
+      "no": 79,
+      "kind": "hanzi",
+      "sentence": "不客气，有什么问题就给我打___话。",
+      "pinyin": "diàn",
+      "id": "H31007-79",
+      "exam": "H31007",
+      "answers": [
+        "电"
+      ],
+      "source": {
+        "file": "H31007.pdf",
+        "page": 14,
+        "sha256": "f0bbe5a856a396245a540c4412eb2bb3b5b3a9f7361927b1f2f5d2470a4fdd20",
+        "answerFile": "H31007 정답.pdf",
+        "answerPage": 2,
+        "method": "PDF 2쪽 렌더를 직접 판독",
+        "answerSha256": "c4b8c76dddc229e34aed4a25754d8433584f0f22f7c44fdca988e93705ccdfb5"
+      },
+      "seq": 69
+    },
+    {
+      "no": 80,
+      "kind": "hanzi",
+      "sentence": "这个小太阳表示晴天，___表示阴天。",
+      "pinyin": "yún",
+      "id": "H31007-80",
+      "exam": "H31007",
+      "answers": [
+        "云"
+      ],
+      "source": {
+        "file": "H31007.pdf",
+        "page": 14,
+        "sha256": "f0bbe5a856a396245a540c4412eb2bb3b5b3a9f7361927b1f2f5d2470a4fdd20",
+        "answerFile": "H31007 정답.pdf",
+        "answerPage": 2,
+        "method": "PDF 2쪽 렌더를 직접 판독",
+        "answerSha256": "c4b8c76dddc229e34aed4a25754d8433584f0f22f7c44fdca988e93705ccdfb5"
+      },
+      "seq": 70
+    },
+    {
+      "no": 71,
+      "kind": "reorder",
+      "tokens": [
+        "那",
+        "邻居",
+        "很热情",
+        "位"
+      ],
+      "id": "H31008-71",
+      "exam": "H31008",
+      "answers": [
+        "那位邻居很热情。"
+      ],
+      "source": {
+        "file": "H31008.pdf",
+        "page": 13,
+        "sha256": "ae2482e27125c693c5f7754195296b21e938ae44f99f489bf037ba3be156a63e",
+        "answerFile": "H31008.pdf",
+        "answerPage": 22
+      },
+      "seq": 71
+    },
+    {
+      "no": 72,
+      "kind": "reorder",
+      "tokens": [
+        "这个",
+        "三层",
+        "一共",
+        "楼"
+      ],
+      "id": "H31008-72",
+      "exam": "H31008",
+      "answers": [
+        "这个楼一共三层。"
+      ],
+      "source": {
+        "file": "H31008.pdf",
+        "page": 13,
+        "sha256": "ae2482e27125c693c5f7754195296b21e938ae44f99f489bf037ba3be156a63e",
+        "answerFile": "H31008.pdf",
+        "answerPage": 22
+      },
+      "seq": 72
+    },
+    {
+      "no": 73,
+      "kind": "reorder",
+      "tokens": [
+        "菜单",
+        "服务员",
+        "拿走了",
+        "被"
+      ],
+      "id": "H31008-73",
+      "exam": "H31008",
+      "answers": [
+        "菜单被服务员拿走了。"
+      ],
+      "source": {
+        "file": "H31008.pdf",
+        "page": 13,
+        "sha256": "ae2482e27125c693c5f7754195296b21e938ae44f99f489bf037ba3be156a63e",
+        "answerFile": "H31008.pdf",
+        "answerPage": 22
+      },
+      "seq": 73
+    },
+    {
+      "no": 74,
+      "kind": "reorder",
+      "tokens": [
+        "比",
+        "北方",
+        "中国南方的雨水",
+        "多"
+      ],
+      "id": "H31008-74",
+      "exam": "H31008",
+      "answers": [
+        "中国南方的雨水比北方多。"
+      ],
+      "source": {
+        "file": "H31008.pdf",
+        "page": 13,
+        "sha256": "ae2482e27125c693c5f7754195296b21e938ae44f99f489bf037ba3be156a63e",
+        "answerFile": "H31008.pdf",
+        "answerPage": 22
+      },
+      "seq": 74
+    },
+    {
+      "no": 75,
+      "kind": "reorder",
+      "tokens": [
+        "把",
+        "厨房里",
+        "吧",
+        "冰箱",
+        "放"
+      ],
+      "id": "H31008-75",
+      "exam": "H31008",
+      "answers": [
+        "把冰箱放厨房里吧。"
+      ],
+      "source": {
+        "file": "H31008.pdf",
+        "page": 13,
+        "sha256": "ae2482e27125c693c5f7754195296b21e938ae44f99f489bf037ba3be156a63e",
+        "answerFile": "H31008.pdf",
+        "answerPage": 22
+      },
+      "seq": 75
+    },
+    {
+      "no": 76,
+      "kind": "hanzi",
+      "sentence": "你姐姐的孩子上___年级？",
+      "pinyin": "jǐ",
+      "id": "H31008-76",
+      "exam": "H31008",
+      "answers": [
+        "几"
+      ],
+      "source": {
+        "file": "H31008.pdf",
+        "page": 14,
+        "sha256": "ae2482e27125c693c5f7754195296b21e938ae44f99f489bf037ba3be156a63e",
+        "answerFile": "H31008.pdf",
+        "answerPage": 22
+      },
+      "seq": 76
+    },
+    {
+      "no": 77,
+      "kind": "hanzi",
+      "sentence": "马小姐，谢谢关___，我不发烧了，头也不疼了。",
+      "pinyin": "xīn",
+      "id": "H31008-77",
+      "exam": "H31008",
+      "answers": [
+        "心"
+      ],
+      "source": {
+        "file": "H31008.pdf",
+        "page": 14,
+        "sha256": "ae2482e27125c693c5f7754195296b21e938ae44f99f489bf037ba3be156a63e",
+        "answerFile": "H31008.pdf",
+        "answerPage": 22
+      },
+      "seq": 77
+    },
+    {
+      "no": 78,
+      "kind": "hanzi",
+      "sentence": "对不起，___午有个重要的会议，我让司机去医院接你好不好？",
+      "pinyin": "xià",
+      "id": "H31008-78",
+      "exam": "H31008",
+      "answers": [
+        "下"
+      ],
+      "source": {
+        "file": "H31008.pdf",
+        "page": 14,
+        "sha256": "ae2482e27125c693c5f7754195296b21e938ae44f99f489bf037ba3be156a63e",
+        "answerFile": "H31008.pdf",
+        "answerPage": 22
+      },
+      "seq": 78
+    },
+    {
+      "no": 79,
+      "kind": "hanzi",
+      "sentence": "经过4个星期的练习，叔叔的普通话水平有了很___提高。",
+      "pinyin": "dà",
+      "id": "H31008-79",
+      "exam": "H31008",
+      "answers": [
+        "大"
+      ],
+      "source": {
+        "file": "H31008.pdf",
+        "page": 14,
+        "sha256": "ae2482e27125c693c5f7754195296b21e938ae44f99f489bf037ba3be156a63e",
+        "answerFile": "H31008.pdf",
+        "answerPage": 22
+      },
+      "seq": 79
+    },
+    {
+      "no": 80,
+      "kind": "hanzi",
+      "sentence": "这个小太阳表示晴天，___表示阴天。",
+      "pinyin": "yún",
+      "id": "H31008-80",
+      "exam": "H31008",
+      "answers": [
+        "云"
+      ],
+      "source": {
+        "file": "H31008.pdf",
+        "page": 14,
+        "sha256": "ae2482e27125c693c5f7754195296b21e938ae44f99f489bf037ba3be156a63e",
+        "answerFile": "H31008.pdf",
+        "answerPage": 22
+      },
+      "seq": 80
+    },
+    {
+      "no": 71,
+      "kind": "reorder",
+      "tokens": [
+        "咖啡里",
+        "放糖",
+        "不要"
+      ],
+      "id": "H31009-71",
+      "exam": "H31009",
+      "answers": [
+        "咖啡里不要放糖。"
+      ],
+      "source": {
+        "file": "H31009.pdf",
+        "page": 13,
+        "sha256": "24c9fd3844d54ba0d19cfd11e8bbed10870203d962e2d28689a9352c74cb7ca1",
+        "answerFile": "H31009.pdf",
+        "answerPage": 22
+      },
+      "seq": 81
+    },
+    {
+      "no": 72,
+      "kind": "reorder",
+      "tokens": [
+        "大家",
+        "健康",
+        "祝",
+        "身体"
+      ],
+      "id": "H31009-72",
+      "exam": "H31009",
+      "answers": [
+        "祝大家身体健康！"
+      ],
+      "source": {
+        "file": "H31009.pdf",
+        "page": 13,
+        "sha256": "24c9fd3844d54ba0d19cfd11e8bbed10870203d962e2d28689a9352c74cb7ca1",
+        "answerFile": "H31009.pdf",
+        "answerPage": 22
+      },
+      "seq": 82
+    },
+    {
+      "no": 73,
+      "kind": "reorder",
+      "tokens": [
+        "那名服务员",
+        "认真",
+        "做事情",
+        "特别"
+      ],
+      "id": "H31009-73",
+      "exam": "H31009",
+      "answers": [
+        "那名服务员做事情特别认真。"
+      ],
+      "source": {
+        "file": "H31009.pdf",
+        "page": 13,
+        "sha256": "24c9fd3844d54ba0d19cfd11e8bbed10870203d962e2d28689a9352c74cb7ca1",
+        "answerFile": "H31009.pdf",
+        "answerPage": 22
+      },
+      "seq": 83
+    },
+    {
+      "no": 74,
+      "kind": "reorder",
+      "tokens": [
+        "我们",
+        "的",
+        "离开东门",
+        "是",
+        "8点半"
+      ],
+      "id": "H31009-74",
+      "exam": "H31009",
+      "answers": [
+        "我们是8点半离开东门的。"
+      ],
+      "source": {
+        "file": "H31009.pdf",
+        "page": 13,
+        "sha256": "24c9fd3844d54ba0d19cfd11e8bbed10870203d962e2d28689a9352c74cb7ca1",
+        "answerFile": "H31009.pdf",
+        "answerPage": 22
+      },
+      "seq": 84
+    },
+    {
+      "no": 75,
+      "kind": "reorder",
+      "tokens": [
+        "满意",
+        "地",
+        "了",
+        "她",
+        "笑"
+      ],
+      "id": "H31009-75",
+      "exam": "H31009",
+      "answers": [
+        "她满意地笑了。"
+      ],
+      "source": {
+        "file": "H31009.pdf",
+        "page": 13,
+        "sha256": "24c9fd3844d54ba0d19cfd11e8bbed10870203d962e2d28689a9352c74cb7ca1",
+        "answerFile": "H31009.pdf",
+        "answerPage": 22
+      },
+      "seq": 85
+    },
+    {
+      "no": 76,
+      "kind": "hanzi",
+      "sentence": "再___，欢迎您下次再来。",
+      "pinyin": "jiàn",
+      "id": "H31009-76",
+      "exam": "H31009",
+      "answers": [
+        "见"
+      ],
+      "source": {
+        "file": "H31009.pdf",
+        "page": 14,
+        "sha256": "24c9fd3844d54ba0d19cfd11e8bbed10870203d962e2d28689a9352c74cb7ca1",
+        "answerFile": "H31009.pdf",
+        "answerPage": 22
+      },
+      "seq": 86
+    },
+    {
+      "no": 77,
+      "kind": "hanzi",
+      "sentence": "突然就下雨了，刚才还是晴___，还有太阳。",
+      "pinyin": "tiān",
+      "id": "H31009-77",
+      "exam": "H31009",
+      "answers": [
+        "天"
+      ],
+      "source": {
+        "file": "H31009.pdf",
+        "page": 14,
+        "sha256": "24c9fd3844d54ba0d19cfd11e8bbed10870203d962e2d28689a9352c74cb7ca1",
+        "answerFile": "H31009.pdf",
+        "answerPage": 22
+      },
+      "seq": 87
+    },
+    {
+      "no": 78,
+      "kind": "hanzi",
+      "sentence": "请用铅笔把姓名写___照片后面。",
+      "pinyin": "zài",
+      "id": "H31009-78",
+      "exam": "H31009",
+      "answers": [
+        "在"
+      ],
+      "source": {
+        "file": "H31009.pdf",
+        "page": 14,
+        "sha256": "24c9fd3844d54ba0d19cfd11e8bbed10870203d962e2d28689a9352c74cb7ca1",
+        "answerFile": "H31009.pdf",
+        "answerPage": 22
+      },
+      "seq": 88
+    },
+    {
+      "no": 79,
+      "kind": "hanzi",
+      "sentence": "为了更好地了解___国文化，他开始学习汉语，而且提高很快。",
+      "pinyin": "zhōng",
+      "id": "H31009-79",
+      "exam": "H31009",
+      "answers": [
+        "中"
+      ],
+      "source": {
+        "file": "H31009.pdf",
+        "page": 14,
+        "sha256": "24c9fd3844d54ba0d19cfd11e8bbed10870203d962e2d28689a9352c74cb7ca1",
+        "answerFile": "H31009.pdf",
+        "answerPage": 22
+      },
+      "seq": 89
+    },
+    {
+      "no": 80,
+      "kind": "hanzi",
+      "sentence": "厨房里的灯坏了多___时间了？",
+      "pinyin": "cháng",
+      "id": "H31009-80",
+      "exam": "H31009",
+      "answers": [
+        "长"
+      ],
+      "source": {
+        "file": "H31009.pdf",
+        "page": 14,
+        "sha256": "24c9fd3844d54ba0d19cfd11e8bbed10870203d962e2d28689a9352c74cb7ca1",
+        "answerFile": "H31009.pdf",
+        "answerPage": 22
+      },
+      "seq": 90
+    },
+    {
+      "no": 71,
+      "kind": "reorder",
+      "tokens": [
+        "很有兴趣",
+        "他弟弟",
+        "对",
+        "表演"
+      ],
+      "id": "H31110-71",
+      "exam": "H31110",
+      "answers": [
+        "他弟弟对表演很有兴趣。"
+      ],
+      "source": {
+        "file": "H31110.pdf",
+        "page": 13,
+        "sha256": "99296512579f7051188dbdda751c5ac5c6177e8d2c001b76f90cbf65f13f8dcd",
+        "answerFile": "H31110.pdf",
+        "answerPage": 22
+      },
+      "seq": 91
+    },
+    {
+      "no": 72,
+      "kind": "reorder",
+      "tokens": [
+        "多么",
+        "可爱",
+        "它的鼻子",
+        "啊"
+      ],
+      "id": "H31110-72",
+      "exam": "H31110",
+      "answers": [
+        "它的鼻子多么可爱啊！"
+      ],
+      "source": {
+        "file": "H31110.pdf",
+        "page": 13,
+        "sha256": "99296512579f7051188dbdda751c5ac5c6177e8d2c001b76f90cbf65f13f8dcd",
+        "answerFile": "H31110.pdf",
+        "answerPage": 22
+      },
+      "seq": 92
+    },
+    {
+      "no": 73,
+      "kind": "reorder",
+      "tokens": [
+        "参加",
+        "姐姐",
+        "普通话",
+        "考试",
+        "想"
+      ],
+      "id": "H31110-73",
+      "exam": "H31110",
+      "answers": [
+        "姐姐想参加普通话考试。"
+      ],
+      "source": {
+        "file": "H31110.pdf",
+        "page": 13,
+        "sha256": "99296512579f7051188dbdda751c5ac5c6177e8d2c001b76f90cbf65f13f8dcd",
+        "answerFile": "H31110.pdf",
+        "answerPage": 22
+      },
+      "seq": 93
+    },
+    {
+      "no": 74,
+      "kind": "reorder",
+      "tokens": [
+        "名字",
+        "黑板上",
+        "写着",
+        "她的"
+      ],
+      "id": "H31110-74",
+      "exam": "H31110",
+      "answers": [
+        "黑板上写着她的名字。"
+      ],
+      "source": {
+        "file": "H31110.pdf",
+        "page": 13,
+        "sha256": "99296512579f7051188dbdda751c5ac5c6177e8d2c001b76f90cbf65f13f8dcd",
+        "answerFile": "H31110.pdf",
+        "answerPage": 22
+      },
+      "seq": 94
+    },
+    {
+      "no": 75,
+      "kind": "reorder",
+      "tokens": [
+        "老师",
+        "画好了",
+        "很快地",
+        "熊猫的耳朵"
+      ],
+      "id": "H31110-75",
+      "exam": "H31110",
+      "answers": [
+        "老师很快地画好了熊猫的耳朵。"
+      ],
+      "source": {
+        "file": "H31110.pdf",
+        "page": 13,
+        "sha256": "99296512579f7051188dbdda751c5ac5c6177e8d2c001b76f90cbf65f13f8dcd",
+        "answerFile": "H31110.pdf",
+        "answerPage": 22
+      },
+      "seq": 95
+    },
+    {
+      "no": 76,
+      "kind": "hanzi",
+      "sentence": "他___现在哪里，哪里就有笑声。",
+      "pinyin": "chū",
+      "id": "H31110-76",
+      "exam": "H31110",
+      "answers": [
+        "出"
+      ],
+      "source": {
+        "file": "H31110.pdf",
+        "page": 14,
+        "sha256": "99296512579f7051188dbdda751c5ac5c6177e8d2c001b76f90cbf65f13f8dcd",
+        "answerFile": "H31110.pdf",
+        "answerPage": 22
+      },
+      "seq": 96
+    },
+    {
+      "no": 77,
+      "kind": "hanzi",
+      "sentence": "这张世界地图___旧了，再买张新的吧。",
+      "pinyin": "tài",
+      "id": "H31110-77",
+      "exam": "H31110",
+      "answers": [
+        "太"
+      ],
+      "source": {
+        "file": "H31110.pdf",
+        "page": 14,
+        "sha256": "99296512579f7051188dbdda751c5ac5c6177e8d2c001b76f90cbf65f13f8dcd",
+        "answerFile": "H31110.pdf",
+        "answerPage": 22
+      },
+      "seq": 97
+    },
+    {
+      "no": 78,
+      "kind": "hanzi",
+      "sentence": "这___词是什么意思？这是我今天看新闻时看到的。",
+      "pinyin": "ge",
+      "id": "H31110-78",
+      "exam": "H31110",
+      "answers": [
+        "个"
+      ],
+      "source": {
+        "file": "H31110.pdf",
+        "page": 14,
+        "sha256": "99296512579f7051188dbdda751c5ac5c6177e8d2c001b76f90cbf65f13f8dcd",
+        "answerFile": "H31110.pdf",
+        "answerPage": 22
+      },
+      "seq": 98
+    },
+    {
+      "no": 79,
+      "kind": "hanzi",
+      "sentence": "喂，我刚到电梯口，___家是在17层吧？",
+      "pinyin": "nǐ",
+      "id": "H31110-79",
+      "exam": "H31110",
+      "answers": [
+        "你"
+      ],
+      "source": {
+        "file": "H31110.pdf",
+        "page": 14,
+        "sha256": "99296512579f7051188dbdda751c5ac5c6177e8d2c001b76f90cbf65f13f8dcd",
+        "answerFile": "H31110.pdf",
+        "answerPage": 22
+      },
+      "seq": 99
+    },
+    {
+      "no": 80,
+      "kind": "hanzi",
+      "sentence": "晚上9点___打电话很便宜，一分钟一角二分钱。",
+      "pinyin": "hòu",
+      "id": "H31110-80",
+      "exam": "H31110",
+      "answers": [
+        "后"
+      ],
+      "source": {
+        "file": "H31110.pdf",
+        "page": 14,
+        "sha256": "99296512579f7051188dbdda751c5ac5c6177e8d2c001b76f90cbf65f13f8dcd",
+        "answerFile": "H31110.pdf",
+        "answerPage": 22
+      },
+      "seq": 100
+    },
+    {
+      "no": 71,
+      "kind": "reorder",
+      "tokens": [
+        "左阿姨",
+        "讲",
+        "普通话",
+        "不会"
+      ],
+      "id": "H31111-71",
+      "exam": "H31111",
+      "answers": [
+        "左阿姨不会讲普通话。"
+      ],
+      "source": {
+        "file": "H31111.pdf",
+        "page": 13,
+        "sha256": "d4e3b37552835b416733202502ecef494152d66dd3641852625310e8813a600b",
+        "answerFile": "H31111.pdf",
+        "answerPage": 22
+      },
+      "seq": 101
+    },
+    {
+      "no": 72,
+      "kind": "reorder",
+      "tokens": [
+        "面包",
+        "18块",
+        "这些",
+        "一共"
+      ],
+      "id": "H31111-72",
+      "exam": "H31111",
+      "answers": [
+        "这些面包一共18块。"
+      ],
+      "source": {
+        "file": "H31111.pdf",
+        "page": 13,
+        "sha256": "d4e3b37552835b416733202502ecef494152d66dd3641852625310e8813a600b",
+        "answerFile": "H31111.pdf",
+        "answerPage": 22
+      },
+      "seq": 102
+    },
+    {
+      "no": 73,
+      "kind": "reorder",
+      "tokens": [
+        "完成",
+        "了",
+        "你的作业",
+        "吗"
+      ],
+      "id": "H31111-73",
+      "exam": "H31111",
+      "answers": [
+        "你的作业完成了吗？"
+      ],
+      "source": {
+        "file": "H31111.pdf",
+        "page": 13,
+        "sha256": "d4e3b37552835b416733202502ecef494152d66dd3641852625310e8813a600b",
+        "answerFile": "H31111.pdf",
+        "answerPage": 22
+      },
+      "seq": 103
+    },
+    {
+      "no": 74,
+      "kind": "reorder",
+      "tokens": [
+        "成绩",
+        "我女儿的",
+        "非常好",
+        "数学"
+      ],
+      "id": "H31111-74",
+      "exam": "H31111",
+      "answers": [
+        "我女儿的数学成绩非常好。"
+      ],
+      "source": {
+        "file": "H31111.pdf",
+        "page": 13,
+        "sha256": "d4e3b37552835b416733202502ecef494152d66dd3641852625310e8813a600b",
+        "answerFile": "H31111.pdf",
+        "answerPage": 22
+      },
+      "seq": 104
+    },
+    {
+      "no": 75,
+      "kind": "reorder",
+      "tokens": [
+        "她",
+        "放进了",
+        "叔叔的包里",
+        "把",
+        "信"
+      ],
+      "id": "H31111-75",
+      "exam": "H31111",
+      "answers": [
+        "她把信放进了叔叔的包里。"
+      ],
+      "source": {
+        "file": "H31111.pdf",
+        "page": 13,
+        "sha256": "d4e3b37552835b416733202502ecef494152d66dd3641852625310e8813a600b",
+        "answerFile": "H31111.pdf",
+        "answerPage": 22
+      },
+      "seq": 105
+    },
+    {
+      "no": 76,
+      "kind": "hanzi",
+      "sentence": "再见，欢迎您___次再来。",
+      "pinyin": "xià",
+      "id": "H31111-76",
+      "exam": "H31111",
+      "answers": [
+        "下"
+      ],
+      "source": {
+        "file": "H31111.pdf",
+        "page": 14,
+        "sha256": "d4e3b37552835b416733202502ecef494152d66dd3641852625310e8813a600b",
+        "answerFile": "H31111.pdf",
+        "answerPage": 22
+      },
+      "seq": 106
+    },
+    {
+      "no": 77,
+      "kind": "hanzi",
+      "sentence": "男朋友的___答，让她特别高兴。",
+      "pinyin": "huí",
+      "id": "H31111-77",
+      "exam": "H31111",
+      "answers": [
+        "回"
+      ],
+      "source": {
+        "file": "H31111.pdf",
+        "page": 14,
+        "sha256": "d4e3b37552835b416733202502ecef494152d66dd3641852625310e8813a600b",
+        "answerFile": "H31111.pdf",
+        "answerPage": 22
+      },
+      "seq": 107
+    },
+    {
+      "no": 78,
+      "kind": "hanzi",
+      "sentence": "对猫来说，小鱼___羊肉更好吃。",
+      "pinyin": "bǐ",
+      "id": "H31111-78",
+      "exam": "H31111",
+      "answers": [
+        "比"
+      ],
+      "source": {
+        "file": "H31111.pdf",
+        "page": 14,
+        "sha256": "d4e3b37552835b416733202502ecef494152d66dd3641852625310e8813a600b",
+        "answerFile": "H31111.pdf",
+        "answerPage": 22
+      },
+      "seq": 108
+    },
+    {
+      "no": 79,
+      "kind": "hanzi",
+      "sentence": "你把空调打开吧，房间里___热了。",
+      "pinyin": "tài",
+      "id": "H31111-79",
+      "exam": "H31111",
+      "answers": [
+        "太"
+      ],
+      "source": {
+        "file": "H31111.pdf",
+        "page": 14,
+        "sha256": "d4e3b37552835b416733202502ecef494152d66dd3641852625310e8813a600b",
+        "answerFile": "H31111.pdf",
+        "answerPage": 22
+      },
+      "seq": 109
+    },
+    {
+      "no": 80,
+      "kind": "hanzi",
+      "sentence": "爷爷，您今___买的葡萄真新鲜，非常好吃。",
+      "pinyin": "tiān",
+      "id": "H31111-80",
+      "exam": "H31111",
+      "answers": [
+        "天"
+      ],
+      "source": {
+        "file": "H31111.pdf",
+        "page": 14,
+        "sha256": "d4e3b37552835b416733202502ecef494152d66dd3641852625310e8813a600b",
+        "answerFile": "H31111.pdf",
+        "answerPage": 22
+      },
+      "seq": 110
+    },
+    {
+      "no": 71,
+      "kind": "reorder",
+      "tokens": [
+        "祝",
+        "年轻",
+        "您",
+        "越来越"
+      ],
+      "id": "H31218-71",
+      "exam": "H31218",
+      "answers": [
+        "祝您越来越年轻！"
+      ],
+      "source": {
+        "file": "H31218.pdf",
+        "page": 13,
+        "sha256": "fff481ec2e1287b7be8d069d645cd1f4cd7dcc62bcead7e0638ef4de0902b615",
+        "answerFile": "H31218.pdf",
+        "answerPage": 16
+      },
+      "seq": 111
+    },
+    {
+      "no": 72,
+      "kind": "reorder",
+      "tokens": [
+        "花园里的",
+        "绿了",
+        "树和草",
+        "都"
+      ],
+      "id": "H31218-72",
+      "exam": "H31218",
+      "answers": [
+        "花园里的树和草都绿了。"
+      ],
+      "source": {
+        "file": "H31218.pdf",
+        "page": 13,
+        "sha256": "fff481ec2e1287b7be8d069d645cd1f4cd7dcc62bcead7e0638ef4de0902b615",
+        "answerFile": "H31218.pdf",
+        "answerPage": 16
+      },
+      "seq": 112
+    },
+    {
+      "no": 73,
+      "kind": "reorder",
+      "tokens": [
+        "这条",
+        "长",
+        "了",
+        "裤子",
+        "太"
+      ],
+      "id": "H31218-73",
+      "exam": "H31218",
+      "answers": [
+        "这条裤子太长了！"
+      ],
+      "source": {
+        "file": "H31218.pdf",
+        "page": 13,
+        "sha256": "fff481ec2e1287b7be8d069d645cd1f4cd7dcc62bcead7e0638ef4de0902b615",
+        "answerFile": "H31218.pdf",
+        "answerPage": 16
+      },
+      "seq": 113
+    },
+    {
+      "no": 74,
+      "kind": "reorder",
+      "tokens": [
+        "熊猫",
+        "可爱",
+        "我觉得",
+        "更"
+      ],
+      "id": "H31218-74",
+      "exam": "H31218",
+      "answers": [
+        "我觉得熊猫更可爱。"
+      ],
+      "source": {
+        "file": "H31218.pdf",
+        "page": 13,
+        "sha256": "fff481ec2e1287b7be8d069d645cd1f4cd7dcc62bcead7e0638ef4de0902b615",
+        "answerFile": "H31218.pdf",
+        "answerPage": 16
+      },
+      "seq": 114
+    },
+    {
+      "no": 75,
+      "kind": "reorder",
+      "tokens": [
+        "风",
+        "她的帽子",
+        "被",
+        "刮跑了"
+      ],
+      "id": "H31218-75",
+      "exam": "H31218",
+      "answers": [
+        "她的帽子被风刮跑了。"
+      ],
+      "source": {
+        "file": "H31218.pdf",
+        "page": 13,
+        "sha256": "fff481ec2e1287b7be8d069d645cd1f4cd7dcc62bcead7e0638ef4de0902b615",
+        "answerFile": "H31218.pdf",
+        "answerPage": 16
+      },
+      "seq": 115
+    },
+    {
+      "no": 76,
+      "kind": "hanzi",
+      "sentence": "他的普通话水平最近有很___提高。",
+      "pinyin": "dà",
+      "id": "H31218-76",
+      "exam": "H31218",
+      "answers": [
+        "大"
+      ],
+      "source": {
+        "file": "H31218.pdf",
+        "page": 14,
+        "sha256": "fff481ec2e1287b7be8d069d645cd1f4cd7dcc62bcead7e0638ef4de0902b615",
+        "answerFile": "H31218.pdf",
+        "answerPage": 16
+      },
+      "seq": 116
+    },
+    {
+      "no": 77,
+      "kind": "hanzi",
+      "sentence": "你好，香蕉怎___卖？",
+      "pinyin": "me",
+      "id": "H31218-77",
+      "exam": "H31218",
+      "answers": [
+        "么"
+      ],
+      "source": {
+        "file": "H31218.pdf",
+        "page": 14,
+        "sha256": "fff481ec2e1287b7be8d069d645cd1f4cd7dcc62bcead7e0638ef4de0902b615",
+        "answerFile": "H31218.pdf",
+        "answerPage": 16
+      },
+      "seq": 117
+    },
+    {
+      "no": 78,
+      "kind": "hanzi",
+      "sentence": "感冒了要多喝水，多___水果。",
+      "pinyin": "chī",
+      "id": "H31218-78",
+      "exam": "H31218",
+      "answers": [
+        "吃"
+      ],
+      "source": {
+        "file": "H31218.pdf",
+        "page": 14,
+        "sha256": "fff481ec2e1287b7be8d069d645cd1f4cd7dcc62bcead7e0638ef4de0902b615",
+        "answerFile": "H31218.pdf",
+        "answerPage": 16
+      },
+      "seq": 118
+    },
+    {
+      "no": 79,
+      "kind": "hanzi",
+      "sentence": "对不起，我以为房间里没___。",
+      "pinyin": "rén",
+      "id": "H31218-79",
+      "exam": "H31218",
+      "answers": [
+        "人"
+      ],
+      "source": {
+        "file": "H31218.pdf",
+        "page": 14,
+        "sha256": "fff481ec2e1287b7be8d069d645cd1f4cd7dcc62bcead7e0638ef4de0902b615",
+        "answerFile": "H31218.pdf",
+        "answerPage": 16
+      },
+      "seq": 119
+    },
+    {
+      "no": 80,
+      "kind": "hanzi",
+      "sentence": "每次经过那家商店，我都会进___为孩子买些蛋糕或者别的东西。",
+      "pinyin": "qù",
+      "id": "H31218-80",
+      "exam": "H31218",
+      "answers": [
+        "去"
+      ],
+      "source": {
+        "file": "H31218.pdf",
+        "page": 14,
+        "sha256": "fff481ec2e1287b7be8d069d645cd1f4cd7dcc62bcead7e0638ef4de0902b615",
+        "answerFile": "H31218.pdf",
+        "answerPage": 16
+      },
+      "seq": 120
+    },
+    {
+      "no": 71,
+      "kind": "reorder",
+      "tokens": [
+        "蓝小姐",
+        "热情",
+        "对人",
+        "非常"
+      ],
+      "id": "H31219-71",
+      "exam": "H31219",
+      "answers": [
+        "蓝小姐对人非常热情。"
+      ],
+      "source": {
+        "file": "H31219.pdf",
+        "page": 13,
+        "sha256": "6ea57d7004e1d1cd2e247c08be630ae5667708826c1c2eca81cf182158a95672",
+        "answerFile": "H31219.pdf",
+        "answerPage": 16
+      },
+      "seq": 121
+    },
+    {
+      "no": 72,
+      "kind": "reorder",
+      "tokens": [
+        "高兴",
+        "地",
+        "邻居",
+        "走",
+        "了"
+      ],
+      "id": "H31219-72",
+      "exam": "H31219",
+      "answers": [
+        "邻居高兴地走了。"
+      ],
+      "source": {
+        "file": "H31219.pdf",
+        "page": 13,
+        "sha256": "6ea57d7004e1d1cd2e247c08be630ae5667708826c1c2eca81cf182158a95672",
+        "answerFile": "H31219.pdf",
+        "answerPage": 16
+      },
+      "seq": 122
+    },
+    {
+      "no": 73,
+      "kind": "reorder",
+      "tokens": [
+        "像妈妈",
+        "长得",
+        "最",
+        "妹妹"
+      ],
+      "id": "H31219-73",
+      "exam": "H31219",
+      "answers": [
+        "妹妹长得最像妈妈。"
+      ],
+      "source": {
+        "file": "H31219.pdf",
+        "page": 13,
+        "sha256": "6ea57d7004e1d1cd2e247c08be630ae5667708826c1c2eca81cf182158a95672",
+        "answerFile": "H31219.pdf",
+        "answerPage": 16
+      },
+      "seq": 123
+    },
+    {
+      "no": 74,
+      "kind": "reorder",
+      "tokens": [
+        "请",
+        "根据",
+        "回答问题",
+        "要求"
+      ],
+      "id": "H31219-74",
+      "exam": "H31219",
+      "answers": [
+        "请根据要求回答问题。"
+      ],
+      "source": {
+        "file": "H31219.pdf",
+        "page": 13,
+        "sha256": "6ea57d7004e1d1cd2e247c08be630ae5667708826c1c2eca81cf182158a95672",
+        "answerFile": "H31219.pdf",
+        "answerPage": 16
+      },
+      "seq": 124
+    },
+    {
+      "no": 75,
+      "kind": "reorder",
+      "tokens": [
+        "打扫",
+        "干净",
+        "了",
+        "街道",
+        "被"
+      ],
+      "id": "H31219-75",
+      "exam": "H31219",
+      "answers": [
+        "街道被打扫干净了。"
+      ],
+      "source": {
+        "file": "H31219.pdf",
+        "page": 13,
+        "sha256": "6ea57d7004e1d1cd2e247c08be630ae5667708826c1c2eca81cf182158a95672",
+        "answerFile": "H31219.pdf",
+        "answerPage": 16
+      },
+      "seq": 125
+    },
+    {
+      "no": 76,
+      "kind": "hanzi",
+      "sentence": "我爸爸为了买它，___了近60万块钱。",
+      "pinyin": "huā",
+      "id": "H31219-76",
+      "exam": "H31219",
+      "answers": [
+        "花"
+      ],
+      "source": {
+        "file": "H31219.pdf",
+        "page": 14,
+        "sha256": "6ea57d7004e1d1cd2e247c08be630ae5667708826c1c2eca81cf182158a95672",
+        "answerFile": "H31219.pdf",
+        "answerPage": 16
+      },
+      "seq": 126
+    },
+    {
+      "no": 77,
+      "kind": "hanzi",
+      "sentence": "经过半年多的努力学习，她的汉语___平有了很大提高。",
+      "pinyin": "shuǐ",
+      "id": "H31219-77",
+      "exam": "H31219",
+      "answers": [
+        "水"
+      ],
+      "source": {
+        "file": "H31219.pdf",
+        "page": 14,
+        "sha256": "6ea57d7004e1d1cd2e247c08be630ae5667708826c1c2eca81cf182158a95672",
+        "answerFile": "H31219.pdf",
+        "answerPage": 16
+      },
+      "seq": 127
+    },
+    {
+      "no": 78,
+      "kind": "hanzi",
+      "sentence": "晚上12点___可以叫零点。",
+      "pinyin": "yě",
+      "id": "H31219-78",
+      "exam": "H31219",
+      "answers": [
+        "也"
+      ],
+      "source": {
+        "file": "H31219.pdf",
+        "page": 14,
+        "sha256": "6ea57d7004e1d1cd2e247c08be630ae5667708826c1c2eca81cf182158a95672",
+        "answerFile": "H31219.pdf",
+        "answerPage": 16
+      },
+      "seq": 128
+    },
+    {
+      "no": 79,
+      "kind": "hanzi",
+      "sentence": "太阳出来了，不用带___伞了。",
+      "pinyin": "yǔ",
+      "id": "H31219-79",
+      "exam": "H31219",
+      "answers": [
+        "雨"
+      ],
+      "source": {
+        "file": "H31219.pdf",
+        "page": 14,
+        "sha256": "6ea57d7004e1d1cd2e247c08be630ae5667708826c1c2eca81cf182158a95672",
+        "answerFile": "H31219.pdf",
+        "answerPage": 16
+      },
+      "seq": 129
+    },
+    {
+      "no": 80,
+      "kind": "hanzi",
+      "sentence": "服务员，请帮我们再拿一___盘子。",
+      "pinyin": "ge",
+      "id": "H31219-80",
+      "exam": "H31219",
+      "answers": [
+        "个"
+      ],
+      "source": {
+        "file": "H31219.pdf",
+        "page": 14,
+        "sha256": "6ea57d7004e1d1cd2e247c08be630ae5667708826c1c2eca81cf182158a95672",
+        "answerFile": "H31219.pdf",
+        "answerPage": 16
+      },
+      "seq": 130
+    },
+    {
+      "no": 71,
+      "kind": "reorder",
+      "tokens": [
+        "特别",
+        "甜",
+        "中午买的",
+        "西瓜"
+      ],
+      "id": "H31220-71",
+      "exam": "H31220",
+      "answers": [
+        "中午买的西瓜特别甜。"
+      ],
+      "source": {
+        "file": "H31220.pdf",
+        "page": 13,
+        "sha256": "c0063dc7d323a9a1ab7d0c29550592a2dd78eb765b6621b1bed671d11a6ee1a4",
+        "answerFile": "H31220.pdf",
+        "answerPage": 16
+      },
+      "seq": 131
+    },
+    {
+      "no": 72,
+      "kind": "reorder",
+      "tokens": [
+        "教室的",
+        "坏了",
+        "空调",
+        "又"
+      ],
+      "id": "H31220-72",
+      "exam": "H31220",
+      "answers": [
+        "教室的空调又坏了。"
+      ],
+      "source": {
+        "file": "H31220.pdf",
+        "page": 13,
+        "sha256": "c0063dc7d323a9a1ab7d0c29550592a2dd78eb765b6621b1bed671d11a6ee1a4",
+        "answerFile": "H31220.pdf",
+        "answerPage": 16
+      },
+      "seq": 132
+    },
+    {
+      "no": 73,
+      "kind": "reorder",
+      "tokens": [
+        "那是真的",
+        "相信",
+        "真",
+        "不敢"
+      ],
+      "id": "H31220-73",
+      "exam": "H31220",
+      "answers": [
+        "真不敢相信那是真的。"
+      ],
+      "source": {
+        "file": "H31220.pdf",
+        "page": 13,
+        "sha256": "c0063dc7d323a9a1ab7d0c29550592a2dd78eb765b6621b1bed671d11a6ee1a4",
+        "answerFile": "H31220.pdf",
+        "answerPage": 16
+      },
+      "seq": 133
+    },
+    {
+      "no": 74,
+      "kind": "reorder",
+      "tokens": [
+        "多少",
+        "裤子",
+        "这条",
+        "钱"
+      ],
+      "id": "H31220-74",
+      "exam": "H31220",
+      "answers": [
+        "这条裤子多少钱？"
+      ],
+      "source": {
+        "file": "H31220.pdf",
+        "page": 13,
+        "sha256": "c0063dc7d323a9a1ab7d0c29550592a2dd78eb765b6621b1bed671d11a6ee1a4",
+        "answerFile": "H31220.pdf",
+        "answerPage": 16
+      },
+      "seq": 134
+    },
+    {
+      "no": 75,
+      "kind": "reorder",
+      "tokens": [
+        "请把",
+        "拿",
+        "菜单",
+        "给我"
+      ],
+      "id": "H31220-75",
+      "exam": "H31220",
+      "answers": [
+        "请把菜单拿给我。"
+      ],
+      "source": {
+        "file": "H31220.pdf",
+        "page": 13,
+        "sha256": "c0063dc7d323a9a1ab7d0c29550592a2dd78eb765b6621b1bed671d11a6ee1a4",
+        "answerFile": "H31220.pdf",
+        "answerPage": 16
+      },
+      "seq": 135
+    },
+    {
+      "no": 76,
+      "kind": "hanzi",
+      "sentence": "别影响爸爸___作，我们去那边玩儿。",
+      "pinyin": "gōng",
+      "id": "H31220-76",
+      "exam": "H31220",
+      "answers": [
+        "工"
+      ],
+      "source": {
+        "file": "H31220.pdf",
+        "page": 14,
+        "sha256": "c0063dc7d323a9a1ab7d0c29550592a2dd78eb765b6621b1bed671d11a6ee1a4",
+        "answerFile": "H31220.pdf",
+        "answerPage": 16
+      },
+      "seq": 136
+    },
+    {
+      "no": 77,
+      "kind": "hanzi",
+      "sentence": "表演一结束，她马上就离___了。",
+      "pinyin": "kāi",
+      "id": "H31220-77",
+      "exam": "H31220",
+      "answers": [
+        "开"
+      ],
+      "source": {
+        "file": "H31220.pdf",
+        "page": 14,
+        "sha256": "c0063dc7d323a9a1ab7d0c29550592a2dd78eb765b6621b1bed671d11a6ee1a4",
+        "answerFile": "H31220.pdf",
+        "answerPage": 16
+      },
+      "seq": 137
+    },
+    {
+      "no": 78,
+      "kind": "hanzi",
+      "sentence": "喂？___声音大一点儿，我听不清楚。",
+      "pinyin": "nǐ",
+      "id": "H31220-78",
+      "exam": "H31220",
+      "answers": [
+        "你"
+      ],
+      "source": {
+        "file": "H31220.pdf",
+        "page": 14,
+        "sha256": "c0063dc7d323a9a1ab7d0c29550592a2dd78eb765b6621b1bed671d11a6ee1a4",
+        "answerFile": "H31220.pdf",
+        "answerPage": 16
+      },
+      "seq": 138
+    },
+    {
+      "no": 79,
+      "kind": "hanzi",
+      "sentence": "现___是8点45分，再有一刻钟就9点了。",
+      "pinyin": "zài",
+      "id": "H31220-79",
+      "exam": "H31220",
+      "answers": [
+        "在"
+      ],
+      "source": {
+        "file": "H31220.pdf",
+        "page": 14,
+        "sha256": "c0063dc7d323a9a1ab7d0c29550592a2dd78eb765b6621b1bed671d11a6ee1a4",
+        "answerFile": "H31220.pdf",
+        "answerPage": 16
+      },
+      "seq": 139
+    },
+    {
+      "no": 80,
+      "kind": "hanzi",
+      "sentence": "如果遇到什么不懂的地方，可以去___高先生。",
+      "pinyin": "wèn",
+      "id": "H31220-80",
+      "exam": "H31220",
+      "answers": [
+        "问"
+      ],
+      "source": {
+        "file": "H31220.pdf",
+        "page": 14,
+        "sha256": "c0063dc7d323a9a1ab7d0c29550592a2dd78eb765b6621b1bed671d11a6ee1a4",
+        "answerFile": "H31220.pdf",
+        "answerPage": 16
+      },
+      "seq": 140
+    },
+    {
+      "no": 71,
+      "kind": "reorder",
+      "tokens": [
+        "蛋糕",
+        "太",
+        "甜",
+        "这种",
+        "了"
+      ],
+      "id": "H31221-71",
+      "exam": "H31221",
+      "answers": [
+        "这种蛋糕太甜了。"
+      ],
+      "source": {
+        "file": "H31221.pdf",
+        "page": 13,
+        "sha256": "3b36f31008ed9c3a8ae2c48751563ac07379bdfc35f2889aa52b5b21a2c0c5d0",
+        "answerFile": "H31221.pdf",
+        "answerPage": 16
+      },
+      "seq": 141
+    },
+    {
+      "no": 72,
+      "kind": "reorder",
+      "tokens": [
+        "这个月",
+        "一万多",
+        "块钱",
+        "花了"
+      ],
+      "id": "H31221-72",
+      "exam": "H31221",
+      "answers": [
+        "这个月花了一万多块钱。"
+      ],
+      "source": {
+        "file": "H31221.pdf",
+        "page": 13,
+        "sha256": "3b36f31008ed9c3a8ae2c48751563ac07379bdfc35f2889aa52b5b21a2c0c5d0",
+        "answerFile": "H31221.pdf",
+        "answerPage": 16
+      },
+      "seq": 142
+    },
+    {
+      "no": 73,
+      "kind": "reorder",
+      "tokens": [
+        "是",
+        "帮助别人",
+        "一件",
+        "快乐的事情"
+      ],
+      "id": "H31221-73",
+      "exam": "H31221",
+      "answers": [
+        "帮助别人是一件快乐的事情。"
+      ],
+      "source": {
+        "file": "H31221.pdf",
+        "page": 13,
+        "sha256": "3b36f31008ed9c3a8ae2c48751563ac07379bdfc35f2889aa52b5b21a2c0c5d0",
+        "answerFile": "H31221.pdf",
+        "answerPage": 16
+      },
+      "seq": 143
+    },
+    {
+      "no": 74,
+      "kind": "reorder",
+      "tokens": [
+        "没有",
+        "会议还",
+        "结束",
+        "呢"
+      ],
+      "id": "H31221-74",
+      "exam": "H31221",
+      "answers": [
+        "会议还没有结束呢。"
+      ],
+      "source": {
+        "file": "H31221.pdf",
+        "page": 13,
+        "sha256": "3b36f31008ed9c3a8ae2c48751563ac07379bdfc35f2889aa52b5b21a2c0c5d0",
+        "answerFile": "H31221.pdf",
+        "answerPage": 16
+      },
+      "seq": 144
+    },
+    {
+      "no": 75,
+      "kind": "reorder",
+      "tokens": [
+        "她的",
+        "汉语水平",
+        "得",
+        "很快",
+        "提高"
+      ],
+      "id": "H31221-75",
+      "exam": "H31221",
+      "answers": [
+        "她的汉语水平提高得很快。"
+      ],
+      "source": {
+        "file": "H31221.pdf",
+        "page": 13,
+        "sha256": "3b36f31008ed9c3a8ae2c48751563ac07379bdfc35f2889aa52b5b21a2c0c5d0",
+        "answerFile": "H31221.pdf",
+        "answerPage": 16
+      },
+      "seq": 145
+    },
+    {
+      "no": 76,
+      "kind": "hanzi",
+      "sentence": "春节是___国最重要的一个节日。",
+      "pinyin": "Zhōng",
+      "id": "H31221-76",
+      "exam": "H31221",
+      "answers": [
+        "中"
+      ],
+      "source": {
+        "file": "H31221.pdf",
+        "page": 14,
+        "sha256": "3b36f31008ed9c3a8ae2c48751563ac07379bdfc35f2889aa52b5b21a2c0c5d0",
+        "answerFile": "H31221.pdf",
+        "answerPage": 16
+      },
+      "seq": 146
+    },
+    {
+      "no": 77,
+      "kind": "hanzi",
+      "sentence": "10个一分是一角，10个一角是一___。",
+      "pinyin": "yuán",
+      "id": "H31221-77",
+      "exam": "H31221",
+      "answers": [
+        "元"
+      ],
+      "source": {
+        "file": "H31221.pdf",
+        "page": 14,
+        "sha256": "3b36f31008ed9c3a8ae2c48751563ac07379bdfc35f2889aa52b5b21a2c0c5d0",
+        "answerFile": "H31221.pdf",
+        "answerPage": 16
+      },
+      "seq": 147
+    },
+    {
+      "no": 78,
+      "kind": "hanzi",
+      "sentence": "从这儿到地铁站很方便，走路___需要几分钟。",
+      "pinyin": "zhǐ",
+      "id": "H31221-78",
+      "exam": "H31221",
+      "answers": [
+        "只"
+      ],
+      "source": {
+        "file": "H31221.pdf",
+        "page": 14,
+        "sha256": "3b36f31008ed9c3a8ae2c48751563ac07379bdfc35f2889aa52b5b21a2c0c5d0",
+        "answerFile": "H31221.pdf",
+        "answerPage": 16
+      },
+      "seq": 148
+    },
+    {
+      "no": 79,
+      "kind": "hanzi",
+      "sentence": "她早上出___的时候忘记关灯了。",
+      "pinyin": "mén",
+      "id": "H31221-79",
+      "exam": "H31221",
+      "answers": [
+        "门"
+      ],
+      "source": {
+        "file": "H31221.pdf",
+        "page": 14,
+        "sha256": "3b36f31008ed9c3a8ae2c48751563ac07379bdfc35f2889aa52b5b21a2c0c5d0",
+        "answerFile": "H31221.pdf",
+        "answerPage": 16
+      },
+      "seq": 149
+    },
+    {
+      "no": 80,
+      "kind": "hanzi",
+      "sentence": "他以前没遇到过这样的事情，所以也没想出什么___办法来。",
+      "pinyin": "hǎo",
+      "id": "H31221-80",
+      "exam": "H31221",
+      "answers": [
+        "好"
+      ],
+      "source": {
+        "file": "H31221.pdf",
+        "page": 14,
+        "sha256": "3b36f31008ed9c3a8ae2c48751563ac07379bdfc35f2889aa52b5b21a2c0c5d0",
+        "answerFile": "H31221.pdf",
+        "answerPage": 16
+      },
+      "seq": 150
+    },
+    {
+      "no": 71,
+      "kind": "reorder",
+      "tokens": [
+        "她的",
+        "又黑又长",
+        "头发"
+      ],
+      "id": "H31328-71",
+      "exam": "H31328",
+      "answers": [
+        "她的头发又黑又长。"
+      ],
+      "source": {
+        "file": "H31328.pdf",
+        "page": 13,
+        "sha256": "5c34e324b7f62aa85f5ba231ca76c599a4b17366a0cb3f552978f6d59bce3862",
+        "answerFile": "H31328.pdf",
+        "answerPage": 16
+      },
+      "seq": 151
+    },
+    {
+      "no": 72,
+      "kind": "reorder",
+      "tokens": [
+        "我",
+        "学会用",
+        "终于",
+        "筷子了"
+      ],
+      "id": "H31328-72",
+      "exam": "H31328",
+      "answers": [
+        "我终于学会用筷子了。"
+      ],
+      "source": {
+        "file": "H31328.pdf",
+        "page": 13,
+        "sha256": "5c34e324b7f62aa85f5ba231ca76c599a4b17366a0cb3f552978f6d59bce3862",
+        "answerFile": "H31328.pdf",
+        "answerPage": 16
+      },
+      "seq": 152
+    },
+    {
+      "no": 73,
+      "kind": "reorder",
+      "tokens": [
+        "他",
+        "打扫得",
+        "把",
+        "干干净净",
+        "教室"
+      ],
+      "id": "H31328-73",
+      "exam": "H31328",
+      "answers": [
+        "他把教室打扫得干干净净。"
+      ],
+      "source": {
+        "file": "H31328.pdf",
+        "page": 13,
+        "sha256": "5c34e324b7f62aa85f5ba231ca76c599a4b17366a0cb3f552978f6d59bce3862",
+        "answerFile": "H31328.pdf",
+        "answerPage": 16
+      },
+      "seq": 153
+    },
+    {
+      "no": 74,
+      "kind": "reorder",
+      "tokens": [
+        "我",
+        "体育新闻",
+        "喜欢",
+        "不",
+        "看"
+      ],
+      "id": "H31328-74",
+      "exam": "H31328",
+      "answers": [
+        "我不喜欢看体育新闻。"
+      ],
+      "source": {
+        "file": "H31328.pdf",
+        "page": 13,
+        "sha256": "5c34e324b7f62aa85f5ba231ca76c599a4b17366a0cb3f552978f6d59bce3862",
+        "answerFile": "H31328.pdf",
+        "answerPage": 16
+      },
+      "seq": 154
+    },
+    {
+      "no": 75,
+      "kind": "reorder",
+      "tokens": [
+        "校长对",
+        "非常",
+        "你的回答",
+        "满意"
+      ],
+      "id": "H31328-75",
+      "exam": "H31328",
+      "answers": [
+        "校长对你的回答非常满意。"
+      ],
+      "source": {
+        "file": "H31328.pdf",
+        "page": 13,
+        "sha256": "5c34e324b7f62aa85f5ba231ca76c599a4b17366a0cb3f552978f6d59bce3862",
+        "answerFile": "H31328.pdf",
+        "answerPage": 16
+      },
+      "seq": 155
+    },
+    {
+      "no": 76,
+      "kind": "hanzi",
+      "sentence": "你觉得学___文难不难？",
+      "pinyin": "Zhōng",
+      "id": "H31328-76",
+      "exam": "H31328",
+      "answers": [
+        "中"
+      ],
+      "source": {
+        "file": "H31328.pdf",
+        "page": 14,
+        "sha256": "5c34e324b7f62aa85f5ba231ca76c599a4b17366a0cb3f552978f6d59bce3862",
+        "answerFile": "H31328.pdf",
+        "answerPage": 16
+      },
+      "seq": 156
+    },
+    {
+      "no": 77,
+      "kind": "hanzi",
+      "sentence": "春天___了，街道两边的草都绿了。",
+      "pinyin": "lái",
+      "id": "H31328-77",
+      "exam": "H31328",
+      "answers": [
+        "来"
+      ],
+      "source": {
+        "file": "H31328.pdf",
+        "page": 14,
+        "sha256": "5c34e324b7f62aa85f5ba231ca76c599a4b17366a0cb3f552978f6d59bce3862",
+        "answerFile": "H31328.pdf",
+        "answerPage": 16
+      },
+      "seq": 157
+    },
+    {
+      "no": 78,
+      "kind": "hanzi",
+      "sentence": "再见，有事可以给我打电话或者发___子邮件。",
+      "pinyin": "diàn",
+      "id": "H31328-78",
+      "exam": "H31328",
+      "answers": [
+        "电"
+      ],
+      "source": {
+        "file": "H31328.pdf",
+        "page": 14,
+        "sha256": "5c34e324b7f62aa85f5ba231ca76c599a4b17366a0cb3f552978f6d59bce3862",
+        "answerFile": "H31328.pdf",
+        "answerPage": 16
+      },
+      "seq": 158
+    },
+    {
+      "no": 79,
+      "kind": "hanzi",
+      "sentence": "要想有一口___牙，就要每天认真刷牙。",
+      "pinyin": "hǎo",
+      "id": "H31328-79",
+      "exam": "H31328",
+      "answers": [
+        "好"
+      ],
+      "source": {
+        "file": "H31328.pdf",
+        "page": 14,
+        "sha256": "5c34e324b7f62aa85f5ba231ca76c599a4b17366a0cb3f552978f6d59bce3862",
+        "answerFile": "H31328.pdf",
+        "answerPage": 16
+      },
+      "seq": 159
+    },
+    {
+      "no": 80,
+      "kind": "hanzi",
+      "sentence": "雪下得这么大，不___道会不会影响飞机起飞。",
+      "pinyin": "zhī",
+      "id": "H31328-80",
+      "exam": "H31328",
+      "answers": [
+        "知"
+      ],
+      "source": {
+        "file": "H31328.pdf",
+        "page": 14,
+        "sha256": "5c34e324b7f62aa85f5ba231ca76c599a4b17366a0cb3f552978f6d59bce3862",
+        "answerFile": "H31328.pdf",
+        "answerPage": 16
+      },
+      "seq": 160
+    },
+    {
+      "no": 71,
+      "kind": "reorder",
+      "tokens": [
+        "特别",
+        "努力",
+        "他学习"
+      ],
+      "id": "H31329-71",
+      "exam": "H31329",
+      "answers": [
+        "他学习特别努力。"
+      ],
+      "source": {
+        "file": "H31329.pdf",
+        "page": 13,
+        "sha256": "7967a131ae9474021ef5c13ba7b845f08449521c5afab57473cdf8a734589e8a",
+        "answerFile": "H31329.pdf",
+        "answerPage": 16
+      },
+      "seq": 161
+    },
+    {
+      "no": 72,
+      "kind": "reorder",
+      "tokens": [
+        "你",
+        "面包",
+        "想",
+        "吃哪种"
+      ],
+      "id": "H31329-72",
+      "exam": "H31329",
+      "answers": [
+        "你想吃哪种面包？"
+      ],
+      "source": {
+        "file": "H31329.pdf",
+        "page": 13,
+        "sha256": "7967a131ae9474021ef5c13ba7b845f08449521c5afab57473cdf8a734589e8a",
+        "answerFile": "H31329.pdf",
+        "answerPage": 16
+      },
+      "seq": 162
+    },
+    {
+      "no": 73,
+      "kind": "reorder",
+      "tokens": [
+        "你的脸",
+        "干净",
+        "还没",
+        "洗"
+      ],
+      "id": "H31329-73",
+      "exam": "H31329",
+      "answers": [
+        "你的脸还没洗干净。"
+      ],
+      "source": {
+        "file": "H31329.pdf",
+        "page": 13,
+        "sha256": "7967a131ae9474021ef5c13ba7b845f08449521c5afab57473cdf8a734589e8a",
+        "answerFile": "H31329.pdf",
+        "answerPage": 16
+      },
+      "seq": 163
+    },
+    {
+      "no": 74,
+      "kind": "reorder",
+      "tokens": [
+        "他的成绩",
+        "最好的",
+        "一直",
+        "是我们班"
+      ],
+      "id": "H31329-74",
+      "exam": "H31329",
+      "answers": [
+        "他的成绩一直是我们班最好的。"
+      ],
+      "source": {
+        "file": "H31329.pdf",
+        "page": 13,
+        "sha256": "7967a131ae9474021ef5c13ba7b845f08449521c5afab57473cdf8a734589e8a",
+        "answerFile": "H31329.pdf",
+        "answerPage": 16
+      },
+      "seq": 164
+    },
+    {
+      "no": 75,
+      "kind": "reorder",
+      "tokens": [
+        "老人",
+        "那位",
+        "107岁",
+        "已经",
+        "了"
+      ],
+      "id": "H31329-75",
+      "exam": "H31329",
+      "answers": [
+        "那位老人已经107岁了。"
+      ],
+      "source": {
+        "file": "H31329.pdf",
+        "page": 13,
+        "sha256": "7967a131ae9474021ef5c13ba7b845f08449521c5afab57473cdf8a734589e8a",
+        "answerFile": "H31329.pdf",
+        "answerPage": 16
+      },
+      "seq": 165
+    },
+    {
+      "no": 76,
+      "kind": "hanzi",
+      "sentence": "这个季___的西瓜最好吃了。",
+      "pinyin": "jié",
+      "id": "H31329-76",
+      "exam": "H31329",
+      "answers": [
+        "节"
+      ],
+      "source": {
+        "file": "H31329.pdf",
+        "page": 14,
+        "sha256": "7967a131ae9474021ef5c13ba7b845f08449521c5afab57473cdf8a734589e8a",
+        "answerFile": "H31329.pdf",
+        "answerPage": 16
+      },
+      "seq": 166
+    },
+    {
+      "no": 77,
+      "kind": "hanzi",
+      "sentence": "奶奶，是不是太阳下山了，___亮就出来了？",
+      "pinyin": "yuè",
+      "id": "H31329-77",
+      "exam": "H31329",
+      "answers": [
+        "月"
+      ],
+      "source": {
+        "file": "H31329.pdf",
+        "page": 14,
+        "sha256": "7967a131ae9474021ef5c13ba7b845f08449521c5afab57473cdf8a734589e8a",
+        "answerFile": "H31329.pdf",
+        "answerPage": 16
+      },
+      "seq": 167
+    },
+    {
+      "no": 78,
+      "kind": "hanzi",
+      "sentence": "这是___您的6角5分钱，欢迎下次再来！",
+      "pinyin": "zhǎo",
+      "id": "H31329-78",
+      "exam": "H31329",
+      "answers": [
+        "找"
+      ],
+      "source": {
+        "file": "H31329.pdf",
+        "page": 14,
+        "sha256": "7967a131ae9474021ef5c13ba7b845f08449521c5afab57473cdf8a734589e8a",
+        "answerFile": "H31329.pdf",
+        "answerPage": 16
+      },
+      "seq": 168
+    },
+    {
+      "no": 79,
+      "kind": "hanzi",
+      "sentence": "快看，那___大熊猫爬到树上去了。",
+      "pinyin": "zhī",
+      "id": "H31329-79",
+      "exam": "H31329",
+      "answers": [
+        "只"
+      ],
+      "source": {
+        "file": "H31329.pdf",
+        "page": 14,
+        "sha256": "7967a131ae9474021ef5c13ba7b845f08449521c5afab57473cdf8a734589e8a",
+        "answerFile": "H31329.pdf",
+        "answerPage": 16
+      },
+      "seq": 169
+    },
+    {
+      "no": 80,
+      "kind": "hanzi",
+      "sentence": "做选择时，最重要的是知道___己想要什么。",
+      "pinyin": "zì",
+      "id": "H31329-80",
+      "exam": "H31329",
+      "answers": [
+        "自"
+      ],
+      "source": {
+        "file": "H31329.pdf",
+        "page": 14,
+        "sha256": "7967a131ae9474021ef5c13ba7b845f08449521c5afab57473cdf8a734589e8a",
+        "answerFile": "H31329.pdf",
+        "answerPage": 16
+      },
+      "seq": 170
+    },
+    {
+      "no": 71,
+      "kind": "reorder",
+      "tokens": [
+        "一万",
+        "这次旅游",
+        "花了",
+        "元"
+      ],
+      "id": "H31330-71",
+      "exam": "H31330",
+      "answers": [
+        "这次旅游花了一万元。"
+      ],
+      "source": {
+        "file": "H31330.pdf",
+        "page": 13,
+        "sha256": "165c09251bc764417edc1a812e1bb2eb6cc25bd8e40dfde8b1be071e85f22b54",
+        "answerFile": "H31330.pdf",
+        "answerPage": 16
+      },
+      "seq": 171
+    },
+    {
+      "no": 72,
+      "kind": "reorder",
+      "tokens": [
+        "她丈夫",
+        "中文",
+        "在大学教"
+      ],
+      "id": "H31330-72",
+      "exam": "H31330",
+      "answers": [
+        "她丈夫在大学教中文。"
+      ],
+      "source": {
+        "file": "H31330.pdf",
+        "page": 13,
+        "sha256": "165c09251bc764417edc1a812e1bb2eb6cc25bd8e40dfde8b1be071e85f22b54",
+        "answerFile": "H31330.pdf",
+        "answerPage": 16
+      },
+      "seq": 172
+    },
+    {
+      "no": 73,
+      "kind": "reorder",
+      "tokens": [
+        "害怕得",
+        "妹妹",
+        "起来",
+        "哭了"
+      ],
+      "id": "H31330-73",
+      "exam": "H31330",
+      "answers": [
+        "妹妹害怕得哭了起来。"
+      ],
+      "source": {
+        "file": "H31330.pdf",
+        "page": 13,
+        "sha256": "165c09251bc764417edc1a812e1bb2eb6cc25bd8e40dfde8b1be071e85f22b54",
+        "answerFile": "H31330.pdf",
+        "answerPage": 16
+      },
+      "seq": 173
+    },
+    {
+      "no": 74,
+      "kind": "reorder",
+      "tokens": [
+        "飞机",
+        "起飞",
+        "马上",
+        "就要",
+        "了"
+      ],
+      "id": "H31330-74",
+      "exam": "H31330",
+      "answers": [
+        "飞机马上就要起飞了。"
+      ],
+      "source": {
+        "file": "H31330.pdf",
+        "page": 13,
+        "sha256": "165c09251bc764417edc1a812e1bb2eb6cc25bd8e40dfde8b1be071e85f22b54",
+        "answerFile": "H31330.pdf",
+        "answerPage": 16
+      },
+      "seq": 174
+    },
+    {
+      "no": 75,
+      "kind": "reorder",
+      "tokens": [
+        "月亮",
+        "今晚的",
+        "真",
+        "啊",
+        "大"
+      ],
+      "id": "H31330-75",
+      "exam": "H31330",
+      "answers": [
+        "今晚的月亮真大啊！"
+      ],
+      "source": {
+        "file": "H31330.pdf",
+        "page": 13,
+        "sha256": "165c09251bc764417edc1a812e1bb2eb6cc25bd8e40dfde8b1be071e85f22b54",
+        "answerFile": "H31330.pdf",
+        "answerPage": 16
+      },
+      "seq": 175
+    },
+    {
+      "no": 76,
+      "kind": "hanzi",
+      "sentence": "今天的作业很简单，我一___儿就做完了。",
+      "pinyin": "huì",
+      "id": "H31330-76",
+      "exam": "H31330",
+      "answers": [
+        "会"
+      ],
+      "source": {
+        "file": "H31330.pdf",
+        "page": 14,
+        "sha256": "165c09251bc764417edc1a812e1bb2eb6cc25bd8e40dfde8b1be071e85f22b54",
+        "answerFile": "H31330.pdf",
+        "answerPage": 16
+      },
+      "seq": 176
+    },
+    {
+      "no": 77,
+      "kind": "hanzi",
+      "sentence": "有时候，做对的事情比把事情做对___重要。",
+      "pinyin": "gèng",
+      "id": "H31330-77",
+      "exam": "H31330",
+      "answers": [
+        "更"
+      ],
+      "source": {
+        "file": "H31330.pdf",
+        "page": 14,
+        "sha256": "165c09251bc764417edc1a812e1bb2eb6cc25bd8e40dfde8b1be071e85f22b54",
+        "answerFile": "H31330.pdf",
+        "answerPage": 16
+      },
+      "seq": 177
+    },
+    {
+      "no": 78,
+      "kind": "hanzi",
+      "sentence": "北京西站是中国最大的火___站。",
+      "pinyin": "chē",
+      "id": "H31330-78",
+      "exam": "H31330",
+      "answers": [
+        "车"
+      ],
+      "source": {
+        "file": "H31330.pdf",
+        "page": 14,
+        "sha256": "165c09251bc764417edc1a812e1bb2eb6cc25bd8e40dfde8b1be071e85f22b54",
+        "answerFile": "H31330.pdf",
+        "answerPage": 16
+      },
+      "seq": 178
+    },
+    {
+      "no": 79,
+      "kind": "hanzi",
+      "sentence": "他告诉我，他姓周，今___20岁。",
+      "pinyin": "nián",
+      "id": "H31330-79",
+      "exam": "H31330",
+      "answers": [
+        "年"
+      ],
+      "source": {
+        "file": "H31330.pdf",
+        "page": 14,
+        "sha256": "165c09251bc764417edc1a812e1bb2eb6cc25bd8e40dfde8b1be071e85f22b54",
+        "answerFile": "H31330.pdf",
+        "answerPage": 16
+      },
+      "seq": 179
+    },
+    {
+      "no": 80,
+      "kind": "hanzi",
+      "sentence": "姐姐今天结婚，真___她高兴。",
+      "pinyin": "wèi",
+      "id": "H31330-80",
+      "exam": "H31330",
+      "answers": [
+        "为"
+      ],
+      "source": {
+        "file": "H31330.pdf",
+        "page": 14,
+        "sha256": "165c09251bc764417edc1a812e1bb2eb6cc25bd8e40dfde8b1be071e85f22b54",
+        "answerFile": "H31330.pdf",
+        "answerPage": 16
+      },
+      "seq": 180
+    },
+    {
+      "no": 71,
+      "kind": "reorder",
+      "tokens": [
+        "害怕",
+        "弟弟",
+        "极了"
+      ],
+      "id": "H31332-71",
+      "exam": "H31332",
+      "answers": [
+        "弟弟害怕极了。"
+      ],
+      "source": {
+        "file": "H31332.pdf",
+        "page": 13,
+        "sha256": "4b0844c42be9bde03da54217bff98bfec1f54fae3a1a1187799d756001b8ddc3",
+        "answerFile": "H31332.pdf",
+        "answerPage": 16
+      },
+      "seq": 181
+    },
+    {
+      "no": 72,
+      "kind": "reorder",
+      "tokens": [
+        "大熊猫",
+        "这",
+        "只",
+        "可爱",
+        "很"
+      ],
+      "id": "H31332-72",
+      "exam": "H31332",
+      "answers": [
+        "这只大熊猫很可爱。"
+      ],
+      "source": {
+        "file": "H31332.pdf",
+        "page": 13,
+        "sha256": "4b0844c42be9bde03da54217bff98bfec1f54fae3a1a1187799d756001b8ddc3",
+        "answerFile": "H31332.pdf",
+        "answerPage": 16
+      },
+      "seq": 182
+    },
+    {
+      "no": 73,
+      "kind": "reorder",
+      "tokens": [
+        "历史是",
+        "忘记的",
+        "被",
+        "不应该"
+      ],
+      "id": "H31332-73",
+      "exam": "H31332",
+      "answers": [
+        "历史是不应该被忘记的。"
+      ],
+      "source": {
+        "file": "H31332.pdf",
+        "page": 13,
+        "sha256": "4b0844c42be9bde03da54217bff98bfec1f54fae3a1a1187799d756001b8ddc3",
+        "answerFile": "H31332.pdf",
+        "answerPage": 16
+      },
+      "seq": 183
+    },
+    {
+      "no": 74,
+      "kind": "reorder",
+      "tokens": [
+        "比去年",
+        "我",
+        "10公斤",
+        "瘦了"
+      ],
+      "id": "H31332-74",
+      "exam": "H31332",
+      "answers": [
+        "我比去年瘦了10公斤。"
+      ],
+      "source": {
+        "file": "H31332.pdf",
+        "page": 13,
+        "sha256": "4b0844c42be9bde03da54217bff98bfec1f54fae3a1a1187799d756001b8ddc3",
+        "answerFile": "H31332.pdf",
+        "answerPage": 16
+      },
+      "seq": 184
+    },
+    {
+      "no": 75,
+      "kind": "reorder",
+      "tokens": [
+        "把",
+        "房子",
+        "她最后",
+        "卖了",
+        "决定"
+      ],
+      "id": "H31332-75",
+      "exam": "H31332",
+      "answers": [
+        "她最后决定把房子卖了。"
+      ],
+      "source": {
+        "file": "H31332.pdf",
+        "page": 13,
+        "sha256": "4b0844c42be9bde03da54217bff98bfec1f54fae3a1a1187799d756001b8ddc3",
+        "answerFile": "H31332.pdf",
+        "answerPage": 16
+      },
+      "seq": 185
+    },
+    {
+      "no": 76,
+      "kind": "hanzi",
+      "sentence": "___阳出来了，新的一天开始了。",
+      "pinyin": "Tài",
+      "id": "H31332-76",
+      "exam": "H31332",
+      "answers": [
+        "太"
+      ],
+      "source": {
+        "file": "H31332.pdf",
+        "page": 14,
+        "sha256": "4b0844c42be9bde03da54217bff98bfec1f54fae3a1a1187799d756001b8ddc3",
+        "answerFile": "H31332.pdf",
+        "answerPage": 16
+      },
+      "seq": 186
+    },
+    {
+      "no": 77,
+      "kind": "hanzi",
+      "sentence": "电影院在8层，___可以坐旁边那个电梯。",
+      "pinyin": "nín",
+      "id": "H31332-77",
+      "exam": "H31332",
+      "answers": [
+        "您"
+      ],
+      "source": {
+        "file": "H31332.pdf",
+        "page": 14,
+        "sha256": "4b0844c42be9bde03da54217bff98bfec1f54fae3a1a1187799d756001b8ddc3",
+        "answerFile": "H31332.pdf",
+        "answerPage": 16
+      },
+      "seq": 187
+    },
+    {
+      "no": 78,
+      "kind": "hanzi",
+      "sentence": "冰箱___还有饮料吗？我有点儿渴了。",
+      "pinyin": "li",
+      "id": "H31332-78",
+      "exam": "H31332",
+      "answers": [
+        "里"
+      ],
+      "source": {
+        "file": "H31332.pdf",
+        "page": 14,
+        "sha256": "4b0844c42be9bde03da54217bff98bfec1f54fae3a1a1187799d756001b8ddc3",
+        "answerFile": "H31332.pdf",
+        "answerPage": 16
+      },
+      "seq": 188
+    },
+    {
+      "no": 79,
+      "kind": "hanzi",
+      "sentence": "我和妹妹一样，都有睡觉前___音乐的习惯。",
+      "pinyin": "tīng",
+      "id": "H31332-79",
+      "exam": "H31332",
+      "answers": [
+        "听"
+      ],
+      "source": {
+        "file": "H31332.pdf",
+        "page": 14,
+        "sha256": "4b0844c42be9bde03da54217bff98bfec1f54fae3a1a1187799d756001b8ddc3",
+        "answerFile": "H31332.pdf",
+        "answerPage": 16
+      },
+      "seq": 189
+    },
+    {
+      "no": 80,
+      "kind": "hanzi",
+      "sentence": "下一个___目就是我们班的了，大家准备下。",
+      "pinyin": "jié",
+      "id": "H31332-80",
+      "exam": "H31332",
+      "answers": [
+        "节"
+      ],
+      "source": {
+        "file": "H31332.pdf",
+        "page": 14,
+        "sha256": "4b0844c42be9bde03da54217bff98bfec1f54fae3a1a1187799d756001b8ddc3",
+        "answerFile": "H31332.pdf",
+        "answerPage": 16
+      },
+      "seq": 190
+    }
+  ]
+}
