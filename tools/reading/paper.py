@@ -16,6 +16,7 @@ from pathlib import Path
 from hsktext import tidy
 
 FOOTER = re.compile(r'\s*H3\d{4}\s*-\s*\d+\s*$')
+WATERMARK = re.compile(r'\s*Facebook\s*&\s*Youtube:\s*Hancai\s*Chinese\s*')
 PART = re.compile(r'^第\s*([一二三])\s*部\s*分$')
 GROUP = re.compile(r'^第\s*(\d+)\s*-\s*(\d+)\s*题$')
 ITEM = re.compile(r'^(\d{2})．\s*(.*)$')
@@ -30,7 +31,7 @@ PART_NUMBERS = {'一': 1, '二': 2, '三': 3}
 
 def raw_lines(pdf):
     out = subprocess.run(['pdftotext', '-raw', str(pdf), '-'], capture_output=True, text=True, check=True).stdout
-    return [FOOTER.sub('', line.replace('\f', '')).strip() for line in out.splitlines()]
+    return [FOOTER.sub('', WATERMARK.sub('', line.replace('\f', ''))).strip() for line in out.splitlines()]
 
 
 def squash(line):
@@ -196,11 +197,15 @@ def main():
     parser.add_argument('test_id')
     parser.add_argument('--pdf', required=True)
     parser.add_argument('--work', required=True)
+    parser.add_argument('--answers-json', help='별도 정답표 JSON ({"41":"A", ...})')
     args = parser.parse_args()
 
     lines = raw_lines(Path(args.pdf).expanduser())
     parsed = parse_reading(reading_section(lines))
-    answers = parse_answers(lines)
+    answers = parse_answers(lines) if any('卷答案' in line for line in lines) else {}
+    if args.answers_json:
+        extra = json.loads(Path(args.answers_json).expanduser().read_text(encoding='utf-8'))
+        answers.update({int(no): answer for no, answer in extra.items()})
     for item in parsed['items']:
         item['answer'] = answers.get(item['no'])
     paper = {'id': args.test_id, **parsed}

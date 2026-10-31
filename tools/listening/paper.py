@@ -12,6 +12,7 @@ from pathlib import Path
 
 PART_NAMES = {'第一部分': 1, '第二部分': 2, '第三部分': 3, '第四部分': 4}
 FOOTER = re.compile(r'^\s*H3\d{4}\s*-\s*\d+\s*$')
+WATERMARK = re.compile(r'\s*Facebook\s*&\s*Youtube:\s*Hancai\s*Chinese\s*')
 ITEM_START = re.compile(r'^\s*(\d{1,2})\s*．\s*(.*)$')
 SPEAKER = re.compile(r'^(男|女|问)：\s*(.*)$')
 # 대본 안에서 문항이 아닌 줄들. 이 줄이 나오면 진행 중인 문항이 끝난다.
@@ -27,7 +28,7 @@ def tidy(text):
 
 def pdf_text(pdf):
     out = subprocess.run(['pdftotext', '-layout', str(pdf), '-'], capture_output=True, text=True, check=True).stdout
-    lines = [line.replace('\f', '') for line in out.splitlines()]
+    lines = [WATERMARK.sub('', line.replace('\f', '')) for line in out.splitlines()]
     return [line for line in lines if not FOOTER.match(line)]
 
 
@@ -150,12 +151,31 @@ def main():
     parser.add_argument('--pdf', required=True)
     parser.add_argument('--work', required=True)
     parser.add_argument('--public', required=True)
+    parser.add_argument('--answers-json', help='별도 정답표 JSON ({"1":"A", ...})')
+    parser.add_argument(
+        '--allow-missing-script',
+        action='store_true',
+        help='듣기 대본이 없는 시험지는 빈 대본으로 만들고 뒤에서 음원 전사를 채운다',
+    )
     args = parser.parse_args()
 
     lines = pdf_text(args.pdf)
-    script = parse_script(lines)
-    answers = parse_answers(lines)
     statements, options = parse_paper_choices(lines)
+    has_script = any('卷听力材料' in line for line in lines)
+    if has_script:
+        script = parse_script(lines)
+    elif args.allow_missing_script:
+        script = {}
+        for no in range(1, 41):
+            part = 1 if no <= 10 else 2 if no <= 20 else 3 if no <= 30 else 4
+            script[no] = {'no': no, 'part': part, 'lines': [], 'statement': None}
+    else:
+        raise ValueError('듣기 대본(卷听力材料)이 없습니다. --allow-missing-script를 사용하세요.')
+
+    answers = parse_answers(lines) if any('卷答案' in line for line in lines) else {}
+    if args.answers_json:
+        extra = json.loads(Path(args.answers_json).expanduser().read_text(encoding='utf-8'))
+        answers.update({int(no): answer for no, answer in extra.items()})
     public_dir = Path(args.public)
     public_dir.mkdir(parents=True, exist_ok=True)
     out_dir = Path(args.work).expanduser() / args.test_id
@@ -180,13 +200,15 @@ def main():
         no = item['no']
         if not item['answer']:
             problems.append(f'{no}번 정답 없음')
-        if not item['lines']:
+        if not item['lines'] and not args.allow_missing_script:
             problems.append(f'{no}번 대본 없음')
-        if item['part'] == 2 and not (item['statement'] and item['paperStatement']):
+        if item['part'] == 2 and not item['paperStatement']:
             problems.append(f'{no}번 ★ 문장 없음')
+        if item['part'] == 2 and not item['statement'] and not args.allow_missing_script:
+            problems.append(f'{no}번 낭독 ★ 문장 없음')
         if item['part'] in (3, 4) and not item.get('options'):
             problems.append(f'{no}번 보기 없음')
-        if item['part'] in (3, 4) and not any(l['speaker'] == '问' for l in item['lines']):
+        if item['part'] in (3, 4) and not args.allow_missing_script and not any(l['speaker'] == '问' for l in item['lines']):
             problems.append(f'{no}번 질문(问) 없음')
     covered = sorted(n for g in groups for n in g['nos'])
     if covered != list(range(1, 11)):

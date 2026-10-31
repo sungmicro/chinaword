@@ -9,7 +9,7 @@ brew install whisper-cpp
 mkdir -p ~/hsk-listening-work/models
 curl -L -o ~/hsk-listening-work/models/ggml-small.bin \
   https://huggingface.co/ggerganov/whisper.cpp/resolve/main/ggml-small.bin
-python3 -m venv ~/venv-store/hsk-listening && ~/venv-store/hsk-listening/bin/pip install pypinyin
+python3 -m venv ~/venv-store/hsk-listening && ~/venv-store/hsk-listening/bin/pip install pypinyin jieba
 ```
 
 중간 파일과 모델은 Google Drive 밖 `~/hsk-listening-work/`에 둔다.
@@ -27,6 +27,25 @@ $PY tools/listening/audio.py build  H31006 --work $W --public public/listening
 $PY tools/listening/audio.py verify H31006 --work $W --public public/listening --model $M
 # 해설: $W/H31006/enrich.json 을 만든다 (병음·해석·단어·문장 구조, 형식은 설계서 참고)
 $PY tools/listening/assemble.py H31001 H31002 H31003 H31004 H31005 H31006 --work $W --repo . --show-readings
+```
+
+PDF에 듣기 대본이 없으면 빈 대본을 만든 뒤, 공식 음원의 반복 낭독을 이용해 복구한다.
+
+```sh
+$PY tools/listening/paper.py H31006 --pdf H31006.pdf --work $W --public public/listening \
+  --allow-missing-script --answers-json H31006-answers.json
+$PY tools/listening/bootstrap.py H31006 --mp3 H31006.mp3 --work $W --model $M
+$PY tools/listening/audio.py build H31006 --work $W --public public/listening
+$PY tools/listening/audio.py verify H31006 --work $W --public public/listening --model $M
+$PY tools/listening/refine.py H31006 --work $W
+```
+
+`answers-json`은 `{"1":"A", ..., "40":"C"}` 형식이다. `verify`가 실제로 더 길게 들은 문장을 표시하면 `refine.py`가 그 문항의 임시 Whisper 대본을 보완한다.
+
+기존 화면 형식에 맞는 병음·한국어 해설 초안을 한꺼번에 만들 수 있다.
+
+```sh
+$PY tools/auto_enrich.py H31006 --listening-work $W --reading-work ~/hsk-reading-work --mode listening
 ```
 
 - `assemble.py`에는 **모든 회차**를 넘긴다. 회차 목록과 단어장의 «HSK3 듣기» 단원을 매번 새로 쓰기 때문이다.

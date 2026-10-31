@@ -4,7 +4,7 @@
 
 ## 준비
 
-듣기 도구와 같은 파이썬 환경(`~/venv-store/hsk-listening`, pypinyin)과 poppler(`pdftotext`)를 쓴다. 중간 파일은 Google Drive 밖 `~/hsk-reading-work/<회차>/`에 둔다.
+듣기 도구와 같은 파이썬 환경(`~/venv-store/hsk-listening`, pypinyin·jieba)과 poppler(`pdftotext`)를 쓴다. 중간 파일은 Google Drive 밖 `~/hsk-reading-work/<회차>/`에 둔다.
 
 ## 순서 (예: H31006)
 
@@ -15,6 +15,12 @@ $PY tools/reading/paper.py H31006 --pdf ~/hsk-listening-work/src/H31006.pdf --wo
 $PY tools/reading/assemble.py H31006 --work ~/hsk-reading-work --repo . --check --show-readings
 $PY tools/reading/assemble.py H31001 H31002 H31003 H31004 H31005 H31006 --work ~/hsk-reading-work --repo .
 $PY -m unittest discover -s tools/reading -v
+```
+
+정답이 별도 파일이면 `paper.py`에 `--answers-json H31006-answers.json`을 준다. 파일은 `{"41":"A", ..., "70":"C"}` 형식이다. 기존 화면 형식의 병음·한국어 해설 초안은 다음처럼 만들 수 있다.
+
+```sh
+$PY tools/auto_enrich.py H31006 --listening-work ~/hsk-listening-work --reading-work ~/hsk-reading-work --mode reading
 ```
 
 - `assemble.py`로 실제로 쓸 때는 **모든 회차**를 넘긴다. 회차 목록과 단어장 «HSK3 독해» 단원을 매번 새로 쓰기 때문이다.
