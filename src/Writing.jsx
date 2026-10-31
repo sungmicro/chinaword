@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { ChevronLeft, ChevronRight, RotateCcw } from 'lucide-react';
 import WritingGrammar from './WritingGrammar.jsx';
+import { WritingGrammarBasics } from './WritingGrammarHelp.jsx';
 import { WritingAnswers, WritingVocab } from './WritingStudy.jsx';
 import { grammarIsVisible } from './writingGrammar.js';
 import { fetchCached, readJson, writeJson } from './practiceStore';
@@ -55,6 +56,7 @@ export default function Writing() {
           <div className="quizProgress"><span>{index + 1} / {items.length}</span><span>{item.kind === 'reorder' ? '어순 배열' : '병음 보고 한자 떠올리기'}</span></div>
           {item.kind === 'reorder' ? <>
             <p className="writingGuide">단어를 문장 순서대로 누르세요. 다시 누르면 선택이 풀려요.</p>
+            <WritingGrammarBasics key={`basics-${item.id}-${revealed}`} item={item} />
             <div className="writingTokens" aria-label="문장 단어">
               {tokensOf(item).map((token) => {
                 const order = selected.indexOf(token.id);

@@ -27,3 +27,22 @@ class GrammarTests(unittest.TestCase):
             if mutation == 'answer': a['answerIndex'] = 1
             if mutation == 'role': a['groups'][0]['role'] = 'invalid'
             with self.subTest(mutation=mutation), self.assertRaises(AssertionError): validate_grammar(self.items, data)
+
+    def test_complete_learning_and_role_definitions(self):
+        from grammar import load_glossary
+        glossary = load_glossary()
+        self.assertEqual(len(glossary['roleTerms']), 16)
+        self.assertEqual(sum('learning' in a for g in self.grammar.values() for a in g['analyses']), 98)
+        self.assertEqual(glossary['terms']['preposition']['category'], '품사')
+        self.assertEqual(glossary['terms']['subject']['category'], '문장 성분')
+
+    def test_reject_learning_mismatches(self):
+        for mutation in ('term', 'usage', 'range', 'surface', 'explanation'):
+            data = copy.deepcopy(self.grammar)
+            a = data['H31001-71']['analyses'][0]
+            if mutation == 'term': a['learning']['termIds'] = ['invalid']
+            if mutation == 'usage': a['learning']['points'][0]['usageId'] = 'invalid'
+            if mutation == 'range': a['learning']['points'][0]['parts'][0]['end'] = 999
+            if mutation == 'surface': a['learning']['points'][0]['parts'] = [{'token': 0, 'start': 0, 'end': 2}]
+            if mutation == 'explanation': a['learning']['points'][0]['explanation'] = ''
+            with self.subTest(mutation=mutation), self.assertRaises(AssertionError): validate_grammar(self.items, data)

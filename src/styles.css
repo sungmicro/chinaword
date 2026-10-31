@@ -2293,3 +2293,24 @@ code {
 .writingRoleDetails li > div { display: flex; flex-wrap: wrap; gap: 4px 12px; }
 .writingRolePart { max-width: 100%; }
 .writingAlternative summary [lang] { display: block; margin-top: 6px; }
+
+/* 문법 도움말은 터치와 키보드로 펼칠 수 있습니다. */
+.writingGrammarBasics { margin: 14px 0; padding: 12px; border: 1px solid var(--line); border-radius: 12px; text-align: left; font-size: 14px; line-height: 1.75; overflow-wrap: anywhere; }
+.writingGrammarBasics summary, .writingRoleHelp summary, .writingTerm summary { cursor: pointer; }
+.writingGrammarBasics > summary { font-weight: 700; }
+.writingHelpIntro { color: var(--muted); }
+.writingTerms { display: grid; gap: 8px; min-width: 0; }
+.writingTerm { min-width: 0; border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; background: #fff; }
+.writingTerm small { margin-left: 6px; color: var(--muted); font-size: 12px; }
+.writingTerm p { margin: 8px 0; }
+.writingHelpExample { color: var(--muted); }
+.writingAllBasics { margin-top: 14px; }
+.writingAllBasics ul { padding-left: 20px; }
+.writingRoleHelp { max-width: 100%; color: var(--muted); font-size: 13px; }
+.writingRoleHelp p { max-width: 30ch; margin: 6px 0; }
+.writingLearningPoint { margin: 12px 0; padding: 12px; border: 1px solid #d7e4d3; border-radius: 10px; background: #fff; }
+.writingLearningPoint h4 { margin: 0; font-size: 14px; }
+.writingLearningPoint h4 [lang] { font-family: var(--hanzi-font); font-weight: var(--hanzi-weight); font-size: 21px; }
+.writingUsagePinyin { color: var(--muted); font-weight: 400; }
+.writingUsagePattern { border-left: 3px solid #b8d2ac; padding-left: 10px; }
+.writingGrammarBasics summary:focus-visible, .writingGrammar summary:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 4px; }

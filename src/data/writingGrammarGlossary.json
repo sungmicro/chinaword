@@ -1,0 +1,1341 @@
+{
+  "version": 1,
+  "roleTerms": {
+    "subject": "subject",
+    "verb": "verb",
+    "adverbial": "adverbial",
+    "particle": "particle",
+    "predicate": "predicate",
+    "object": "object",
+    "preposition": "preposition",
+    "attribute": "attribute",
+    "complement": "complement",
+    "modal": "modal",
+    "topic": "topic",
+    "time": "time",
+    "question": "question",
+    "location": "location",
+    "quantity": "quantity",
+    "connective": "connective"
+  },
+  "terms": {
+    "subject": {
+      "label": "주어",
+      "category": "문장 성분",
+      "definition": "이야기의 중심이 되는 사람이나 사물입니다.",
+      "question": "누가? 무엇이?",
+      "example": "小猫睡觉。에서 小猫(고양이)가 주어예요."
+    },
+    "predicate": {
+      "label": "술어",
+      "category": "문장 성분",
+      "definition": "주어가 무엇을 하거나 어떤 상태인지 설명하는 부분입니다.",
+      "question": "무엇을 해? 어떤 상태야?",
+      "example": "天气很好。에서 很好(매우 좋다)가 술어예요."
+    },
+    "object": {
+      "label": "목적어",
+      "category": "문장 성분",
+      "definition": "동작이 향하는 대상입니다.",
+      "question": "무엇을? 누구를?",
+      "example": "她看电影。에서 电影(영화)이 看(보다)의 목적어예요."
+    },
+    "attribute": {
+      "label": "관형어",
+      "category": "문장 성분",
+      "definition": "명사 앞에서 누구의 것인지, 어떤 것인지 꾸밉니다.",
+      "question": "어떤? 누구의?",
+      "example": "红色的花에서 红色的는 花(꽃)를 꾸며요."
+    },
+    "adverbial": {
+      "label": "부사어",
+      "category": "문장 성분",
+      "definition": "동작이나 상태 앞에서 시간·장소·방법·정도 등을 더합니다.",
+      "question": "언제? 어디서? 어떻게? 얼마나?",
+      "example": "他慢慢地走。에서 慢慢地는 걷는 방식을 말해요."
+    },
+    "complement": {
+      "label": "보어",
+      "category": "문장 성분",
+      "definition": "동사나 형용사 뒤에서 결과·정도·방향 등을 보충합니다.",
+      "question": "해서 어떻게 됐어? 어느 정도야?",
+      "example": "我听懂了。에서 懂은 들어서 이해했다는 결과예요."
+    },
+    "noun": {
+      "label": "명사",
+      "category": "품사",
+      "definition": "사람·사물·장소 등의 이름을 나타내는 말입니다.",
+      "question": "누구나 무엇의 이름인가?",
+      "example": "老师(선생님), 公园(공원)"
+    },
+    "verb": {
+      "label": "동사",
+      "category": "품사",
+      "definition": "동작이나 변화 등을 나타내는 말입니다. 동사는 술어의 중심이 될 수 있어요.",
+      "question": "어떤 동작인가?",
+      "example": "跑(달리다), 学习(공부하다)"
+    },
+    "adjective": {
+      "label": "형용사",
+      "category": "품사",
+      "definition": "성질이나 상태를 나타내는 말입니다. 중국어에서는 술어가 되기도 해요.",
+      "question": "어떤 상태인가?",
+      "example": "漂亮(예쁘다), 冷(춥다)"
+    },
+    "adverb": {
+      "label": "부사",
+      "category": "품사",
+      "definition": "주로 동사나 형용사 앞에서 정도·범위·부정 등을 더하는 말입니다.",
+      "question": "얼마나? 어떤 범위로?",
+      "example": "非常(매우), 都(모두), 不(~하지 않다)"
+    },
+    "preposition": {
+      "label": "개사",
+      "category": "품사",
+      "definition": "명사 등과 짝을 이루어 장소·대상·방향 같은 관계를 나타내는 말입니다. 그 묶음이 부사어가 될 수 있어요.",
+      "question": "어디에서? 누구에게? 무엇에 대해?",
+      "example": "向老师问好에서 向은 老师와 함께 인사하는 방향·대상을 나타내요."
+    },
+    "particle": {
+      "label": "조사",
+      "category": "품사",
+      "definition": "다른 말에 붙어 관계·완료·말투 등 문법 기능을 더하는 말입니다. 같은 글자도 쓰임에 따라 달라요.",
+      "question": "무슨 관계나 느낌을 더하나?",
+      "example": "吗는 문장 끝에서 예·아니요로 답하는 질문을 만들어요."
+    },
+    "measure": {
+      "label": "양사",
+      "category": "품사",
+      "definition": "수를 셀 때 수와 명사 사이에 쓰는 단위 말입니다.",
+      "question": "어떤 단위로 세나?",
+      "example": "三本书에서 本은 책을 세는 양사예요."
+    },
+    "conjunction": {
+      "label": "접속사",
+      "category": "품사",
+      "definition": "단어나 절을 이어 관계를 나타내는 말입니다.",
+      "question": "무엇과 무엇을 이어 주나?",
+      "example": "因为下雨，所以不去。에서 因为…所以…는 이유와 결과를 이어요."
+    },
+    "modal": {
+      "label": "조동사",
+      "category": "품사",
+      "definition": "동사 앞에서 능력·가능·의지·필요 등을 더합니다.",
+      "question": "할 수 있나? 하고 싶나? 해야 하나?",
+      "example": "我应该休息。에서 应该는 쉬어야 한다는 뜻을 더해요."
+    },
+    "topic": {
+      "label": "화제",
+      "category": "설명 역할",
+      "definition": "문장 앞에서 무엇에 관한 이야기인지 먼저 꺼내는 부분입니다. 주어와 겹칠 수도 있어요.",
+      "question": "무엇에 관해 말하나?",
+      "example": "这本书，我看过。에서 这本书는 이야기의 화제예요."
+    },
+    "time": {
+      "label": "시간 표현",
+      "category": "설명 역할",
+      "definition": "언제인지, 얼마나 오래인지 나타내는 표현입니다. 실제 문장에서는 부사어·보어 등으로 쓰여요.",
+      "question": "언제? 얼마나 오래?",
+      "example": "明天见。에서 明天은 만나는 시간을 말해요."
+    },
+    "question": {
+      "label": "의문 표현",
+      "category": "설명 역할",
+      "definition": "누구·무엇·어디 등을 묻거나 질문임을 나타내는 부분입니다.",
+      "question": "무엇을 묻나?",
+      "example": "谁来了？에서 谁는 온 사람이 누구인지 물어요."
+    },
+    "location": {
+      "label": "장소 표현",
+      "category": "설명 역할",
+      "definition": "위치나 방향을 나타내는 표현입니다. 문장에서 맡는 성분은 문맥에 따라 달라요.",
+      "question": "어디? 어느 방향?",
+      "example": "学校旁边은 학교 옆이라는 장소예요."
+    },
+    "quantity": {
+      "label": "수량 표현",
+      "category": "설명 역할",
+      "definition": "몇 개인지나 양·횟수 등을 나타내는 부분입니다.",
+      "question": "몇? 얼마나?",
+      "example": "两杯茶에서 两杯는 차 두 잔이라는 수량이에요."
+    },
+    "connective": {
+      "label": "연결 표현",
+      "category": "설명 역할",
+      "definition": "단어·구·절을 이어 순서나 조건 같은 관계를 드러냅니다.",
+      "question": "어떤 관계로 이어지나?",
+      "example": "先洗手，再吃饭。는 손 씻기와 식사의 순서를 이어요."
+    }
+  },
+  "usages": {
+    "a-exclamation": {
+      "hanzi": "啊",
+      "pinyin": "a",
+      "meaning": "말 끝에서 감탄하는 느낌을 더하는 말",
+      "pattern": "평가 + 啊",
+      "termIds": [
+        "particle"
+      ],
+      "forms": [
+        "啊"
+      ],
+      "caution": "의미 있는 명사나 동작을 뜻하지 않습니다."
+    },
+    "action-subject": {
+      "hanzi": "동사구 주어",
+      "pinyin": "",
+      "meaning": "행동 전체를 설명의 대상으로 삼기",
+      "pattern": "행동 + 是 + 어떤 일",
+      "termIds": [
+        "subject",
+        "verb"
+      ],
+      "forms": [
+        "帮助别人"
+      ],
+      "caution": "사람 이름만 주어가 되는 것은 아닙니다."
+    },
+    "ba-disposal": {
+      "hanzi": "把",
+      "pinyin": "bǎ",
+      "meaning": "어떤 대상을 어떻게 처리하는지 말하도록 대상을 앞에 꺼내는 말",
+      "pattern": "주어 + 把 + 대상 + 동사 + 결과·상태",
+      "termIds": [
+        "preposition",
+        "object"
+      ],
+      "forms": [
+        "把信",
+        "把冰箱放厨房里",
+        "把房子",
+        "把手机送给弟弟",
+        "把教室",
+        "把碗和筷子洗干净",
+        "把菜单"
+      ],
+      "caution": "把 뒤에는 처리할 대상이 오며 동사 뒤에서 결과나 처리 내용을 분명히 합니다."
+    },
+    "bei-passive": {
+      "hanzi": "被",
+      "pinyin": "bèi",
+      "meaning": "앞의 대상이 다른 힘이나 사람의 행동을 받았음을 나타내는 말",
+      "pattern": "영향받는 대상 + 被 + (행위자) + 동사",
+      "termIds": [
+        "preposition",
+        "subject"
+      ],
+      "forms": [
+        "他的姓名被写错",
+        "菜单被服务员拿",
+        "被",
+        "被风"
+      ],
+      "caution": "被 뒤의 행위자는 생략할 수 있습니다."
+    },
+    "bi-comparison": {
+      "hanzi": "比",
+      "pinyin": "bǐ",
+      "meaning": "무엇과 비교하는지 기준을 연결하는 말",
+      "pattern": "주어 + 比 + 기준 + 상태",
+      "termIds": [
+        "preposition",
+        "predicate"
+      ],
+      "forms": [
+        "中国南方的雨水比北方多",
+        "比去年"
+      ],
+      "caution": "比较의 比를 이 용법으로 분리하지 않습니다."
+    },
+    "bu-negation": {
+      "hanzi": "不",
+      "pinyin": "bù",
+      "meaning": "바로 뒤의 행동·판단·상태를 아니라고 하는 말",
+      "pattern": "不 + 부정할 말",
+      "termIds": [
+        "adverbial"
+      ],
+      "forms": [
+        "不喜欢"
+      ],
+      "caution": "어느 말 앞에 놓느냐에 따라 부정하는 범위가 달라집니다."
+    },
+    "classifier": {
+      "hanzi": "양사",
+      "pinyin": "",
+      "meaning": "사람·물건·종류 등을 세거나 가리킬 때 쓰는 단위",
+      "pattern": "수·지시어 + 양사 + 명사",
+      "termIds": [
+        "measure",
+        "attribute",
+        "quantity"
+      ],
+      "forms": [
+        "件",
+        "位",
+        "只",
+        "条",
+        "种",
+        "那位医生",
+        "那位邻居"
+      ],
+      "caution": "대상마다 알맞은 단위가 다릅니다. 种은 종류를 셉니다."
+    },
+    "clause-object": {
+      "hanzi": "절 목적어",
+      "pinyin": "",
+      "meaning": "주어와 술어가 있는 문장 전체를 생각·믿음 등의 내용으로 쓰기",
+      "pattern": "생각·믿음 동사 + [주어 + 술어]",
+      "termIds": [
+        "object",
+        "subject",
+        "predicate"
+      ],
+      "forms": [
+        "游戏结束",
+        "觉得熊猫更可爱",
+        "那是真的"
+      ],
+      "caution": "절 안에도 별도의 주어가 있을 수 있습니다."
+    },
+    "comparison-difference": {
+      "hanzi": "차이 수량",
+      "pinyin": "",
+      "meaning": "비교한 결과의 차이가 얼마나 큰지 나타내는 양",
+      "pattern": "比 + 기준 + 상태 + 차이 수량",
+      "termIds": [
+        "quantity"
+      ],
+      "forms": [
+        "10公斤"
+      ],
+      "caution": "비교 기준과 차이의 양은 다릅니다."
+    },
+    "de-adverbial": {
+      "hanzi": "地",
+      "pinyin": "de",
+      "meaning": "앞의 꾸밈말이 뒤의 행동을 어떻게 하는지 알려 주도록 잇는 말",
+      "pattern": "꾸밈말 + 地 + 동사",
+      "termIds": [
+        "particle",
+        "adverbial"
+      ],
+      "forms": [
+        "地",
+        "满意地",
+        "高兴地"
+      ],
+      "caution": "的는 명사를 꾸미고 得는 동사·상태 뒤의 설명을 잇습니다."
+    },
+    "de-attributive": {
+      "hanzi": "的",
+      "pinyin": "de",
+      "meaning": "앞의 꾸밈말을 뒤의 사람·물건 등에 연결하는 말",
+      "pattern": "꾸밈말 + 的 + 명사",
+      "termIds": [
+        "particle",
+        "attribute"
+      ],
+      "forms": [
+        "上午的考试",
+        "中国南方的雨水",
+        "他们班的学生",
+        "你丈夫的鼻子",
+        "你的丈夫",
+        "你脚下的路",
+        "叔叔的太阳镜",
+        "李小姐的头发",
+        "熊猫的眼睛和耳朵",
+        "的",
+        "羊的耳朵和鼻子",
+        "自己的腿脚",
+        "这个城市的春天"
+      ],
+      "caution": "소유뿐 아니라 시간·장소·행동으로도 명사를 꾸밀 수 있습니다."
+    },
+    "de-complement": {
+      "hanzi": "得",
+      "pinyin": "de",
+      "meaning": "행동이나 상태 뒤에서 그 정도·양상·반응을 설명하도록 잇는 말",
+      "pattern": "동사·상태 + 得 + 설명",
+      "termIds": [
+        "particle",
+        "complement"
+      ],
+      "forms": [
+        "写得很漂亮",
+        "变得越来越好",
+        "得"
+      ],
+      "caution": "觉得는 한 동사이므로 그 안의 得를 보어 표지로 떼지 않습니다."
+    },
+    "de-nominal": {
+      "hanzi": "的",
+      "pinyin": "de",
+      "meaning": "앞의 설명을 ‘그런 것’처럼 명사로 쓰게 하는 말",
+      "pattern": "꾸밈말 + 的 (명사가 문맥상 생략될 수 있음)",
+      "termIds": [
+        "particle",
+        "object",
+        "predicate"
+      ],
+      "forms": [
+        "的",
+        "黑色的"
+      ],
+      "caution": "뒤의 명사가 문맥상 생략될 수 있으며 是…的 강조 구문과 구별해야 합니다."
+    },
+    "degree-adverb": {
+      "hanzi": "정도부사",
+      "pinyin": "",
+      "meaning": "상태의 정도가 얼마나 큰지 앞에서 알려 주는 말",
+      "pattern": "정도부사 + 형용사",
+      "termIds": [
+        "adverbial",
+        "adverb",
+        "predicate"
+      ],
+      "forms": [
+        "很有兴趣",
+        "比较简单",
+        "特别",
+        "特别认真",
+        "非常"
+      ],
+      "caution": "보어는 보통 동사나 상태 뒤에서 설명한다는 점이 다릅니다."
+    },
+    "direction-complement": {
+      "hanzi": "방향보어",
+      "pinyin": "",
+      "meaning": "동작 뒤에 붙어 움직이는 방향을 알려 주는 말",
+      "pattern": "동사 + 방향",
+      "termIds": [
+        "complement",
+        "verb"
+      ],
+      "forms": [
+        "拿走",
+        "放进"
+      ],
+      "caution": "拿走의 走는 물건이 떠나는 방향이며 放进의 进은 안으로 들어가는 방향입니다. 동작이 시작되는 起来는 별도 용법으로 봅니다."
+    },
+    "dou-scope": {
+      "hanzi": "都",
+      "pinyin": "dōu",
+      "meaning": "앞에서 말한 대상 전체가 해당함을 나타내는 말",
+      "pattern": "여러 대상 + 都 + 술어",
+      "termIds": [
+        "adverbial"
+      ],
+      "forms": [
+        "都"
+      ],
+      "caution": "무엇을 모두 포함하는지 앞의 대상을 확인합니다."
+    },
+    "dui-target": {
+      "hanzi": "对",
+      "pinyin": "duì",
+      "meaning": "태도나 감정이 향하는 대상을 연결하는 말",
+      "pattern": "주어 + 对 + 대상 + 태도·평가",
+      "termIds": [
+        "preposition",
+        "adverbial"
+      ],
+      "forms": [
+        "对人",
+        "对你的回答",
+        "对表演",
+        "对这条绿裤子"
+      ],
+      "caution": "对 자체가 ‘만족하다’나 ‘친절하다’를 뜻하지는 않습니다."
+    },
+    "exclamation-duome-a": {
+      "hanzi": "多么…啊",
+      "pinyin": "duōme … a",
+      "meaning": "어떤 상태의 정도에 감탄하는 표현",
+      "pattern": "多么 + 형용사 + 啊",
+      "termIds": [
+        "adverbial",
+        "particle"
+      ],
+      "forms": [
+        "多么啊"
+      ],
+      "caution": "보통 정보를 묻는 질문보다 감탄을 나타냅니다."
+    },
+    "existence-location": {
+      "hanzi": "존현문",
+      "pinyin": "",
+      "meaning": "장소를 먼저 말한 뒤 그곳에 무엇이 어떤 상태로 있는지 소개하기",
+      "pattern": "장소 + 동사 + 着 + 존재하는 대상",
+      "termIds": [
+        "location",
+        "verb",
+        "subject"
+      ],
+      "forms": [
+        "黑板上写着她的名字"
+      ],
+      "caution": "뒤의 존재 대상을 동작을 한 사람으로 읽지 않습니다."
+    },
+    "gan-courage": {
+      "hanzi": "敢",
+      "pinyin": "gǎn",
+      "meaning": "어떤 행동을 할 용기가 있거나 감히 함을 나타내는 말",
+      "pattern": "敢 + 동사 / 不敢 + 동사",
+      "termIds": [
+        "modal"
+      ],
+      "forms": [
+        "不敢"
+      ],
+      "caution": "불가능한 능력과 심리적으로 엄두가 안 남은 다릅니다."
+    },
+    "gei-recipient": {
+      "hanzi": "给",
+      "pinyin": "gěi",
+      "meaning": "물건이나 행동을 받는 상대를 연결하는 말",
+      "pattern": "전달 동사 + 给 + 받는 사람 (+ 전달할 물건)",
+      "termIds": [
+        "preposition",
+        "object",
+        "verb"
+      ],
+      "forms": [
+        "给我",
+        "送给他一个礼物",
+        "送给弟弟"
+      ],
+      "caution": "이 용법에서는 给가 전달 동사 뒤에 옵니다. 항상 동사 앞으로 옮기지 않습니다."
+    },
+    "geng-comparison": {
+      "hanzi": "更",
+      "pinyin": "gèng",
+      "meaning": "다른 대상이나 이전 상태보다 정도가 더 큼을 나타내는 말",
+      "pattern": "更 + 상태",
+      "termIds": [
+        "adverbial",
+        "predicate"
+      ],
+      "forms": [
+        "更",
+        "更好"
+      ],
+      "caution": "비교 기준은 문맥에 생략될 수 있습니다."
+    },
+    "genju-basis": {
+      "hanzi": "根据",
+      "pinyin": "gēnjù",
+      "meaning": "무엇에 따라 행동하는지 기준을 연결하는 말",
+      "pattern": "根据 + 기준 + 행동",
+      "termIds": [
+        "preposition"
+      ],
+      "forms": [
+        "根据要求"
+      ],
+      "caution": "행동의 대상이 아니라 행동할 때 따르는 기준입니다."
+    },
+    "hai-mei-not-yet": {
+      "hanzi": "还没(有)",
+      "pinyin": "hái méi(yǒu)",
+      "meaning": "어떤 일이 아직 이루어지지 않았음을 나타내는 말",
+      "pattern": "还没(有) + 동사·결과 (+ 呢)",
+      "termIds": [
+        "adverbial",
+        "particle"
+      ],
+      "forms": [
+        "还没",
+        "还没有呢"
+      ],
+      "caution": "呢는 현재도 이어지는 상황의 느낌을 더할 수 있습니다."
+    },
+    "hen-adjective": {
+      "hanzi": "很",
+      "pinyin": "hěn",
+      "meaning": "상태를 형용사로 설명하며 정도를 나타내는 말",
+      "pattern": "주어 + 很 + 형용사",
+      "termIds": [
+        "adverbial",
+        "predicate"
+      ],
+      "forms": [
+        "很",
+        "很新鲜",
+        "很满意",
+        "很热情"
+      ],
+      "caution": "항상 한국어의 강한 ‘매우’로 번역하지는 않습니다."
+    },
+    "hui-ability": {
+      "hanzi": "会",
+      "pinyin": "huì",
+      "meaning": "배워서 어떤 행동을 할 줄 아는 능력을 나타내는 말",
+      "pattern": "会 + 행동 / 不会 + 행동",
+      "termIds": [
+        "modal"
+      ],
+      "forms": [
+        "不会"
+      ],
+      "caution": "문맥에 따라 미래 추측의 会도 있으나 여기서는 배운 능력입니다."
+    },
+    "jile-degree": {
+      "hanzi": "极了",
+      "pinyin": "jí le",
+      "meaning": "상태 뒤에서 그 정도가 매우 크다고 강조하는 말",
+      "pattern": "상태 + 极了",
+      "termIds": [
+        "complement"
+      ],
+      "forms": [
+        "极了"
+      ],
+      "caution": "여기의 了를 과거형으로 떼어 해석하지 않습니다."
+    },
+    "jiuyao-le-imminent": {
+      "hanzi": "就要…了",
+      "pinyin": "jiù yào … le",
+      "meaning": "곧 일이 일어날 상황임을 나타내는 표현",
+      "pattern": "就要 + 동사 + 了",
+      "termIds": [
+        "modal",
+        "particle"
+      ],
+      "forms": [
+        "就要了"
+      ],
+      "caution": "일이 이미 끝났다는 뜻이 아닙니다."
+    },
+    "le-change": {
+      "hanzi": "了",
+      "pinyin": "le",
+      "meaning": "앞서와 달라진 새 상태나 현재에 이른 상황을 나타내는 말",
+      "pattern": "새 상태·상황 + 了",
+      "termIds": [
+        "particle"
+      ],
+      "forms": [
+        "了",
+        "发烧了",
+        "很久没见面了"
+      ],
+      "caution": "과거 시제 표시와 같지 않습니다."
+    },
+    "le-completed": {
+      "hanzi": "了",
+      "pinyin": "le",
+      "meaning": "동작이나 일이 이루어졌음을 나타내는 말",
+      "pattern": "동사 (+ 결과) + 了",
+      "termIds": [
+        "particle",
+        "verb"
+      ],
+      "forms": [
+        "了",
+        "写错了",
+        "忘了",
+        "拿走了",
+        "洗干净了",
+        "笑了",
+        "花了"
+      ],
+      "caution": "모든 了가 과거형인 것은 아니며 질문·부정·다른 절 안의 맥락도 봐야 합니다."
+    },
+    "le-disposal-plan": {
+      "hanzi": "了",
+      "pinyin": "le",
+      "meaning": "처리 행동을 마무리하여 대상의 처분을 나타내는 말",
+      "pattern": "决定 + 把 + 대상 + 동사 + 了",
+      "termIds": [
+        "particle"
+      ],
+      "forms": [
+        "了"
+      ],
+      "caution": "决定의 내용 안에 쓰이면 실제 처리가 벌써 이루어졌다고 단정하지 않습니다."
+    },
+    "ma-question": {
+      "hanzi": "吗",
+      "pinyin": "ma",
+      "meaning": "그렇다·아니다로 답할 수 있는 질문을 만드는 말",
+      "pattern": "진술 내용 + 吗",
+      "termIds": [
+        "question",
+        "particle"
+      ],
+      "forms": [
+        "吗"
+      ],
+      "caution": "의문사가 이미 있는 질문에는 보통 이 방식으로 吗를 더하지 않습니다."
+    },
+    "nominal-predicate": {
+      "hanzi": "명사·수량 술어",
+      "pinyin": "",
+      "meaning": "금액이나 나이 같은 말이 직접 설명을 맡는 표현",
+      "pattern": "대상 + (합계·이미 등) + 금액·나이",
+      "termIds": [
+        "predicate",
+        "quantity"
+      ],
+      "forms": [
+        "107岁",
+        "18块"
+      ],
+      "caution": "이런 문장은 是 없이도 성립하지만 모든 명사를 이렇게 쓸 수 있는 것은 아닙니다."
+    },
+    "qilai-onset": {
+      "hanzi": "起来",
+      "pinyin": "qǐlái",
+      "meaning": "동작 뒤에서 그 행동이 시작됨을 나타내는 말",
+      "pattern": "동사 + (了) + 起来",
+      "termIds": [
+        "complement"
+      ],
+      "forms": [
+        "哭起来"
+      ],
+      "caution": "여기서는 위로 움직이는 공간 방향이 아닙니다."
+    },
+    "qing-request": {
+      "hanzi": "请",
+      "pinyin": "qǐng",
+      "meaning": "뒤의 행동을 공손하게 부탁하는 말",
+      "pattern": "请 + 행동",
+      "termIds": [
+        "modal"
+      ],
+      "forms": [
+        "请"
+      ],
+      "caution": "부탁하는 행동의 내용은 뒤에서 말합니다."
+    },
+    "quantity-duo": {
+      "hanzi": "多",
+      "pinyin": "duō",
+      "meaning": "수 뒤에서 그 수보다 조금 더 많음을 나타내는 말",
+      "pattern": "큰 수 + 多 + 단위",
+      "termIds": [
+        "quantity"
+      ],
+      "forms": [
+        "多"
+      ],
+      "caution": "여기의 多는 별도 술어 ‘많다’가 아니라 대략적인 초과 수량입니다."
+    },
+    "question-in-place": {
+      "hanzi": "의문사 제자리",
+      "pinyin": "",
+      "meaning": "묻는 내용을 원래 문장 성분 자리에 놓아 질문합니다.",
+      "pattern": "시간 자리의 什么时候 / 가격 자리의 多少钱 / 명사 앞의 哪种",
+      "termIds": [
+        "question",
+        "object",
+        "time"
+      ],
+      "forms": [
+        "什么时候",
+        "哪种",
+        "多少钱"
+      ],
+      "caution": "한국어처럼 의문 표현을 문장 맨 앞으로 무조건 옮기지 않습니다."
+    },
+    "result-complement": {
+      "hanzi": "결과보어",
+      "pinyin": "",
+      "meaning": "동작 뒤에서 그 행동으로 어떤 결과가 났는지 알려 주는 말",
+      "pattern": "동사 + 결과",
+      "termIds": [
+        "complement",
+        "verb"
+      ],
+      "forms": [
+        "写错",
+        "刮跑",
+        "学会",
+        "打扫干净",
+        "洗干净",
+        "画好",
+        "看到"
+      ],
+      "caution": "동사 뒤의 결과를 보충합니다. 学会의 会는 결과이며 동사 앞의 능력 会와 다르고, 看到의 到는 不到一米七의 到와 다릅니다."
+    },
+    "shi-de-assertion": {
+      "hanzi": "是…的",
+      "pinyin": "shì … de",
+      "meaning": "어떤 판단이 분명히 그렇다고 강조하는 표현",
+      "pattern": "주어 + 是 + 판단 + 的",
+      "termIds": [
+        "verb",
+        "particle"
+      ],
+      "forms": [
+        "是的"
+      ],
+      "caution": "과거 사건의 시간·장소·방식을 강조하는 是…的와 구별합니다."
+    },
+    "tai-le-degree": {
+      "hanzi": "太…了",
+      "pinyin": "tài … le",
+      "meaning": "상태의 정도가 매우 높거나 지나치다고 평가하는 표현",
+      "pattern": "太 + 형용사 + 了",
+      "termIds": [
+        "adverbial",
+        "particle"
+      ],
+      "forms": [
+        "太了"
+      ],
+      "caution": "이 了는 상태가 변한 과거나 동작의 완료를 뜻하지 않습니다."
+    },
+    "topic-object": {
+      "hanzi": "대상 화제",
+      "pinyin": "",
+      "meaning": "동작의 대상을 앞에 꺼내 그것에 대해 설명하기",
+      "pattern": "대상 + 그 대상에 대한 설명",
+      "termIds": [
+        "topic",
+        "object"
+      ],
+      "forms": [
+        "你的作业",
+        "你的脸"
+      ],
+      "caution": "앞에 온 명사가 반드시 행동하는 사람인 것은 아닙니다."
+    },
+    "xiang-desire": {
+      "hanzi": "想",
+      "pinyin": "xiǎng",
+      "meaning": "뒤의 행동을 하고 싶은 마음을 나타내는 말",
+      "pattern": "想 + 행동",
+      "termIds": [
+        "modal"
+      ],
+      "forms": [
+        "想"
+      ],
+      "caution": "실제 행동이 이미 일어났다는 뜻은 아닙니다."
+    },
+    "yinggai-obligation": {
+      "hanzi": "应该",
+      "pinyin": "yīnggāi",
+      "meaning": "어떤 행동을 해야 한다는 당위를 나타내는 말",
+      "pattern": "应该 + 행동 / 不应该 + 행동",
+      "termIds": [
+        "modal"
+      ],
+      "forms": [
+        "不应该"
+      ],
+      "caution": "不应该는 여기서 ‘해서는 안 된다’라는 판단입니다."
+    },
+    "you-again": {
+      "hanzi": "又",
+      "pinyin": "yòu",
+      "meaning": "전에 있었던 일이 다시 일어남을 나타내는 말",
+      "pattern": "又 + 일어난 일",
+      "termIds": [
+        "adverbial"
+      ],
+      "forms": [
+        "又"
+      ],
+      "caution": "又…又…로 두 특징을 나열하는 용법과 다릅니다."
+    },
+    "you-you-parallel": {
+      "hanzi": "又…又…",
+      "pinyin": "yòu … yòu …",
+      "meaning": "두 가지 특징이 함께 있음을 나란히 말하는 표현",
+      "pattern": "又 + 특징1 + 又 + 특징2",
+      "termIds": [
+        "connective",
+        "predicate"
+      ],
+      "forms": [
+        "又又"
+      ],
+      "caution": "여기서는 사건이 다시 발생했다는 뜻이 아닙니다."
+    },
+    "yuelaiyue-change": {
+      "hanzi": "越来越",
+      "pinyin": "yuè lái yuè",
+      "meaning": "시간이 갈수록 어떤 정도가 점점 커짐을 나타내는 말",
+      "pattern": "越来越 + 상태",
+      "termIds": [
+        "adverbial",
+        "predicate"
+      ],
+      "forms": [
+        "越来越",
+        "越来越好"
+      ],
+      "caution": "단순히 매우 그러하다는 뜻보다 변화의 흐름이 있습니다."
+    },
+    "zai-location": {
+      "hanzi": "在",
+      "pinyin": "zài",
+      "meaning": "행동이 일어나는 장소를 연결하는 말",
+      "pattern": "在 + 장소 + 동사",
+      "termIds": [
+        "preposition",
+        "location"
+      ],
+      "forms": [
+        "在大学"
+      ],
+      "caution": "现在의 在와 구별하며, 在+동사로 진행을 나타내는 경우와도 구별합니다."
+    },
+    "zhe-state": {
+      "hanzi": "着",
+      "pinyin": "zhe",
+      "meaning": "동작 뒤에서 그 결과 상태가 이어짐을 나타내는 말",
+      "pattern": "동사 + 着 + 존재하는 대상",
+      "termIds": [
+        "particle"
+      ],
+      "forms": [
+        "着"
+      ],
+      "caution": "이 예문의 写着는 쓰는 중이 아니라 적혀 있는 상태입니다."
+    },
+    "zui-superlative": {
+      "hanzi": "最",
+      "pinyin": "zuì",
+      "meaning": "비교 범위 안에서 정도가 가장 큼을 나타내는 말",
+      "pattern": "最 + 상태",
+      "termIds": [
+        "adverbial"
+      ],
+      "forms": [
+        "最"
+      ],
+      "caution": "비교 범위는 문맥으로 주어질 수 있습니다."
+    },
+    "also-adverb": {
+      "hanzi": "也",
+      "pinyin": "yě",
+      "meaning": "앞서 말한 대상과 마찬가지로 ‘~도’임을 덧붙입니다.",
+      "pattern": "주어+也+술어",
+      "termIds": [
+        "adverbial"
+      ],
+      "forms": [
+        "也"
+      ],
+      "caution": "한국어 ‘~도’처럼 주어 명사에 붙이지 않고 술어 앞에 둡니다."
+    },
+    "attribute-order": {
+      "hanzi": "很大提高",
+      "pinyin": "hěn dà tígāo",
+      "meaning": "꾸미는 말을 앞에 놓아 향상의 폭을 설명합니다.",
+      "pattern": "꾸미는 말+명사",
+      "termIds": [
+        "attribute",
+        "object"
+      ],
+      "forms": [
+        "很大提高"
+      ],
+      "caution": "이 공식 답안은 很大提高이며 的가 없습니다. 원문에 없는 的를 넣어 parts를 만들지 않습니다."
+    },
+    "sequence-adverb": {
+      "hanzi": "先",
+      "pinyin": "xiān",
+      "meaning": "여러 행동 중 먼저 하는 행동임을 나타냅니다.",
+      "pattern": "先+동사",
+      "termIds": [
+        "adverbial"
+      ],
+      "forms": [
+        "先"
+      ],
+      "caution": "先 뒤에 오는 동작이 우선입니다."
+    },
+    "verb-reduplication": {
+      "hanzi": "看看",
+      "pinyin": "kànkan",
+      "meaning": "같은 동사를 반복해 ‘잠깐, 한번’ 하는 가벼운 동작을 말합니다.",
+      "pattern": "동사+같은 동사",
+      "termIds": [
+        "verb"
+      ],
+      "forms": [
+        "看看"
+      ],
+      "caution": "같은 동작을 정확히 두 번 했다는 횟수 표현이 아닙니다."
+    },
+    "verb-object": {
+      "hanzi": "동사+목적어",
+      "pinyin": "",
+      "meaning": "동작 뒤에 그 행동이 향하는 대상을 놓습니다.",
+      "pattern": "동사+행동의 대상",
+      "termIds": [
+        "verb",
+        "object"
+      ],
+      "forms": [
+        "带护照",
+        "举行会议",
+        "吃草",
+        "喜欢中国文化",
+        "离开东门"
+      ],
+      "caution": "목적어는 항상 물건인 것은 아닙니다. 동작·상태를 담은 구절도 올 수 있습니다."
+    },
+    "a-not-a-question": {
+      "hanzi": "敢不敢",
+      "pinyin": "gǎn bu gǎn",
+      "meaning": "긍정과 부정을 나란히 놓아 행동할 용기가 있는지 묻습니다.",
+      "pattern": "능원동사+不+같은 능원동사",
+      "termIds": [
+        "modal",
+        "question"
+      ],
+      "forms": [
+        "敢不敢"
+      ],
+      "caution": "단순히 ‘감히 하지 않는다’고 단정하는 표현이 아니라 질문입니다."
+    },
+    "yong-means": {
+      "hanzi": "用",
+      "pinyin": "yòng",
+      "meaning": "도구나 수단을 소개해 ‘~을 써서’라는 뜻을 냅니다.",
+      "pattern": "用+수단+동사",
+      "termIds": [
+        "preposition",
+        "adverbial"
+      ],
+      "forms": [
+        "用冷水",
+        "用铅笔"
+      ],
+      "caution": "이 문맥의 用 구는 수단을 나타내며 본동사 앞에 놓입니다."
+    },
+    "mei-negation": {
+      "hanzi": "没",
+      "pinyin": "méi",
+      "meaning": "어떤 일이 일어나지 않았음을 나타냅니다.",
+      "pattern": "没+동사",
+      "termIds": [
+        "adverbial",
+        "verb"
+      ],
+      "forms": [
+        "没见面"
+      ],
+      "caution": "很久没见面了의 了를 보고 만남이 이루어졌다고 해석하지 않습니다."
+    },
+    "frequency-adverb": {
+      "hanzi": "经常",
+      "pinyin": "jīngcháng",
+      "meaning": "어떤 행동이 자주 일어남을 나타냅니다.",
+      "pattern": "经常+동사",
+      "termIds": [
+        "adverbial"
+      ],
+      "forms": [
+        "经常"
+      ],
+      "caution": "행동의 빈도를 나타내며 동사 앞에 놓입니다."
+    },
+    "topic-comment": {
+      "hanzi": "화제와 설명",
+      "pinyin": "",
+      "meaning": "먼저 설명할 대상을 꺼낸 뒤 그 대상에 대한 내용을 말합니다.",
+      "pattern": "화제+그에 대한 설명",
+      "termIds": [
+        "topic",
+        "subject",
+        "predicate"
+      ],
+      "forms": [
+        "他的汉字",
+        "你的丈夫鼻子",
+        "会议",
+        "学习很努力",
+        "她身高",
+        "做事情特别认真"
+      ],
+      "caution": "화제가 항상 뒤 동작을 직접 하는 주어인 것은 아닙니다. 得 없는 활동 평가를 得 구문으로 바꾸지 않습니다."
+    },
+    "cost-object": {
+      "hanzi": "900块钱",
+      "pinyin": "jiǔbǎi kuài qián",
+      "meaning": "花 뒤에서 비용으로 든 돈의 양을 말합니다.",
+      "pattern": "花(+了)+돈의 양",
+      "termIds": [
+        "object",
+        "quantity"
+      ],
+      "forms": [
+        "900块钱"
+      ],
+      "caution": "이 문항의 돈 액수는 수량 목적어이며 동작 방식의 보어가 아닙니다."
+    },
+    "zai-location-verb": {
+      "hanzi": "在",
+      "pinyin": "zài",
+      "meaning": "대상이 어느 장소에 ‘있다’고 말하는 동사입니다.",
+      "pattern": "대상+在+장소",
+      "termIds": [
+        "verb",
+        "object",
+        "location"
+      ],
+      "forms": [
+        "在我的包里"
+      ],
+      "caution": "동작 앞에서 장소를 소개하는 개사 在와 구별합니다. 现在 안의 在도 이 용법이 아닙니다."
+    },
+    "localizer": {
+      "hanzi": "里",
+      "pinyin": "lǐ",
+      "meaning": "명사 뒤에 붙어 그 장소의 안쪽을 가리킵니다.",
+      "pattern": "장소·물건+里",
+      "termIds": [
+        "location"
+      ],
+      "forms": [
+        "我的包里",
+        "咖啡里"
+      ],
+      "caution": "里가 붙은 덩어리 전체가 장소입니다."
+    },
+    "yao-intention": {
+      "hanzi": "要",
+      "pinyin": "yào",
+      "meaning": "앞으로 하려고 하는 행동이나 계획을 나타냅니다.",
+      "pattern": "要+앞으로 할 행동",
+      "termIds": [
+        "modal"
+      ],
+      "forms": [
+        "要"
+      ],
+      "caution": "要는 문맥에 따라 필요·의무도 나타냅니다. 공항에 가려는 이 문장은 계획입니다."
+    },
+    "serial-purpose": {
+      "hanzi": "去…接…",
+      "pinyin": "qù … jiē …",
+      "meaning": "어디에 가는지 말한 뒤 그곳에서 할 목적 행동을 이어 말합니다.",
+      "pattern": "去+장소+목적 행동",
+      "termIds": [
+        "verb",
+        "object"
+      ],
+      "forms": [
+        "去机场接女朋友"
+      ],
+      "caution": "去의 뒤 장소와 다음 동작의 대상을 구별합니다."
+    },
+    "hai-continuing": {
+      "hanzi": "还",
+      "pinyin": "hái",
+      "meaning": "상태가 계속됨을 나타내어 ‘아직, 여전히’라는 뜻을 냅니다.",
+      "pattern": "还+상태 표현",
+      "termIds": [
+        "adverbial"
+      ],
+      "forms": [
+        "还"
+      ],
+      "caution": "여기서는 물건을 돌려주는 동사 还(huán)이 아닙니다."
+    },
+    "zenme-le": {
+      "hanzi": "怎么了",
+      "pinyin": "zěnme le",
+      "meaning": "무슨 일이 생겼는지, 상태가 어떻게 되었는지 묻습니다.",
+      "pattern": "대상+怎么了",
+      "termIds": [
+        "question",
+        "particle"
+      ],
+      "forms": [
+        "怎么了"
+      ],
+      "caution": "여기서는 동작의 방법을 묻는 ‘어떻게 하다’가 아닙니다."
+    },
+    "yao-obligation": {
+      "hanzi": "要",
+      "pinyin": "yào",
+      "meaning": "행동을 할 필요가 있거나 ‘해야 한다’고 말합니다.",
+      "pattern": "要+해야 할 행동",
+      "termIds": [
+        "modal"
+      ],
+      "forms": [
+        "要"
+      ],
+      "caution": "이 문장에서는 노인에게 필요한 돌봄을 말합니다. 모든 要를 의무로 해석하지 않습니다."
+    },
+    "buyao-prohibition": {
+      "hanzi": "不要",
+      "pinyin": "bú yào",
+      "meaning": "뒤의 행동을 하지 말라고 금지합니다.",
+      "pattern": "不要+동사",
+      "termIds": [
+        "adverbial",
+        "modal"
+      ],
+      "forms": [
+        "不要"
+      ],
+      "caution": "여기서는 ‘원하지 않다’가 아니라 ‘~하지 마라’입니다."
+    },
+    "sudden-adverb": {
+      "hanzi": "突然",
+      "pinyin": "tūrán",
+      "meaning": "일이 갑자기 일어남을 나타냅니다.",
+      "pattern": "突然+동사",
+      "termIds": [
+        "adverbial"
+      ],
+      "forms": [
+        "突然"
+      ],
+      "caution": "갑작스러운 발생을 말하며 동사 앞에 옵니다."
+    },
+    "clause-subject": {
+      "hanzi": "看到这个句子",
+      "pinyin": "kàndào zhège jùzi",
+      "meaning": "행동을 담은 덩어리 전체를 문장의 설명 대상으로 삼습니다.",
+      "pattern": "행동 구절+술어",
+      "termIds": [
+        "subject",
+        "verb"
+      ],
+      "forms": [
+        "看到这个句子"
+      ],
+      "caution": "주어가 반드시 사람·사물 명사 하나일 필요는 없습니다."
+    },
+    "quantity-below": {
+      "hanzi": "不到",
+      "pinyin": "bú dào",
+      "meaning": "수량 앞에서 그 기준에 미치지 못함을 나타냅니다.",
+      "pattern": "不到+기준 수량",
+      "termIds": [
+        "predicate",
+        "quantity"
+      ],
+      "forms": [
+        "不到一米七"
+      ],
+      "caution": "不到一米七에서 到는 방향·결과보어가 아닙니다."
+    },
+    "time-position": {
+      "hanzi": "现在",
+      "pinyin": "xiànzài",
+      "meaning": "행동이 일어나는 ‘지금’이라는 때를 나타냅니다.",
+      "pattern": "시간 표현+동작",
+      "termIds": [
+        "time"
+      ],
+      "forms": [
+        "现在"
+      ],
+      "caution": "现在는 한 단어입니다. 在를 떼어 장소 개사로 설명하지 않습니다."
+    },
+    "if-then": {
+      "hanzi": "如果…就…",
+      "pinyin": "rúguǒ … jiù …",
+      "meaning": "조건을 먼저 말하고 그 조건일 때의 결과를 연결합니다.",
+      "pattern": "如果+조건+就+결과",
+      "termIds": [
+        "connective",
+        "adverbial"
+      ],
+      "forms": [
+        "如果就"
+      ],
+      "caution": "조건 부분과 결과 부분이 어디인지 함께 봅니다."
+    },
+    "le-hypothetical-state": {
+      "hanzi": "了",
+      "pinyin": "le",
+      "meaning": "가정한 조건에서 성립할 새 상태를 나타냅니다.",
+      "pattern": "如果+조건+就+상태+了",
+      "termIds": [
+        "particle",
+        "connective"
+      ],
+      "forms": [
+        "好了"
+      ],
+      "caution": "가정문 속 了를 과거형으로 해석하지 않습니다."
+    },
+    "total-adverb": {
+      "hanzi": "一共",
+      "pinyin": "yígòng",
+      "meaning": "전체를 합한 총수량임을 나타냅니다.",
+      "pattern": "一共+수량",
+      "termIds": [
+        "adverbial",
+        "quantity"
+      ],
+      "forms": [
+        "一共三层"
+      ],
+      "caution": "뒤 수량 전체가 총합입니다."
+    },
+    "location-complement": {
+      "hanzi": "厨房里",
+      "pinyin": "chúfáng lǐ",
+      "meaning": "동사 뒤에서 물건을 놓을 도착 장소를 보충합니다.",
+      "pattern": "放+도착 장소",
+      "termIds": [
+        "verb",
+        "complement",
+        "location"
+      ],
+      "forms": [
+        "放厨房里"
+      ],
+      "caution": "이 답안에는 在가 없으며 없는 글자를 parts에 넣지 않습니다."
+    },
+    "ba-suggestion": {
+      "hanzi": "吧",
+      "pinyin": "ba",
+      "meaning": "문장 끝에서 제안이나 권유를 부드럽게 합니다.",
+      "pattern": "제안 내용+吧",
+      "termIds": [
+        "particle"
+      ],
+      "forms": [
+        "吧"
+      ],
+      "caution": "처리 대상을 소개하는 把(bǎ)와 다른 글자·역할입니다."
+    },
+    "wish-construction": {
+      "hanzi": "祝",
+      "pinyin": "zhù",
+      "meaning": "누구에게 어떤 좋은 상태를 바라는지 말합니다.",
+      "pattern": "祝+사람+바라는 상태",
+      "termIds": [
+        "verb",
+        "object",
+        "subject",
+        "predicate"
+      ],
+      "forms": [
+        "祝大家身体健康"
+      ],
+      "caution": "뒤의 사람은 축원받는 대상이고, 신체 상태 설명이 이어집니다."
+    },
+    "shi-de-emphasis": {
+      "hanzi": "是…的",
+      "pinyin": "shì … de",
+      "meaning": "이미 일어난 일의 시간·장소 같은 세부를 강조합니다.",
+      "pattern": "주어+是+강조할 정보+동사+的",
+      "termIds": [
+        "particle",
+        "time"
+      ],
+      "forms": [
+        "是8点半离开东门的"
+      ],
+      "caution": "是黑色的 같은 성질 판단 문장을 모두 이 강조 구문으로 분류하지 않습니다."
+    }
+  }
+}

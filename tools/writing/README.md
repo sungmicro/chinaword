@@ -20,6 +20,7 @@
 python3 -m unittest discover -s tools/writing -p 'test_*.py'
 npm test
 npm run build
+node tools/writing/check_learning_ssr.mjs
 ```
 
 생성 시 190개·95/95·고유 ID·연속 번호·회차별 71~80번·복수 답·중복을 검사합니다.
@@ -42,3 +43,16 @@ npm run build
 답을 공개하면 완성 문장의 한자 아래 병음과 한국어 뜻, 기존 문법 해설, 핵심 단어장을
 표시합니다. 단어의 `담기`·`담음`은 듣기·독해와 같은 내 단어장을 쓰며 출처는
 `H31001 쓰기 71번` 형식입니다. 다시 풀면 해설 전체가 숨겨지고 한자 문항은 그대로입니다.
+
+문법 입문 도움말은 `src/data/writingGrammarGlossary.json`의 `terms`(공통 용어),
+`roleTerms`(기존 역할 16종과 용어 연결), `usages`(문맥별 기능어·구조 용법)를
+공유합니다. 문장 성분과 품사를 구별하며 的·地·得처럼 같은 발음의 글자도 구별합니다.
+`grammar.json` 각 분석의 `learning.termIds`는 공개 전 다른 예문으로 볼 공통 용어,
+`learning.points`는 공개 후에만 보여 줄 `{usageId, parts, explanation}`입니다.
+`parts`는 기존과 같은 제시 토큰의 문자 범위이며 `forms`와 맞아야 합니다.
+용법의 뜻·병음·자리 패턴은 glossary에, 이 문장만의 역할은 explanation에 둡니다.
+글자가 같아도 在의 장소 개사와 진행 부사 등은 서로 다른 usageId로 관리합니다.
+
+공개 전 `문법 기초 보기`는 접힌 상태이며 정답 문장·토큰별 역할 배정·개별 설명을
+렌더링하지 않습니다. 공개 후 각 공식 답의 `이 문장의 문법 풀어보기`와 역할 이름의
+접기/펼치기로 설명을 읽을 수 있습니다. hover 없이 키보드·터치로 이용합니다.
