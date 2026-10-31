@@ -148,8 +148,8 @@ def check_explain(explain, part, answer, labels, texts, where, problems, reading
             problems.append(f'{where}: 끊어 읽기 요약(note) 없음')
 
     vocab = explain.get('vocab') or []
-    if not 3 <= len(vocab) <= 6:
-        problems.append(f'{where}: 단어는 3~6개 ({len(vocab)}개)')
+    if not 3 <= len(vocab) <= 8:
+        problems.append(f'{where}: 단어는 3~8개 ({len(vocab)}개)')
     for entry in vocab:
         here = f'{where} 단어 {entry.get("hanzi")}'
         missing = [key for key in ('hanzi', 'pinyin', 'partOfSpeech', 'meaningKo', 'usage') if not entry.get(key)]

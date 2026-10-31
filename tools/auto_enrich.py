@@ -20,6 +20,7 @@ from pypinyin import Style, lazy_pinyin
 
 
 PUNCT = set('，。！？：；、“”‘’（）《》…—,.?!:;()[] ')
+VOCAB_LIMIT = 8
 STOPWORDS = set('''
 的 是 了 在 我 你 他 她 它 们 和 也 都 就 很 有 不 这 那 一 个
 我们 你们 他们 什么 吗 呢 吧 啊 着 过 把 被 给 到 对 从 为 与 而 但
@@ -46,6 +47,53 @@ GRAMMAR_RULES = [
     (('得',), '동사 + 得 + 정도', '~하게 동작하다', '동작의 정도나 상태를 설명합니다.'),
     (('了',), '동사/형용사 + 了', '~했다, ~해졌다', '완료나 상태 변화를 나타냅니다.'),
 ]
+
+
+class VocabCatalog:
+    """프로젝트 단어장에서 급수별 신규 어휘와 검수된 뜻을 읽는다."""
+
+    def __init__(self, path):
+        entries = json.loads(Path(path).expanduser().read_text(encoding='utf-8'))
+        self.entries = {}
+        self.entry_scores = {}
+        self.new_by_level = {}
+        self.official_words = set()
+        for entry in entries:
+            word = entry.get('hanzi')
+            level = entry.get('level')
+            lesson = entry.get('lesson', '')
+            if not word:
+                continue
+            score = self._score(entry)
+            if score > self.entry_scores.get(word, -1):
+                self.entries[word] = entry
+                self.entry_scores[word] = score
+            if level and lesson.startswith(f'{level} 추가'):
+                self.new_by_level.setdefault(level, set()).add(word)
+                self.official_words.add(word)
+            if lesson == 'HSK1 150':
+                self.official_words.add(word)
+
+    @staticmethod
+    def _score(entry):
+        lesson = entry.get('lesson', '')
+        level = entry.get('level', '')
+        if level and (lesson.startswith(f'{level} 추가') or lesson == f'{level} 150'):
+            return 3
+        if level.startswith('HSK') and not lesson.endswith(('듣기', '독해')):
+            return 2
+        return 1
+
+    @staticmethod
+    def level_for(test_id):
+        match = re.match(r'^H([1-9])', test_id)
+        return f'HSK{match.group(1)}' if match else None
+
+    def priority_words(self, test_id):
+        return self.new_by_level.get(self.level_for(test_id), set())
+
+    def get(self, word):
+        return self.entries.get(word, {})
 
 
 class Translator:
@@ -124,21 +172,57 @@ def split_sentences(text):
     return sentences or [text]
 
 
-def content_words(texts, limit=5):
+def priority_words_in_text(text, priority_words, lexicon):
+    """공식 어휘를 최장 일치로 나눠 복합 표현 안의 짧은 오인식을 막는다."""
+    found = []
+    index = 0
+    while index < len(text):
+        matches = [word for word in lexicon if text.startswith(word, index)]
+        if not matches:
+            index += 1
+            continue
+        word = max(matches, key=lambda candidate: (len(candidate), candidate))
+        if word in priority_words and word not in found:
+            found.append(word)
+        index += len(word)
+    return found
+
+
+def content_words(texts, priority_words=None, limit=VOCAB_LIMIT, lexicon=None):
+    """급수 신규 어휘를 먼저 담고, 남은 칸을 문항의 다른 핵심어로 채운다.
+
+    신규 어휘가 제한보다 많으면 본문에 먼저 나온 어휘를 우선한다. 빈도가 같을 때도
+    본문 등장 순서를 유지하므로 결과가 매번 같다.
+    """
+    priority_words = set(priority_words or ())
+    lexicon = set(lexicon or priority_words)
     counts = Counter()
     flags = {}
+    priority = []
     for text in texts:
-        for entry in posseg.cut(text, HMM=False):
+        parsed = list(posseg.cut(text, HMM=False))
+        for word in priority_words_in_text(text, priority_words, lexicon):
+            if word not in priority:
+                priority.append(word)
+
+        for entry in parsed:
             word = entry.word.strip()
-            if not word or any(char in PUNCT for char in word) or word in STOPWORDS:
+            if not word or any(char in PUNCT for char in word):
                 continue
             if not re.search(r'[一-鿿]', word):
+                continue
+            flags[word] = entry.flag
+            if word in STOPWORDS:
                 continue
             if len(word) == 1 and entry.flag[:1] not in ('n', 'v', 'a'):
                 continue
             counts[word] += 1
-            flags[word] = entry.flag
-    chosen = [word for word, _ in counts.most_common(limit)]
+    chosen = priority[:limit]
+    for word, _ in counts.most_common():
+        if word not in chosen:
+            chosen.append(word)
+        if len(chosen) >= limit:
+            break
     if len(chosen) < 3:
         for text in texts:
             for token, _ in tokenize(text):
@@ -157,14 +241,17 @@ def example_for(word, texts, translations):
     return {'zh': text, 'words': tokenize(text), 'ko': translations.get(text, '')}
 
 
-def vocab_for(texts, translations, detailed):
+def vocab_for(texts, translations, detailed, catalog, test_id):
     entries = []
-    for word, part in content_words(texts):
+    priority_words = catalog.priority_words(test_id)
+    for word, detected_part in content_words(
+            texts, priority_words=priority_words, lexicon=catalog.official_words):
+        known = catalog.get(word)
         entry = {
             'hanzi': word,
-            'pinyin': ''.join(lazy_pinyin(word, style=Style.TONE)),
-            'partOfSpeech': part,
-            'meaningKo': translations.get(word, word),
+            'pinyin': known.get('pinyin') or ''.join(lazy_pinyin(word, style=Style.TONE)),
+            'partOfSpeech': known.get('partOfSpeech') or detected_part,
+            'meaningKo': known.get('meaningKo') or translations.get(word, word),
         }
         if detailed:
             entry['usage'] = f'{word}가 쓰인 문장을 함께 확인'
@@ -201,36 +288,76 @@ def breakdown_for(quote):
     return [{'chunks': chunks, 'note': '정답 판단에 필요한 핵심 문장 구조를 확인합니다.'}]
 
 
-def collect_listening_strings(paper):
+def listening_source_texts(item):
+    texts = [line['text'] for line in item['lines']]
+    texts.extend(option['text'] for option in item.get('options') or [])
+    if item.get('paperStatement'):
+        texts.append(item['paperStatement'])
+    return texts
+
+
+def annotated_text(entry):
+    return ''.join(token for token, _ in entry.get('words', []))
+
+
+def listening_note_texts(note):
+    """복구 대본까지 반영된 enrich.json을 핵심 단어 선정 원문으로 쓴다."""
+    texts = [annotated_text(line) for line in note.get('lines') or []]
+    statement = note.get('statement')
+    if statement:
+        texts.append(annotated_text(statement))
+    texts.extend(annotated_text(option) for option in note.get('options') or [])
+    return [text for text in texts if text]
+
+
+def collect_listening_strings(paper, catalog, test_id):
     texts = []
     for item in paper['items']:
-        texts.extend(line['text'] for line in item['lines'])
-        if item.get('paperStatement'):
-            texts.append(item['paperStatement'])
-        texts.extend(option['text'] for option in item.get('options') or [])
+        texts.extend(listening_source_texts(item))
     words = [word for item in paper['items'] for word, _ in content_words(
-        [line['text'] for line in item['lines']] + [option['text'] for option in item.get('options') or []]
+        listening_source_texts(item), priority_words=catalog.priority_words(test_id),
+        lexicon=catalog.official_words,
     )]
     return texts + words
 
 
-def write_listening(test_id, work, translator):
+def write_listening(test_id, work, translator, catalog, vocab_only=False):
     base = Path(work).expanduser() / test_id
     paper = json.loads((base / 'paper.json').read_text(encoding='utf-8'))
-    translations = translator.translate(collect_listening_strings(paper))
+    enrich_path = base / 'enrich.json'
+    if vocab_only:
+        data = json.loads(enrich_path.read_text(encoding='utf-8'))
+        strings = []
+        for note in data['items']:
+            source_texts = listening_note_texts(note)
+            strings.extend(source_texts)
+            strings.extend(word for word, _ in content_words(
+                source_texts,
+                priority_words=catalog.priority_words(test_id),
+                lexicon=catalog.official_words,
+            ))
+        translations = translator.translate(strings)
+        for note in data['items']:
+            note['vocab'] = vocab_for(
+                listening_note_texts(note), translations, detailed=False,
+                catalog=catalog, test_id=test_id,
+            )
+        enrich_path.write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding='utf-8')
+        print(f'{test_id}: 듣기 핵심 단어 {len(data["items"])}개 문항 갱신')
+        return
+
+    translations = translator.translate(collect_listening_strings(paper, catalog, test_id))
     items = []
     for item in paper['items']:
-        source_texts = [line['text'] for line in item['lines']]
-        source_texts += [option['text'] for option in item.get('options') or []]
-        if item.get('paperStatement'):
-            source_texts.append(item['paperStatement'])
+        source_texts = listening_source_texts(item)
         note = {
             'no': item['no'],
             'lines': [{'words': tokenize(line['text']), 'ko': translations.get(line['text'], '')}
                       for line in item['lines']],
             'statement': None,
             'options': [],
-            'vocab': vocab_for(source_texts, translations, detailed=False),
+            'vocab': vocab_for(source_texts, translations, detailed=False,
+                               catalog=catalog, test_id=test_id),
             'grammar': grammar_for(''.join(source_texts), translations, detailed=False),
         }
         if item['part'] == 2:
@@ -241,22 +368,52 @@ def write_listening(test_id, work, translator):
                                 'ko': translations.get(option['text'], '')}
                                for option in item['options']]
         items.append(note)
-    (base / 'enrich.json').write_text(
+    enrich_path.write_text(
         json.dumps({'id': test_id, 'items': items}, ensure_ascii=False, indent=1), encoding='utf-8'
     )
     print(f'{test_id}: 듣기 해설 {len(items)}개')
 
 
-def collect_reading_strings(paper):
+def sync_public_listening_vocab(test_id, work, repo):
+    enrich = json.loads((Path(work).expanduser() / test_id / 'enrich.json').read_text(encoding='utf-8'))
+    notes = {item['no']: item for item in enrich['items']}
+    path = Path(repo).expanduser() / 'public/listening' / f'{test_id}.json'
+    data = json.loads(path.read_text(encoding='utf-8'))
+    for item in data['items']:
+        item['vocab'] = notes[item['no']]['vocab']
+    path.write_text(json.dumps(data, ensure_ascii=False, separators=(',', ':')), encoding='utf-8')
+
+
+def reading_vocab_texts(item, groups):
+    texts = []
+    for line in item['lines']:
+        text = line['text']
+        if item['part'] == 2 and '（）' in text:
+            text = text.replace('（）', answer_word(item, groups))
+        texts.append(text)
+    if item.get('question'):
+        texts.append(item['question'])
+    if item['part'] == 3:
+        texts.extend(option['text'] for option in item.get('options') or [])
+    else:
+        texts.append(answer_word(item, groups))
+    return texts
+
+
+def collect_reading_strings(paper, catalog, test_id):
     texts = []
     for group in paper['groups']:
         texts.extend(option['text'] for option in group['options'])
+    groups = {group['id']: group for group in paper['groups']}
     for item in paper['items']:
         texts.extend(line['text'] for line in item['lines'])
         if item.get('question'):
             texts.append(item['question'])
         texts.extend(option['text'] for option in item.get('options') or [])
-        for word, _ in content_words(texts[-6:]):
+        for word, _ in content_words(
+                reading_vocab_texts(item, groups),
+                priority_words=catalog.priority_words(test_id),
+                lexicon=catalog.official_words):
             texts.append(word)
     return texts
 
@@ -271,7 +428,7 @@ def related_quote(passages, answer):
     return best
 
 
-def reading_item(item, groups, group_notes, translations):
+def reading_item(item, groups, group_notes, translations, catalog, test_id):
     annotated_lines = []
     display_texts = []
     if item['part'] == 3:
@@ -311,7 +468,11 @@ def reading_item(item, groups, group_notes, translations):
     labels = [option['label'] for option in visible_options
               if option['label'] not in (item['answer'], groups.get(item.get('group'), {}).get('example'))]
     distractor_count = 2 if item['part'] == 3 else min(2, len(labels))
-    source_texts = display_texts + [option['text'] for option in visible_options]
+    source_texts = list(display_texts)
+    if item['part'] == 3:
+        source_texts.extend(option['text'] for option in visible_options)
+    else:
+        source_texts.append(answer_word(item, groups))
     if item.get('question'):
         source_texts.append(item['question'])
     explain = {
@@ -319,7 +480,8 @@ def reading_item(item, groups, group_notes, translations):
         'distractors': [{'label': label, 'note': '정답 문장과 비교하면 문맥 연결이 맞지 않습니다.'}
                         for label in labels[:distractor_count]],
         'breakdown': breakdown_for(quote),
-        'vocab': vocab_for(source_texts, translations, detailed=True),
+        'vocab': vocab_for(source_texts, translations, detailed=True,
+                           catalog=catalog, test_id=test_id),
         'grammar': grammar_for(quote, translations, detailed=True),
     }
 
@@ -334,10 +496,38 @@ def reading_item(item, groups, group_notes, translations):
     }
 
 
-def write_reading(test_id, work, translator):
+def update_reading_vocab(base, paper, translations, catalog, test_id):
+    groups = {group['id']: group for group in paper['groups']}
+    count = 0
+    for path in sorted(base.glob('enrich-*.json')):
+        data = json.loads(path.read_text(encoding='utf-8'))
+        for note in data.get('items', []):
+            item = next(item for item in paper['items'] if item['no'] == note['no'])
+            note['explain']['vocab'] = vocab_for(
+                reading_vocab_texts(item, groups), translations, detailed=True,
+                catalog=catalog, test_id=test_id,
+            )
+            count += 1
+        path.write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding='utf-8')
+    return count
+
+
+def sync_public_reading_vocab(test_id, work, repo):
+    notes = {}
+    for enrich_path in sorted((Path(work).expanduser() / test_id).glob('enrich-*.json')):
+        data = json.loads(enrich_path.read_text(encoding='utf-8'))
+        notes.update({item['no']: item for item in data.get('items', [])})
+    path = Path(repo).expanduser() / 'public/reading' / f'{test_id}.json'
+    data = json.loads(path.read_text(encoding='utf-8'))
+    for item in data['items']:
+        item['explain']['vocab'] = notes[item['no']]['explain']['vocab']
+    path.write_text(json.dumps(data, ensure_ascii=False, separators=(',', ':')), encoding='utf-8')
+
+
+def write_reading(test_id, work, translator, catalog, vocab_only=False):
     base = Path(work).expanduser() / test_id
     paper = json.loads((base / 'paper.json').read_text(encoding='utf-8'))
-    strings = collect_reading_strings(paper)
+    strings = collect_reading_strings(paper, catalog, test_id)
     # 2부분은 번역할 때 정답을 채운 문장도 함께 보낸다.
     groups = {group['id']: group for group in paper['groups']}
     for item in paper['items']:
@@ -346,6 +536,11 @@ def write_reading(test_id, work, translator):
         if item['part'] == 3:
             strings.extend(split_sentences(item['lines'][0]['text']))
     translations = translator.translate(strings)
+    if vocab_only:
+        count = update_reading_vocab(base, paper, translations, catalog, test_id)
+        print(f'{test_id}: 독해 핵심 단어 {count}개 문항 갱신')
+        return
+
     group_notes = {}
     for group in paper['groups']:
         group_notes[group['id']] = {
@@ -353,7 +548,8 @@ def write_reading(test_id, work, translator):
             'options': [{'label': option['label'], 'words': tokenize(option['text']),
                          'ko': translations.get(option['text'], '')} for option in group['options']],
         }
-    items = [reading_item(item, groups, group_notes, translations) for item in paper['items']]
+    items = [reading_item(item, groups, group_notes, translations, catalog, test_id)
+             for item in paper['items']]
     ranges = [(41, 50), (51, 60), (61, 70)]
     for first, last in ranges:
         group_ids = {item['group'] for item in paper['items'] if first <= item['no'] <= last and item['group']}
@@ -373,14 +569,23 @@ def main():
     parser.add_argument('--listening-work', required=True)
     parser.add_argument('--reading-work', required=True)
     parser.add_argument('--cache', default='~/hsk-enrich-work/translations-zh-ko.json')
+    parser.add_argument('--vocab', default=str(Path(__file__).resolve().parents[1] / 'src/data/vocab.json'))
+    parser.add_argument('--vocab-only', action='store_true',
+                        help='기존 병음·해석·문법은 유지하고 문항별 핵심 단어만 다시 만든다')
+    parser.add_argument('--repo', help='--vocab-only 결과를 public 시험 데이터에도 동기화할 저장소')
     parser.add_argument('--mode', choices=('listening', 'reading', 'both'), default='both')
     args = parser.parse_args()
     translator = Translator(args.cache)
+    catalog = VocabCatalog(args.vocab)
     for test_id in args.test_ids:
         if args.mode in ('listening', 'both'):
-            write_listening(test_id, args.listening_work, translator)
+            write_listening(test_id, args.listening_work, translator, catalog, args.vocab_only)
+            if args.vocab_only and args.repo:
+                sync_public_listening_vocab(test_id, args.listening_work, args.repo)
         if args.mode in ('reading', 'both'):
-            write_reading(test_id, args.reading_work, translator)
+            write_reading(test_id, args.reading_work, translator, catalog, args.vocab_only)
+            if args.vocab_only and args.repo:
+                sync_public_reading_vocab(test_id, args.reading_work, args.repo)
     return 0
 
 

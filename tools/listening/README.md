@@ -48,6 +48,8 @@ $PY tools/listening/refine.py H31006 --work $W
 $PY tools/auto_enrich.py H31006 --listening-work $W --reading-work ~/hsk-reading-work --mode listening
 ```
 
+- 핵심 단어는 문항당 최대 8개다. 해당 시험 급수에서 새로 추가되는 어휘를 먼저 담고, 남는 칸만 다른 핵심어로 채운다. 신규 어휘가 8개를 넘으면 문항에 먼저 나온 8개를 쓴다.
+- 기존 병음·해석·문법을 유지하고 전체 회차의 핵심 단어만 다시 만들 때는 모든 회차를 넘기고 `--vocab-only --repo .`를 붙인다. 작업 폴더와 `public/listening`의 단어만 함께 갱신된다.
 - `assemble.py`에는 **모든 회차**를 넘긴다. 회차 목록과 단어장의 «HSK3 듣기» 단원을 매번 새로 쓰기 때문이다.
 - `align`이나 `verify`에서 «확인 필요»로 걸린 문항은 원본에서 구간을 들어 보고 `$W/<회차>/overrides.json`에 `{"12": [시작초, 끝초]}`로 적은 뒤 `build`부터 다시 돌린다.
 - `--show-readings`로 나오는 목록은 pypinyin과 음절이 다른 단어다. 다음자(还 huán, 长 cháng, 성씨 解 Xiè 등)는 맞는 경우가 많으니 문맥을 보고 고칠 것만 고친다.

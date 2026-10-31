@@ -73,6 +73,8 @@ def build_test(test_id, work, problems, reading_diffs):
         if len(note['lines']) != len(source['lines']):
             problems.append(f'{where}: 대본 줄 수가 다름 ({len(source["lines"])} vs {len(note["lines"])})')
             continue
+        if not 3 <= len(note.get('vocab') or []) <= 8:
+            problems.append(f'{where}: 핵심 단어는 3~8개 ({len(note.get("vocab") or [])}개)')
 
         script = []
         for index, (line, annotated) in enumerate(zip(source['lines'], note['lines'])):
