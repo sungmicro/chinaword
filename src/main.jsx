@@ -178,12 +178,13 @@ function HiddenAnswer({ card, promptType, canSpeak, speaking, onSpeak }) {
           row.type === 'hanzi'
             ? hanziLengthClass(row.value) + sentenceModifier(card.itemType)
             : lengthClass(row.value);
+        const valueClass = `${row.type === 'hanzi' ? 'answerHanzi ' : ''}${sizeClass}`;
 
         if (!speakable) {
           return (
             <div className="answerRow" key={row.label}>
               <span>{row.label}</span>
-              <strong className={sizeClass}>{row.value}</strong>
+              <strong className={valueClass}>{row.value}</strong>
             </div>
           );
         }
@@ -199,7 +200,7 @@ function HiddenAnswer({ card, promptType, canSpeak, speaking, onSpeak }) {
             <span>
               {row.label} <Volume2 size={12} /> 눌러서 듣기
             </span>
-            <strong className={sizeClass}>{row.value}</strong>
+            <strong className={valueClass}>{row.value}</strong>
           </button>
         );
       })}
