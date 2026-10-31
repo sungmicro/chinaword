@@ -1,0 +1,3309 @@
+{
+  "version": 1,
+  "items": {
+    "H31110-72": {
+      "answers": [
+        {
+          "answerIndex": 0,
+          "words": [
+            [
+              "它",
+              "tā"
+            ],
+            [
+              "的",
+              "de"
+            ],
+            [
+              "鼻子",
+              "bízi"
+            ],
+            [
+              "多么",
+              "duōme"
+            ],
+            [
+              "可爱",
+              "kě'ài"
+            ],
+            [
+              "啊",
+              "a"
+            ],
+            [
+              "！",
+              ""
+            ]
+          ],
+          "ko": "그것의 코는 정말 귀엽구나!"
+        }
+      ],
+      "vocab": [
+        {
+          "hanzi": "鼻子",
+          "pinyin": "bízi",
+          "meaningKo": "코",
+          "partOfSpeech": "명사"
+        },
+        {
+          "hanzi": "多么",
+          "pinyin": "duōme",
+          "meaningKo": "얼마나, 정말",
+          "partOfSpeech": "부사"
+        },
+        {
+          "hanzi": "可爱",
+          "pinyin": "kě'ài",
+          "meaningKo": "귀엽다",
+          "partOfSpeech": "형용사"
+        }
+      ]
+    },
+    "H31110-73": {
+      "answers": [
+        {
+          "answerIndex": 0,
+          "words": [
+            [
+              "姐姐",
+              "jiějie"
+            ],
+            [
+              "想",
+              "xiǎng"
+            ],
+            [
+              "参加",
+              "cānjiā"
+            ],
+            [
+              "普通话",
+              "pǔtōnghuà"
+            ],
+            [
+              "考试",
+              "kǎoshì"
+            ],
+            [
+              "。",
+              ""
+            ]
+          ],
+          "ko": "언니는 표준 중국어 시험에 참가하고 싶어 한다."
+        }
+      ],
+      "vocab": [
+        {
+          "hanzi": "姐姐",
+          "pinyin": "jiějie",
+          "meaningKo": "언니, 누나",
+          "partOfSpeech": "명사"
+        },
+        {
+          "hanzi": "想",
+          "pinyin": "xiǎng",
+          "meaningKo": "~하고 싶다",
+          "partOfSpeech": "조동사"
+        },
+        {
+          "hanzi": "参加",
+          "pinyin": "cānjiā",
+          "meaningKo": "참가하다",
+          "partOfSpeech": "동사"
+        },
+        {
+          "hanzi": "普通话",
+          "pinyin": "pǔtōnghuà",
+          "meaningKo": "표준 중국어",
+          "partOfSpeech": "명사"
+        },
+        {
+          "hanzi": "考试",
+          "pinyin": "kǎoshì",
+          "meaningKo": "시험",
+          "partOfSpeech": "명사"
+        }
+      ]
+    },
+    "H31110-74": {
+      "answers": [
+        {
+          "answerIndex": 0,
+          "words": [
+            [
+              "黑板",
+              "hēibǎn"
+            ],
+            [
+              "上",
+              "shàng"
+            ],
+            [
+              "写",
+              "xiě"
+            ],
+            [
+              "着",
+              "zhe"
+            ],
+            [
+              "她",
+              "tā"
+            ],
+            [
+              "的",
+              "de"
+            ],
+            [
+              "名字",
+              "míngzi"
+            ],
+            [
+              "。",
+              ""
+            ]
+          ],
+          "ko": "칠판에 그녀의 이름이 적혀 있다."
+        }
+      ],
+      "vocab": [
+        {
+          "hanzi": "黑板",
+          "pinyin": "hēibǎn",
+          "meaningKo": "칠판",
+          "partOfSpeech": "명사"
+        },
+        {
+          "hanzi": "上",
+          "pinyin": "shàng",
+          "meaningKo": "위",
+          "partOfSpeech": "방위사"
+        },
+        {
+          "hanzi": "写",
+          "pinyin": "xiě",
+          "meaningKo": "쓰다",
+          "partOfSpeech": "동사"
+        },
+        {
+          "hanzi": "名字",
+          "pinyin": "míngzi",
+          "meaningKo": "이름",
+          "partOfSpeech": "명사"
+        }
+      ]
+    },
+    "H31110-75": {
+      "answers": [
+        {
+          "answerIndex": 0,
+          "words": [
+            [
+              "老师",
+              "lǎoshī"
+            ],
+            [
+              "很",
+              "hěn"
+            ],
+            [
+              "快",
+              "kuài"
+            ],
+            [
+              "地",
+              "de"
+            ],
+            [
+              "画",
+              "huà"
+            ],
+            [
+              "好",
+              "hǎo"
+            ],
+            [
+              "了",
+              "le"
+            ],
+            [
+              "熊猫",
+              "xióngmāo"
+            ],
+            [
+              "的",
+              "de"
+            ],
+            [
+              "耳朵",
+              "ěrduo"
+            ],
+            [
+              "。",
+              ""
+            ]
+          ],
+          "ko": "선생님은 판다의 귀를 아주 빠르게 다 그렸다."
+        }
+      ],
+      "vocab": [
+        {
+          "hanzi": "老师",
+          "pinyin": "lǎoshī",
+          "meaningKo": "선생님",
+          "partOfSpeech": "명사"
+        },
+        {
+          "hanzi": "快",
+          "pinyin": "kuài",
+          "meaningKo": "빠르다",
+          "partOfSpeech": "형용사"
+        },
+        {
+          "hanzi": "画",
+          "pinyin": "huà",
+          "meaningKo": "그리다",
+          "partOfSpeech": "동사"
+        },
+        {
+          "hanzi": "熊猫",
+          "pinyin": "xióngmāo",
+          "meaningKo": "판다",
+          "partOfSpeech": "명사"
+        },
+        {
+          "hanzi": "耳朵",
+          "pinyin": "ěrduo",
+          "meaningKo": "귀",
+          "partOfSpeech": "명사"
+        }
+      ]
+    },
+    "H31111-71": {
+      "answers": [
+        {
+          "answerIndex": 0,
+          "words": [
+            [
+              "左",
+              "Zuǒ"
+            ],
+            [
+              "阿姨",
+              "āyí"
+            ],
+            [
+              "不",
+              "bú"
+            ],
+            [
+              "会",
+              "huì"
+            ],
+            [
+              "讲",
+              "jiǎng"
+            ],
+            [
+              "普通话",
+              "pǔtōnghuà"
+            ],
+            [
+              "。",
+              ""
+            ]
+          ],
+          "ko": "쭤 아주머니는 표준 중국어를 할 줄 모른다."
+        }
+      ],
+      "vocab": [
+        {
+          "hanzi": "阿姨",
+          "pinyin": "āyí",
+          "meaningKo": "아주머니, 이모",
+          "partOfSpeech": "명사"
+        },
+        {
+          "hanzi": "会",
+          "pinyin": "huì",
+          "meaningKo": "~할 줄 알다",
+          "partOfSpeech": "조동사"
+        },
+        {
+          "hanzi": "讲",
+          "pinyin": "jiǎng",
+          "meaningKo": "말하다",
+          "partOfSpeech": "동사"
+        },
+        {
+          "hanzi": "普通话",
+          "pinyin": "pǔtōnghuà",
+          "meaningKo": "표준 중국어",
+          "partOfSpeech": "명사"
+        }
+      ]
+    },
+    "H31111-72": {
+      "answers": [
+        {
+          "answerIndex": 0,
+          "words": [
+            [
+              "这些",
+              "zhèxiē"
+            ],
+            [
+              "面包",
+              "miànbāo"
+            ],
+            [
+              "一共",
+              "yígòng"
+            ],
+            [
+              "18",
+              "shíbā"
+            ],
+            [
+              "块",
+              "kuài"
+            ],
+            [
+              "。",
+              ""
+            ]
+          ],
+          "ko": "이 빵들은 모두 합해서 18위안이다."
+        }
+      ],
+      "vocab": [
+        {
+          "hanzi": "这些",
+          "pinyin": "zhèxiē",
+          "meaningKo": "이것들, 이",
+          "partOfSpeech": "대명사"
+        },
+        {
+          "hanzi": "面包",
+          "pinyin": "miànbāo",
+          "meaningKo": "빵",
+          "partOfSpeech": "명사"
+        },
+        {
+          "hanzi": "一共",
+          "pinyin": "yígòng",
+          "meaningKo": "모두 합해서",
+          "partOfSpeech": "부사"
+        },
+        {
+          "hanzi": "块",
+          "pinyin": "kuài",
+          "meaningKo": "위안의 구어 표현",
+          "partOfSpeech": "양사"
+        }
+      ]
+    },
+    "H31111-73": {
+      "answers": [
+        {
+          "answerIndex": 0,
+          "words": [
+            [
+              "你",
+              "nǐ"
+            ],
+            [
+              "的",
+              "de"
+            ],
+            [
+              "作业",
+              "zuòyè"
+            ],
+            [
+              "完成",
+              "wánchéng"
+            ],
+            [
+              "了",
+              "le"
+            ],
+            [
+              "吗",
+              "ma"
+            ],
+            [
+              "？",
+              ""
+            ]
+          ],
+          "ko": "네 숙제는 다 끝났니?"
+        }
+      ],
+      "vocab": [
+        {
+          "hanzi": "作业",
+          "pinyin": "zuòyè",
+          "meaningKo": "숙제",
+          "partOfSpeech": "명사"
+        },
+        {
+          "hanzi": "完成",
+          "pinyin": "wánchéng",
+          "meaningKo": "완성하다, 끝내다",
+          "partOfSpeech": "동사"
+        },
+        {
+          "hanzi": "了",
+          "pinyin": "le",
+          "meaningKo": "완료나 변화를 나타냄",
+          "partOfSpeech": "조사"
+        }
+      ]
+    },
+    "H31111-74": {
+      "answers": [
+        {
+          "answerIndex": 0,
+          "words": [
+            [
+              "我",
+              "wǒ"
+            ],
+            [
+              "女儿",
+              "nǚ'ér"
+            ],
+            [
+              "的",
+              "de"
+            ],
+            [
+              "数学",
+              "shùxué"
+            ],
+            [
+              "成绩",
+              "chéngjì"
+            ],
+            [
+              "非常",
+              "fēicháng"
+            ],
+            [
+              "好",
+              "hǎo"
+            ],
+            [
+              "。",
+              ""
+            ]
+          ],
+          "ko": "내 딸의 수학 성적은 매우 좋다."
+        }
+      ],
+      "vocab": [
+        {
+          "hanzi": "女儿",
+          "pinyin": "nǚ'ér",
+          "meaningKo": "딸",
+          "partOfSpeech": "명사"
+        },
+        {
+          "hanzi": "数学",
+          "pinyin": "shùxué",
+          "meaningKo": "수학",
+          "partOfSpeech": "명사"
+        },
+        {
+          "hanzi": "成绩",
+          "pinyin": "chéngjì",
+          "meaningKo": "성적",
+          "partOfSpeech": "명사"
+        },
+        {
+          "hanzi": "非常",
+          "pinyin": "fēicháng",
+          "meaningKo": "매우",
+          "partOfSpeech": "부사"
+        }
+      ]
+    },
+    "H31111-75": {
+      "answers": [
+        {
+          "answerIndex": 0,
+          "words": [
+            [
+              "她",
+              "tā"
+            ],
+            [
+              "把",
+              "bǎ"
+            ],
+            [
+              "信",
+              "xìn"
+            ],
+            [
+              "放",
+              "fàng"
+            ],
+            [
+              "进",
+              "jìn"
+            ],
+            [
+              "了",
+              "le"
+            ],
+            [
+              "叔叔",
+              "shūshu"
+            ],
+            [
+              "的",
+              "de"
+            ],
+            [
+              "包",
+              "bāo"
+            ],
+            [
+              "里",
+              "lǐ"
+            ],
+            [
+              "。",
+              ""
+            ]
+          ],
+          "ko": "그녀는 편지를 삼촌의 가방 안에 넣었다."
+        }
+      ],
+      "vocab": [
+        {
+          "hanzi": "信",
+          "pinyin": "xìn",
+          "meaningKo": "편지",
+          "partOfSpeech": "명사"
+        },
+        {
+          "hanzi": "放",
+          "pinyin": "fàng",
+          "meaningKo": "놓다, 넣다",
+          "partOfSpeech": "동사"
+        },
+        {
+          "hanzi": "进",
+          "pinyin": "jìn",
+          "meaningKo": "들어가다",
+          "partOfSpeech": "동사"
+        },
+        {
+          "hanzi": "叔叔",
+          "pinyin": "shūshu",
+          "meaningKo": "삼촌, 아저씨",
+          "partOfSpeech": "명사"
+        },
+        {
+          "hanzi": "包",
+          "pinyin": "bāo",
+          "meaningKo": "가방",
+          "partOfSpeech": "명사"
+        },
+        {
+          "hanzi": "里",
+          "pinyin": "lǐ",
+          "meaningKo": "안",
+          "partOfSpeech": "방위사"
+        }
+      ]
+    },
+    "H31218-71": {
+      "answers": [
+        {
+          "answerIndex": 0,
+          "words": [
+            [
+              "祝",
+              "zhù"
+            ],
+            [
+              "您",
+              "nín"
+            ],
+            [
+              "越来越",
+              "yuèláiyuè"
+            ],
+            [
+              "年轻",
+              "niánqīng"
+            ],
+            [
+              "！",
+              ""
+            ]
+          ],
+          "ko": "갈수록 더 젊어지시길 바랍니다!"
+        }
+      ],
+      "vocab": [
+        {
+          "hanzi": "祝",
+          "pinyin": "zhù",
+          "meaningKo": "축원하다",
+          "partOfSpeech": "동사"
+        },
+        {
+          "hanzi": "您",
+          "pinyin": "nín",
+          "meaningKo": "당신의 높임말",
+          "partOfSpeech": "대명사"
+        },
+        {
+          "hanzi": "越来越",
+          "pinyin": "yuèláiyuè",
+          "meaningKo": "점점 더",
+          "partOfSpeech": "부사"
+        },
+        {
+          "hanzi": "年轻",
+          "pinyin": "niánqīng",
+          "meaningKo": "젊다",
+          "partOfSpeech": "형용사"
+        }
+      ]
+    },
+    "H31218-72": {
+      "answers": [
+        {
+          "answerIndex": 0,
+          "words": [
+            [
+              "花园",
+              "huāyuán"
+            ],
+            [
+              "里",
+              "lǐ"
+            ],
+            [
+              "的",
+              "de"
+            ],
+            [
+              "树",
+              "shù"
+            ],
+            [
+              "和",
+              "hé"
+            ],
+            [
+              "草",
+              "cǎo"
+            ],
+            [
+              "都",
+              "dōu"
+            ],
+            [
+              "绿",
+              "lǜ"
+            ],
+            [
+              "了",
+              "le"
+            ],
+            [
+              "。",
+              ""
+            ]
+          ],
+          "ko": "정원의 나무와 풀이 모두 푸르러졌다."
+        }
+      ],
+      "vocab": [
+        {
+          "hanzi": "花园",
+          "pinyin": "huāyuán",
+          "meaningKo": "정원",
+          "partOfSpeech": "명사"
+        },
+        {
+          "hanzi": "树",
+          "pinyin": "shù",
+          "meaningKo": "나무",
+          "partOfSpeech": "명사"
+        },
+        {
+          "hanzi": "和",
+          "pinyin": "hé",
+          "meaningKo": "~와, ~과",
+          "partOfSpeech": "접속사"
+        },
+        {
+          "hanzi": "草",
+          "pinyin": "cǎo",
+          "meaningKo": "풀",
+          "partOfSpeech": "명사"
+        },
+        {
+          "hanzi": "绿",
+          "pinyin": "lǜ",
+          "meaningKo": "푸르다, 녹색이다",
+          "partOfSpeech": "형용사"
+        }
+      ]
+    },
+    "H31218-73": {
+      "answers": [
+        {
+          "answerIndex": 0,
+          "words": [
+            [
+              "这",
+              "zhè"
+            ],
+            [
+              "条",
+              "tiáo"
+            ],
+            [
+              "裤子",
+              "kùzi"
+            ],
+            [
+              "太",
+              "tài"
+            ],
+            [
+              "长",
+              "cháng"
+            ],
+            [
+              "了",
+              "le"
+            ],
+            [
+              "！",
+              ""
+            ]
+          ],
+          "ko": "이 바지는 너무 길다!"
+        }
+      ],
+      "vocab": [
+        {
+          "hanzi": "条",
+          "pinyin": "tiáo",
+          "meaningKo": "길쭉한 사물을 세는 단위",
+          "partOfSpeech": "양사"
+        },
+        {
+          "hanzi": "裤子",
+          "pinyin": "kùzi",
+          "meaningKo": "바지",
+          "partOfSpeech": "명사"
+        },
+        {
+          "hanzi": "太",
+          "pinyin": "tài",
+          "meaningKo": "너무",
+          "partOfSpeech": "부사"
+        },
+        {
+          "hanzi": "长",
+          "pinyin": "cháng",
+          "meaningKo": "길다",
+          "partOfSpeech": "형용사"
+        }
+      ]
+    },
+    "H31218-74": {
+      "answers": [
+        {
+          "answerIndex": 0,
+          "words": [
+            [
+              "我",
+              "wǒ"
+            ],
+            [
+              "觉得",
+              "juéde"
+            ],
+            [
+              "熊猫",
+              "xióngmāo"
+            ],
+            [
+              "更",
+              "gèng"
+            ],
+            [
+              "可爱",
+              "kě'ài"
+            ],
+            [
+              "。",
+              ""
+            ]
+          ],
+          "ko": "나는 판다가 더 귀엽다고 생각한다."
+        }
+      ],
+      "vocab": [
+        {
+          "hanzi": "觉得",
+          "pinyin": "juéde",
+          "meaningKo": "생각하다, 느끼다",
+          "partOfSpeech": "동사"
+        },
+        {
+          "hanzi": "熊猫",
+          "pinyin": "xióngmāo",
+          "meaningKo": "판다",
+          "partOfSpeech": "명사"
+        },
+        {
+          "hanzi": "更",
+          "pinyin": "gèng",
+          "meaningKo": "더, 더욱",
+          "partOfSpeech": "부사"
+        },
+        {
+          "hanzi": "可爱",
+          "pinyin": "kě'ài",
+          "meaningKo": "귀엽다",
+          "partOfSpeech": "형용사"
+        }
+      ]
+    },
+    "H31218-75": {
+      "answers": [
+        {
+          "answerIndex": 0,
+          "words": [
+            [
+              "她",
+              "tā"
+            ],
+            [
+              "的",
+              "de"
+            ],
+            [
+              "帽子",
+              "màozi"
+            ],
+            [
+              "被",
+              "bèi"
+            ],
+            [
+              "风",
+              "fēng"
+            ],
+            [
+              "刮",
+              "guā"
+            ],
+            [
+              "跑",
+              "pǎo"
+            ],
+            [
+              "了",
+              "le"
+            ],
+            [
+              "。",
+              ""
+            ]
+          ],
+          "ko": "그녀의 모자가 바람에 날아가 버렸다."
+        }
+      ],
+      "vocab": [
+        {
+          "hanzi": "帽子",
+          "pinyin": "màozi",
+          "meaningKo": "모자",
+          "partOfSpeech": "명사"
+        },
+        {
+          "hanzi": "被",
+          "pinyin": "bèi",
+          "meaningKo": "~에게, ~에 의해",
+          "partOfSpeech": "개사"
+        },
+        {
+          "hanzi": "风",
+          "pinyin": "fēng",
+          "meaningKo": "바람",
+          "partOfSpeech": "명사"
+        },
+        {
+          "hanzi": "刮",
+          "pinyin": "guā",
+          "meaningKo": "바람이 불다",
+          "partOfSpeech": "동사"
+        },
+        {
+          "hanzi": "跑",
+          "pinyin": "pǎo",
+          "meaningKo": "달아나다",
+          "partOfSpeech": "동사"
+        }
+      ]
+    },
+    "H31219-71": {
+      "answers": [
+        {
+          "answerIndex": 0,
+          "words": [
+            [
+              "蓝",
+              "Lán"
+            ],
+            [
+              "小姐",
+              "xiǎojie"
+            ],
+            [
+              "对",
+              "duì"
+            ],
+            [
+              "人",
+              "rén"
+            ],
+            [
+              "非常",
+              "fēicháng"
+            ],
+            [
+              "热情",
+              "rèqíng"
+            ],
+            [
+              "。",
+              ""
+            ]
+          ],
+          "ko": "란 씨는 사람들에게 매우 친절하고 열정적이다."
+        }
+      ],
+      "vocab": [
+        {
+          "hanzi": "小姐",
+          "pinyin": "xiǎojie",
+          "meaningKo": "아가씨, 미혼 여성의 호칭",
+          "partOfSpeech": "명사"
+        },
+        {
+          "hanzi": "对",
+          "pinyin": "duì",
+          "meaningKo": "~에게, ~에 대해",
+          "partOfSpeech": "개사"
+        },
+        {
+          "hanzi": "非常",
+          "pinyin": "fēicháng",
+          "meaningKo": "매우",
+          "partOfSpeech": "부사"
+        },
+        {
+          "hanzi": "热情",
+          "pinyin": "rèqíng",
+          "meaningKo": "친절하고 열정적이다",
+          "partOfSpeech": "형용사"
+        }
+      ]
+    },
+    "H31219-72": {
+      "answers": [
+        {
+          "answerIndex": 0,
+          "words": [
+            [
+              "邻居",
+              "línjū"
+            ],
+            [
+              "高兴",
+              "gāoxìng"
+            ],
+            [
+              "地",
+              "de"
+            ],
+            [
+              "走",
+              "zǒu"
+            ],
+            [
+              "了",
+              "le"
+            ],
+            [
+              "。",
+              ""
+            ]
+          ],
+          "ko": "이웃은 기분 좋게 떠났다."
+        }
+      ],
+      "vocab": [
+        {
+          "hanzi": "邻居",
+          "pinyin": "línjū",
+          "meaningKo": "이웃",
+          "partOfSpeech": "명사"
+        },
+        {
+          "hanzi": "高兴",
+          "pinyin": "gāoxìng",
+          "meaningKo": "기쁘다",
+          "partOfSpeech": "형용사"
+        },
+        {
+          "hanzi": "地",
+          "pinyin": "de",
+          "meaningKo": "부사어를 만드는 표지",
+          "partOfSpeech": "조사"
+        },
+        {
+          "hanzi": "走",
+          "pinyin": "zǒu",
+          "meaningKo": "떠나다, 걷다",
+          "partOfSpeech": "동사"
+        }
+      ]
+    },
+    "H31219-73": {
+      "answers": [
+        {
+          "answerIndex": 0,
+          "words": [
+            [
+              "妹妹",
+              "mèimei"
+            ],
+            [
+              "长",
+              "zhǎng"
+            ],
+            [
+              "得",
+              "de"
+            ],
+            [
+              "最",
+              "zuì"
+            ],
+            [
+              "像",
+              "xiàng"
+            ],
+            [
+              "妈妈",
+              "māma"
+            ],
+            [
+              "。",
+              ""
+            ]
+          ],
+          "ko": "여동생은 생김새가 엄마를 가장 닮았다."
+        }
+      ],
+      "vocab": [
+        {
+          "hanzi": "妹妹",
+          "pinyin": "mèimei",
+          "meaningKo": "여동생",
+          "partOfSpeech": "명사"
+        },
+        {
+          "hanzi": "长",
+          "pinyin": "zhǎng",
+          "meaningKo": "자라다, 생기다",
+          "partOfSpeech": "동사"
+        },
+        {
+          "hanzi": "最",
+          "pinyin": "zuì",
+          "meaningKo": "가장",
+          "partOfSpeech": "부사"
+        },
+        {
+          "hanzi": "像",
+          "pinyin": "xiàng",
+          "meaningKo": "닮다",
+          "partOfSpeech": "동사"
+        },
+        {
+          "hanzi": "妈妈",
+          "pinyin": "māma",
+          "meaningKo": "엄마",
+          "partOfSpeech": "명사"
+        }
+      ]
+    },
+    "H31219-74": {
+      "answers": [
+        {
+          "answerIndex": 0,
+          "words": [
+            [
+              "请",
+              "qǐng"
+            ],
+            [
+              "根据",
+              "gēnjù"
+            ],
+            [
+              "要求",
+              "yāoqiú"
+            ],
+            [
+              "回答",
+              "huídá"
+            ],
+            [
+              "问题",
+              "wèntí"
+            ],
+            [
+              "。",
+              ""
+            ]
+          ],
+          "ko": "요구 사항에 따라 질문에 답해 주세요."
+        }
+      ],
+      "vocab": [
+        {
+          "hanzi": "请",
+          "pinyin": "qǐng",
+          "meaningKo": "~해 주세요",
+          "partOfSpeech": "동사"
+        },
+        {
+          "hanzi": "根据",
+          "pinyin": "gēnjù",
+          "meaningKo": "~에 근거하여",
+          "partOfSpeech": "개사"
+        },
+        {
+          "hanzi": "要求",
+          "pinyin": "yāoqiú",
+          "meaningKo": "요구 사항",
+          "partOfSpeech": "명사"
+        },
+        {
+          "hanzi": "回答",
+          "pinyin": "huídá",
+          "meaningKo": "대답하다",
+          "partOfSpeech": "동사"
+        },
+        {
+          "hanzi": "问题",
+          "pinyin": "wèntí",
+          "meaningKo": "질문, 문제",
+          "partOfSpeech": "명사"
+        }
+      ]
+    },
+    "H31219-75": {
+      "answers": [
+        {
+          "answerIndex": 0,
+          "words": [
+            [
+              "街道",
+              "jiēdào"
+            ],
+            [
+              "被",
+              "bèi"
+            ],
+            [
+              "打扫",
+              "dǎsǎo"
+            ],
+            [
+              "干净",
+              "gānjìng"
+            ],
+            [
+              "了",
+              "le"
+            ],
+            [
+              "。",
+              ""
+            ]
+          ],
+          "ko": "거리가 깨끗하게 청소되었다."
+        }
+      ],
+      "vocab": [
+        {
+          "hanzi": "街道",
+          "pinyin": "jiēdào",
+          "meaningKo": "거리",
+          "partOfSpeech": "명사"
+        },
+        {
+          "hanzi": "被",
+          "pinyin": "bèi",
+          "meaningKo": "~에 의해",
+          "partOfSpeech": "개사"
+        },
+        {
+          "hanzi": "打扫",
+          "pinyin": "dǎsǎo",
+          "meaningKo": "청소하다",
+          "partOfSpeech": "동사"
+        },
+        {
+          "hanzi": "干净",
+          "pinyin": "gānjìng",
+          "meaningKo": "깨끗하다",
+          "partOfSpeech": "형용사"
+        }
+      ]
+    },
+    "H31220-71": {
+      "answers": [
+        {
+          "answerIndex": 0,
+          "words": [
+            [
+              "中午",
+              "zhōngwǔ"
+            ],
+            [
+              "买",
+              "mǎi"
+            ],
+            [
+              "的",
+              "de"
+            ],
+            [
+              "西瓜",
+              "xīguā"
+            ],
+            [
+              "特别",
+              "tèbié"
+            ],
+            [
+              "甜",
+              "tián"
+            ],
+            [
+              "。",
+              ""
+            ]
+          ],
+          "ko": "점심때 산 수박은 특히 달다."
+        }
+      ],
+      "vocab": [
+        {
+          "hanzi": "中午",
+          "pinyin": "zhōngwǔ",
+          "meaningKo": "정오, 점심때",
+          "partOfSpeech": "명사"
+        },
+        {
+          "hanzi": "买",
+          "pinyin": "mǎi",
+          "meaningKo": "사다",
+          "partOfSpeech": "동사"
+        },
+        {
+          "hanzi": "西瓜",
+          "pinyin": "xīguā",
+          "meaningKo": "수박",
+          "partOfSpeech": "명사"
+        },
+        {
+          "hanzi": "特别",
+          "pinyin": "tèbié",
+          "meaningKo": "특히, 아주",
+          "partOfSpeech": "부사"
+        },
+        {
+          "hanzi": "甜",
+          "pinyin": "tián",
+          "meaningKo": "달다",
+          "partOfSpeech": "형용사"
+        }
+      ]
+    },
+    "H31220-72": {
+      "answers": [
+        {
+          "answerIndex": 0,
+          "words": [
+            [
+              "教室",
+              "jiàoshì"
+            ],
+            [
+              "的",
+              "de"
+            ],
+            [
+              "空调",
+              "kōngtiáo"
+            ],
+            [
+              "又",
+              "yòu"
+            ],
+            [
+              "坏",
+              "huài"
+            ],
+            [
+              "了",
+              "le"
+            ],
+            [
+              "。",
+              ""
+            ]
+          ],
+          "ko": "교실의 에어컨이 또 고장 났다."
+        }
+      ],
+      "vocab": [
+        {
+          "hanzi": "教室",
+          "pinyin": "jiàoshì",
+          "meaningKo": "교실",
+          "partOfSpeech": "명사"
+        },
+        {
+          "hanzi": "空调",
+          "pinyin": "kōngtiáo",
+          "meaningKo": "에어컨",
+          "partOfSpeech": "명사"
+        },
+        {
+          "hanzi": "又",
+          "pinyin": "yòu",
+          "meaningKo": "또",
+          "partOfSpeech": "부사"
+        },
+        {
+          "hanzi": "坏",
+          "pinyin": "huài",
+          "meaningKo": "고장 나다, 망가지다",
+          "partOfSpeech": "형용사"
+        }
+      ]
+    },
+    "H31220-73": {
+      "answers": [
+        {
+          "answerIndex": 0,
+          "words": [
+            [
+              "真",
+              "zhēn"
+            ],
+            [
+              "不",
+              "bù"
+            ],
+            [
+              "敢",
+              "gǎn"
+            ],
+            [
+              "相信",
+              "xiāngxìn"
+            ],
+            [
+              "那",
+              "nà"
+            ],
+            [
+              "是",
+              "shì"
+            ],
+            [
+              "真",
+              "zhēn"
+            ],
+            [
+              "的",
+              "de"
+            ],
+            [
+              "。",
+              ""
+            ]
+          ],
+          "ko": "그것이 사실이라는 것을 정말 믿을 수가 없다."
+        }
+      ],
+      "vocab": [
+        {
+          "hanzi": "真",
+          "pinyin": "zhēn",
+          "meaningKo": "정말",
+          "partOfSpeech": "부사"
+        },
+        {
+          "hanzi": "敢",
+          "pinyin": "gǎn",
+          "meaningKo": "감히 ~하다",
+          "partOfSpeech": "조동사"
+        },
+        {
+          "hanzi": "相信",
+          "pinyin": "xiāngxìn",
+          "meaningKo": "믿다",
+          "partOfSpeech": "동사"
+        },
+        {
+          "hanzi": "那",
+          "pinyin": "nà",
+          "meaningKo": "그것",
+          "partOfSpeech": "대명사"
+        }
+      ]
+    },
+    "H31220-74": {
+      "answers": [
+        {
+          "answerIndex": 0,
+          "words": [
+            [
+              "这",
+              "zhè"
+            ],
+            [
+              "条",
+              "tiáo"
+            ],
+            [
+              "裤子",
+              "kùzi"
+            ],
+            [
+              "多少",
+              "duōshao"
+            ],
+            [
+              "钱",
+              "qián"
+            ],
+            [
+              "？",
+              ""
+            ]
+          ],
+          "ko": "이 바지는 얼마인가요?"
+        }
+      ],
+      "vocab": [
+        {
+          "hanzi": "条",
+          "pinyin": "tiáo",
+          "meaningKo": "길쭉한 사물을 세는 단위",
+          "partOfSpeech": "양사"
+        },
+        {
+          "hanzi": "裤子",
+          "pinyin": "kùzi",
+          "meaningKo": "바지",
+          "partOfSpeech": "명사"
+        },
+        {
+          "hanzi": "多少",
+          "pinyin": "duōshao",
+          "meaningKo": "얼마",
+          "partOfSpeech": "대명사"
+        },
+        {
+          "hanzi": "钱",
+          "pinyin": "qián",
+          "meaningKo": "돈",
+          "partOfSpeech": "명사"
+        }
+      ]
+    },
+    "H31220-75": {
+      "answers": [
+        {
+          "answerIndex": 0,
+          "words": [
+            [
+              "请",
+              "qǐng"
+            ],
+            [
+              "把",
+              "bǎ"
+            ],
+            [
+              "菜单",
+              "càidān"
+            ],
+            [
+              "拿",
+              "ná"
+            ],
+            [
+              "给",
+              "gěi"
+            ],
+            [
+              "我",
+              "wǒ"
+            ],
+            [
+              "。",
+              ""
+            ]
+          ],
+          "ko": "메뉴를 저에게 가져다주세요."
+        }
+      ],
+      "vocab": [
+        {
+          "hanzi": "请",
+          "pinyin": "qǐng",
+          "meaningKo": "~해 주세요",
+          "partOfSpeech": "동사"
+        },
+        {
+          "hanzi": "把",
+          "pinyin": "bǎ",
+          "meaningKo": "목적어를 동사 앞으로 이끄는 표지",
+          "partOfSpeech": "개사"
+        },
+        {
+          "hanzi": "菜单",
+          "pinyin": "càidān",
+          "meaningKo": "메뉴, 차림표",
+          "partOfSpeech": "명사"
+        },
+        {
+          "hanzi": "拿",
+          "pinyin": "ná",
+          "meaningKo": "가져오다, 들다",
+          "partOfSpeech": "동사"
+        },
+        {
+          "hanzi": "给",
+          "pinyin": "gěi",
+          "meaningKo": "~에게 주다",
+          "partOfSpeech": "동사"
+        }
+      ]
+    },
+    "H31221-71": {
+      "answers": [
+        {
+          "answerIndex": 0,
+          "words": [
+            [
+              "这",
+              "zhè"
+            ],
+            [
+              "种",
+              "zhǒng"
+            ],
+            [
+              "蛋糕",
+              "dàngāo"
+            ],
+            [
+              "太",
+              "tài"
+            ],
+            [
+              "甜",
+              "tián"
+            ],
+            [
+              "了",
+              "le"
+            ],
+            [
+              "。",
+              ""
+            ]
+          ],
+          "ko": "이런 종류의 케이크는 너무 달다."
+        }
+      ],
+      "vocab": [
+        {
+          "hanzi": "种",
+          "pinyin": "zhǒng",
+          "meaningKo": "종류를 세는 단위",
+          "partOfSpeech": "양사"
+        },
+        {
+          "hanzi": "蛋糕",
+          "pinyin": "dàngāo",
+          "meaningKo": "케이크",
+          "partOfSpeech": "명사"
+        },
+        {
+          "hanzi": "太",
+          "pinyin": "tài",
+          "meaningKo": "너무",
+          "partOfSpeech": "부사"
+        },
+        {
+          "hanzi": "甜",
+          "pinyin": "tián",
+          "meaningKo": "달다",
+          "partOfSpeech": "형용사"
+        }
+      ]
+    },
+    "H31221-72": {
+      "answers": [
+        {
+          "answerIndex": 0,
+          "words": [
+            [
+              "这",
+              "zhè"
+            ],
+            [
+              "个",
+              "ge"
+            ],
+            [
+              "月",
+              "yuè"
+            ],
+            [
+              "花",
+              "huā"
+            ],
+            [
+              "了",
+              "le"
+            ],
+            [
+              "一万",
+              "yíwàn"
+            ],
+            [
+              "多",
+              "duō"
+            ],
+            [
+              "块",
+              "kuài"
+            ],
+            [
+              "钱",
+              "qián"
+            ],
+            [
+              "。",
+              ""
+            ]
+          ],
+          "ko": "이번 달에는 만 위안 넘게 썼다."
+        }
+      ],
+      "vocab": [
+        {
+          "hanzi": "月",
+          "pinyin": "yuè",
+          "meaningKo": "달, 월",
+          "partOfSpeech": "명사"
+        },
+        {
+          "hanzi": "花",
+          "pinyin": "huā",
+          "meaningKo": "돈이나 시간을 쓰다",
+          "partOfSpeech": "동사"
+        },
+        {
+          "hanzi": "一万",
+          "pinyin": "yíwàn",
+          "meaningKo": "만, 10000",
+          "partOfSpeech": "수사"
+        },
+        {
+          "hanzi": "多",
+          "pinyin": "duō",
+          "meaningKo": "수량 뒤에서 여분을 나타냄",
+          "partOfSpeech": "수사"
+        },
+        {
+          "hanzi": "块",
+          "pinyin": "kuài",
+          "meaningKo": "위안의 구어 표현",
+          "partOfSpeech": "양사"
+        },
+        {
+          "hanzi": "钱",
+          "pinyin": "qián",
+          "meaningKo": "돈",
+          "partOfSpeech": "명사"
+        }
+      ]
+    },
+    "H31221-73": {
+      "answers": [
+        {
+          "answerIndex": 0,
+          "words": [
+            [
+              "帮助",
+              "bāngzhù"
+            ],
+            [
+              "别人",
+              "biérén"
+            ],
+            [
+              "是",
+              "shì"
+            ],
+            [
+              "一",
+              "yí"
+            ],
+            [
+              "件",
+              "jiàn"
+            ],
+            [
+              "快乐",
+              "kuàilè"
+            ],
+            [
+              "的",
+              "de"
+            ],
+            [
+              "事情",
+              "shìqing"
+            ],
+            [
+              "。",
+              ""
+            ]
+          ],
+          "ko": "다른 사람을 돕는 것은 즐거운 일이다."
+        }
+      ],
+      "vocab": [
+        {
+          "hanzi": "帮助",
+          "pinyin": "bāngzhù",
+          "meaningKo": "돕다",
+          "partOfSpeech": "동사"
+        },
+        {
+          "hanzi": "别人",
+          "pinyin": "biérén",
+          "meaningKo": "다른 사람",
+          "partOfSpeech": "대명사"
+        },
+        {
+          "hanzi": "件",
+          "pinyin": "jiàn",
+          "meaningKo": "일이나 물건을 세는 단위",
+          "partOfSpeech": "양사"
+        },
+        {
+          "hanzi": "快乐",
+          "pinyin": "kuàilè",
+          "meaningKo": "즐겁다",
+          "partOfSpeech": "형용사"
+        },
+        {
+          "hanzi": "事情",
+          "pinyin": "shìqing",
+          "meaningKo": "일",
+          "partOfSpeech": "명사"
+        }
+      ]
+    },
+    "H31221-74": {
+      "answers": [
+        {
+          "answerIndex": 0,
+          "words": [
+            [
+              "会议",
+              "huìyì"
+            ],
+            [
+              "还",
+              "hái"
+            ],
+            [
+              "没有",
+              "méiyǒu"
+            ],
+            [
+              "结束",
+              "jiéshù"
+            ],
+            [
+              "呢",
+              "ne"
+            ],
+            [
+              "。",
+              ""
+            ]
+          ],
+          "ko": "회의는 아직 끝나지 않았다."
+        }
+      ],
+      "vocab": [
+        {
+          "hanzi": "会议",
+          "pinyin": "huìyì",
+          "meaningKo": "회의",
+          "partOfSpeech": "명사"
+        },
+        {
+          "hanzi": "还",
+          "pinyin": "hái",
+          "meaningKo": "아직",
+          "partOfSpeech": "부사"
+        },
+        {
+          "hanzi": "没有",
+          "pinyin": "méiyǒu",
+          "meaningKo": "아직 ~하지 않았다",
+          "partOfSpeech": "부사"
+        },
+        {
+          "hanzi": "结束",
+          "pinyin": "jiéshù",
+          "meaningKo": "끝나다, 끝내다",
+          "partOfSpeech": "동사"
+        }
+      ]
+    },
+    "H31221-75": {
+      "answers": [
+        {
+          "answerIndex": 0,
+          "words": [
+            [
+              "她",
+              "tā"
+            ],
+            [
+              "的",
+              "de"
+            ],
+            [
+              "汉语",
+              "Hànyǔ"
+            ],
+            [
+              "水平",
+              "shuǐpíng"
+            ],
+            [
+              "提高",
+              "tígāo"
+            ],
+            [
+              "得",
+              "de"
+            ],
+            [
+              "很",
+              "hěn"
+            ],
+            [
+              "快",
+              "kuài"
+            ],
+            [
+              "。",
+              ""
+            ]
+          ],
+          "ko": "그녀의 중국어 실력은 아주 빠르게 향상된다."
+        }
+      ],
+      "vocab": [
+        {
+          "hanzi": "汉语",
+          "pinyin": "Hànyǔ",
+          "meaningKo": "중국어",
+          "partOfSpeech": "명사"
+        },
+        {
+          "hanzi": "水平",
+          "pinyin": "shuǐpíng",
+          "meaningKo": "수준, 실력",
+          "partOfSpeech": "명사"
+        },
+        {
+          "hanzi": "提高",
+          "pinyin": "tígāo",
+          "meaningKo": "높아지다, 향상되다",
+          "partOfSpeech": "동사"
+        },
+        {
+          "hanzi": "快",
+          "pinyin": "kuài",
+          "meaningKo": "빠르다",
+          "partOfSpeech": "형용사"
+        }
+      ]
+    },
+    "H31328-71": {
+      "answers": [
+        {
+          "answerIndex": 0,
+          "words": [
+            [
+              "她",
+              "tā"
+            ],
+            [
+              "的",
+              "de"
+            ],
+            [
+              "头发",
+              "tóufa"
+            ],
+            [
+              "又",
+              "yòu"
+            ],
+            [
+              "黑",
+              "hēi"
+            ],
+            [
+              "又",
+              "yòu"
+            ],
+            [
+              "长",
+              "cháng"
+            ],
+            [
+              "。",
+              ""
+            ]
+          ],
+          "ko": "그녀의 머리카락은 검고 길다."
+        }
+      ],
+      "vocab": [
+        {
+          "hanzi": "头发",
+          "pinyin": "tóufa",
+          "meaningKo": "머리카락",
+          "partOfSpeech": "명사"
+        },
+        {
+          "hanzi": "又",
+          "pinyin": "yòu",
+          "meaningKo": "~하기도 하고",
+          "partOfSpeech": "부사"
+        },
+        {
+          "hanzi": "黑",
+          "pinyin": "hēi",
+          "meaningKo": "검다",
+          "partOfSpeech": "형용사"
+        },
+        {
+          "hanzi": "长",
+          "pinyin": "cháng",
+          "meaningKo": "길다",
+          "partOfSpeech": "형용사"
+        }
+      ]
+    },
+    "H31328-72": {
+      "answers": [
+        {
+          "answerIndex": 0,
+          "words": [
+            [
+              "我",
+              "wǒ"
+            ],
+            [
+              "终于",
+              "zhōngyú"
+            ],
+            [
+              "学会",
+              "xuéhuì"
+            ],
+            [
+              "用",
+              "yòng"
+            ],
+            [
+              "筷子",
+              "kuàizi"
+            ],
+            [
+              "了",
+              "le"
+            ],
+            [
+              "。",
+              ""
+            ]
+          ],
+          "ko": "나는 마침내 젓가락을 사용할 줄 알게 되었다."
+        }
+      ],
+      "vocab": [
+        {
+          "hanzi": "终于",
+          "pinyin": "zhōngyú",
+          "meaningKo": "마침내",
+          "partOfSpeech": "부사"
+        },
+        {
+          "hanzi": "学会",
+          "pinyin": "xuéhuì",
+          "meaningKo": "배워서 할 줄 알게 되다",
+          "partOfSpeech": "동사"
+        },
+        {
+          "hanzi": "用",
+          "pinyin": "yòng",
+          "meaningKo": "사용하다",
+          "partOfSpeech": "동사"
+        },
+        {
+          "hanzi": "筷子",
+          "pinyin": "kuàizi",
+          "meaningKo": "젓가락",
+          "partOfSpeech": "명사"
+        }
+      ]
+    },
+    "H31328-73": {
+      "answers": [
+        {
+          "answerIndex": 0,
+          "words": [
+            [
+              "他",
+              "tā"
+            ],
+            [
+              "把",
+              "bǎ"
+            ],
+            [
+              "教室",
+              "jiàoshì"
+            ],
+            [
+              "打扫",
+              "dǎsǎo"
+            ],
+            [
+              "得",
+              "de"
+            ],
+            [
+              "干干净净",
+              "gāngānjìngjìng"
+            ],
+            [
+              "。",
+              ""
+            ]
+          ],
+          "ko": "그는 교실을 아주 깨끗하게 청소했다."
+        }
+      ],
+      "vocab": [
+        {
+          "hanzi": "把",
+          "pinyin": "bǎ",
+          "meaningKo": "목적어를 동사 앞으로 이끄는 표지",
+          "partOfSpeech": "개사"
+        },
+        {
+          "hanzi": "教室",
+          "pinyin": "jiàoshì",
+          "meaningKo": "교실",
+          "partOfSpeech": "명사"
+        },
+        {
+          "hanzi": "打扫",
+          "pinyin": "dǎsǎo",
+          "meaningKo": "청소하다",
+          "partOfSpeech": "동사"
+        },
+        {
+          "hanzi": "干干净净",
+          "pinyin": "gāngānjìngjìng",
+          "meaningKo": "아주 깨끗하다",
+          "partOfSpeech": "형용사"
+        }
+      ]
+    },
+    "H31328-74": {
+      "answers": [
+        {
+          "answerIndex": 0,
+          "words": [
+            [
+              "我",
+              "wǒ"
+            ],
+            [
+              "不",
+              "bù"
+            ],
+            [
+              "喜欢",
+              "xǐhuan"
+            ],
+            [
+              "看",
+              "kàn"
+            ],
+            [
+              "体育",
+              "tǐyù"
+            ],
+            [
+              "新闻",
+              "xīnwén"
+            ],
+            [
+              "。",
+              ""
+            ]
+          ],
+          "ko": "나는 스포츠 뉴스를 보는 것을 좋아하지 않는다."
+        }
+      ],
+      "vocab": [
+        {
+          "hanzi": "喜欢",
+          "pinyin": "xǐhuan",
+          "meaningKo": "좋아하다",
+          "partOfSpeech": "동사"
+        },
+        {
+          "hanzi": "看",
+          "pinyin": "kàn",
+          "meaningKo": "보다",
+          "partOfSpeech": "동사"
+        },
+        {
+          "hanzi": "体育",
+          "pinyin": "tǐyù",
+          "meaningKo": "체육, 스포츠",
+          "partOfSpeech": "명사"
+        },
+        {
+          "hanzi": "新闻",
+          "pinyin": "xīnwén",
+          "meaningKo": "뉴스",
+          "partOfSpeech": "명사"
+        }
+      ]
+    },
+    "H31328-75": {
+      "answers": [
+        {
+          "answerIndex": 0,
+          "words": [
+            [
+              "校长",
+              "xiàozhǎng"
+            ],
+            [
+              "对",
+              "duì"
+            ],
+            [
+              "你",
+              "nǐ"
+            ],
+            [
+              "的",
+              "de"
+            ],
+            [
+              "回答",
+              "huídá"
+            ],
+            [
+              "非常",
+              "fēicháng"
+            ],
+            [
+              "满意",
+              "mǎnyì"
+            ],
+            [
+              "。",
+              ""
+            ]
+          ],
+          "ko": "교장 선생님은 네 대답에 매우 만족하신다."
+        }
+      ],
+      "vocab": [
+        {
+          "hanzi": "校长",
+          "pinyin": "xiàozhǎng",
+          "meaningKo": "교장",
+          "partOfSpeech": "명사"
+        },
+        {
+          "hanzi": "对",
+          "pinyin": "duì",
+          "meaningKo": "~에 대해",
+          "partOfSpeech": "개사"
+        },
+        {
+          "hanzi": "回答",
+          "pinyin": "huídá",
+          "meaningKo": "대답",
+          "partOfSpeech": "명사"
+        },
+        {
+          "hanzi": "非常",
+          "pinyin": "fēicháng",
+          "meaningKo": "매우",
+          "partOfSpeech": "부사"
+        },
+        {
+          "hanzi": "满意",
+          "pinyin": "mǎnyì",
+          "meaningKo": "만족하다",
+          "partOfSpeech": "형용사"
+        }
+      ]
+    },
+    "H31329-71": {
+      "answers": [
+        {
+          "answerIndex": 0,
+          "words": [
+            [
+              "他",
+              "tā"
+            ],
+            [
+              "学习",
+              "xuéxí"
+            ],
+            [
+              "特别",
+              "tèbié"
+            ],
+            [
+              "努力",
+              "nǔlì"
+            ],
+            [
+              "。",
+              ""
+            ]
+          ],
+          "ko": "그는 공부를 특히 열심히 한다."
+        }
+      ],
+      "vocab": [
+        {
+          "hanzi": "学习",
+          "pinyin": "xuéxí",
+          "meaningKo": "공부하다",
+          "partOfSpeech": "동사"
+        },
+        {
+          "hanzi": "特别",
+          "pinyin": "tèbié",
+          "meaningKo": "특히, 아주",
+          "partOfSpeech": "부사"
+        },
+        {
+          "hanzi": "努力",
+          "pinyin": "nǔlì",
+          "meaningKo": "노력하다, 열심이다",
+          "partOfSpeech": "형용사"
+        }
+      ]
+    },
+    "H31329-72": {
+      "answers": [
+        {
+          "answerIndex": 0,
+          "words": [
+            [
+              "你",
+              "nǐ"
+            ],
+            [
+              "想",
+              "xiǎng"
+            ],
+            [
+              "吃",
+              "chī"
+            ],
+            [
+              "哪",
+              "nǎ"
+            ],
+            [
+              "种",
+              "zhǒng"
+            ],
+            [
+              "面包",
+              "miànbāo"
+            ],
+            [
+              "？",
+              ""
+            ]
+          ],
+          "ko": "너는 어떤 종류의 빵을 먹고 싶니?"
+        }
+      ],
+      "vocab": [
+        {
+          "hanzi": "想",
+          "pinyin": "xiǎng",
+          "meaningKo": "~하고 싶다",
+          "partOfSpeech": "조동사"
+        },
+        {
+          "hanzi": "吃",
+          "pinyin": "chī",
+          "meaningKo": "먹다",
+          "partOfSpeech": "동사"
+        },
+        {
+          "hanzi": "哪",
+          "pinyin": "nǎ",
+          "meaningKo": "어느",
+          "partOfSpeech": "대명사"
+        },
+        {
+          "hanzi": "种",
+          "pinyin": "zhǒng",
+          "meaningKo": "종류를 세는 단위",
+          "partOfSpeech": "양사"
+        },
+        {
+          "hanzi": "面包",
+          "pinyin": "miànbāo",
+          "meaningKo": "빵",
+          "partOfSpeech": "명사"
+        }
+      ]
+    },
+    "H31329-73": {
+      "answers": [
+        {
+          "answerIndex": 0,
+          "words": [
+            [
+              "你",
+              "nǐ"
+            ],
+            [
+              "的",
+              "de"
+            ],
+            [
+              "脸",
+              "liǎn"
+            ],
+            [
+              "还",
+              "hái"
+            ],
+            [
+              "没",
+              "méi"
+            ],
+            [
+              "洗",
+              "xǐ"
+            ],
+            [
+              "干净",
+              "gānjìng"
+            ],
+            [
+              "。",
+              ""
+            ]
+          ],
+          "ko": "네 얼굴은 아직 깨끗이 씻기지 않았다."
+        }
+      ],
+      "vocab": [
+        {
+          "hanzi": "脸",
+          "pinyin": "liǎn",
+          "meaningKo": "얼굴",
+          "partOfSpeech": "명사"
+        },
+        {
+          "hanzi": "还",
+          "pinyin": "hái",
+          "meaningKo": "아직",
+          "partOfSpeech": "부사"
+        },
+        {
+          "hanzi": "没",
+          "pinyin": "méi",
+          "meaningKo": "~하지 않았다",
+          "partOfSpeech": "부사"
+        },
+        {
+          "hanzi": "洗",
+          "pinyin": "xǐ",
+          "meaningKo": "씻다",
+          "partOfSpeech": "동사"
+        },
+        {
+          "hanzi": "干净",
+          "pinyin": "gānjìng",
+          "meaningKo": "깨끗하다",
+          "partOfSpeech": "형용사"
+        }
+      ]
+    },
+    "H31329-74": {
+      "answers": [
+        {
+          "answerIndex": 0,
+          "words": [
+            [
+              "他",
+              "tā"
+            ],
+            [
+              "的",
+              "de"
+            ],
+            [
+              "成绩",
+              "chéngjì"
+            ],
+            [
+              "一直",
+              "yìzhí"
+            ],
+            [
+              "是",
+              "shì"
+            ],
+            [
+              "我们",
+              "wǒmen"
+            ],
+            [
+              "班",
+              "bān"
+            ],
+            [
+              "最",
+              "zuì"
+            ],
+            [
+              "好",
+              "hǎo"
+            ],
+            [
+              "的",
+              "de"
+            ],
+            [
+              "。",
+              ""
+            ]
+          ],
+          "ko": "그의 성적은 줄곧 우리 반에서 가장 좋았다."
+        }
+      ],
+      "vocab": [
+        {
+          "hanzi": "成绩",
+          "pinyin": "chéngjì",
+          "meaningKo": "성적",
+          "partOfSpeech": "명사"
+        },
+        {
+          "hanzi": "一直",
+          "pinyin": "yìzhí",
+          "meaningKo": "줄곧, 계속",
+          "partOfSpeech": "부사"
+        },
+        {
+          "hanzi": "班",
+          "pinyin": "bān",
+          "meaningKo": "반",
+          "partOfSpeech": "명사"
+        },
+        {
+          "hanzi": "最",
+          "pinyin": "zuì",
+          "meaningKo": "가장",
+          "partOfSpeech": "부사"
+        }
+      ]
+    },
+    "H31329-75": {
+      "answers": [
+        {
+          "answerIndex": 0,
+          "words": [
+            [
+              "那",
+              "nà"
+            ],
+            [
+              "位",
+              "wèi"
+            ],
+            [
+              "老人",
+              "lǎorén"
+            ],
+            [
+              "已经",
+              "yǐjīng"
+            ],
+            [
+              "107",
+              "yìbǎi líng qī"
+            ],
+            [
+              "岁",
+              "suì"
+            ],
+            [
+              "了",
+              "le"
+            ],
+            [
+              "。",
+              ""
+            ]
+          ],
+          "ko": "저 어르신은 벌써 107세이시다."
+        }
+      ],
+      "vocab": [
+        {
+          "hanzi": "位",
+          "pinyin": "wèi",
+          "meaningKo": "사람을 높여 세는 단위",
+          "partOfSpeech": "양사"
+        },
+        {
+          "hanzi": "老人",
+          "pinyin": "lǎorén",
+          "meaningKo": "노인, 어르신",
+          "partOfSpeech": "명사"
+        },
+        {
+          "hanzi": "已经",
+          "pinyin": "yǐjīng",
+          "meaningKo": "이미, 벌써",
+          "partOfSpeech": "부사"
+        },
+        {
+          "hanzi": "岁",
+          "pinyin": "suì",
+          "meaningKo": "나이를 세는 단위",
+          "partOfSpeech": "양사"
+        }
+      ]
+    },
+    "H31330-71": {
+      "answers": [
+        {
+          "answerIndex": 0,
+          "words": [
+            [
+              "这",
+              "zhè"
+            ],
+            [
+              "次",
+              "cì"
+            ],
+            [
+              "旅游",
+              "lǚyóu"
+            ],
+            [
+              "花",
+              "huā"
+            ],
+            [
+              "了",
+              "le"
+            ],
+            [
+              "一万",
+              "yíwàn"
+            ],
+            [
+              "元",
+              "yuán"
+            ],
+            [
+              "。",
+              ""
+            ]
+          ],
+          "ko": "이번 여행에는 만 위안이 들었다."
+        }
+      ],
+      "vocab": [
+        {
+          "hanzi": "次",
+          "pinyin": "cì",
+          "meaningKo": "횟수를 세는 단위",
+          "partOfSpeech": "양사"
+        },
+        {
+          "hanzi": "旅游",
+          "pinyin": "lǚyóu",
+          "meaningKo": "여행",
+          "partOfSpeech": "명사"
+        },
+        {
+          "hanzi": "花",
+          "pinyin": "huā",
+          "meaningKo": "돈이나 시간을 쓰다",
+          "partOfSpeech": "동사"
+        },
+        {
+          "hanzi": "一万",
+          "pinyin": "yíwàn",
+          "meaningKo": "만, 10000",
+          "partOfSpeech": "수사"
+        },
+        {
+          "hanzi": "元",
+          "pinyin": "yuán",
+          "meaningKo": "위안",
+          "partOfSpeech": "양사"
+        }
+      ]
+    },
+    "H31330-72": {
+      "answers": [
+        {
+          "answerIndex": 0,
+          "words": [
+            [
+              "她",
+              "tā"
+            ],
+            [
+              "丈夫",
+              "zhàngfu"
+            ],
+            [
+              "在",
+              "zài"
+            ],
+            [
+              "大学",
+              "dàxué"
+            ],
+            [
+              "教",
+              "jiāo"
+            ],
+            [
+              "中文",
+              "Zhōngwén"
+            ],
+            [
+              "。",
+              ""
+            ]
+          ],
+          "ko": "그녀의 남편은 대학에서 중국어를 가르친다."
+        }
+      ],
+      "vocab": [
+        {
+          "hanzi": "丈夫",
+          "pinyin": "zhàngfu",
+          "meaningKo": "남편",
+          "partOfSpeech": "명사"
+        },
+        {
+          "hanzi": "大学",
+          "pinyin": "dàxué",
+          "meaningKo": "대학교",
+          "partOfSpeech": "명사"
+        },
+        {
+          "hanzi": "教",
+          "pinyin": "jiāo",
+          "meaningKo": "가르치다",
+          "partOfSpeech": "동사"
+        },
+        {
+          "hanzi": "中文",
+          "pinyin": "Zhōngwén",
+          "meaningKo": "중국어",
+          "partOfSpeech": "명사"
+        }
+      ]
+    },
+    "H31330-73": {
+      "answers": [
+        {
+          "answerIndex": 0,
+          "words": [
+            [
+              "妹妹",
+              "mèimei"
+            ],
+            [
+              "害怕",
+              "hàipà"
+            ],
+            [
+              "得",
+              "de"
+            ],
+            [
+              "哭",
+              "kū"
+            ],
+            [
+              "了",
+              "le"
+            ],
+            [
+              "起来",
+              "qǐlai"
+            ],
+            [
+              "。",
+              ""
+            ]
+          ],
+          "ko": "여동생은 무서워서 울기 시작했다."
+        }
+      ],
+      "vocab": [
+        {
+          "hanzi": "妹妹",
+          "pinyin": "mèimei",
+          "meaningKo": "여동생",
+          "partOfSpeech": "명사"
+        },
+        {
+          "hanzi": "害怕",
+          "pinyin": "hàipà",
+          "meaningKo": "무서워하다",
+          "partOfSpeech": "동사"
+        },
+        {
+          "hanzi": "哭",
+          "pinyin": "kū",
+          "meaningKo": "울다",
+          "partOfSpeech": "동사"
+        },
+        {
+          "hanzi": "起来",
+          "pinyin": "qǐlai",
+          "meaningKo": "동작이 시작됨을 나타냄",
+          "partOfSpeech": "동사"
+        }
+      ]
+    },
+    "H31330-74": {
+      "answers": [
+        {
+          "answerIndex": 0,
+          "words": [
+            [
+              "飞机",
+              "fēijī"
+            ],
+            [
+              "马上",
+              "mǎshàng"
+            ],
+            [
+              "就",
+              "jiù"
+            ],
+            [
+              "要",
+              "yào"
+            ],
+            [
+              "起飞",
+              "qǐfēi"
+            ],
+            [
+              "了",
+              "le"
+            ],
+            [
+              "。",
+              ""
+            ]
+          ],
+          "ko": "비행기가 곧 이륙할 것이다."
+        }
+      ],
+      "vocab": [
+        {
+          "hanzi": "飞机",
+          "pinyin": "fēijī",
+          "meaningKo": "비행기",
+          "partOfSpeech": "명사"
+        },
+        {
+          "hanzi": "马上",
+          "pinyin": "mǎshàng",
+          "meaningKo": "곧, 즉시",
+          "partOfSpeech": "부사"
+        },
+        {
+          "hanzi": "就",
+          "pinyin": "jiù",
+          "meaningKo": "곧",
+          "partOfSpeech": "부사"
+        },
+        {
+          "hanzi": "要",
+          "pinyin": "yào",
+          "meaningKo": "~하려고 하다",
+          "partOfSpeech": "조동사"
+        },
+        {
+          "hanzi": "起飞",
+          "pinyin": "qǐfēi",
+          "meaningKo": "이륙하다",
+          "partOfSpeech": "동사"
+        }
+      ]
+    },
+    "H31330-75": {
+      "answers": [
+        {
+          "answerIndex": 0,
+          "words": [
+            [
+              "今晚",
+              "jīnwǎn"
+            ],
+            [
+              "的",
+              "de"
+            ],
+            [
+              "月亮",
+              "yuèliang"
+            ],
+            [
+              "真",
+              "zhēn"
+            ],
+            [
+              "大",
+              "dà"
+            ],
+            [
+              "啊",
+              "a"
+            ],
+            [
+              "！",
+              ""
+            ]
+          ],
+          "ko": "오늘 밤의 달은 정말 크구나!"
+        }
+      ],
+      "vocab": [
+        {
+          "hanzi": "今晚",
+          "pinyin": "jīnwǎn",
+          "meaningKo": "오늘 밤",
+          "partOfSpeech": "명사"
+        },
+        {
+          "hanzi": "月亮",
+          "pinyin": "yuèliang",
+          "meaningKo": "달",
+          "partOfSpeech": "명사"
+        },
+        {
+          "hanzi": "真",
+          "pinyin": "zhēn",
+          "meaningKo": "정말",
+          "partOfSpeech": "부사"
+        },
+        {
+          "hanzi": "大",
+          "pinyin": "dà",
+          "meaningKo": "크다",
+          "partOfSpeech": "형용사"
+        }
+      ]
+    },
+    "H31332-71": {
+      "answers": [
+        {
+          "answerIndex": 0,
+          "words": [
+            [
+              "弟弟",
+              "dìdi"
+            ],
+            [
+              "害怕",
+              "hàipà"
+            ],
+            [
+              "极",
+              "jí"
+            ],
+            [
+              "了",
+              "le"
+            ],
+            [
+              "。",
+              ""
+            ]
+          ],
+          "ko": "남동생은 몹시 무서워했다."
+        }
+      ],
+      "vocab": [
+        {
+          "hanzi": "弟弟",
+          "pinyin": "dìdi",
+          "meaningKo": "남동생",
+          "partOfSpeech": "명사"
+        },
+        {
+          "hanzi": "害怕",
+          "pinyin": "hàipà",
+          "meaningKo": "무서워하다",
+          "partOfSpeech": "동사"
+        },
+        {
+          "hanzi": "极",
+          "pinyin": "jí",
+          "meaningKo": "아주, 지극히",
+          "partOfSpeech": "부사"
+        }
+      ]
+    },
+    "H31332-72": {
+      "answers": [
+        {
+          "answerIndex": 0,
+          "words": [
+            [
+              "这",
+              "zhè"
+            ],
+            [
+              "只",
+              "zhī"
+            ],
+            [
+              "大熊猫",
+              "dàxióngmāo"
+            ],
+            [
+              "很",
+              "hěn"
+            ],
+            [
+              "可爱",
+              "kě'ài"
+            ],
+            [
+              "。",
+              ""
+            ]
+          ],
+          "ko": "이 판다는 아주 귀엽다."
+        }
+      ],
+      "vocab": [
+        {
+          "hanzi": "只",
+          "pinyin": "zhī",
+          "meaningKo": "동물을 세는 단위",
+          "partOfSpeech": "양사"
+        },
+        {
+          "hanzi": "大熊猫",
+          "pinyin": "dàxióngmāo",
+          "meaningKo": "판다",
+          "partOfSpeech": "명사"
+        },
+        {
+          "hanzi": "很",
+          "pinyin": "hěn",
+          "meaningKo": "아주, 매우",
+          "partOfSpeech": "부사"
+        },
+        {
+          "hanzi": "可爱",
+          "pinyin": "kě'ài",
+          "meaningKo": "귀엽다",
+          "partOfSpeech": "형용사"
+        }
+      ]
+    },
+    "H31332-73": {
+      "answers": [
+        {
+          "answerIndex": 0,
+          "words": [
+            [
+              "历史",
+              "lìshǐ"
+            ],
+            [
+              "是",
+              "shì"
+            ],
+            [
+              "不",
+              "bù"
+            ],
+            [
+              "应该",
+              "yīnggāi"
+            ],
+            [
+              "被",
+              "bèi"
+            ],
+            [
+              "忘记",
+              "wàngjì"
+            ],
+            [
+              "的",
+              "de"
+            ],
+            [
+              "。",
+              ""
+            ]
+          ],
+          "ko": "역사는 잊혀서는 안 되는 것이다."
+        }
+      ],
+      "vocab": [
+        {
+          "hanzi": "历史",
+          "pinyin": "lìshǐ",
+          "meaningKo": "역사",
+          "partOfSpeech": "명사"
+        },
+        {
+          "hanzi": "应该",
+          "pinyin": "yīnggāi",
+          "meaningKo": "마땅히 ~해야 한다",
+          "partOfSpeech": "조동사"
+        },
+        {
+          "hanzi": "被",
+          "pinyin": "bèi",
+          "meaningKo": "~에 의해",
+          "partOfSpeech": "개사"
+        },
+        {
+          "hanzi": "忘记",
+          "pinyin": "wàngjì",
+          "meaningKo": "잊다",
+          "partOfSpeech": "동사"
+        }
+      ]
+    },
+    "H31332-74": {
+      "answers": [
+        {
+          "answerIndex": 0,
+          "words": [
+            [
+              "我",
+              "wǒ"
+            ],
+            [
+              "比",
+              "bǐ"
+            ],
+            [
+              "去年",
+              "qùnián"
+            ],
+            [
+              "瘦",
+              "shòu"
+            ],
+            [
+              "了",
+              "le"
+            ],
+            [
+              "10",
+              "shí"
+            ],
+            [
+              "公斤",
+              "gōngjīn"
+            ],
+            [
+              "。",
+              ""
+            ]
+          ],
+          "ko": "나는 작년보다 10킬로그램 살이 빠졌다."
+        }
+      ],
+      "vocab": [
+        {
+          "hanzi": "比",
+          "pinyin": "bǐ",
+          "meaningKo": "~보다",
+          "partOfSpeech": "개사"
+        },
+        {
+          "hanzi": "去年",
+          "pinyin": "qùnián",
+          "meaningKo": "작년",
+          "partOfSpeech": "명사"
+        },
+        {
+          "hanzi": "瘦",
+          "pinyin": "shòu",
+          "meaningKo": "마르다, 살이 빠지다",
+          "partOfSpeech": "형용사"
+        },
+        {
+          "hanzi": "公斤",
+          "pinyin": "gōngjīn",
+          "meaningKo": "킬로그램",
+          "partOfSpeech": "양사"
+        }
+      ]
+    },
+    "H31332-75": {
+      "answers": [
+        {
+          "answerIndex": 0,
+          "words": [
+            [
+              "她",
+              "tā"
+            ],
+            [
+              "最后",
+              "zuìhòu"
+            ],
+            [
+              "决定",
+              "juédìng"
+            ],
+            [
+              "把",
+              "bǎ"
+            ],
+            [
+              "房子",
+              "fángzi"
+            ],
+            [
+              "卖",
+              "mài"
+            ],
+            [
+              "了",
+              "le"
+            ],
+            [
+              "。",
+              ""
+            ]
+          ],
+          "ko": "그녀는 마지막에 집을 팔기로 결정했다."
+        }
+      ],
+      "vocab": [
+        {
+          "hanzi": "最后",
+          "pinyin": "zuìhòu",
+          "meaningKo": "마지막에, 결국",
+          "partOfSpeech": "명사"
+        },
+        {
+          "hanzi": "决定",
+          "pinyin": "juédìng",
+          "meaningKo": "결정하다",
+          "partOfSpeech": "동사"
+        },
+        {
+          "hanzi": "房子",
+          "pinyin": "fángzi",
+          "meaningKo": "집",
+          "partOfSpeech": "명사"
+        },
+        {
+          "hanzi": "卖",
+          "pinyin": "mài",
+          "meaningKo": "팔다",
+          "partOfSpeech": "동사"
+        }
+      ]
+    }
+  }
+}
