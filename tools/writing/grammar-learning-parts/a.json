@@ -1,0 +1,2585 @@
+{
+  "version": 1,
+  "items": {
+    "H31001-71": {
+      "analyses": [
+        {
+          "answerIndex": 0,
+          "learning": {
+            "termIds": [
+              "subject",
+              "adverbial",
+              "particle",
+              "verb"
+            ],
+            "points": [
+              {
+                "usageId": "de-manner",
+                "parts": [
+                  {
+                    "token": 2,
+                    "start": 0,
+                    "end": 2
+                  },
+                  {
+                    "token": 2,
+                    "start": 2,
+                    "end": 3
+                  }
+                ],
+                "explanation": "地(de)는 앞의 高兴을 동작을 꾸미는 말로 만들어 ‘기쁘게’라는 뜻을 냅니다. 高兴地는 웃는 방식을 말하므로 笑 앞에 놓습니다."
+              },
+              {
+                "usageId": "le-completed",
+                "parts": [
+                  {
+                    "token": 1,
+                    "start": 0,
+                    "end": 1
+                  },
+                  {
+                    "token": 1,
+                    "start": 1,
+                    "end": 2
+                  }
+                ],
+                "explanation": "笑 뒤의 了는 웃는 일이 일어났음을 나타냅니다. 了가 언제나 과거 시제를 뜻하는 것은 아닙니다."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "H31001-72": {
+      "analyses": [
+        {
+          "answerIndex": 0,
+          "learning": {
+            "termIds": [
+              "subject",
+              "adverbial",
+              "predicate",
+              "attribute",
+              "particle"
+            ],
+            "points": [
+              {
+                "usageId": "de-attribute",
+                "parts": [
+                  {
+                    "token": 1,
+                    "start": 0,
+                    "end": 2
+                  },
+                  {
+                    "token": 1,
+                    "start": 2,
+                    "end": 3
+                  },
+                  {
+                    "token": 1,
+                    "start": 3,
+                    "end": 5
+                  }
+                ],
+                "explanation": "的(de)는 上午(오전)를 考试(시험)에 연결합니다. 上午的考试 전체가 ‘오전 시험’으로, 쉽다고 설명할 주어입니다."
+              },
+              {
+                "usageId": "degree-adverb",
+                "parts": [
+                  {
+                    "token": 2,
+                    "start": 0,
+                    "end": 2
+                  },
+                  {
+                    "token": 0,
+                    "start": 0,
+                    "end": 2
+                  }
+                ],
+                "explanation": "比较는 여기서 ‘비교적’이라는 한 단어입니다. 简单 앞에서 쉬운 정도를 나타내며, 比만 떼어 비교문으로 읽지 않습니다."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "H31001-73": {
+      "analyses": [
+        {
+          "answerIndex": 0,
+          "learning": {
+            "termIds": [
+              "subject",
+              "verb",
+              "particle",
+              "complement"
+            ],
+            "points": [
+              {
+                "usageId": "de-complement",
+                "parts": [
+                  {
+                    "token": 1,
+                    "start": 0,
+                    "end": 1
+                  },
+                  {
+                    "token": 1,
+                    "start": 1,
+                    "end": 2
+                  },
+                  {
+                    "token": 0,
+                    "start": 0,
+                    "end": 4
+                  }
+                ],
+                "explanation": "得(de)는 变(변하다) 뒤에서 변화한 상태를 이어 줍니다. 뒤의 越来越好가 ‘점점 좋아지는’ 상태를 설명하는 보어입니다."
+              },
+              {
+                "usageId": "increasing-degree",
+                "parts": [
+                  {
+                    "token": 0,
+                    "start": 0,
+                    "end": 4
+                  }
+                ],
+                "explanation": "越来越+형용사는 ‘점점 더 ~하다’입니다. 越来越好는 시간이 흐르며 점점 좋아진다는 뜻입니다."
+              },
+              {
+                "usageId": "le-change",
+                "parts": [
+                  {
+                    "token": 3,
+                    "start": 0,
+                    "end": 1
+                  }
+                ],
+                "explanation": "끝의 了는 환경이 예전과 달라졌다는 새 상황을 나타냅니다."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "H31001-74": {
+      "analyses": [
+        {
+          "answerIndex": 0,
+          "learning": {
+            "termIds": [
+              "subject",
+              "verb",
+              "preposition",
+              "object",
+              "quantity"
+            ],
+            "points": [
+              {
+                "usageId": "classifier",
+                "parts": [
+                  {
+                    "token": 1,
+                    "start": 0,
+                    "end": 1
+                  },
+                  {
+                    "token": 1,
+                    "start": 1,
+                    "end": 2
+                  },
+                  {
+                    "token": 2,
+                    "start": 0,
+                    "end": 2
+                  }
+                ],
+                "explanation": "那位医生은 ‘저 의사 선생님’입니다. 位는 사람을 공손하게 세는 양사로, 가리키는 말 那와 사람 이름 医生 사이에 놓입니다."
+              },
+              {
+                "usageId": "gei-recipient",
+                "parts": [
+                  {
+                    "token": 0,
+                    "start": 0,
+                    "end": 1
+                  },
+                  {
+                    "token": 0,
+                    "start": 1,
+                    "end": 3
+                  },
+                  {
+                    "token": 3,
+                    "start": 0,
+                    "end": 4
+                  }
+                ],
+                "explanation": "送给他는 ‘그에게 주다’입니다. 给는 送 뒤에서 받는 사람 他를 이으며, 그 뒤에 주는 물건 一个礼物가 옵니다."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "H31001-75": {
+      "analyses": [
+        {
+          "answerIndex": 0,
+          "learning": {
+            "termIds": [
+              "subject",
+              "adverbial",
+              "verb",
+              "attribute",
+              "object"
+            ],
+            "points": [
+              {
+                "usageId": "also-adverb",
+                "parts": [
+                  {
+                    "token": 2,
+                    "start": 0,
+                    "end": 1
+                  }
+                ],
+                "explanation": "也는 ‘~도’입니다. 다른 반의 성적 역시 향상되었다고 덧붙이므로 주어 뒤, 有 앞에 놓습니다."
+              },
+              {
+                "usageId": "attribute-order",
+                "parts": [
+                  {
+                    "token": 3,
+                    "start": 0,
+                    "end": 2
+                  },
+                  {
+                    "token": 4,
+                    "start": 0,
+                    "end": 2
+                  }
+                ],
+                "explanation": "很大는 뒤의 提高(향상)를 꾸며 ‘큰 향상’을 만듭니다. 이 문장에는 的가 따로 없으며, 꾸미는 말이 꾸밈받는 말보다 앞에 옵니다."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "H31002-71": {
+      "analyses": [
+        {
+          "answerIndex": 0,
+          "learning": {
+            "termIds": [
+              "subject",
+              "adverbial",
+              "verb",
+              "object"
+            ],
+            "points": [
+              {
+                "usageId": "sequence-adverb",
+                "parts": [
+                  {
+                    "token": 0,
+                    "start": 0,
+                    "end": 1
+                  }
+                ],
+                "explanation": "先은 ‘먼저’로, 여러 행동 중 메뉴를 보는 일을 먼저 하자고 말합니다. 동사 看看 앞에 옵니다."
+              },
+              {
+                "usageId": "verb-reduplication",
+                "parts": [
+                  {
+                    "token": 3,
+                    "start": 0,
+                    "end": 2
+                  }
+                ],
+                "explanation": "看看는 看을 두 번 쓴 동사 중첩입니다. ‘잠깐 보다, 한번 보다’처럼 동작을 가볍게 말하며, 보는 대상 菜单은 뒤에 옵니다."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "H31002-72": {
+      "analyses": [
+        {
+          "answerIndex": 0,
+          "learning": {
+            "termIds": [
+              "subject",
+              "verb",
+              "particle",
+              "object"
+            ],
+            "points": [
+              {
+                "usageId": "le-completed",
+                "parts": [
+                  {
+                    "token": 2,
+                    "start": 0,
+                    "end": 1
+                  },
+                  {
+                    "token": 2,
+                    "start": 1,
+                    "end": 2
+                  }
+                ],
+                "explanation": "忘了는 ‘잊었다’입니다. 了는 잊는 일이 일어났음을 나타내며, 뒤의 带护照는 잊고 하지 못한 행동입니다."
+              },
+              {
+                "usageId": "verb-object",
+                "parts": [
+                  {
+                    "token": 1,
+                    "start": 0,
+                    "end": 1
+                  },
+                  {
+                    "token": 3,
+                    "start": 0,
+                    "end": 2
+                  }
+                ],
+                "explanation": "带는 ‘가지고 가다’, 护照는 ‘여권’입니다. 동사 뒤에 그 행동의 대상인 목적어를 놓아 带护照(여권을 가지고 가다)를 만듭니다."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "H31002-73": {
+      "analyses": [
+        {
+          "answerIndex": 0,
+          "learning": {
+            "termIds": [
+              "subject",
+              "adverbial",
+              "predicate"
+            ],
+            "points": [
+              {
+                "usageId": "degree-hen",
+                "parts": [
+                  {
+                    "token": 0,
+                    "start": 0,
+                    "end": 1
+                  },
+                  {
+                    "token": 3,
+                    "start": 0,
+                    "end": 2
+                  }
+                ],
+                "explanation": "很은 형용사 新鲜(신선하다) 앞에서 정도를 나타냅니다. 이런 평범한 상태 설명에서는 ‘매우’를 강하게 강조하기보다 문장을 자연스럽게 이어 주기도 합니다."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "H31002-74": {
+      "analyses": [
+        {
+          "answerIndex": 0,
+          "learning": {
+            "termIds": [
+              "subject",
+              "adverbial",
+              "verb",
+              "predicate",
+              "particle",
+              "attribute"
+            ],
+            "points": [
+              {
+                "usageId": "de-attribute",
+                "parts": [
+                  {
+                    "token": 2,
+                    "start": 0,
+                    "end": 2
+                  },
+                  {
+                    "token": 2,
+                    "start": 2,
+                    "end": 3
+                  },
+                  {
+                    "token": 3,
+                    "start": 0,
+                    "end": 5
+                  }
+                ],
+                "explanation": "熊猫的에서 的는 ‘판다의’라는 꾸밈 관계를 나타냅니다. 뒤의 眼睛和耳朵(눈과 귀)를 함께 꾸밉니다."
+              },
+              {
+                "usageId": "all-adverb",
+                "parts": [
+                  {
+                    "token": 0,
+                    "start": 0,
+                    "end": 1
+                  }
+                ],
+                "explanation": "都는 ‘모두’입니다. 눈과 귀 둘 다 검다는 뜻으로, 해당 대상들 뒤이자 술어 是 앞에 놓습니다."
+              },
+              {
+                "usageId": "de-nominal",
+                "parts": [
+                  {
+                    "token": 1,
+                    "start": 0,
+                    "end": 2
+                  },
+                  {
+                    "token": 1,
+                    "start": 2,
+                    "end": 3
+                  }
+                ],
+                "explanation": "黑色的는 ‘검은색인 것/검은색이다’라는 성질을 나타냅니다. 여기서 的는 앞말을 명사처럼 쓰게 하며, 是…的로 과거 사실을 강조하는 구문과는 다릅니다."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "H31002-75": {
+      "analyses": [
+        {
+          "answerIndex": 0,
+          "learning": {
+            "termIds": [
+              "subject",
+              "modal",
+              "preposition",
+              "verb",
+              "question"
+            ],
+            "points": [
+              {
+                "usageId": "a-not-a-question",
+                "parts": [
+                  {
+                    "token": 4,
+                    "start": 0,
+                    "end": 3
+                  }
+                ],
+                "explanation": "敢不敢은 ‘감히 할 수 있니, 할 용기가 있니?’라는 긍정·부정 선택 질문입니다. 敢(용기가 있다)+不敢(용기가 없다)을 붙여 묻습니다."
+              },
+              {
+                "usageId": "yong-means",
+                "parts": [
+                  {
+                    "token": 3,
+                    "start": 0,
+                    "end": 1
+                  },
+                  {
+                    "token": 1,
+                    "start": 0,
+                    "end": 2
+                  }
+                ],
+                "explanation": "用은 여기서 ‘~을 써서’로, 冷水(찬물)를 사용 수단으로 소개합니다. 用冷水 전체가 어떻게 씻는지를 말하므로 洗澡 앞에 옵니다."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "H31003-71": {
+      "analyses": [
+        {
+          "answerIndex": 0,
+          "learning": {
+            "termIds": [
+              "subject",
+              "verb",
+              "preposition"
+            ],
+            "points": [
+              {
+                "usageId": "ba-disposal",
+                "parts": [
+                  {
+                    "token": 2,
+                    "start": 0,
+                    "end": 3
+                  },
+                  {
+                    "token": 0,
+                    "start": 0,
+                    "end": 1
+                  },
+                  {
+                    "token": 0,
+                    "start": 1,
+                    "end": 2
+                  },
+                  {
+                    "token": 3,
+                    "start": 0,
+                    "end": 2
+                  }
+                ],
+                "explanation": "把는 手机(휴대전화)를 처리할 대상으로 동사 앞에 꺼내 놓습니다. 뒤의 送给弟弟는 그 물건을 ‘남동생에게 주는’ 처리 내용입니다."
+              },
+              {
+                "usageId": "gei-recipient",
+                "parts": [
+                  {
+                    "token": 0,
+                    "start": 0,
+                    "end": 1
+                  },
+                  {
+                    "token": 0,
+                    "start": 1,
+                    "end": 2
+                  },
+                  {
+                    "token": 3,
+                    "start": 0,
+                    "end": 2
+                  }
+                ],
+                "explanation": "给는 送 뒤에서 받는 사람 弟弟를 연결해 ‘남동생에게 주다’를 만듭니다. 이 문장에서 给弟弟를 送 앞에 옮기지 않습니다."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "H31003-72": {
+      "analyses": [
+        {
+          "answerIndex": 0,
+          "learning": {
+            "termIds": [
+              "subject",
+              "time",
+              "adverbial",
+              "verb",
+              "particle"
+            ],
+            "points": [
+              {
+                "usageId": "mei-negation",
+                "parts": [
+                  {
+                    "token": 1,
+                    "start": 0,
+                    "end": 1
+                  },
+                  {
+                    "token": 0,
+                    "start": 0,
+                    "end": 2
+                  }
+                ],
+                "explanation": "没는 어떤 일이 일어나지 않았음을 말합니다. 没见面은 ‘만나지 않았다’이고, 很久가 붙어 오랫동안 만남이 없었다는 뜻입니다."
+              },
+              {
+                "usageId": "le-change",
+                "parts": [
+                  {
+                    "token": 3,
+                    "start": 0,
+                    "end": 2
+                  },
+                  {
+                    "token": 1,
+                    "start": 0,
+                    "end": 1
+                  },
+                  {
+                    "token": 0,
+                    "start": 0,
+                    "end": 2
+                  },
+                  {
+                    "token": 4,
+                    "start": 0,
+                    "end": 1
+                  }
+                ],
+                "explanation": "很久没见面了는 ‘오랫동안 만나지 못했다’입니다. 끝의 了는 만나지 않은 상황이 지금까지 이어져 왔음을 나타내며, 만남이 완료됐다는 뜻이 아닙니다."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "H31003-73": {
+      "analyses": [
+        {
+          "answerIndex": 0,
+          "learning": {
+            "termIds": [
+              "subject",
+              "adverbial",
+              "verb",
+              "attribute",
+              "particle"
+            ],
+            "points": [
+              {
+                "usageId": "de-attribute",
+                "parts": [
+                  {
+                    "token": 4,
+                    "start": 0,
+                    "end": 4
+                  },
+                  {
+                    "token": 1,
+                    "start": 0,
+                    "end": 1
+                  },
+                  {
+                    "token": 2,
+                    "start": 0,
+                    "end": 2
+                  }
+                ],
+                "explanation": "的는 这个城市(이 도시)를 春天(봄)에 연결하여 ‘이 도시의 봄’이라는 대상을 만듭니다."
+              },
+              {
+                "usageId": "frequency-adverb",
+                "parts": [
+                  {
+                    "token": 0,
+                    "start": 0,
+                    "end": 2
+                  }
+                ],
+                "explanation": "经常은 ‘자주’로, 바람이 부는 일이 얼마나 자주 일어나는지 말합니다. 동작 刮风 앞에 놓습니다."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "H31003-74": {
+      "analyses": [
+        {
+          "answerIndex": 0,
+          "learning": {
+            "termIds": [
+              "topic",
+              "verb",
+              "particle",
+              "complement"
+            ],
+            "points": [
+              {
+                "usageId": "de-complement",
+                "parts": [
+                  {
+                    "token": 1,
+                    "start": 0,
+                    "end": 1
+                  },
+                  {
+                    "token": 3,
+                    "start": 0,
+                    "end": 1
+                  },
+                  {
+                    "token": 2,
+                    "start": 0,
+                    "end": 3
+                  }
+                ],
+                "explanation": "得(de)는 写(쓰다) 뒤에 붙어 쓰는 솜씨를 설명하는 보어 很漂亮(아주 예쁘다)을 연결합니다. ‘글씨를 아주 예쁘게 쓴다’이며, 동사 앞에 쓰는 地와 자리가 다릅니다."
+              },
+              {
+                "usageId": "topic-comment",
+                "parts": [
+                  {
+                    "token": 0,
+                    "start": 0,
+                    "end": 4
+                  }
+                ],
+                "explanation": "他的汉字는 ‘그의 한자 글씨’로, 이 문장에서 평가할 대상인 화제입니다. 뒤에서 그 글씨를 어떻게 쓰는지 설명합니다."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "H31003-75": {
+      "analyses": [
+        {
+          "answerIndex": 0,
+          "learning": {
+            "termIds": [
+              "subject",
+              "verb",
+              "particle",
+              "object",
+              "attribute"
+            ],
+            "points": [
+              {
+                "usageId": "de-attribute",
+                "parts": [
+                  {
+                    "token": 1,
+                    "start": 0,
+                    "end": 3
+                  },
+                  {
+                    "token": 3,
+                    "start": 0,
+                    "end": 3
+                  }
+                ],
+                "explanation": "叔叔的太阳镜은 ‘삼촌의 선글라스’입니다. 的는 소유자 叔叔를 물건 太阳镜 앞에 연결합니다."
+              },
+              {
+                "usageId": "le-completed",
+                "parts": [
+                  {
+                    "token": 0,
+                    "start": 0,
+                    "end": 1
+                  },
+                  {
+                    "token": 0,
+                    "start": 1,
+                    "end": 2
+                  }
+                ],
+                "explanation": "花了는 비용이 들었다는 일이 일어났음을 나타냅니다. 花는 여기서 ‘꽃’이 아니라 돈이 ‘들다/쓰다’라는 동사입니다."
+              },
+              {
+                "usageId": "cost-object",
+                "parts": [
+                  {
+                    "token": 2,
+                    "start": 0,
+                    "end": 5
+                  }
+                ],
+                "explanation": "900块钱은 든 돈의 양입니다. 이 문장에서는 花 뒤에 오는 수량 목적어이며, 동작의 방식을 설명하는 보어로 보지 않습니다."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "H31004-71": {
+      "analyses": [
+        {
+          "answerIndex": 0,
+          "learning": {
+            "termIds": [
+              "subject",
+              "verb",
+              "object",
+              "location"
+            ],
+            "points": [
+              {
+                "usageId": "zai-location-verb",
+                "parts": [
+                  {
+                    "token": 2,
+                    "start": 0,
+                    "end": 1
+                  },
+                  {
+                    "token": 0,
+                    "start": 0,
+                    "end": 3
+                  },
+                  {
+                    "token": 3,
+                    "start": 0,
+                    "end": 1
+                  }
+                ],
+                "explanation": "在는 여기서 ‘~에 있다’라는 동사입니다. 药(약)이 있는 장소 我的包里(내 가방 안)를 뒤에 놓습니다."
+              },
+              {
+                "usageId": "localizer",
+                "parts": [
+                  {
+                    "token": 0,
+                    "start": 0,
+                    "end": 3
+                  },
+                  {
+                    "token": 3,
+                    "start": 0,
+                    "end": 1
+                  }
+                ],
+                "explanation": "里는 ‘안’이라는 위치를 뜻합니다. 我的包 뒤에 붙여 ‘내 가방 안’이라는 장소 표현을 만듭니다."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "H31004-72": {
+      "analyses": [
+        {
+          "answerIndex": 0,
+          "learning": {
+            "termIds": [
+              "subject",
+              "modal",
+              "verb",
+              "object"
+            ],
+            "points": [
+              {
+                "usageId": "yao-intention",
+                "parts": [
+                  {
+                    "token": 3,
+                    "start": 0,
+                    "end": 1
+                  }
+                ],
+                "explanation": "要는 여기서 ‘~하려고 하다’로 앞으로 하려는 행동을 말합니다. 뒤의 去机场接女朋友 전체가 그 계획입니다."
+              },
+              {
+                "usageId": "serial-purpose",
+                "parts": [
+                  {
+                    "token": 2,
+                    "start": 0,
+                    "end": 1
+                  },
+                  {
+                    "token": 4,
+                    "start": 0,
+                    "end": 2
+                  },
+                  {
+                    "token": 0,
+                    "start": 0,
+                    "end": 1
+                  },
+                  {
+                    "token": 0,
+                    "start": 1,
+                    "end": 4
+                  }
+                ],
+                "explanation": "去机场 뒤에 接女朋友를 이어 ‘공항에 가서 여자 친구를 마중하다’라고 말합니다. 먼저 가는 장소를 말하고, 그곳에서 할 행동을 붙입니다."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "H31004-73": {
+      "analyses": [
+        {
+          "answerIndex": 0,
+          "learning": {
+            "termIds": [
+              "subject",
+              "adverbial",
+              "predicate",
+              "attribute",
+              "particle"
+            ],
+            "points": [
+              {
+                "usageId": "hai-continuing",
+                "parts": [
+                  {
+                    "token": 0,
+                    "start": 0,
+                    "end": 1
+                  }
+                ],
+                "explanation": "还는 여기서 ‘아직’입니다. 길이 여전히 길다는 뜻으로 很长 앞에 옵니다."
+              },
+              {
+                "usageId": "de-attribute",
+                "parts": [
+                  {
+                    "token": 1,
+                    "start": 0,
+                    "end": 1
+                  },
+                  {
+                    "token": 2,
+                    "start": 0,
+                    "end": 4
+                  }
+                ],
+                "explanation": "你脚下的路는 ‘네 발밑의 길’입니다. 的 앞의 你脚下가 뒤의 路를 꾸며 어느 길인지 알려 줍니다."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "H31004-74": {
+      "analyses": [
+        {
+          "answerIndex": 0,
+          "learning": {
+            "termIds": [
+              "subject",
+              "adverbial",
+              "verb",
+              "preposition"
+            ],
+            "points": [
+              {
+                "usageId": "bu-negation",
+                "parts": [
+                  {
+                    "token": 2,
+                    "start": 0,
+                    "end": 1
+                  },
+                  {
+                    "token": 3,
+                    "start": 0,
+                    "end": 2
+                  }
+                ],
+                "explanation": "不는 뒤의 喜欢(좋아하다)을 부정합니다. 不喜欢은 ‘좋아하지 않는다’이며, 좋아하지 않는 내용은 用铅笔写字 전체입니다."
+              },
+              {
+                "usageId": "yong-means",
+                "parts": [
+                  {
+                    "token": 1,
+                    "start": 0,
+                    "end": 3
+                  }
+                ],
+                "explanation": "用铅笔는 ‘연필을 써서’라는 수단입니다. 무엇으로 글씨를 쓰는지 나타내므로 写字 앞에 놓습니다."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "H31004-75": {
+      "analyses": [
+        {
+          "answerIndex": 0,
+          "learning": {
+            "termIds": [
+              "attribute",
+              "particle",
+              "subject",
+              "question"
+            ],
+            "points": [
+              {
+                "usageId": "de-attribute",
+                "parts": [
+                  {
+                    "token": 2,
+                    "start": 0,
+                    "end": 1
+                  },
+                  {
+                    "token": 4,
+                    "start": 0,
+                    "end": 2
+                  },
+                  {
+                    "token": 3,
+                    "start": 0,
+                    "end": 1
+                  },
+                  {
+                    "token": 1,
+                    "start": 0,
+                    "end": 2
+                  }
+                ],
+                "explanation": "你丈夫的鼻子는 ‘네 남편의 코’입니다. 的는 소유자 你丈夫와 신체 부위 鼻子를 연결합니다."
+              },
+              {
+                "usageId": "zenme-le",
+                "parts": [
+                  {
+                    "token": 0,
+                    "start": 0,
+                    "end": 3
+                  }
+                ],
+                "explanation": "怎么了는 ‘어떻게 된 거야?/무슨 일이야?’라는 상태 질문입니다. 코에 무슨 일이 생겼는지 묻고, 了는 이전과 달라진 상황을 드러냅니다."
+              }
+            ]
+          }
+        },
+        {
+          "answerIndex": 1,
+          "learning": {
+            "termIds": [
+              "topic",
+              "subject",
+              "question",
+              "attribute",
+              "particle"
+            ],
+            "points": [
+              {
+                "usageId": "de-attribute",
+                "parts": [
+                  {
+                    "token": 2,
+                    "start": 0,
+                    "end": 1
+                  },
+                  {
+                    "token": 3,
+                    "start": 0,
+                    "end": 1
+                  },
+                  {
+                    "token": 4,
+                    "start": 0,
+                    "end": 2
+                  }
+                ],
+                "explanation": "你的丈夫는 ‘네 남편’입니다. 이 답에서는 的가 你와 丈夫 사이에 붙어 남편이 누구의 남편인지 밝힙니다."
+              },
+              {
+                "usageId": "topic-comment",
+                "parts": [
+                  {
+                    "token": 2,
+                    "start": 0,
+                    "end": 1
+                  },
+                  {
+                    "token": 3,
+                    "start": 0,
+                    "end": 1
+                  },
+                  {
+                    "token": 4,
+                    "start": 0,
+                    "end": 2
+                  },
+                  {
+                    "token": 1,
+                    "start": 0,
+                    "end": 2
+                  }
+                ],
+                "explanation": "你的丈夫를 먼저 화제로 제시한 뒤 鼻子(코)를 주어로 삼아 그 사람의 코 상태를 묻습니다. 사람+신체 부위로 설명을 이어 가는 구조입니다."
+              },
+              {
+                "usageId": "zenme-le",
+                "parts": [
+                  {
+                    "token": 0,
+                    "start": 0,
+                    "end": 3
+                  }
+                ],
+                "explanation": "怎么了는 ‘어떻게 된 거야?’라는 질문입니다. 여기서는 남편의 코에 무슨 일이 생겼는지 묻습니다."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "H31005-71": {
+      "analyses": [
+        {
+          "answerIndex": 0,
+          "learning": {
+            "termIds": [
+              "subject",
+              "verb",
+              "predicate",
+              "particle",
+              "attribute"
+            ],
+            "points": [
+              {
+                "usageId": "de-attribute",
+                "parts": [
+                  {
+                    "token": 1,
+                    "start": 0,
+                    "end": 6
+                  }
+                ],
+                "explanation": "李小姐的头发는 ‘리 양의 머리카락’입니다. 的 앞에 소유자를 놓고 뒤에 그 사람의 것을 놓습니다."
+              },
+              {
+                "usageId": "de-nominal",
+                "parts": [
+                  {
+                    "token": 0,
+                    "start": 0,
+                    "end": 2
+                  },
+                  {
+                    "token": 3,
+                    "start": 0,
+                    "end": 1
+                  }
+                ],
+                "explanation": "黑色的는 ‘검은색인 것’이라는 성질을 나타내며, 是 뒤에서 머리카락의 색을 설명합니다. 이 문장의 是…的는 과거 일의 시간·장소를 강조하는 구문이 아닙니다."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "H31005-72": {
+      "analyses": [
+        {
+          "answerIndex": 0,
+          "learning": {
+            "termIds": [
+              "topic",
+              "time",
+              "verb"
+            ],
+            "points": [
+              {
+                "usageId": "question-in-place",
+                "parts": [
+                  {
+                    "token": 3,
+                    "start": 0,
+                    "end": 2
+                  },
+                  {
+                    "token": 0,
+                    "start": 0,
+                    "end": 2
+                  }
+                ],
+                "explanation": "什么时候는 ‘언제’입니다. 시간을 답할 자리에 그대로 놓으므로, 여기서는 会议 뒤이자 举行 앞에서 개최 시점을 묻습니다."
+              },
+              {
+                "usageId": "topic-comment",
+                "parts": [
+                  {
+                    "token": 2,
+                    "start": 0,
+                    "end": 2
+                  }
+                ],
+                "explanation": "会议는 먼저 꺼낸 화제인 ‘회의’입니다. 뒤에서 그 회의가 언제 열리는지 묻습니다."
+              }
+            ]
+          }
+        },
+        {
+          "answerIndex": 1,
+          "learning": {
+            "termIds": [
+              "time",
+              "verb",
+              "object"
+            ],
+            "points": [
+              {
+                "usageId": "question-in-place",
+                "parts": [
+                  {
+                    "token": 3,
+                    "start": 0,
+                    "end": 2
+                  },
+                  {
+                    "token": 0,
+                    "start": 0,
+                    "end": 2
+                  }
+                ],
+                "explanation": "什么时候는 ‘언제’로, 문장 앞의 시간 자리에서 개최 시점을 묻습니다. 질문이라고 문장 구조를 뒤집지 않습니다."
+              },
+              {
+                "usageId": "verb-object",
+                "parts": [
+                  {
+                    "token": 1,
+                    "start": 0,
+                    "end": 2
+                  },
+                  {
+                    "token": 2,
+                    "start": 0,
+                    "end": 2
+                  }
+                ],
+                "explanation": "举行은 ‘개최하다’, 会议는 개최하는 대상인 ‘회의’입니다. 이 답에서는 举行会议처럼 동사 뒤에 목적어를 둡니다."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "H31005-73": {
+      "analyses": [
+        {
+          "answerIndex": 0,
+          "learning": {
+            "termIds": [
+              "subject",
+              "topic",
+              "adverbial",
+              "predicate",
+              "attribute",
+              "particle"
+            ],
+            "points": [
+              {
+                "usageId": "topic-comment",
+                "parts": [
+                  {
+                    "token": 1,
+                    "start": 0,
+                    "end": 2
+                  },
+                  {
+                    "token": 2,
+                    "start": 0,
+                    "end": 1
+                  },
+                  {
+                    "token": 0,
+                    "start": 0,
+                    "end": 2
+                  }
+                ],
+                "explanation": "学习(공부)를 먼저 활동으로 제시하고 很努力(매우 열심이다)로 그 태도를 설명합니다. 이 문장에는 得가 없으므로 努力를 得 뒤 보어로 설명하지 않습니다."
+              },
+              {
+                "usageId": "de-attribute",
+                "parts": [
+                  {
+                    "token": 3,
+                    "start": 0,
+                    "end": 6
+                  }
+                ],
+                "explanation": "他们班的学生은 ‘그들 반의 학생들’입니다. 的는 他们班과 学生을 이어 어느 반 학생들인지 알려 줍니다."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "H31005-74": {
+      "analyses": [
+        {
+          "answerIndex": 0,
+          "learning": {
+            "termIds": [
+              "subject",
+              "adverbial",
+              "verb",
+              "object"
+            ],
+            "points": [
+              {
+                "usageId": "all-adverb",
+                "parts": [
+                  {
+                    "token": 2,
+                    "start": 0,
+                    "end": 1
+                  }
+                ],
+                "explanation": "都는 말과 양 ‘모두’가 해당한다는 뜻입니다. 주어 马和羊 뒤, 좋아함을 말하는 喜欢 앞에 둡니다."
+              },
+              {
+                "usageId": "verb-object",
+                "parts": [
+                  {
+                    "token": 1,
+                    "start": 0,
+                    "end": 1
+                  },
+                  {
+                    "token": 4,
+                    "start": 0,
+                    "end": 1
+                  }
+                ],
+                "explanation": "吃草는 ‘풀을 먹다’입니다. 吃가 동작, 草가 먹는 대상이고, 吃草 전체가 좋아하는 행동으로 喜欢 뒤에 옵니다."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "H31005-75": {
+      "analyses": [
+        {
+          "answerIndex": 0,
+          "learning": {
+            "termIds": [
+              "subject",
+              "modal",
+              "verb",
+              "object",
+              "attribute",
+              "particle"
+            ],
+            "points": [
+              {
+                "usageId": "yao-obligation",
+                "parts": [
+                  {
+                    "token": 3,
+                    "start": 0,
+                    "end": 1
+                  }
+                ],
+                "explanation": "要는 여기서 ‘~해야 한다’로, 노인이 자기 다리와 발을 보살필 필요가 있음을 말합니다."
+              },
+              {
+                "usageId": "de-attribute",
+                "parts": [
+                  {
+                    "token": 0,
+                    "start": 0,
+                    "end": 3
+                  },
+                  {
+                    "token": 1,
+                    "start": 0,
+                    "end": 2
+                  }
+                ],
+                "explanation": "自己的腿脚는 ‘자신의 다리와 발’입니다. 的가 自己와 腿脚를 이어 누구의 신체인지 밝히고, 전체는 关心의 대상입니다."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "H31006-71": {
+      "analyses": [
+        {
+          "answerIndex": 0,
+          "learning": {
+            "termIds": [
+              "location",
+              "adverbial",
+              "verb",
+              "object"
+            ],
+            "points": [
+              {
+                "usageId": "buyao-prohibition",
+                "parts": [
+                  {
+                    "token": 2,
+                    "start": 0,
+                    "end": 2
+                  }
+                ],
+                "explanation": "不要는 여기서 ‘~하지 마라’라는 금지입니다. 不要放糖은 ‘설탕을 넣지 마라’로, 금지하는 동작 放 앞에 둡니다."
+              },
+              {
+                "usageId": "localizer",
+                "parts": [
+                  {
+                    "token": 0,
+                    "start": 0,
+                    "end": 3
+                  }
+                ],
+                "explanation": "咖啡里는 ‘커피 안에’입니다. 里가 공간의 안쪽을 나타내고, 문장 앞에서 설탕을 넣지 말아야 할 곳을 먼저 알려 줍니다."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "H31006-72": {
+      "analyses": [
+        {
+          "answerIndex": 0,
+          "learning": {
+            "termIds": [
+              "preposition",
+              "verb",
+              "complement",
+              "particle",
+              "question"
+            ],
+            "points": [
+              {
+                "usageId": "ba-disposal",
+                "parts": [
+                  {
+                    "token": 1,
+                    "start": 0,
+                    "end": 1
+                  },
+                  {
+                    "token": 2,
+                    "start": 0,
+                    "end": 4
+                  },
+                  {
+                    "token": 3,
+                    "start": 0,
+                    "end": 1
+                  },
+                  {
+                    "token": 0,
+                    "start": 0,
+                    "end": 2
+                  }
+                ],
+                "explanation": "把는 碗和筷子(그릇과 젓가락)를 씻어 처리할 대상으로 동사 앞에 놓습니다. 뒤에 어떻게 처리했는지 洗干净으로 말합니다."
+              },
+              {
+                "usageId": "result-complement",
+                "parts": [
+                  {
+                    "token": 3,
+                    "start": 0,
+                    "end": 1
+                  },
+                  {
+                    "token": 0,
+                    "start": 0,
+                    "end": 2
+                  }
+                ],
+                "explanation": "洗는 ‘씻다’, 뒤의 干净은 ‘깨끗해지다’라는 결과입니다. 洗干净은 ‘깨끗이 씻어 놓다’로, 干净은 동작 결과를 보충하는 결과보어입니다."
+              },
+              {
+                "usageId": "le-completed",
+                "parts": [
+                  {
+                    "token": 3,
+                    "start": 0,
+                    "end": 1
+                  },
+                  {
+                    "token": 0,
+                    "start": 0,
+                    "end": 2
+                  },
+                  {
+                    "token": 0,
+                    "start": 2,
+                    "end": 3
+                  }
+                ],
+                "explanation": "洗干净了에서 了는 깨끗하게 씻는 일이 이루어졌음을 나타냅니다."
+              },
+              {
+                "usageId": "ma-question",
+                "parts": [
+                  {
+                    "token": 4,
+                    "start": 0,
+                    "end": 1
+                  }
+                ],
+                "explanation": "吗는 문장 끝에서 앞의 내용이 맞는지 묻습니다. 여기서는 그릇과 젓가락을 깨끗하게 씻었는지 확인합니다."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "H31006-73": {
+      "analyses": [
+        {
+          "answerIndex": 0,
+          "learning": {
+            "termIds": [
+              "subject",
+              "adverbial",
+              "verb",
+              "particle"
+            ],
+            "points": [
+              {
+                "usageId": "sudden-adverb",
+                "parts": [
+                  {
+                    "token": 2,
+                    "start": 0,
+                    "end": 2
+                  }
+                ],
+                "explanation": "突然은 ‘갑자기’입니다. 열이 나기 시작한 일이 갑작스러웠다고 동사 发烧 앞에서 설명합니다."
+              },
+              {
+                "usageId": "le-change",
+                "parts": [
+                  {
+                    "token": 3,
+                    "start": 0,
+                    "end": 2
+                  },
+                  {
+                    "token": 1,
+                    "start": 0,
+                    "end": 1
+                  }
+                ],
+                "explanation": "发烧了는 ‘열이 났다’입니다. 끝의 了는 열이 없던 때와 달리 열이 나는 상황이 생겼음을 나타냅니다."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "H31006-74": {
+      "analyses": [
+        {
+          "answerIndex": 0,
+          "learning": {
+            "termIds": [
+              "subject",
+              "verb",
+              "object",
+              "complement"
+            ],
+            "points": [
+              {
+                "usageId": "result-complement",
+                "parts": [
+                  {
+                    "token": 3,
+                    "start": 0,
+                    "end": 1
+                  },
+                  {
+                    "token": 3,
+                    "start": 1,
+                    "end": 2
+                  }
+                ],
+                "explanation": "看到는 ‘보게 되다/보다’입니다. 看은 보는 동작, 到는 실제로 눈에 들어오는 결과를 보충합니다."
+              },
+              {
+                "usageId": "clause-subject",
+                "parts": [
+                  {
+                    "token": 3,
+                    "start": 0,
+                    "end": 2
+                  },
+                  {
+                    "token": 0,
+                    "start": 0,
+                    "end": 4
+                  }
+                ],
+                "explanation": "看到这个句子(이 문장을 보는 것) 전체가 주어입니다. 사람이나 사물 이름뿐 아니라 행동을 나타내는 덩어리도 설명의 대상이 될 수 있습니다."
+              },
+              {
+                "usageId": "clause-object",
+                "parts": [
+                  {
+                    "token": 1,
+                    "start": 0,
+                    "end": 4
+                  }
+                ],
+                "explanation": "游戏结束는 ‘게임이 끝나다’라는 작은 문장입니다. 이 전체가 表示 뒤에 와서 무엇을 뜻하는지 그 내용을 말합니다."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "H31006-75": {
+      "analyses": [
+        {
+          "answerIndex": 0,
+          "learning": {
+            "termIds": [
+              "subject",
+              "preposition",
+              "adverbial",
+              "predicate"
+            ],
+            "points": [
+              {
+                "usageId": "dui-target",
+                "parts": [
+                  {
+                    "token": 3,
+                    "start": 0,
+                    "end": 1
+                  },
+                  {
+                    "token": 2,
+                    "start": 0,
+                    "end": 5
+                  }
+                ],
+                "explanation": "对는 ‘~에 대해’로, 만족감을 느끼는 대상 这条绿裤子를 소개합니다. 对这条绿裤子 전체를 평가 很满意 앞에 둡니다."
+              },
+              {
+                "usageId": "degree-hen",
+                "parts": [
+                  {
+                    "token": 1,
+                    "start": 0,
+                    "end": 1
+                  },
+                  {
+                    "token": 4,
+                    "start": 0,
+                    "end": 2
+                  }
+                ],
+                "explanation": "很은 满意(만족하다) 앞에서 정도를 나타냅니다. 很满意는 ‘만족스럽다/매우 만족하다’라는 평가입니다."
+              }
+            ]
+          }
+        },
+        {
+          "answerIndex": 1,
+          "learning": {
+            "termIds": [
+              "preposition",
+              "subject",
+              "adverbial",
+              "predicate"
+            ],
+            "points": [
+              {
+                "usageId": "dui-target",
+                "parts": [
+                  {
+                    "token": 3,
+                    "start": 0,
+                    "end": 1
+                  },
+                  {
+                    "token": 2,
+                    "start": 0,
+                    "end": 5
+                  }
+                ],
+                "explanation": "对这条绿裤子는 ‘이 초록 바지에 대해서는’입니다. 평가 대상을 먼저 꺼내려고 문장 맨 앞에 놓았으며, 뒤에서 她很满意라고 평가합니다."
+              },
+              {
+                "usageId": "degree-hen",
+                "parts": [
+                  {
+                    "token": 1,
+                    "start": 0,
+                    "end": 1
+                  },
+                  {
+                    "token": 4,
+                    "start": 0,
+                    "end": 2
+                  }
+                ],
+                "explanation": "很은 满意 앞에서 만족하는 정도를 나타냅니다. 문장 앞에 对 구가 와도 很满意의 순서는 같습니다."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "H31007-71": {
+      "analyses": [
+        {
+          "answerIndex": 0,
+          "learning": {
+            "termIds": [
+              "subject",
+              "verb",
+              "object"
+            ],
+            "points": [
+              {
+                "usageId": "verb-object",
+                "parts": [
+                  {
+                    "token": 3,
+                    "start": 0,
+                    "end": 2
+                  },
+                  {
+                    "token": 1,
+                    "start": 0,
+                    "end": 2
+                  },
+                  {
+                    "token": 2,
+                    "start": 0,
+                    "end": 2
+                  }
+                ],
+                "explanation": "喜欢은 ‘좋아하다’, 中国文化는 좋아하는 대상인 ‘중국 문화’입니다. 동사 뒤에 목적어를 놓아 喜欢中国文化라고 합니다."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "H31007-72": {
+      "analyses": [
+        {
+          "answerIndex": 0,
+          "learning": {
+            "termIds": [
+              "subject",
+              "preposition",
+              "verb",
+              "complement",
+              "particle"
+            ],
+            "points": [
+              {
+                "usageId": "bei-passive",
+                "parts": [
+                  {
+                    "token": 2,
+                    "start": 0,
+                    "end": 4
+                  },
+                  {
+                    "token": 0,
+                    "start": 0,
+                    "end": 1
+                  },
+                  {
+                    "token": 1,
+                    "start": 0,
+                    "end": 1
+                  },
+                  {
+                    "token": 1,
+                    "start": 1,
+                    "end": 2
+                  }
+                ],
+                "explanation": "被는 주어가 행동을 당했음을 나타냅니다. 他的姓名은 쓰는 사람이 아니라 잘못 쓰인 대상이고, 여기서는 누가 썼는지 생략되어 있습니다."
+              },
+              {
+                "usageId": "result-complement",
+                "parts": [
+                  {
+                    "token": 1,
+                    "start": 0,
+                    "end": 1
+                  },
+                  {
+                    "token": 1,
+                    "start": 1,
+                    "end": 2
+                  }
+                ],
+                "explanation": "写错는 ‘잘못 쓰다’입니다. 错는 쓰는 동작이 틀린 결과로 끝났음을 보충하는 결과보어입니다."
+              },
+              {
+                "usageId": "le-completed",
+                "parts": [
+                  {
+                    "token": 1,
+                    "start": 0,
+                    "end": 1
+                  },
+                  {
+                    "token": 1,
+                    "start": 1,
+                    "end": 2
+                  },
+                  {
+                    "token": 3,
+                    "start": 0,
+                    "end": 1
+                  }
+                ],
+                "explanation": "写错了의 了는 잘못 적는 일이 일어났음을 나타냅니다."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "H31007-73": {
+      "analyses": [
+        {
+          "answerIndex": 0,
+          "learning": {
+            "termIds": [
+              "topic",
+              "subject",
+              "predicate",
+              "object"
+            ],
+            "points": [
+              {
+                "usageId": "quantity-below",
+                "parts": [
+                  {
+                    "token": 0,
+                    "start": 0,
+                    "end": 2
+                  },
+                  {
+                    "token": 1,
+                    "start": 0,
+                    "end": 3
+                  }
+                ],
+                "explanation": "不到는 여기서 ‘~에 못 미치다’입니다. 一米七(1미터 70센티미터)보다 키가 작다는 뜻이며, 到를 방향보어로 읽지 않습니다."
+              },
+              {
+                "usageId": "topic-comment",
+                "parts": [
+                  {
+                    "token": 2,
+                    "start": 0,
+                    "end": 1
+                  },
+                  {
+                    "token": 3,
+                    "start": 0,
+                    "end": 2
+                  }
+                ],
+                "explanation": "她를 먼저 화제로 제시한 뒤 身高(키)를 설명의 주어로 삼습니다. ‘그녀는 키가…’처럼 사람과 그 사람의 특성을 이어 말합니다."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "H31007-74": {
+      "analyses": [
+        {
+          "answerIndex": 0,
+          "learning": {
+            "termIds": [
+              "time",
+              "verb",
+              "object",
+              "attribute",
+              "particle"
+            ],
+            "points": [
+              {
+                "usageId": "time-position",
+                "parts": [
+                  {
+                    "token": 2,
+                    "start": 0,
+                    "end": 2
+                  }
+                ],
+                "explanation": "现在는 ‘지금’이라는 하나의 시간 표현입니다. 앞에서 행동할 때를 알려 주며, 글자 在를 따로 떼어 ‘~에 있다’로 설명하지 않습니다."
+              },
+              {
+                "usageId": "de-attribute",
+                "parts": [
+                  {
+                    "token": 0,
+                    "start": 0,
+                    "end": 2
+                  },
+                  {
+                    "token": 3,
+                    "start": 0,
+                    "end": 5
+                  }
+                ],
+                "explanation": "羊的는 ‘양의’로 뒤의 耳朵和鼻子(귀와 코)를 함께 꾸밉니다. 귀와 코 전체가 그리는 대상입니다."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "H31007-75": {
+      "analyses": [
+        {
+          "answerIndex": 0,
+          "learning": {
+            "termIds": [
+              "connective",
+              "verb",
+              "object",
+              "adverbial",
+              "predicate",
+              "particle"
+            ],
+            "points": [
+              {
+                "usageId": "if-then",
+                "parts": [
+                  {
+                    "token": 0,
+                    "start": 0,
+                    "end": 2
+                  },
+                  {
+                    "token": 1,
+                    "start": 0,
+                    "end": 1
+                  }
+                ],
+                "explanation": "如果는 ‘만약’, 就는 ‘그러면’입니다. 앞에 有面条(국수가 있다)라는 조건을 놓고 뒤에 그 조건의 결과를 이어 줍니다."
+              },
+              {
+                "usageId": "geng-degree",
+                "parts": [
+                  {
+                    "token": 2,
+                    "start": 0,
+                    "end": 1
+                  },
+                  {
+                    "token": 2,
+                    "start": 1,
+                    "end": 2
+                  }
+                ],
+                "explanation": "更은 ‘더’입니다. 국수가 있으면 지금보다 더 좋겠다는 뜻으로 好 앞에 놓습니다."
+              },
+              {
+                "usageId": "le-hypothetical-state",
+                "parts": [
+                  {
+                    "token": 2,
+                    "start": 1,
+                    "end": 2
+                  },
+                  {
+                    "token": 2,
+                    "start": 2,
+                    "end": 3
+                  }
+                ],
+                "explanation": "更好了는 여기서 ‘더 좋을 텐데’라는 가정한 결과입니다. 了를 과거형으로 읽어 이미 좋아졌다고 해석하지 않습니다."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "H31008-71": {
+      "analyses": [
+        {
+          "answerIndex": 0,
+          "learning": {
+            "termIds": [
+              "subject",
+              "adverbial",
+              "predicate",
+              "quantity"
+            ],
+            "points": [
+              {
+                "usageId": "classifier",
+                "parts": [
+                  {
+                    "token": 0,
+                    "start": 0,
+                    "end": 1
+                  },
+                  {
+                    "token": 3,
+                    "start": 0,
+                    "end": 1
+                  },
+                  {
+                    "token": 1,
+                    "start": 0,
+                    "end": 2
+                  }
+                ],
+                "explanation": "那位邻居는 ‘저 이웃분’입니다. 位는 사람을 공손하게 세는 양사로, 那와 邻居 사이에 들어갑니다."
+              },
+              {
+                "usageId": "degree-hen",
+                "parts": [
+                  {
+                    "token": 2,
+                    "start": 0,
+                    "end": 1
+                  },
+                  {
+                    "token": 2,
+                    "start": 1,
+                    "end": 3
+                  }
+                ],
+                "explanation": "很热情은 ‘친절하다/아주 친절하다’입니다. 很이 형용사 热情 앞에서 정도를 나타내고, 전체가 이웃의 성격을 설명합니다."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "H31008-72": {
+      "analyses": [
+        {
+          "answerIndex": 0,
+          "learning": {
+            "termIds": [
+              "subject",
+              "adverbial",
+              "predicate"
+            ],
+            "points": [
+              {
+                "usageId": "total-adverb",
+                "parts": [
+                  {
+                    "token": 2,
+                    "start": 0,
+                    "end": 2
+                  },
+                  {
+                    "token": 1,
+                    "start": 0,
+                    "end": 2
+                  }
+                ],
+                "explanation": "一共는 ‘모두 합해서’입니다. 전체 층수 三层(3층) 앞에 놓여 건물이 총 몇 층인지 말합니다. 중국어는 이런 수량만으로도 상태를 설명할 수 있습니다."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "H31008-73": {
+      "analyses": [
+        {
+          "answerIndex": 0,
+          "learning": {
+            "termIds": [
+              "subject",
+              "preposition",
+              "verb",
+              "complement",
+              "particle"
+            ],
+            "points": [
+              {
+                "usageId": "bei-passive",
+                "parts": [
+                  {
+                    "token": 0,
+                    "start": 0,
+                    "end": 2
+                  },
+                  {
+                    "token": 3,
+                    "start": 0,
+                    "end": 1
+                  },
+                  {
+                    "token": 1,
+                    "start": 0,
+                    "end": 3
+                  },
+                  {
+                    "token": 2,
+                    "start": 0,
+                    "end": 1
+                  }
+                ],
+                "explanation": "被服务员는 ‘종업원에 의해’라는 뜻입니다. 주어 菜单은 행동을 당한 메뉴이고, 被 뒤의 服务员은 메뉴를 가져간 사람입니다."
+              },
+              {
+                "usageId": "direction-complement",
+                "parts": [
+                  {
+                    "token": 2,
+                    "start": 0,
+                    "end": 1
+                  },
+                  {
+                    "token": 2,
+                    "start": 1,
+                    "end": 2
+                  }
+                ],
+                "explanation": "拿走는 ‘가져가다’입니다. 拿는 집거나 드는 동작이고, 走는 물건이 원래 있던 곳을 떠나는 방향을 보충합니다."
+              },
+              {
+                "usageId": "le-completed",
+                "parts": [
+                  {
+                    "token": 2,
+                    "start": 0,
+                    "end": 1
+                  },
+                  {
+                    "token": 2,
+                    "start": 1,
+                    "end": 2
+                  },
+                  {
+                    "token": 2,
+                    "start": 2,
+                    "end": 3
+                  }
+                ],
+                "explanation": "拿走了의 了는 메뉴를 가져가는 일이 이루어졌음을 나타냅니다."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "H31008-74": {
+      "analyses": [
+        {
+          "answerIndex": 0,
+          "learning": {
+            "termIds": [
+              "subject",
+              "preposition",
+              "predicate",
+              "attribute",
+              "particle"
+            ],
+            "points": [
+              {
+                "usageId": "bi-comparison",
+                "parts": [
+                  {
+                    "token": 2,
+                    "start": 0,
+                    "end": 7
+                  },
+                  {
+                    "token": 0,
+                    "start": 0,
+                    "end": 1
+                  },
+                  {
+                    "token": 1,
+                    "start": 0,
+                    "end": 2
+                  },
+                  {
+                    "token": 3,
+                    "start": 0,
+                    "end": 1
+                  }
+                ],
+                "explanation": "比는 ‘~보다’로 비교 기준 北方(북방)을 소개합니다. 中国南方的雨水+比北方+多 순서로 ‘중국 남방의 강수량이 북방보다 많다’고 말합니다."
+              },
+              {
+                "usageId": "de-attribute",
+                "parts": [
+                  {
+                    "token": 2,
+                    "start": 0,
+                    "end": 7
+                  }
+                ],
+                "explanation": "中国南方的雨水는 ‘중국 남방의 강수량’입니다. 的가 지역을 雨水와 이어 어떤 지역의 비인지 알려 줍니다."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "H31008-75": {
+      "analyses": [
+        {
+          "answerIndex": 0,
+          "learning": {
+            "termIds": [
+              "preposition",
+              "verb",
+              "complement",
+              "particle",
+              "location"
+            ],
+            "points": [
+              {
+                "usageId": "ba-disposal",
+                "parts": [
+                  {
+                    "token": 0,
+                    "start": 0,
+                    "end": 1
+                  },
+                  {
+                    "token": 3,
+                    "start": 0,
+                    "end": 2
+                  },
+                  {
+                    "token": 4,
+                    "start": 0,
+                    "end": 1
+                  },
+                  {
+                    "token": 1,
+                    "start": 0,
+                    "end": 3
+                  }
+                ],
+                "explanation": "把는 冰箱(냉장고)을 옮겨 놓을 대상으로 먼저 꺼냅니다. 뒤의 放厨房里는 그 대상을 어디에 놓는지 알려 줍니다."
+              },
+              {
+                "usageId": "location-complement",
+                "parts": [
+                  {
+                    "token": 4,
+                    "start": 0,
+                    "end": 1
+                  },
+                  {
+                    "token": 1,
+                    "start": 0,
+                    "end": 3
+                  }
+                ],
+                "explanation": "厨房里는 ‘주방 안’으로, 放 뒤에서 냉장고를 놓을 도착 장소를 보충합니다. 이 문장에는 在가 따로 없으므로 새 글자를 넣어 설명하지 않습니다."
+              },
+              {
+                "usageId": "ba-suggestion",
+                "parts": [
+                  {
+                    "token": 2,
+                    "start": 0,
+                    "end": 1
+                  }
+                ],
+                "explanation": "문장 끝의 吧는 ‘~하자/~해요’처럼 제안이나 권유를 부드럽게 합니다. 앞의 把와 발음이 비슷하지만 역할은 다릅니다."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "H31009-71": {
+      "analyses": [
+        {
+          "answerIndex": 0,
+          "learning": {
+            "termIds": [
+              "location",
+              "adverbial",
+              "verb",
+              "object"
+            ],
+            "points": [
+              {
+                "usageId": "buyao-prohibition",
+                "parts": [
+                  {
+                    "token": 2,
+                    "start": 0,
+                    "end": 2
+                  }
+                ],
+                "explanation": "不要는 ‘~하지 마라’라는 금지입니다. 放 앞에 두어 ‘설탕을 넣지 마라’라고 합니다."
+              },
+              {
+                "usageId": "localizer",
+                "parts": [
+                  {
+                    "token": 0,
+                    "start": 0,
+                    "end": 3
+                  }
+                ],
+                "explanation": "咖啡里는 ‘커피 안에’라는 장소 표현입니다. 里가 안쪽을 뜻하며 문장 앞에서 행동이 관련되는 곳을 제시합니다."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "H31009-72": {
+      "analyses": [
+        {
+          "answerIndex": 0,
+          "learning": {
+            "termIds": [
+              "verb",
+              "object",
+              "subject",
+              "predicate"
+            ],
+            "points": [
+              {
+                "usageId": "wish-construction",
+                "parts": [
+                  {
+                    "token": 2,
+                    "start": 0,
+                    "end": 1
+                  },
+                  {
+                    "token": 0,
+                    "start": 0,
+                    "end": 2
+                  },
+                  {
+                    "token": 3,
+                    "start": 0,
+                    "end": 2
+                  },
+                  {
+                    "token": 1,
+                    "start": 0,
+                    "end": 2
+                  }
+                ],
+                "explanation": "祝大家身体健康은 ‘여러분의 건강을 빕니다’입니다. 祝 뒤에 축원받는 사람 大家를 놓고, 이어 身体健康(몸이 건강하다)이라는 바라는 상태를 붙입니다."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "H31009-73": {
+      "analyses": [
+        {
+          "answerIndex": 0,
+          "learning": {
+            "termIds": [
+              "subject",
+              "topic",
+              "adverbial",
+              "predicate"
+            ],
+            "points": [
+              {
+                "usageId": "topic-comment",
+                "parts": [
+                  {
+                    "token": 2,
+                    "start": 0,
+                    "end": 3
+                  },
+                  {
+                    "token": 3,
+                    "start": 0,
+                    "end": 2
+                  },
+                  {
+                    "token": 1,
+                    "start": 0,
+                    "end": 2
+                  }
+                ],
+                "explanation": "做事情(일을 하는 것)을 먼저 활동으로 제시하고 特别认真(특히 성실하다)으로 그 태도를 평가합니다. 이 문장에는 得가 없으므로 得 보어 구문으로 설명하지 않습니다."
+              },
+              {
+                "usageId": "degree-adverb",
+                "parts": [
+                  {
+                    "token": 3,
+                    "start": 0,
+                    "end": 2
+                  },
+                  {
+                    "token": 1,
+                    "start": 0,
+                    "end": 2
+                  }
+                ],
+                "explanation": "特别는 여기서 ‘특히/유난히’로, 认真(성실하다)의 정도를 강조하며 형용사 앞에 옵니다."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "H31009-74": {
+      "analyses": [
+        {
+          "answerIndex": 0,
+          "learning": {
+            "termIds": [
+              "subject",
+              "particle",
+              "time",
+              "verb",
+              "object"
+            ],
+            "points": [
+              {
+                "usageId": "shi-de-emphasis",
+                "parts": [
+                  {
+                    "token": 3,
+                    "start": 0,
+                    "end": 1
+                  },
+                  {
+                    "token": 4,
+                    "start": 0,
+                    "end": 3
+                  },
+                  {
+                    "token": 2,
+                    "start": 0,
+                    "end": 2
+                  },
+                  {
+                    "token": 2,
+                    "start": 2,
+                    "end": 4
+                  },
+                  {
+                    "token": 1,
+                    "start": 0,
+                    "end": 1
+                  }
+                ],
+                "explanation": "是…的는 이미 일어난 일을 두고 특정 정보를 강조합니다. 여기서는 是 바로 뒤의 8点半을 강조하여 ‘우리가 동문을 떠난 것은 8시 반이다’라고 말합니다."
+              },
+              {
+                "usageId": "verb-object",
+                "parts": [
+                  {
+                    "token": 2,
+                    "start": 0,
+                    "end": 2
+                  },
+                  {
+                    "token": 2,
+                    "start": 2,
+                    "end": 4
+                  }
+                ],
+                "explanation": "离开는 ‘떠나다’라는 하나의 동사이고 东门은 떠난 장소입니다. 离开의 离를 따로 떼어 거리를 나타내는 개사로 설명하지 않습니다."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "H31009-75": {
+      "analyses": [
+        {
+          "answerIndex": 0,
+          "learning": {
+            "termIds": [
+              "subject",
+              "adverbial",
+              "particle",
+              "verb"
+            ],
+            "points": [
+              {
+                "usageId": "de-manner",
+                "parts": [
+                  {
+                    "token": 0,
+                    "start": 0,
+                    "end": 2
+                  },
+                  {
+                    "token": 1,
+                    "start": 0,
+                    "end": 1
+                  }
+                ],
+                "explanation": "地(de)는 满意(만족하다)를 동작을 꾸미는 말로 이어 ‘만족스럽게’라는 뜻을 냅니다. 满意地는 웃는 태도이므로 笑 앞에 옵니다."
+              },
+              {
+                "usageId": "le-completed",
+                "parts": [
+                  {
+                    "token": 4,
+                    "start": 0,
+                    "end": 1
+                  },
+                  {
+                    "token": 2,
+                    "start": 0,
+                    "end": 1
+                  }
+                ],
+                "explanation": "笑 뒤의 了는 웃는 일이 이루어졌음을 나타냅니다."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "H31110-71": {
+      "analyses": [
+        {
+          "answerIndex": 0,
+          "learning": {
+            "termIds": [
+              "subject",
+              "preposition",
+              "adverbial",
+              "predicate"
+            ],
+            "points": [
+              {
+                "usageId": "dui-target",
+                "parts": [
+                  {
+                    "token": 2,
+                    "start": 0,
+                    "end": 1
+                  },
+                  {
+                    "token": 3,
+                    "start": 0,
+                    "end": 2
+                  }
+                ],
+                "explanation": "对는 ‘~에 대해’로 관심의 대상 表演(공연/연기)을 소개합니다. 对表演 전체는 관심이 무엇을 향하는지 말하므로 很有兴趣 앞에 옵니다."
+              },
+              {
+                "usageId": "degree-adverb",
+                "parts": [
+                  {
+                    "token": 0,
+                    "start": 0,
+                    "end": 1
+                  },
+                  {
+                    "token": 0,
+                    "start": 1,
+                    "end": 4
+                  }
+                ],
+                "explanation": "很은 有兴趣(관심이 있다)의 정도를 나타냅니다. 很有兴趣는 ‘관심이 많다’라는 뜻입니다."
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}
