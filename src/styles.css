@@ -2260,6 +2260,18 @@ code {
 .writingActions .listenPlay:disabled { opacity: 0.45; cursor: default; }
 .writingAnswer { display: grid; gap: 12px; padding: 18px; border-radius: 16px; background: #f1f7ef; }
 .writingAnswerText { margin: 0; text-align: center; overflow-wrap: anywhere; font-family: var(--hanzi-font); font-weight: var(--hanzi-weight); font-size: 1.6rem; line-height: 1.65; }
+.writingStudyAnswers { display: grid; gap: 16px; min-width: 0; text-align: center; }
+.writingStudyAnswer { min-width: 0; }
+.writingStudyAnswer .ruby { justify-content: center; max-width: 100%; row-gap: 10px; }
+.writingStudyAnswer .rubyUnit { max-width: 100%; }
+.writingStudyAnswer .rubyHanzi { overflow-wrap: anywhere; }
+.writingStudyAnswer .rubyPinyin { white-space: normal; overflow-wrap: anywhere; }
+.writingStudyAnswer .listenKo { margin-top: 10px; line-height: 1.65; overflow-wrap: anywhere; }
+.writingAnswerLabel { margin: 0 0 8px; color: var(--muted); font-size: 12px; font-weight: 800; }
+.writingStudyVocab { min-width: 0; }
+.writingStudyVocab h3 { margin: 8px 0 10px; font-size: 15px; }
+.writingStudyVocab .listenVocab { grid-template-columns: repeat(auto-fit, minmax(min(180px, 100%), 1fr)); }
+.writingStudyVocab .listenVocab li { min-width: 0; overflow-wrap: anywhere; }
 .writingNote { margin: 0; font-size: 0.85rem; line-height: 1.6; color: var(--muted); }
 
 /* 어순 해설: 긴 한국어 설명과 문장 구조는 좁은 화면에서도 줄바꿈합니다. */

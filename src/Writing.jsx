@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { ChevronLeft, ChevronRight, RotateCcw } from 'lucide-react';
 import WritingGrammar from './WritingGrammar.jsx';
+import { WritingAnswers, WritingVocab } from './WritingStudy.jsx';
 import { grammarIsVisible } from './writingGrammar.js';
 import { fetchCached, readJson, writeJson } from './practiceStore';
 import { gradeOrder, selectedText, tokensOf, toggleToken, validSelection, writingCounts } from './writingTools';
@@ -69,9 +70,10 @@ export default function Writing() {
           </>}
           {revealed ? <section className="writingAnswer" aria-live="polite">
             <p className="listenVerdict">{record.status === 'right' ? '맞았어요' : record.status === 'wrong' ? '다시 살펴보세요' : record.status === 'unknown' ? '모르겠음으로 기록했어요' : '정답'}</p>
-            {item.answers.map((answer) => <p key={answer} className="writingAnswerText" lang="zh-CN">{answer}</p>)}
+            <WritingAnswers item={item} />
             {item.note ? <p className="writingNote">{item.note}</p> : null}
             {grammarIsVisible(item, record.status) ? <WritingGrammar key={item.id} item={item} /> : null}
+            <WritingVocab key={`vocab-${item.id}`} item={item} />
             <button type="button" className="subButton listenRetry" onClick={() => update({ selected: [] })}><RotateCcw size={15} /> 이 문제 다시 풀기</button>
           </section> : <div className="writingActions">
             <button type="button" className="listenPlay" disabled={item.kind === 'reorder' && selected.length !== item.tokens.length} onClick={() => reveal()}>답 확인</button>

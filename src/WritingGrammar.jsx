@@ -19,7 +19,7 @@ export default function WritingGrammar({ item }) {
   const analyses = [...item.grammar.analyses].sort((a, b) => a.answerIndex - b.answerIndex);
   return <section className="writingGrammar" aria-label="어순 문법 해설">
     <Analysis item={item} analysis={analyses[0]} />
-    {analyses.slice(1).map((analysis) => <details className="writingAlternative" key={analysis.answerIndex}><summary>추가 정답 분석 <span lang="zh-CN">{item.answers[analysis.answerIndex]}</span></summary><Analysis item={item} analysis={analysis} /><TokenRoles item={item} analysis={analysis} /></details>)}
+    {analyses.slice(1).map((analysis) => <details className="writingAlternative" key={analysis.answerIndex}><summary>정답 {analysis.answerIndex + 1} 문법 분석</summary><Analysis item={item} analysis={analysis} /><TokenRoles item={item} analysis={analysis} /></details>)}
     <TokenRoles item={item} analysis={analyses[0]} />
   </section>;
 }

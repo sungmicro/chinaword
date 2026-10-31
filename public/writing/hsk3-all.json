@@ -108,6 +108,60 @@
             "keyRule": "형용사+地로 만든 방식 부사어는 동사 앞에 놓습니다."
           }
         ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "弟弟",
+                "dìdi"
+              ],
+              [
+                "高兴",
+                "gāoxìng"
+              ],
+              [
+                "地",
+                "de"
+              ],
+              [
+                "笑",
+                "xiào"
+              ],
+              [
+                "了",
+                "le"
+              ],
+              [
+                "。",
+                ""
+              ]
+            ],
+            "ko": "남동생이 기뻐하며 웃었다."
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "弟弟",
+            "pinyin": "dìdi",
+            "meaningKo": "남동생",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "高兴",
+            "pinyin": "gāoxìng",
+            "meaningKo": "기쁘다",
+            "partOfSpeech": "형용사"
+          },
+          {
+            "hanzi": "笑",
+            "pinyin": "xiào",
+            "meaningKo": "웃다",
+            "partOfSpeech": "동사"
+          }
+        ]
       }
     },
     {
@@ -192,6 +246,66 @@
             ],
             "keyRule": "상태를 나타내는 형용사 앞에 정도 부사를 놓습니다.",
             "caution": "「比较」의 比를 비교문을 만드는 개사 比로 나누지 않습니다."
+          }
+        ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "上午",
+                "shàngwǔ"
+              ],
+              [
+                "的",
+                "de"
+              ],
+              [
+                "考试",
+                "kǎoshì"
+              ],
+              [
+                "比较",
+                "bǐjiào"
+              ],
+              [
+                "简单",
+                "jiǎndān"
+              ],
+              [
+                "。",
+                ""
+              ]
+            ],
+            "ko": "오전 시험은 비교적 쉬웠다."
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "上午",
+            "pinyin": "shàngwǔ",
+            "meaningKo": "오전",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "考试",
+            "pinyin": "kǎoshì",
+            "meaningKo": "시험",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "比较",
+            "pinyin": "bǐjiào",
+            "meaningKo": "비교적",
+            "partOfSpeech": "부사"
+          },
+          {
+            "hanzi": "简单",
+            "pinyin": "jiǎndān",
+            "meaningKo": "쉽다, 간단하다",
+            "partOfSpeech": "형용사"
           }
         ]
       }
@@ -310,6 +424,86 @@
             "keyRule": "变得 뒤에는 변화하여 도달하거나 나타나는 상태를 놓습니다."
           }
         ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "这",
+                "zhè"
+              ],
+              [
+                "个",
+                "gè"
+              ],
+              [
+                "城市",
+                "chéngshì"
+              ],
+              [
+                "的",
+                "de"
+              ],
+              [
+                "环境",
+                "huánjìng"
+              ],
+              [
+                "变",
+                "biàn"
+              ],
+              [
+                "得",
+                "de"
+              ],
+              [
+                "越来越",
+                "yuè lái yuè"
+              ],
+              [
+                "好",
+                "hǎo"
+              ],
+              [
+                "了",
+                "le"
+              ],
+              [
+                "。",
+                ""
+              ]
+            ],
+            "ko": "이 도시의 환경이 갈수록 좋아졌다."
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "城市",
+            "pinyin": "chéngshì",
+            "meaningKo": "도시",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "环境",
+            "pinyin": "huánjìng",
+            "meaningKo": "환경",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "变",
+            "pinyin": "biàn",
+            "meaningKo": "변하다",
+            "partOfSpeech": "동사"
+          },
+          {
+            "hanzi": "越来越",
+            "pinyin": "yuè lái yuè",
+            "meaningKo": "갈수록, 점점 더",
+            "partOfSpeech": "부사"
+          }
+        ]
       }
     },
     {
@@ -413,6 +607,78 @@
             ],
             "keyRule": "送给+받는 사람+물건 순서로 전달 대상을 나타냅니다.",
             "caution": "이 문장의 给他는 送 뒤에서 받는 사람을 나타냅니다. 给를 무조건 동사 앞에 놓지 않습니다."
+          }
+        ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "那",
+                "nà"
+              ],
+              [
+                "位",
+                "wèi"
+              ],
+              [
+                "医生",
+                "yīshēng"
+              ],
+              [
+                "送给",
+                "sònggěi"
+              ],
+              [
+                "他",
+                "tā"
+              ],
+              [
+                "一",
+                "yí"
+              ],
+              [
+                "个",
+                "gè"
+              ],
+              [
+                "礼物",
+                "lǐwù"
+              ],
+              [
+                "。",
+                ""
+              ]
+            ],
+            "ko": "그 의사는 그에게 선물을 하나 주었다."
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "位",
+            "pinyin": "wèi",
+            "meaningKo": "분(사람을 높여 세는 단위)",
+            "partOfSpeech": "양사"
+          },
+          {
+            "hanzi": "医生",
+            "pinyin": "yīshēng",
+            "meaningKo": "의사",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "送给",
+            "pinyin": "sònggěi",
+            "meaningKo": "~에게 주다, 선물하다",
+            "partOfSpeech": "동사"
+          },
+          {
+            "hanzi": "礼物",
+            "pinyin": "lǐwù",
+            "meaningKo": "선물",
+            "partOfSpeech": "명사"
           }
         ]
       }
@@ -526,6 +792,82 @@
               }
             ],
             "keyRule": "也는 주어 뒤, 술어 앞에 놓습니다."
+          }
+        ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "其他",
+                "qítā"
+              ],
+              [
+                "班",
+                "bān"
+              ],
+              [
+                "的",
+                "de"
+              ],
+              [
+                "成绩",
+                "chéngjì"
+              ],
+              [
+                "也",
+                "yě"
+              ],
+              [
+                "有",
+                "yǒu"
+              ],
+              [
+                "很",
+                "hěn"
+              ],
+              [
+                "大",
+                "dà"
+              ],
+              [
+                "提高",
+                "tígāo"
+              ],
+              [
+                "。",
+                ""
+              ]
+            ],
+            "ko": "다른 반의 성적도 크게 향상되었다."
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "其他",
+            "pinyin": "qítā",
+            "meaningKo": "다른, 기타의",
+            "partOfSpeech": "대명사"
+          },
+          {
+            "hanzi": "班",
+            "pinyin": "bān",
+            "meaningKo": "반, 학급",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "成绩",
+            "pinyin": "chéngjì",
+            "meaningKo": "성적",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "提高",
+            "pinyin": "tígāo",
+            "meaningKo": "향상, 향상하다",
+            "partOfSpeech": "명사·동사"
           }
         ]
       }
@@ -723,6 +1065,62 @@
             "caution": "「看看」는 동사 중첩으로, 잠깐 또는 가볍게 보자는 느낌입니다."
           }
         ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "我们",
+                "wǒmen"
+              ],
+              [
+                "先",
+                "xiān"
+              ],
+              [
+                "看看",
+                "kànkan"
+              ],
+              [
+                "菜单",
+                "càidān"
+              ],
+              [
+                "。",
+                ""
+              ]
+            ],
+            "ko": "우리 먼저 메뉴를 좀 보자."
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "我们",
+            "pinyin": "wǒmen",
+            "meaningKo": "우리",
+            "partOfSpeech": "대명사"
+          },
+          {
+            "hanzi": "先",
+            "pinyin": "xiān",
+            "meaningKo": "먼저",
+            "partOfSpeech": "부사"
+          },
+          {
+            "hanzi": "看",
+            "pinyin": "kàn",
+            "meaningKo": "보다",
+            "partOfSpeech": "동사"
+          },
+          {
+            "hanzi": "菜单",
+            "pinyin": "càidān",
+            "meaningKo": "메뉴",
+            "partOfSpeech": "명사"
+          }
+        ]
       }
     },
     {
@@ -834,6 +1232,60 @@
             "keyRule": "忘了 뒤에는 잊고 하지 못한 행동을 놓을 수 있습니다."
           }
         ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "她",
+                "tā"
+              ],
+              [
+                "忘",
+                "wàng"
+              ],
+              [
+                "了",
+                "le"
+              ],
+              [
+                "带",
+                "dài"
+              ],
+              [
+                "护照",
+                "hùzhào"
+              ],
+              [
+                "。",
+                ""
+              ]
+            ],
+            "ko": "그녀는 여권 가져오는 것을 잊었다."
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "忘",
+            "pinyin": "wàng",
+            "meaningKo": "잊다",
+            "partOfSpeech": "동사"
+          },
+          {
+            "hanzi": "带",
+            "pinyin": "dài",
+            "meaningKo": "휴대하다, 가져오다",
+            "partOfSpeech": "동사"
+          },
+          {
+            "hanzi": "护照",
+            "pinyin": "hùzhào",
+            "meaningKo": "여권",
+            "partOfSpeech": "명사"
+          }
+        ]
       }
     },
     {
@@ -924,6 +1376,56 @@
               }
             ],
             "keyRule": "형용사로 상태를 말할 때 很 등의 정도 성분을 형용사 앞에 놓습니다."
+          }
+        ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "这些",
+                "zhèxiē"
+              ],
+              [
+                "葡萄",
+                "pútao"
+              ],
+              [
+                "很",
+                "hěn"
+              ],
+              [
+                "新鲜",
+                "xīnxiān"
+              ],
+              [
+                "。",
+                ""
+              ]
+            ],
+            "ko": "이 포도들은 아주 신선하다."
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "这些",
+            "pinyin": "zhèxiē",
+            "meaningKo": "이것들, 이 몇몇",
+            "partOfSpeech": "대명사"
+          },
+          {
+            "hanzi": "葡萄",
+            "pinyin": "pútao",
+            "meaningKo": "포도",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "新鲜",
+            "pinyin": "xīnxiān",
+            "meaningKo": "신선하다",
+            "partOfSpeech": "형용사"
           }
         ]
       }
@@ -1049,6 +1551,82 @@
             "keyRule": "여러 대상을 모두 포함하는 都는 주어 뒤, 술어 앞에 놓습니다."
           }
         ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "熊猫",
+                "xióngmāo"
+              ],
+              [
+                "的",
+                "de"
+              ],
+              [
+                "眼睛",
+                "yǎnjing"
+              ],
+              [
+                "和",
+                "hé"
+              ],
+              [
+                "耳朵",
+                "ěrduo"
+              ],
+              [
+                "都",
+                "dōu"
+              ],
+              [
+                "是",
+                "shì"
+              ],
+              [
+                "黑色",
+                "hēisè"
+              ],
+              [
+                "的",
+                "de"
+              ],
+              [
+                "。",
+                ""
+              ]
+            ],
+            "ko": "판다의 눈과 귀는 모두 검은색이다."
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "熊猫",
+            "pinyin": "xióngmāo",
+            "meaningKo": "판다",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "眼睛",
+            "pinyin": "yǎnjing",
+            "meaningKo": "눈",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "耳朵",
+            "pinyin": "ěrduo",
+            "meaningKo": "귀",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "黑色",
+            "pinyin": "hēisè",
+            "meaningKo": "검은색",
+            "partOfSpeech": "명사"
+          }
+        ]
       }
     },
     {
@@ -1153,6 +1731,74 @@
               }
             ],
             "keyRule": "능원동사+수단 개사구+동사 순서로 행동의 조건을 나타냅니다."
+          }
+        ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "你",
+                "nǐ"
+              ],
+              [
+                "敢",
+                "gǎn"
+              ],
+              [
+                "不",
+                "bu"
+              ],
+              [
+                "敢",
+                "gǎn"
+              ],
+              [
+                "用",
+                "yòng"
+              ],
+              [
+                "冷水",
+                "lěngshuǐ"
+              ],
+              [
+                "洗澡",
+                "xǐzǎo"
+              ],
+              [
+                "？",
+                ""
+              ]
+            ],
+            "ko": "너는 찬물로 목욕할 용기가 있니?"
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "敢",
+            "pinyin": "gǎn",
+            "meaningKo": "감히 ~하다, ~할 용기가 있다",
+            "partOfSpeech": "조동사"
+          },
+          {
+            "hanzi": "用",
+            "pinyin": "yòng",
+            "meaningKo": "사용하다",
+            "partOfSpeech": "동사"
+          },
+          {
+            "hanzi": "冷水",
+            "pinyin": "lěngshuǐ",
+            "meaningKo": "찬물",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "洗澡",
+            "pinyin": "xǐzǎo",
+            "meaningKo": "목욕하다",
+            "partOfSpeech": "동사"
           }
         ]
       }
@@ -1373,6 +2019,70 @@
             "caution": "「她决定」는 한 토큰이지만 주어와 동사로 나뉩니다. 送给의 给를 동사 앞 개사로 옮기지 않습니다."
           }
         ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "她",
+                "tā"
+              ],
+              [
+                "决定",
+                "juédìng"
+              ],
+              [
+                "把",
+                "bǎ"
+              ],
+              [
+                "手机",
+                "shǒujī"
+              ],
+              [
+                "送给",
+                "sònggěi"
+              ],
+              [
+                "弟弟",
+                "dìdi"
+              ],
+              [
+                "。",
+                ""
+              ]
+            ],
+            "ko": "그녀는 휴대전화를 남동생에게 주기로 결정했다."
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "决定",
+            "pinyin": "juédìng",
+            "meaningKo": "결정하다",
+            "partOfSpeech": "동사"
+          },
+          {
+            "hanzi": "手机",
+            "pinyin": "shǒujī",
+            "meaningKo": "휴대전화",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "送给",
+            "pinyin": "sònggěi",
+            "meaningKo": "~에게 주다, 선물하다",
+            "partOfSpeech": "동사"
+          },
+          {
+            "hanzi": "弟弟",
+            "pinyin": "dìdi",
+            "meaningKo": "남동생",
+            "partOfSpeech": "명사"
+          }
+        ]
       }
     },
     {
@@ -1487,6 +2197,86 @@
             "caution": "「没…了」라고 해서 了를 동작 완료의 과거형으로 해석하지 않습니다."
           }
         ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "我",
+                "wǒ"
+              ],
+              [
+                "和",
+                "hé"
+              ],
+              [
+                "这",
+                "zhè"
+              ],
+              [
+                "个",
+                "gè"
+              ],
+              [
+                "学生",
+                "xuésheng"
+              ],
+              [
+                "很",
+                "hěn"
+              ],
+              [
+                "久",
+                "jiǔ"
+              ],
+              [
+                "没",
+                "méi"
+              ],
+              [
+                "见面",
+                "jiànmiàn"
+              ],
+              [
+                "了",
+                "le"
+              ],
+              [
+                "。",
+                ""
+              ]
+            ],
+            "ko": "나는 이 학생과 오랫동안 만나지 못했다."
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "学生",
+            "pinyin": "xuésheng",
+            "meaningKo": "학생",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "久",
+            "pinyin": "jiǔ",
+            "meaningKo": "오래다",
+            "partOfSpeech": "형용사"
+          },
+          {
+            "hanzi": "没",
+            "pinyin": "méi",
+            "meaningKo": "~하지 않았다",
+            "partOfSpeech": "부사"
+          },
+          {
+            "hanzi": "见面",
+            "pinyin": "jiànmiàn",
+            "meaningKo": "만나다",
+            "partOfSpeech": "동사"
+          }
+        ]
       }
     },
     {
@@ -1584,6 +2374,74 @@
               }
             ],
             "keyRule": "빈도 부사 经常은 동사 앞에 놓습니다."
+          }
+        ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "这",
+                "zhè"
+              ],
+              [
+                "个",
+                "gè"
+              ],
+              [
+                "城市",
+                "chéngshì"
+              ],
+              [
+                "的",
+                "de"
+              ],
+              [
+                "春天",
+                "chūntiān"
+              ],
+              [
+                "经常",
+                "jīngcháng"
+              ],
+              [
+                "刮风",
+                "guāfēng"
+              ],
+              [
+                "。",
+                ""
+              ]
+            ],
+            "ko": "이 도시의 봄에는 바람이 자주 분다."
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "城市",
+            "pinyin": "chéngshì",
+            "meaningKo": "도시",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "春天",
+            "pinyin": "chūntiān",
+            "meaningKo": "봄",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "经常",
+            "pinyin": "jīngcháng",
+            "meaningKo": "자주",
+            "partOfSpeech": "부사"
+          },
+          {
+            "hanzi": "刮风",
+            "pinyin": "guāfēng",
+            "meaningKo": "바람이 불다",
+            "partOfSpeech": "동사"
           }
         ]
       }
@@ -1684,6 +2542,68 @@
             ],
             "keyRule": "동사+得+보어로 동작이 어떤 정도나 양상으로 이루어지는지 말합니다.",
             "caution": "「得」는 동사 뒤의 보어를 잇습니다. 「地」처럼 동사 앞 방식 부사어를 만드는 표지가 아닙니다."
+          }
+        ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "他",
+                "tā"
+              ],
+              [
+                "的",
+                "de"
+              ],
+              [
+                "汉字",
+                "hànzì"
+              ],
+              [
+                "写",
+                "xiě"
+              ],
+              [
+                "得",
+                "de"
+              ],
+              [
+                "很",
+                "hěn"
+              ],
+              [
+                "漂亮",
+                "piàoliang"
+              ],
+              [
+                "。",
+                ""
+              ]
+            ],
+            "ko": "그는 한자를 아주 예쁘게 쓴다."
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "汉字",
+            "pinyin": "hànzì",
+            "meaningKo": "한자",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "写",
+            "pinyin": "xiě",
+            "meaningKo": "쓰다",
+            "partOfSpeech": "동사"
+          },
+          {
+            "hanzi": "漂亮",
+            "pinyin": "piàoliang",
+            "meaningKo": "예쁘다",
+            "partOfSpeech": "형용사"
           }
         ]
       }
@@ -1788,6 +2708,84 @@
               }
             ],
             "keyRule": "花 뒤에는 든 돈의 양을 놓습니다."
+          }
+        ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "叔叔",
+                "shūshu"
+              ],
+              [
+                "的",
+                "de"
+              ],
+              [
+                "太阳镜",
+                "tàiyángjìng"
+              ],
+              [
+                "花",
+                "huā"
+              ],
+              [
+                "了",
+                "le"
+              ],
+              [
+                "900",
+                "jiǔ bǎi"
+              ],
+              [
+                "块",
+                "kuài"
+              ],
+              [
+                "钱",
+                "qián"
+              ],
+              [
+                "。",
+                ""
+              ]
+            ],
+            "ko": "삼촌의 선글라스는 900위안이 들었다."
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "叔叔",
+            "pinyin": "shūshu",
+            "meaningKo": "삼촌, 아저씨",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "太阳镜",
+            "pinyin": "tàiyángjìng",
+            "meaningKo": "선글라스",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "花",
+            "pinyin": "huā",
+            "meaningKo": "쓰다, 소비하다",
+            "partOfSpeech": "동사"
+          },
+          {
+            "hanzi": "块",
+            "pinyin": "kuài",
+            "meaningKo": "위안(화폐 단위의 구어)",
+            "partOfSpeech": "양사"
+          },
+          {
+            "hanzi": "钱",
+            "pinyin": "qián",
+            "meaningKo": "돈",
+            "partOfSpeech": "명사"
           }
         ]
       }
@@ -1978,6 +2976,70 @@
             "caution": "여기서 在는 뒤의 다른 동사를 꾸미는 장소개사가 아니라 위치를 나타내는 동사입니다."
           }
         ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "药",
+                "yào"
+              ],
+              [
+                "在",
+                "zài"
+              ],
+              [
+                "我",
+                "wǒ"
+              ],
+              [
+                "的",
+                "de"
+              ],
+              [
+                "包",
+                "bāo"
+              ],
+              [
+                "里",
+                "lǐ"
+              ],
+              [
+                "。",
+                ""
+              ]
+            ],
+            "ko": "약은 내 가방 안에 있다."
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "药",
+            "pinyin": "yào",
+            "meaningKo": "약",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "在",
+            "pinyin": "zài",
+            "meaningKo": "~에 있다",
+            "partOfSpeech": "동사"
+          },
+          {
+            "hanzi": "包",
+            "pinyin": "bāo",
+            "meaningKo": "가방",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "里",
+            "pinyin": "lǐ",
+            "meaningKo": "안, 속",
+            "partOfSpeech": "방위사"
+          }
+        ]
       }
     },
     {
@@ -2103,6 +3165,70 @@
             "keyRule": "去+장소+행동 순서로 어디에 가서 무엇을 할지 말합니다."
           }
         ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "他",
+                "tā"
+              ],
+              [
+                "要",
+                "yào"
+              ],
+              [
+                "去",
+                "qù"
+              ],
+              [
+                "机场",
+                "jīchǎng"
+              ],
+              [
+                "接",
+                "jiē"
+              ],
+              [
+                "女朋友",
+                "nǚpéngyou"
+              ],
+              [
+                "。",
+                ""
+              ]
+            ],
+            "ko": "그는 여자 친구를 마중하러 공항에 가려고 한다."
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "要",
+            "pinyin": "yào",
+            "meaningKo": "~하려고 하다, ~해야 한다",
+            "partOfSpeech": "조동사"
+          },
+          {
+            "hanzi": "机场",
+            "pinyin": "jīchǎng",
+            "meaningKo": "공항",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "接",
+            "pinyin": "jiē",
+            "meaningKo": "마중하다",
+            "partOfSpeech": "동사"
+          },
+          {
+            "hanzi": "女朋友",
+            "pinyin": "nǚpéngyou",
+            "meaningKo": "여자 친구",
+            "partOfSpeech": "명사"
+          }
+        ]
       }
     },
     {
@@ -2207,6 +3333,84 @@
               }
             ],
             "keyRule": "还는 상태를 나타내는 很+형용사 앞에서 ‘아직’의 뜻을 더합니다."
+          }
+        ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "你",
+                "nǐ"
+              ],
+              [
+                "脚",
+                "jiǎo"
+              ],
+              [
+                "下",
+                "xià"
+              ],
+              [
+                "的",
+                "de"
+              ],
+              [
+                "路",
+                "lù"
+              ],
+              [
+                "还",
+                "hái"
+              ],
+              [
+                "很",
+                "hěn"
+              ],
+              [
+                "长",
+                "cháng"
+              ],
+              [
+                "。",
+                ""
+              ]
+            ],
+            "ko": "네가 걸어갈 길은 아직 아주 길다."
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "脚",
+            "pinyin": "jiǎo",
+            "meaningKo": "발",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "下",
+            "pinyin": "xià",
+            "meaningKo": "아래",
+            "partOfSpeech": "방위사"
+          },
+          {
+            "hanzi": "路",
+            "pinyin": "lù",
+            "meaningKo": "길",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "还",
+            "pinyin": "hái",
+            "meaningKo": "아직",
+            "partOfSpeech": "부사"
+          },
+          {
+            "hanzi": "长",
+            "pinyin": "cháng",
+            "meaningKo": "길다",
+            "partOfSpeech": "형용사"
           }
         ]
       }
@@ -2318,6 +3522,70 @@
               }
             ],
             "keyRule": "不喜欢 뒤에는 좋아하지 않는 행동 전체를 놓습니다."
+          }
+        ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "她",
+                "tā"
+              ],
+              [
+                "不",
+                "bù"
+              ],
+              [
+                "喜欢",
+                "xǐhuan"
+              ],
+              [
+                "用",
+                "yòng"
+              ],
+              [
+                "铅笔",
+                "qiānbǐ"
+              ],
+              [
+                "写字",
+                "xiězì"
+              ],
+              [
+                "。",
+                ""
+              ]
+            ],
+            "ko": "그녀는 연필로 글씨 쓰는 것을 좋아하지 않는다."
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "喜欢",
+            "pinyin": "xǐhuan",
+            "meaningKo": "좋아하다",
+            "partOfSpeech": "동사"
+          },
+          {
+            "hanzi": "用",
+            "pinyin": "yòng",
+            "meaningKo": "사용하다",
+            "partOfSpeech": "동사"
+          },
+          {
+            "hanzi": "铅笔",
+            "pinyin": "qiānbǐ",
+            "meaningKo": "연필",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "写字",
+            "pinyin": "xiězì",
+            "meaningKo": "글씨를 쓰다",
+            "partOfSpeech": "동사"
           }
         ]
       }
@@ -2499,6 +3767,98 @@
             ],
             "keyRule": "사람을 화제로 제시한 뒤 신체 부위+상태 설명을 붙일 수 있습니다.",
             "difference": "이 답은 「你的丈夫」가 화제이고 「鼻子怎么了」가 그 사람에 대한 설명입니다. 다른 답은 「你丈夫的鼻子」를 하나의 주어로 묶습니다."
+          }
+        ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "你",
+                "nǐ"
+              ],
+              [
+                "丈夫",
+                "zhàngfu"
+              ],
+              [
+                "的",
+                "de"
+              ],
+              [
+                "鼻子",
+                "bízi"
+              ],
+              [
+                "怎么",
+                "zěnme"
+              ],
+              [
+                "了",
+                "le"
+              ],
+              [
+                "？",
+                ""
+              ]
+            ],
+            "ko": "네 남편의 코가 어떻게 된 거야?"
+          },
+          {
+            "answerIndex": 1,
+            "words": [
+              [
+                "你",
+                "nǐ"
+              ],
+              [
+                "的",
+                "de"
+              ],
+              [
+                "丈夫",
+                "zhàngfu"
+              ],
+              [
+                "鼻子",
+                "bízi"
+              ],
+              [
+                "怎么",
+                "zěnme"
+              ],
+              [
+                "了",
+                "le"
+              ],
+              [
+                "？",
+                ""
+              ]
+            ],
+            "ko": "네 남편은 코가 어떻게 된 거야?"
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "丈夫",
+            "pinyin": "zhàngfu",
+            "meaningKo": "남편",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "鼻子",
+            "pinyin": "bízi",
+            "meaningKo": "코",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "怎么",
+            "pinyin": "zěnme",
+            "meaningKo": "어떻게, 어찌 된",
+            "partOfSpeech": "대명사"
           }
         ]
       }
@@ -2695,6 +4055,68 @@
             "keyRule": "주어+是+색깔+的로 대상의 색을 말할 수 있습니다."
           }
         ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "李",
+                "Lǐ"
+              ],
+              [
+                "小姐",
+                "xiǎojiě"
+              ],
+              [
+                "的",
+                "de"
+              ],
+              [
+                "头发",
+                "tóufa"
+              ],
+              [
+                "是",
+                "shì"
+              ],
+              [
+                "黑色",
+                "hēisè"
+              ],
+              [
+                "的",
+                "de"
+              ],
+              [
+                "。",
+                ""
+              ]
+            ],
+            "ko": "리 씨의 머리카락은 검은색이다."
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "小姐",
+            "pinyin": "xiǎojiě",
+            "meaningKo": "아가씨, ~씨",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "头发",
+            "pinyin": "tóufa",
+            "meaningKo": "머리카락",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "黑色",
+            "pinyin": "hēisè",
+            "meaningKo": "검은색",
+            "partOfSpeech": "명사"
+          }
+        ]
       }
     },
     {
@@ -2855,6 +4277,82 @@
             "difference": "이 답은 「会议」가 「举行」 뒤의 목적어입니다. 다른 답은 「会议」를 화제로 앞에 놓고 「什么时候举行」으로 설명합니다."
           }
         ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "会议",
+                "huìyì"
+              ],
+              [
+                "什么",
+                "shénme"
+              ],
+              [
+                "时候",
+                "shíhou"
+              ],
+              [
+                "举行",
+                "jǔxíng"
+              ],
+              [
+                "？",
+                ""
+              ]
+            ],
+            "ko": "회의는 언제 열리나요?"
+          },
+          {
+            "answerIndex": 1,
+            "words": [
+              [
+                "什么",
+                "shénme"
+              ],
+              [
+                "时候",
+                "shíhou"
+              ],
+              [
+                "举行",
+                "jǔxíng"
+              ],
+              [
+                "会议",
+                "huìyì"
+              ],
+              [
+                "？",
+                ""
+              ]
+            ],
+            "ko": "언제 회의를 여나요?"
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "会议",
+            "pinyin": "huìyì",
+            "meaningKo": "회의",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "时候",
+            "pinyin": "shíhou",
+            "meaningKo": "때, 시간",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "举行",
+            "pinyin": "jǔxíng",
+            "meaningKo": "개최하다, 열다",
+            "partOfSpeech": "동사"
+          }
+        ]
       }
     },
     {
@@ -2953,6 +4451,74 @@
             ],
             "keyRule": "활동을 먼저 제시하고 그 뒤에 형용사 술어로 활동의 태도를 설명할 수 있습니다.",
             "caution": "이 문장에는 得가 없습니다. 「学习很努力」를 억지로 동사+得 보어 구조로 나누지 않습니다."
+          }
+        ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "他们",
+                "tāmen"
+              ],
+              [
+                "班",
+                "bān"
+              ],
+              [
+                "的",
+                "de"
+              ],
+              [
+                "学生",
+                "xuésheng"
+              ],
+              [
+                "学习",
+                "xuéxí"
+              ],
+              [
+                "很",
+                "hěn"
+              ],
+              [
+                "努力",
+                "nǔlì"
+              ],
+              [
+                "。",
+                ""
+              ]
+            ],
+            "ko": "그들 반 학생들은 공부를 아주 열심히 한다."
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "班",
+            "pinyin": "bān",
+            "meaningKo": "반, 학급",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "学生",
+            "pinyin": "xuésheng",
+            "meaningKo": "학생",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "学习",
+            "pinyin": "xuéxí",
+            "meaningKo": "공부하다",
+            "partOfSpeech": "동사"
+          },
+          {
+            "hanzi": "努力",
+            "pinyin": "nǔlì",
+            "meaningKo": "노력하다, 열심이다",
+            "partOfSpeech": "동사·형용사"
           }
         ]
       }
@@ -3068,6 +4634,74 @@
             "keyRule": "주어+都+喜欢+행동으로 모두가 좋아하는 일을 말합니다."
           }
         ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "马",
+                "mǎ"
+              ],
+              [
+                "和",
+                "hé"
+              ],
+              [
+                "羊",
+                "yáng"
+              ],
+              [
+                "都",
+                "dōu"
+              ],
+              [
+                "喜欢",
+                "xǐhuan"
+              ],
+              [
+                "吃",
+                "chī"
+              ],
+              [
+                "草",
+                "cǎo"
+              ],
+              [
+                "。",
+                ""
+              ]
+            ],
+            "ko": "말과 양은 모두 풀 먹기를 좋아한다."
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "马",
+            "pinyin": "mǎ",
+            "meaningKo": "말",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "羊",
+            "pinyin": "yáng",
+            "meaningKo": "양",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "喜欢",
+            "pinyin": "xǐhuan",
+            "meaningKo": "좋아하다",
+            "partOfSpeech": "동사"
+          },
+          {
+            "hanzi": "草",
+            "pinyin": "cǎo",
+            "meaningKo": "풀",
+            "partOfSpeech": "명사"
+          }
+        ]
       }
     },
     {
@@ -3172,6 +4806,70 @@
               }
             ],
             "keyRule": "要+동사+목적어로 해야 할 행동을 말합니다."
+          }
+        ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "老年人",
+                "lǎoniánrén"
+              ],
+              [
+                "要",
+                "yào"
+              ],
+              [
+                "关心",
+                "guānxīn"
+              ],
+              [
+                "自己",
+                "zìjǐ"
+              ],
+              [
+                "的",
+                "de"
+              ],
+              [
+                "腿脚",
+                "tuǐjiǎo"
+              ],
+              [
+                "。",
+                ""
+              ]
+            ],
+            "ko": "노인은 자신의 다리와 발 건강에 신경 써야 한다."
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "老年人",
+            "pinyin": "lǎoniánrén",
+            "meaningKo": "노인",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "关心",
+            "pinyin": "guānxīn",
+            "meaningKo": "관심을 갖다, 신경 쓰다",
+            "partOfSpeech": "동사"
+          },
+          {
+            "hanzi": "自己",
+            "pinyin": "zìjǐ",
+            "meaningKo": "자기 자신",
+            "partOfSpeech": "대명사"
+          },
+          {
+            "hanzi": "腿脚",
+            "pinyin": "tuǐjiǎo",
+            "meaningKo": "다리와 발, 걸음걸이",
+            "partOfSpeech": "명사"
           }
         ]
       }
@@ -3366,6 +5064,66 @@
             "keyRule": "장소+不要+동사+목적어로 그 장소에서의 행동을 금지합니다."
           }
         ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "咖啡",
+                "kāfēi"
+              ],
+              [
+                "里",
+                "lǐ"
+              ],
+              [
+                "不要",
+                "bú yào"
+              ],
+              [
+                "放",
+                "fàng"
+              ],
+              [
+                "糖",
+                "táng"
+              ],
+              [
+                "。",
+                ""
+              ]
+            ],
+            "ko": "커피에 설탕을 넣지 마세요."
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "咖啡",
+            "pinyin": "kāfēi",
+            "meaningKo": "커피",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "里",
+            "pinyin": "lǐ",
+            "meaningKo": "안, 속",
+            "partOfSpeech": "방위사"
+          },
+          {
+            "hanzi": "放",
+            "pinyin": "fàng",
+            "meaningKo": "놓다, 넣다",
+            "partOfSpeech": "동사"
+          },
+          {
+            "hanzi": "糖",
+            "pinyin": "táng",
+            "meaningKo": "설탕",
+            "partOfSpeech": "명사"
+          }
+        ]
       }
     },
     {
@@ -3489,6 +5247,78 @@
             "keyRule": "把+대상+동사+결과 보어 순서로 대상의 처리 결과를 말합니다."
           }
         ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "把",
+                "bǎ"
+              ],
+              [
+                "碗",
+                "wǎn"
+              ],
+              [
+                "和",
+                "hé"
+              ],
+              [
+                "筷子",
+                "kuàizi"
+              ],
+              [
+                "洗",
+                "xǐ"
+              ],
+              [
+                "干净",
+                "gānjìng"
+              ],
+              [
+                "了",
+                "le"
+              ],
+              [
+                "吗",
+                "ma"
+              ],
+              [
+                "？",
+                ""
+              ]
+            ],
+            "ko": "그릇과 젓가락을 깨끗이 씻었나요?"
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "碗",
+            "pinyin": "wǎn",
+            "meaningKo": "그릇",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "筷子",
+            "pinyin": "kuàizi",
+            "meaningKo": "젓가락",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "洗",
+            "pinyin": "xǐ",
+            "meaningKo": "씻다",
+            "partOfSpeech": "동사"
+          },
+          {
+            "hanzi": "干净",
+            "pinyin": "gānjìng",
+            "meaningKo": "깨끗하다",
+            "partOfSpeech": "형용사"
+          }
+        ]
       }
     },
     {
@@ -3588,6 +5418,56 @@
             "keyRule": "突然은 동사 앞에서 갑작스러운 발생을 나타냅니다."
           }
         ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "孩子",
+                "háizi"
+              ],
+              [
+                "突然",
+                "tūrán"
+              ],
+              [
+                "发烧",
+                "fāshāo"
+              ],
+              [
+                "了",
+                "le"
+              ],
+              [
+                "。",
+                ""
+              ]
+            ],
+            "ko": "아이가 갑자기 열이 났다."
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "孩子",
+            "pinyin": "háizi",
+            "meaningKo": "아이",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "突然",
+            "pinyin": "tūrán",
+            "meaningKo": "갑자기",
+            "partOfSpeech": "부사"
+          },
+          {
+            "hanzi": "发烧",
+            "pinyin": "fāshāo",
+            "meaningKo": "열이 나다",
+            "partOfSpeech": "동사"
+          }
+        ]
       }
     },
     {
@@ -3679,6 +5559,80 @@
             ],
             "keyRule": "행동을 나타내는 구 전체가 주어가 되어 表示+내용 앞에 올 수 있습니다.",
             "caution": "「看到」의 到는 결과를 이루는 동사의 일부입니다. 「游戏结束」는 문장을 보는 목적 행동이 아니라 表示의 내용입니다."
+          }
+        ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "看到",
+                "kàndào"
+              ],
+              [
+                "这",
+                "zhè"
+              ],
+              [
+                "个",
+                "gè"
+              ],
+              [
+                "句子",
+                "jùzi"
+              ],
+              [
+                "表示",
+                "biǎoshì"
+              ],
+              [
+                "游戏",
+                "yóuxì"
+              ],
+              [
+                "结束",
+                "jiéshù"
+              ],
+              [
+                "。",
+                ""
+              ]
+            ],
+            "ko": "이 문장이 보이면 게임이 끝났다는 뜻이다."
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "看到",
+            "pinyin": "kàndào",
+            "meaningKo": "보다, 눈에 들어오다",
+            "partOfSpeech": "동사"
+          },
+          {
+            "hanzi": "句子",
+            "pinyin": "jùzi",
+            "meaningKo": "문장",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "表示",
+            "pinyin": "biǎoshì",
+            "meaningKo": "뜻하다, 나타내다",
+            "partOfSpeech": "동사"
+          },
+          {
+            "hanzi": "游戏",
+            "pinyin": "yóuxì",
+            "meaningKo": "게임",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "结束",
+            "pinyin": "jiéshù",
+            "meaningKo": "끝나다",
+            "partOfSpeech": "동사"
           }
         ]
       }
@@ -3866,6 +5820,130 @@
             ],
             "keyRule": "对+대상 개사구는 문장 앞에 놓아 평가 대상을 먼저 제시할 수도 있습니다.",
             "difference": "이 답은 对 개사구가 「她」보다 앞에 있고 공식답에는 뒤에 쉼표가 있습니다. 다른 답은 주어 뒤에 같은 개사구를 둡니다."
+          }
+        ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "她",
+                "tā"
+              ],
+              [
+                "对",
+                "duì"
+              ],
+              [
+                "这",
+                "zhè"
+              ],
+              [
+                "条",
+                "tiáo"
+              ],
+              [
+                "绿",
+                "lǜ"
+              ],
+              [
+                "裤子",
+                "kùzi"
+              ],
+              [
+                "很",
+                "hěn"
+              ],
+              [
+                "满意",
+                "mǎnyì"
+              ],
+              [
+                "。",
+                ""
+              ]
+            ],
+            "ko": "그녀는 이 초록색 바지에 아주 만족한다."
+          },
+          {
+            "answerIndex": 1,
+            "words": [
+              [
+                "对",
+                "duì"
+              ],
+              [
+                "这",
+                "zhè"
+              ],
+              [
+                "条",
+                "tiáo"
+              ],
+              [
+                "绿",
+                "lǜ"
+              ],
+              [
+                "裤子",
+                "kùzi"
+              ],
+              [
+                "，",
+                ""
+              ],
+              [
+                "她",
+                "tā"
+              ],
+              [
+                "很",
+                "hěn"
+              ],
+              [
+                "满意",
+                "mǎnyì"
+              ],
+              [
+                "。",
+                ""
+              ]
+            ],
+            "ko": "이 초록색 바지에 대해 그녀는 아주 만족한다."
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "对",
+            "pinyin": "duì",
+            "meaningKo": "~에 대해",
+            "partOfSpeech": "개사"
+          },
+          {
+            "hanzi": "条",
+            "pinyin": "tiáo",
+            "meaningKo": "벌(바지 등을 세는 단위)",
+            "partOfSpeech": "양사"
+          },
+          {
+            "hanzi": "绿",
+            "pinyin": "lǜ",
+            "meaningKo": "초록색이다",
+            "partOfSpeech": "형용사"
+          },
+          {
+            "hanzi": "裤子",
+            "pinyin": "kùzi",
+            "meaningKo": "바지",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "满意",
+            "pinyin": "mǎnyì",
+            "meaningKo": "만족하다",
+            "partOfSpeech": "형용사"
           }
         ]
       }
@@ -4057,6 +6135,56 @@
             "keyRule": "주어+喜欢+목적어 순서로 좋아하는 대상을 말합니다."
           }
         ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "我",
+                "wǒ"
+              ],
+              [
+                "喜欢",
+                "xǐhuan"
+              ],
+              [
+                "中国",
+                "Zhōngguó"
+              ],
+              [
+                "文化",
+                "wénhuà"
+              ],
+              [
+                "。",
+                ""
+              ]
+            ],
+            "ko": "나는 중국 문화를 좋아한다."
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "喜欢",
+            "pinyin": "xǐhuan",
+            "meaningKo": "좋아하다",
+            "partOfSpeech": "동사"
+          },
+          {
+            "hanzi": "中国",
+            "pinyin": "Zhōngguó",
+            "meaningKo": "중국",
+            "partOfSpeech": "고유명사"
+          },
+          {
+            "hanzi": "文化",
+            "pinyin": "wénhuà",
+            "meaningKo": "문화",
+            "partOfSpeech": "명사"
+          }
+        ]
       }
     },
     {
@@ -4180,6 +6308,74 @@
             "caution": "원본의 姓名과 정답표의 名字 불일치는 기존 note를 따릅니다. 여기서는 학습 데이터의 「他的姓名」을 분석합니다."
           }
         ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "他",
+                "tā"
+              ],
+              [
+                "的",
+                "de"
+              ],
+              [
+                "姓名",
+                "xìngmíng"
+              ],
+              [
+                "被",
+                "bèi"
+              ],
+              [
+                "写",
+                "xiě"
+              ],
+              [
+                "错",
+                "cuò"
+              ],
+              [
+                "了",
+                "le"
+              ],
+              [
+                "。",
+                ""
+              ]
+            ],
+            "ko": "그의 이름이 잘못 적혔다."
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "姓名",
+            "pinyin": "xìngmíng",
+            "meaningKo": "성명",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "被",
+            "pinyin": "bèi",
+            "meaningKo": "~에 의해(피동 표시)",
+            "partOfSpeech": "개사"
+          },
+          {
+            "hanzi": "写",
+            "pinyin": "xiě",
+            "meaningKo": "쓰다",
+            "partOfSpeech": "동사"
+          },
+          {
+            "hanzi": "错",
+            "pinyin": "cuò",
+            "meaningKo": "틀리다, 잘못되다",
+            "partOfSpeech": "형용사"
+          }
+        ]
       }
     },
     {
@@ -4281,6 +6477,68 @@
             "keyRule": "수량 앞의 不到는 그 수량에 미치지 못함을 나타냅니다."
           }
         ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "她",
+                "tā"
+              ],
+              [
+                "身高",
+                "shēngāo"
+              ],
+              [
+                "不",
+                "bú"
+              ],
+              [
+                "到",
+                "dào"
+              ],
+              [
+                "一",
+                "yì"
+              ],
+              [
+                "米",
+                "mǐ"
+              ],
+              [
+                "七",
+                "qī"
+              ],
+              [
+                "。",
+                ""
+              ]
+            ],
+            "ko": "그녀는 키가 1미터 70센티미터가 안 된다."
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "身高",
+            "pinyin": "shēngāo",
+            "meaningKo": "키, 신장",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "到",
+            "pinyin": "dào",
+            "meaningKo": "도달하다",
+            "partOfSpeech": "동사"
+          },
+          {
+            "hanzi": "米",
+            "pinyin": "mǐ",
+            "meaningKo": "미터",
+            "partOfSpeech": "양사"
+          }
+        ]
       }
     },
     {
@@ -4374,6 +6632,80 @@
             ],
             "keyRule": "시간 표현+동사+목적어 순서로 지금 할 행동을 말합니다.",
             "caution": "「现在」는 한 단어입니다. 안의 在를 장소개사나 위치동사로 나누지 않습니다."
+          }
+        ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "现在",
+                "xiànzài"
+              ],
+              [
+                "画",
+                "huà"
+              ],
+              [
+                "羊",
+                "yáng"
+              ],
+              [
+                "的",
+                "de"
+              ],
+              [
+                "耳朵",
+                "ěrduo"
+              ],
+              [
+                "和",
+                "hé"
+              ],
+              [
+                "鼻子",
+                "bízi"
+              ],
+              [
+                "。",
+                ""
+              ]
+            ],
+            "ko": "이제 양의 귀와 코를 그리세요."
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "现在",
+            "pinyin": "xiànzài",
+            "meaningKo": "지금",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "画",
+            "pinyin": "huà",
+            "meaningKo": "그리다",
+            "partOfSpeech": "동사"
+          },
+          {
+            "hanzi": "羊",
+            "pinyin": "yáng",
+            "meaningKo": "양",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "耳朵",
+            "pinyin": "ěrduo",
+            "meaningKo": "귀",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "鼻子",
+            "pinyin": "bízi",
+            "meaningKo": "코",
+            "partOfSpeech": "명사"
           }
         ]
       }
@@ -4511,6 +6843,74 @@
               }
             ],
             "keyRule": "如果+조건, 就+결과 순서로 가정과 그 결과를 연결합니다."
+          }
+        ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "如果",
+                "rúguǒ"
+              ],
+              [
+                "有",
+                "yǒu"
+              ],
+              [
+                "面条",
+                "miàntiáo"
+              ],
+              [
+                "就",
+                "jiù"
+              ],
+              [
+                "更",
+                "gèng"
+              ],
+              [
+                "好",
+                "hǎo"
+              ],
+              [
+                "了",
+                "le"
+              ],
+              [
+                "。",
+                ""
+              ]
+            ],
+            "ko": "국수가 있으면 더 좋겠다."
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "如果",
+            "pinyin": "rúguǒ",
+            "meaningKo": "만약 ~라면",
+            "partOfSpeech": "접속사"
+          },
+          {
+            "hanzi": "面条",
+            "pinyin": "miàntiáo",
+            "meaningKo": "국수",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "就",
+            "pinyin": "jiù",
+            "meaningKo": "그러면, 곧",
+            "partOfSpeech": "부사"
+          },
+          {
+            "hanzi": "更",
+            "pinyin": "gèng",
+            "meaningKo": "더, 더욱",
+            "partOfSpeech": "부사"
           }
         ]
       }
@@ -4716,6 +7116,60 @@
             "keyRule": "지시사+양사+명사로 대상을 가리키고 뒤에 상태를 설명합니다."
           }
         ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "那",
+                "nà"
+              ],
+              [
+                "位",
+                "wèi"
+              ],
+              [
+                "邻居",
+                "línjū"
+              ],
+              [
+                "很",
+                "hěn"
+              ],
+              [
+                "热情",
+                "rèqíng"
+              ],
+              [
+                "。",
+                ""
+              ]
+            ],
+            "ko": "그 이웃은 아주 친절하다."
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "位",
+            "pinyin": "wèi",
+            "meaningKo": "분(사람을 높여 세는 단위)",
+            "partOfSpeech": "양사"
+          },
+          {
+            "hanzi": "邻居",
+            "pinyin": "línjū",
+            "meaningKo": "이웃",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "热情",
+            "pinyin": "rèqíng",
+            "meaningKo": "친절하다, 열정적이다",
+            "partOfSpeech": "형용사"
+          }
+        ]
       }
     },
     {
@@ -4807,6 +7261,70 @@
             ],
             "keyRule": "一共는 전체 수량을 나타내는 말 앞에 놓습니다.",
             "caution": "「三层」은 수량이 술어로 쓰인 것으로, 동사의 횟수를 세는 보어가 아닙니다."
+          }
+        ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "这",
+                "zhè"
+              ],
+              [
+                "个",
+                "gè"
+              ],
+              [
+                "楼",
+                "lóu"
+              ],
+              [
+                "一共",
+                "yígòng"
+              ],
+              [
+                "三",
+                "sān"
+              ],
+              [
+                "层",
+                "céng"
+              ],
+              [
+                "。",
+                ""
+              ]
+            ],
+            "ko": "이 건물은 모두 세 층이다."
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "楼",
+            "pinyin": "lóu",
+            "meaningKo": "건물",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "一共",
+            "pinyin": "yīgòng",
+            "meaningKo": "모두, 합계",
+            "partOfSpeech": "부사"
+          },
+          {
+            "hanzi": "三",
+            "pinyin": "sān",
+            "meaningKo": "셋, 3",
+            "partOfSpeech": "수사"
+          },
+          {
+            "hanzi": "层",
+            "pinyin": "céng",
+            "meaningKo": "층",
+            "partOfSpeech": "양사"
           }
         ]
       }
@@ -4925,6 +7443,76 @@
             "keyRule": "대상+被+행동한 사람+동사 순서로 누가 그 대상에 행동했는지 말합니다."
           }
         ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "菜单",
+                "càidān"
+              ],
+              [
+                "被",
+                "bèi"
+              ],
+              [
+                "服务员",
+                "fúwùyuán"
+              ],
+              [
+                "拿",
+                "ná"
+              ],
+              [
+                "走",
+                "zǒu"
+              ],
+              [
+                "了",
+                "le"
+              ],
+              [
+                "。",
+                ""
+              ]
+            ],
+            "ko": "메뉴는 종업원이 가져갔다."
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "菜单",
+            "pinyin": "càidān",
+            "meaningKo": "메뉴",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "被",
+            "pinyin": "bèi",
+            "meaningKo": "~에 의해(피동 표시)",
+            "partOfSpeech": "개사"
+          },
+          {
+            "hanzi": "服务员",
+            "pinyin": "fúwùyuán",
+            "meaningKo": "종업원",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "拿",
+            "pinyin": "ná",
+            "meaningKo": "들다, 가져가다",
+            "partOfSpeech": "동사"
+          },
+          {
+            "hanzi": "走",
+            "pinyin": "zǒu",
+            "meaningKo": "가다, 떠나다",
+            "partOfSpeech": "동사"
+          }
+        ]
       }
     },
     {
@@ -5016,6 +7604,74 @@
             ],
             "keyRule": "A+比+B+형용사 순서로 두 대상을 비교합니다.",
             "caution": "「北方」 뒤에는 문맥상 雨水가 생략된 것으로 이해합니다."
+          }
+        ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "中国",
+                "Zhōngguó"
+              ],
+              [
+                "南方",
+                "nánfāng"
+              ],
+              [
+                "的",
+                "de"
+              ],
+              [
+                "雨水",
+                "yǔshuǐ"
+              ],
+              [
+                "比",
+                "bǐ"
+              ],
+              [
+                "北方",
+                "běifāng"
+              ],
+              [
+                "多",
+                "duō"
+              ],
+              [
+                "。",
+                ""
+              ]
+            ],
+            "ko": "중국 남부는 북부보다 강수량이 많다."
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "南方",
+            "pinyin": "nánfāng",
+            "meaningKo": "남쪽, 남부",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "雨水",
+            "pinyin": "yǔshuǐ",
+            "meaningKo": "빗물, 강수량",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "比",
+            "pinyin": "bǐ",
+            "meaningKo": "~보다",
+            "partOfSpeech": "개사"
+          },
+          {
+            "hanzi": "北方",
+            "pinyin": "běifāng",
+            "meaningKo": "북쪽, 북부",
+            "partOfSpeech": "명사"
           }
         ]
       }
@@ -5123,6 +7779,70 @@
             ],
             "keyRule": "把+대상+放+장소로 대상을 놓을 위치를 말합니다.",
             "caution": "공식답은 放 뒤의 在가 생략된 형태입니다. 주어진 토큰에 없는 在를 넣지 않습니다."
+          }
+        ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "把",
+                "bǎ"
+              ],
+              [
+                "冰箱",
+                "bīngxiāng"
+              ],
+              [
+                "放",
+                "fàng"
+              ],
+              [
+                "厨房",
+                "chúfáng"
+              ],
+              [
+                "里",
+                "lǐ"
+              ],
+              [
+                "吧",
+                "ba"
+              ],
+              [
+                "。",
+                ""
+              ]
+            ],
+            "ko": "냉장고를 부엌 안에 놓으세요."
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "冰箱",
+            "pinyin": "bīngxiāng",
+            "meaningKo": "냉장고",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "放",
+            "pinyin": "fàng",
+            "meaningKo": "놓다, 넣다",
+            "partOfSpeech": "동사"
+          },
+          {
+            "hanzi": "厨房",
+            "pinyin": "chúfáng",
+            "meaningKo": "부엌",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "里",
+            "pinyin": "lǐ",
+            "meaningKo": "안, 속",
+            "partOfSpeech": "방위사"
           }
         ]
       }
@@ -5317,6 +8037,66 @@
             "keyRule": "不要는 금지하는 동작 앞에 놓습니다."
           }
         ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "咖啡",
+                "kāfēi"
+              ],
+              [
+                "里",
+                "lǐ"
+              ],
+              [
+                "不要",
+                "bú yào"
+              ],
+              [
+                "放",
+                "fàng"
+              ],
+              [
+                "糖",
+                "táng"
+              ],
+              [
+                "。",
+                ""
+              ]
+            ],
+            "ko": "커피에 설탕을 넣지 마세요."
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "咖啡",
+            "pinyin": "kāfēi",
+            "meaningKo": "커피",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "里",
+            "pinyin": "lǐ",
+            "meaningKo": "안, 속",
+            "partOfSpeech": "방위사"
+          },
+          {
+            "hanzi": "放",
+            "pinyin": "fàng",
+            "meaningKo": "놓다, 넣다",
+            "partOfSpeech": "동사"
+          },
+          {
+            "hanzi": "糖",
+            "pinyin": "táng",
+            "meaningKo": "설탕",
+            "partOfSpeech": "명사"
+          }
+        ]
       }
     },
     {
@@ -5414,6 +8194,62 @@
               }
             ],
             "keyRule": "祝+사람+바라는 상태 순서로 축원합니다."
+          }
+        ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "祝",
+                "zhù"
+              ],
+              [
+                "大家",
+                "dàjiā"
+              ],
+              [
+                "身体",
+                "shēntǐ"
+              ],
+              [
+                "健康",
+                "jiànkāng"
+              ],
+              [
+                "！",
+                ""
+              ]
+            ],
+            "ko": "여러분 모두 건강하시기를 바랍니다!"
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "祝",
+            "pinyin": "zhù",
+            "meaningKo": "기원하다",
+            "partOfSpeech": "동사"
+          },
+          {
+            "hanzi": "大家",
+            "pinyin": "dàjiā",
+            "meaningKo": "여러분, 모두",
+            "partOfSpeech": "대명사"
+          },
+          {
+            "hanzi": "身体",
+            "pinyin": "shēntǐ",
+            "meaningKo": "몸, 신체",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "健康",
+            "pinyin": "jiànkāng",
+            "meaningKo": "건강하다",
+            "partOfSpeech": "형용사"
           }
         ]
       }
@@ -5514,6 +8350,80 @@
             ],
             "keyRule": "활동 뒤에 特别+형용사를 놓아 그 활동에 대한 태도를 평가할 수 있습니다.",
             "caution": "원문에 得가 없으므로 「做事情特别认真」을 동사+得 보어 구조라고 설명하지 않습니다."
+          }
+        ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "那",
+                "nà"
+              ],
+              [
+                "名",
+                "míng"
+              ],
+              [
+                "服务员",
+                "fúwùyuán"
+              ],
+              [
+                "做",
+                "zuò"
+              ],
+              [
+                "事情",
+                "shìqing"
+              ],
+              [
+                "特别",
+                "tèbié"
+              ],
+              [
+                "认真",
+                "rènzhēn"
+              ],
+              [
+                "。",
+                ""
+              ]
+            ],
+            "ko": "그 종업원은 일을 할 때 특히 진지하고 꼼꼼하다."
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "名",
+            "pinyin": "míng",
+            "meaningKo": "명(사람을 세는 단위)",
+            "partOfSpeech": "양사"
+          },
+          {
+            "hanzi": "服务员",
+            "pinyin": "fúwùyuán",
+            "meaningKo": "종업원",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "事情",
+            "pinyin": "shìqing",
+            "meaningKo": "일",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "特别",
+            "pinyin": "tèbié",
+            "meaningKo": "특히, 매우",
+            "partOfSpeech": "부사"
+          },
+          {
+            "hanzi": "认真",
+            "pinyin": "rènzhēn",
+            "meaningKo": "진지하다, 꼼꼼하다",
+            "partOfSpeech": "형용사"
           }
         ]
       }
@@ -5642,6 +8552,78 @@
             "caution": "「离开」는 떠나다라는 동사입니다. 离를 거리 비교의 개사로 따로 나누지 않습니다."
           }
         ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "我们",
+                "wǒmen"
+              ],
+              [
+                "是",
+                "shì"
+              ],
+              [
+                "8",
+                "bā"
+              ],
+              [
+                "点",
+                "diǎn"
+              ],
+              [
+                "半",
+                "bàn"
+              ],
+              [
+                "离开",
+                "líkāi"
+              ],
+              [
+                "东门",
+                "dōngmén"
+              ],
+              [
+                "的",
+                "de"
+              ],
+              [
+                "。",
+                ""
+              ]
+            ],
+            "ko": "우리는 8시 반에 동문을 떠났다."
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "点",
+            "pinyin": "diǎn",
+            "meaningKo": "시(시각 단위)",
+            "partOfSpeech": "양사"
+          },
+          {
+            "hanzi": "半",
+            "pinyin": "bàn",
+            "meaningKo": "반, 절반",
+            "partOfSpeech": "수사"
+          },
+          {
+            "hanzi": "离开",
+            "pinyin": "líkāi",
+            "meaningKo": "떠나다",
+            "partOfSpeech": "동사"
+          },
+          {
+            "hanzi": "东门",
+            "pinyin": "dōngmén",
+            "meaningKo": "동문, 동쪽 문",
+            "partOfSpeech": "명사"
+          }
+        ]
       }
     },
     {
@@ -5754,6 +8736,54 @@
             ],
             "keyRule": "형용사+地는 동사 앞에서 행동의 태도나 방식을 꾸밉니다.",
             "caution": "「地」는 「笑」 앞의 부사어를 만듭니다. 동사 뒤 보어를 잇는 得와 위치가 다릅니다."
+          }
+        ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "她",
+                "tā"
+              ],
+              [
+                "满意",
+                "mǎnyì"
+              ],
+              [
+                "地",
+                "de"
+              ],
+              [
+                "笑",
+                "xiào"
+              ],
+              [
+                "了",
+                "le"
+              ],
+              [
+                "。",
+                ""
+              ]
+            ],
+            "ko": "그녀는 만족스럽게 웃었다."
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "满意",
+            "pinyin": "mǎnyì",
+            "meaningKo": "만족하다",
+            "partOfSpeech": "형용사"
+          },
+          {
+            "hanzi": "笑",
+            "pinyin": "xiào",
+            "meaningKo": "웃다",
+            "partOfSpeech": "동사"
           }
         ]
       }
@@ -5955,6 +8985,74 @@
             "keyRule": "주어 + 对 + 대상 + 很有兴趣: 무엇에 관심이 있는지 말할 때 对 구를 술어 앞에 둡니다."
           }
         ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "他",
+                "tā"
+              ],
+              [
+                "弟弟",
+                "dìdi"
+              ],
+              [
+                "对",
+                "duì"
+              ],
+              [
+                "表演",
+                "biǎoyǎn"
+              ],
+              [
+                "很",
+                "hěn"
+              ],
+              [
+                "有",
+                "yǒu"
+              ],
+              [
+                "兴趣",
+                "xìngqù"
+              ],
+              [
+                "。",
+                ""
+              ]
+            ],
+            "ko": "그의 남동생은 공연에 아주 관심이 많다."
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "弟弟",
+            "pinyin": "dìdi",
+            "meaningKo": "남동생",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "对",
+            "pinyin": "duì",
+            "meaningKo": "~에 대해",
+            "partOfSpeech": "개사"
+          },
+          {
+            "hanzi": "表演",
+            "pinyin": "biǎoyǎn",
+            "meaningKo": "공연, 연기",
+            "partOfSpeech": "명사·동사"
+          },
+          {
+            "hanzi": "兴趣",
+            "pinyin": "xìngqù",
+            "meaningKo": "흥미, 관심",
+            "partOfSpeech": "명사"
+          }
+        ]
       }
     },
     {
@@ -6052,6 +9150,64 @@
               }
             ],
             "keyRule": "주어 + 多么 + 형용사 + 啊: 형용사의 정도에 감탄하는 어순입니다."
+          }
+        ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "它",
+                "tā"
+              ],
+              [
+                "的",
+                "de"
+              ],
+              [
+                "鼻子",
+                "bízi"
+              ],
+              [
+                "多么",
+                "duōme"
+              ],
+              [
+                "可爱",
+                "kě'ài"
+              ],
+              [
+                "啊",
+                "a"
+              ],
+              [
+                "！",
+                ""
+              ]
+            ],
+            "ko": "그것의 코는 정말 귀엽구나!"
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "鼻子",
+            "pinyin": "bízi",
+            "meaningKo": "코",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "多么",
+            "pinyin": "duōme",
+            "meaningKo": "얼마나, 정말",
+            "partOfSpeech": "부사"
+          },
+          {
+            "hanzi": "可爱",
+            "pinyin": "kě'ài",
+            "meaningKo": "귀엽다",
+            "partOfSpeech": "형용사"
           }
         ]
       }
@@ -6159,6 +9315,72 @@
               }
             ],
             "keyRule": "주어 + 想 + 동사 + 목적어. 「普通话」가 「考试」를 꾸며 ‘표준중국어 시험’이라는 한 명사구를 만듭니다."
+          }
+        ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "姐姐",
+                "jiějie"
+              ],
+              [
+                "想",
+                "xiǎng"
+              ],
+              [
+                "参加",
+                "cānjiā"
+              ],
+              [
+                "普通话",
+                "pǔtōnghuà"
+              ],
+              [
+                "考试",
+                "kǎoshì"
+              ],
+              [
+                "。",
+                ""
+              ]
+            ],
+            "ko": "언니는 표준 중국어 시험에 참가하고 싶어 한다."
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "姐姐",
+            "pinyin": "jiějie",
+            "meaningKo": "언니, 누나",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "想",
+            "pinyin": "xiǎng",
+            "meaningKo": "~하고 싶다",
+            "partOfSpeech": "조동사"
+          },
+          {
+            "hanzi": "参加",
+            "pinyin": "cānjiā",
+            "meaningKo": "참가하다",
+            "partOfSpeech": "동사"
+          },
+          {
+            "hanzi": "普通话",
+            "pinyin": "pǔtōnghuà",
+            "meaningKo": "표준 중국어",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "考试",
+            "pinyin": "kǎoshì",
+            "meaningKo": "시험",
+            "partOfSpeech": "명사"
           }
         ]
       }
@@ -6271,6 +9493,74 @@
             ],
             "keyRule": "장소 + 동사 + 着 + 존재하는 대상: 「黑板上写着她的名字」는 칠판에 그녀의 이름이 적혀 있음을 나타내는 존현문입니다.",
             "caution": "「她的名字」는 누가 썼는지를 나타내는 행위자 주어가 아닙니다. 「着」는 여기서 쓰는 동작의 진행보다 적힌 상태의 지속을 나타냅니다."
+          }
+        ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "黑板",
+                "hēibǎn"
+              ],
+              [
+                "上",
+                "shàng"
+              ],
+              [
+                "写",
+                "xiě"
+              ],
+              [
+                "着",
+                "zhe"
+              ],
+              [
+                "她",
+                "tā"
+              ],
+              [
+                "的",
+                "de"
+              ],
+              [
+                "名字",
+                "míngzi"
+              ],
+              [
+                "。",
+                ""
+              ]
+            ],
+            "ko": "칠판에 그녀의 이름이 적혀 있다."
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "黑板",
+            "pinyin": "hēibǎn",
+            "meaningKo": "칠판",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "上",
+            "pinyin": "shàng",
+            "meaningKo": "위",
+            "partOfSpeech": "방위사"
+          },
+          {
+            "hanzi": "写",
+            "pinyin": "xiě",
+            "meaningKo": "쓰다",
+            "partOfSpeech": "동사"
+          },
+          {
+            "hanzi": "名字",
+            "pinyin": "míngzi",
+            "meaningKo": "이름",
+            "partOfSpeech": "명사"
           }
         ]
       }
@@ -6415,6 +9705,92 @@
               }
             ],
             "keyRule": "주어 + 방식 부사어 + 地 + 동사 + 결과보어 + 了 + 목적어. 「画好了」의 好는 그리기를 마쳤다는 결과를 더합니다."
+          }
+        ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "老师",
+                "lǎoshī"
+              ],
+              [
+                "很",
+                "hěn"
+              ],
+              [
+                "快",
+                "kuài"
+              ],
+              [
+                "地",
+                "de"
+              ],
+              [
+                "画",
+                "huà"
+              ],
+              [
+                "好",
+                "hǎo"
+              ],
+              [
+                "了",
+                "le"
+              ],
+              [
+                "熊猫",
+                "xióngmāo"
+              ],
+              [
+                "的",
+                "de"
+              ],
+              [
+                "耳朵",
+                "ěrduo"
+              ],
+              [
+                "。",
+                ""
+              ]
+            ],
+            "ko": "선생님은 판다의 귀를 아주 빠르게 다 그렸다."
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "老师",
+            "pinyin": "lǎoshī",
+            "meaningKo": "선생님",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "快",
+            "pinyin": "kuài",
+            "meaningKo": "빠르다",
+            "partOfSpeech": "형용사"
+          },
+          {
+            "hanzi": "画",
+            "pinyin": "huà",
+            "meaningKo": "그리다",
+            "partOfSpeech": "동사"
+          },
+          {
+            "hanzi": "熊猫",
+            "pinyin": "xióngmāo",
+            "meaningKo": "판다",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "耳朵",
+            "pinyin": "ěrduo",
+            "meaningKo": "귀",
+            "partOfSpeech": "명사"
           }
         ]
       }
@@ -6625,6 +10001,70 @@
             "caution": "여기의 「不会」를 미래에 하지 않을 것이라는 뜻으로 해석하지 않습니다."
           }
         ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "左",
+                "Zuǒ"
+              ],
+              [
+                "阿姨",
+                "āyí"
+              ],
+              [
+                "不",
+                "bú"
+              ],
+              [
+                "会",
+                "huì"
+              ],
+              [
+                "讲",
+                "jiǎng"
+              ],
+              [
+                "普通话",
+                "pǔtōnghuà"
+              ],
+              [
+                "。",
+                ""
+              ]
+            ],
+            "ko": "쭤 아주머니는 표준 중국어를 할 줄 모른다."
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "阿姨",
+            "pinyin": "āyí",
+            "meaningKo": "아주머니, 이모",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "会",
+            "pinyin": "huì",
+            "meaningKo": "~할 줄 알다",
+            "partOfSpeech": "조동사"
+          },
+          {
+            "hanzi": "讲",
+            "pinyin": "jiǎng",
+            "meaningKo": "말하다",
+            "partOfSpeech": "동사"
+          },
+          {
+            "hanzi": "普通话",
+            "pinyin": "pǔtōnghuà",
+            "meaningKo": "표준 중국어",
+            "partOfSpeech": "명사"
+          }
+        ]
       }
     },
     {
@@ -6722,6 +10162,66 @@
               }
             ],
             "keyRule": "대상 + 一共 + 금액: 중국어에서는 「18块」 같은 금액이 是 없이 직접 술어가 될 수 있습니다."
+          }
+        ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "这些",
+                "zhèxiē"
+              ],
+              [
+                "面包",
+                "miànbāo"
+              ],
+              [
+                "一共",
+                "yígòng"
+              ],
+              [
+                "18",
+                "shíbā"
+              ],
+              [
+                "块",
+                "kuài"
+              ],
+              [
+                "。",
+                ""
+              ]
+            ],
+            "ko": "이 빵들은 모두 합해서 18위안이다."
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "这些",
+            "pinyin": "zhèxiē",
+            "meaningKo": "이것들, 이",
+            "partOfSpeech": "대명사"
+          },
+          {
+            "hanzi": "面包",
+            "pinyin": "miànbāo",
+            "meaningKo": "빵",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "一共",
+            "pinyin": "yígòng",
+            "meaningKo": "모두 합해서",
+            "partOfSpeech": "부사"
+          },
+          {
+            "hanzi": "块",
+            "pinyin": "kuài",
+            "meaningKo": "위안의 구어 표현",
+            "partOfSpeech": "양사"
           }
         ]
       }
@@ -6822,6 +10322,64 @@
             ],
             "keyRule": "화제 + 동사 + 了 + 吗: 「你的作业」는 완료의 대상이며, 문장 앞에서 그 완료 여부를 묻는 화제가 됩니다.",
             "caution": "「你的作业」를 숙제를 완성하는 행위자로 해석하지 않습니다. 「了」 자체가 과거 시제를 만드는 것은 아닙니다."
+          }
+        ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "你",
+                "nǐ"
+              ],
+              [
+                "的",
+                "de"
+              ],
+              [
+                "作业",
+                "zuòyè"
+              ],
+              [
+                "完成",
+                "wánchéng"
+              ],
+              [
+                "了",
+                "le"
+              ],
+              [
+                "吗",
+                "ma"
+              ],
+              [
+                "？",
+                ""
+              ]
+            ],
+            "ko": "네 숙제는 다 끝났니?"
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "作业",
+            "pinyin": "zuòyè",
+            "meaningKo": "숙제",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "完成",
+            "pinyin": "wánchéng",
+            "meaningKo": "완성하다, 끝내다",
+            "partOfSpeech": "동사"
+          },
+          {
+            "hanzi": "了",
+            "pinyin": "le",
+            "meaningKo": "완료나 변화를 나타냄",
+            "partOfSpeech": "조사"
           }
         ]
       }
@@ -6936,6 +10494,74 @@
               }
             ],
             "keyRule": "소유 관형어 + 과목 관형어 + 명사 + 정도 부사 + 형용사. 「数学成绩」는 ‘수학 성적’입니다."
+          }
+        ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "我",
+                "wǒ"
+              ],
+              [
+                "女儿",
+                "nǚ'ér"
+              ],
+              [
+                "的",
+                "de"
+              ],
+              [
+                "数学",
+                "shùxué"
+              ],
+              [
+                "成绩",
+                "chéngjì"
+              ],
+              [
+                "非常",
+                "fēicháng"
+              ],
+              [
+                "好",
+                "hǎo"
+              ],
+              [
+                "。",
+                ""
+              ]
+            ],
+            "ko": "내 딸의 수학 성적은 매우 좋다."
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "女儿",
+            "pinyin": "nǚ'ér",
+            "meaningKo": "딸",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "数学",
+            "pinyin": "shùxué",
+            "meaningKo": "수학",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "成绩",
+            "pinyin": "chéngjì",
+            "meaningKo": "성적",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "非常",
+            "pinyin": "fēicháng",
+            "meaningKo": "매우",
+            "partOfSpeech": "부사"
           }
         ]
       }
@@ -7081,6 +10707,98 @@
               }
             ],
             "keyRule": "주어 + 把 + 대상 + 放进了 + 도착 장소: 把문에서는 처리 대상을 동사 앞으로 가져오고 결과나 방향을 분명히 합니다."
+          }
+        ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "她",
+                "tā"
+              ],
+              [
+                "把",
+                "bǎ"
+              ],
+              [
+                "信",
+                "xìn"
+              ],
+              [
+                "放",
+                "fàng"
+              ],
+              [
+                "进",
+                "jìn"
+              ],
+              [
+                "了",
+                "le"
+              ],
+              [
+                "叔叔",
+                "shūshu"
+              ],
+              [
+                "的",
+                "de"
+              ],
+              [
+                "包",
+                "bāo"
+              ],
+              [
+                "里",
+                "lǐ"
+              ],
+              [
+                "。",
+                ""
+              ]
+            ],
+            "ko": "그녀는 편지를 삼촌의 가방 안에 넣었다."
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "信",
+            "pinyin": "xìn",
+            "meaningKo": "편지",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "放",
+            "pinyin": "fàng",
+            "meaningKo": "놓다, 넣다",
+            "partOfSpeech": "동사"
+          },
+          {
+            "hanzi": "进",
+            "pinyin": "jìn",
+            "meaningKo": "들어가다",
+            "partOfSpeech": "동사"
+          },
+          {
+            "hanzi": "叔叔",
+            "pinyin": "shūshu",
+            "meaningKo": "삼촌, 아저씨",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "包",
+            "pinyin": "bāo",
+            "meaningKo": "가방",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "里",
+            "pinyin": "lǐ",
+            "meaningKo": "안",
+            "partOfSpeech": "방위사"
           }
         ]
       }
@@ -7278,6 +10996,62 @@
             "keyRule": "祝 + 사람 + 바라는 상태: 「您」은 축원의 대상이면서 뒤의 「越来越年轻」가 설명하는 사람이기도 합니다."
           }
         ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "祝",
+                "zhù"
+              ],
+              [
+                "您",
+                "nín"
+              ],
+              [
+                "越来越",
+                "yuèláiyuè"
+              ],
+              [
+                "年轻",
+                "niánqīng"
+              ],
+              [
+                "！",
+                ""
+              ]
+            ],
+            "ko": "갈수록 더 젊어지시길 바랍니다!"
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "祝",
+            "pinyin": "zhù",
+            "meaningKo": "축원하다",
+            "partOfSpeech": "동사"
+          },
+          {
+            "hanzi": "您",
+            "pinyin": "nín",
+            "meaningKo": "당신의 높임말",
+            "partOfSpeech": "대명사"
+          },
+          {
+            "hanzi": "越来越",
+            "pinyin": "yuèláiyuè",
+            "meaningKo": "점점 더",
+            "partOfSpeech": "부사"
+          },
+          {
+            "hanzi": "年轻",
+            "pinyin": "niánqīng",
+            "meaningKo": "젊다",
+            "partOfSpeech": "형용사"
+          }
+        ]
       }
     },
     {
@@ -7397,6 +11171,88 @@
             "caution": "「花园里的」는 소유자가 아니라 나무와 풀이 있는 장소를 나타내는 관형어입니다."
           }
         ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "花园",
+                "huāyuán"
+              ],
+              [
+                "里",
+                "lǐ"
+              ],
+              [
+                "的",
+                "de"
+              ],
+              [
+                "树",
+                "shù"
+              ],
+              [
+                "和",
+                "hé"
+              ],
+              [
+                "草",
+                "cǎo"
+              ],
+              [
+                "都",
+                "dōu"
+              ],
+              [
+                "绿",
+                "lǜ"
+              ],
+              [
+                "了",
+                "le"
+              ],
+              [
+                "。",
+                ""
+              ]
+            ],
+            "ko": "정원의 나무와 풀이 모두 푸르러졌다."
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "花园",
+            "pinyin": "huāyuán",
+            "meaningKo": "정원",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "树",
+            "pinyin": "shù",
+            "meaningKo": "나무",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "和",
+            "pinyin": "hé",
+            "meaningKo": "~와, ~과",
+            "partOfSpeech": "접속사"
+          },
+          {
+            "hanzi": "草",
+            "pinyin": "cǎo",
+            "meaningKo": "풀",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "绿",
+            "pinyin": "lǜ",
+            "meaningKo": "푸르다, 녹색이다",
+            "partOfSpeech": "형용사"
+          }
+        ]
       }
     },
     {
@@ -7509,6 +11365,70 @@
             ],
             "keyRule": "지시어 + 양사 + 명사 + 太 + 형용사 + 了: 정도가 지나치거나 매우 높다는 느낌을 나타냅니다.",
             "caution": "「太长了」의 了를 바지가 길어지는 동작의 완료나 과거형 표시로 보지 않습니다."
+          }
+        ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "这",
+                "zhè"
+              ],
+              [
+                "条",
+                "tiáo"
+              ],
+              [
+                "裤子",
+                "kùzi"
+              ],
+              [
+                "太",
+                "tài"
+              ],
+              [
+                "长",
+                "cháng"
+              ],
+              [
+                "了",
+                "le"
+              ],
+              [
+                "！",
+                ""
+              ]
+            ],
+            "ko": "이 바지는 너무 길다!"
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "条",
+            "pinyin": "tiáo",
+            "meaningKo": "길쭉한 사물을 세는 단위",
+            "partOfSpeech": "양사"
+          },
+          {
+            "hanzi": "裤子",
+            "pinyin": "kùzi",
+            "meaningKo": "바지",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "太",
+            "pinyin": "tài",
+            "meaningKo": "너무",
+            "partOfSpeech": "부사"
+          },
+          {
+            "hanzi": "长",
+            "pinyin": "cháng",
+            "meaningKo": "길다",
+            "partOfSpeech": "형용사"
           }
         ]
       }
@@ -7628,6 +11548,66 @@
             ],
             "keyRule": "주어 + 觉得 + [주어 + 更 + 형용사]: 觉得는 뒤의 절 전체를 목적어로 받습니다.",
             "caution": "「觉得」는 한 동사이므로 그 안의 得를 정도보어 표지로 나누지 않습니다."
+          }
+        ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "我",
+                "wǒ"
+              ],
+              [
+                "觉得",
+                "juéde"
+              ],
+              [
+                "熊猫",
+                "xióngmāo"
+              ],
+              [
+                "更",
+                "gèng"
+              ],
+              [
+                "可爱",
+                "kě'ài"
+              ],
+              [
+                "。",
+                ""
+              ]
+            ],
+            "ko": "나는 판다가 더 귀엽다고 생각한다."
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "觉得",
+            "pinyin": "juéde",
+            "meaningKo": "생각하다, 느끼다",
+            "partOfSpeech": "동사"
+          },
+          {
+            "hanzi": "熊猫",
+            "pinyin": "xióngmāo",
+            "meaningKo": "판다",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "更",
+            "pinyin": "gèng",
+            "meaningKo": "더, 더욱",
+            "partOfSpeech": "부사"
+          },
+          {
+            "hanzi": "可爱",
+            "pinyin": "kě'ài",
+            "meaningKo": "귀엽다",
+            "partOfSpeech": "형용사"
           }
         ]
       }
@@ -7759,6 +11739,84 @@
               }
             ],
             "keyRule": "영향을 받는 대상 + 被 + 행위자 + 동사 + 결과 + 了: 「刮跑了」는 바람에 날려 없어졌다는 결과를 나타냅니다."
+          }
+        ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "她",
+                "tā"
+              ],
+              [
+                "的",
+                "de"
+              ],
+              [
+                "帽子",
+                "màozi"
+              ],
+              [
+                "被",
+                "bèi"
+              ],
+              [
+                "风",
+                "fēng"
+              ],
+              [
+                "刮",
+                "guā"
+              ],
+              [
+                "跑",
+                "pǎo"
+              ],
+              [
+                "了",
+                "le"
+              ],
+              [
+                "。",
+                ""
+              ]
+            ],
+            "ko": "그녀의 모자가 바람에 날아가 버렸다."
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "帽子",
+            "pinyin": "màozi",
+            "meaningKo": "모자",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "被",
+            "pinyin": "bèi",
+            "meaningKo": "~에게, ~에 의해",
+            "partOfSpeech": "개사"
+          },
+          {
+            "hanzi": "风",
+            "pinyin": "fēng",
+            "meaningKo": "바람",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "刮",
+            "pinyin": "guā",
+            "meaningKo": "바람이 불다",
+            "partOfSpeech": "동사"
+          },
+          {
+            "hanzi": "跑",
+            "pinyin": "pǎo",
+            "meaningKo": "달아나다",
+            "partOfSpeech": "동사"
           }
         ]
       }
@@ -7955,6 +12013,70 @@
             "keyRule": "주어 + 对 + 대상 + 정도 부사 + 형용사: 「对人非常热情」은 사람들에게 매우 친절하고 적극적으로 대한다는 뜻입니다."
           }
         ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "蓝",
+                "Lán"
+              ],
+              [
+                "小姐",
+                "xiǎojie"
+              ],
+              [
+                "对",
+                "duì"
+              ],
+              [
+                "人",
+                "rén"
+              ],
+              [
+                "非常",
+                "fēicháng"
+              ],
+              [
+                "热情",
+                "rèqíng"
+              ],
+              [
+                "。",
+                ""
+              ]
+            ],
+            "ko": "란 씨는 사람들에게 매우 친절하고 열정적이다."
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "小姐",
+            "pinyin": "xiǎojie",
+            "meaningKo": "아가씨, 미혼 여성의 호칭",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "对",
+            "pinyin": "duì",
+            "meaningKo": "~에게, ~에 대해",
+            "partOfSpeech": "개사"
+          },
+          {
+            "hanzi": "非常",
+            "pinyin": "fēicháng",
+            "meaningKo": "매우",
+            "partOfSpeech": "부사"
+          },
+          {
+            "hanzi": "热情",
+            "pinyin": "rèqíng",
+            "meaningKo": "친절하고 열정적이다",
+            "partOfSpeech": "형용사"
+          }
+        ]
       }
     },
     {
@@ -8067,6 +12189,66 @@
               }
             ],
             "keyRule": "주어 + 형용사 + 地 + 동사 + 了: 「高兴地」는 떠나는 동작을 꾸미는 부사어입니다."
+          }
+        ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "邻居",
+                "línjū"
+              ],
+              [
+                "高兴",
+                "gāoxìng"
+              ],
+              [
+                "地",
+                "de"
+              ],
+              [
+                "走",
+                "zǒu"
+              ],
+              [
+                "了",
+                "le"
+              ],
+              [
+                "。",
+                ""
+              ]
+            ],
+            "ko": "이웃은 기분 좋게 떠났다."
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "邻居",
+            "pinyin": "línjū",
+            "meaningKo": "이웃",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "高兴",
+            "pinyin": "gāoxìng",
+            "meaningKo": "기쁘다",
+            "partOfSpeech": "형용사"
+          },
+          {
+            "hanzi": "地",
+            "pinyin": "de",
+            "meaningKo": "부사어를 만드는 표지",
+            "partOfSpeech": "조사"
+          },
+          {
+            "hanzi": "走",
+            "pinyin": "zǒu",
+            "meaningKo": "떠나다, 걷다",
+            "partOfSpeech": "동사"
           }
         ]
       }
@@ -8182,6 +12364,76 @@
             "caution": "여기서 「长」은 키가 크다는 형용사가 아니라 생김새를 말하는 동사이며 zhǎng으로 읽습니다."
           }
         ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "妹妹",
+                "mèimei"
+              ],
+              [
+                "长",
+                "zhǎng"
+              ],
+              [
+                "得",
+                "de"
+              ],
+              [
+                "最",
+                "zuì"
+              ],
+              [
+                "像",
+                "xiàng"
+              ],
+              [
+                "妈妈",
+                "māma"
+              ],
+              [
+                "。",
+                ""
+              ]
+            ],
+            "ko": "여동생은 생김새가 엄마를 가장 닮았다."
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "妹妹",
+            "pinyin": "mèimei",
+            "meaningKo": "여동생",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "长",
+            "pinyin": "zhǎng",
+            "meaningKo": "자라다, 생기다",
+            "partOfSpeech": "동사"
+          },
+          {
+            "hanzi": "最",
+            "pinyin": "zuì",
+            "meaningKo": "가장",
+            "partOfSpeech": "부사"
+          },
+          {
+            "hanzi": "像",
+            "pinyin": "xiàng",
+            "meaningKo": "닮다",
+            "partOfSpeech": "동사"
+          },
+          {
+            "hanzi": "妈妈",
+            "pinyin": "māma",
+            "meaningKo": "엄마",
+            "partOfSpeech": "명사"
+          }
+        ]
       }
     },
     {
@@ -8291,6 +12543,72 @@
               }
             ],
             "keyRule": "请 + 根据 + 기준 + 동사 + 목적어: 행동의 기준을 나타내는 개사구는 동사 앞에 놓습니다."
+          }
+        ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "请",
+                "qǐng"
+              ],
+              [
+                "根据",
+                "gēnjù"
+              ],
+              [
+                "要求",
+                "yāoqiú"
+              ],
+              [
+                "回答",
+                "huídá"
+              ],
+              [
+                "问题",
+                "wèntí"
+              ],
+              [
+                "。",
+                ""
+              ]
+            ],
+            "ko": "요구 사항에 따라 질문에 답해 주세요."
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "请",
+            "pinyin": "qǐng",
+            "meaningKo": "~해 주세요",
+            "partOfSpeech": "동사"
+          },
+          {
+            "hanzi": "根据",
+            "pinyin": "gēnjù",
+            "meaningKo": "~에 근거하여",
+            "partOfSpeech": "개사"
+          },
+          {
+            "hanzi": "要求",
+            "pinyin": "yāoqiú",
+            "meaningKo": "요구 사항",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "回答",
+            "pinyin": "huídá",
+            "meaningKo": "대답하다",
+            "partOfSpeech": "동사"
+          },
+          {
+            "hanzi": "问题",
+            "pinyin": "wèntí",
+            "meaningKo": "질문, 문제",
+            "partOfSpeech": "명사"
           }
         ]
       }
@@ -8411,6 +12729,66 @@
               }
             ],
             "keyRule": "영향을 받는 대상 + 被 + 동사 + 결과보어 + 了: 행위자를 말하지 않는 피동문도 가능합니다."
+          }
+        ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "街道",
+                "jiēdào"
+              ],
+              [
+                "被",
+                "bèi"
+              ],
+              [
+                "打扫",
+                "dǎsǎo"
+              ],
+              [
+                "干净",
+                "gānjìng"
+              ],
+              [
+                "了",
+                "le"
+              ],
+              [
+                "。",
+                ""
+              ]
+            ],
+            "ko": "거리가 깨끗하게 청소되었다."
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "街道",
+            "pinyin": "jiēdào",
+            "meaningKo": "거리",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "被",
+            "pinyin": "bèi",
+            "meaningKo": "~에 의해",
+            "partOfSpeech": "개사"
+          },
+          {
+            "hanzi": "打扫",
+            "pinyin": "dǎsǎo",
+            "meaningKo": "청소하다",
+            "partOfSpeech": "동사"
+          },
+          {
+            "hanzi": "干净",
+            "pinyin": "gānjìng",
+            "meaningKo": "깨끗하다",
+            "partOfSpeech": "형용사"
           }
         ]
       }
@@ -8610,6 +12988,76 @@
             "caution": "「中午」는 여기서 구매 동작 「买」의 시간이며, ‘점심때 달다’처럼 문장 전체의 시간으로 떼어 읽지 않습니다."
           }
         ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "中午",
+                "zhōngwǔ"
+              ],
+              [
+                "买",
+                "mǎi"
+              ],
+              [
+                "的",
+                "de"
+              ],
+              [
+                "西瓜",
+                "xīguā"
+              ],
+              [
+                "特别",
+                "tèbié"
+              ],
+              [
+                "甜",
+                "tián"
+              ],
+              [
+                "。",
+                ""
+              ]
+            ],
+            "ko": "점심때 산 수박은 특히 달다."
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "中午",
+            "pinyin": "zhōngwǔ",
+            "meaningKo": "정오, 점심때",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "买",
+            "pinyin": "mǎi",
+            "meaningKo": "사다",
+            "partOfSpeech": "동사"
+          },
+          {
+            "hanzi": "西瓜",
+            "pinyin": "xīguā",
+            "meaningKo": "수박",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "特别",
+            "pinyin": "tèbié",
+            "meaningKo": "특히, 아주",
+            "partOfSpeech": "부사"
+          },
+          {
+            "hanzi": "甜",
+            "pinyin": "tián",
+            "meaningKo": "달다",
+            "partOfSpeech": "형용사"
+          }
+        ]
       }
     },
     {
@@ -8726,6 +13174,70 @@
               }
             ],
             "keyRule": "주어 + 又 + 형용사 + 了: 「又坏了」는 이전에도 고장 났는데 다시 고장 났다는 뜻입니다."
+          }
+        ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "教室",
+                "jiàoshì"
+              ],
+              [
+                "的",
+                "de"
+              ],
+              [
+                "空调",
+                "kōngtiáo"
+              ],
+              [
+                "又",
+                "yòu"
+              ],
+              [
+                "坏",
+                "huài"
+              ],
+              [
+                "了",
+                "le"
+              ],
+              [
+                "。",
+                ""
+              ]
+            ],
+            "ko": "교실의 에어컨이 또 고장 났다."
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "教室",
+            "pinyin": "jiàoshì",
+            "meaningKo": "교실",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "空调",
+            "pinyin": "kōngtiáo",
+            "meaningKo": "에어컨",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "又",
+            "pinyin": "yòu",
+            "meaningKo": "또",
+            "partOfSpeech": "부사"
+          },
+          {
+            "hanzi": "坏",
+            "pinyin": "huài",
+            "meaningKo": "고장 나다, 망가지다",
+            "partOfSpeech": "형용사"
           }
         ]
       }
@@ -8873,6 +13385,78 @@
             "caution": "「真的」는 이 문장에서 「是」 뒤의 ‘참인 것·사실’이라는 판단 내용입니다. 방식 부사어를 만드는 地와 구별합니다."
           }
         ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "真",
+                "zhēn"
+              ],
+              [
+                "不",
+                "bù"
+              ],
+              [
+                "敢",
+                "gǎn"
+              ],
+              [
+                "相信",
+                "xiāngxìn"
+              ],
+              [
+                "那",
+                "nà"
+              ],
+              [
+                "是",
+                "shì"
+              ],
+              [
+                "真",
+                "zhēn"
+              ],
+              [
+                "的",
+                "de"
+              ],
+              [
+                "。",
+                ""
+              ]
+            ],
+            "ko": "그것이 사실이라는 것을 정말 믿을 수가 없다."
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "真",
+            "pinyin": "zhēn",
+            "meaningKo": "정말",
+            "partOfSpeech": "부사"
+          },
+          {
+            "hanzi": "敢",
+            "pinyin": "gǎn",
+            "meaningKo": "감히 ~하다",
+            "partOfSpeech": "조동사"
+          },
+          {
+            "hanzi": "相信",
+            "pinyin": "xiāngxìn",
+            "meaningKo": "믿다",
+            "partOfSpeech": "동사"
+          },
+          {
+            "hanzi": "那",
+            "pinyin": "nà",
+            "meaningKo": "그것",
+            "partOfSpeech": "대명사"
+          }
+        ]
       }
     },
     {
@@ -8965,6 +13549,66 @@
               }
             ],
             "keyRule": "대상 + 多少钱: 금액을 묻는 말이 직접 술어가 되므로 是나 吗를 덧붙이지 않습니다."
+          }
+        ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "这",
+                "zhè"
+              ],
+              [
+                "条",
+                "tiáo"
+              ],
+              [
+                "裤子",
+                "kùzi"
+              ],
+              [
+                "多少",
+                "duōshao"
+              ],
+              [
+                "钱",
+                "qián"
+              ],
+              [
+                "？",
+                ""
+              ]
+            ],
+            "ko": "이 바지는 얼마인가요?"
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "条",
+            "pinyin": "tiáo",
+            "meaningKo": "길쭉한 사물을 세는 단위",
+            "partOfSpeech": "양사"
+          },
+          {
+            "hanzi": "裤子",
+            "pinyin": "kùzi",
+            "meaningKo": "바지",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "多少",
+            "pinyin": "duōshao",
+            "meaningKo": "얼마",
+            "partOfSpeech": "대명사"
+          },
+          {
+            "hanzi": "钱",
+            "pinyin": "qián",
+            "meaningKo": "돈",
+            "partOfSpeech": "명사"
           }
         ]
       }
@@ -9089,6 +13733,76 @@
             ],
             "keyRule": "请 + 把 + 물건 + 拿给 + 받는 사람: 把문으로 전달할 물건을 앞으로 옮기고, 拿给 뒤에 수신자를 둡니다.",
             "caution": "「拿给我」의 给는 拿 뒤에서 전달 대상을 이어 주는 성분입니다. 동사 앞의 「给我拿」처럼 개사구가 앞선 어순과 구별합니다."
+          }
+        ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "请",
+                "qǐng"
+              ],
+              [
+                "把",
+                "bǎ"
+              ],
+              [
+                "菜单",
+                "càidān"
+              ],
+              [
+                "拿",
+                "ná"
+              ],
+              [
+                "给",
+                "gěi"
+              ],
+              [
+                "我",
+                "wǒ"
+              ],
+              [
+                "。",
+                ""
+              ]
+            ],
+            "ko": "메뉴를 저에게 가져다주세요."
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "请",
+            "pinyin": "qǐng",
+            "meaningKo": "~해 주세요",
+            "partOfSpeech": "동사"
+          },
+          {
+            "hanzi": "把",
+            "pinyin": "bǎ",
+            "meaningKo": "목적어를 동사 앞으로 이끄는 표지",
+            "partOfSpeech": "개사"
+          },
+          {
+            "hanzi": "菜单",
+            "pinyin": "càidān",
+            "meaningKo": "메뉴, 차림표",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "拿",
+            "pinyin": "ná",
+            "meaningKo": "가져오다, 들다",
+            "partOfSpeech": "동사"
+          },
+          {
+            "hanzi": "给",
+            "pinyin": "gěi",
+            "meaningKo": "~에게 주다",
+            "partOfSpeech": "동사"
           }
         ]
       }
@@ -9300,6 +14014,70 @@
             "caution": "여기의 「了」는 太…了 구문의 일부로, 과거 시제를 나타내지 않습니다."
           }
         ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "这",
+                "zhè"
+              ],
+              [
+                "种",
+                "zhǒng"
+              ],
+              [
+                "蛋糕",
+                "dàngāo"
+              ],
+              [
+                "太",
+                "tài"
+              ],
+              [
+                "甜",
+                "tián"
+              ],
+              [
+                "了",
+                "le"
+              ],
+              [
+                "。",
+                ""
+              ]
+            ],
+            "ko": "이런 종류의 케이크는 너무 달다."
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "种",
+            "pinyin": "zhǒng",
+            "meaningKo": "종류를 세는 단위",
+            "partOfSpeech": "양사"
+          },
+          {
+            "hanzi": "蛋糕",
+            "pinyin": "dàngāo",
+            "meaningKo": "케이크",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "太",
+            "pinyin": "tài",
+            "meaningKo": "너무",
+            "partOfSpeech": "부사"
+          },
+          {
+            "hanzi": "甜",
+            "pinyin": "tián",
+            "meaningKo": "달다",
+            "partOfSpeech": "형용사"
+          }
+        ]
       }
     },
     {
@@ -9409,6 +14187,94 @@
             ],
             "keyRule": "시간 + 花了 + 금액: 「一万多块钱」은 지출한 금액을 나타내는 수량 목적어입니다.",
             "caution": "금액을 나타내는 「一万多块钱」을 동작이 지속된 시간이나 동작 횟수의 보어로 보지 않습니다."
+          }
+        ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "这",
+                "zhè"
+              ],
+              [
+                "个",
+                "ge"
+              ],
+              [
+                "月",
+                "yuè"
+              ],
+              [
+                "花",
+                "huā"
+              ],
+              [
+                "了",
+                "le"
+              ],
+              [
+                "一万",
+                "yíwàn"
+              ],
+              [
+                "多",
+                "duō"
+              ],
+              [
+                "块",
+                "kuài"
+              ],
+              [
+                "钱",
+                "qián"
+              ],
+              [
+                "。",
+                ""
+              ]
+            ],
+            "ko": "이번 달에는 만 위안 넘게 썼다."
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "月",
+            "pinyin": "yuè",
+            "meaningKo": "달, 월",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "花",
+            "pinyin": "huā",
+            "meaningKo": "돈이나 시간을 쓰다",
+            "partOfSpeech": "동사"
+          },
+          {
+            "hanzi": "一万",
+            "pinyin": "yíwàn",
+            "meaningKo": "만, 10000",
+            "partOfSpeech": "수사"
+          },
+          {
+            "hanzi": "多",
+            "pinyin": "duō",
+            "meaningKo": "수량 뒤에서 여분을 나타냄",
+            "partOfSpeech": "수사"
+          },
+          {
+            "hanzi": "块",
+            "pinyin": "kuài",
+            "meaningKo": "위안의 구어 표현",
+            "partOfSpeech": "양사"
+          },
+          {
+            "hanzi": "钱",
+            "pinyin": "qián",
+            "meaningKo": "돈",
+            "partOfSpeech": "명사"
           }
         ]
       }
@@ -9530,6 +14396,84 @@
             "keyRule": "동사구 주어 + 是 + 명사구: 행동 전체를 하나의 화제로 삼아 어떤 일인지 판단할 수 있습니다."
           }
         ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "帮助",
+                "bāngzhù"
+              ],
+              [
+                "别人",
+                "biérén"
+              ],
+              [
+                "是",
+                "shì"
+              ],
+              [
+                "一",
+                "yí"
+              ],
+              [
+                "件",
+                "jiàn"
+              ],
+              [
+                "快乐",
+                "kuàilè"
+              ],
+              [
+                "的",
+                "de"
+              ],
+              [
+                "事情",
+                "shìqing"
+              ],
+              [
+                "。",
+                ""
+              ]
+            ],
+            "ko": "다른 사람을 돕는 것은 즐거운 일이다."
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "帮助",
+            "pinyin": "bāngzhù",
+            "meaningKo": "돕다",
+            "partOfSpeech": "동사"
+          },
+          {
+            "hanzi": "别人",
+            "pinyin": "biérén",
+            "meaningKo": "다른 사람",
+            "partOfSpeech": "대명사"
+          },
+          {
+            "hanzi": "件",
+            "pinyin": "jiàn",
+            "meaningKo": "일이나 물건을 세는 단위",
+            "partOfSpeech": "양사"
+          },
+          {
+            "hanzi": "快乐",
+            "pinyin": "kuàilè",
+            "meaningKo": "즐겁다",
+            "partOfSpeech": "형용사"
+          },
+          {
+            "hanzi": "事情",
+            "pinyin": "shìqing",
+            "meaningKo": "일",
+            "partOfSpeech": "명사"
+          }
+        ]
       }
     },
     {
@@ -9641,6 +14585,66 @@
             ],
             "keyRule": "주어 + 还没有 + 동사 + 呢: 아직 어떤 일이 이루어지지 않은 상태임을 나타냅니다.",
             "caution": "이 문장의 「呢」는 질문 표시가 아닙니다. 「还没有…呢」는 끝나지 않은 현재 상태를 강조합니다."
+          }
+        ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "会议",
+                "huìyì"
+              ],
+              [
+                "还",
+                "hái"
+              ],
+              [
+                "没有",
+                "méiyǒu"
+              ],
+              [
+                "结束",
+                "jiéshù"
+              ],
+              [
+                "呢",
+                "ne"
+              ],
+              [
+                "。",
+                ""
+              ]
+            ],
+            "ko": "회의는 아직 끝나지 않았다."
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "会议",
+            "pinyin": "huìyì",
+            "meaningKo": "회의",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "还",
+            "pinyin": "hái",
+            "meaningKo": "아직",
+            "partOfSpeech": "부사"
+          },
+          {
+            "hanzi": "没有",
+            "pinyin": "méiyǒu",
+            "meaningKo": "아직 ~하지 않았다",
+            "partOfSpeech": "부사"
+          },
+          {
+            "hanzi": "结束",
+            "pinyin": "jiéshù",
+            "meaningKo": "끝나다, 끝내다",
+            "partOfSpeech": "동사"
           }
         ]
       }
@@ -9762,6 +14766,78 @@
             ],
             "keyRule": "주어 + 동사 + 得 + 정도·양상 보어: 「提高得很快」는 향상 속도가 빠르다는 뜻입니다.",
             "caution": "동사 뒤의 양상을 설명하므로 得를 씁니다. 동사 앞에서 방식을 꾸미는 地와 위치가 다릅니다."
+          }
+        ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "她",
+                "tā"
+              ],
+              [
+                "的",
+                "de"
+              ],
+              [
+                "汉语",
+                "Hànyǔ"
+              ],
+              [
+                "水平",
+                "shuǐpíng"
+              ],
+              [
+                "提高",
+                "tígāo"
+              ],
+              [
+                "得",
+                "de"
+              ],
+              [
+                "很",
+                "hěn"
+              ],
+              [
+                "快",
+                "kuài"
+              ],
+              [
+                "。",
+                ""
+              ]
+            ],
+            "ko": "그녀의 중국어 실력은 아주 빠르게 향상된다."
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "汉语",
+            "pinyin": "Hànyǔ",
+            "meaningKo": "중국어",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "水平",
+            "pinyin": "shuǐpíng",
+            "meaningKo": "수준, 실력",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "提高",
+            "pinyin": "tígāo",
+            "meaningKo": "높아지다, 향상되다",
+            "partOfSpeech": "동사"
+          },
+          {
+            "hanzi": "快",
+            "pinyin": "kuài",
+            "meaningKo": "빠르다",
+            "partOfSpeech": "형용사"
           }
         ]
       }
@@ -9945,6 +15021,74 @@
             "keyRule": "소유자+的+명사를 먼저 만들고, 又+형용사+又+형용사로 두 특징을 나란히 말합니다."
           }
         ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "她",
+                "tā"
+              ],
+              [
+                "的",
+                "de"
+              ],
+              [
+                "头发",
+                "tóufa"
+              ],
+              [
+                "又",
+                "yòu"
+              ],
+              [
+                "黑",
+                "hēi"
+              ],
+              [
+                "又",
+                "yòu"
+              ],
+              [
+                "长",
+                "cháng"
+              ],
+              [
+                "。",
+                ""
+              ]
+            ],
+            "ko": "그녀의 머리카락은 검고 길다."
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "头发",
+            "pinyin": "tóufa",
+            "meaningKo": "머리카락",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "又",
+            "pinyin": "yòu",
+            "meaningKo": "~하기도 하고",
+            "partOfSpeech": "부사"
+          },
+          {
+            "hanzi": "黑",
+            "pinyin": "hēi",
+            "meaningKo": "검다",
+            "partOfSpeech": "형용사"
+          },
+          {
+            "hanzi": "长",
+            "pinyin": "cháng",
+            "meaningKo": "길다",
+            "partOfSpeech": "형용사"
+          }
+        ]
       }
     },
     {
@@ -10086,6 +15230,70 @@
             "caution": "学会의 会는 별도의 ‘~할 것이다’가 아니라 学의 결과보어입니다. 了도 단순한 과거형 표지가 아닙니다."
           }
         ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "我",
+                "wǒ"
+              ],
+              [
+                "终于",
+                "zhōngyú"
+              ],
+              [
+                "学会",
+                "xuéhuì"
+              ],
+              [
+                "用",
+                "yòng"
+              ],
+              [
+                "筷子",
+                "kuàizi"
+              ],
+              [
+                "了",
+                "le"
+              ],
+              [
+                "。",
+                ""
+              ]
+            ],
+            "ko": "나는 마침내 젓가락을 사용할 줄 알게 되었다."
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "终于",
+            "pinyin": "zhōngyú",
+            "meaningKo": "마침내",
+            "partOfSpeech": "부사"
+          },
+          {
+            "hanzi": "学会",
+            "pinyin": "xuéhuì",
+            "meaningKo": "배워서 할 줄 알게 되다",
+            "partOfSpeech": "동사"
+          },
+          {
+            "hanzi": "用",
+            "pinyin": "yòng",
+            "meaningKo": "사용하다",
+            "partOfSpeech": "동사"
+          },
+          {
+            "hanzi": "筷子",
+            "pinyin": "kuàizi",
+            "meaningKo": "젓가락",
+            "partOfSpeech": "명사"
+          }
+        ]
       }
     },
     {
@@ -10211,6 +15419,70 @@
             "keyRule": "把+대상+동사+得+결과 상태의 순서입니다. 干干净净은 打扫 뒤에서 청소 결과를 설명합니다."
           }
         ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "他",
+                "tā"
+              ],
+              [
+                "把",
+                "bǎ"
+              ],
+              [
+                "教室",
+                "jiàoshì"
+              ],
+              [
+                "打扫",
+                "dǎsǎo"
+              ],
+              [
+                "得",
+                "de"
+              ],
+              [
+                "干干净净",
+                "gāngānjìngjìng"
+              ],
+              [
+                "。",
+                ""
+              ]
+            ],
+            "ko": "그는 교실을 아주 깨끗하게 청소했다."
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "把",
+            "pinyin": "bǎ",
+            "meaningKo": "목적어를 동사 앞으로 이끄는 표지",
+            "partOfSpeech": "개사"
+          },
+          {
+            "hanzi": "教室",
+            "pinyin": "jiàoshì",
+            "meaningKo": "교실",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "打扫",
+            "pinyin": "dǎsǎo",
+            "meaningKo": "청소하다",
+            "partOfSpeech": "동사"
+          },
+          {
+            "hanzi": "干干净净",
+            "pinyin": "gāngānjìngjìng",
+            "meaningKo": "아주 깨끗하다",
+            "partOfSpeech": "형용사"
+          }
+        ]
       }
     },
     {
@@ -10325,6 +15597,70 @@
             "caution": "不看으로 묶으면 ‘보지 않는다’가 됩니다. 이 문장에서는 不가 喜欢을 부정합니다."
           }
         ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "我",
+                "wǒ"
+              ],
+              [
+                "不",
+                "bù"
+              ],
+              [
+                "喜欢",
+                "xǐhuan"
+              ],
+              [
+                "看",
+                "kàn"
+              ],
+              [
+                "体育",
+                "tǐyù"
+              ],
+              [
+                "新闻",
+                "xīnwén"
+              ],
+              [
+                "。",
+                ""
+              ]
+            ],
+            "ko": "나는 스포츠 뉴스를 보는 것을 좋아하지 않는다."
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "喜欢",
+            "pinyin": "xǐhuan",
+            "meaningKo": "좋아하다",
+            "partOfSpeech": "동사"
+          },
+          {
+            "hanzi": "看",
+            "pinyin": "kàn",
+            "meaningKo": "보다",
+            "partOfSpeech": "동사"
+          },
+          {
+            "hanzi": "体育",
+            "pinyin": "tǐyù",
+            "meaningKo": "체육, 스포츠",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "新闻",
+            "pinyin": "xīnwén",
+            "meaningKo": "뉴스",
+            "partOfSpeech": "명사"
+          }
+        ]
       }
     },
     {
@@ -10434,6 +15770,80 @@
               }
             ],
             "keyRule": "주어+对+대상+정도부사+满意의 순서입니다. 对你的回答는 满意 앞에 놓습니다."
+          }
+        ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "校长",
+                "xiàozhǎng"
+              ],
+              [
+                "对",
+                "duì"
+              ],
+              [
+                "你",
+                "nǐ"
+              ],
+              [
+                "的",
+                "de"
+              ],
+              [
+                "回答",
+                "huídá"
+              ],
+              [
+                "非常",
+                "fēicháng"
+              ],
+              [
+                "满意",
+                "mǎnyì"
+              ],
+              [
+                "。",
+                ""
+              ]
+            ],
+            "ko": "교장 선생님은 네 대답에 매우 만족하신다."
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "校长",
+            "pinyin": "xiàozhǎng",
+            "meaningKo": "교장",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "对",
+            "pinyin": "duì",
+            "meaningKo": "~에 대해",
+            "partOfSpeech": "개사"
+          },
+          {
+            "hanzi": "回答",
+            "pinyin": "huídá",
+            "meaningKo": "대답",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "非常",
+            "pinyin": "fēicháng",
+            "meaningKo": "매우",
+            "partOfSpeech": "부사"
+          },
+          {
+            "hanzi": "满意",
+            "pinyin": "mǎnyì",
+            "meaningKo": "만족하다",
+            "partOfSpeech": "형용사"
           }
         ]
       }
@@ -10629,6 +16039,56 @@
             "keyRule": "学习特别努力는 공부하는 태도가 매우 열심이라는 뜻입니다. 정도부사 特别는 상태를 나타내는 努力 앞에 놓습니다."
           }
         ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "他",
+                "tā"
+              ],
+              [
+                "学习",
+                "xuéxí"
+              ],
+              [
+                "特别",
+                "tèbié"
+              ],
+              [
+                "努力",
+                "nǔlì"
+              ],
+              [
+                "。",
+                ""
+              ]
+            ],
+            "ko": "그는 공부를 특히 열심히 한다."
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "学习",
+            "pinyin": "xuéxí",
+            "meaningKo": "공부하다",
+            "partOfSpeech": "동사"
+          },
+          {
+            "hanzi": "特别",
+            "pinyin": "tèbié",
+            "meaningKo": "특히, 아주",
+            "partOfSpeech": "부사"
+          },
+          {
+            "hanzi": "努力",
+            "pinyin": "nǔlì",
+            "meaningKo": "노력하다, 열심이다",
+            "partOfSpeech": "형용사"
+          }
+        ]
       }
     },
     {
@@ -10740,6 +16200,76 @@
             "keyRule": "想+동사+목적어의 순서에서, ‘어떤 종류의 빵’은 哪种面包로 묶습니다. 의문 표현도 목적어 자리에 그대로 둡니다."
           }
         ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "你",
+                "nǐ"
+              ],
+              [
+                "想",
+                "xiǎng"
+              ],
+              [
+                "吃",
+                "chī"
+              ],
+              [
+                "哪",
+                "nǎ"
+              ],
+              [
+                "种",
+                "zhǒng"
+              ],
+              [
+                "面包",
+                "miànbāo"
+              ],
+              [
+                "？",
+                ""
+              ]
+            ],
+            "ko": "너는 어떤 종류의 빵을 먹고 싶니?"
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "想",
+            "pinyin": "xiǎng",
+            "meaningKo": "~하고 싶다",
+            "partOfSpeech": "조동사"
+          },
+          {
+            "hanzi": "吃",
+            "pinyin": "chī",
+            "meaningKo": "먹다",
+            "partOfSpeech": "동사"
+          },
+          {
+            "hanzi": "哪",
+            "pinyin": "nǎ",
+            "meaningKo": "어느",
+            "partOfSpeech": "대명사"
+          },
+          {
+            "hanzi": "种",
+            "pinyin": "zhǒng",
+            "meaningKo": "종류를 세는 단위",
+            "partOfSpeech": "양사"
+          },
+          {
+            "hanzi": "面包",
+            "pinyin": "miànbāo",
+            "meaningKo": "빵",
+            "partOfSpeech": "명사"
+          }
+        ]
       }
     },
     {
@@ -10845,6 +16375,80 @@
             ],
             "keyRule": "화제+还没+동사+결과보어의 순서입니다. 洗干净은 ‘깨끗이 씻다’이며 还没가 그 결과의 미실현을 나타냅니다.",
             "caution": "你的脸은 씻는 사람이 아니라 씻을 대상입니다."
+          }
+        ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "你",
+                "nǐ"
+              ],
+              [
+                "的",
+                "de"
+              ],
+              [
+                "脸",
+                "liǎn"
+              ],
+              [
+                "还",
+                "hái"
+              ],
+              [
+                "没",
+                "méi"
+              ],
+              [
+                "洗",
+                "xǐ"
+              ],
+              [
+                "干净",
+                "gānjìng"
+              ],
+              [
+                "。",
+                ""
+              ]
+            ],
+            "ko": "네 얼굴은 아직 깨끗이 씻기지 않았다."
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "脸",
+            "pinyin": "liǎn",
+            "meaningKo": "얼굴",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "还",
+            "pinyin": "hái",
+            "meaningKo": "아직",
+            "partOfSpeech": "부사"
+          },
+          {
+            "hanzi": "没",
+            "pinyin": "méi",
+            "meaningKo": "~하지 않았다",
+            "partOfSpeech": "부사"
+          },
+          {
+            "hanzi": "洗",
+            "pinyin": "xǐ",
+            "meaningKo": "씻다",
+            "partOfSpeech": "동사"
+          },
+          {
+            "hanzi": "干净",
+            "pinyin": "gānjìng",
+            "meaningKo": "깨끗하다",
+            "partOfSpeech": "형용사"
           }
         ]
       }
@@ -10959,6 +16563,86 @@
             "caution": "여기의 的는 最好的를 명사처럼 쓰게 합니다. 是…的 강조 구문으로 읽지 않습니다."
           }
         ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "他",
+                "tā"
+              ],
+              [
+                "的",
+                "de"
+              ],
+              [
+                "成绩",
+                "chéngjì"
+              ],
+              [
+                "一直",
+                "yìzhí"
+              ],
+              [
+                "是",
+                "shì"
+              ],
+              [
+                "我们",
+                "wǒmen"
+              ],
+              [
+                "班",
+                "bān"
+              ],
+              [
+                "最",
+                "zuì"
+              ],
+              [
+                "好",
+                "hǎo"
+              ],
+              [
+                "的",
+                "de"
+              ],
+              [
+                "。",
+                ""
+              ]
+            ],
+            "ko": "그의 성적은 줄곧 우리 반에서 가장 좋았다."
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "成绩",
+            "pinyin": "chéngjì",
+            "meaningKo": "성적",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "一直",
+            "pinyin": "yìzhí",
+            "meaningKo": "줄곧, 계속",
+            "partOfSpeech": "부사"
+          },
+          {
+            "hanzi": "班",
+            "pinyin": "bān",
+            "meaningKo": "반",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "最",
+            "pinyin": "zuì",
+            "meaningKo": "가장",
+            "partOfSpeech": "부사"
+          }
+        ]
       }
     },
     {
@@ -11070,6 +16754,74 @@
               }
             ],
             "keyRule": "나이는 ‘주어+나이’로 말할 수 있어 是를 넣지 않습니다. 已经+나이+了는 그 나이에 이르렀음을 나타냅니다."
+          }
+        ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "那",
+                "nà"
+              ],
+              [
+                "位",
+                "wèi"
+              ],
+              [
+                "老人",
+                "lǎorén"
+              ],
+              [
+                "已经",
+                "yǐjīng"
+              ],
+              [
+                "107",
+                "yìbǎi líng qī"
+              ],
+              [
+                "岁",
+                "suì"
+              ],
+              [
+                "了",
+                "le"
+              ],
+              [
+                "。",
+                ""
+              ]
+            ],
+            "ko": "저 어르신은 벌써 107세이시다."
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "位",
+            "pinyin": "wèi",
+            "meaningKo": "사람을 높여 세는 단위",
+            "partOfSpeech": "양사"
+          },
+          {
+            "hanzi": "老人",
+            "pinyin": "lǎorén",
+            "meaningKo": "노인, 어르신",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "已经",
+            "pinyin": "yǐjīng",
+            "meaningKo": "이미, 벌써",
+            "partOfSpeech": "부사"
+          },
+          {
+            "hanzi": "岁",
+            "pinyin": "suì",
+            "meaningKo": "나이를 세는 단위",
+            "partOfSpeech": "양사"
           }
         ]
       }
@@ -11272,6 +17024,80 @@
             "caution": "花了의 了는 지출이 이루어졌음을 나타내며, 모든 문장에서 과거 시제를 만드는 표지는 아닙니다."
           }
         ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "这",
+                "zhè"
+              ],
+              [
+                "次",
+                "cì"
+              ],
+              [
+                "旅游",
+                "lǚyóu"
+              ],
+              [
+                "花",
+                "huā"
+              ],
+              [
+                "了",
+                "le"
+              ],
+              [
+                "一万",
+                "yíwàn"
+              ],
+              [
+                "元",
+                "yuán"
+              ],
+              [
+                "。",
+                ""
+              ]
+            ],
+            "ko": "이번 여행에는 만 위안이 들었다."
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "次",
+            "pinyin": "cì",
+            "meaningKo": "횟수를 세는 단위",
+            "partOfSpeech": "양사"
+          },
+          {
+            "hanzi": "旅游",
+            "pinyin": "lǚyóu",
+            "meaningKo": "여행",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "花",
+            "pinyin": "huā",
+            "meaningKo": "돈이나 시간을 쓰다",
+            "partOfSpeech": "동사"
+          },
+          {
+            "hanzi": "一万",
+            "pinyin": "yíwàn",
+            "meaningKo": "만, 10000",
+            "partOfSpeech": "수사"
+          },
+          {
+            "hanzi": "元",
+            "pinyin": "yuán",
+            "meaningKo": "위안",
+            "partOfSpeech": "양사"
+          }
+        ]
       }
     },
     {
@@ -11380,6 +17206,70 @@
             ],
             "keyRule": "주어+在+장소+동사+목적어 순서입니다. 在大学는 장소를 나타내므로 教 앞에 놓습니다.",
             "caution": "여기의 在는 ‘~에 있다’라는 중심 동사나 진행 표시가 아니라 大学를 이끄는 장소 개사입니다."
+          }
+        ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "她",
+                "tā"
+              ],
+              [
+                "丈夫",
+                "zhàngfu"
+              ],
+              [
+                "在",
+                "zài"
+              ],
+              [
+                "大学",
+                "dàxué"
+              ],
+              [
+                "教",
+                "jiāo"
+              ],
+              [
+                "中文",
+                "Zhōngwén"
+              ],
+              [
+                "。",
+                ""
+              ]
+            ],
+            "ko": "그녀의 남편은 대학에서 중국어를 가르친다."
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "丈夫",
+            "pinyin": "zhàngfu",
+            "meaningKo": "남편",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "大学",
+            "pinyin": "dàxué",
+            "meaningKo": "대학교",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "教",
+            "pinyin": "jiāo",
+            "meaningKo": "가르치다",
+            "partOfSpeech": "동사"
+          },
+          {
+            "hanzi": "中文",
+            "pinyin": "Zhōngwén",
+            "meaningKo": "중국어",
+            "partOfSpeech": "명사"
           }
         ]
       }
@@ -11491,6 +17381,70 @@
               }
             ],
             "keyRule": "상태+得+그 상태로 나타난 반응의 순서입니다. 哭了起来는 ‘울기 시작했다’는 뜻으로 두려움의 정도를 보여 줍니다."
+          }
+        ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "妹妹",
+                "mèimei"
+              ],
+              [
+                "害怕",
+                "hàipà"
+              ],
+              [
+                "得",
+                "de"
+              ],
+              [
+                "哭",
+                "kū"
+              ],
+              [
+                "了",
+                "le"
+              ],
+              [
+                "起来",
+                "qǐlai"
+              ],
+              [
+                "。",
+                ""
+              ]
+            ],
+            "ko": "여동생은 무서워서 울기 시작했다."
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "妹妹",
+            "pinyin": "mèimei",
+            "meaningKo": "여동생",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "害怕",
+            "pinyin": "hàipà",
+            "meaningKo": "무서워하다",
+            "partOfSpeech": "동사"
+          },
+          {
+            "hanzi": "哭",
+            "pinyin": "kū",
+            "meaningKo": "울다",
+            "partOfSpeech": "동사"
+          },
+          {
+            "hanzi": "起来",
+            "pinyin": "qǐlai",
+            "meaningKo": "동작이 시작됨을 나타냄",
+            "partOfSpeech": "동사"
           }
         ]
       }
@@ -11606,6 +17560,76 @@
             "keyRule": "马上+就要+동사+了는 일이 곧 일어남을 나타냅니다. 이 문장의 了는 이미 이륙했다는 뜻이 아닙니다."
           }
         ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "飞机",
+                "fēijī"
+              ],
+              [
+                "马上",
+                "mǎshàng"
+              ],
+              [
+                "就",
+                "jiù"
+              ],
+              [
+                "要",
+                "yào"
+              ],
+              [
+                "起飞",
+                "qǐfēi"
+              ],
+              [
+                "了",
+                "le"
+              ],
+              [
+                "。",
+                ""
+              ]
+            ],
+            "ko": "비행기가 곧 이륙할 것이다."
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "飞机",
+            "pinyin": "fēijī",
+            "meaningKo": "비행기",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "马上",
+            "pinyin": "mǎshàng",
+            "meaningKo": "곧, 즉시",
+            "partOfSpeech": "부사"
+          },
+          {
+            "hanzi": "就",
+            "pinyin": "jiù",
+            "meaningKo": "곧",
+            "partOfSpeech": "부사"
+          },
+          {
+            "hanzi": "要",
+            "pinyin": "yào",
+            "meaningKo": "~하려고 하다",
+            "partOfSpeech": "조동사"
+          },
+          {
+            "hanzi": "起飞",
+            "pinyin": "qǐfēi",
+            "meaningKo": "이륙하다",
+            "partOfSpeech": "동사"
+          }
+        ]
       }
     },
     {
@@ -11717,6 +17741,70 @@
               }
             ],
             "keyRule": "꾸밈말+的+명사로 주어를 만든 뒤 真+형용사+啊로 감탄합니다. 今晚的는 달을 꾸미므로 月亮 앞에 둡니다."
+          }
+        ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "今晚",
+                "jīnwǎn"
+              ],
+              [
+                "的",
+                "de"
+              ],
+              [
+                "月亮",
+                "yuèliang"
+              ],
+              [
+                "真",
+                "zhēn"
+              ],
+              [
+                "大",
+                "dà"
+              ],
+              [
+                "啊",
+                "a"
+              ],
+              [
+                "！",
+                ""
+              ]
+            ],
+            "ko": "오늘 밤의 달은 정말 크구나!"
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "今晚",
+            "pinyin": "jīnwǎn",
+            "meaningKo": "오늘 밤",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "月亮",
+            "pinyin": "yuèliang",
+            "meaningKo": "달",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "真",
+            "pinyin": "zhēn",
+            "meaningKo": "정말",
+            "partOfSpeech": "부사"
+          },
+          {
+            "hanzi": "大",
+            "pinyin": "dà",
+            "meaningKo": "크다",
+            "partOfSpeech": "형용사"
           }
         ]
       }
@@ -11901,6 +17989,56 @@
             "caution": "极了는 정도를 나타내는 한 묶음입니다. 여기의 了를 과거형으로 해석하지 않습니다."
           }
         ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "弟弟",
+                "dìdi"
+              ],
+              [
+                "害怕",
+                "hàipà"
+              ],
+              [
+                "极",
+                "jí"
+              ],
+              [
+                "了",
+                "le"
+              ],
+              [
+                "。",
+                ""
+              ]
+            ],
+            "ko": "남동생은 몹시 무서워했다."
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "弟弟",
+            "pinyin": "dìdi",
+            "meaningKo": "남동생",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "害怕",
+            "pinyin": "hàipà",
+            "meaningKo": "무서워하다",
+            "partOfSpeech": "동사"
+          },
+          {
+            "hanzi": "极",
+            "pinyin": "jí",
+            "meaningKo": "아주, 지극히",
+            "partOfSpeech": "부사"
+          }
+        ]
       }
     },
     {
@@ -12005,6 +18143,66 @@
               }
             ],
             "keyRule": "이 동물을 가리킬 때는 这+양사+명사의 순서입니다. 형용사 술어 앞에는 很을 놓아 很可爱로 말합니다."
+          }
+        ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "这",
+                "zhè"
+              ],
+              [
+                "只",
+                "zhī"
+              ],
+              [
+                "大熊猫",
+                "dàxióngmāo"
+              ],
+              [
+                "很",
+                "hěn"
+              ],
+              [
+                "可爱",
+                "kě'ài"
+              ],
+              [
+                "。",
+                ""
+              ]
+            ],
+            "ko": "이 판다는 아주 귀엽다."
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "只",
+            "pinyin": "zhī",
+            "meaningKo": "동물을 세는 단위",
+            "partOfSpeech": "양사"
+          },
+          {
+            "hanzi": "大熊猫",
+            "pinyin": "dàxióngmāo",
+            "meaningKo": "판다",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "很",
+            "pinyin": "hěn",
+            "meaningKo": "아주, 매우",
+            "partOfSpeech": "부사"
+          },
+          {
+            "hanzi": "可爱",
+            "pinyin": "kě'ài",
+            "meaningKo": "귀엽다",
+            "partOfSpeech": "형용사"
           }
         ]
       }
@@ -12150,6 +18348,74 @@
             "caution": "이 是…的는 과거 사건의 시간·장소를 강조하는 용법이 아닙니다. 不는 被 뒤가 아니라 应该 앞에 놓습니다."
           }
         ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "历史",
+                "lìshǐ"
+              ],
+              [
+                "是",
+                "shì"
+              ],
+              [
+                "不",
+                "bù"
+              ],
+              [
+                "应该",
+                "yīnggāi"
+              ],
+              [
+                "被",
+                "bèi"
+              ],
+              [
+                "忘记",
+                "wàngjì"
+              ],
+              [
+                "的",
+                "de"
+              ],
+              [
+                "。",
+                ""
+              ]
+            ],
+            "ko": "역사는 잊혀서는 안 되는 것이다."
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "历史",
+            "pinyin": "lìshǐ",
+            "meaningKo": "역사",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "应该",
+            "pinyin": "yīnggāi",
+            "meaningKo": "마땅히 ~해야 한다",
+            "partOfSpeech": "조동사"
+          },
+          {
+            "hanzi": "被",
+            "pinyin": "bèi",
+            "meaningKo": "~에 의해",
+            "partOfSpeech": "개사"
+          },
+          {
+            "hanzi": "忘记",
+            "pinyin": "wàngjì",
+            "meaningKo": "잊다",
+            "partOfSpeech": "동사"
+          }
+        ]
       }
     },
     {
@@ -12248,6 +18514,74 @@
             ],
             "keyRule": "주어+比+비교 기준+형용사+了+차이 수량의 순서입니다. 차이인 10公斤은 瘦了 뒤에 놓습니다.",
             "caution": "去年은 작년의 내 몸 상태를 가리키는 비교 기준입니다. 了는 이 문장에서 몸무게 변화를 나타냅니다."
+          }
+        ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "我",
+                "wǒ"
+              ],
+              [
+                "比",
+                "bǐ"
+              ],
+              [
+                "去年",
+                "qùnián"
+              ],
+              [
+                "瘦",
+                "shòu"
+              ],
+              [
+                "了",
+                "le"
+              ],
+              [
+                "10",
+                "shí"
+              ],
+              [
+                "公斤",
+                "gōngjīn"
+              ],
+              [
+                "。",
+                ""
+              ]
+            ],
+            "ko": "나는 작년보다 10킬로그램 살이 빠졌다."
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "比",
+            "pinyin": "bǐ",
+            "meaningKo": "~보다",
+            "partOfSpeech": "개사"
+          },
+          {
+            "hanzi": "去年",
+            "pinyin": "qùnián",
+            "meaningKo": "작년",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "瘦",
+            "pinyin": "shòu",
+            "meaningKo": "마르다, 살이 빠지다",
+            "partOfSpeech": "형용사"
+          },
+          {
+            "hanzi": "公斤",
+            "pinyin": "gōngjīn",
+            "meaningKo": "킬로그램",
+            "partOfSpeech": "양사"
           }
         ]
       }
@@ -12386,6 +18720,74 @@
             ],
             "keyRule": "주어+最后+决定+把+대상+동사+了의 순서입니다. 把房子卖了 전체가 결정한 행동의 내용입니다.",
             "caution": "이 문장만으로 집이 실제로 팔렸다고 단정하지 않습니다. 了가 들어간 把房子卖了는 여기서 决定의 내용입니다."
+          }
+        ]
+      },
+      "study": {
+        "answers": [
+          {
+            "answerIndex": 0,
+            "words": [
+              [
+                "她",
+                "tā"
+              ],
+              [
+                "最后",
+                "zuìhòu"
+              ],
+              [
+                "决定",
+                "juédìng"
+              ],
+              [
+                "把",
+                "bǎ"
+              ],
+              [
+                "房子",
+                "fángzi"
+              ],
+              [
+                "卖",
+                "mài"
+              ],
+              [
+                "了",
+                "le"
+              ],
+              [
+                "。",
+                ""
+              ]
+            ],
+            "ko": "그녀는 마지막에 집을 팔기로 결정했다."
+          }
+        ],
+        "vocab": [
+          {
+            "hanzi": "最后",
+            "pinyin": "zuìhòu",
+            "meaningKo": "마지막에, 결국",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "决定",
+            "pinyin": "juédìng",
+            "meaningKo": "결정하다",
+            "partOfSpeech": "동사"
+          },
+          {
+            "hanzi": "房子",
+            "pinyin": "fángzi",
+            "meaningKo": "집",
+            "partOfSpeech": "명사"
+          },
+          {
+            "hanzi": "卖",
+            "pinyin": "mài",
+            "meaningKo": "팔다",
+            "partOfSpeech": "동사"
           }
         ]
       }

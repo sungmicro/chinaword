@@ -3,6 +3,7 @@ from pathlib import Path
 import unittest
 from generate import EXAMS, pages, parse_exam, validate
 from grammar import merge_grammar
+from study import merge_study
 
 ROOT = Path(__file__).resolve().parents[2]
 class WritingTests(unittest.TestCase):
@@ -26,6 +27,6 @@ class WritingTests(unittest.TestCase):
                 if exam != 'H31007': self.assertLessEqual(x['source']['answerPage'], page_count)
             actual.extend(result)
         for seq, x in enumerate(actual, 1): x['seq'] = seq
-        self.assertEqual(merge_grammar(actual), json.loads((ROOT / 'public/writing/hsk3-all.json').read_text())['items'])
+        self.assertEqual(merge_study(merge_grammar(actual)), json.loads((ROOT / 'public/writing/hsk3-all.json').read_text())['items'])
 
 if __name__ == '__main__': unittest.main()
