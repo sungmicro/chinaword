@@ -13,6 +13,7 @@ from pathlib import Path
 PART_NAMES = {'第一部分': 1, '第二部分': 2, '第三部分': 3, '第四部分': 4}
 FOOTER = re.compile(r'^\s*H3\d{4}\s*-\s*\d+\s*$')
 WATERMARK = re.compile(r'\s*Facebook\s*&\s*Youtube:\s*Hancai\s*Chinese\s*')
+WATERMARK_WORDS = {'Facebook', 'Youtube:', 'Hancai', 'Chinese'}
 ITEM_START = re.compile(r'^\s*(\d{1,2})\s*．\s*(.*)$')
 SPEAKER = re.compile(r'^(男|女|问)：\s*(.*)$')
 # 대본 안에서 문항이 아닌 줄들. 이 줄이 나오면 진행 중인 문항이 끝난다.
@@ -118,6 +119,15 @@ def page_words(pdf):
     return pages
 
 
+def picture_right(words):
+    """오른쪽 세로 워터마크가 있으면 글씨 앞의 흰 여백에서 크롭을 끝낸다."""
+    watermark_x = [
+        word['x0'] for word in words
+        if word['text'] in WATERMARK_WORDS and word['x0'] > 480
+    ]
+    return min(540, min(watermark_x) - 6) if watermark_x else 540
+
+
 def crop_picture_groups(pdf, test_id, public_dir):
     """1부분 '第 1-5 题', '第 6-10 题' 아래의 사진 묶음을 잘라 jpg로 저장한다."""
     groups = []
@@ -134,7 +144,7 @@ def crop_picture_groups(pdf, test_id, public_dir):
             name = f'{test_id}-p1-{len(groups) + 1}.jpg'
             dpi = 150
             scale = dpi / 72
-            x0, x1 = 70, 540
+            x0, x1 = 70, picture_right(words)
             subprocess.run([
                 'pdftoppm', '-jpeg', '-jpegopt', 'quality=82', '-r', str(dpi), '-f', str(page_no), '-l', str(page_no),
                 '-x', str(int(x0 * scale)), '-y', str(int(top * scale)),
