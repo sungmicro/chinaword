@@ -97,7 +97,7 @@ h1 {
 
 .viewTabs {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 6px;
   margin-bottom: 10px;
   padding: 5px;
@@ -124,6 +124,23 @@ h1 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 8px;
+}
+
+.studyScope {
+  margin-bottom: 9px;
+}
+
+.studyScopeButtons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.studyScopeCount {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-weight: 800;
 }
 
 .modeButton {
@@ -645,34 +662,6 @@ h1 {
   font-weight: 800;
 }
 
-/* 자기소개 암기 */
-.memoPanel {
-  min-height: 0;
-  height: 100%;
-  display: grid;
-  grid-template-rows: auto 1fr;
-  gap: 10px;
-  padding: 14px;
-  border: 1px solid var(--line);
-  border-radius: 34px;
-  background: var(--surface-strong);
-  box-shadow: var(--shadow);
-  overflow: hidden;
-}
-
-.memoControls {
-  display: grid;
-  gap: 8px;
-}
-
-.memoToolbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
 .memoPlay {
   display: inline-flex;
   align-items: center;
@@ -712,81 +701,6 @@ h1 {
 .memoToggle.active {
   border-color: transparent;
   background: #f2e4d4;
-  color: var(--accent-strong);
-}
-
-.memoBody {
-  min-height: 0;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-  overscroll-behavior: contain;
-}
-
-.memoList {
-  display: grid;
-  gap: 7px;
-  margin: 0;
-  padding: 0 4px 4px 0;
-  list-style: none;
-}
-
-.memoRow {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 10px;
-  padding: 11px 13px;
-  border: 1px solid var(--line);
-  border-radius: 18px;
-  background: rgba(255, 255, 255, 0.86);
-  color: inherit;
-  font-family: inherit;
-  text-align: left;
-  transition: transform 0.14s ease, background 0.14s ease, border-color 0.14s ease;
-}
-
-.memoRow:active {
-  transform: scale(0.99);
-}
-
-/* 지금 재생 중인 줄 — 따라 말할 줄을 눈으로 바로 찾을 수 있게 강조합니다. */
-.memoRow.speaking {
-  border-color: var(--accent);
-  background: #fff4e6;
-}
-
-.memoTexts {
-  min-width: 0;
-  display: grid;
-  gap: 3px;
-}
-
-.memoRow p {
-  margin: 0;
-  overflow-wrap: anywhere;
-}
-
-.memoHanzi {
-  font-size: 1.32rem;
-  font-weight: 950;
-  line-height: 1.35;
-}
-
-.memoPinyin {
-  color: var(--accent);
-  font-size: 0.92rem;
-  font-weight: 850;
-}
-
-.memoKo {
-  color: var(--muted);
-  font-size: 0.86rem;
-  font-weight: 780;
-}
-
-.memoSpeakIcon {
-  flex-shrink: 0;
   color: var(--accent-strong);
 }
 
@@ -1869,7 +1783,6 @@ code {
 .prompt-hanzi.textLong,
 .answerHanzi,
 .vocabHanzi,
-.memoHanzi,
 .quizHanzi,
 .quizWrongHanzi,
 .rubyHanzi,
@@ -2012,12 +1925,13 @@ code {
     min-height: 33px;
     padding: 0 2px;
     border-radius: 10px;
-    /* 탭이 6개라 좁은 화면에서는 글자를 줄여야 한 줄에 들어갑니다. */
+    /* 좁은 화면에서도 탭이 한 줄에 들어가게 합니다. */
     font-size: clamp(0.62rem, 2.8vw, 0.82rem);
     white-space: nowrap;
   }
 
-  .modeControls {
+  .modeControls,
+  .studyScopeButtons {
     gap: 5px;
   }
 
@@ -2167,29 +2081,10 @@ code {
   }
 
   .listPanel,
-  .quizPanel,
-  .memoPanel {
+  .quizPanel {
     padding: 10px;
     border-radius: 24px;
     gap: 8px;
-  }
-
-  .memoRow {
-    padding: 9px 11px;
-    border-radius: 15px;
-  }
-
-  .memoHanzi {
-    font-size: 1.18rem;
-    line-height: 1.32;
-  }
-
-  .memoPinyin {
-    font-size: 0.85rem;
-  }
-
-  .memoKo {
-    font-size: 0.8rem;
   }
 
   .memoPlay {

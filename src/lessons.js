@@ -3,6 +3,21 @@
 // 교재 과(Lesson N)는 번호로 자동 정렬하므로, 여기엔 HSK 계열만 순서대로 적습니다.
 export const LESSON_ORDER = ['HSK1 150', 'HSK2 추가 150', 'HSK2 공식문제', 'HSK3 추가 300', 'HSK3 듣기', 'HSK3 독해'];
 
+export const STUDY_GROUPS = {
+  'HSK1&2': ['HSK1 150', 'HSK2 추가 150', 'HSK2 공식문제'],
+  HSK3: ['HSK3 추가 300', 'HSK3 듣기', 'HSK3 독해'],
+  교재1: Array.from({ length: 8 }, (_, index) => `Lesson ${index + 1}`)
+};
+export const STUDY_GROUP_OPTIONS = ['전체', 'HSK1&2', 'HSK3', '교재1'];
+
+export function normalizeStudyGroup(group) {
+  return STUDY_GROUP_OPTIONS.includes(group) ? group : '전체';
+}
+
+export function matchesStudyGroup(item, group) {
+  return group === '전체' || (STUDY_GROUPS[group]?.includes(item.lesson) ?? false);
+}
+
 export function lessonSortKey(lesson) {
   const index = LESSON_ORDER.indexOf(lesson);
   if (index >= 0) return index;
