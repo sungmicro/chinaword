@@ -5,6 +5,7 @@ import vocabData from './data/vocab.json';
 import { speakChinese, stopSpeaking, useChineseVoice } from './speech';
 import { STUDY_GROUP_OPTIONS, lessonBadge, matchesStudyGroup, normalizeStudyGroup } from './lessons';
 import { randomIndex, selectStudyPool } from './studyPool';
+import { shuffleVocab } from './vocabOrder';
 import { MINE_LESSON, mineToStudyItems, useMyVocab } from './myVocab';
 import Listening from './Listening';
 import Reading from './Reading';
@@ -204,6 +205,8 @@ function HiddenAnswer({ card, promptType, canSpeak, speaking, onSpeak }) {
 function VocabList({ items, mineItems, onRemoveMine, canSpeak, speakingText, onSpeak }) {
   const [query, setQuery] = useState('');
   const [lesson, setLesson] = useState('전체');
+  const [orderMode, setOrderMode] = useState('pinyin');
+  const [shuffleSeed, setShuffleSeed] = useState(0);
 
   const chips = ['전체', MINE_LESSON, ...STUDY_GROUP_OPTIONS.slice(1)];
   const showingMine = lesson === MINE_LESSON;
@@ -222,6 +225,11 @@ function VocabList({ items, mineItems, onRemoveMine, canSpeak, speakingText, onS
       );
     });
   }, [items, mineItems, showingMine, lesson, query]);
+
+  const orderedItems = useMemo(
+    () => orderMode === 'random' ? shuffleVocab(visibleItems, shuffleSeed) : visibleItems,
+    [visibleItems, orderMode, shuffleSeed],
+  );
 
   return (
     <section className="listPanel" aria-label="단어장">
@@ -251,13 +259,26 @@ function VocabList({ items, mineItems, onRemoveMine, canSpeak, speakingText, onS
           ))}
         </div>
 
-        <p className="listCount">{visibleItems.length}개</p>
+        <div className="listOrderRow">
+          <p className="listCount">{visibleItems.length}개</p>
+          <div className="lessonChips" role="group" aria-label="단어장 정렬">
+            <button type="button" className={`lessonChip${orderMode === 'pinyin' ? ' active' : ''}`}
+              aria-pressed={orderMode === 'pinyin'} onClick={() => setOrderMode('pinyin')}>
+              병음 순
+            </button>
+            <button type="button" className={`lessonChip${orderMode === 'random' ? ' active' : ''}`}
+              aria-pressed={orderMode === 'random'}
+              onClick={() => { setOrderMode('random'); setShuffleSeed((seed) => seed + 1); }}>
+              랜덤 섞기
+            </button>
+          </div>
+        </div>
       </div>
 
       <div className="listBody">
         {visibleItems.length ? (
           <ul className="vocabList">
-            {visibleItems.map((item) => {
+            {orderedItems.map((item) => {
               const speakable = canSpeak && String(item.hanzi ?? '').trim();
               const badge = lessonBadge(item.lesson);
 
