@@ -8,6 +8,7 @@ import json
 from pathlib import Path
 import re
 import subprocess
+from grammar import merge_grammar
 
 EXAMS = 'H31001 H31002 H31003 H31004 H31005 H31006 H31007 H31008 H31009 H31110 H31111 H31218 H31219 H31220 H31221 H31328 H31329 H31330 H31332'.split()
 HERE = Path(__file__).parent
@@ -110,6 +111,7 @@ def main():
     for exam in EXAMS: items.extend(parse_exam(exam, args.source / f'{exam}.pdf', overrides.get(exam)))
     for seq, item in enumerate(items, 1): item['seq'] = seq
     validate(items)
+    items = merge_grammar(items)
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps({'version': 1, 'items': items}, ensure_ascii=False, indent=2) + '\n')
     print('19회차 × 10 = 190문항, 어순 95 · 한자 95, 번호·정답·복수답·중복 검증 통과')
