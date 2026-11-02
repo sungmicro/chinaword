@@ -1503,12 +1503,6 @@ code {
   gap: 4px 8px;
 }
 
-.grammarGloss {
-  color: var(--accent-strong);
-  font-size: 0.84rem;
-  font-weight: 850;
-}
-
 /* 독해 탭 */
 .readError {
   display: grid;
@@ -1580,7 +1574,6 @@ code {
 }
 
 .readBasis,
-.readBreakdown li,
 .readDistractors li {
   padding: 10px 12px;
   border-radius: 14px;
@@ -1588,7 +1581,6 @@ code {
 }
 
 .readBasis p,
-.readBreakdown p,
 .readDistractors p {
   margin: 0;
   font-size: 0.88rem;
@@ -1604,8 +1596,7 @@ code {
   font-weight: 900;
 }
 
-.readDistractors,
-.readBreakdown {
+.readDistractors {
   display: grid;
   gap: 8px;
   margin: 0;
@@ -1622,60 +1613,6 @@ code {
 .readDistractors .readDistractorText {
   font-size: 1rem;
   font-weight: 900;
-}
-
-.readChunks {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  margin-bottom: 6px;
-}
-
-.readChunk {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2px;
-  padding: 6px 8px;
-  border: 1px solid var(--line);
-  border-radius: 10px;
-  background: #fff;
-}
-
-.readChunkText {
-  font-size: 1.1rem;
-  font-weight: 900;
-}
-
-.readChunkRole {
-  color: var(--accent);
-  font-size: 0.7rem;
-  font-weight: 900;
-}
-
-.listenVocab.readVocab {
-  grid-template-columns: 1fr;
-}
-
-.readUsage {
-  flex-basis: 100%;
-  margin: 2px 0 0;
-  color: var(--accent-strong);
-  font-size: 0.84rem;
-  font-weight: 800;
-}
-
-.readExample {
-  flex-basis: 100%;
-  margin-top: 4px;
-  padding: 8px 10px;
-  border-radius: 10px;
-  background: #fff;
-}
-
-.readExample .rubyHanzi,
-.readExample .rubyPunct {
-  font-size: 1.02rem;
 }
 
 /* 내 단어장 (단어장 칩·랜덤 학습) */
@@ -1809,7 +1746,6 @@ code {
 .listenGrammar strong,
 .readBasis .readQuote,
 .readDistractors .readDistractorText,
-.readChunkText,
 .mineExampleZh {
   font-family: var(--hanzi-font);
   font-synthesis: none;

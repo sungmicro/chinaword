@@ -50,12 +50,8 @@ $PY tools/auto_enrich.py H31006 --listening-work ~/hsk-listening-work --reading-
       "explain": {
         "basis": { "quote": "원문 구절 그대로", "note": "왜 답인지 1~3문장" },
         "distractors": [{ "label": "A", "note": "한 줄" }],
-        "breakdown": [{ "chunks": [{ "text": "我", "role": "주어" }], "note": "구조 요약 한 줄" }],
-        "vocab": [{ "hanzi": "满意", "pinyin": "mǎnyì", "partOfSpeech": "형용사", "meaningKo": "만족하다",
-                    "usage": "对A很满意 / 对A不满意",
-                    "example": { "zh": "我对这个房间很满意。", "words": [["我","wǒ"],["对","duì"],["这个","zhège"],["房间","fángjiān"],["很","hěn"],["满意","mǎnyì"],["。",""]], "ko": "나는 이 방이 아주 마음에 든다." } }],
-        "grammar": [{ "pattern": "虽然A，但是B", "meaningKo": "A이긴 하지만 B", "note": "말하는 사람의 무게는 B에 있다.",
-                      "example": { "zh": "虽然很贵，但是很好吃。", "words": [["虽然","suīrán"],["很","hěn"],["贵","guì"],["，",""],["但是","dànshì"],["很","hěn"],["好吃","hǎochī"],["。",""]], "ko": "비싸긴 하지만 맛있다." } }]
+        "vocab": [{ "hanzi": "满意", "pinyin": "mǎnyì", "partOfSpeech": "형용사", "meaningKo": "만족하다" }],
+        "grammar": [{ "pattern": "虽然A，但是B", "note": "‘A이긴 하지만 B’. 말하는 사람의 무게는 B에 있다. \"虽然没有花园，但是离河边很近\"." }]
       }
     }
   ]
@@ -74,7 +70,8 @@ $PY tools/auto_enrich.py H31006 --listening-work ~/hsk-listening-work --reading-
 
 - **정답 근거(basis)**: `quote`는 답을 가리키는 원문 구절을 **한 문장 안에서** 그대로 옮긴다(2부분은 빈칸에 정답을 채운 문장에서). `note`는 그 구절이 왜 답이 되는지 단서(접속사의 무게, 질문·대답 짝, 지시어, 빈칸 자리의 품사, 호응 등)를 1~3문장으로.
 - **오답 이유(distractors)**: 3부분은 나머지 두 보기를 **모두**, 1·2부분은 헷갈리기 쉬운 보기 1~2개를 한 줄씩. 예시 보기는 쓰지 않는다. «지문에 없음», «반대 내용», «빈칸 자리는 형용사인데 동사»처럼 이유가 드러나게.
-- **끊어 읽기(breakdown)**: 문항당 1~2문장(정답 근거 문장 우선). `chunks`를 이으면 화면에 나오는 문장(지문·질문·보기·짝 문장, 2부분은 빈칸 채운 문장)의 일부와 같아야 한다. `role`은 `주어` `술어` `목적어` `관형어` `부사어` `보어` `접속사` `개사구` 중에서. `note`는 구조 요약 한 줄(예: `对 + 대상 + 满意 = '~에 만족하다'`).
-- **단어(vocab)**: 문항당 3~8개. 해당 시험 급수에서 새로 추가되는 어휘를 우선하고, 남는 칸을 다른 핵심어로 채운다. `usage`는 자주 쓰는 짝·호응, `example`은 **새로 지은** 짧은 예문(해당 급수 수준).
-- **문법(grammar)**: 문항당 1~3개, 접속사·구문 패턴 위주(虽然…但是…, 把자문, 被자문, 比 비교문, 결과보어, 방향보어, 一…就…, 越来越, 除了…还… 등). `meaningKo`는 짧은 뜻(내 단어장 카드 뜻 자리), `note`는 설명, `example`은 새 예문.
+- **단어(vocab)**와 **문법(grammar)**은 «듣기» 탭과 같은 형식·기준으로 쓴다(`tools/listening/README.md`, 설계 `docs/superpowers/specs/2026-10-09-hsk-listening-tab-design.md` «해설 기준»). 화면도 듣기와 같은 목록(`ExplainVocab`·`ExplainGrammar`)으로 나온다.
+- **단어(vocab)**: 문항당 3~8개. 해당 시험 급수에서 새로 추가되는 어휘를 본문 등장 순서로 먼저 담고, 남는 칸을 다른 핵심어로 채운다. 칸은 `hanzi`·`pinyin`·`partOfSpeech`·`meaningKo` 넷뿐이다. 용법(`usage`)·예문(`example`)은 쓰지 않는다. 단어장 «HSK3 독해» 카드 예문은 `assemble.py`가 그 단어가 나온 시험 문장에서 따온다.
+- **문법(grammar)**: 문항당 1~3개, 접속사·구문 패턴 위주(虽然…但是…, 把자문, 被자문, 比 비교문, 결과보어, 방향보어, 一…就…, 越来越, 除了…还… 등). 칸은 `pattern`·`note` 둘이다. 짧은 뜻이 있으면 `note` 앞에 `‘뜻’.`으로 쓰고, 이 문항의 문장을 따옴표로 인용해 어떻게 쓰였는지 보인다(듣기 문장 구조와 같은 방식). 따로 지은 예문(`example`)은 쓰지 않는다.
+- 끊어 읽기(`breakdown`)는 쓰지 않는다. 예전 해설 파일에 남은 `breakdown`·`usage`·`example`·문법 `meaningKo`는 `assemble.py`가 공개 데이터에 넣지 않는다(문법 `meaningKo`는 `note` 앞에 `‘뜻’.`으로 옮긴다).
 - 해설은 한국어로, 짧은 문장으로 쓴다.

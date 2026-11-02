@@ -103,21 +103,11 @@ function MineButton({ saved, label, onToggle }) {
   );
 }
 
-function Example({ example }) {
-  return (
-    <div className="readExample">
-      <Ruby words={example.words} />
-      <p className="listenKo">{example.ko}</p>
-    </div>
-  );
-}
-
-// 해설의 단어 목록. 독해 단어에는 용법(usage)·예문(example)이 더 있어 한 줄에 하나씩 넓게 보여줍니다.
+// 해설의 단어 목록(듣기·독해·쓰기 공통): 한자·병음·뜻·품사.
 export function ExplainVocab({ vocab, source }) {
   const mine = useMyVocab();
-  const detailed = vocab.some((word) => word.usage || word.example);
   return (
-    <ul className={`listenVocab${detailed ? ' readVocab' : ''}`}>
+    <ul className="listenVocab">
       {vocab.map((word) => (
         <li key={word.hanzi}>
           <strong>{word.hanzi}</strong>
@@ -129,15 +119,13 @@ export function ExplainVocab({ vocab, source }) {
             label={word.hanzi}
             onToggle={() => mine.toggle(wordEntry(word, source))}
           />
-          {word.usage ? <p className="readUsage">{word.usage}</p> : null}
-          {word.example ? <Example example={word.example} /> : null}
         </li>
       ))}
     </ul>
   );
 }
 
-// 해설의 문장 구조(문법) 목록. 독해 문법에는 짧은 뜻(meaningKo)·예문이 더 있습니다.
+// 해설의 문장 구조(문법) 목록(듣기·독해 공통): 패턴과 설명.
 export function ExplainGrammar({ grammar, source }) {
   const mine = useMyVocab();
   return (
@@ -146,7 +134,6 @@ export function ExplainGrammar({ grammar, source }) {
         <li key={index}>
           <div className="grammarHead">
             <strong>{note.pattern}</strong>
-            {note.meaningKo ? <span className="grammarGloss">{note.meaningKo}</span> : null}
             <MineButton
               saved={mine.has(patternKey(note.pattern))}
               label={note.pattern}
@@ -154,7 +141,6 @@ export function ExplainGrammar({ grammar, source }) {
             />
           </div>
           <p>{note.note}</p>
-          {note.example ? <Example example={note.example} /> : null}
         </li>
       ))}
     </ul>

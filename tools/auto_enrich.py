@@ -236,12 +236,8 @@ def content_words(texts, priority_words=None, limit=VOCAB_LIMIT, lexicon=None):
     return [(word, POS_KO.get(flags.get(word, '')[:1], '단어')) for word in chosen[:limit]]
 
 
-def example_for(word, texts, translations):
-    text = next((text for text in texts if word in text), texts[0])
-    return {'zh': text, 'words': tokenize(text), 'ko': translations.get(text, '')}
-
-
-def vocab_for(texts, translations, detailed, catalog, test_id):
+def vocab_for(texts, translations, catalog, test_id):
+    """듣기·독해 공통 핵심 단어: 한자·병음·품사·뜻."""
     entries = []
     priority_words = catalog.priority_words(test_id)
     for word, detected_part in content_words(
@@ -253,14 +249,12 @@ def vocab_for(texts, translations, detailed, catalog, test_id):
             'partOfSpeech': known.get('partOfSpeech') or detected_part,
             'meaningKo': known.get('meaningKo') or translations.get(word, word),
         }
-        if detailed:
-            entry['usage'] = f'{word}가 쓰인 문장을 함께 확인'
-            entry['example'] = example_for(word, texts, translations)
         entries.append(entry)
     return entries
 
 
-def grammar_for(text, translations, detailed):
+def grammar_for(text):
+    """듣기·독해 공통 문장 구조: 패턴·설명."""
     matched = []
     for needles, pattern, meaning, note in GRAMMAR_RULES:
         if all(needle in text for needle in needles):
@@ -269,23 +263,7 @@ def grammar_for(text, translations, detailed):
             break
     if not matched:
         matched = [('기본 어순', '문맥에 맞게 문장 구성', '주어·술어·목적어와 수식어의 위치를 문맥 속에서 확인합니다.')]
-    entries = []
-    for pattern, meaning, note in matched:
-        entry = {'pattern': pattern, 'note': note}
-        if detailed:
-            entry['meaningKo'] = meaning
-            entry['example'] = {'zh': text, 'words': tokenize(text), 'ko': translations.get(text, '')}
-        entries.append(entry)
-    return entries
-
-
-def breakdown_for(quote):
-    if '，' in quote:
-        head, tail = quote.split('，', 1)
-        chunks = [{'text': head + '，', 'role': '부사어'}, {'text': tail, 'role': '술어'}]
-    else:
-        chunks = [{'text': quote, 'role': '술어'}]
-    return [{'chunks': chunks, 'note': '정답 판단에 필요한 핵심 문장 구조를 확인합니다.'}]
+    return [{'pattern': pattern, 'note': note} for pattern, _meaning, note in matched]
 
 
 def listening_source_texts(item):
@@ -339,7 +317,7 @@ def write_listening(test_id, work, translator, catalog, vocab_only=False):
         translations = translator.translate(strings)
         for note in data['items']:
             note['vocab'] = vocab_for(
-                listening_note_texts(note), translations, detailed=False,
+                listening_note_texts(note), translations,
                 catalog=catalog, test_id=test_id,
             )
         enrich_path.write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding='utf-8')
@@ -356,9 +334,8 @@ def write_listening(test_id, work, translator, catalog, vocab_only=False):
                       for line in item['lines']],
             'statement': None,
             'options': [],
-            'vocab': vocab_for(source_texts, translations, detailed=False,
-                               catalog=catalog, test_id=test_id),
-            'grammar': grammar_for(''.join(source_texts), translations, detailed=False),
+            'vocab': vocab_for(source_texts, translations, catalog=catalog, test_id=test_id),
+            'grammar': grammar_for(''.join(source_texts)),
         }
         if item['part'] == 2:
             text = item['paperStatement']
@@ -479,10 +456,8 @@ def reading_item(item, groups, group_notes, translations, catalog, test_id):
         'basis': {'quote': quote, 'note': note},
         'distractors': [{'label': label, 'note': '정답 문장과 비교하면 문맥 연결이 맞지 않습니다.'}
                         for label in labels[:distractor_count]],
-        'breakdown': breakdown_for(quote),
-        'vocab': vocab_for(source_texts, translations, detailed=True,
-                           catalog=catalog, test_id=test_id),
-        'grammar': grammar_for(quote, translations, detailed=True),
+        'vocab': vocab_for(source_texts, translations, catalog=catalog, test_id=test_id),
+        'grammar': grammar_for(quote),
     }
 
     pair = None
@@ -504,7 +479,7 @@ def update_reading_vocab(base, paper, translations, catalog, test_id):
         for note in data.get('items', []):
             item = next(item for item in paper['items'] if item['no'] == note['no'])
             note['explain']['vocab'] = vocab_for(
-                reading_vocab_texts(item, groups), translations, detailed=True,
+                reading_vocab_texts(item, groups), translations,
                 catalog=catalog, test_id=test_id,
             )
             count += 1

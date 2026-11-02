@@ -114,7 +114,7 @@ function PairDialogue({ item, options }) {
 }
 
 function Explanation({ item, options, source }) {
-  const { basis, distractors, breakdown, vocab, grammar } = item.explain;
+  const { basis, distractors, vocab, grammar } = item.explain;
   const optionOf = (label) => options.find((option) => option.label === label);
   return (
     <section className="listenReveal">
@@ -142,23 +142,6 @@ function Explanation({ item, options, source }) {
           </ul>
         </>
       ) : null}
-
-      <h3>끊어 읽기</h3>
-      <ul className="readBreakdown">
-        {breakdown.map((sentence, index) => (
-          <li key={index}>
-            <div className="readChunks">
-              {sentence.chunks.map((chunk, chunkIndex) => (
-                <span className="readChunk" key={chunkIndex}>
-                  <span className="readChunkText">{chunk.text}</span>
-                  <span className="readChunkRole">{chunk.role}</span>
-                </span>
-              ))}
-            </div>
-            <p>{sentence.note}</p>
-          </li>
-        ))}
-      </ul>
 
       <h3>단어</h3>
       <ExplainVocab vocab={vocab} source={source} />

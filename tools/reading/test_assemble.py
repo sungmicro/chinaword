@@ -4,7 +4,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from assemble import LESSON, build_test, update_vocab
+from assemble import LESSON, build_test, normalize_explain, update_vocab
 
 
 def ex(words, ko):
@@ -129,19 +129,28 @@ class AssembleTest(unittest.TestCase):
         _, problems = self.build()
         self.assertTrue(any('오답 이유' in p for p in problems), problems)
 
-    def test_breakdown_must_come_from_the_item(self):
-        broken = copy.deepcopy(ENRICH_51_60)
-        broken['items'][0]['explain']['breakdown'][0]['chunks'][0]['text'] = '站着'
-        self.write(PAPER, broken, ENRICH_61_70)
-        _, problems = self.build()
-        self.assertTrue(any('끊어 읽기' in p for p in problems), problems)
+    def test_explain_vocab_and_grammar_use_the_listening_format(self):
+        test, problems = self.build()
+        self.assertEqual(problems, [])
+        explain = test['items'][0]['explain']
+        self.assertEqual(sorted(explain), ['basis', 'distractors', 'grammar', 'vocab'])  # 끊어 읽기 없음
+        self.assertEqual(explain['vocab'][0],
+                         {'hanzi': '舒服', 'pinyin': 'shūfu', 'partOfSpeech': '형용사', 'meaningKo': '편안하다'})
+        self.assertEqual(explain['grammar'],
+                         [{'pattern': '很不 + 형용사', 'note': '‘아주 ~하지 않다’. 很 뒤에 不를 붙여 정도를 부정한다.'}])
 
-    def test_vocab_needs_an_example(self):
+    def test_grammar_meaning_is_not_repeated_when_the_note_has_it(self):
+        explain = normalize_explain({'vocab': [], 'grammar': [
+            {'pattern': '一点儿也不', 'meaningKo': '조금도', 'note': '‘조금도’ 아니다.'},
+            {'pattern': '还没', 'note': '아직 ~하지 않았다.'}]})
+        self.assertEqual([g['note'] for g in explain['grammar']], ['‘조금도’ 아니다.', '아직 ~하지 않았다.'])
+
+    def test_vocab_needs_a_meaning(self):
         broken = copy.deepcopy(ENRICH_61_70)
-        del broken['items'][0]['explain']['vocab'][0]['example']
+        del broken['items'][0]['explain']['vocab'][0]['meaningKo']
         self.write(PAPER, ENRICH_51_60, broken)
         _, problems = self.build()
-        self.assertTrue(any('예문' in p for p in problems), problems)
+        self.assertTrue(any('meaningKo' in p for p in problems), problems)
 
     def test_update_vocab_skips_known_words_and_is_idempotent(self):
         test, problems = self.build()
@@ -157,7 +166,7 @@ class AssembleTest(unittest.TestCase):
         entries = {entry['hanzi']: entry for entry in json.loads(first) if entry.get('lesson') == LESSON}
         self.assertEqual(sorted(entries), sorted(['坐', '低', '满意', '房间', '对']))
         self.assertEqual(entries['坐']['exampleZh'], '坐着很不舒服。')  # 시험 문장(빈칸 채움)
-        self.assertEqual(entries['低']['exampleZh'], '这把椅子很舒服。')  # 시험 문장에 없으면 해설 예문
+        self.assertEqual(entries['低']['exampleZh'], '')  # 시험 문장에 없으면 듣기처럼 비워 둔다
         self.assertEqual(entries['坐']['source'], 'HSK3 공식 모의고사 T1 독해 51번')
 
         update_vocab([test], repo)

@@ -7,6 +7,9 @@ public/reading/<회차>.json을 만들고, 독해 핵심 단어를 단어장(voc
 
 쓰기 전에 해설을 기계적으로 검사한다. 단어 묶음의 한자를 이으면 원문과 같아야 하고(2부분은 빈칸 단어를
 '（）'로 바꾼 결과), 해설 칸이 기준 개수대로 차 있어야 한다. pypinyin과 음절이 다른 단어는 목록으로만 보여준다.
+
+해설의 단어·문법은 듣기 탭과 같은 형식으로 맞춰 쓴다(normalize_explain): 단어는 한자·병음·품사·뜻만,
+문법은 패턴·설명만 남긴다. 예전 해설 파일의 끊어 읽기(breakdown)·용법(usage)·예문(example)은 버린다.
 """
 import argparse
 import json
@@ -20,7 +23,6 @@ PART_GUIDES = {
     2: '빈칸에 알맞은 단어 고르기',
     3: '짧은 글을 읽고 질문에 답하기',
 }
-ROLES = {'주어', '술어', '목적어', '관형어', '부사어', '보어', '접속사', '개사구'}
 BLANK = '（）'
 
 
@@ -41,11 +43,29 @@ def check_annotated(annotated, source_text, where, problems, reading_diffs):
         problems.append(f'{where}: 해석 없음')
 
 
-def check_example(example, where, problems, reading_diffs):
-    if not example or not example.get('zh') or not example.get('words') or not example.get('ko'):
-        problems.append(f'{where}: 예문(zh·words·ko) 없음')
-        return
-    check_words(example['words'], example['zh'], where, problems, reading_diffs)
+VOCAB_KEYS = ('hanzi', 'pinyin', 'partOfSpeech', 'meaningKo')
+
+
+def grammar_note(entry):
+    """예전 독해 문법의 짧은 뜻(meaningKo)은 듣기처럼 설명 앞에 ‘뜻’으로 붙인다."""
+    note = (entry.get('note') or '').strip()
+    meaning = (entry.get('meaningKo') or '').strip()
+    if not meaning or meaning in note:
+        return note
+    return f'‘{meaning}’. {note}' if note else f'‘{meaning}’.'
+
+
+def normalize_explain(explain):
+    """해설의 단어·문법을 듣기 탭 형식으로 맞춘다. 정답 근거·오답 이유는 그대로 둔다."""
+    if not explain:
+        return explain
+    return {
+        'basis': explain.get('basis'),
+        'distractors': explain.get('distractors') or [],
+        'vocab': [{key: entry.get(key, '') for key in VOCAB_KEYS} for entry in explain.get('vocab') or []],
+        'grammar': [{'pattern': entry.get('pattern', ''), 'note': grammar_note(entry)}
+                    for entry in explain.get('grammar') or []],
+    }
 
 
 def build_groups(paper_groups, notes, test_id, problems, reading_diffs):
@@ -133,41 +153,25 @@ def check_explain(explain, part, answer, labels, texts, where, problems, reading
     if part in (1, 2) and not 1 <= len(distractors) <= 2:
         problems.append(f'{where}: 1·2부분 오답 이유는 1~2개 ({len(distractors)}개)')
 
-    breakdown = explain.get('breakdown') or []
-    if not 1 <= len(breakdown) <= 2:
-        problems.append(f'{where}: 끊어 읽기는 1~2문장 ({len(breakdown)}개)')
-    for sentence in breakdown:
-        chunks = sentence.get('chunks') or []
-        text = ''.join(chunk.get('text', '') for chunk in chunks)
-        if not chunks or not any(text in t for t in texts):
-            problems.append(f'{where}: 끊어 읽기 문장이 문항 글에 없음: {text}')
-        roles = [chunk.get('role') for chunk in chunks if chunk.get('role') not in ROLES]
-        if roles:
-            problems.append(f'{where}: 끊어 읽기 성분 이름이 목록 밖 {roles}')
-        if not sentence.get('note'):
-            problems.append(f'{where}: 끊어 읽기 요약(note) 없음')
-
     vocab = explain.get('vocab') or []
     if not 3 <= len(vocab) <= 8:
         problems.append(f'{where}: 단어는 3~8개 ({len(vocab)}개)')
     for entry in vocab:
         here = f'{where} 단어 {entry.get("hanzi")}'
-        missing = [key for key in ('hanzi', 'pinyin', 'partOfSpeech', 'meaningKo', 'usage') if not entry.get(key)]
+        missing = [key for key in VOCAB_KEYS if not entry.get(key)]
         if missing:
             problems.append(f'{here}: {missing} 없음')
         if entry.get('hanzi') and entry.get('pinyin'):
             check_words([[entry['hanzi'], entry['pinyin']]], entry['hanzi'], here, problems, reading_diffs)
-        check_example(entry.get('example'), f'{here} 예문', problems, reading_diffs)
 
     grammar = explain.get('grammar') or []
     if not 1 <= len(grammar) <= 3:
         problems.append(f'{where}: 문법은 1~3개 ({len(grammar)}개)')
     for entry in grammar:
         here = f'{where} 문법 {entry.get("pattern")}'
-        missing = [key for key in ('pattern', 'meaningKo', 'note') if not entry.get(key)]
+        missing = [key for key in ('pattern', 'note') if not entry.get(key)]
         if missing:
             problems.append(f'{here}: {missing} 없음')
-        check_example(entry.get('example'), f'{here} 예문', problems, reading_diffs)
 
 
 def build_item(source, note, paper_group, group_options, where, problems, reading_diffs):
@@ -198,7 +202,8 @@ def build_item(source, note, paper_group, group_options, where, problems, readin
     texts += [join_words(option['words']) for option in visible]
     example = paper_group['example'] if paper_group else None
     labels = [option['label'] for option in visible if option['label'] != example]
-    check_explain(note.get('explain'), part, answer, labels, texts, where, problems, reading_diffs)
+    explain = normalize_explain(note.get('explain'))
+    check_explain(explain, part, answer, labels, texts, where, problems, reading_diffs)
 
     return {
         'no': source['no'],
@@ -209,7 +214,7 @@ def build_item(source, note, paper_group, group_options, where, problems, readin
         'question': question,
         'options': options,
         'pair': pair,
-        'explain': note.get('explain'),
+        'explain': explain,
     }
 
 
@@ -241,7 +246,7 @@ def build_test(test_id, work, problems, reading_diffs):
 
 
 def example_for(word, item, group_options):
-    """단어가 나온 시험 문장(빈칸 채움·질문·보기)을 예문으로, 없으면 해설 예문을 쓴다."""
+    """단어가 나온 시험 문장(빈칸 채움·질문·보기)을 예문으로 쓴다(듣기와 같이, 없으면 빈칸)."""
     sentences = list(item['lines'])
     if item['question']:
         sentences.append(item['question'])
@@ -251,8 +256,7 @@ def example_for(word, item, group_options):
         text = join_words(sentence['words'])
         if word['hanzi'] in text:
             return text, words_to_pinyin(sentence['words']), sentence['ko']
-    example = word['example']
-    return example['zh'], words_to_pinyin(example['words']), example['ko']
+    return '', '', ''
 
 
 def update_vocab(tests, repo):
