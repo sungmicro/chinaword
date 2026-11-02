@@ -27,6 +27,8 @@ $PY tools/auto_enrich.py H31006 --listening-work ~/hsk-listening-work --reading-
 - 기존 병음·해석·문법을 유지하고 전체 회차의 핵심 단어만 다시 만들 때는 모든 회차를 넘기고 `--vocab-only --repo .`를 붙인다. 작업 폴더와 `public/reading`의 단어만 함께 갱신된다.
 - `assemble.py`로 실제로 쓸 때는 **모든 회차**를 넘긴다. 회차 목록과 단어장 «HSK3 독해» 단원을 매번 새로 쓰기 때문이다.
 - `--check`는 검사만 하고 파일을 쓰지 않는다. 해설을 쓰는 동안에는 이것만 돌린다.
+- **핵심 단어 보정 사전** `tools/vocab_fixes.json`: 자동 단어 중 한글 뜻이 없는 것(뜻 = 한자), 품사를 못 정한 것(«단어»), 두 단어가 붙거나 잘못 끊긴 토큰(比较忙, 铅笔画)은 여기에 병음·품사·뜻(`words`), 나누기(`split`·`parts`), 문항별 보정(`items`)으로 적는다. `auto_enrich.py`와 `assemble.py`가 이 사전을 거치고, `assemble.py` 검사는 **뜻에 한글이 없거나 품사가 «단어»인 단어를 막는다.** 원본 작업 폴더의 해설 파일은 고치지 않는다. 사전을 고친 뒤에는 `$PY tools/vocab_fixes.py --repo . --apply-listening`(듣기 공개 데이터·«HSK3 듣기» 단원)과 독해 `assemble.py`(모든 회차)를 차례로 돌린다. `$PY tools/vocab_fixes.py --repo .`는 공개 데이터에 남은 문제 개수만 보여 준다.
+- 단어장 카드 id는 다시 만들어도 같은 단어면 그대로 둔다(오답노트가 id로 기록된다). 새 단어만 다음 번호를 받는다.
 - `--show-readings` 목록은 pypinyin과 음절이 다른 단어다. 다음자(还 hái/huán, 长 cháng/zhǎng, 得 de/děi 등)와 不·一 변조는 맞는 경우가 많으니 문맥을 보고 틀린 것만 고친다.
 
 ## 해설 쓰기

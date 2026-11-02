@@ -13,6 +13,7 @@ from auto_enrich import (
     listening_note_texts,
     sync_public_listening_vocab,
     sync_public_reading_vocab,
+    vocab_for,
 )
 
 
@@ -69,6 +70,33 @@ class VocabCatalogTest(unittest.TestCase):
 
         self.assertEqual({'马上'}, catalog.priority_words('H31001'))
         self.assertEqual({'安排'}, catalog.priority_words('H41001'))
+
+
+class VocabForTest(unittest.TestCase):
+    def catalog(self, entries):
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / 'vocab.json'
+            path.write_text(json.dumps(entries, ensure_ascii=False), encoding='utf-8')
+            return VocabCatalog(path)
+
+    def test_meaning_is_never_the_hanzi_itself(self):
+        # 사전에 없고 번역도 한자를 그대로 돌려준 토큰: 예전에는 meaningKo='门票'로 공개됐다
+        catalog = self.catalog([{'level': 'HSK3', 'lesson': 'HSK3 추가 300', 'hanzi': '桌子', 'meaningKo': '탁자',
+                                 'partOfSpeech': '명사', 'pinyin': 'zhuōzi'}])
+        vocab = vocab_for(['音乐会的门票我放在桌子上了。'], {'门票': '门票', '音乐会': '콘서트'}, catalog, 'H39999')
+        for entry in vocab:
+            self.assertNotEqual(entry['meaningKo'], entry['hanzi'])
+            self.assertNotEqual(entry['partOfSpeech'], '단어')
+        self.assertEqual(next(e for e in vocab if e['hanzi'] == '桌子')['meaningKo'], '탁자')
+
+    def test_fix_table_corrects_names_and_glued_words(self):
+        catalog = self.catalog([])
+        vocab = vocab_for(['因为工作比较忙，小李最近瘦了很多。'], {}, catalog, 'H31006', where='reading/H31006/52')
+        by_hanzi = {entry['hanzi']: entry for entry in vocab}
+        self.assertNotIn('比较忙', by_hanzi)
+        self.assertNotIn('很多', by_hanzi)
+        if '李' in by_hanzi:
+            self.assertEqual(by_hanzi['李']['meaningKo'], '리(李, 성씨)')
 
 
 class PublicSyncTest(unittest.TestCase):

@@ -175,6 +175,23 @@ class AssembleTest(unittest.TestCase):
         _, problems = self.build()
         self.assertTrue(any('meaningKo' in p for p in problems), problems)
 
+    def test_vocab_meaning_must_be_korean_and_part_not_bare_word(self):
+        broken = copy.deepcopy(ENRICH_61_70)
+        broken['items'][0]['explain']['vocab'][1]['meaningKo'] = '房间'  # 뜻 자리에 한자 그대로
+        broken['items'][0]['explain']['vocab'][2]['partOfSpeech'] = '단어'
+        self.write(PAPER, ENRICH_51_60, broken)
+        _, problems = self.build()
+        self.assertTrue(any('房间' in p and '한글' in p for p in problems), problems)
+        self.assertTrue(any('对' in p and '단어' in p for p in problems), problems)
+
+    def test_vocab_fix_table_is_applied(self):
+        explain = normalize_explain({'vocab': [
+            {'hanzi': '比较忙', 'pinyin': 'bǐjiàománg', 'partOfSpeech': '단어', 'meaningKo': '比较忙'},
+            {'hanzi': '李', 'pinyin': 'lǐ', 'partOfSpeech': '명사', 'meaningKo': '李'}], 'grammar': []},
+            where='reading/H31006/52')
+        self.assertEqual([(v['hanzi'], v['meaningKo']) for v in explain['vocab']],
+                         [('比较', '비교적, 꽤'), ('忙', '바쁘다'), ('李', '리(李, 성씨)')])
+
     def test_update_vocab_skips_known_words_and_is_idempotent(self):
         test, problems = self.build()
         self.assertEqual(problems, [])
@@ -194,6 +211,23 @@ class AssembleTest(unittest.TestCase):
 
         update_vocab([test], repo)
         self.assertEqual(vocab_path.read_text(encoding='utf-8'), first)
+
+    def test_update_vocab_keeps_card_ids_of_known_words(self):
+        # 오답노트는 카드 id로 기록되므로, 다시 만들어도 같은 단어는 같은 id를 쓰고 새 단어만 다음 번호를 받는다.
+        test, _ = self.build()
+        repo = self.work / 'repo'
+        (repo / 'src' / 'data').mkdir(parents=True)
+        vocab_path = repo / 'src' / 'data' / 'vocab.json'
+        vocab_path.write_text(json.dumps([
+            {'id': 'HSK3R-007', 'lesson': LESSON, 'hanzi': '房间'},
+            {'id': 'HSK3R-009', 'lesson': LESSON, 'hanzi': '사라진 단어'},
+        ], ensure_ascii=False), encoding='utf-8')
+        update_vocab([test], repo)
+        ids = {entry['hanzi']: entry['id'] for entry in json.loads(vocab_path.read_text(encoding='utf-8'))}
+        self.assertEqual(ids['房间'], 'HSK3R-007')
+        self.assertNotIn('사라진 단어', ids)
+        self.assertEqual(sorted(i for h, i in ids.items() if h != '房间'),
+                         ['HSK3R-010', 'HSK3R-011', 'HSK3R-012', 'HSK3R-013', 'HSK3R-014'])
 
 
 if __name__ == '__main__':

@@ -18,6 +18,8 @@ import jieba
 import jieba.posseg as posseg
 from pypinyin import Style, lazy_pinyin
 
+from vocab_fixes import BANNED_PART, fix_vocab, has_hangul
+
 
 PUNCT = set('，。！？：；、“”‘’（）《》…—,.?!:;()[] ')
 VOCAB_LIMIT = 8
@@ -233,24 +235,32 @@ def content_words(texts, priority_words=None, limit=VOCAB_LIMIT, lexicon=None):
                     break
             if len(chosen) >= 3:
                 break
-    return [(word, POS_KO.get(flags.get(word, '')[:1], '단어')) for word in chosen[:limit]]
+    return [(word, POS_KO.get(flags.get(word, '')[:1], '')) for word in chosen[:limit]]
 
 
-def vocab_for(texts, translations, catalog, test_id):
-    """듣기·독해 공통 핵심 단어: 한자·병음·품사·뜻."""
+def vocab_for(texts, translations, catalog, test_id, where=None):
+    """듣기·독해 공통 핵심 단어: 한자·병음·품사·뜻.
+
+    뜻은 단어장의 한글 뜻, 없으면 번역의 한글 뜻을 쓴다. 둘 다 한글이 없으면 한자를 뜻 자리에 넣지 않고
+    비워 둔다(예전에는 «뜻 = 한자»가 그대로 공개됐다). 품사를 못 정하면 «단어» 대신 비워 둔다.
+    마지막에 보정 사전(tools/vocab_fixes.json)을 거친다. 그래도 빈 칸이 남으면 assemble.py 검사가 막으니,
+    그 단어를 vocab_fixes.json에 더한다.
+    """
     entries = []
     priority_words = catalog.priority_words(test_id)
     for word, detected_part in content_words(
             texts, priority_words=priority_words, lexicon=catalog.official_words):
         known = catalog.get(word)
+        known_part = known.get('partOfSpeech') if known.get('partOfSpeech') != BANNED_PART else ''
+        meaning = next((text for text in (known.get('meaningKo'), translations.get(word)) if has_hangul(text)), '')
         entry = {
             'hanzi': word,
             'pinyin': known.get('pinyin') or ''.join(lazy_pinyin(word, style=Style.TONE)),
-            'partOfSpeech': known.get('partOfSpeech') or detected_part,
-            'meaningKo': known.get('meaningKo') or translations.get(word, word),
+            'partOfSpeech': known_part or detected_part,
+            'meaningKo': meaning,
         }
         entries.append(entry)
-    return entries
+    return fix_vocab(entries, where)
 
 
 def grammar_for(text):
@@ -318,7 +328,7 @@ def write_listening(test_id, work, translator, catalog, vocab_only=False):
         for note in data['items']:
             note['vocab'] = vocab_for(
                 listening_note_texts(note), translations,
-                catalog=catalog, test_id=test_id,
+                catalog=catalog, test_id=test_id, where=f'listening/{test_id}/{note["no"]}',
             )
         enrich_path.write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding='utf-8')
         print(f'{test_id}: 듣기 핵심 단어 {len(data["items"])}개 문항 갱신')
@@ -334,7 +344,8 @@ def write_listening(test_id, work, translator, catalog, vocab_only=False):
                       for line in item['lines']],
             'statement': None,
             'options': [],
-            'vocab': vocab_for(source_texts, translations, catalog=catalog, test_id=test_id),
+            'vocab': vocab_for(source_texts, translations, catalog=catalog, test_id=test_id,
+                               where=f'listening/{test_id}/{item["no"]}'),
             'grammar': grammar_for(''.join(source_texts)),
         }
         if item['part'] == 2:
@@ -357,7 +368,7 @@ def sync_public_listening_vocab(test_id, work, repo):
     path = Path(repo).expanduser() / 'public/listening' / f'{test_id}.json'
     data = json.loads(path.read_text(encoding='utf-8'))
     for item in data['items']:
-        item['vocab'] = notes[item['no']]['vocab']
+        item['vocab'] = fix_vocab(notes[item['no']]['vocab'], f'listening/{test_id}/{item["no"]}')
     path.write_text(json.dumps(data, ensure_ascii=False, separators=(',', ':')), encoding='utf-8')
 
 
@@ -456,7 +467,8 @@ def reading_item(item, groups, group_notes, translations, catalog, test_id):
         'basis': {'quote': quote, 'note': note},
         'distractors': [{'label': label, 'note': '정답 문장과 비교하면 문맥 연결이 맞지 않습니다.'}
                         for label in labels[:distractor_count]],
-        'vocab': vocab_for(source_texts, translations, catalog=catalog, test_id=test_id),
+        'vocab': vocab_for(source_texts, translations, catalog=catalog, test_id=test_id,
+                           where=f'reading/{test_id}/{item["no"]}'),
         'grammar': grammar_for(quote),
     }
 
@@ -480,7 +492,7 @@ def update_reading_vocab(base, paper, translations, catalog, test_id):
             item = next(item for item in paper['items'] if item['no'] == note['no'])
             note['explain']['vocab'] = vocab_for(
                 reading_vocab_texts(item, groups), translations,
-                catalog=catalog, test_id=test_id,
+                catalog=catalog, test_id=test_id, where=f'reading/{test_id}/{note["no"]}',
             )
             count += 1
         path.write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding='utf-8')
@@ -495,7 +507,7 @@ def sync_public_reading_vocab(test_id, work, repo):
     path = Path(repo).expanduser() / 'public/reading' / f'{test_id}.json'
     data = json.loads(path.read_text(encoding='utf-8'))
     for item in data['items']:
-        item['explain']['vocab'] = notes[item['no']]['explain']['vocab']
+        item['explain']['vocab'] = fix_vocab(notes[item['no']]['explain']['vocab'], f'reading/{test_id}/{item["no"]}')
     path.write_text(json.dumps(data, ensure_ascii=False, separators=(',', ':')), encoding='utf-8')
 
 

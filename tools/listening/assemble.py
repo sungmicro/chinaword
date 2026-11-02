@@ -3,17 +3,23 @@
 앱이 읽는 public/listening/<회차>.json을 만들고, 듣기 핵심 단어를 단어장(vocab.json)에 넣는다.
 
   assemble.py H31001 H31002 ... --work ~/hsk-listening-work --repo .
+  assemble.py H31001 --work ~/hsk-listening-work --repo . --check   # 검사만, 파일을 쓰지 않음
 
 먼저 해설을 기계적으로 검사한다. 단어 묶음의 한자를 이으면 원문과 같아야 하고,
 pypinyin과 음절이 다른 단어는 목록으로 보여준다(다음자는 사람이 맞는지 본다).
+핵심 단어는 tools/vocab_fixes.json 보정을 거친 뒤, 뜻에 한글이 있는지·품사가 «단어»가 아닌지 검사한다.
 """
 import argparse
 import json
 import re
+import sys
 import unicodedata
 from pathlib import Path
 
 from pypinyin import Style, lazy_pinyin
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+from vocab_fixes import fix_vocab, vocab_problems  # noqa: E402  tools/vocab_fixes.py
 
 LESSON = 'HSK3 듣기'
 PART_GUIDES = {
@@ -73,8 +79,12 @@ def build_test(test_id, work, problems, reading_diffs):
         if len(note['lines']) != len(source['lines']):
             problems.append(f'{where}: 대본 줄 수가 다름 ({len(source["lines"])} vs {len(note["lines"])})')
             continue
-        if not 3 <= len(note.get('vocab') or []) <= 8:
-            problems.append(f'{where}: 핵심 단어는 3~8개 ({len(note.get("vocab") or [])}개)')
+        # 핵심 단어는 보정 사전(tools/vocab_fixes.json)을 거친다: 뜻에 한글 필수, 품사 «단어» 금지.
+        vocab = fix_vocab(note.get('vocab'), f'listening/{test_id}/{no}')
+        if not 3 <= len(vocab) <= 8:
+            problems.append(f'{where}: 핵심 단어는 3~8개 ({len(vocab)}개)')
+        for word in vocab:
+            problems.extend(vocab_problems(word, where))
 
         script = []
         for index, (line, annotated) in enumerate(zip(source['lines'], note['lines'])):
@@ -107,7 +117,7 @@ def build_test(test_id, work, problems, reading_diffs):
             'choices': choices,
             'answer': source['answer'],
             'script': script,
-            'vocab': note['vocab'],
+            'vocab': vocab,
             'grammar': note['grammar'],
         })
 
@@ -148,6 +158,9 @@ def update_vocab(tests, repo):
     path = repo / 'src' / 'data' / 'vocab.json'
     vocab = json.loads(path.read_text(encoding='utf-8'))
     # 다시 돌려도 같은 결과가 나오게 지난번에 넣은 듣기 단어는 지우고 새로 넣는다.
+    # 오답노트가 카드 id로 기록되므로, 지난번에 있던 단어는 같은 id를 다시 쓰고 새 단어만 다음 번호를 받는다.
+    previous = {entry['hanzi']: entry['id'] for entry in vocab if entry.get('lesson') == LESSON}
+    last_no = max((int(entry_id.rsplit('-', 1)[1]) for entry_id in previous.values()), default=0)
     vocab = [entry for entry in vocab if entry.get('lesson') != LESSON]
     known = {entry['hanzi'] for entry in vocab}
     added = []
@@ -158,8 +171,12 @@ def update_vocab(tests, repo):
                     continue
                 known.add(word['hanzi'])
                 zh, py, ko = example_for(word['hanzi'], item)
+                entry_id = previous.get(word['hanzi'])
+                if not entry_id:
+                    last_no += 1
+                    entry_id = f'HSK3L-{last_no:03d}'
                 added.append({
-                    'id': f'HSK3L-{len(added) + 1:03d}',
+                    'id': entry_id,
                     'level': 'HSK3',
                     'lesson': LESSON,
                     'category': f'{LESSON} {test["id"]}',
@@ -184,6 +201,7 @@ def main():
     parser.add_argument('--work', required=True)
     parser.add_argument('--repo', required=True)
     parser.add_argument('--show-readings', action='store_true', help='pypinyin과 음절이 다른 단어를 모두 보여준다')
+    parser.add_argument('--check', action='store_true', help='검사만 하고 파일을 쓰지 않는다')
     args = parser.parse_args()
     work, repo = Path(args.work).expanduser(), Path(args.repo)
 
@@ -200,6 +218,9 @@ def main():
             print('  ! ' + problem)
         print('문제가 있어 파일을 쓰지 않았습니다.')
         return 1
+    if args.check:
+        print('검사 통과 (--check라 파일은 쓰지 않았습니다).')
+        return 0
 
     public = repo / 'public' / 'listening'
     for test in tests:

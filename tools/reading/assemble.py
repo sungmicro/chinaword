@@ -14,9 +14,13 @@ public/reading/<회차>.json을 만들고, 독해 핵심 단어를 단어장(voc
 """
 import argparse
 import json
+import sys
 from pathlib import Path
 
 from hsktext import check_words, join_words, words_to_pinyin
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+from vocab_fixes import fix_vocab, vocab_problems  # noqa: E402  tools/vocab_fixes.py
 
 LESSON = 'HSK3 독해'
 PART_GUIDES = {
@@ -86,10 +90,11 @@ def normalize_grammar(entry, quote, texts):
     return grammar
 
 
-def normalize_explain(explain, texts=()):
+def normalize_explain(explain, texts=(), where=None):
     """해설의 단어·문법을 듣기 탭 형식으로 맞춘다. 정답 근거·오답 이유는 그대로 둔다.
 
     texts: 그 문항 화면에 나오는 문장들. 문법 예문이 지문을 되풀이한 것인지 가릴 때 쓴다.
+    where: 'reading/H31006/52' 같은 문항 주소. 단어 보정 사전(tools/vocab_fixes.json)의 문항별 보정에 쓴다.
     """
     if not explain:
         return explain
@@ -97,7 +102,7 @@ def normalize_explain(explain, texts=()):
     return {
         'basis': explain.get('basis'),
         'distractors': explain.get('distractors') or [],
-        'vocab': [{key: entry.get(key, '') for key in VOCAB_KEYS} for entry in explain.get('vocab') or []],
+        'vocab': fix_vocab([{key: entry.get(key, '') for key in VOCAB_KEYS} for entry in explain.get('vocab') or []], where),
         'grammar': [normalize_grammar(entry, quote, texts) for entry in explain.get('grammar') or []],
     }
 
@@ -197,6 +202,7 @@ def check_explain(explain, part, answer, labels, texts, where, problems, reading
             problems.append(f'{here}: {missing} 없음')
         if entry.get('hanzi') and entry.get('pinyin'):
             check_words([[entry['hanzi'], entry['pinyin']]], entry['hanzi'], here, problems, reading_diffs)
+        problems.extend(vocab_problems(entry, where))
 
     grammar = explain.get('grammar') or []
     if not 1 <= len(grammar) <= 3:
@@ -238,7 +244,7 @@ def build_item(source, note, paper_group, group_options, where, problems, readin
     texts += [join_words(option['words']) for option in visible]
     example = paper_group['example'] if paper_group else None
     labels = [option['label'] for option in visible if option['label'] != example]
-    explain = normalize_explain(note.get('explain'), texts)
+    explain = normalize_explain(note.get('explain'), texts, f'reading/{where.split()[0]}/{source["no"]}')
     check_explain(explain, part, answer, labels, texts, where, problems, reading_diffs)
 
     return {
@@ -299,6 +305,9 @@ def update_vocab(tests, repo):
     path = repo / 'src' / 'data' / 'vocab.json'
     vocab = json.loads(path.read_text(encoding='utf-8'))
     # 다시 돌려도 같은 결과가 나오게 지난번에 넣은 독해 단어는 지우고 새로 넣는다.
+    # 오답노트가 카드 id로 기록되므로, 지난번에 있던 단어는 같은 id를 다시 쓰고 새 단어만 다음 번호를 받는다.
+    previous = {entry['hanzi']: entry['id'] for entry in vocab if entry.get('lesson') == LESSON}
+    last_no = max((int(entry_id.rsplit('-', 1)[1]) for entry_id in previous.values()), default=0)
     vocab = [entry for entry in vocab if entry.get('lesson') != LESSON]
     known = {entry['hanzi'] for entry in vocab}
     added = []
@@ -310,8 +319,12 @@ def update_vocab(tests, repo):
                     continue
                 known.add(word['hanzi'])
                 zh, py, ko = example_for(word, item, options_by_group.get(item['group'], []))
+                entry_id = previous.get(word['hanzi'])
+                if not entry_id:
+                    last_no += 1
+                    entry_id = f'HSK3R-{last_no:03d}'
                 added.append({
-                    'id': f'HSK3R-{len(added) + 1:03d}',
+                    'id': entry_id,
                     'level': 'HSK3',
                     'lesson': LESSON,
                     'category': f'{LESSON} {test["id"]}',

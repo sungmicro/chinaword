@@ -5,8 +5,9 @@ import { STUDY_GROUP_OPTIONS, matchesStudyGroup, normalizeStudyGroup } from './l
 
 test('그룹은 명시된 단원만 포함하며 실제 데이터 합계와 일치한다', () => {
   assert.deepEqual(STUDY_GROUP_OPTIONS, ['전체', 'HSK1&2', 'HSK3', '교재1']);
-  assert.equal(vocab.length, 2020);
-  for (const [group, count] of [['전체', 2020], ['HSK1&2', 425], ['HSK3', 1009], ['교재1', 586]]) {
+  // 2026-11-02: 듣기·독해 단어 보정(tools/vocab_fixes.json)으로 붙은 토큰(很多·一斤 등)을 나눠 다른 단원과 겹친 50개가 빠졌다.
+  assert.equal(vocab.length, 1970);
+  for (const [group, count] of [['전체', 1970], ['HSK1&2', 425], ['HSK3', 959], ['교재1', 586]]) {
     assert.equal(vocab.filter((item) => matchesStudyGroup(item, group)).length, count);
   }
   assert.equal(matchesStudyGroup({ lesson: 'Lesson 8' }, '교재1'), true);
