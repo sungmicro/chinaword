@@ -137,7 +137,30 @@ class AssembleTest(unittest.TestCase):
         self.assertEqual(explain['vocab'][0],
                          {'hanzi': '舒服', 'pinyin': 'shūfu', 'partOfSpeech': '형용사', 'meaningKo': '편안하다'})
         self.assertEqual(explain['grammar'],
-                         [{'pattern': '很不 + 형용사', 'note': '‘아주 ~하지 않다’. 很 뒤에 不를 붙여 정도를 부정한다.'}])
+                         [{'pattern': '很不 + 형용사', 'note': '‘아주 ~하지 않다’. 很 뒤에 不를 붙여 정도를 부정한다.',
+                           'example': EXAMPLE}])  # 사람이 새로 지은 문법 예문은 남긴다
+
+    def test_grammar_example_is_optional(self):
+        explain = normalize_explain({'vocab': [], 'grammar': [{'pattern': '还没', 'note': '아직 ~하지 않았다.'}]})
+        self.assertEqual(explain['grammar'], [{'pattern': '还没', 'note': '아직 ~하지 않았다.'}])
+
+    def test_grammar_example_repeating_the_item_text_is_dropped(self):
+        # auto_enrich가 넣던 예문: 정답 근거 인용을 그대로 되풀이하거나 지문 문장을 그대로 가져온 것
+        quote = ex([['我', 'wǒ'], ['对', 'duì'], ['这儿', 'zhèr'], ['很', 'hěn'], ['满意', 'mǎnyì']], '나는 여기가 아주 마음에 든다.')
+        passage = ex([['房间', 'fángjiān'], ['很', 'hěn'], ['大', 'dà'], ['。', '']], '방이 크다.')
+        auto = copy.deepcopy(ENRICH_61_70)
+        auto['items'][0]['explain']['grammar'] = [dict(GRAMMAR, example=quote), dict(GRAMMAR, pattern='很 + 형용사', example=passage)]
+        self.write(PAPER, ENRICH_51_60, auto)
+        test, problems = self.build()
+        self.assertEqual(problems, [])
+        self.assertTrue(all('example' not in g for g in test['items'][1]['explain']['grammar']))
+
+    def test_grammar_example_must_be_complete(self):
+        broken = copy.deepcopy(ENRICH_51_60)
+        broken['items'][0]['explain']['grammar'][0] = dict(GRAMMAR, example=dict(EXAMPLE, ko=''))
+        self.write(PAPER, broken, ENRICH_61_70)
+        _, problems = self.build()
+        self.assertTrue(any('문법' in p and '예문' in p for p in problems), problems)
 
     def test_grammar_meaning_is_not_repeated_when_the_note_has_it(self):
         explain = normalize_explain({'vocab': [], 'grammar': [

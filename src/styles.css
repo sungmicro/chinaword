@@ -1474,6 +1474,25 @@ code {
   line-height: 1.5;
 }
 
+/* 문장 구조 카드 안의 새 예문 (독해 H31001~H31005) */
+.grammarExample {
+  margin-top: 8px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.grammarExample .rubyHanzi,
+.grammarExample .rubyPunct {
+  font-size: 1.02rem;
+}
+
+.listenGrammar .grammarExample .listenKo {
+  margin-top: 2px;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
 /* 해설의 «＋ 담기» (내 단어장) */
 .mineButton {
   margin-left: auto;

@@ -32,7 +32,7 @@ function toneless(pinyin) {
 export const wordKey = (hanzi, pinyin) => `word:${hanzi}:${toneless(pinyin)}`;
 export const patternKey = (pattern) => `pattern:${pattern}`;
 
-// 해설의 단어 하나를 담는 순간 그대로 저장합니다. 독해 단어에는 용법·예문이 있고 듣기 단어에는 없습니다.
+// 해설의 단어 하나를 담는 순간 그대로 저장합니다. 듣기·독해·쓰기 모두 한자·병음·뜻·품사만 있고 용법·예문 칸은 비웁니다.
 export function wordEntry(word, source, now = new Date()) {
   return {
     key: wordKey(word.hanzi, word.pinyin),
@@ -41,13 +41,27 @@ export function wordEntry(word, source, now = new Date()) {
     pinyin: word.pinyin ?? '',
     meaningKo: word.meaningKo ?? '',
     partOfSpeech: word.partOfSpeech ?? '',
-    note: word.usage ?? '',
-    exampleZh: word.example?.zh ?? '',
-    examplePinyin: wordsToPinyin(word.example?.words),
-    exampleKo: word.example?.ko ?? '',
+    note: '',
+    exampleZh: '',
+    examplePinyin: '',
+    exampleKo: '',
     source,
     addedAt: now.toISOString()
   };
+}
+
+// 2026-11-02 전 독해 해설은 단어마다 자동 용법 «<한자>가 쓰인 문장을 함께 확인»과 지문에서 따온 예문을 달았고,
+// 담을 때 note·example 칸에 그대로 저장됐습니다. 독해 출처(«<회차> 독해 <번호>번»)의 단어이고 note가 그 단어의
+// 자동 문구와 정확히 같을 때만 note와 함께 저장된 예문을 비웁니다. 그 밖의 메모·패턴·듣기 단어는 그대로 둡니다.
+export const autoReadingUsage = (hanzi) => `${hanzi}가 쓰인 문장을 함께 확인`;
+const READING_SOURCE = / 독해 \d+번$/;
+
+export function dropAutoReadingUsage(entry) {
+  const auto =
+    entry.kind === 'word' &&
+    READING_SOURCE.test(String(entry.source ?? '')) &&
+    String(entry.note ?? '').trim() === autoReadingUsage(entry.hanzi);
+  return auto ? { ...entry, note: '', exampleZh: '', examplePinyin: '', exampleKo: '' } : entry;
 }
 
 // 문법(문장 구조) 하나. 듣기 문장 구조에는 짧은 뜻이 없어 설명 전체를 뜻 자리에 씁니다.
@@ -109,7 +123,12 @@ let current = null;
 const listeners = new Set();
 
 export function loadMine() {
-  if (current === null) current = sanitize(readJson(MINE_KEY, {}));
+  if (current === null) {
+    const saved = sanitize(readJson(MINE_KEY, {}));
+    current = saved.map(dropAutoReadingUsage);
+    // 지운 것이 있으면 한 번 저장해 둡니다(다음부터는 바꿀 것이 없어 쓰지 않습니다).
+    if (current.some((entry, index) => entry !== saved[index])) writeJson(MINE_KEY, { version: 1, items: current });
+  }
   return current;
 }
 

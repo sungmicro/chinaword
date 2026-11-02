@@ -125,7 +125,8 @@ export function ExplainVocab({ vocab, source }) {
   );
 }
 
-// 해설의 문장 구조(문법) 목록(듣기·독해 공통): 패턴과 설명.
+// 해설의 문장 구조(문법) 목록(듣기·독해 공통): 패턴과 설명. 사람이 새로 지은 예문이 있으면(독해 H31001~H31005)
+// 카드 안 설명 아래에 함께 보여 줍니다. 예문이 없으면 듣기와 똑같습니다.
 export function ExplainGrammar({ grammar, source }) {
   const mine = useMyVocab();
   return (
@@ -141,6 +142,12 @@ export function ExplainGrammar({ grammar, source }) {
             />
           </div>
           <p>{note.note}</p>
+          {note.example ? (
+            <div className="grammarExample">
+              <Ruby words={note.example.words} />
+              <p className="listenKo">{note.example.ko}</p>
+            </div>
+          ) : null}
         </li>
       ))}
     </ul>

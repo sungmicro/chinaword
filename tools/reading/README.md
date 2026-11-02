@@ -51,7 +51,8 @@ $PY tools/auto_enrich.py H31006 --listening-work ~/hsk-listening-work --reading-
         "basis": { "quote": "원문 구절 그대로", "note": "왜 답인지 1~3문장" },
         "distractors": [{ "label": "A", "note": "한 줄" }],
         "vocab": [{ "hanzi": "满意", "pinyin": "mǎnyì", "partOfSpeech": "형용사", "meaningKo": "만족하다" }],
-        "grammar": [{ "pattern": "虽然A，但是B", "note": "‘A이긴 하지만 B’. 말하는 사람의 무게는 B에 있다. \"虽然没有花园，但是离河边很近\"." }]
+        "grammar": [{ "pattern": "虽然A，但是B", "note": "‘A이긴 하지만 B’. 말하는 사람의 무게는 B에 있다. \"虽然没有花园，但是离河边很近\".",
+                      "example": { "zh": "虽然很贵，但是很好吃。", "words": [["虽然","suīrán"],["很","hěn"],["贵","guì"],["，",""],["但是","dànshì"],["很","hěn"],["好吃","hǎochī"],["。",""]], "ko": "비싸긴 하지만 맛있다." } }]
       }
     }
   ]
@@ -72,6 +73,7 @@ $PY tools/auto_enrich.py H31006 --listening-work ~/hsk-listening-work --reading-
 - **오답 이유(distractors)**: 3부분은 나머지 두 보기를 **모두**, 1·2부분은 헷갈리기 쉬운 보기 1~2개를 한 줄씩. 예시 보기는 쓰지 않는다. «지문에 없음», «반대 내용», «빈칸 자리는 형용사인데 동사»처럼 이유가 드러나게.
 - **단어(vocab)**와 **문법(grammar)**은 «듣기» 탭과 같은 형식·기준으로 쓴다(`tools/listening/README.md`, 설계 `docs/superpowers/specs/2026-10-09-hsk-listening-tab-design.md` «해설 기준»). 화면도 듣기와 같은 목록(`ExplainVocab`·`ExplainGrammar`)으로 나온다.
 - **단어(vocab)**: 문항당 3~8개. 해당 시험 급수에서 새로 추가되는 어휘를 본문 등장 순서로 먼저 담고, 남는 칸을 다른 핵심어로 채운다. 칸은 `hanzi`·`pinyin`·`partOfSpeech`·`meaningKo` 넷뿐이다. 용법(`usage`)·예문(`example`)은 쓰지 않는다. 단어장 «HSK3 독해» 카드 예문은 `assemble.py`가 그 단어가 나온 시험 문장에서 따온다.
-- **문법(grammar)**: 문항당 1~3개, 접속사·구문 패턴 위주(虽然…但是…, 把자문, 被자문, 比 비교문, 결과보어, 방향보어, 一…就…, 越来越, 除了…还… 등). 칸은 `pattern`·`note` 둘이다. 짧은 뜻이 있으면 `note` 앞에 `‘뜻’.`으로 쓰고, 이 문항의 문장을 따옴표로 인용해 어떻게 쓰였는지 보인다(듣기 문장 구조와 같은 방식). 따로 지은 예문(`example`)은 쓰지 않는다.
-- 끊어 읽기(`breakdown`)는 쓰지 않는다. 예전 해설 파일에 남은 `breakdown`·`usage`·`example`·문법 `meaningKo`는 `assemble.py`가 공개 데이터에 넣지 않는다(문법 `meaningKo`는 `note` 앞에 `‘뜻’.`으로 옮긴다).
+- **문법(grammar)**: 문항당 1~3개, 접속사·구문 패턴 위주(虽然…但是…, 把자문, 被자문, 比 비교문, 결과보어, 방향보어, 一…就…, 越来越, 除了…还… 등). 필수 칸은 `pattern`·`note` 둘이다. 짧은 뜻이 있으면 `note` 앞에 `‘뜻’.`으로 쓰고, 이 문항의 문장을 따옴표로 인용해 어떻게 쓰였는지 보인다(듣기 문장 구조와 같은 방식).
+- **문법 예문(grammar `example`)은 선택**이다. 쓰면 `{ "zh", "words", "ko" }` 셋을 모두 채우고, 지문에 없는 **새로 지은** 짧은 문장(해당 급수 수준)이어야 한다. 있으면 화면의 문장 구조 카드 안에 설명 아래로 나온다. 정답 근거 인용과 같거나 문항 글(지문·질문·보기)에 그대로 있는 문장은 지문 반복으로 보고 `assemble.py`가 버린다(H31006 이후 `auto_enrich`가 넣던 예문이 이 경우다). 지금 예문이 남는 회차는 사람이 해설을 쓴 H31001~H31005다.
+- 끊어 읽기(`breakdown`)는 쓰지 않는다. 예전 해설 파일에 남은 `breakdown`·단어 `usage`·단어 `example`·문법 `meaningKo`는 `assemble.py`가 공개 데이터에 넣지 않는다(문법 `meaningKo`는 `note` 앞에 `‘뜻’.`으로 옮긴다).
 - 해설은 한국어로, 짧은 문장으로 쓴다.

@@ -143,10 +143,10 @@ function Explanation({ item, options, source }) {
         </>
       ) : null}
 
-      <h3>단어</h3>
+      <h3>핵심 단어</h3>
       <ExplainVocab vocab={vocab} source={source} />
 
-      <h3>문법</h3>
+      <h3>문장 구조</h3>
       <ExplainGrammar grammar={grammar} source={source} />
     </section>
   );

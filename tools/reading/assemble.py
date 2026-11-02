@@ -9,7 +9,8 @@ public/reading/<회차>.json을 만들고, 독해 핵심 단어를 단어장(voc
 '（）'로 바꾼 결과), 해설 칸이 기준 개수대로 차 있어야 한다. pypinyin과 음절이 다른 단어는 목록으로만 보여준다.
 
 해설의 단어·문법은 듣기 탭과 같은 형식으로 맞춰 쓴다(normalize_explain): 단어는 한자·병음·품사·뜻만,
-문법은 패턴·설명만 남긴다. 예전 해설 파일의 끊어 읽기(breakdown)·용법(usage)·예문(example)은 버린다.
+문법은 패턴·설명에 사람이 새로 지은 예문(example)이 있으면 그것까지 남긴다. 예전 해설 파일의 끊어 읽기(breakdown)·
+단어 용법(usage)·단어 예문(example)과, 지문 문장을 되풀이한 자동 문법 예문은 버린다.
 """
 import argparse
 import json
@@ -43,6 +44,13 @@ def check_annotated(annotated, source_text, where, problems, reading_diffs):
         problems.append(f'{where}: 해석 없음')
 
 
+def check_example(example, where, problems, reading_diffs):
+    if not example.get('zh') or not example.get('words') or not example.get('ko'):
+        problems.append(f'{where}: 예문(zh·words·ko) 없음')
+        return
+    check_words(example['words'], example['zh'], where, problems, reading_diffs)
+
+
 VOCAB_KEYS = ('hanzi', 'pinyin', 'partOfSpeech', 'meaningKo')
 
 
@@ -55,16 +63,42 @@ def grammar_note(entry):
     return f'‘{meaning}’. {note}' if note else f'‘{meaning}’.'
 
 
-def normalize_explain(explain):
-    """해설의 단어·문법을 듣기 탭 형식으로 맞춘다. 정답 근거·오답 이유는 그대로 둔다."""
+def written_example(example, quote, texts):
+    """문법 예문은 선택이다. 사람이 새로 지은 예문만 남긴다.
+
+    auto_enrich가 만든 예전 독해 문법 예문(H31006 이후)은 정답 근거 인용(basis.quote)을 그대로 되풀이했고,
+    사람이 쓴 예문(H31001~H31005)은 문항 글에 없는 새 문장이다. 그래서 예문이 정답 근거 인용과 같거나
+    문항 화면의 문장(지문·질문·보기) 안에 그대로 있으면 지문 반복으로 보고 버린다.
+    """
+    if not isinstance(example, dict):
+        return None
+    zh = (example.get('zh') or '').strip()
+    if not zh or zh == (quote or '').strip() or any(zh in text for text in texts):
+        return None
+    return {'zh': zh, 'words': example.get('words') or [], 'ko': example.get('ko', '')}
+
+
+def normalize_grammar(entry, quote, texts):
+    grammar = {'pattern': entry.get('pattern', ''), 'note': grammar_note(entry)}
+    example = written_example(entry.get('example'), quote, texts)
+    if example:
+        grammar['example'] = example
+    return grammar
+
+
+def normalize_explain(explain, texts=()):
+    """해설의 단어·문법을 듣기 탭 형식으로 맞춘다. 정답 근거·오답 이유는 그대로 둔다.
+
+    texts: 그 문항 화면에 나오는 문장들. 문법 예문이 지문을 되풀이한 것인지 가릴 때 쓴다.
+    """
     if not explain:
         return explain
+    quote = (explain.get('basis') or {}).get('quote', '')
     return {
         'basis': explain.get('basis'),
         'distractors': explain.get('distractors') or [],
         'vocab': [{key: entry.get(key, '') for key in VOCAB_KEYS} for entry in explain.get('vocab') or []],
-        'grammar': [{'pattern': entry.get('pattern', ''), 'note': grammar_note(entry)}
-                    for entry in explain.get('grammar') or []],
+        'grammar': [normalize_grammar(entry, quote, texts) for entry in explain.get('grammar') or []],
     }
 
 
@@ -172,6 +206,8 @@ def check_explain(explain, part, answer, labels, texts, where, problems, reading
         missing = [key for key in ('pattern', 'note') if not entry.get(key)]
         if missing:
             problems.append(f'{here}: {missing} 없음')
+        if 'example' in entry:
+            check_example(entry['example'], f'{here} 예문', problems, reading_diffs)
 
 
 def build_item(source, note, paper_group, group_options, where, problems, reading_diffs):
@@ -202,7 +238,7 @@ def build_item(source, note, paper_group, group_options, where, problems, readin
     texts += [join_words(option['words']) for option in visible]
     example = paper_group['example'] if paper_group else None
     labels = [option['label'] for option in visible if option['label'] != example]
-    explain = normalize_explain(note.get('explain'))
+    explain = normalize_explain(note.get('explain'), texts)
     check_explain(explain, part, answer, labels, texts, where, problems, reading_diffs)
 
     return {

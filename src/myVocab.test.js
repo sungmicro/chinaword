@@ -3,6 +3,8 @@ import assert from 'node:assert/strict';
 import {
   MINE_KEY,
   MINE_LESSON,
+  autoReadingUsage,
+  dropAutoReadingUsage,
   loadMine,
   mineToStudyItems,
   patternEntry,
@@ -51,12 +53,72 @@ test('wordsToPinyin: 예문 병음 한 줄', () => {
   assert.equal(wordsToPinyin(undefined), '');
 });
 
-test('wordEntry: 독해 단어는 용법·예문까지 담는다', () => {
+test('wordEntry: 독해 단어도 듣기처럼 용법·예문 칸을 비운다', () => {
   assert.deepEqual(wordEntry(READING_WORD, 'H31001 독해 63번', NOW), {
     key: 'word:满意:manyi', kind: 'word', hanzi: '满意', pinyin: 'mǎnyì', meaningKo: '만족하다', partOfSpeech: '형용사',
-    note: '对A很满意', exampleZh: '我很满意。', examplePinyin: 'Wǒ hěn mǎnyì.', exampleKo: '나는 만족한다.',
+    note: '', exampleZh: '', examplePinyin: '', exampleKo: '',
     source: 'H31001 독해 63번', addedAt: '2026-10-12T05:00:00.000Z'
   });
+});
+
+// 2026-11-02 전에 독해 해설에서 담은 단어 (자동 용법 + 지문 예문이 함께 저장됨)
+const OLD_READING_SAVED = {
+  key: 'word:满意:manyi', kind: 'word', hanzi: '满意', pinyin: 'mǎnyì', meaningKo: '만족하다', partOfSpeech: '형용사',
+  note: '满意가 쓰인 문장을 함께 확인', exampleZh: '我对这儿很满意。', examplePinyin: 'Wǒ duì zhèr hěn mǎnyì.',
+  exampleKo: '나는 여기가 마음에 든다.', source: 'H31006 독해 61번', addedAt: '2026-10-20T05:00:00.000Z'
+};
+
+test('dropAutoReadingUsage: 독해 단어의 자동 용법 문구와 함께 담긴 예문만 지운다', () => {
+  assert.equal(autoReadingUsage('满意'), '满意가 쓰인 문장을 함께 확인');
+  assert.deepEqual(dropAutoReadingUsage(OLD_READING_SAVED), {
+    ...OLD_READING_SAVED, note: '', exampleZh: '', examplePinyin: '', exampleKo: ''
+  });
+});
+
+test('dropAutoReadingUsage: 직접 쓴 메모·다른 단어 문구·패턴·듣기 항목은 그대로 둔다', () => {
+  const kept = [
+    { ...OLD_READING_SAVED, note: '对A很满意 — 내가 적은 메모' },
+    { ...OLD_READING_SAVED, note: '满意가 쓰인 문장을 함께 확인하고 외우기' },
+    { ...OLD_READING_SAVED, note: '房间가 쓰인 문장을 함께 확인' },
+    { ...OLD_READING_SAVED, source: 'H31001 듣기 25번' },
+    { ...OLD_READING_SAVED, kind: 'pattern', key: 'pattern:满意', hanzi: '满意' },
+    patternEntry(READING_GRAMMAR, 'H31001 독해 63번', NOW)
+  ];
+  kept.forEach((entry) => assert.equal(dropAutoReadingUsage(entry), entry));
+});
+
+test('저장소: 불러올 때 예전 독해 자동 문구를 지우고 기기에도 한 번 저장한다', () => {
+  const pattern = patternEntry(READING_GRAMMAR, 'H31001 독해 63번', NOW);
+  const listening = wordEntry(LISTENING_WORD, 'H31001 듣기 25번', NOW);
+  const storage = memoryStorage({ [MINE_KEY]: JSON.stringify({ version: 1, items: [OLD_READING_SAVED, pattern, listening] }) });
+  useStorage(storage);
+  resetMineForTest();
+  const [word, savedPattern, savedListening] = loadMine();
+  assert.equal(word.note, '');
+  assert.equal(word.exampleZh, '');
+  assert.equal(word.meaningKo, '만족하다');
+  assert.equal(word.source, 'H31006 독해 61번');
+  assert.deepEqual(savedPattern, pattern);
+  assert.deepEqual(savedListening, listening);
+  const stored = JSON.parse(storage.getItem(MINE_KEY)).items;
+  assert.equal(stored[0].note, '');
+  assert.equal(stored[0].examplePinyin, '');
+  assert.equal(stored[1].note, '무게는 B에 있다.');
+});
+
+test('저장소: 지울 것이 없으면 기기 저장값을 다시 쓰지 않는다', () => {
+  const raw = JSON.stringify({ version: 1, items: [wordEntry(LISTENING_WORD, 'H31001 듣기 25번', NOW)] });
+  let writes = 0;
+  const storage = memoryStorage({ [MINE_KEY]: raw });
+  const setItem = storage.setItem;
+  storage.setItem = (key, value) => {
+    writes += 1;
+    setItem(key, value);
+  };
+  useStorage(storage);
+  resetMineForTest();
+  assert.equal(loadMine().length, 1);
+  assert.equal(writes, 0);
 });
 
 test('wordEntry: 듣기 단어는 용법·예문 칸이 빈다', () => {
