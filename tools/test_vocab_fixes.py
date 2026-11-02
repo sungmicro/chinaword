@@ -5,7 +5,10 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from vocab_fixes import BANNED_PART, VOCAB_KEYS, fix_vocab, has_hangul, load_fixes, vocab_problems
+import tempfile
+
+from vocab_fixes import (BANNED_PART, ID_REGISTRY, VOCAB_KEYS, CardIds, VocabProblems, apply_listening, fix_vocab,
+                         has_hangul, load_fixes, load_id_registry, vocab_problems)
 
 TABLE = {
     'words': {'李': {'pinyin': 'lǐ', 'partOfSpeech': '고유명사', 'meaningKo': '리(李, 성씨)'}},
@@ -56,6 +59,57 @@ class FixVocabTest(unittest.TestCase):
         self.assertEqual(vocab_problems(word('门口', '입구'), 'T'), [])
         self.assertTrue(any('한글' in p for p in vocab_problems(word('李'), 'T')))
         self.assertTrue(any('단어' in p for p in vocab_problems(word('手', '손', BANNED_PART), 'T')))
+
+
+    def test_problems_need_hanzi_and_pinyin(self):
+        self.assertTrue(any('병음' in p for p in vocab_problems(word('门口', '입구', pinyin=''), 'T')))
+        self.assertTrue(any('한자' in p for p in vocab_problems({**word('门口', '입구'), 'hanzi': ' '}, 'T')))
+
+
+class ApplyListeningTest(unittest.TestCase):
+    def test_refuses_to_write_when_problems_remain(self):
+        with tempfile.TemporaryDirectory() as directory:
+            repo = Path(directory)
+            (repo / 'public' / 'listening').mkdir(parents=True)
+            (repo / 'src' / 'data').mkdir(parents=True)
+            data = {'id': 'H39999', 'items': [{'no': 1, 'vocab': [word('新词', pinyin='xīncí')]}]}
+            path = repo / 'public' / 'listening' / 'H39999.json'
+            path.write_text(json.dumps(data, ensure_ascii=False), encoding='utf-8')
+            before = path.read_text(encoding='utf-8')
+            with self.assertRaises(VocabProblems):
+                apply_listening(repo)
+            self.assertEqual(path.read_text(encoding='utf-8'), before)
+            self.assertFalse((repo / 'src' / 'data' / 'vocab.json').exists())
+
+
+class CardIdsTest(unittest.TestCase):
+    def run_once(self, repo, previous, words):
+        ids = CardIds(repo, 'HSK3R', previous)
+        cards = [{'id': ids.id_for(hanzi), 'hanzi': hanzi} for hanzi in words]
+        ids.finish(cards + [{'id': 'K-1', 'hanzi': '多'}])
+        return {card['hanzi']: card['id'] for card in cards}
+
+    def test_deleted_id_is_retired_and_never_reused(self):
+        with tempfile.TemporaryDirectory() as directory:
+            repo = Path(directory)
+            first = self.run_once(repo, {}, ['门口', '很多'])
+            self.assertEqual(first, {'门口': 'HSK3R-001', '很多': 'HSK3R-002'})
+            # 很多를 지운다(가장 큰 번호) → 은퇴, 이어받는 카드는 다른 단원의 多
+            second = self.run_once(repo, first, ['门口'])
+            registry = load_id_registry(repo)
+            self.assertEqual(registry['retired'], {'HSK3R-002': {'hanzi': '很多', 'movedTo': '多'}})
+            # 다음 실행에서 새 카드를 더해도 은퇴한 HSK3R-002를 다시 쓰지 않는다
+            third = self.run_once(repo, second, ['门口', '新词'])
+            self.assertEqual(third, {'门口': 'HSK3R-001', '新词': 'HSK3R-003'})
+            self.assertEqual(load_id_registry(repo)['lastNo'], {'HSK3R': 3})
+            self.assertTrue((repo / ID_REGISTRY).exists())
+
+    def test_registry_last_number_is_respected_even_without_retired_ids(self):
+        with tempfile.TemporaryDirectory() as directory:
+            repo = Path(directory)
+            (repo / ID_REGISTRY).parent.mkdir(parents=True)
+            (repo / ID_REGISTRY).write_text(json.dumps({'lastNo': {'HSK3R': 347}, 'retired': {}}), encoding='utf-8')
+            self.assertEqual(self.run_once(repo, {'门口': 'HSK3R-001'}, ['门口', '新词'])['新词'], 'HSK3R-348')
 
 
 class FixesFileTest(unittest.TestCase):

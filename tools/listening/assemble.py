@@ -19,7 +19,7 @@ from pathlib import Path
 from pypinyin import Style, lazy_pinyin
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-from vocab_fixes import fix_vocab, vocab_problems  # noqa: E402  tools/vocab_fixes.py
+from vocab_fixes import CardIds, fix_vocab, vocab_problems  # noqa: E402  tools/vocab_fixes.py
 
 LESSON = 'HSK3 듣기'
 PART_GUIDES = {
@@ -159,8 +159,8 @@ def update_vocab(tests, repo):
     vocab = json.loads(path.read_text(encoding='utf-8'))
     # 다시 돌려도 같은 결과가 나오게 지난번에 넣은 듣기 단어는 지우고 새로 넣는다.
     # 오답노트가 카드 id로 기록되므로, 지난번에 있던 단어는 같은 id를 다시 쓰고 새 단어만 다음 번호를 받는다.
-    previous = {entry['hanzi']: entry['id'] for entry in vocab if entry.get('lesson') == LESSON}
-    last_no = max((int(entry_id.rsplit('-', 1)[1]) for entry_id in previous.values()), default=0)
+    # 사라진 카드의 id는 src/data/vocab-retired.json에 은퇴시켜 다시 쓰지 않는다(tools/vocab_fixes.py CardIds).
+    ids = CardIds(repo, 'HSK3L', {entry['hanzi']: entry['id'] for entry in vocab if entry.get('lesson') == LESSON})
     vocab = [entry for entry in vocab if entry.get('lesson') != LESSON]
     known = {entry['hanzi'] for entry in vocab}
     added = []
@@ -171,12 +171,8 @@ def update_vocab(tests, repo):
                     continue
                 known.add(word['hanzi'])
                 zh, py, ko = example_for(word['hanzi'], item)
-                entry_id = previous.get(word['hanzi'])
-                if not entry_id:
-                    last_no += 1
-                    entry_id = f'HSK3L-{last_no:03d}'
                 added.append({
-                    'id': entry_id,
+                    'id': ids.id_for(word['hanzi']),
                     'level': 'HSK3',
                     'lesson': LESSON,
                     'category': f'{LESSON} {test["id"]}',
@@ -192,6 +188,7 @@ def update_vocab(tests, repo):
                     'tags': ['HSK3', '단어', LESSON, test['id']],
                 })
     path.write_text(json.dumps(vocab + added, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+    ids.finish(vocab + added)
     return len(added)
 
 

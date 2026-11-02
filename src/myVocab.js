@@ -52,7 +52,10 @@ export function wordEntry(word, source, now = new Date()) {
 
 // 2026-11-02 전 독해 해설은 단어마다 자동 용법 «<한자>가 쓰인 문장을 함께 확인»과 지문에서 따온 예문을 달았고,
 // 담을 때 note·example 칸에 그대로 저장됐습니다. 독해 출처(«<회차> 독해 <번호>번»)의 단어이고 note가 그 단어의
-// 자동 문구와 정확히 같을 때만 note와 함께 저장된 예문을 비웁니다. 그 밖의 메모·패턴·듣기 단어는 그대로 둡니다.
+// 자동 문구와 정확히 같을 때만 note를 비웁니다. 그 밖의 메모·패턴·듣기 단어는 그대로 둡니다.
+// 함께 저장된 예문은 자동값일 때만 비웁니다. 근거: 앱에는 담은 항목을 고치는 기능이 없었고(담기·빼기뿐),
+// 예전 독해 단어 예문 4,369개는 모두 그 단어가 들어간 시험 문장이었습니다. 그래서 예문이 비었거나 그 한자를
+// 포함할 때만 자동값으로 보고 비우고, 한자가 없는 예문은 사용자 것일 수 있어 남깁니다.
 export const autoReadingUsage = (hanzi) => `${hanzi}가 쓰인 문장을 함께 확인`;
 const READING_SOURCE = / 독해 \d+번$/;
 
@@ -61,7 +64,11 @@ export function dropAutoReadingUsage(entry) {
     entry.kind === 'word' &&
     READING_SOURCE.test(String(entry.source ?? '')) &&
     String(entry.note ?? '').trim() === autoReadingUsage(entry.hanzi);
-  return auto ? { ...entry, note: '', exampleZh: '', examplePinyin: '', exampleKo: '' } : entry;
+  if (!auto) return entry;
+  const exampleIsAuto = !entry.exampleZh || String(entry.exampleZh).includes(entry.hanzi);
+  return exampleIsAuto
+    ? { ...entry, note: '', exampleZh: '', examplePinyin: '', exampleKo: '' }
+    : { ...entry, note: '' };
 }
 
 // 문법(문장 구조) 하나. 듣기 문장 구조에는 짧은 뜻이 없어 설명 전체를 뜻 자리에 씁니다.

@@ -18,7 +18,7 @@ import jieba
 import jieba.posseg as posseg
 from pypinyin import Style, lazy_pinyin
 
-from vocab_fixes import BANNED_PART, fix_vocab, has_hangul
+from vocab_fixes import BANNED_PART, VocabProblems, fix_vocab, fix_vocab_checked, has_hangul  # noqa: F401
 
 
 PUNCT = set('，。！？：；、“”‘’（）《》…—,.?!:;()[] ')
@@ -367,8 +367,11 @@ def sync_public_listening_vocab(test_id, work, repo):
     notes = {item['no']: item for item in enrich['items']}
     path = Path(repo).expanduser() / 'public/listening' / f'{test_id}.json'
     data = json.loads(path.read_text(encoding='utf-8'))
+    problems = []
     for item in data['items']:
-        item['vocab'] = fix_vocab(notes[item['no']]['vocab'], f'listening/{test_id}/{item["no"]}')
+        item['vocab'] = fix_vocab_checked(notes[item['no']]['vocab'], f'listening/{test_id}/{item["no"]}', problems)
+    if problems:
+        raise VocabProblems(problems)  # 보정 뒤에도 문제가 남으면 공개 데이터를 쓰지 않는다
     path.write_text(json.dumps(data, ensure_ascii=False, separators=(',', ':')), encoding='utf-8')
 
 
@@ -506,8 +509,12 @@ def sync_public_reading_vocab(test_id, work, repo):
         notes.update({item['no']: item for item in data.get('items', [])})
     path = Path(repo).expanduser() / 'public/reading' / f'{test_id}.json'
     data = json.loads(path.read_text(encoding='utf-8'))
+    problems = []
     for item in data['items']:
-        item['explain']['vocab'] = fix_vocab(notes[item['no']]['explain']['vocab'], f'reading/{test_id}/{item["no"]}')
+        item['explain']['vocab'] = fix_vocab_checked(
+            notes[item['no']]['explain']['vocab'], f'reading/{test_id}/{item["no"]}', problems)
+    if problems:
+        raise VocabProblems(problems)  # 보정 뒤에도 문제가 남으면 공개 데이터를 쓰지 않는다
     path.write_text(json.dumps(data, ensure_ascii=False, separators=(',', ':')), encoding='utf-8')
 
 
@@ -564,6 +571,17 @@ def main():
     args = parser.parse_args()
     translator = Translator(args.cache)
     catalog = VocabCatalog(args.vocab)
+    try:
+        enrich_all(args, translator, catalog)
+    except VocabProblems as error:
+        for problem in error.problems:
+            print('  ! ' + problem)
+        print(f'단어 문제 {len(error.problems)}개가 남아 공개 데이터를 쓰지 않았습니다. tools/vocab_fixes.json에 보정을 더하세요.')
+        return 1
+    return 0
+
+
+def enrich_all(args, translator, catalog):
     for test_id in args.test_ids:
         if args.mode in ('listening', 'both'):
             write_listening(test_id, args.listening_work, translator, catalog, args.vocab_only)
@@ -573,7 +591,6 @@ def main():
             write_reading(test_id, args.reading_work, translator, catalog, args.vocab_only)
             if args.vocab_only and args.repo:
                 sync_public_reading_vocab(test_id, args.reading_work, args.repo)
-    return 0
 
 
 if __name__ == '__main__':

@@ -75,6 +75,11 @@ test('dropAutoReadingUsage: 독해 단어의 자동 용법 문구와 함께 담�
   });
 });
 
+test('dropAutoReadingUsage: 그 한자가 없는 예문은 자동값으로 보지 않아 남기고 문구만 지운다', () => {
+  const edited = { ...OLD_READING_SAVED, exampleZh: '我自己写的句子。', examplePinyin: 'Wǒ zìjǐ xiě de jùzi.', exampleKo: '내가 쓴 문장' };
+  assert.deepEqual(dropAutoReadingUsage(edited), { ...edited, note: '' });
+});
+
 test('dropAutoReadingUsage: 직접 쓴 메모·다른 단어 문구·패턴·듣기 항목은 그대로 둔다', () => {
   const kept = [
     { ...OLD_READING_SAVED, note: '对A很满意 — 내가 적은 메모' },

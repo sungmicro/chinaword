@@ -15,6 +15,10 @@ from auto_enrich import (
     sync_public_reading_vocab,
     vocab_for,
 )
+from vocab_fixes import VocabProblems
+
+MASHANG = {'hanzi': '马上', 'pinyin': 'mǎshàng', 'partOfSpeech': '부사', 'meaningKo': '곧'}
+ANPAI = {'hanzi': '安排', 'pinyin': 'ānpái', 'partOfSpeech': '동사', 'meaningKo': '안배하다'}
 
 
 class ContentWordsTest(unittest.TestCase):
@@ -108,7 +112,7 @@ class PublicSyncTest(unittest.TestCase):
             work.mkdir(parents=True)
             public.mkdir(parents=True)
             (work / 'enrich.json').write_text(json.dumps({
-                'items': [{'no': 1, 'vocab': [{'hanzi': '马上'}]}],
+                'items': [{'no': 1, 'vocab': [MASHANG]}],
             }, ensure_ascii=False), encoding='utf-8')
             (public / 'H31001.json').write_text(json.dumps({
                 'title': 'keep', 'items': [{'no': 1, 'script': ['keep'], 'vocab': []}],
@@ -119,7 +123,7 @@ class PublicSyncTest(unittest.TestCase):
 
         self.assertEqual('keep', result['title'])
         self.assertEqual(['keep'], result['items'][0]['script'])
-        self.assertEqual([{'hanzi': '马上'}], result['items'][0]['vocab'])
+        self.assertEqual([MASHANG], result['items'][0]['vocab'])
 
     def test_syncs_only_reading_vocab(self):
         with tempfile.TemporaryDirectory() as directory:
@@ -129,7 +133,7 @@ class PublicSyncTest(unittest.TestCase):
             work.mkdir(parents=True)
             public.mkdir(parents=True)
             (work / 'enrich-41-50.json').write_text(json.dumps({
-                'items': [{'no': 41, 'explain': {'vocab': [{'hanzi': '安排'}]}}],
+                'items': [{'no': 41, 'explain': {'vocab': [ANPAI]}}],
             }, ensure_ascii=False), encoding='utf-8')
             (public / 'H31001.json').write_text(json.dumps({
                 'title': 'keep', 'items': [{'no': 41, 'lines': ['keep'], 'explain': {'vocab': []}}],
@@ -140,7 +144,26 @@ class PublicSyncTest(unittest.TestCase):
 
         self.assertEqual('keep', result['title'])
         self.assertEqual(['keep'], result['items'][0]['lines'])
-        self.assertEqual([{'hanzi': '安排'}], result['items'][0]['explain']['vocab'])
+        self.assertEqual([ANPAI], result['items'][0]['explain']['vocab'])
+
+    def test_sync_refuses_to_write_when_vocab_problems_remain(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            work = root / 'work/H31001'
+            public = root / 'repo/public/listening'
+            work.mkdir(parents=True)
+            public.mkdir(parents=True)
+            untranslated = {'hanzi': '新词', 'pinyin': 'xīncí', 'partOfSpeech': '단어', 'meaningKo': '新词'}
+            (work / 'enrich.json').write_text(json.dumps({
+                'items': [{'no': 1, 'vocab': [untranslated]}],
+            }, ensure_ascii=False), encoding='utf-8')
+            original = json.dumps({'items': [{'no': 1, 'script': [], 'vocab': []}]}, ensure_ascii=False)
+            (public / 'H31001.json').write_text(original, encoding='utf-8')
+
+            with self.assertRaises(VocabProblems) as caught:
+                sync_public_listening_vocab('H31001', root / 'work', root / 'repo')
+            self.assertEqual(original, (public / 'H31001.json').read_text(encoding='utf-8'))
+        self.assertEqual(2, len(caught.exception.problems))  # 한글 뜻 없음 + 품사 «단어»
 
 
 if __name__ == '__main__':

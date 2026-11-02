@@ -2,7 +2,8 @@ import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { Check, RotateCcw, Volume2, X } from 'lucide-react';
 import { buildLessonChips, matchesLessonChip } from './lessons';
 import { buildToneChoices, isToneQuizable, patternLabel } from './tone';
-import { applyResults, loadReview, pickQuestions, reviewCount } from './review';
+import { applyResults, loadReviewFor, pickQuestions, reviewCount } from './review';
+import retiredCards from './data/vocab-retired.json';
 
 const QUIZ_SIZE = 10;
 
@@ -167,7 +168,7 @@ export default function ToneQuiz({ items, canSpeak, onSpeak }) {
   const [index, setIndex] = useState(0);
   const [picked, setPicked] = useState(null);
   const [results, setResults] = useState([]);
-  const [review, setReview] = useState(() => loadReview());
+  const [review, setReview] = useState(() => loadReviewFor(items, retiredCards.retired));
 
   const quizableItems = useMemo(() => items.filter((item) => item.itemType === '단어' && isToneQuizable(item)), [items]);
   const chips = useMemo(() => buildLessonChips(quizableItems), [quizableItems]);
