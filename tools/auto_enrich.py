@@ -18,7 +18,8 @@ import jieba
 import jieba.posseg as posseg
 from pypinyin import Style, lazy_pinyin
 
-from vocab_fixes import BANNED_PART, VocabProblems, fix_vocab, fix_vocab_checked, has_hangul  # noqa: F401
+from vocab_fixes import (BANNED_PART, VocabProblems, fix_vocab, fix_vocab_checked, has_hangul,  # noqa: F401
+                         write_files_atomically)
 
 
 PUNCT = set('，。！？：；、“”‘’（）《》…—,.?!:;()[] ')
@@ -362,17 +363,19 @@ def write_listening(test_id, work, translator, catalog, vocab_only=False):
     print(f'{test_id}: 듣기 해설 {len(items)}개')
 
 
-def sync_public_listening_vocab(test_id, work, repo):
+def prepare_public_listening_vocab(test_id, work, repo, problems):
+    """작업 폴더 enrich.json의 핵심 단어를 보정해 공개 듣기 데이터에 넣을 내용을 만든다(쓰지 않는다)."""
     enrich = json.loads((Path(work).expanduser() / test_id / 'enrich.json').read_text(encoding='utf-8'))
     notes = {item['no']: item for item in enrich['items']}
     path = Path(repo).expanduser() / 'public/listening' / f'{test_id}.json'
     data = json.loads(path.read_text(encoding='utf-8'))
-    problems = []
     for item in data['items']:
         item['vocab'] = fix_vocab_checked(notes[item['no']]['vocab'], f'listening/{test_id}/{item["no"]}', problems)
-    if problems:
-        raise VocabProblems(problems)  # 보정 뒤에도 문제가 남으면 공개 데이터를 쓰지 않는다
-    path.write_text(json.dumps(data, ensure_ascii=False, separators=(',', ':')), encoding='utf-8')
+    return path, data
+
+
+def sync_public_listening_vocab(test_id, work, repo):
+    write_public_vocab([('listening', test_id, work, repo)])
 
 
 def reading_vocab_texts(item, groups):
@@ -502,20 +505,38 @@ def update_reading_vocab(base, paper, translations, catalog, test_id):
     return count
 
 
-def sync_public_reading_vocab(test_id, work, repo):
+def prepare_public_reading_vocab(test_id, work, repo, problems):
+    """작업 폴더 enrich-*.json의 핵심 단어를 보정해 공개 독해 데이터에 넣을 내용을 만든다(쓰지 않는다)."""
     notes = {}
     for enrich_path in sorted((Path(work).expanduser() / test_id).glob('enrich-*.json')):
         data = json.loads(enrich_path.read_text(encoding='utf-8'))
         notes.update({item['no']: item for item in data.get('items', [])})
     path = Path(repo).expanduser() / 'public/reading' / f'{test_id}.json'
     data = json.loads(path.read_text(encoding='utf-8'))
-    problems = []
     for item in data['items']:
         item['explain']['vocab'] = fix_vocab_checked(
             notes[item['no']]['explain']['vocab'], f'reading/{test_id}/{item["no"]}', problems)
+    return path, data
+
+
+def sync_public_reading_vocab(test_id, work, repo):
+    write_public_vocab([('reading', test_id, work, repo)])
+
+
+def write_public_vocab(jobs):
+    """공개 데이터 동기화: 모든 회차를 먼저 보정·검사하고, 문제가 하나도 없을 때만 한꺼번에 쓴다.
+
+    jobs: [(kind, test_id, work, repo)]. 문제가 있으면 공개 파일을 하나도 쓰지 않고 VocabProblems를 낸다.
+    """
+    problems, files = [], {}
+    for kind, test_id, work, repo in jobs:
+        prepare = prepare_public_listening_vocab if kind == 'listening' else prepare_public_reading_vocab
+        path, data = prepare(test_id, work, repo, problems)
+        files[path] = json.dumps(data, ensure_ascii=False, separators=(',', ':'))
     if problems:
-        raise VocabProblems(problems)  # 보정 뒤에도 문제가 남으면 공개 데이터를 쓰지 않는다
-    path.write_text(json.dumps(data, ensure_ascii=False, separators=(',', ':')), encoding='utf-8')
+        raise VocabProblems(problems)
+    write_files_atomically(files)
+    return len(files)
 
 
 def write_reading(test_id, work, translator, catalog, vocab_only=False):
@@ -571,26 +592,34 @@ def main():
     args = parser.parse_args()
     translator = Translator(args.cache)
     catalog = VocabCatalog(args.vocab)
+    jobs = enrich_all(args, translator, catalog)
+    if not jobs:
+        return 0
     try:
-        enrich_all(args, translator, catalog)
+        count = write_public_vocab(jobs)
     except VocabProblems as error:
         for problem in error.problems:
             print('  ! ' + problem)
-        print(f'단어 문제 {len(error.problems)}개가 남아 공개 데이터를 쓰지 않았습니다. tools/vocab_fixes.json에 보정을 더하세요.')
+        print(f'단어 문제 {len(error.problems)}개가 남아 공개 데이터(public/)는 한 회차도 쓰지 않았습니다. '
+              '작업 폴더의 해설 파일은 이미 새로 만들어졌습니다. tools/vocab_fixes.json에 보정을 더하고 다시 돌리세요.')
         return 1
+    print(f'공개 데이터 {count}개 파일의 핵심 단어를 동기화했습니다.')
     return 0
 
 
 def enrich_all(args, translator, catalog):
+    """작업 폴더의 해설을 만들고, 공개 데이터 동기화가 필요한 회차 목록을 돌려준다(공개 파일은 여기서 쓰지 않는다)."""
+    jobs = []
     for test_id in args.test_ids:
         if args.mode in ('listening', 'both'):
             write_listening(test_id, args.listening_work, translator, catalog, args.vocab_only)
             if args.vocab_only and args.repo:
-                sync_public_listening_vocab(test_id, args.listening_work, args.repo)
+                jobs.append(('listening', test_id, args.listening_work, args.repo))
         if args.mode in ('reading', 'both'):
             write_reading(test_id, args.reading_work, translator, catalog, args.vocab_only)
             if args.vocab_only and args.repo:
-                sync_public_reading_vocab(test_id, args.reading_work, args.repo)
+                jobs.append(('reading', test_id, args.reading_work, args.repo))
+    return jobs
 
 
 if __name__ == '__main__':

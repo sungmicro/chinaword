@@ -14,6 +14,7 @@ from auto_enrich import (
     sync_public_listening_vocab,
     sync_public_reading_vocab,
     vocab_for,
+    write_public_vocab,
 )
 from vocab_fixes import VocabProblems
 
@@ -164,6 +165,31 @@ class PublicSyncTest(unittest.TestCase):
                 sync_public_listening_vocab('H31001', root / 'work', root / 'repo')
             self.assertEqual(original, (public / 'H31001.json').read_text(encoding='utf-8'))
         self.assertEqual(2, len(caught.exception.problems))  # 한글 뜻 없음 + 품사 «단어»
+
+    def test_problem_in_a_later_test_keeps_earlier_public_files_unchanged(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            public = root / 'repo/public/listening'
+            public.mkdir(parents=True)
+            originals = {}
+            for test_id, vocab in (('H31001', [MASHANG]),
+                                   ('H31002', [{'hanzi': '新词', 'pinyin': 'xīncí', 'partOfSpeech': '명사', 'meaningKo': '新词'}])):
+                work = root / 'work' / test_id
+                work.mkdir(parents=True)
+                (work / 'enrich.json').write_text(json.dumps({'items': [{'no': 1, 'vocab': vocab}]}, ensure_ascii=False),
+                                                  encoding='utf-8')
+                originals[test_id] = json.dumps({'items': [{'no': 1, 'vocab': []}]})
+                (public / f'{test_id}.json').write_text(originals[test_id], encoding='utf-8')
+
+            jobs = [('listening', test_id, root / 'work', root / 'repo') for test_id in ('H31001', 'H31002')]
+            with self.assertRaises(VocabProblems):
+                write_public_vocab(jobs)
+            for test_id, original in originals.items():  # 첫 회차도 바뀌지 않는다
+                self.assertEqual(original, (public / f'{test_id}.json').read_text(encoding='utf-8'))
+
+            jobs = jobs[:1]
+            self.assertEqual(1, write_public_vocab(jobs))  # 문제가 없으면 쓴다
+            self.assertEqual([MASHANG], json.loads((public / 'H31001.json').read_text(encoding='utf-8'))['items'][0]['vocab'])
 
 
 if __name__ == '__main__':

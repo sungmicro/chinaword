@@ -8,7 +8,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import tempfile
 
 from vocab_fixes import (BANNED_PART, ID_REGISTRY, VOCAB_KEYS, CardIds, VocabProblems, apply_listening, fix_vocab,
-                         has_hangul, load_fixes, load_id_registry, vocab_problems)
+                         has_hangul, load_fixes, load_id_registry, moved_to, vocab_problems)
 
 TABLE = {
     'words': {'李': {'pinyin': 'lǐ', 'partOfSpeech': '고유명사', 'meaningKo': '리(李, 성씨)'}},
@@ -86,7 +86,7 @@ class CardIdsTest(unittest.TestCase):
     def run_once(self, repo, previous, words):
         ids = CardIds(repo, 'HSK3R', previous)
         cards = [{'id': ids.id_for(hanzi), 'hanzi': hanzi} for hanzi in words]
-        ids.finish(cards + [{'id': 'K-1', 'hanzi': '多'}])
+        ids.write(repo / 'vocab.json', cards + [{'id': 'K-1', 'hanzi': '多'}])
         return {card['hanzi']: card['id'] for card in cards}
 
     def test_deleted_id_is_retired_and_never_reused(self):
@@ -112,6 +112,25 @@ class CardIdsTest(unittest.TestCase):
             self.assertEqual(self.run_once(repo, {'门口': 'HSK3R-001'}, ['门口', '新词'])['新词'], 'HSK3R-348')
 
 
+    def test_moved_to_only_follows_the_reviewed_table(self):
+        alive = {'多', '米', '年级'}
+        table = {'movedTo': {'很多': '多', '一米': None, '三四年': None}}
+        self.assertEqual(moved_to('很多', alive, table), '多')
+        self.assertIsNone(moved_to('一米', alive, table))  # 米 카드는 '쌀'이라 뜻이 다르다
+        self.assertIsNone(moved_to('三四年', alive, table))  # 三四年级가 잘못 끊긴 것: 年级로 옮기지 않는다
+        self.assertIsNone(moved_to('没在表里', alive, table))
+        self.assertEqual(moved_to('多', alive, table), '多')  # 같은 단어가 남아 있으면 그 단어
+
+    def test_plan_checks_before_writing_anything(self):
+        with tempfile.TemporaryDirectory() as directory:
+            repo = Path(directory)
+            ids = CardIds(repo, 'HSK3R', {})
+            with self.assertRaises(ValueError):
+                ids.write(repo / 'vocab.json', [{'id': 'HSK3R-001', 'hanzi': '门口'}, {'id': 'HSK3R-001', 'hanzi': '多'}])
+            self.assertFalse((repo / 'vocab.json').exists())
+            self.assertFalse((repo / ID_REGISTRY).exists())
+
+
 class FixesFileTest(unittest.TestCase):
     """저장소의 vocab_fixes.json 자체가 규칙을 지키는지 본다."""
 
@@ -129,6 +148,14 @@ class FixesFileTest(unittest.TestCase):
             self.assertTrue(entry['partOfSpeech'] and entry['partOfSpeech'] != BANNED_PART, key)
             self.assertTrue(has_hangul(entry['meaningKo']), key)
             self.assertNotEqual(entry['meaningKo'], entry['hanzi'], key)
+
+    def test_registry_moved_to_matches_the_reviewed_table(self):
+        repo = Path(__file__).resolve().parent.parent
+        registry = load_id_registry(repo)
+        table = self.table['movedTo']
+        for entry_id, entry in registry['retired'].items():
+            self.assertIn(entry['hanzi'], table, entry_id)  # 은퇴 카드마다 사람이 정한 값이 있다
+            self.assertEqual(entry['movedTo'], table[entry['hanzi']], entry_id)
 
     def test_split_and_item_parts_exist(self):
         targets = [part for parts in self.table['split'].values() for part in parts]

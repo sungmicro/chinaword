@@ -7,15 +7,15 @@
  "retired": {
   "HSK3L-005": {
    "hanzi": "多喝水",
-   "movedTo": "多"
+   "movedTo": null
   },
   "HSK3L-047": {
    "hanzi": "这段话",
-   "movedTo": "段"
+   "movedTo": null
   },
   "HSK3L-119": {
    "hanzi": "真不错",
-   "movedTo": "真"
+   "movedTo": "不错"
   },
   "HSK3L-161": {
    "hanzi": "欢迎您",
@@ -35,7 +35,7 @@
   },
   "HSK3L-252": {
    "hanzi": "快进来",
-   "movedTo": "快"
+   "movedTo": "进来"
   },
   "HSK3L-253": {
    "hanzi": "不下雨",
@@ -43,14 +43,15 @@
   },
   "HSK3L-294": {
    "hanzi": "真对不起",
-   "movedTo": "真"
+   "movedTo": "对不起"
   },
   "HSK3L-395": {
    "hanzi": "为您服务",
-   "movedTo": "为"
+   "movedTo": "服务"
   },
   "HSK3R-016": {
-   "hanzi": "儿"
+   "hanzi": "儿",
+   "movedTo": null
   },
   "HSK3R-017": {
    "hanzi": "喝杯",
@@ -66,7 +67,7 @@
   },
   "HSK3R-041": {
    "hanzi": "又坏了",
-   "movedTo": "又"
+   "movedTo": "坏"
   },
   "HSK3R-043": {
    "hanzi": "很多",
@@ -74,19 +75,19 @@
   },
   "HSK3R-079": {
    "hanzi": "一家",
-   "movedTo": "家"
+   "movedTo": null
   },
   "HSK3R-099": {
    "hanzi": "足球比赛",
-   "movedTo": "足球"
+   "movedTo": null
   },
   "HSK3R-104": {
    "hanzi": "多年",
-   "movedTo": "多"
+   "movedTo": null
   },
   "HSK3R-105": {
    "hanzi": "比较忙",
-   "movedTo": "比较"
+   "movedTo": "忙"
   },
   "HSK3R-112": {
    "hanzi": "一斤",
@@ -102,7 +103,7 @@
   },
   "HSK3R-132": {
    "hanzi": "数学考试",
-   "movedTo": "数学"
+   "movedTo": null
   },
   "HSK3R-138": {
    "hanzi": "我会",
@@ -114,11 +115,11 @@
   },
   "HSK3R-142": {
    "hanzi": "一米",
-   "movedTo": "米"
+   "movedTo": null
   },
   "HSK3R-145": {
    "hanzi": "解决问题",
-   "movedTo": "解决"
+   "movedTo": null
   },
   "HSK3R-147": {
    "hanzi": "买点儿",
@@ -126,7 +127,7 @@
   },
   "HSK3R-157": {
    "hanzi": "三四年",
-   "movedTo": "年级"
+   "movedTo": null
   },
   "HSK3R-175": {
    "hanzi": "是因为",
@@ -134,15 +135,15 @@
   },
   "HSK3R-176": {
    "hanzi": "坐地铁",
-   "movedTo": "坐"
+   "movedTo": null
   },
   "HSK3R-177": {
    "hanzi": "太小",
-   "movedTo": "太"
+   "movedTo": "小"
   },
   "HSK3R-207": {
    "hanzi": "新手机",
-   "movedTo": "新"
+   "movedTo": null
   },
   "HSK3R-210": {
    "hanzi": "一个班",
@@ -150,19 +151,19 @@
   },
   "HSK3R-213": {
    "hanzi": "红颜色",
-   "movedTo": "红"
+   "movedTo": null
   },
   "HSK3R-214": {
    "hanzi": "那辆车",
-   "movedTo": "辆"
+   "movedTo": "车"
   },
   "HSK3R-215": {
    "hanzi": "个人",
-   "movedTo": "个"
+   "movedTo": null
   },
   "HSK3R-227": {
    "hanzi": "世界地图",
-   "movedTo": "世界"
+   "movedTo": null
   },
   "HSK3R-228": {
    "hanzi": "来得",
@@ -170,11 +171,11 @@
   },
   "HSK3R-237": {
    "hanzi": "腿疼",
-   "movedTo": "腿"
+   "movedTo": null
   },
   "HSK3R-241": {
    "hanzi": "多分钟",
-   "movedTo": "多"
+   "movedTo": null
   },
   "HSK3R-245": {
    "hanzi": "带我去",
@@ -182,7 +183,7 @@
   },
   "HSK3R-250": {
    "hanzi": "学习成绩",
-   "movedTo": "学习"
+   "movedTo": null
   },
   "HSK3R-251": {
    "hanzi": "很大",
@@ -194,7 +195,7 @@
   },
   "HSK3R-257": {
    "hanzi": "那件事",
-   "movedTo": "件"
+   "movedTo": "事"
   },
   "HSK3R-258": {
    "hanzi": "就让",
@@ -202,19 +203,19 @@
   },
   "HSK3R-270": {
    "hanzi": "电视节目",
-   "movedTo": "电视"
+   "movedTo": null
   },
   "HSK3R-284": {
    "hanzi": "铅笔画",
-   "movedTo": "铅笔"
+   "movedTo": null
   },
   "HSK3R-287": {
    "hanzi": "每天晚上",
-   "movedTo": "每天"
+   "movedTo": null
   },
   "HSK3R-292": {
    "hanzi": "一张",
-   "movedTo": "张"
+   "movedTo": null
   },
   "HSK3R-304": {
    "hanzi": "一个碗",

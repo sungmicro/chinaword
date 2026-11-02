@@ -187,8 +187,7 @@ def update_vocab(tests, repo):
                     'source': f'HSK3 공식 모의고사 {test["id"]} 듣기 {item["no"]}번',
                     'tags': ['HSK3', '단어', LESSON, test['id']],
                 })
-    path.write_text(json.dumps(vocab + added, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
-    ids.finish(vocab + added)
+    ids.write(path, vocab + added)  # 장부를 먼저 계산·검사하고 vocab.json과 함께 바꾼다
     return len(added)
 
 

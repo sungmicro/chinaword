@@ -28,8 +28,9 @@ $PY tools/auto_enrich.py H31006 --listening-work ~/hsk-listening-work --reading-
 - `assemble.py`로 실제로 쓸 때는 **모든 회차**를 넘긴다. 회차 목록과 단어장 «HSK3 독해» 단원을 매번 새로 쓰기 때문이다.
 - `--check`는 검사만 하고 파일을 쓰지 않는다. 해설을 쓰는 동안에는 이것만 돌린다.
 - **핵심 단어 보정 사전** `tools/vocab_fixes.json`: 자동 단어 중 한글 뜻이 없는 것(뜻 = 한자), 품사를 못 정한 것(«단어»), 두 단어가 붙거나 잘못 끊긴 토큰(比较忙, 铅笔画)은 여기에 병음·품사·뜻(`words`), 나누기(`split`·`parts`), 문항별 보정(`items`)으로 적는다. `auto_enrich.py`와 `assemble.py`가 이 사전을 거치고, `assemble.py` 검사는 **뜻에 한글이 없거나 품사가 «단어»인 단어를 막는다.** 원본 작업 폴더의 해설 파일은 고치지 않는다. 사전을 고친 뒤에는 `$PY tools/vocab_fixes.py --repo . --apply-listening`(듣기 공개 데이터·«HSK3 듣기» 단원)과 독해 `assemble.py`(모든 회차)를 차례로 돌린다. `$PY tools/vocab_fixes.py --repo .`는 공개 데이터에 남은 문제 개수만 보여 준다.
-- 단어장 카드 id는 다시 만들어도 같은 단어면 그대로 둔다(오답노트가 id로 기록된다). 사라진 카드의 id는 `src/data/vocab-retired.json`에 은퇴시켜 다시 쓰지 않고, 새 단어는 은퇴 번호까지 포함한 최댓값 다음 번호를 받는다. 나눠서 사라진 카드(很多 등)는 `movedTo`(多)를 적어 두고, 앱이 오답노트를 불러올 때 그 카드로 기록을 옮긴다. 이 파일은 손으로 고치지 않는다.
-- `vocab_fixes.py --apply-listening`과 `auto_enrich.py --vocab-only --repo`는 보정 뒤에도 한자·병음·한글 뜻이 비거나 품사가 «단어»인 단어가 남으면 공개 데이터를 쓰지 않고 1로 끝난다.
+- 단어장 카드 id는 다시 만들어도 같은 단어면 그대로 둔다(오답노트가 id로 기록된다). 사라진 카드의 id는 `src/data/vocab-retired.json`에 은퇴시켜 다시 쓰지 않고, 새 단어는 은퇴 번호까지 포함한 최댓값 다음 번호를 받는다. 나눠서 사라진 카드는 `movedTo`에 기록을 이어받을 한자를 적어 두고, 앱이 오답노트를 불러올 때 그 카드로 옮긴다. 이 파일은 손으로 고치지 않는다.
+- `movedTo` 기준(값은 `tools/vocab_fixes.json`의 `movedTo`에 사람이 정한다): **뜻이 같은 카드만** — 같은 단어가 남아 있거나, 나머지 조각이 수사·양사·대명사·정도부사·조사·방향보어 같은 문법 요소뿐일 때 그 핵심 단어(很多→多, 一斤→斤). 내용어끼리 붙은 것(足球比赛), 잘못 끊긴 것(三四年, 个人), 남은 카드의 뜻이 다른 것(一米→米 «쌀»)은 `null`로 두어 옮기지 않는다.
+- `vocab_fixes.py --apply-listening`과 `auto_enrich.py --vocab-only --repo`는 모든 회차를 먼저 보정·검사하고, 한자·병음·한글 뜻이 비거나 품사가 «단어»인 단어가 하나라도 남으면 공개 데이터를 한 회차도 쓰지 않고 1로 끝난다(`auto_enrich`의 작업 폴더 해설 파일은 그 전에 이미 새로 만들어진다).
 - `--show-readings` 목록은 pypinyin과 음절이 다른 단어다. 다음자(还 hái/huán, 长 cháng/zhǎng, 得 de/děi 등)와 不·一 변조는 맞는 경우가 많으니 문맥을 보고 틀린 것만 고친다.
 
 ## 해설 쓰기

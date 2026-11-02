@@ -17,6 +17,7 @@ public/listening/*.json의 단어와 단어장 «HSK3 듣기» 단원만 보정�
 """
 import argparse
 import json
+import os
 import re
 import sys
 from pathlib import Path
@@ -116,8 +117,12 @@ def fix_vocab_checked(vocab, where, problems):
 
 
 # --- 단어장 카드 id 장부 ---
-# 오답노트(시험보기)는 카드 id로 기록된다. 다시 만들 때 사라진 카드의 id는 은퇴시켜 다시 쓰지 않고,
-# 같은 뜻을 이어받는 카드(보정 사전으로 나눈 첫 단어)를 적어 둔다. 앱이 오답노트를 불러올 때 그 카드로 옮긴다.
+# 오답노트(시험보기)는 카드 id로 기록된다. 다시 만들 때 사라진 카드의 id는 은퇴시켜 다시 쓰지 않는다.
+# 뜻이 같은 카드가 남아 있을 때만 movedTo에 그 한자를 적고, 앱이 오답노트를 불러올 때 그 카드로 옮긴다.
+# movedTo 기준: 같은 단어가 남아 있거나, 나머지 조각이 수사·양사·지시/인칭대명사·정도부사·조사·방향보어처럼
+# 문법 요소뿐일 때 그 핵심 단어(很多→多, 一斤→斤, 欢迎您→欢迎). 내용어끼리 붙은 것(足球比赛, 坐地铁),
+# 잘못 끊긴 것(个人, 三四年), 남은 카드의 뜻이 다른 것(一米→米 '쌀', 一张→张 '장씨')은 null.
+# 사람이 정한 값은 vocab_fixes.json의 movedTo에 둔다(같은 단어가 남은 경우 말고는 이 표에 없으면 null).
 ID_REGISTRY = Path('src') / 'data' / 'vocab-retired.json'
 
 
@@ -128,19 +133,43 @@ def load_id_registry(repo):
     return {'lastNo': {}, 'retired': {}}  # 장부가 없으면 지난번 카드 번호에서 이어 간다
 
 
-def save_id_registry(repo, registry):
-    path = Path(repo) / ID_REGISTRY
-    path.parent.mkdir(parents=True, exist_ok=True)
-    registry['retired'] = dict(sorted(registry['retired'].items()))
-    path.write_text(json.dumps(registry, ensure_ascii=False, indent=1) + '\n', encoding='utf-8')
+def registry_text(registry):
+    registry = {**registry, 'retired': dict(sorted(registry['retired'].items()))}
+    return json.dumps(registry, ensure_ascii=False, indent=1) + '\n'
+
+
+def write_files_atomically(contents):
+    """{경로: 내용}을 모두 임시 파일에 쓴 뒤 os.replace로 한꺼번에 바꾼다(중간에 실패하면 원본은 그대로)."""
+    staged = []
+    try:
+        for path, text in contents.items():
+            path = Path(path)
+            path.parent.mkdir(parents=True, exist_ok=True)
+            tmp = path.with_name(f'.{path.name}.tmp')
+            tmp.write_text(text, encoding='utf-8')
+            staged.append((tmp, path))
+    except Exception:
+        for tmp, _ in staged:
+            tmp.unlink(missing_ok=True)
+        raise
+    for tmp, path in staged:
+        os.replace(tmp, path)
 
 
 def id_number(entry_id):
     return int(str(entry_id).rsplit('-', 1)[1])
 
 
+def moved_to(hanzi, hanzi_alive, table=None):
+    """은퇴한 카드의 기록을 이어받을 한자. 같은 단어가 남아 있으면 그 단어, 아니면 vocab_fixes.json movedTo의 값."""
+    if hanzi in hanzi_alive:
+        return hanzi
+    target = (table or fixes()).get('movedTo', {}).get(hanzi)
+    return target if target in hanzi_alive else None
+
+
 class CardIds:
-    """한 단원(예: 'HSK3 듣기', 접두사 'HSK3L')의 카드 id를 정한다. 같은 단어는 같은 id, 새 단어는
+    """한 단원(접두사 'HSK3L'·'HSK3R')의 카드 id를 정한다. 같은 단어는 같은 id, 새 단어는
     은퇴한 번호까지 포함한 최댓값 다음 번호."""
 
     def __init__(self, repo, prefix, previous):
@@ -157,19 +186,32 @@ class CardIds:
         self.last_no += 1
         return f'{self.prefix}-{self.last_no:03d}'
 
-    def finish(self, final_vocab):
-        """새 vocab.json(전체)을 받아 사라진 id를 은퇴시키고 장부를 저장한다."""
-        alive = {entry['id'] for entry in final_vocab}
-        hanzi_alive = {entry['hanzi'] for entry in final_vocab}
-        split = fixes().get('split', {})
+    def plan(self, final_vocab):
+        """새 vocab.json(전체)에 맞는 장부를 계산하고 검사한다. 파일은 쓰지 않는다."""
+        ids = [entry['id'] for entry in final_vocab]
+        if len(ids) != len(set(ids)):
+            raise ValueError('vocab.json에 같은 id가 둘 이상 있다')
+        alive, hanzi_alive = set(ids), {entry['hanzi'] for entry in final_vocab}
+        retired = {key: dict(value) for key, value in self.registry['retired'].items()}
         for hanzi, entry_id in self.previous.items():
-            if entry_id in alive:
-                continue
-            candidates = [hanzi] + [part.split('#', 1)[0] for part in split.get(hanzi, [])]
-            moved = next((candidate for candidate in candidates if candidate in hanzi_alive), None)
-            self.registry['retired'][entry_id] = {'hanzi': hanzi, **({'movedTo': moved} if moved else {})}
-        self.registry['lastNo'][self.prefix] = self.last_no
-        save_id_registry(self.repo, self.registry)
+            if entry_id not in alive:
+                retired[entry_id] = {'hanzi': hanzi}
+        for value in retired.values():  # 이전 은퇴 항목도 지금 기준으로 다시 정한다(사람이 고친 표를 따른다)
+            value['movedTo'] = moved_to(value['hanzi'], hanzi_alive)
+        reused = alive & set(retired)
+        if reused:
+            raise ValueError(f'은퇴한 id를 다시 썼다: {sorted(reused)}')
+        last_no = {**self.registry['lastNo'], self.prefix: self.last_no}
+        return {**self.registry, 'lastNo': last_no, 'retired': retired}
+
+    def write(self, vocab_path, final_vocab):
+        """장부를 먼저 계산·검사한 뒤 vocab.json과 장부를 함께 바꾼다."""
+        registry = self.plan(final_vocab)
+        write_files_atomically({
+            vocab_path: json.dumps(final_vocab, ensure_ascii=False, indent=2) + '\n',
+            Path(self.repo) / ID_REGISTRY: registry_text(registry),
+        })
+        self.registry = registry
 
 
 def count_problems(repo):
@@ -199,7 +241,8 @@ def count_problems(repo):
 def apply_listening(repo):
     """public/listening/*.json의 단어를 보정하고, 단어장 «HSK3 듣기» 단원을 assemble.py와 같은 규칙으로 다시 넣는다.
 
-    보정 뒤에도 문제가 남으면 아무 파일도 쓰지 않고 VocabProblems를 낸다.
+    보정 뒤에도 문제가 남으면 아무 파일도 쓰지 않고 VocabProblems를 낸다. 단어장·장부를 바꾼 뒤에
+    공개 듣기 파일을 한꺼번에 바꾼다.
     """
     sys.path.insert(0, str(Path(__file__).parent / 'listening'))
     from assemble import update_vocab  # tools/listening/assemble.py
@@ -212,8 +255,7 @@ def apply_listening(repo):
         tests.append((path, data))
     if problems:
         raise VocabProblems(problems)
-    for path, data in tests:
-        path.write_text(json.dumps(data, ensure_ascii=False, separators=(',', ':')), encoding='utf-8')
+    files = {path: json.dumps(data, ensure_ascii=False, separators=(',', ':')) for path, data in tests}
     tests = [data for _, data in tests]
     index = json.loads((Path(repo) / 'src' / 'data' / 'listening-index.json').read_text(encoding='utf-8'))
     order = {entry['id']: position for position, entry in enumerate(index)}
@@ -224,7 +266,8 @@ def apply_listening(repo):
     path = Path(repo) / 'src' / 'data' / 'vocab.json'
     vocab = json.loads(path.read_text(encoding='utf-8'))
     vocab = [e for e in vocab if e.get('lesson') != READING_LESSON] + [e for e in vocab if e.get('lesson') == READING_LESSON]
-    path.write_text(json.dumps(vocab, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+    files[path] = json.dumps(vocab, ensure_ascii=False, indent=2) + '\n'
+    write_files_atomically(files)  # 단어장 장부 검사가 끝난 뒤에야 공개 듣기 파일을 바꾼다
     return len(tests), added
 
 
