@@ -317,14 +317,7 @@ def main(argv=None):
     parser.add_argument('--apply-sentences', action='store_true',
                         help='독해·듣기 문장 words의 붙은 토큰을 나누고 vocab.json 예문 병음을 고친다(tools/sentence_split.py)')
     args = parser.parse_args(argv)
-    if args.apply_sentences:
-        pairs, files, cards, skipped = apply_sentences(args.repo)
-        print(f'문장의 붙은 토큰 {pairs}종을 나눴습니다(회차 파일 {files}개, vocab.json 카드 {cards}개).')
-        for token, pinyin in skipped:
-            print(f'  ? 나누지 못함: {token} {pinyin}')
-        from mine_refresh import refresh_after_write
-        if not refresh_after_write(args.repo):
-            return 1  # 데이터는 썼지만 내 단어장 갱신 색인을 쓰지 못했다
+    # 고른 데이터 작업을 모두 끝낸 뒤 마지막에 내 단어장 갱신 색인을 한 번만 다시 쓴다(못 쓰면 1).
     if args.apply_listening:
         try:
             tests, added = apply_listening(args.repo)
@@ -334,8 +327,14 @@ def main(argv=None):
             print(f'문제 {len(error.problems)}개. 파일을 쓰지 않았습니다.')
             return 1
         print(f'듣기 회차 {tests}개의 단어를 보정했고, 단어장에 «HSK3 듣기» 단어 {added}개를 다시 넣었습니다.')
-        from mine_refresh import refresh_after_write  # 내 단어장 갱신 색인도 지금 데이터로(순환 import라 여기서 가져온다)
-        if not refresh_after_write(args.repo):
+    if args.apply_sentences:
+        pairs, files, cards, skipped = apply_sentences(args.repo)
+        print(f'문장의 붙은 토큰 {pairs}종을 나눴습니다(회차 파일 {files}개, vocab.json 카드 {cards}개).')
+        for token, pinyin in skipped:
+            print(f'  ? 나누지 못함: {token} {pinyin}')
+    if args.apply_listening or args.apply_sentences:
+        import mine_refresh  # 순환 import라 여기서 가져온다(mine_refresh가 이 파일을 불러온다)
+        if not mine_refresh.refresh_after_write(args.repo):
             return 1  # 데이터는 썼지만 내 단어장 갱신 색인을 쓰지 못했다
     counts = count_problems(args.repo)
     for kind, count in counts.items():

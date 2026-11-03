@@ -210,33 +210,50 @@ export function configureMineRefresh(refresh) {
   current = null;
 }
 
-// 2026-11-04 갱신(src/mineRefresh.js)이 처음 바꾸기 전의 저장값을 그대로 한 번만 남겨 둡니다. 이미 있으면 덮지 않습니다.
-export const MINE_BACKUP_KEY = `${MINE_KEY}-backup-2026-11-04`;
+// 갱신(src/mineRefresh.js)이 처음 바꾸기 전의 저장값을 이전(migration) ID별로 한 번만 그대로 남겨 둡니다.
+// 같은 ID의 백업이 있으면 덮지 않습니다. 크기는 내 단어장 저장값과 같습니다(항목 100개에 약 30KB).
+export const MINE_MIGRATION_ID = 'mine-refresh-1';
+export const MINE_BACKUP_KEY = `${MINE_KEY}-backup-${MINE_MIGRATION_ID}`;
 
-function backupOnce() {
+// 백업이 있거나(이미 했거나 원본이 없음) 이번에 성공하면 true. 저장 공간 부족 등으로 실패하면 false.
+function ensureBackup() {
   try {
-    if (localStorage.getItem(MINE_BACKUP_KEY) !== null) return;
+    if (localStorage.getItem(MINE_BACKUP_KEY) !== null) return true;
     const raw = localStorage.getItem(MINE_KEY);
-    if (raw !== null) localStorage.setItem(MINE_BACKUP_KEY, raw);
+    if (raw === null) return true;
+    localStorage.setItem(MINE_BACKUP_KEY, raw);
+    return localStorage.getItem(MINE_BACKUP_KEY) === raw;
   } catch {
-    // 백업을 못 해도 학습은 막지 않습니다.
+    return false;
   }
 }
+
+// 불러올 때 바꾼 것을 백업 실패로 저장하지 못했는지. 그러면 이번에는 화면(메모리)에만 갱신본을 보여 주고,
+// 다음에 불러올 때 다시 시도합니다. 그 사이 사용자가 담기·빼기·모르겠어로 저장하면 백업을 한 번 더 시도하고,
+// 실패해도 저장은 막지 않고 콘솔에 경고만 남깁니다(그때 갱신본이 저장됩니다).
+let refreshUnsaved = false;
 
 export function loadMine() {
   if (current === null) {
     const saved = sanitize(readJson(MINE_KEY, {}));
     current = refreshItems(saved.map(dropAutoReadingUsage));
-    // 지우거나 바꾼 것이 있으면 원래 저장값을 백업한 뒤 한 번 저장해 둡니다(다음부터는 바꿀 것이 없어 쓰지 않습니다).
+    refreshUnsaved = false;
+    // 지우거나 바꾼 것이 있으면 원래 저장값을 백업한 뒤에만 한 번 저장합니다(다음부터는 바꿀 것이 없어 쓰지 않습니다).
     if (current.length !== saved.length || current.some((entry, index) => entry !== saved[index])) {
-      backupOnce();
-      writeJson(MINE_KEY, { version: 1, items: current });
+      if (ensureBackup()) writeJson(MINE_KEY, { version: 1, items: current });
+      else refreshUnsaved = true;
     }
   }
   return current;
 }
 
 function commit(next) {
+  if (refreshUnsaved) {
+    if (!ensureBackup()) {
+      console.warn(`내 단어장: 갱신 전 저장값을 백업하지 못했습니다(${MINE_BACKUP_KEY}). 갱신된 목록으로 저장합니다.`);
+    }
+    refreshUnsaved = false;
+  }
   current = next;
   writeJson(MINE_KEY, { version: 1, items: next });
   listeners.forEach((listener) => listener());
@@ -271,6 +288,7 @@ export function subscribeMine(listener) {
 
 export function resetMineForTest() {
   current = null;
+  refreshUnsaved = false;
   refreshItems = (items) => items;
   listeners.clear();
 }

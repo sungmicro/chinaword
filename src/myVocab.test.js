@@ -353,3 +353,60 @@ test('저장소: «모르겠어» 3번 → 모름 3, «알겠어» 1번 → 모�
   assert.equal(localStorage.getItem(MINE_KEY), before);
   assert.equal(calls, 0);
 });
+
+test('저장소: 백업을 쓸 수 없으면(저장 공간 부족) 원본을 덮지 않고 갱신본은 화면에만, 사용자가 저장하면 경고 후 저장한다', () => {
+  const old = {
+    key: 'word:比较忙:bijiaomang', kind: 'word', hanzi: '比较忙', pinyin: 'bǐjiàománg', meaningKo: '比较忙', partOfSpeech: '단어',
+    note: '', exampleZh: '', examplePinyin: '', exampleKo: '', source: 'H31006 독해 52번', addedAt: '2026-10-20T05:00:00.000Z'
+  };
+  const original = JSON.stringify({ version: 1, items: [old] });
+  const storage = memoryStorage({ [MINE_KEY]: original });
+  const setItem = storage.setItem;
+  storage.setItem = (key, value) => {
+    if (key === MINE_BACKUP_KEY) throw new Error('QuotaExceededError');
+    setItem(key, value);
+  };
+  useStorage(storage);
+  const refresh = (items) => items.flatMap((entry) => entry.hanzi === '比较忙'
+    ? ['比较', '忙'].map((hanzi) => ({ ...entry, hanzi, key: `word:${hanzi}` }))
+    : [entry]);
+  const warnings = [];
+  const warn = console.warn;
+  console.warn = (message) => warnings.push(message);
+  try {
+    resetMineForTest();
+    configureMineRefresh(refresh);
+    assert.deepEqual(loadMine().map((entry) => entry.hanzi), ['比较', '忙']); // 화면에는 갱신본
+    assert.equal(storage.getItem(MINE_KEY), original); // 원본은 그대로
+    assert.equal(storage.getItem(MINE_BACKUP_KEY), null);
+    assert.equal(warnings.length, 0);
+    // 다음에 불러올 때 다시 시도한다(여전히 실패하면 여전히 원본 그대로)
+    resetMineForTest();
+    configureMineRefresh(refresh);
+    loadMine();
+    assert.equal(storage.getItem(MINE_KEY), original);
+    // 사용자가 직접 저장하면(빼기) 백업을 다시 시도하고, 실패하면 경고를 남기고 저장한다
+    removeMine('word:忙');
+    assert.equal(warnings.length, 1);
+    assert.deepEqual(JSON.parse(storage.getItem(MINE_KEY)).items.map((entry) => entry.hanzi), ['比较']);
+    // 그 뒤 저장은 경고 없이
+    removeMine('word:比较');
+    assert.equal(warnings.length, 1);
+  } finally {
+    console.warn = warn;
+  }
+});
+
+test('저장소: 백업 키는 이전 ID(mine-refresh-1)이고, 이미 있으면 덮지 않는다', () => {
+  assert.equal(MINE_BACKUP_KEY, 'sungmi-vocab-mine-v1-backup-mine-refresh-1');
+  const storage = memoryStorage({
+    [MINE_KEY]: JSON.stringify({ version: 1, items: [{ key: 'word:a', kind: 'word', hanzi: 'a', meaningKo: '' }] }),
+    [MINE_BACKUP_KEY]: 'earlier'
+  });
+  useStorage(storage);
+  resetMineForTest();
+  configureMineRefresh((items) => items.map((entry) => ({ ...entry, meaningKo: '뜻' })));
+  loadMine();
+  assert.equal(storage.getItem(MINE_BACKUP_KEY), 'earlier');
+  assert.equal(JSON.parse(storage.getItem(MINE_KEY)).items[0].meaningKo, '뜻');
+});

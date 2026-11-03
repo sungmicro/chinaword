@@ -86,3 +86,62 @@ class CurrentDataTest(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
+
+class VocabFixesBothFlagsTest(unittest.TestCase):
+    """vocab_fixes.py --apply-listening --apply-sentences: 데이터 작업을 모두 끝낸 뒤 색인을 한 번만 갱신하고, 실패하면 1."""
+
+    def setUp(self):
+        import tempfile
+        import mine_refresh
+        import sentence_split
+        self.mine_refresh, self.sentence_split = mine_refresh, sentence_split
+        self.saved = (mine_refresh.refresh_after_write, sentence_split.SPLITS_PATH)
+        self.tmp = tempfile.TemporaryDirectory()
+        root = self.root = Path(self.tmp.name)
+        sentence_split.SPLITS_PATH = root / 'sentence_splits.json'
+        for folder in ('src/data', 'public/listening', 'public/reading'):
+            (root / folder).mkdir(parents=True)
+        (root / 'src/data/vocab.json').write_text('[]', encoding='utf-8')
+        (root / 'src/data/listening-index.json').write_text('[{"id": "H1", "title": "t", "count": 1}]', encoding='utf-8')
+        listening = {'id': 'H1', 'title': 't', 'items': [{
+            'no': 1, 'part': 3,
+            'script': [{'speaker': '男', 'words': [['因为', 'yīnwèi'], ['比较忙', 'bǐjiàománg'], ['。', '']], 'ko': '바빠서.'}],
+            'choices': {'type': 'text', 'options': [{'label': 'A', 'words': [['很多', 'hěnduō']], 'ko': '많다'}]},
+            'vocab': [{'hanzi': '因为', 'pinyin': 'yīnwèi', 'partOfSpeech': '접속사', 'meaningKo': '왜냐하면'}],
+        }]}
+        reading = {'id': 'H1', 'items': [{'no': 1, 'lines': [{'words': [['很多', 'hěnduō']], 'ko': '많다'}],
+                                          'explain': {'vocab': []}}]}
+        (root / 'public/listening/H1.json').write_text(json.dumps(listening, ensure_ascii=False), encoding='utf-8')
+        (root / 'public/reading/H1.json').write_text(json.dumps(reading, ensure_ascii=False), encoding='utf-8')
+
+    def tearDown(self):
+        self.mine_refresh.refresh_after_write, self.sentence_split.SPLITS_PATH = self.saved
+        self.tmp.cleanup()
+
+    def run_main(self, result):
+        import vocab_fixes
+        calls = []
+
+        def refresh(repo):
+            # 색인은 데이터 작업이 모두 끝난 뒤에 부른다: 이때 독해·듣기 문장이 이미 나뉘어 있어야 한다
+            reading = json.loads((self.root / 'public/reading/H1.json').read_text(encoding='utf-8'))
+            calls.append(reading['items'][0]['lines'][0]['words'])
+            return result
+        self.mine_refresh.refresh_after_write = refresh
+        code = vocab_fixes.main(['--repo', str(self.root), '--apply-listening', '--apply-sentences'])
+        return code, calls
+
+    def test_both_flags_refresh_once_at_the_end(self):
+        code, calls = self.run_main(True)
+        self.assertEqual(code, 0)
+        self.assertEqual(calls, [[['很', 'hěn'], ['多', 'duō']]])
+        listening = json.loads((self.root / 'public/listening/H1.json').read_text(encoding='utf-8'))
+        self.assertEqual(listening['items'][0]['script'][0]['words'][1:3], [['比较', 'bǐjiào'], ['忙', 'máng']])
+        vocab = json.loads((self.root / 'src/data/vocab.json').read_text(encoding='utf-8'))
+        self.assertEqual([card['examplePinyin'] for card in vocab], ['Yīnwèi bǐjiào máng.'])
+
+    def test_both_flags_exit_non_zero_when_index_fails(self):
+        code, calls = self.run_main(False)
+        self.assertEqual(code, 1)
+        self.assertEqual(len(calls), 1)
