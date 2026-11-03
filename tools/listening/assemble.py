@@ -21,6 +21,7 @@ from pypinyin import Style, lazy_pinyin
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from vocab_fixes import CardIds, fix_vocab, vocab_problems  # noqa: E402  tools/vocab_fixes.py
 from mine_refresh import refresh_after_write  # noqa: E402  tools/mine_refresh.py
+from sentence_split import SPLITS_PATH, merge_splits, split_test_sentences  # noqa: E402  tools/sentence_split.py
 from script_fixes import apply_script_fixes  # noqa: E402  tools/listening/script_fixes.py
 
 LESSON = 'HSK3 듣기'
@@ -227,6 +228,12 @@ def main():
         print('검사 통과 (--check라 파일은 쓰지 않았습니다).')
         return 0
 
+    # 문장 words의 붙은 토큰(比较忙 bǐjiàománg)을 나눈다(tools/sentence_split.py). 단어장 예문 병음도 나뉜 words로 만든다.
+    log = {}
+    for test in tests:
+        split_test_sentences(test, log=log)
+    if log:
+        SPLITS_PATH.write_text(merge_splits(log), encoding='utf-8')
     public = repo / 'public' / 'listening'
     for test in tests:
         (public / f'{test["id"]}.json').write_text(json.dumps(test, ensure_ascii=False, separators=(',', ':')), encoding='utf-8')

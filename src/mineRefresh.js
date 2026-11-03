@@ -10,6 +10,8 @@
 //  2. 나뉜 묶음(split: 比较忙 → 比较·忙, 李先生 → 李·先生)은 조각으로 바꿉니다.
 //  3. 나머지는 vocab.json의 첫 «단어» 카드, 없으면 해설의 기본 뜻(base)으로 맞춥니다.
 //  4. 어디에도 없는 단어는 뜻에 한글이 있으면 그대로 두고, 없으면 뺍니다. 옮길 단어가 빈 목록이면 뺍니다.
+//  5. 예문 병음(examplePinyin, 모든 항목)과 문장 항목의 병음에 남은 붙은 토큰(bǐjiàománg)은 나눈 병음(bǐjiào máng)으로
+//     바꿉니다(색인 pinyin = tools/sentence_splits.json, tools/sentence_split.py fix_pinyin_text와 같은 규칙).
 // 조각·바꾼 단어는 원래 항목의 출처·담은 시각·담은 방법(addedBy)·메모·모름 횟수를 이어받고, 이미 담긴 단어와 겹치면
 // 하나로 합칩니다(모름 횟수는 큰 값, 직접 담은 쪽이 이깁니다). 두 번 돌려도 결과가 같습니다.
 
@@ -42,6 +44,42 @@ function mergeText(a, b) {
   if (!a) return b ?? '';
   if (!b || a.includes(b)) return a;
   return `${a} / ${b}`;
+}
+
+const isLetter = (char) => Boolean(char) && /\p{L}/u.test(char);
+
+// [(붙은, 나눈)] — 원래 표기와 첫 글자 대문자 표기(문장 첫머리). 원래 표기가 이기고, 긴 것부터.
+function variants(table) {
+  const pairs = new Map();
+  const sorted = Object.entries(table).sort(([a], [b]) => (a < b ? -1 : a > b ? 1 : 0));
+  sorted.forEach(([glued, spaced]) => { if (!pairs.has(glued)) pairs.set(glued, spaced); });
+  sorted.forEach(([glued, spaced]) => {
+    const upper = glued.charAt(0).toUpperCase() + glued.slice(1);
+    if (!pairs.has(upper)) pairs.set(upper, spaced.charAt(0).toUpperCase() + spaced.slice(1));
+  });
+  return [...pairs.entries()].sort(([a], [b]) => b.length - a.length || (a < b ? -1 : a > b ? 1 : 0));
+}
+
+// 문장 병음 text에서, 한자 문장 zh에 있는 토큰의 붙은 병음을 나눈 병음으로(앞뒤가 글자가 아닐 때만).
+export function fixPinyinText(text, zh, fixes) {
+  if (!text || !zh || !fixes) return text;
+  let out = text;
+  for (const token of Object.keys(fixes).sort()) {
+    if (!zh.includes(token)) continue;
+    for (const [glued, spaced] of variants(fixes[token])) {
+      let result = '';
+      let pos = 0;
+      for (;;) {
+        const found = out.indexOf(glued, pos);
+        if (found < 0) break;
+        const end = found + glued.length;
+        result += isLetter(out[found - 1]) || isLetter(out[end]) ? out.slice(pos, end) : out.slice(pos, found) + spaced;
+        pos = end;
+      }
+      out = result + out.slice(pos);
+    }
+  }
+  return out;
 }
 
 const countOf = (entry) => (Number.isInteger(entry?.unknownCount) && entry.unknownCount > 0 ? entry.unknownCount : 0);
@@ -111,8 +149,18 @@ export function makeMineRefresher(index, vocab, wordKey) {
     return { ...entry, key: wordKey(hanzi, sense.pinyin), hanzi, ...sense };
   }
 
+  // 예문 병음(모든 항목)과 문장 항목 병음의 붙은 토큰을 나눈 병음으로. 바뀌지 않았으면 같은 객체.
+  function fixPinyin(entry) {
+    const examplePinyin = fixPinyinText(entry.examplePinyin, entry.exampleZh, index.pinyin);
+    const isSentence = entry.kind === 'word' && entry.itemType && entry.itemType !== WORD_TYPE;
+    const pinyin = isSentence ? fixPinyinText(entry.pinyin, entry.hanzi, index.pinyin) : entry.pinyin;
+    if (examplePinyin === entry.examplePinyin && pinyin === entry.pinyin) return entry;
+    return { ...entry, examplePinyin, pinyin };
+  }
+
   // 항목 하나 → 지금 데이터의 항목 0개 이상. 바뀌지 않았으면 같은 객체를 돌려줍니다.
-  function refreshEntry(entry) {
+  function refreshEntry(original) {
+    const entry = fixPinyin(original);
     if (entry.kind !== 'word' || (entry.itemType && entry.itemType !== WORD_TYPE)) return [entry];
     const context = { address: sourceAddress(entry.source), lesson: sourceLesson(entry.source) };
     const targets = targetsOf(entry.hanzi, context);

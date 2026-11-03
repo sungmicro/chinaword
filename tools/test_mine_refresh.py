@@ -25,7 +25,9 @@ FIXES = {
     'split': {'比较忙': ['比较', '忙'], '儿': [], '老李': ['老#호칭', '李']},
     'items': {'listening/H1/2': {'谢': ['谢#성씨'], '北': []}, 'listening/H1/3': {'可乐': []}},
 }
-MOVES = {'_about': '테스트', 'listening/H1/3': {'可乐': ['渴']}}
+MOVES = {'_about': '테스트', 'words': {'车辆': {'pinyin': 'chēliàng', 'partOfSpeech': '명사', 'meaningKo': '차량'},
+                                    '角#자오': {'pinyin': 'jiǎo', 'partOfSpeech': '양사', 'meaningKo': '자오(돈 단위)'}},
+         'split': {'很着急': ['着急']}, 'moved': {'listening/H1/3': {'可乐': ['渴']}}}
 
 
 def make_repo(root, reading=None, listening=None, vocab=None):
@@ -35,7 +37,8 @@ def make_repo(root, reading=None, listening=None, vocab=None):
     (root / 'public' / 'listening').mkdir(parents=True)
     (root / 'src' / 'data' / 'vocab.json').write_text(json.dumps(vocab or [
         card('比较', 'bǐjiào', '비교하다'), card('忙', 'máng', '바쁘다'), card('老', 'lǎo', '늙다'),
-        card('渴', 'kě', '목마르다'), card('谢', 'xiè', '감사하다'), card('句子', 'jùzi', '문장', item_type='문장'),
+        card('渴', 'kě', '목마르다'), card('谢', 'xiè', '감사하다'), card('着急', 'zháojí', '조급해하다'),
+        card('句子', 'jùzi', '문장', item_type='문장'),
     ], ensure_ascii=False), encoding='utf-8')
     (root / 'public' / 'reading' / 'H1.json').write_text(json.dumps({'id': 'H1', 'items': reading or [
         {'no': 52, 'explain': {'vocab': [word('比较', 'bǐjiào', '비교적', '부사'), word('忙', 'máng', '바쁘다'),
@@ -62,7 +65,20 @@ class BuildIndexTest(unittest.TestCase):
         self.assertNotIn('李', index['at'].get('reading/H1/52', {}))  # 기본 뜻과 같다
         self.assertNotIn('忙', index['at'].get('reading/H1/52', {}))  # vocab.json과 같다
         self.assertEqual(senses[index['at']['listening/H1/2']['谢']], ('xiè', '셰(谢, 성씨)', '고유명사'))
-        self.assertEqual(index['split'], {'儿': [], '老李': ['老', '李'], '比较忙': ['比较', '忙']})
+        self.assertEqual(index['split'], {'儿': [], '很着急': ['着急'], '老李': ['老', '李'], '比较忙': ['比较', '忙']})
+
+    def test_mine_words_become_base_and_tagged_targets_only_apply_in_that_question(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            repo = make_repo(tmp, vocab=[card('比较', 'bǐjiào', '비교하다'), card('忙', 'máng', '바쁘다'), card('老', 'lǎo', '늙다'),
+                                         card('渴', 'kě', '목마르다'), card('谢', 'xiè', '감사하다'), card('角', 'jiǎo', '모서리'),
+                                         card('着急', 'zháojí', '조급해하다')])
+            moves = {**MOVES, 'moved': {'listening/H1/3': {'可乐': ['渴'], '脚': ['角#자오']}}}
+            index = build_index(repo, FIXES, moves)
+        senses = [tuple(sense) for sense in index['senses']]
+        self.assertEqual(senses[index['base']['车辆']], ('chēliàng', '차량', '명사'))
+        self.assertEqual(senses[index['at']['listening/H1/3']['角']], ('jiǎo', '자오(돈 단위)', '양사'))
+        self.assertEqual(index['moved']['listening/H1/3'], {'可乐': ['渴'], '脚': ['角']})
+        self.assertNotIn('角', index['base'])
 
     def test_moves_merge_items_and_mine_moves(self):
         moved = merged_moves(FIXES, MOVES)
@@ -71,9 +87,12 @@ class BuildIndexTest(unittest.TestCase):
 
     def test_problems_stop_before_writing(self):
         cases = [
-            ({**MOVES, 'listening/H1/3': {'可乐': ['没有的词']}}, FIXES, '뜻을 찾을 수 없음'),
-            ({**MOVES, 'listening/H1/3': {'渴': ['忙']}}, FIXES, '해설에 아직 있음'),
-            ({**MOVES, 'listening/H9/9': {'可乐': []}}, FIXES, '그런 문항이 없음'),
+            ({**MOVES, 'moved': {'listening/H1/3': {'可乐': ['没有的词']}}}, FIXES, '뜻을 찾을 수 없음'),
+            ({**MOVES, 'moved': {'listening/H1/3': {'渴': ['忙']}}}, FIXES, '해설에 아직 있음'),
+            ({**MOVES, 'moved': {'listening/H9/9': {'可乐': []}}}, FIXES, '그런 문항이 없음'),
+            ({**MOVES, 'moved': {'listening/H1/3': {'可乐': ['角#없는뜻']}}}, FIXES, 'words에 뜻이 없음'),
+            ({**MOVES, 'words': {'忙': {'pinyin': 'máng', 'partOfSpeech': '형용사', 'meaningKo': '바쁘다'}}}, FIXES, '이미 있음'),
+            ({**MOVES, 'split': {'比较忙': ['比较', '忙']}}, FIXES, 'vocab_fixes.json split에도'),
             (MOVES, {**FIXES, 'split': {**FIXES['split'], '忙了': ['忙'], '忙': ['忙']}}, '다시 split'),
             (MOVES, {**FIXES, 'split': {**FIXES['split'], '渴': []}}, '해설에 아직 있음'),
         ]

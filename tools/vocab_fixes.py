@@ -248,11 +248,13 @@ def apply_listening(repo):
     sys.path.insert(0, str(Path(__file__).parent / 'listening'))
     from assemble import update_vocab  # tools/listening/assemble.py
     from script_fixes import apply_script_fixes  # tools/listening/script_fixes.py
+    from sentence_split import merge_splits, split_test_sentences, SPLITS_PATH
 
-    tests, problems = [], []
+    tests, problems, log = [], [], {}
     for path in sorted((Path(repo) / 'public' / 'listening').glob('H*.json')):
         data = json.loads(path.read_text(encoding='utf-8'))
         apply_script_fixes(data, problems)  # 대본 인식 오류 보정(문항 단어를 바꾸면 아래 보정도 거친다)
+        split_test_sentences(data, log=log)  # 문장 words의 붙은 토큰(比较忙)도 나눈다(tools/sentence_split.py)
         for item in data['items']:
             item['vocab'] = fix_vocab_checked(item['vocab'], f'listening/{data["id"]}/{item["no"]}', problems)
         tests.append((path, data))
@@ -270,15 +272,56 @@ def apply_listening(repo):
     vocab = json.loads(path.read_text(encoding='utf-8'))
     vocab = [e for e in vocab if e.get('lesson') != READING_LESSON] + [e for e in vocab if e.get('lesson') == READING_LESSON]
     files[path] = json.dumps(vocab, ensure_ascii=False, indent=2) + '\n'
+    if log:
+        files[SPLITS_PATH] = merge_splits(log)
     write_files_atomically(files)  # 단어장 장부 검사가 끝난 뒤에야 공개 듣기 파일을 바꾼다
     return len(tests), added
+
+
+def apply_sentences(repo):
+    """공개 독해·듣기 회차의 문장 words에서 붙은 토큰을 나누고(tools/sentence_split.py), src/data/vocab.json의
+    예문 병음·문장 카드 병음도 같은 표로 고친다. 몇 번 돌려도 같다. (나눈 토큰 수, 고친 카드 수, 못 나눈 토큰)을 돌려준다."""
+    from sentence_split import SPLITS_PATH, fix_vocab_pinyin, load_splits, merge_splits, split_test_sentences
+
+    repo = Path(repo)
+    files, log, skipped, count = {}, {}, set(), 0
+    for kind in ('reading', 'listening'):
+        for path in sorted((repo / 'public' / kind).glob('H*.json')):
+            text = path.read_text(encoding='utf-8')
+            data = json.loads(text)
+            if split_test_sentences(data, log=log, skipped=skipped):
+                count += 1
+                files[path] = json.dumps(data, ensure_ascii=False, separators=(',', ':'))
+    fixes = load_splits()
+    for token, table in log.items():
+        fixes.setdefault(token, {}).update(table)
+    vocab_path = repo / 'src' / 'data' / 'vocab.json'
+    vocab = json.loads(vocab_path.read_text(encoding='utf-8'))
+    cards = fix_vocab_pinyin(vocab, fixes)
+    if cards:
+        files[vocab_path] = json.dumps(vocab, ensure_ascii=False, indent=2) + '\n'
+    splits = merge_splits(log)
+    if not SPLITS_PATH.exists() or SPLITS_PATH.read_text(encoding='utf-8') != splits:
+        files[SPLITS_PATH] = splits
+    if files:
+        write_files_atomically(files)
+    return sum(len(table) for table in log.values()), count, cards, sorted(skipped)
 
 
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--repo', required=True)
     parser.add_argument('--apply-listening', action='store_true', help='듣기 공개 데이터와 단어장 «HSK3 듣기» 단원을 보정한다')
+    parser.add_argument('--apply-sentences', action='store_true',
+                        help='독해·듣기 문장 words의 붙은 토큰을 나누고 vocab.json 예문 병음을 고친다(tools/sentence_split.py)')
     args = parser.parse_args()
+    if args.apply_sentences:
+        pairs, files, cards, skipped = apply_sentences(args.repo)
+        print(f'문장의 붙은 토큰 {pairs}종을 나눴습니다(회차 파일 {files}개, vocab.json 카드 {cards}개).')
+        for token, pinyin in skipped:
+            print(f'  ? 나누지 못함: {token} {pinyin}')
+        from mine_refresh import refresh_after_write
+        refresh_after_write(args.repo)
     if args.apply_listening:
         try:
             tests, added = apply_listening(args.repo)

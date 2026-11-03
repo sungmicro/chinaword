@@ -1,0 +1,239 @@
+{
+ "_about": "문장 words에서 나눈 붙은 토큰의 병음(붙은 → 나눈). tools/sentence_split.py가 나눌 때마다 더하고 지우지 않는다. vocab.json 예문 병음과 내 단어장에 담아 둔 예문 병음을 이 표로 바꾼다.",
+ "pinyin": {
+  "一个班": {
+   "yígèbān": "yí gè bān"
+  },
+  "一个碗": {
+   "yígèwǎn": "yí gè wǎn"
+  },
+  "一件": {
+   "yījiàn": "yī jiàn"
+  },
+  "一家": {
+   "yījiā": "yī jiā"
+  },
+  "一张": {
+   "yīzhāng": "yī zhāng"
+  },
+  "一斤": {
+   "yījīn": "yī jīn"
+  },
+  "一米": {
+   "yīmǐ": "yī mǐ"
+  },
+  "三四年": {
+   "sānsìnián": "sān sì nián"
+  },
+  "不下雨": {
+   "bùxiàyǔ": "bù xiàyǔ"
+  },
+  "世界地图": {
+   "shìjièdìtú": "shìjiè dìtú"
+  },
+  "个人": {
+   "gèrén": "gè rén"
+  },
+  "为您服务": {
+   "wèinínfúwù": "wèi nín fúwù"
+  },
+  "买点儿": {
+   "mǎidiǎnér": "mǎi diǎnér"
+  },
+  "刘阿姨": {
+   "liúāyí": "liú āyí"
+  },
+  "刮得": {
+   "guādé": "guā dé"
+  },
+  "十个": {
+   "shígè": "shí gè"
+  },
+  "又坏了": {
+   "yòuhuàile": "yòu huài le"
+  },
+  "发现自己": {
+   "fāxiànzìjǐ": "fāxiàn zìjǐ"
+  },
+  "同一个": {
+   "tóngyīgè": "tóngyī gè"
+  },
+  "向东走": {
+   "xiàngdōngzǒu": "xiàng dōng zǒu"
+  },
+  "喜不喜欢": {
+   "xǐbùxǐhuān": "xǐ bù xǐhuān"
+  },
+  "喝杯": {
+   "hēbēi": "hē bēi"
+  },
+  "国家图书馆": {
+   "guójiātúshūguǎn": "guójiā túshūguǎn"
+  },
+  "坐地铁": {
+   "zuòdìtiě": "zuò dìtiě"
+  },
+  "坐船去": {
+   "zuòchuánqù": "zuò chuán qù"
+  },
+  "多分钟": {
+   "duōfēnzhōng": "duō fēnzhōng"
+  },
+  "多喝水": {
+   "duōhēshuǐ": "duō hē shuǐ"
+  },
+  "多年": {
+   "duōnián": "duō nián"
+  },
+  "太小": {
+   "tàixiǎo": "tài xiǎo"
+  },
+  "她家": {
+   "tājiā": "tā jiā"
+  },
+  "好久没": {
+   "hǎojiǔméi": "hǎojiǔ méi"
+  },
+  "学习成绩": {
+   "xuéxíchéngjì": "xuéxí chéngjì"
+  },
+  "小学校长": {
+   "xiǎoxuéxiàozhǎng": "xiǎoxué xiàozhǎng"
+  },
+  "小张": {
+   "xiǎozhāng": "xiǎo zhāng"
+  },
+  "小马": {
+   "xiǎomǎ": "xiǎo mǎ"
+  },
+  "就让": {
+   "jiùràng": "jiù ràng"
+  },
+  "带我去": {
+   "dàiwǒqù": "dài wǒ qù"
+  },
+  "很多": {
+   "hěnduō": "hěn duō"
+  },
+  "很大": {
+   "hěndà": "hěn dà"
+  },
+  "很着急": {
+   "hěnzháojí": "hěn zháojí"
+  },
+  "很矮": {
+   "hěnǎi": "hěn ǎi"
+  },
+  "快好了": {
+   "kuàihǎole": "kuài hǎo le"
+  },
+  "快进来": {
+   "kuàijìnlái": "kuài jìnlái"
+  },
+  "我会": {
+   "wǒhuì": "wǒ huì"
+  },
+  "才能": {
+   "cáinéng": "cái néng"
+  },
+  "数学考试": {
+   "shùxuékǎoshì": "shùxué kǎoshì"
+  },
+  "新手机": {
+   "xīnshǒujī": "xīn shǒujī"
+  },
+  "是因为": {
+   "shìyīnwèi": "shì yīnwèi"
+  },
+  "李先生": {
+   "lǐxiānshēng": "lǐ xiānshēng"
+  },
+  "李医生": {
+   "lǐyīshēng": "lǐ yīshēng"
+  },
+  "李校长": {
+   "lǐxiàozhǎng": "lǐ xiàozhǎng"
+  },
+  "李经理": {
+   "lǐjīnglǐ": "lǐ jīnglǐ"
+  },
+  "李老师": {
+   "lǐlǎoshī": "lǐ lǎoshī"
+  },
+  "来得": {
+   "láide": "lái de"
+  },
+  "欢迎您": {
+   "huānyíngnín": "huānyíng nín"
+  },
+  "每天晚上": {
+   "měitiānwǎnshàng": "měitiān wǎnshàng"
+  },
+  "比较忙": {
+   "bǐjiàománg": "bǐjiào máng"
+  },
+  "王小姐": {
+   "wángxiǎojiě": "wáng xiǎojiě"
+  },
+  "王经理": {
+   "wángjīnglǐ": "wáng jīnglǐ"
+  },
+  "电视节目": {
+   "diànshìjiémù": "diànshì jiémù"
+  },
+  "白小姐": {
+   "báixiǎojiě": "bái xiǎojiě"
+  },
+  "真不错": {
+   "zhēnbùcuò": "zhēn bùcuò"
+  },
+  "真对不起": {
+   "zhēnduìbùqǐ": "zhēn duìbùqǐ"
+  },
+  "红颜色": {
+   "hóngyánsè": "hóng yánsè"
+  },
+  "老张": {
+   "lǎozhāng": "lǎo zhāng"
+  },
+  "老王": {
+   "lǎowáng": "lǎo wáng"
+  },
+  "老马": {
+   "lǎomǎ": "lǎo mǎ"
+  },
+  "腿疼": {
+   "tuǐténg": "tuǐ téng"
+  },
+  "西右东": {
+   "xīyòudōng": "xī yòu dōng"
+  },
+  "见过面": {
+   "jiànguòmiàn": "jiàn guò miàn"
+  },
+  "解决问题": {
+   "jiějuéwèntí": "jiějué wèntí"
+  },
+  "谢谢您": {
+   "xièxiènín": "xièxiè nín"
+  },
+  "足球比赛": {
+   "zúqiúbǐsài": "zúqiú bǐsài"
+  },
+  "这块": {
+   "zhèkuài": "zhè kuài"
+  },
+  "这段话": {
+   "zhèduànhuà": "zhè duàn huà"
+  },
+  "那件事": {
+   "nàjiànshì": "nà jiàn shì"
+  },
+  "那辆车": {
+   "nàliàngchē": "nà liàng chē"
+  },
+  "铅笔画": {
+   "qiānbǐhuà": "qiānbǐ huà"
+  }
+ }
+}

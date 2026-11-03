@@ -35,3 +35,4 @@ Make mobile compact quiz layout
 ## 내 단어장 갱신
 
 - 내 단어장(기기 저장)은 담을 때의 병음·뜻을 저장하므로, 앱이 불러올 때 `src/data/mine-refresh.json` 색인으로 단어 항목을 지금 데이터에 맞춘다(나뉜 묶음 比较忙 → 比较·忙, 대본 오인식 散 → 伞, 모름 횟수·출처·메모 유지, 문장·패턴은 그대로). 색인은 `tools/mine_refresh.py`가 공개 데이터·`tools/vocab_fixes.json`·`tools/mine_moves.json`에서 만들고 듣기·독해·쓰기 데이터를 쓰는 도구들이 마지막에 다시 쓰므로, 데이터를 고치면 갱신도 따라온다(오래되면 `npm test`가 실패한다 → `python3 tools/mine_refresh.py --repo .`).
+- 문장(대본·지문·보기) words의 붙은 토큰(比较忙 bǐjiàománg)은 `tools/sentence_split.py`가 나눈다. 데이터를 다시 만들면 듣기·독해 `assemble.py`와 `vocab_fixes.py --apply-listening`이 함께 나누고, 공개 데이터와 `vocab.json` 예문 병음만 고칠 때는 `python3 tools/vocab_fixes.py --repo . --apply-sentences`. 고친 병음은 `tools/sentence_splits.json`에 쌓여 내 단어장 예문 병음도 같은 표로 바뀐다.

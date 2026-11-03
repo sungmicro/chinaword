@@ -11,8 +11,12 @@
   base:   {한자: 뜻 번호}           vocab.json에 «단어» 카드가 없는 한자의 기본 뜻(해설에서 가장 많이 쓰인 뜻)
   at:     {문항 주소: {한자: 뜻 번호}}   그 문항 해설의 뜻이 기본 뜻(vocab.json 첫 «단어» 카드, 없으면 base)과 다를 때만
   split:  {예전 토큰: [한자, ...]}    tools/vocab_fixes.json split(나눈 묶음, 빈 목록은 뺀 토큰)
+          + tools/mine_moves.json split(해설에는 이미 없는 예전 붙은 토큰)
   moved:  {문항 주소: {예전 단어: [한자, ...]}}  vocab_fixes.json items(그 문항만 나누거나 뺀 것)와
-          tools/mine_moves.json(대본 오인식 단어 → 고친 단어)을 합친 것. 같은 키면 mine_moves가 이긴다.
+          tools/mine_moves.json moved(대본 오인식 단어 → 고친 단어)를 합친 것. 같은 키면 mine_moves가 이긴다.
+          mine_moves에서 뜻을 정한 바꿀 단어(角#자오)는 그 문항의 at에 그 뜻으로 들어간다.
+  pinyin: {토큰: {붙은 병음: 나눈 병음}}  tools/sentence_splits.json(문장에서 나눈 토큰). 내 단어장 예문 병음을 고친다.
+  base에는 tools/mine_moves.json words(지금 데이터에 없는 예전 단어의 뜻)도 들어간다.
 문항 주소: reading/<회차>/<번호>, listening/<회차>/<번호>, writing/<회차>/<번호> (vocab_fixes items와 같은 형식).
 
   mine_refresh.py --repo .           # 색인을 다시 쓴다
@@ -28,14 +32,16 @@ from collections import Counter
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+from sentence_split import load_splits  # noqa: E402
 from vocab_fixes import has_hangul, load_fixes, write_files_atomically  # noqa: E402
 
 INDEX_PATH = Path('src') / 'data' / 'mine-refresh.json'
 MOVES_PATH = Path(__file__).with_name('mine_moves.json')
 WORD_TYPE = '단어'
 ABOUT = ('내 단어장 갱신 색인. tools/mine_refresh.py가 공개 해설 데이터(public/reading·listening·writing), '
-         'src/data/vocab.json, tools/vocab_fixes.json(split·items), tools/mine_moves.json에서 만든다. 손으로 고치지 않는다. '
-         '앱(src/mineRefresh.js)이 내 단어장을 불러올 때 단어 항목을 지금 데이터의 병음·뜻·품사로 바꾸고, 나뉜 묶음은 조각으로 바꾼다.')
+         'src/data/vocab.json, tools/vocab_fixes.json(split·items), tools/mine_moves.json, tools/sentence_splits.json에서 만든다. 손으로 고치지 않는다. '
+         '앱(src/mineRefresh.js)이 내 단어장을 불러올 때 단어 항목을 지금 데이터의 병음·뜻·품사로 바꾸고, 나뉜 묶음은 조각으로, '
+         '예문 병음의 붙은 토큰(bǐjiàománg)은 나눈 병음으로 바꾼다.')
 
 
 def strip_sense(part_id):
@@ -83,11 +89,9 @@ def merged_moves(fixes, moves):
             targets = [strip_sense(part) for part in parts]
             if targets != [hanzi]:
                 out.setdefault(address, {})[hanzi] = targets
-    for address, table in moves.items():
-        if address.startswith('_'):
-            continue
+    for address, table in moves.get('moved', {}).items():
         for hanzi, targets in table.items():
-            out.setdefault(address, {})[hanzi] = list(targets)
+            out.setdefault(address, {})[hanzi] = list(targets)  # '角#자오'처럼 뜻을 정한 것은 build_index가 at으로 옮긴다
     return {address: dict(sorted(table.items())) for address, table in sorted(out.items())}
 
 
@@ -125,6 +129,18 @@ def build_index(repo, fixes=None, moves=None):
         if hanzi not in from_vocab:
             base[hanzi] = number(counts[hanzi].most_common(1)[0][0])
 
+    # 사람이 정한 예전 단어(tools/mine_moves.json words): 지금 데이터에 없는 한자만 기본 뜻으로 둔다.
+    tagged = {}
+    for key, fields in moves.get('words', {}).items():
+        sense = sense_of(fields)
+        if '#' in key:
+            tagged[key] = sense
+        elif key in from_vocab or key in base:
+            problems.append(f'mine_moves words {key}: 지금 데이터에 이미 있음(표에서 뺀다)')
+        else:
+            base[key] = number(sense)
+    base = dict(sorted(base.items()))
+
     def default(hanzi):
         return from_vocab.get(hanzi) or (tuple(senses[base[hanzi]]) if hanzi in base else None)
 
@@ -135,8 +151,28 @@ def build_index(repo, fixes=None, moves=None):
             if sense != default(word['hanzi']):
                 at.setdefault(address, {})[word['hanzi']] = number(sense)
 
-    split = {token: [strip_sense(part) for part in parts] for token, parts in sorted(fixes.get('split', {}).items())}
+    split = {token: [strip_sense(part) for part in parts] for token, parts in fixes.get('split', {}).items()}
+    for token, parts in moves.get('split', {}).items():
+        if token in split:
+            problems.append(f'mine_moves split {token}: vocab_fixes.json split에도 있음')
+        split[token] = [strip_sense(part) for part in parts]
+    split = dict(sorted(split.items()))
     moved = merged_moves(fixes, moves)
+    # 뜻을 정한 바꿀 단어(角#자오)는 그 문항에서만 그 뜻으로 보이게 at에 넣는다(다시 돌려도 같은 뜻).
+    for address, table in moved.items():
+        for hanzi, targets in table.items():
+            for target in targets:
+                if '#' not in target:
+                    continue
+                if target not in tagged:
+                    problems.append(f'moved {address} {hanzi} → {target}: mine_moves words에 뜻이 없음')
+                    continue
+                plain = strip_sense(target)
+                if plain in {word['hanzi'] for word in questions.get(address, [])}:
+                    problems.append(f'moved {address} {hanzi} → {target}: 그 문항 해설에 {plain}이 이미 있음(# 없이 쓴다)')
+                    continue
+                at.setdefault(address, {})[plain] = number(tagged[target])
+            table[hanzi] = [strip_sense(target) for target in targets]
 
     # --- 검사 ---
     for index, (pinyin, meaning, _) in enumerate(senses):
@@ -147,6 +183,8 @@ def build_index(repo, fixes=None, moves=None):
             problems.append(f'vocab.json {card.get("id")} {card["hanzi"]}: 뜻에 한글이 없음')
     present = {address: {word['hanzi'] for word in words} for address, words in questions.items()}
     for token, targets in split.items():
+        if token in from_vocab:
+            problems.append(f'split {token}: vocab.json에 «단어» 카드가 있음')
         for address, hanzi in present.items():
             if token in hanzi:
                 problems.append(f'split {token}: {address} 해설에 아직 있음(나눈 묶음은 해설에 없어야 한다)')
@@ -165,7 +203,7 @@ def build_index(repo, fixes=None, moves=None):
             for target in targets:
                 if target in table or target in split:
                     problems.append(f'moved {address} {hanzi} → {target}: 바꾼 단어가 다시 옮길 대상임')
-                if target not in present[address] and default(target) is None:
+                if target not in present[address] and default(target) is None and target not in at.get(address, {}):
                     problems.append(f'moved {address} {hanzi} → {target}: 바꾼 단어의 뜻을 찾을 수 없음')
     if problems:
         raise IndexProblems(problems)
@@ -177,6 +215,7 @@ def build_index(repo, fixes=None, moves=None):
         'at': {address: dict(sorted(table.items())) for address, table in sorted(at.items())},
         'split': split,
         'moved': moved,
+        'pinyin': load_splits(),
     }
 
 
@@ -195,7 +234,8 @@ def index_text(index):
     parts.append(block('base', index['base']))
     parts.append(block('at', index['at']))
     parts.append(block('split', index['split']))
-    parts.append(block('moved', index['moved'], last=True))
+    parts.append(block('moved', index['moved']))
+    parts.append(block('pinyin', index['pinyin'], last=True))
     parts.append('}')
     return '\n'.join(parts) + '\n'
 

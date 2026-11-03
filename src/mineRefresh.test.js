@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import index from './data/mine-refresh.json' with { type: 'json' };
 import vocab from './data/vocab.json' with { type: 'json' };
-import { hasHangul, makeMineRefresher, mergeEntries, sourceAddress, sourceLesson } from './mineRefresh.js';
+import { fixPinyinText, hasHangul, makeMineRefresher, mergeEntries, sourceAddress, sourceLesson } from './mineRefresh.js';
 import { ADDED_BY_UNKNOWN, patternEntry, studyCardEntry, wordEntry, wordKey } from './myVocab.js';
 
 const { refreshEntry, refreshItems, lookup } = makeMineRefresher(index, vocab, wordKey);
@@ -138,8 +138,21 @@ test('문장·패턴 항목과 메모는 건드리지 않는다', () => {
 test('어디에도 없는 단어: 뜻에 한글이 있으면 그대로, 없으면 뺀다', () => {
   const unknownKo = saved('电脑游戏', 'diànnǎoyóuxì', '컴퓨터 게임', 'H31111 듣기 39번');
   assert.equal(refreshEntry(unknownKo)[0], unknownKo);
-  assert.deepEqual(refreshEntry(saved('车辆', 'chēliàng', '车辆', 'H31007 독해 61번')), []);
-  assert.deepEqual(refreshEntry(saved('有借有还', 'yǒujièyǒuhuán', '有借有还', '랜덤 학습 · HSK3 독해', { itemType: '단어' })), []);
+  assert.deepEqual(refreshEntry(saved('没有这个词', 'x', '没有这个词', 'H31007 독해 61번')), []);
+});
+
+test('예전 해설의 «뜻 = 한자» 단어는 사람이 정한 뜻(tools/mine_moves.json words)으로 남기거나 조각으로 나눈다', () => {
+  const meaning = (hanzi, source) => refreshEntry(saved(hanzi, 'x', hanzi, source)).map((entry) => [entry.hanzi, entry.meaningKo]);
+  assert.deepEqual(meaning('车辆', 'H31007 독해 61번'), [['车辆', '차량']]);
+  assert.deepEqual(meaning('有借有还', '랜덤 학습 · HSK3 독해'), [['有借有还', '빌렸으면 꼭 갚는다']]);
+  assert.deepEqual(meaning('很着急', 'H31111 듣기 17번').map(([hanzi]) => hanzi), ['着急']);
+  assert.deepEqual(meaning('十个', 'H31332 듣기 38번').map(([hanzi]) => hanzi), ['十', '个']);
+  assert.deepEqual(meaning('才能', 'H31330 독해 42번').map(([hanzi]) => hanzi), ['才', '能']);
+  // 대본 오인식: 圆脚分 → 元角分의 角(자오), 偏上的云 → 天上的云
+  assert.deepEqual(meaning('脚', 'H31006 듣기 35번'), [['角', '자오(중국 돈 단위, 1위안의 10분의 1)']]);
+  assert.deepEqual(meaning('偏', 'H31006 듣기 40번'), [['天上', '하늘, 하늘 위']]);
+  // 角은 다른 문항·단원에서는 원래 뜻(모서리)
+  assert.notEqual(lookup('角', {}).meaningKo, '자오(중국 돈 단위, 1위안의 10분의 1)');
 });
 
 test('바뀐 것이 없으면 같은 배열, 두 번 돌려도 같다(멱등)', () => {
@@ -209,8 +222,9 @@ test('보정 표에서 빼기로 한 단어(대응 단어·카드가 없음) 목
   for (const token of Object.keys(index.split)) {
     if (!refreshEntry(saved(token, 'x', '뜻', '랜덤 학습')).length) removed.push(token);
   }
+  // 이름 글자(明·北·云·晓·向东·原院), 문항 번호를 읽은 소리(使·识), 얼화 접미사(儿)만 뺀다.
   assert.deepEqual(removed.sort(), [
-    'H31001 듣기 17번 明', 'H31004 듣기 40번 北', 'H31006 듣기 35번 脚', 'H31006 듣기 40번 偏',
+    'H31001 듣기 17번 明', 'H31004 듣기 40번 北',
     'H31007 독해 59번 东', 'H31007 독해 59번 向', 'H31009 독해 70번 云', 'H31221 듣기 22번 云',
     'H31328 듣기 9번 晓', 'H31329 듣기 10번 使', 'H31330 듣기 10번 识', 'H31332 듣기 10번 使',
     'H31332 듣기 26번 原', 'H31332 듣기 26번 院', '儿'
@@ -232,4 +246,57 @@ test('lookup: vocab.json 첫 «단어» 카드가 기본 뜻', () => {
   const first = vocab.find((card) => card.itemType === '단어' && card.hanzi === '忙');
   assert.equal(lookup('忙', {}).meaningKo, first.meaningKo);
   assert.equal(lookup('没有这个词', {}), null);
+});
+
+test('fixPinyinText: 붙은 병음을 나눈 병음으로(문장 첫머리 대문자, 다른 단어 안은 그대로, 두 번 돌려도 같다)', () => {
+  const fixes = { 比较忙: { bǐjiàománg: 'bǐjiào máng' }, 很多: { hěnduō: 'hěn duō' } };
+  const zh = '因为工作比较忙，小李最近瘦了很多。';
+  const once = fixPinyinText('Yīnwèi gōngzuò bǐjiàománg, xiǎo lǐ zuìjìn shòu le hěnduō.', zh, fixes);
+  assert.equal(once, 'Yīnwèi gōngzuò bǐjiào máng, xiǎo lǐ zuìjìn shòu le hěn duō.');
+  assert.equal(fixPinyinText(once, zh, fixes), once);
+  assert.equal(fixPinyinText('Hěnduō rén.', '很多人。', fixes), 'Hěn duō rén.');
+  assert.equal(fixPinyinText('hěnduōnián', '很多年', fixes), 'hěnduōnián'); // 다른 단어 안
+  assert.equal(fixPinyinText('hěnduō', '许多', fixes), 'hěnduō'); // 한자 문장에 그 토큰이 없으면 그대로
+});
+
+test('예문 병음: 예전에 담은 예문·문장 항목의 붙은 병음도 고치고(색인 pinyin), 지금 데이터에는 남아 있지 않다', () => {
+  const pattern = {
+    ...patternEntry({ pattern: '因为A，B', note: '이유' }, 'H31006 독해 52번', NOW),
+    exampleZh: '因为工作比较忙，小李最近瘦了很多。', examplePinyin: 'Yīnwèi gōngzuò bǐjiàománg, xiǎo lǐ zuìjìn shòu le hěnduō.'
+  };
+  const [fixed] = refreshEntry(pattern);
+  assert.equal(fixed.examplePinyin, 'Yīnwèi gōngzuò bǐjiào máng, xiǎo lǐ zuìjìn shòu le hěn duō.');
+  assert.equal(fixed.note, pattern.note);
+  assert.deepEqual(refreshItems([fixed]), [fixed]);
+  const sentence = { ...saved('我比较忙。', 'Wǒ bǐjiàománg.', '나는 꽤 바쁘다.', '랜덤 학습 · HSK3 듣기'), itemType: '문장' };
+  const [fixedSentence] = refreshEntry(sentence);
+  assert.equal(fixedSentence.pinyin, 'Wǒ bǐjiào máng.');
+  assert.equal(fixedSentence.key, sentence.key); // 띄어쓰기만 달라 열쇠는 같다
+  // 지금 vocab.json 예문·문장 병음과 공개 데이터 문장 words에는 붙은 병음이 남지 않는다
+  for (const card of vocab) {
+    assert.equal(fixPinyinText(card.examplePinyin, card.exampleZh, index.pinyin), card.examplePinyin, card.id);
+    if (card.itemType !== '단어') assert.equal(fixPinyinText(card.pinyin, card.hanzi, index.pinyin), card.pinyin, card.id);
+  }
+  assert.ok(Object.keys(index.pinyin).includes('比较忙'));
+});
+
+test('공개 데이터 문장 words에 나누기 표의 붙은 토큰이 남지 않는다(tools/vocab_fixes.py --apply-sentences)', () => {
+  const left = [];
+  const walk = (node, file) => {
+    if (Array.isArray(node)) return node.forEach((value) => walk(value, file));
+    if (!node || typeof node !== 'object') return;
+    for (const [key, value] of Object.entries(node)) {
+      if (key === 'vocab') continue;
+      if (key === 'words' && Array.isArray(value)) {
+        value.forEach(([token]) => { if (index.split[token]?.length) left.push(`${file} ${token}`); });
+      } else walk(value, file);
+    }
+  };
+  for (const kind of ['reading', 'listening']) {
+    const dir = new URL(`../public/${kind}/`, import.meta.url);
+    for (const name of fs.readdirSync(dir).filter((file) => /^H.*\.json$/.test(file))) {
+      walk(JSON.parse(fs.readFileSync(new URL(name, dir), 'utf8')), `${kind}/${name}`);
+    }
+  }
+  assert.deepEqual(left, []);
 });
