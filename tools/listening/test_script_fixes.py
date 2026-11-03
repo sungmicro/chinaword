@@ -29,11 +29,14 @@ FIX = {
     'H39999/6': {
         'reason': '시험',
         'lineCount': 2,
+        'afterLines': ['别喝。', '太渴了。'],
         'script': {'2': {'from': '太可乐。', 'words': [['太', 'tài'], ['渴', 'kě'], ['了', 'le'], ['。', '']], 'ko': '너무 목말라.'}},
         'vocab': [{'hanzi': '渴', 'pinyin': 'kě', 'partOfSpeech': '형용사', 'meaningKo': '목마르다'}],
     },
     'H39999/11': {
         'reason': '시험',
+        'lineCount': 2,
+        'afterLines': ['好', '她去'],
         'statement': {'from': '他去', 'words': [['她', 'tā'], ['去', 'qù']], 'ko': '그녀가 간다'},
     },
 }
@@ -66,7 +69,7 @@ class ScriptFixesTest(unittest.TestCase):
         self.assertEqual(test['items'][0]['vocab'][0]['hanzi'], '可乐')  # 실패한 문항은 단어도 그대로
 
     def test_deletes_non_script_line_and_is_idempotent(self):
-        fix = {'H39999/6': {**FIX['H39999/6'], 'delete': {'1': '别喝。'}}}
+        fix = {'H39999/6': {**FIX['H39999/6'], 'afterLines': ['太渴了。'], 'delete': {'1': '别喝。'}}}
         test, problems = make_test(), []
         self.assertEqual(apply_script_fixes(test, problems, fix), [6])
         once = copy.deepcopy(test)
@@ -81,7 +84,7 @@ class ScriptFixesTest(unittest.TestCase):
         apply_script_fixes(test, problems, no_count)
         self.assertTrue(any('lineCount' in p for p in problems))
         problems = []
-        wrong_line = {'H39999/6': {'reason': '시험', 'lineCount': 2, 'delete': {'1': '没有的话。'}}}
+        wrong_line = {'H39999/6': {'reason': '시험', 'lineCount': 2, 'afterLines': ['太可乐。'], 'delete': {'1': '没有的话。'}}}
         apply_script_fixes(test, problems, wrong_line)  # 지울 문장이 그 번호에 없다: 원본이 바뀐 것으로 보고 멈춘다
         self.assertTrue(any('고치기 전 상태도' in p for p in problems))
         self.assertEqual(test, make_test())
@@ -90,18 +93,31 @@ class ScriptFixesTest(unittest.TestCase):
         test, problems = make_test(), []
         item = test['items'][0]
         item['script'].append(copy.deepcopy(item['script'][0]))  # 같은 문장 '别喝。'이 1줄·3줄
-        fix = {'H39999/6': {'reason': '시험', 'lineCount': 3, 'delete': {'3': '别喝。'}}}
+        fix = {'H39999/6': {'reason': '시험', 'lineCount': 3, 'afterLines': ['别喝。', '太可乐。'], 'delete': {'3': '别喝。'}}}
         apply_script_fixes(test, problems, fix)
         self.assertEqual(problems, [])
         self.assertEqual([joined(l['words']) for l in item['script']], ['别喝。', '太可乐。'])
-        apply_script_fixes(test, problems, fix)  # 다시 적용: 줄 수가 이미 줄었으니 1줄은 지우지 않는다
+        apply_script_fixes(test, problems, fix)  # 다시 적용: 고친 상태로 알아보고 1줄은 지우지 않는다
+        self.assertEqual(problems, [])
         self.assertEqual([joined(l['words']) for l in item['script']], ['别喝。', '太可乐。'])
+
+    def test_delete_only_fix_checks_the_remaining_lines_not_just_the_count(self):
+        fix = {'H39999/6': {'reason': '시험', 'lineCount': 2, 'afterLines': ['太可乐。'], 'delete': {'1': '别喝。'}}}
+        test, problems = make_test(), []
+        item = test['items'][0]
+        del item['script'][0]
+        item['script'][0]['words'] = [['太', 'tài'], ['热', 'rè'], ['。', '']]  # 줄 수는 고친 뒤와 같지만 남은 줄이 다르다
+        before = copy.deepcopy(test)
+        apply_script_fixes(test, problems, fix)
+        self.assertTrue(any('고치기 전 상태도' in p for p in problems))
+        self.assertEqual(test, before)
 
     def test_line_number_and_from_must_both_match_for_repeated_text(self):
         test, problems = make_test(), []
         item = test['items'][0]
         item['script'][0] = copy.deepcopy(item['script'][1])  # 1줄·2줄이 모두 '太可乐。'
-        apply_script_fixes(test, problems, FIX)  # FIX는 2줄을 고친다
+        fix = {'H39999/6': {**FIX['H39999/6'], 'afterLines': ['太可乐。', '太渴了。']}}
+        apply_script_fixes(test, problems, fix)  # 2줄만 고친다
         self.assertEqual(problems, [])
         self.assertEqual([joined(l['words']) for l in item['script']], ['太可乐。', '太渴了。'])
         problems, test = [], make_test()
@@ -113,7 +129,7 @@ class ScriptFixesTest(unittest.TestCase):
 
     def test_one_bad_line_leaves_whole_item_unchanged(self):
         fix = {'H39999/6': {
-            'reason': '시험', 'lineCount': 2,
+            'reason': '시험', 'lineCount': 2, 'afterLines': ['别走。', '太渴。'],
             'script': {'1': {'from': '别喝。', 'words': [['别', 'bié'], ['走', 'zǒu'], ['。', '']], 'ko': '가지 마.'},
                        '2': {'from': '틀린 원문', 'words': [['太', 'tài'], ['渴', 'kě'], ['。', '']], 'ko': '목마르다.'}},
             'vocab': [{'hanzi': '渴', 'pinyin': 'kě', 'partOfSpeech': '형용사', 'meaningKo': '목마르다'}],
@@ -124,8 +140,44 @@ class ScriptFixesTest(unittest.TestCase):
         self.assertTrue(problems)
         self.assertEqual(test, make_test())  # 1줄·단어·문장 구조 모두 그대로
 
+    def test_statement_needs_both_statement_and_star_line_in_the_same_state(self):
+        star_fix = {'H39999/11': FIX['H39999/11']}
+        # ★ 대본 줄만 원문과 다르다
+        test, problems = make_test(), []
+        test['items'][1]['script'][-1]['words'] = [['他', 'tā'], ['来', 'lái']]
+        before = copy.deepcopy(test)
+        self.assertEqual(apply_script_fixes(test, problems, star_fix), [])
+        self.assertTrue(any('고치기 전 상태도' in p for p in problems))
+        self.assertEqual(test, before)
+        # ★ 문장만 고쳐져 있고 대본 ★ 줄은 원문
+        test, problems = make_test(), []
+        test['items'][1]['choices']['statement']['words'] = [['她', 'tā'], ['去', 'qù']]
+        before = copy.deepcopy(test)
+        self.assertEqual(apply_script_fixes(test, problems, star_fix), [])
+        self.assertTrue(problems)
+        self.assertEqual(test, before)
+        # 둘 다 고쳐진 상태에 다시 적용하면 그대로
+        test, problems = make_test(), []
+        apply_script_fixes(test, problems, star_fix)
+        once = copy.deepcopy(test)
+        self.assertEqual(apply_script_fixes(test, problems, star_fix), [11])
+        self.assertEqual(problems, [])
+        self.assertEqual(test, once)
+
+    def test_statement_only_fix_checks_line_count(self):
+        fix = {'H39999/11': {**FIX['H39999/11'], 'lineCount': 3}}
+        test, problems = make_test(), []
+        apply_script_fixes(test, problems, fix)
+        self.assertTrue(problems)
+        self.assertEqual(test, make_test())
+        fix = {'H39999/11': {k: v for k, v in FIX['H39999/11'].items() if k != 'lineCount'}}
+        apply_script_fixes(test, problems, fix)
+        self.assertTrue(any('lineCount' in p for p in problems))
+        self.assertEqual(test, make_test())
+
     def test_refuses_missing_pinyin_or_ko(self):
-        fix = {'H39999/6': {'reason': '시험', 'script': {'2': {'from': '太可乐。', 'words': [['太', ''], ['。', '']], 'ko': ''}}}}
+        fix = {'H39999/6': {'reason': '시험', 'lineCount': 2, 'afterLines': ['别喝。', '太。'],
+                            'script': {'2': {'from': '太可乐。', 'words': [['太', ''], ['。', '']], 'ko': ''}}}}
         test, problems = make_test(), []
         apply_script_fixes(test, problems, fix)
         self.assertEqual(test, make_test())
@@ -139,6 +191,8 @@ class ScriptFixesTest(unittest.TestCase):
             self.assertRegex(key, r'^H\d{5}/\d+$')
             self.assertTrue(fix.get('reason'), key)
             self.assertIsInstance(fix.get('lineCount'), int, key)
+            self.assertIsInstance(fix.get('afterLines'), list, key)
+            self.assertEqual(len(fix['afterLines']), fix['lineCount'] - len(fix.get('delete', {})), key)
             for line in list(fix.get('script', {}).values()) + ([fix['statement']] if 'statement' in fix else []):
                 self.assertTrue(line['from'] and line['ko'], key)
                 self.assertNotEqual(line['from'], joined(line['words']), key)
