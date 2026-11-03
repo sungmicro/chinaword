@@ -8,6 +8,7 @@
 import argparse
 import json
 import re
+import sys
 import time
 import urllib.parse
 import urllib.request
@@ -20,6 +21,9 @@ from pypinyin import Style, lazy_pinyin
 
 from vocab_fixes import (BANNED_PART, VocabProblems, fix_vocab, fix_vocab_checked, has_hangul,  # noqa: F401
                          write_files_atomically)
+
+sys.path.insert(0, str(Path(__file__).resolve().parent / 'listening'))
+from script_fixes import apply_script_fixes  # noqa: E402  tools/listening/script_fixes.py
 
 
 PUNCT = set('，。！？：；、“”‘’（）《》…—,.?!:;()[] ')
@@ -370,7 +374,10 @@ def prepare_public_listening_vocab(test_id, work, repo, problems):
     path = Path(repo).expanduser() / 'public/listening' / f'{test_id}.json'
     data = json.loads(path.read_text(encoding='utf-8'))
     for item in data['items']:
-        item['vocab'] = fix_vocab_checked(notes[item['no']]['vocab'], f'listening/{test_id}/{item["no"]}', problems)
+        item['vocab'] = notes[item['no']]['vocab']
+    apply_script_fixes(data, problems, test_id=test_id)  # 대본을 보정한 문항은 보정 파일의 단어를 쓴다(tools/listening/script_fixes.json)
+    for item in data['items']:
+        item['vocab'] = fix_vocab_checked(item['vocab'], f'listening/{test_id}/{item["no"]}', problems)
     return path, data
 
 

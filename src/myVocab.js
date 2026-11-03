@@ -102,10 +102,12 @@ export function removeKey(items, key) {
 }
 
 // --- 모름 횟수 ---
-// 랜덤 학습의 «모르겠어»를 누를 때마다 그 항목의 unknownCount가 1 늘고, 없던 항목은 내 단어장에 담깁니다.
+// 랜덤 학습의 «모르겠어»를 누를 때마다(같은 카드에서 여러 번 눌러도) 그 항목의 unknownCount가 1 늘고,
+// 없던 항목은 내 단어장에 담깁니다.
 // addedBy: 'unknown'은 «모르겠어»로 처음 담긴 항목입니다. 칸이 없는 항목(예전 항목, «＋ 담기»)은 직접 담은 것입니다.
-// «이제 알겠어»는 모름 표시를 지웁니다. «모르겠어»로 담긴 항목은 내 단어장에서도 빼고,
-// 직접 담은 항목은 그대로 두고 횟수만 지웁니다.
+// «알겠어»는 모름 횟수를 1 줄입니다. 0이 되면 «모름 표시 지우기»와 같이 해제합니다.
+// «모름 표시 지우기»(예전 «이제 알겠어»)는 모름 표시를 한 번에 지웁니다. «모르겠어»로 담긴 항목은
+// 내 단어장에서도 빼고, 직접 담은 항목은 그대로 두고 횟수만 지웁니다.
 export const ADDED_BY_UNKNOWN = 'unknown';
 
 export function unknownCountOf(entry) {
@@ -150,6 +152,16 @@ export function resolveUnknownEntry(items, key) {
     const { unknownCount: _cleared, ...rest } = item;
     return rest;
   });
+}
+
+// «알겠어»: 횟수가 1 이상이면 1 줄이고, 0이 되면 resolveUnknownEntry와 같이 해제합니다.
+// 없는 항목이나 횟수가 0인 항목은 그대로 둡니다(같은 배열을 돌려줍니다).
+export function markKnownEntry(items, key) {
+  const target = items.find((item) => item.key === key);
+  const count = unknownCountOf(target);
+  if (!count) return items;
+  if (count === 1) return resolveUnknownEntry(items, key);
+  return items.map((item) => item.key === key ? { ...item, unknownCount: count - 1 } : item);
 }
 
 // 모름 많은 순. 횟수가 같으면 원래 순서(최근에 담은 것이 앞)를 지킵니다.
@@ -221,6 +233,12 @@ export function resolveUnknown(key) {
   commit(resolveUnknownEntry(loadMine(), key));
 }
 
+export function markKnown(key) {
+  const items = loadMine();
+  const next = markKnownEntry(items, key);
+  if (next !== items) commit(next); // 모름 횟수가 0이면 저장값을 건드리지 않습니다
+}
+
 export function subscribeMine(listener) {
   listeners.add(listener);
   return () => listeners.delete(listener);
@@ -241,6 +259,7 @@ export function useMyVocab() {
     toggle: toggleMine,
     remove: removeMine,
     markUnknown,
+    markKnown,
     resolveUnknown
   };
 }

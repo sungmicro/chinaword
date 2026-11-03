@@ -381,7 +381,7 @@ function PromptModeButtons({ promptMode, onChange }) {
   );
 }
 
-function StudyCard({ card, promptType, revealed, onReveal, onNext, canSpeak, speaking, onSpeak, mineToggle, unknownCount, unknownMarked, onUnknown, onKnown }) {
+function StudyCard({ card, promptType, revealed, onReveal, onNext, canSpeak, speaking, onSpeak, mineToggle, unknownCount, onUnknown, onKnownOne, onClearUnknown }) {
   const promptText = card?.[promptType] || '';
   // 뜻만 보고 맞히는 중이면 발음이 정답을 알려주므로, 정답을 연 뒤에만 읽어줍니다.
   const promptSpeakable = canSpeak && promptType !== 'meaningKo';
@@ -444,17 +444,23 @@ function StudyCard({ card, promptType, revealed, onReveal, onNext, canSpeak, spe
           </button>
         )}
       </div>
-      {/* «모르겠어»는 카드 한 번 나올 때 한 번만 셉니다(두 번 눌러 잘못 쌓이지 않게). 같은 단어가 다시 나오면 또 셀 수 있습니다. */}
+      {/* «모르겠어»는 누를 때마다 모름 +1(같은 카드에서 여러 번 눌러도 쌓임), «알겠어»는 모름 −1 하고 다음 카드로 넘깁니다.
+          두 버튼은 같은 크기의 짝입니다. 모름 표시를 한 번에 지우는 «이제 다 알겠어»는 짝과 헷갈리지 않게 아래 작은 글씨로 둡니다. */}
       <div className="unknownActions">
-        <button type="button" className="unknownButton" onClick={onUnknown} disabled={unknownMarked}>
-          <HelpCircle size={16} /> {unknownMarked ? '내 단어장에 담았어요' : '모르겠어'}
+        <button type="button" className="unknownButton" onClick={onUnknown}
+          aria-label={unknownCount ? `모르겠어 — 모름 ${unknownCount}에 1 더하기` : '모르겠어 — 내 단어장에 담고 모름 1'}>
+          <HelpCircle size={16} /> 모르겠어
         </button>
-        {unknownCount ? (
-          <button type="button" className="unknownButton knownButton" onClick={onKnown}>
-            <Check size={16} /> 이제 알겠어
-          </button>
-        ) : null}
+        <button type="button" className="unknownButton knownButton" onClick={onKnownOne}
+          aria-label={unknownCount ? `알겠어 — 모름 ${unknownCount}에서 1 빼고 다음 카드` : '알겠어 — 다음 카드'}>
+          <Check size={16} /> 알겠어
+        </button>
       </div>
+      {unknownCount ? (
+        <button type="button" className="clearUnknownButton" onClick={onClearUnknown}>
+          이제 다 알겠어 · 모름 {unknownCount} 한 번에 지우기
+        </button>
+      ) : null}
     </section>
   );
 }
@@ -477,7 +483,6 @@ function App() {
   const [currentIndex, setCurrentIndex] = useState(() => randomIndex(pool.length));
   const [promptType, setPromptType] = useState(() => resolvePromptType(pool[currentIndex], promptMode));
   const [revealed, setRevealed] = useState(false);
-  const [unknownMarked, setUnknownMarked] = useState(false);
   const [speakingText, setSpeakingText] = useState(null);
   const [view, setView] = useState(() => {
     const saved = loadJson('sungmi-vocab-view-v1', 'study');
@@ -532,7 +537,6 @@ function App() {
     setCurrentIndex(nextIndex);
     setPromptType(resolvePromptType(pool[nextIndex], promptMode));
     setRevealed(false);
-    setUnknownMarked(false);
     stopSpeaking();
     setSpeakingText(null);
   }, [poolKey, pool, promptMode]);
@@ -579,22 +583,28 @@ function App() {
     setCurrentIndex(nextIndex);
     setPromptType(resolvePromptType(nextCard, promptMode));
     setRevealed(false);
-    setUnknownMarked(false);
     setTodayCountState((prev) => {
       const normalized = prev.day === todayKey ? prev : { day: todayKey, count: 0 };
       return { ...normalized, count: normalized.count + 1 };
     });
   }
 
-  // 모르겠어: 내 단어장에 담고(이미 있으면 그대로) 모름 횟수 +1, 정답을 펼칩니다.
+  // 모르겠어: 내 단어장에 담고(이미 있으면 그대로) 누를 때마다 모름 횟수 +1, 정답을 펼칩니다.
   function markUnknown() {
-    if (!currentCard || unknownMarked) return;
+    if (!currentCard) return;
     mine.markUnknown(currentCard);
-    setUnknownMarked(true);
     setRevealed(true);
   }
 
-  function markKnown() {
+  // 알겠어: 모름 횟수가 있으면 1 줄이고(0이 되면 해제), 다음 카드로 넘어갑니다. 모름 0이면 넘기기만 합니다.
+  function markKnownOne() {
+    if (!currentCard) return;
+    if (currentMineKey) mine.markKnown(currentMineKey);
+    moveNext();
+  }
+
+  // 이제 다 알겠어: 모름 표시를 한 번에 지웁니다(단어장 탭의 «이제 알겠어»와 같은 동작).
+  function clearUnknown() {
     if (currentMineKey) mine.resolveUnknown(currentMineKey);
   }
 
@@ -674,9 +684,9 @@ function App() {
           speaking={Boolean(speakingText)}
           onSpeak={handleSpeak}
           unknownCount={currentUnknownCount}
-          unknownMarked={unknownMarked}
           onUnknown={markUnknown}
-          onKnown={markKnown}
+          onKnownOne={markKnownOne}
+          onClearUnknown={clearUnknown}
           mineToggle={
             <div className="studyScope" aria-label="학습 범위 선택">
               <div className="studyScopeButtons">
@@ -721,7 +731,7 @@ function App() {
 
       <p className="keyboardHint">
         {view === 'study'
-          ? 'Space 또는 Enter: 정답 보기 / 다음 카드 · S: 발음 듣기 · 모르겠어: 내 단어장에 담고 모름 횟수 +1'
+          ? 'Space 또는 Enter: 정답 보기 / 다음 카드 · S: 발음 듣기 · 모르겠어: 모름 +1 · 알겠어: 모름 −1 하고 다음 카드'
           : view === 'list'
             ? '단어를 누르면 발음이 재생됩니다'
             : view === 'listen'

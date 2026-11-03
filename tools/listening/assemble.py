@@ -20,6 +20,7 @@ from pypinyin import Style, lazy_pinyin
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from vocab_fixes import CardIds, fix_vocab, vocab_problems  # noqa: E402  tools/vocab_fixes.py
+from script_fixes import apply_script_fixes  # noqa: E402  tools/listening/script_fixes.py
 
 LESSON = 'HSK3 듣기'
 PART_GUIDES = {
@@ -121,13 +122,20 @@ def build_test(test_id, work, problems, reading_diffs):
             'grammar': note['grammar'],
         })
 
-    return {
+    test = {
         'id': test_id,
         'title': f'HSK 3급 {test_id}',
         'audio': f'{test_id}.mp3',
         'parts': [{'part': p, 'guide': g} for p, g in PART_GUIDES.items()],
         'items': items,
     }
+    # 대본 인식 오류 보정(tools/listening/script_fixes.json). 단어를 바꾼 문항은 보정 사전·검사를 다시 거친다.
+    for no in apply_script_fixes(test, problems):
+        item = next(item for item in items if item['no'] == no)
+        item['vocab'] = fix_vocab(item['vocab'], f'listening/{test_id}/{no}')
+        for word in item['vocab']:
+            problems.extend(vocab_problems(word, f'{test_id} {no}번'))
+    return test
 
 
 PUNCT_PINYIN = {'，': ',', '、': ',', '。': '.', '？': '?', '！': '!', '：': ':', '；': ';', '“': '"', '”': '"'}

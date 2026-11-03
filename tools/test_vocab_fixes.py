@@ -66,6 +66,35 @@ class FixVocabTest(unittest.TestCase):
         self.assertTrue(any('한자' in p for p in vocab_problems({**word('门口', '입구'), 'hanzi': ' '}, 'T')))
 
 
+class NameTitleSplitTest(unittest.TestCase):
+    """이름+호칭은 성씨(고유명사)와 호칭으로 나눈다. 실제 보정 사전(vocab_fixes.json)으로 확인한다."""
+
+    def test_name_and_title_are_split_and_duplicate_title_dropped(self):
+        vocab = [word('李先生', part='고유명사'), word('先生', '선생님, ~씨'), word('办公室', '사무실')]
+        fixed = fix_vocab(vocab, 'listening/H39999/1')
+        self.assertEqual([w['hanzi'] for w in fixed], ['李', '先生', '办公室'])
+        self.assertEqual(fixed[0]['meaningKo'], '리(李, 성씨)')
+        self.assertEqual(fixed[0]['partOfSpeech'], '고유명사')
+
+    def test_xiao_and_lao_prefix_is_a_form_of_address_not_small_or_old(self):
+        for token, prefix, surname in (('小马', '小', '马'), ('老张', '老', '张'), ('小张', '小', '张')):
+            fixed = fix_vocab([word(token, part='고유명사')], 'reading/H39999/1')
+            self.assertEqual([w['hanzi'] for w in fixed], [prefix, surname])
+            self.assertIn('친근하게 부르는 말', fixed[0]['meaningKo'])
+            self.assertIn('성씨', fixed[1]['meaningKo'])
+
+    def test_surname_only_in_items_where_it_is_a_name(self):
+        wang = word('王', '왕')
+        self.assertEqual(fix_vocab([wang], 'listening/H31002/25')[0]['meaningKo'], '왕(王, 성씨)')  # 王校长
+        self.assertEqual(fix_vocab([wang], 'listening/H31328/23'), [wang])  # 글자 王을 묻는 문항
+        self.assertEqual(fix_vocab([word('小', '작다')], 'listening/H31009/39')[0]['meaningKo'], '작다')  # 雨小了
+
+    def test_every_retired_name_card_hands_over_nothing(self):
+        moved = load_fixes()['movedTo']
+        for token in ('李先生', '刘阿姨', '白小姐', '小马', '老王', '王经理'):
+            self.assertIsNone(moved[token], token)
+
+
 class ApplyListeningTest(unittest.TestCase):
     def test_refuses_to_write_when_problems_remain(self):
         with tempfile.TemporaryDirectory() as directory:

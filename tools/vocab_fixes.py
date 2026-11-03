@@ -10,7 +10,8 @@ jieba가 두 단어를 붙이거나(比较忙) 잘못 끊은(铅笔画) 토큰�
   - tools/auto_enrich.py: 새로 만드는 단어에도 fix_vocab을 거치고, 한글 뜻이 없으면 한자로 채우지 않는다.
 
 듣기 공개 데이터는 H31006 이후 회차를 assemble.py로 다시 만들 수 없어(대본 손질 이력), 아래 명령으로
-public/listening/*.json의 단어와 단어장 «HSK3 듣기» 단원만 보정한다. 몇 번 돌려도 결과가 같다.
+public/listening/*.json의 대본 보정(tools/listening/script_fixes.json)과 단어, 단어장 «HSK3 듣기» 단원만
+보정한다. 몇 번 돌려도 결과가 같다.
 
   vocab_fixes.py --repo . --apply-listening   # 듣기 공개 데이터·단어장 보정
   vocab_fixes.py --repo .                     # 듣기·독해 공개 데이터에 남은 문제 개수만 보기
@@ -246,10 +247,12 @@ def apply_listening(repo):
     """
     sys.path.insert(0, str(Path(__file__).parent / 'listening'))
     from assemble import update_vocab  # tools/listening/assemble.py
+    from script_fixes import apply_script_fixes  # tools/listening/script_fixes.py
 
     tests, problems = [], []
     for path in sorted((Path(repo) / 'public' / 'listening').glob('H*.json')):
         data = json.loads(path.read_text(encoding='utf-8'))
+        apply_script_fixes(data, problems)  # 대본 인식 오류 보정(문항 단어를 바꾸면 아래 보정도 거친다)
         for item in data['items']:
             item['vocab'] = fix_vocab_checked(item['vocab'], f'listening/{data["id"]}/{item["no"]}', problems)
         tests.append((path, data))

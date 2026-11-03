@@ -7,6 +7,8 @@ import {
   dropAutoReadingUsage,
   ADDED_BY_UNKNOWN,
   loadMine,
+  markKnown,
+  markKnownEntry,
   markUnknown,
   markUnknownEntry,
   mineToStudyItems,
@@ -277,4 +279,34 @@ test('저장소: «모르겠어» 두 번 → 내 단어장에 모름 2, «이�
   markUnknown({ hanzi: '门口', pinyin: 'ménkǒu', itemType: '단어' });
   resolveUnknown('word:门口:menkou');
   assert.deepEqual(JSON.parse(localStorage.getItem(MINE_KEY)).items, [wordEntry(LISTENING_WORD, 'H31001 듣기 25번', NOW)]);
+});
+
+test('markKnownEntry: 모름 횟수를 1 줄이고, 0이 되면 «모름 표시 지우기»와 같이 해제, 0이면 그대로', () => {
+  const manual = { ...wordEntry(LISTENING_WORD, 'H31001 듣기 25번', NOW), unknownCount: 1 };
+  const viaUnknown = { ...studyCardEntry(VOCAB_CARD, NOW), unknownCount: 2 };
+  let items = markKnownEntry([viaUnknown, manual], viaUnknown.key);
+  assert.deepEqual(items.map((i) => [i.key, unknownCountOf(i)]), [['word:满意:manyi', 1], ['word:门口:menkou', 1]]);
+  assert.equal(items[0].addedBy, ADDED_BY_UNKNOWN); // 줄이기만 할 때는 담은 경로·자리 그대로
+  items = markKnownEntry(items, viaUnknown.key); // 1 → 0: «모르겠어»로 담긴 것은 빠진다
+  assert.deepEqual(items.map((i) => i.key), ['word:门口:menkou']);
+  items = markKnownEntry(items, manual.key); // 1 → 0: 직접 담은 것은 남고 횟수 칸만 지운다
+  assert.deepEqual(items, [wordEntry(LISTENING_WORD, 'H31001 듣기 25번', NOW)]);
+  assert.equal(markKnownEntry(items, manual.key), items); // 횟수 0이면 바꾸지 않는다
+  assert.equal(markKnownEntry(items, 'word:없음:'), items);
+});
+
+test('저장소: «모르겠어» 3번 → 모름 3, «알겠어» 1번 → 모름 2, 모름 0인 단어의 «알겠어»는 저장값을 바꾸지 않는다', () => {
+  for (let i = 0; i < 3; i += 1) markUnknown(VOCAB_CARD);
+  assert.equal(mineToStudyItems(loadMine())[0].unknownCount, 3);
+  markKnown('word:满意:manyi');
+  assert.equal(mineToStudyItems(loadMine())[0].unknownCount, 2);
+  markKnown('word:满意:manyi');
+  markKnown('word:满意:manyi');
+  assert.deepEqual(loadMine(), []);
+  const before = localStorage.getItem(MINE_KEY);
+  let calls = 0;
+  subscribeMine(() => { calls += 1; });
+  markKnown('word:满意:manyi');
+  assert.equal(localStorage.getItem(MINE_KEY), before);
+  assert.equal(calls, 0);
 });
