@@ -5,8 +5,16 @@ import {
   MINE_LESSON,
   autoReadingUsage,
   dropAutoReadingUsage,
+  ADDED_BY_UNKNOWN,
   loadMine,
+  markUnknown,
+  markUnknownEntry,
   mineToStudyItems,
+  resolveUnknown,
+  resolveUnknownEntry,
+  sortByUnknown,
+  studyCardEntry,
+  unknownCountOf,
   patternEntry,
   removeMine,
   resetMineForTest,
@@ -198,4 +206,75 @@ test('wordEntry: 다음자는 읽기로 구분하고, 성조 변조는 같은 �
   assert.notEqual(hai, huan);
   assert.equal(wordEntry({ hanzi: '不', pinyin: 'bù' }, 's', NOW).key, wordEntry({ hanzi: '不', pinyin: 'bú' }, 's', NOW).key);
   assert.equal(wordEntry({ hanzi: '绿', pinyin: 'lǜ' }, 's', NOW).key, 'word:绿:lv');
+});
+
+// --- 랜덤 학습 «모르겠어» / «이제 알겠어» ---
+const VOCAB_CARD = { id: 'K-12', itemType: '단어', lesson: 'HSK3 추가 300', hanzi: '满意', pinyin: 'mǎnyì', meaningKo: '만족하다', partOfSpeech: '형용사' };
+
+test('studyCardEntry: 단어장 카드를 «모르겠어» 경로로 담는 항목, 키는 해설 담기와 같다', () => {
+  const entry = studyCardEntry(VOCAB_CARD, NOW);
+  assert.equal(entry.key, wordEntry(READING_WORD, 's', NOW).key);
+  assert.equal(entry.addedBy, ADDED_BY_UNKNOWN);
+  assert.equal(entry.source, '랜덤 학습 · HSK3 추가 300');
+  assert.equal(entry.itemType, '단어');
+  assert.equal(studyCardEntry({ ...VOCAB_CARD, mineKey: 'pattern:X' }, NOW).key, 'pattern:X');
+  const [card] = mineToStudyItems([studyCardEntry({ ...VOCAB_CARD, itemType: '문장' }, NOW)]);
+  assert.equal(card.itemType, '문장'); // 문장 카드는 담은 뒤에도 문장 글씨 크기
+});
+
+test('markUnknownEntry: 없으면 횟수 1로 맨 앞에, 있으면 자리·내용 그대로 횟수만 쌓는다', () => {
+  const listening = wordEntry(LISTENING_WORD, 'H31001 듣기 25번', NOW);
+  let items = markUnknownEntry([listening], studyCardEntry(VOCAB_CARD, NOW));
+  assert.deepEqual(items.map((i) => [i.key, unknownCountOf(i)]), [['word:满意:manyi', 1], ['word:门口:menkou', 0]]);
+  items = markUnknownEntry(items, studyCardEntry(VOCAB_CARD, NOW));
+  items = markUnknownEntry(items, studyCardEntry(VOCAB_CARD, NOW));
+  assert.equal(items[0].unknownCount, 3);
+  // 직접 담은 항목에 «모르겠어»를 누르면 담은 경로는 그대로(직접)이고 횟수만 는다
+  items = markUnknownEntry(items, studyCardEntry({ hanzi: '门口', pinyin: 'ménkǒu', itemType: '단어' }, NOW));
+  assert.equal(items[1].unknownCount, 1);
+  assert.equal(items[1].addedBy, undefined);
+  assert.equal(items[1].source, 'H31001 듣기 25번');
+});
+
+test('unknownCountOf: 예전 항목·깨진 값은 0', () => {
+  assert.equal(unknownCountOf(OLD_READING_SAVED), 0);
+  assert.equal(unknownCountOf({ unknownCount: -2 }), 0);
+  assert.equal(unknownCountOf({ unknownCount: '3' }), 0);
+  assert.equal(unknownCountOf({ unknownCount: 2.5 }), 0);
+  assert.equal(unknownCountOf(undefined), 0);
+  assert.equal(mineToStudyItems([OLD_READING_SAVED])[0].unknownCount, 0);
+});
+
+test('resolveUnknownEntry: «모르겠어»로 담긴 것은 빼고, 직접 담은 것은 남기고 횟수만 지운다', () => {
+  const manual = { ...wordEntry(LISTENING_WORD, 'H31001 듣기 25번', NOW), unknownCount: 2 };
+  const viaUnknown = { ...studyCardEntry(VOCAB_CARD, NOW), unknownCount: 4 };
+  let items = resolveUnknownEntry([viaUnknown, manual], viaUnknown.key);
+  assert.deepEqual(items, [manual]);
+  items = resolveUnknownEntry(items, manual.key);
+  assert.deepEqual(items, [wordEntry(LISTENING_WORD, 'H31001 듣기 25번', NOW)]);
+  assert.equal(resolveUnknownEntry(items, 'word:없음:'), items);
+});
+
+test('sortByUnknown: 모름 많은 순, 같으면 원래 순서', () => {
+  const cards = [{ id: 'a', unknownCount: 0 }, { id: 'b', unknownCount: 2 }, { id: 'c', unknownCount: 5 }, { id: 'd', unknownCount: 2 }];
+  assert.deepEqual(sortByUnknown(cards).map((c) => c.id), ['c', 'b', 'd', 'a']);
+});
+
+test('저장소: «모르겠어» 두 번 → 내 단어장에 모름 2, «이제 알겠어» → 빠짐. 저장 형식은 그대로 version 1', () => {
+  const old = JSON.stringify({ version: 1, items: [wordEntry(LISTENING_WORD, 'H31001 듣기 25번', NOW)] });
+  useStorage(memoryStorage({ [MINE_KEY]: old }));
+  resetMineForTest();
+  markUnknown(VOCAB_CARD);
+  markUnknown(VOCAB_CARD);
+  const saved = JSON.parse(localStorage.getItem(MINE_KEY));
+  assert.equal(saved.version, 1);
+  assert.deepEqual(saved.items.map((i) => [i.key, i.unknownCount, i.addedBy]), [
+    ['word:满意:manyi', 2, ADDED_BY_UNKNOWN], ['word:门口:menkou', undefined, undefined]
+  ]);
+  assert.equal(mineToStudyItems(loadMine())[0].unknownCount, 2);
+  resolveUnknown('word:满意:manyi');
+  assert.deepEqual(loadMine().map((i) => i.key), ['word:门口:menkou']);
+  markUnknown({ hanzi: '门口', pinyin: 'ménkǒu', itemType: '단어' });
+  resolveUnknown('word:门口:menkou');
+  assert.deepEqual(JSON.parse(localStorage.getItem(MINE_KEY)).items, [wordEntry(LISTENING_WORD, 'H31001 듣기 25번', NOW)]);
 });

@@ -101,11 +101,70 @@ export function removeKey(items, key) {
   return items.filter((item) => item.key !== key);
 }
 
+// --- 모름 횟수 ---
+// 랜덤 학습의 «모르겠어»를 누를 때마다 그 항목의 unknownCount가 1 늘고, 없던 항목은 내 단어장에 담깁니다.
+// addedBy: 'unknown'은 «모르겠어»로 처음 담긴 항목입니다. 칸이 없는 항목(예전 항목, «＋ 담기»)은 직접 담은 것입니다.
+// «이제 알겠어»는 모름 표시를 지웁니다. «모르겠어»로 담긴 항목은 내 단어장에서도 빼고,
+// 직접 담은 항목은 그대로 두고 횟수만 지웁니다.
+export const ADDED_BY_UNKNOWN = 'unknown';
+
+export function unknownCountOf(entry) {
+  const count = entry?.unknownCount;
+  return Number.isInteger(count) && count > 0 ? count : 0;
+}
+
+// 랜덤 학습 카드(단어장 vocab.json 또는 내 단어장 카드)를 내 단어장 항목으로. 문장·표현도 단어 열쇠로 담습니다.
+export function studyCardEntry(card, now = new Date()) {
+  return {
+    key: card.mineKey ?? wordKey(card.hanzi, card.pinyin),
+    kind: card.itemType === '패턴' ? 'pattern' : 'word',
+    itemType: card.itemType ?? '단어',
+    hanzi: card.hanzi,
+    pinyin: card.pinyin ?? '',
+    meaningKo: card.meaningKo ?? '',
+    partOfSpeech: card.partOfSpeech ?? '',
+    note: '',
+    exampleZh: '',
+    examplePinyin: '',
+    exampleKo: '',
+    source: card.lesson ? `랜덤 학습 · ${card.lesson}` : '랜덤 학습',
+    addedAt: now.toISOString(),
+    addedBy: ADDED_BY_UNKNOWN
+  };
+}
+
+// 이미 있으면 자리와 내용은 그대로 두고 횟수만 늘립니다. 없으면 맨 앞에 횟수 1로 넣습니다.
+export function markUnknownEntry(items, entry) {
+  if (items.some((item) => item.key === entry.key)) {
+    return items.map((item) => item.key === entry.key ? { ...item, unknownCount: unknownCountOf(item) + 1 } : item);
+  }
+  return [{ ...entry, unknownCount: 1 }, ...items];
+}
+
+export function resolveUnknownEntry(items, key) {
+  const target = items.find((item) => item.key === key);
+  if (!target) return items;
+  if (target.addedBy === ADDED_BY_UNKNOWN) return removeKey(items, key);
+  return items.map((item) => {
+    if (item.key !== key) return item;
+    const { unknownCount: _cleared, ...rest } = item;
+    return rest;
+  });
+}
+
+// 모름 많은 순. 횟수가 같으면 원래 순서(최근에 담은 것이 앞)를 지킵니다.
+export function sortByUnknown(studyItems) {
+  return studyItems
+    .map((item, index) => ({ item, index }))
+    .sort((a, b) => (b.item.unknownCount ?? 0) - (a.item.unknownCount ?? 0) || a.index - b.index)
+    .map(({ item }) => item);
+}
+
 // 단어장·랜덤 학습이 쓰는 카드 모양으로 바꿉니다 (최근에 담은 것이 앞).
 export function mineToStudyItems(items) {
   return items.map((entry) => ({
     id: `mine:${entry.key}`,
-    itemType: entry.kind === 'pattern' ? '패턴' : '단어',
+    itemType: entry.itemType ?? (entry.kind === 'pattern' ? '패턴' : '단어'),
     lesson: MINE_LESSON,
     hanzi: entry.hanzi,
     pinyin: entry.pinyin,
@@ -116,7 +175,8 @@ export function mineToStudyItems(items) {
     examplePinyin: entry.examplePinyin,
     exampleKo: entry.exampleKo,
     source: entry.source,
-    mineKey: entry.key
+    mineKey: entry.key,
+    unknownCount: unknownCountOf(entry)
   }));
 }
 
@@ -153,6 +213,14 @@ export function removeMine(key) {
   commit(removeKey(loadMine(), key));
 }
 
+export function markUnknown(card) {
+  commit(markUnknownEntry(loadMine(), studyCardEntry(card)));
+}
+
+export function resolveUnknown(key) {
+  commit(resolveUnknownEntry(loadMine(), key));
+}
+
 export function subscribeMine(listener) {
   listeners.add(listener);
   return () => listeners.delete(listener);
@@ -169,7 +237,10 @@ export function useMyVocab() {
   return {
     items,
     has: (key) => items.some((item) => item.key === key),
+    find: (key) => items.find((item) => item.key === key),
     toggle: toggleMine,
-    remove: removeMine
+    remove: removeMine,
+    markUnknown,
+    resolveUnknown
   };
 }

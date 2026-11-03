@@ -1,16 +1,15 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { createRoot } from 'react-dom/client';
-import { Eye, Search, Shuffle, Sparkles, Volume2, X } from 'lucide-react';
+import { Check, Eye, HelpCircle, Search, Shuffle, Sparkles, Volume2, X } from 'lucide-react';
 import vocabData from './data/vocab.json';
 import { speakChinese, stopSpeaking, useChineseVoice } from './speech';
 import { STUDY_GROUP_OPTIONS, lessonBadge, matchesStudyGroup, normalizeStudyGroup } from './lessons';
 import { randomIndex, selectStudyPool } from './studyPool';
 import { shuffleVocab } from './vocabOrder';
-import { MINE_LESSON, mineToStudyItems, useMyVocab } from './myVocab';
+import { MINE_LESSON, mineToStudyItems, sortByUnknown, unknownCountOf, useMyVocab, wordKey } from './myVocab';
 import Listening from './Listening';
 import Reading from './Reading';
 import Writing from './Writing';
-import ToneQuiz from './ToneQuiz';
 import './styles.css';
 
 const PROMPT_TYPES = ['hanzi', 'pinyin', 'meaningKo'];
@@ -31,7 +30,6 @@ const MODE_OPTIONS = [
 const VIEW_OPTIONS = [
   { key: 'study', label: '랜덤 학습' },
   { key: 'list', label: '단어장' },
-  { key: 'quiz', label: '시험보기' },
   { key: 'listen', label: '듣기' },
   { key: 'read', label: '독해' },
   { key: 'write', label: '쓰기' }
@@ -202,7 +200,7 @@ function HiddenAnswer({ card, promptType, canSpeak, speaking, onSpeak }) {
   );
 }
 
-function VocabList({ items, mineItems, onRemoveMine, canSpeak, speakingText, onSpeak }) {
+function VocabList({ items, mineItems, onRemoveMine, onResolveUnknown, canSpeak, speakingText, onSpeak }) {
   const [query, setQuery] = useState('');
   const [lesson, setLesson] = useState('전체');
   const [orderMode, setOrderMode] = useState('pinyin');
@@ -226,9 +224,13 @@ function VocabList({ items, mineItems, onRemoveMine, canSpeak, speakingText, onS
     });
   }, [items, mineItems, showingMine, lesson, query]);
 
+  // «모름 많은 순»은 내 단어장에서만 보입니다. 다른 칩으로 옮기면 병음 순으로 봅니다.
+  const effectiveOrder = orderMode === 'unknown' && !showingMine ? 'pinyin' : orderMode;
   const orderedItems = useMemo(
-    () => orderMode === 'random' ? shuffleVocab(visibleItems, shuffleSeed) : visibleItems,
-    [visibleItems, orderMode, shuffleSeed],
+    () => effectiveOrder === 'random'
+      ? shuffleVocab(visibleItems, shuffleSeed)
+      : effectiveOrder === 'unknown' ? sortByUnknown(visibleItems) : visibleItems,
+    [visibleItems, effectiveOrder, shuffleSeed],
   );
 
   return (
@@ -262,12 +264,18 @@ function VocabList({ items, mineItems, onRemoveMine, canSpeak, speakingText, onS
         <div className="listOrderRow">
           <p className="listCount">{visibleItems.length}개</p>
           <div className="lessonChips" role="group" aria-label="단어장 정렬">
-            <button type="button" className={`lessonChip${orderMode === 'pinyin' ? ' active' : ''}`}
-              aria-pressed={orderMode === 'pinyin'} onClick={() => setOrderMode('pinyin')}>
-              병음 순
+            <button type="button" className={`lessonChip${effectiveOrder === 'pinyin' ? ' active' : ''}`}
+              aria-pressed={effectiveOrder === 'pinyin'} onClick={() => setOrderMode('pinyin')}>
+              {showingMine ? '담은 순' : '병음 순'}
             </button>
-            <button type="button" className={`lessonChip${orderMode === 'random' ? ' active' : ''}`}
-              aria-pressed={orderMode === 'random'}
+            {showingMine ? (
+              <button type="button" className={`lessonChip${effectiveOrder === 'unknown' ? ' active' : ''}`}
+                aria-pressed={effectiveOrder === 'unknown'} onClick={() => setOrderMode('unknown')}>
+                모름 많은 순
+              </button>
+            ) : null}
+            <button type="button" className={`lessonChip${effectiveOrder === 'random' ? ' active' : ''}`}
+              aria-pressed={effectiveOrder === 'random'}
               onClick={() => { setOrderMode('random'); setShuffleSeed((seed) => seed + 1); }}>
               랜덤 섞기
             </button>
@@ -299,6 +307,7 @@ function VocabList({ items, mineItems, onRemoveMine, canSpeak, speakingText, onS
 
                   <div className="vocabSide">
                     {badge ? <span className="vocabTag vocabLessonTag">{badge}</span> : null}
+                    {item.unknownCount ? <span className="vocabTag unknownTag">모름 {item.unknownCount}</span> : null}
                     <span className="vocabTag">{item.itemType}</span>
                     {speakable ? <Volume2 className="vocabSpeakIcon" size={20} /> : null}
                   </div>
@@ -320,14 +329,26 @@ function VocabList({ items, mineItems, onRemoveMine, canSpeak, speakingText, onS
                     <div className="vocabRow">{body}</div>
                   )}
                   {item.mineKey ? (
-                    <button
-                      type="button"
-                      className="mineRemove"
-                      onClick={() => onRemoveMine(item.mineKey)}
-                      aria-label={`${item.hanzi} 내 단어장에서 빼기`}
-                    >
-                      <X size={14} /> 빼기
-                    </button>
+                    <div className="mineActions">
+                      {item.unknownCount ? (
+                        <button
+                          type="button"
+                          className="mineRemove mineKnown"
+                          onClick={() => onResolveUnknown(item.mineKey)}
+                          aria-label={`${item.hanzi} 이제 알겠어 — 모름 표시 지우기`}
+                        >
+                          <Check size={14} /> 이제 알겠어
+                        </button>
+                      ) : null}
+                      <button
+                        type="button"
+                        className="mineRemove"
+                        onClick={() => onRemoveMine(item.mineKey)}
+                        aria-label={`${item.hanzi} 내 단어장에서 빼기`}
+                      >
+                        <X size={14} /> 빼기
+                      </button>
+                    </div>
                   ) : null}
                 </li>
               );
@@ -335,7 +356,7 @@ function VocabList({ items, mineItems, onRemoveMine, canSpeak, speakingText, onS
           </ul>
         ) : (
           <p className="listEmpty">
-            {showingMine && !mineItems.length ? '해설에서 ＋ 담기를 누르면 여기에 모여요.' : '검색 결과가 없어요.'}
+            {showingMine && !mineItems.length ? '해설에서 ＋ 담기, 랜덤 학습에서 모르겠어를 누르면 여기에 모여요.' : '검색 결과가 없어요.'}
           </p>
         )}
       </div>
@@ -360,7 +381,7 @@ function PromptModeButtons({ promptMode, onChange }) {
   );
 }
 
-function StudyCard({ card, promptType, revealed, onReveal, onNext, canSpeak, speaking, onSpeak, mineToggle }) {
+function StudyCard({ card, promptType, revealed, onReveal, onNext, canSpeak, speaking, onSpeak, mineToggle, unknownCount, unknownMarked, onUnknown, onKnown }) {
   const promptText = card?.[promptType] || '';
   // 뜻만 보고 맞히는 중이면 발음이 정답을 알려주므로, 정답을 연 뒤에만 읽어줍니다.
   const promptSpeakable = canSpeak && promptType !== 'meaningKo';
@@ -374,6 +395,7 @@ function StudyCard({ card, promptType, revealed, onReveal, onNext, canSpeak, spe
     <section className={`studyCard ${revealed ? 'revealed' : ''}`} aria-label="랜덤 학습 카드">
       <div className="cardMeta">
         <span>{card.itemType}</span>
+        {unknownCount ? <span className="unknownBadge">모름 {unknownCount}</span> : null}
         {mineToggle}
         <span>출제: {PROMPT_LABELS[promptType]}</span>
       </div>
@@ -422,6 +444,17 @@ function StudyCard({ card, promptType, revealed, onReveal, onNext, canSpeak, spe
           </button>
         )}
       </div>
+      {/* «모르겠어»는 카드 한 번 나올 때 한 번만 셉니다(두 번 눌러 잘못 쌓이지 않게). 같은 단어가 다시 나오면 또 셀 수 있습니다. */}
+      <div className="unknownActions">
+        <button type="button" className="unknownButton" onClick={onUnknown} disabled={unknownMarked}>
+          <HelpCircle size={16} /> {unknownMarked ? '내 단어장에 담았어요' : '모르겠어'}
+        </button>
+        {unknownCount ? (
+          <button type="button" className="unknownButton knownButton" onClick={onKnown}>
+            <Check size={16} /> 이제 알겠어
+          </button>
+        ) : null}
+      </div>
     </section>
   );
 }
@@ -444,12 +477,15 @@ function App() {
   const [currentIndex, setCurrentIndex] = useState(() => randomIndex(pool.length));
   const [promptType, setPromptType] = useState(() => resolvePromptType(pool[currentIndex], promptMode));
   const [revealed, setRevealed] = useState(false);
+  const [unknownMarked, setUnknownMarked] = useState(false);
   const [speakingText, setSpeakingText] = useState(null);
   const [view, setView] = useState(() => {
     const saved = loadJson('sungmi-vocab-view-v1', 'study');
     return VIEW_OPTIONS.some((option) => option.key === saved) ? saved : 'study';
   });
-  const previousPool = useRef(pool);
+  // 내 단어장 항목의 모름 횟수만 바뀐 것처럼 카드 목록(id 순서)이 그대로면 보던 카드를 유지합니다.
+  const poolKey = useMemo(() => pool.map((item) => item.id).join('\n'), [pool]);
+  const previousPoolKey = useRef(poolKey);
   const { supported: speechSupported, checked: voiceChecked, voice: chineseVoice } = useChineseVoice();
 
   const todayKey = studyDayKey();
@@ -490,21 +526,24 @@ function App() {
   }, [mineOnly]);
 
   useEffect(() => {
-    if (previousPool.current === pool) return;
-    previousPool.current = pool;
+    if (previousPoolKey.current === poolKey) return;
+    previousPoolKey.current = poolKey;
     const nextIndex = randomIndex(pool.length);
     setCurrentIndex(nextIndex);
     setPromptType(resolvePromptType(pool[nextIndex], promptMode));
     setRevealed(false);
+    setUnknownMarked(false);
     stopSpeaking();
     setSpeakingText(null);
-  }, [pool, promptMode]);
+  }, [poolKey, pool, promptMode]);
 
   const currentCard = pool[currentIndex] ?? pool[0];
   // 카드가 바뀌었는데(예: 내 단어장에서 뺌) 출제 칸이 비어 있으면 있는 칸으로 보여줍니다.
   const cardPrompts = availablePromptTypes(currentCard);
   const shownPrompt = cardPrompts.includes(promptType) ? promptType : cardPrompts[0] ?? 'hanzi';
   const hasChineseVoice = Boolean(chineseVoice);
+  const currentMineKey = currentCard ? currentCard.mineKey ?? wordKey(currentCard.hanzi, currentCard.pinyin) : null;
+  const currentUnknownCount = unknownCountOf(currentMineKey ? mine.find(currentMineKey) : null);
   const canSpeak = hasChineseVoice && Boolean(String(currentCard?.hanzi ?? '').trim());
 
   const handleSpeak = useCallback((text) => {
@@ -518,7 +557,7 @@ function App() {
   useEffect(() => {
     stopSpeaking();
     setSpeakingText(null);
-  }, [currentIndex, currentCard?.id, pool, view]);
+  }, [currentIndex, currentCard?.id, poolKey, view]);
 
   const statsText = useMemo(() => {
     const breakdown = typeBreakdown(studyItems);
@@ -540,10 +579,23 @@ function App() {
     setCurrentIndex(nextIndex);
     setPromptType(resolvePromptType(nextCard, promptMode));
     setRevealed(false);
+    setUnknownMarked(false);
     setTodayCountState((prev) => {
       const normalized = prev.day === todayKey ? prev : { day: todayKey, count: 0 };
       return { ...normalized, count: normalized.count + 1 };
     });
+  }
+
+  // 모르겠어: 내 단어장에 담고(이미 있으면 그대로) 모름 횟수 +1, 정답을 펼칩니다.
+  function markUnknown() {
+    if (!currentCard || unknownMarked) return;
+    mine.markUnknown(currentCard);
+    setUnknownMarked(true);
+    setRevealed(true);
+  }
+
+  function markKnown() {
+    if (currentMineKey) mine.resolveUnknown(currentMineKey);
   }
 
   function toggleMineOnly() {
@@ -621,6 +673,10 @@ function App() {
           canSpeak={canSpeak}
           speaking={Boolean(speakingText)}
           onSpeak={handleSpeak}
+          unknownCount={currentUnknownCount}
+          unknownMarked={unknownMarked}
+          onUnknown={markUnknown}
+          onKnown={markKnown}
           mineToggle={
             <div className="studyScope" aria-label="학습 범위 선택">
               <div className="studyScopeButtons">
@@ -650,6 +706,7 @@ function App() {
           items={studyItems}
           mineItems={mineItems}
           onRemoveMine={mine.remove}
+          onResolveUnknown={mine.resolveUnknown}
           canSpeak={hasChineseVoice}
           speakingText={speakingText}
           onSpeak={handleSpeak}
@@ -658,24 +715,20 @@ function App() {
         <Listening />
       ) : view === 'read' ? (
         <Reading />
-      ) : view === 'write' ? (
-        <Writing />
       ) : (
-        <ToneQuiz items={studyItems} canSpeak={hasChineseVoice} onSpeak={handleSpeak} />
+        <Writing />
       )}
 
       <p className="keyboardHint">
         {view === 'study'
-          ? 'Space 또는 Enter: 정답 보기 / 다음 카드 · S: 발음 듣기'
+          ? 'Space 또는 Enter: 정답 보기 / 다음 카드 · S: 발음 듣기 · 모르겠어: 내 단어장에 담고 모름 횟수 +1'
           : view === 'list'
             ? '단어를 누르면 발음이 재생됩니다'
             : view === 'listen'
                 ? '문제 듣기는 멈춤을 누를 때까지 되풀이합니다 · 이어 듣기는 화면을 꺼도 계속 재생됩니다'
                 : view === 'read'
                   ? '답을 고르면 정답 근거·오답 이유·핵심 단어·문장 구조가 열립니다 · ＋ 담기로 내 단어장에 모아요'
-                  : view === 'write'
-                    ? '어순을 배열하거나 병음을 보고 한자를 떠올려 보세요'
-                    : '한자를 보고 들으면서 성조가 맞는 병음을 고르세요'}
+                  : '회차를 고르고 1부분(문장 순서)·2부분(한자 쓰기)을 나눠 풀어 보세요'}
       </p>
     </main>
   );

@@ -97,7 +97,7 @@ h1 {
 
 .viewTabs {
   display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 6px;
   margin-bottom: 10px;
   padding: 5px;
@@ -722,76 +722,6 @@ h1 {
   color: var(--accent-strong);
 }
 
-/* 성조 시험 */
-.quizPanel {
-  min-height: 0;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  padding: clamp(14px, 3vw, 24px);
-  border: 1px solid var(--line);
-  border-radius: 34px;
-  background: var(--surface-strong);
-  box-shadow: var(--shadow);
-  overflow: hidden;
-}
-
-.quizStart,
-.quizQuestion,
-.quizResult {
-  min-height: 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-
-.quizIntro {
-  text-align: center;
-}
-
-.quizIntro h2 {
-  margin: 0 0 6px;
-  font-size: clamp(1.4rem, 5vw, 2rem);
-  letter-spacing: -0.03em;
-}
-
-.quizIntro p {
-  margin: 0;
-  color: var(--muted);
-  font-size: 0.9rem;
-  font-weight: 750;
-  line-height: 1.45;
-}
-
-.quizRange {
-  display: grid;
-  gap: 8px;
-}
-
-.quizRangeLabel {
-  margin: 0;
-  color: var(--accent-strong);
-  font-size: 0.84rem;
-  font-weight: 900;
-}
-
-.quizStartActions {
-  margin-top: auto;
-  display: grid;
-  gap: 10px;
-  justify-items: center;
-}
-
-.quizNote {
-  margin: 0;
-  color: var(--muted);
-  font-size: 0.8rem;
-  font-weight: 750;
-  text-align: center;
-  line-height: 1.45;
-}
-
 .subButton {
   min-height: 46px;
   padding: 0 18px;
@@ -826,209 +756,6 @@ h1 {
   color: var(--accent-strong);
   font-size: 0.78rem;
   font-weight: 850;
-}
-
-.quizPrompt {
-  flex: 1 1 auto;
-  min-height: 0;
-  display: grid;
-  place-items: center;
-  align-content: center;
-  gap: 10px;
-  overflow-y: auto;
-}
-
-.quizHanzi {
-  margin: 0;
-  font-size: clamp(3.4rem, 17vw, 6rem);
-  font-weight: 950;
-  letter-spacing: -0.06em;
-  line-height: 1.05;
-  text-align: center;
-  overflow-wrap: anywhere;
-}
-
-.quizListen {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  min-height: 38px;
-  padding: 0 14px;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  background: #f2e4d4;
-  color: var(--accent-strong);
-  font-size: 0.82rem;
-  font-weight: 850;
-}
-
-.quizChoices {
-  display: grid;
-  gap: 8px;
-}
-
-.quizChoice {
-  width: 100%;
-  min-height: 56px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 8px 14px;
-  border: 1px solid var(--line);
-  border-radius: 16px;
-  background: rgba(255, 255, 255, 0.86);
-  color: var(--text);
-  text-align: left;
-}
-
-.quizChoice:disabled {
-  opacity: 1; /* 채점 뒤에도 글자가 흐려지지 않게 */
-}
-
-.quizChoiceText {
-  flex: 1;
-  font-size: clamp(1.15rem, 5vw, 1.5rem);
-  font-weight: 900;
-  overflow-wrap: anywhere;
-}
-
-.quizChoiceTone {
-  flex-shrink: 0;
-  color: var(--muted);
-  font-size: 0.76rem;
-  font-weight: 850;
-}
-
-.quizChoice.right {
-  border-color: #3f7d54;
-  background: #e8f5ec;
-  color: #235535;
-}
-
-.quizChoice.right .quizChoiceTone {
-  color: #3f7d54;
-}
-
-.quizChoice.wrong {
-  border-color: #b3574f;
-  background: #fceceb;
-  color: #7d322c;
-}
-
-.quizChoice.wrong .quizChoiceTone {
-  color: #b3574f;
-}
-
-.quizFeedback {
-  display: grid;
-  gap: 10px;
-}
-
-.quizMeaning {
-  margin: 0;
-  color: var(--accent-strong);
-  font-size: 1rem;
-  font-weight: 850;
-  text-align: center;
-  overflow-wrap: anywhere;
-}
-
-.quizScore {
-  text-align: center;
-}
-
-.quizScoreValue {
-  margin: 0;
-  font-size: clamp(2.6rem, 12vw, 4rem);
-  font-weight: 950;
-  letter-spacing: -0.05em;
-}
-
-.quizScoreLabel {
-  margin: 4px 0 0;
-  color: var(--muted);
-  font-size: 0.9rem;
-  font-weight: 800;
-}
-
-.quizWrongList {
-  min-height: 0;
-  flex: 1;
-  overflow-y: auto;
-  overscroll-behavior: contain;
-  display: grid;
-  align-content: start;
-  gap: 7px;
-  margin: 0;
-  padding: 0 4px 4px 0;
-  list-style: none;
-}
-
-.quizWrongRow {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 10px;
-  padding: 10px 13px;
-  border: 1px solid var(--line);
-  border-radius: 16px;
-  background: rgba(255, 255, 255, 0.86);
-  color: inherit;
-  text-align: left;
-}
-
-.quizWrongRow p {
-  margin: 0;
-  overflow-wrap: anywhere;
-}
-
-.quizWrongHanzi {
-  font-size: 1.3rem;
-  font-weight: 950;
-}
-
-.quizWrongPinyin {
-  color: var(--accent);
-  font-size: 0.92rem;
-  font-weight: 850;
-}
-
-.quizWrongPinyin span {
-  color: var(--muted);
-  font-size: 0.74rem;
-}
-
-.quizWrongMeaning {
-  color: var(--muted);
-  font-size: 0.84rem;
-  font-weight: 780;
-}
-
-.quizWrongPicked {
-  flex-shrink: 0;
-  display: grid;
-  gap: 2px;
-  justify-items: end;
-  text-align: right;
-}
-
-.quizWrongPicked span {
-  color: var(--muted);
-  font-size: 0.68rem;
-  font-weight: 850;
-}
-
-.quizWrongPicked strong {
-  color: #b3574f;
-  font-size: 0.94rem;
-  text-decoration: line-through;
-}
-
-.quizResultActions {
-  display: grid;
-  gap: 8px;
-  justify-items: center;
 }
 
 .keyboardHint {
@@ -1757,8 +1484,6 @@ code {
 .prompt-hanzi.textLong,
 .answerHanzi,
 .vocabHanzi,
-.quizHanzi,
-.quizWrongHanzi,
 .rubyHanzi,
 .rubyPunct,
 .listenVocab strong,
@@ -2052,8 +1777,7 @@ code {
     font-size: clamp(0.41rem, 1.9vw, 0.56rem);
   }
 
-  .listPanel,
-  .quizPanel {
+  .listPanel {
     padding: 10px;
     border-radius: 24px;
     gap: 8px;
@@ -2069,22 +1793,6 @@ code {
     min-height: 31px;
     padding: 0 10px;
     font-size: 0.74rem;
-  }
-
-  .quizStart,
-  .quizQuestion,
-  .quizResult {
-    gap: 10px;
-  }
-
-  .quizChoice {
-    min-height: 50px;
-    padding: 7px 12px;
-    border-radius: 14px;
-  }
-
-  .quizChoiceText {
-    font-size: 1.18rem;
   }
 
   .subButton {
@@ -2269,3 +1977,71 @@ code {
 .writingUsagePinyin { color: var(--muted); font-weight: 400; }
 .writingUsagePattern { border-left: 3px solid #b8d2ac; padding-left: 10px; }
 .writingGrammarBasics summary:focus-visible, .writingGrammar summary:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+
+/* 랜덤 학습 «모르겠어» / «이제 알겠어», 내 단어장 모름 횟수 */
+.cardMeta .unknownBadge,
+.vocabTag.unknownTag {
+  background: #f7dcd6;
+  color: #9c3f36;
+}
+
+.unknownActions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.unknownButton {
+  min-height: 38px;
+  padding: 0 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid #d9a79f;
+  border-radius: 13px;
+  background: rgba(255, 255, 255, 0.85);
+  color: #9c3f36;
+  font-size: 0.86rem;
+  font-weight: 900;
+}
+
+.unknownButton:disabled {
+  opacity: 0.55;
+  cursor: default;
+}
+
+.unknownButton.knownButton {
+  border-color: #9fbf98;
+  color: #3f6f39;
+}
+
+.mineActions {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.mineActions .mineRemove {
+  flex: 1;
+  justify-content: center;
+}
+
+.mineRemove.mineKnown {
+  border-color: #9fbf98;
+  color: #3f6f39;
+}
+
+@media (max-width: 680px) {
+  .unknownButton {
+    min-height: 34px;
+    padding: 0 12px;
+    font-size: 0.8rem;
+  }
+
+  .mineActions .mineRemove {
+    padding: 4px 8px;
+    font-size: 0.72rem;
+  }
+}
