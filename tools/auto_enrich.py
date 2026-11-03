@@ -611,6 +611,9 @@ def main():
               '작업 폴더의 해설 파일은 이미 새로 만들어졌습니다. tools/vocab_fixes.json에 보정을 더하고 다시 돌리세요.')
         return 1
     print(f'공개 데이터 {count}개 파일의 핵심 단어를 동기화했습니다.')
+    from mine_refresh import refresh_after_write  # 내 단어장 갱신 색인(src/data/mine-refresh.json)
+    for repo in sorted({job[3] for job in jobs}):
+        refresh_after_write(repo)
     return 0
 
 

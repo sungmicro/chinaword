@@ -6,11 +6,24 @@ import { speakChinese, stopSpeaking, useChineseVoice } from './speech';
 import { STUDY_GROUP_OPTIONS, lessonBadge, matchesStudyGroup, normalizeStudyGroup } from './lessons';
 import { randomIndex, selectStudyPool } from './studyPool';
 import { shuffleVocab } from './vocabOrder';
-import { MINE_LESSON, mineToStudyItems, sortByUnknown, unknownCountOf, useMyVocab, wordKey } from './myVocab';
+import refreshIndex from './data/mine-refresh.json';
+import { makeMineRefresher } from './mineRefresh';
+import {
+  MINE_LESSON,
+  configureMineRefresh,
+  mineToStudyItems,
+  sortByUnknown,
+  unknownCountOf,
+  useMyVocab,
+  wordKey
+} from './myVocab';
 import Listening from './Listening';
 import Reading from './Reading';
 import Writing from './Writing';
 import './styles.css';
+
+// 내 단어장을 처음 불러올 때 예전에 담은 단어를 지금 데이터(뜻·병음 보정, 나뉜 묶음)에 맞춥니다.
+configureMineRefresh(makeMineRefresher(refreshIndex, vocabData, wordKey).refreshItems);
 
 const PROMPT_TYPES = ['hanzi', 'pinyin', 'meaningKo'];
 

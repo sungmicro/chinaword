@@ -4,6 +4,7 @@ import {
   MINE_KEY,
   MINE_LESSON,
   autoReadingUsage,
+  configureMineRefresh,
   dropAutoReadingUsage,
   ADDED_BY_UNKNOWN,
   loadMine,
@@ -134,6 +135,38 @@ test('저장소: 지울 것이 없으면 기기 저장값을 다시 쓰지 않�
   resetMineForTest();
   assert.equal(loadMine().length, 1);
   assert.equal(writes, 0);
+});
+
+test('저장소: 불러올 때 단어를 지금 데이터로 갱신하고(나눈 묶음은 조각으로), 바뀐 것이 있을 때만 한 번 저장한다', () => {
+  const old = {
+    key: 'word:比较忙:bijiaomang', kind: 'word', hanzi: '比较忙', pinyin: 'bǐjiàománg', meaningKo: '比较忙', partOfSpeech: '단어',
+    note: '', exampleZh: '', examplePinyin: '', exampleKo: '', source: 'H31006 독해 52번',
+    addedAt: '2026-10-20T05:00:00.000Z', addedBy: ADDED_BY_UNKNOWN, unknownCount: 1
+  };
+  const pattern = patternEntry(READING_GRAMMAR, 'H31001 독해 63번', NOW);
+  let writes = 0;
+  const storage = memoryStorage({ [MINE_KEY]: JSON.stringify({ version: 1, items: [old, pattern] }) });
+  const setItem = storage.setItem;
+  storage.setItem = (key, value) => {
+    writes += 1;
+    setItem(key, value);
+  };
+  useStorage(storage);
+  const split = (items) => items.flatMap((entry) => entry.hanzi === '比较忙'
+    ? ['比较', '忙'].map((hanzi) => ({ ...entry, hanzi, key: `word:${hanzi}`, meaningKo: `${hanzi} 뜻` }))
+    : [entry]);
+  const refresh = (items) => (items.some((entry) => entry.hanzi === '比较忙') ? split(items) : items);
+  resetMineForTest();
+  configureMineRefresh(refresh);
+  assert.deepEqual(loadMine().map((entry) => entry.hanzi), ['比较', '忙', pattern.hanzi]);
+  assert.equal(writes, 1);
+  assert.deepEqual(JSON.parse(storage.getItem(MINE_KEY)).items.map((entry) => [entry.hanzi, entry.unknownCount]),
+    [['比较', 1], ['忙', 1], [pattern.hanzi, undefined]]);
+  // 다시 열면(새로 불러오면) 바꿀 것이 없어 쓰지 않는다
+  resetMineForTest();
+  configureMineRefresh(refresh);
+  assert.equal(loadMine().length, 3);
+  assert.equal(writes, 1);
 });
 
 test('wordEntry: 듣기 단어는 용법·예문 칸이 빈다', () => {

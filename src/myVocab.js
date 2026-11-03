@@ -201,12 +201,23 @@ function sanitize(saved) {
 let current = null;
 const listeners = new Set();
 
+// 불러올 때 단어 항목을 지금 데이터에 맞추는 함수(src/mineRefresh.js). main.jsx가 vocab.json과 갱신 색인으로
+// 만들어 넘깁니다. 넘기지 않으면(테스트 등) 그대로 둡니다.
+let refreshItems = (items) => items;
+
+export function configureMineRefresh(refresh) {
+  refreshItems = refresh ?? ((items) => items);
+  current = null;
+}
+
 export function loadMine() {
   if (current === null) {
     const saved = sanitize(readJson(MINE_KEY, {}));
-    current = saved.map(dropAutoReadingUsage);
-    // 지운 것이 있으면 한 번 저장해 둡니다(다음부터는 바꿀 것이 없어 쓰지 않습니다).
-    if (current.some((entry, index) => entry !== saved[index])) writeJson(MINE_KEY, { version: 1, items: current });
+    current = refreshItems(saved.map(dropAutoReadingUsage));
+    // 지우거나 바꾼 것이 있으면 한 번 저장해 둡니다(다음부터는 바꿀 것이 없어 쓰지 않습니다).
+    if (current.length !== saved.length || current.some((entry, index) => entry !== saved[index])) {
+      writeJson(MINE_KEY, { version: 1, items: current });
+    }
   }
   return current;
 }
@@ -246,6 +257,7 @@ export function subscribeMine(listener) {
 
 export function resetMineForTest() {
   current = null;
+  refreshItems = (items) => items;
   listeners.clear();
 }
 

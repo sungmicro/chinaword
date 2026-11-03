@@ -117,4 +117,10 @@ def main():
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps({'version': 1, 'items': items}, ensure_ascii=False, indent=2) + '\n')
     print('19회차 × 10 = 190문항, 어순 95 · 한자 95, 번호·정답·복수답·중복 검증 통과')
+    repo = HERE.parents[1]
+    if args.output.resolve() == (repo / 'public/writing/hsk3-all.json').resolve():
+        import sys
+        sys.path.insert(0, str(HERE.parent))
+        from mine_refresh import refresh_after_write  # 쓰기 핵심 단어도 내 단어장 갱신 색인에 들어간다
+        refresh_after_write(repo)
 if __name__ == '__main__': main()

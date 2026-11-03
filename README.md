@@ -31,3 +31,7 @@ Make mobile compact quiz layout
 ## 유지되는 데이터
 
 이번 ZIP에는 `src/data/vocab.json`이 포함되어 있지 않습니다. 기존 HSK 1급/2급 및 교재 단어장 데이터는 유지됩니다.
+
+## 내 단어장 갱신
+
+- 내 단어장(기기 저장)은 담을 때의 병음·뜻을 저장하므로, 앱이 불러올 때 `src/data/mine-refresh.json` 색인으로 단어 항목을 지금 데이터에 맞춘다(나뉜 묶음 比较忙 → 比较·忙, 대본 오인식 散 → 伞, 모름 횟수·출처·메모 유지, 문장·패턴은 그대로). 색인은 `tools/mine_refresh.py`가 공개 데이터·`tools/vocab_fixes.json`·`tools/mine_moves.json`에서 만들고 듣기·독해·쓰기 데이터를 쓰는 도구들이 마지막에 다시 쓰므로, 데이터를 고치면 갱신도 따라온다(오래되면 `npm test`가 실패한다 → `python3 tools/mine_refresh.py --repo .`).

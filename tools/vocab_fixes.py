@@ -288,6 +288,8 @@ def main():
             print(f'문제 {len(error.problems)}개. 파일을 쓰지 않았습니다.')
             return 1
         print(f'듣기 회차 {tests}개의 단어를 보정했고, 단어장에 «HSK3 듣기» 단어 {added}개를 다시 넣었습니다.')
+        from mine_refresh import refresh_after_write  # 내 단어장 갱신 색인도 지금 데이터로(순환 import라 여기서 가져온다)
+        refresh_after_write(args.repo)
     counts = count_problems(args.repo)
     for kind, count in counts.items():
         print(kind, json.dumps(count, ensure_ascii=False))
