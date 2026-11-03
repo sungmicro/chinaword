@@ -122,5 +122,6 @@ def main():
         import sys
         sys.path.insert(0, str(HERE.parent))
         from mine_refresh import refresh_after_write  # 쓰기 핵심 단어도 내 단어장 갱신 색인에 들어간다
-        refresh_after_write(repo)
+        if not refresh_after_write(repo):
+            raise SystemExit(1)  # 쓰기 데이터는 썼지만 내 단어장 갱신 색인을 쓰지 못했다
 if __name__ == '__main__': main()

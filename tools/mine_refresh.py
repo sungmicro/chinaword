@@ -189,6 +189,8 @@ def build_index(repo, fixes=None, moves=None):
             if token in hanzi:
                 problems.append(f'split {token}: {address} 해설에 아직 있음(나눈 묶음은 해설에 없어야 한다)')
         for target in targets:
+            if target == token:
+                problems.append(f'split {token}: 조각이 자기 자신')
             if target in split:
                 problems.append(f'split {token} → {target}: 조각이 다시 split에 있음(두 번 돌리면 결과가 달라진다)')
             if default(target) is None:
@@ -201,7 +203,7 @@ def build_index(repo, fixes=None, moves=None):
             if hanzi in present[address]:
                 problems.append(f'moved {address} {hanzi}: 그 문항 해설에 아직 있음')
             for target in targets:
-                if target in table or target in split:
+                if target == hanzi or target in table or target in split:
                     problems.append(f'moved {address} {hanzi} → {target}: 바꾼 단어가 다시 옮길 대상임')
                 if target not in present[address] and default(target) is None and target not in at.get(address, {}):
                     problems.append(f'moved {address} {hanzi} → {target}: 바꾼 단어의 뜻을 찾을 수 없음')
@@ -256,19 +258,16 @@ def check_mine_refresh(repo):
 
 
 def refresh_after_write(repo):
-    """공개 데이터를 쓴 도구가 마지막에 부른다. 문제가 있으면 색인은 그대로 두고 알리기만 한다(False).
-
-    듣기(vocab_fixes --apply-listening)와 독해(reading/assemble.py)를 차례로 돌리는 중간에는 다른 쪽 데이터가
-    아직 옛 보정 상태라 문제가 날 수 있다. 마지막 단계에서 통과하면 된다. 남은 문제는 npm test
-    (src/mineRefresh.test.js)와 tools/test_mine_refresh.py가 막는다.
+    """공개 데이터를 쓴 도구가 마지막에 부른다. 문제가 있으면 색인은 그대로 두고 False를 돌려준다.
+    부른 도구는 데이터를 쓴 채로 0이 아닌 코드로 끝낸다(듣기·독해를 차례로 돌리는 중간이면 다음 단계 뒤 다시 돌린다).
     """
     try:
         changed = write_mine_refresh(repo)
     except IndexProblems as error:
         for problem in error.problems:
             print('  ! ' + problem)
-        print(f'내 단어장 갱신 색인({INDEX_PATH})은 그대로 두었습니다. 다른 데이터도 다시 만든 뒤에도 남으면 '
-              'tools/mine_moves.json·vocab_fixes.json을 고치고 tools/mine_refresh.py --repo .를 돌리세요.')
+        print(f'데이터는 썼지만 내 단어장 갱신 색인({INDEX_PATH})은 쓰지 못했습니다(실패로 끝냅니다). 다른 데이터도 다시 만든 뒤에도 '
+              '남으면 tools/mine_moves.json·vocab_fixes.json을 고치고 tools/mine_refresh.py --repo .를 돌리세요.')
         return False
     print(f'내 단어장 갱신 색인({INDEX_PATH})을 {"다시 썼습니다" if changed else "확인했습니다(바뀐 것 없음)"}.')
     return True

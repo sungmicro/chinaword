@@ -281,7 +281,7 @@ def apply_listening(repo):
 def apply_sentences(repo):
     """공개 독해·듣기 회차의 문장 words에서 붙은 토큰을 나누고(tools/sentence_split.py), src/data/vocab.json의
     예문 병음·문장 카드 병음도 같은 표로 고친다. 몇 번 돌려도 같다. (나눈 토큰 수, 고친 카드 수, 못 나눈 토큰)을 돌려준다."""
-    from sentence_split import SPLITS_PATH, fix_vocab_pinyin, load_splits, merge_splits, split_test_sentences
+    from sentence_split import fix_vocab_pinyin, load_splits, merge_splits, split_test_sentences
 
     repo = Path(repo)
     files, log, skipped, count = {}, {}, set(), 0
@@ -300,28 +300,31 @@ def apply_sentences(repo):
     cards = fix_vocab_pinyin(vocab, fixes)
     if cards:
         files[vocab_path] = json.dumps(vocab, ensure_ascii=False, indent=2) + '\n'
+    import sentence_split  # SPLITS_PATH는 부를 때 읽는다(테스트에서 바꿀 수 있게)
+    splits_path = sentence_split.SPLITS_PATH
     splits = merge_splits(log)
-    if not SPLITS_PATH.exists() or SPLITS_PATH.read_text(encoding='utf-8') != splits:
-        files[SPLITS_PATH] = splits
+    if not splits_path.exists() or splits_path.read_text(encoding='utf-8') != splits:
+        files[splits_path] = splits
     if files:
         write_files_atomically(files)
     return sum(len(table) for table in log.values()), count, cards, sorted(skipped)
 
 
-def main():
+def main(argv=None):
     parser = argparse.ArgumentParser()
     parser.add_argument('--repo', required=True)
     parser.add_argument('--apply-listening', action='store_true', help='듣기 공개 데이터와 단어장 «HSK3 듣기» 단원을 보정한다')
     parser.add_argument('--apply-sentences', action='store_true',
                         help='독해·듣기 문장 words의 붙은 토큰을 나누고 vocab.json 예문 병음을 고친다(tools/sentence_split.py)')
-    args = parser.parse_args()
+    args = parser.parse_args(argv)
     if args.apply_sentences:
         pairs, files, cards, skipped = apply_sentences(args.repo)
         print(f'문장의 붙은 토큰 {pairs}종을 나눴습니다(회차 파일 {files}개, vocab.json 카드 {cards}개).')
         for token, pinyin in skipped:
             print(f'  ? 나누지 못함: {token} {pinyin}')
         from mine_refresh import refresh_after_write
-        refresh_after_write(args.repo)
+        if not refresh_after_write(args.repo):
+            return 1  # 데이터는 썼지만 내 단어장 갱신 색인을 쓰지 못했다
     if args.apply_listening:
         try:
             tests, added = apply_listening(args.repo)
@@ -332,7 +335,8 @@ def main():
             return 1
         print(f'듣기 회차 {tests}개의 단어를 보정했고, 단어장에 «HSK3 듣기» 단어 {added}개를 다시 넣었습니다.')
         from mine_refresh import refresh_after_write  # 내 단어장 갱신 색인도 지금 데이터로(순환 import라 여기서 가져온다)
-        refresh_after_write(args.repo)
+        if not refresh_after_write(args.repo):
+            return 1  # 데이터는 썼지만 내 단어장 갱신 색인을 쓰지 못했다
     counts = count_problems(args.repo)
     for kind, count in counts.items():
         print(kind, json.dumps(count, ensure_ascii=False))

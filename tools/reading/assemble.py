@@ -382,8 +382,8 @@ def main():
     (repo / 'src' / 'data' / 'reading-index.json').write_text(json.dumps(index, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
     added = update_vocab(tests, repo)
     print(f'회차 {len(tests)}개를 썼고, 단어장에 «{LESSON}» 단어 {added}개를 넣었습니다.')
-    refresh_after_write(repo)  # 내 단어장 갱신 색인(src/data/mine-refresh.json)
-    return 0
+    # 내 단어장 갱신 색인(src/data/mine-refresh.json). 못 쓰면 데이터는 쓴 채로 1로 끝낸다.
+    return 0 if refresh_after_write(repo) else 1
 
 
 if __name__ == '__main__':

@@ -210,12 +210,26 @@ export function configureMineRefresh(refresh) {
   current = null;
 }
 
+// 2026-11-04 갱신(src/mineRefresh.js)이 처음 바꾸기 전의 저장값을 그대로 한 번만 남겨 둡니다. 이미 있으면 덮지 않습니다.
+export const MINE_BACKUP_KEY = `${MINE_KEY}-backup-2026-11-04`;
+
+function backupOnce() {
+  try {
+    if (localStorage.getItem(MINE_BACKUP_KEY) !== null) return;
+    const raw = localStorage.getItem(MINE_KEY);
+    if (raw !== null) localStorage.setItem(MINE_BACKUP_KEY, raw);
+  } catch {
+    // 백업을 못 해도 학습은 막지 않습니다.
+  }
+}
+
 export function loadMine() {
   if (current === null) {
     const saved = sanitize(readJson(MINE_KEY, {}));
     current = refreshItems(saved.map(dropAutoReadingUsage));
-    // 지우거나 바꾼 것이 있으면 한 번 저장해 둡니다(다음부터는 바꿀 것이 없어 쓰지 않습니다).
+    // 지우거나 바꾼 것이 있으면 원래 저장값을 백업한 뒤 한 번 저장해 둡니다(다음부터는 바꿀 것이 없어 쓰지 않습니다).
     if (current.length !== saved.length || current.some((entry, index) => entry !== saved[index])) {
+      backupOnce();
       writeJson(MINE_KEY, { version: 1, items: current });
     }
   }

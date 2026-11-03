@@ -128,5 +128,44 @@ class BuildIndexTest(unittest.TestCase):
         self.assertEqual(json.loads(first), json.loads(index_text(json.loads(first))))
 
 
+
+class FailurePropagationTest(unittest.TestCase):
+    """색인을 못 쓰면 refresh_after_write가 False, 데이터를 쓰는 도구는 0이 아닌 코드로 끝난다."""
+
+    def setUp(self):
+        import mine_refresh
+        import sentence_split
+        self.mine_refresh, self.sentence_split = mine_refresh, sentence_split
+        self.saved = (mine_refresh.write_mine_refresh, sentence_split.SPLITS_PATH)
+        self.tmp = tempfile.TemporaryDirectory()
+        self.repo = make_repo(self.tmp.name)
+        sentence_split.SPLITS_PATH = Path(self.tmp.name) / 'sentence_splits.json'
+
+        def broken(repo):
+            raise IndexProblems(['테스트: 색인 문제'])
+        mine_refresh.write_mine_refresh = broken
+
+    def tearDown(self):
+        self.mine_refresh.write_mine_refresh, self.sentence_split.SPLITS_PATH = self.saved
+        self.tmp.cleanup()
+
+    def test_refresh_after_write_reports_failure(self):
+        self.assertFalse(self.mine_refresh.refresh_after_write(self.repo))
+
+    def test_apply_sentences_exits_non_zero_when_index_fails(self):
+        import vocab_fixes
+        self.assertEqual(vocab_fixes.main(['--repo', str(self.repo), '--apply-sentences']), 1)
+
+    def test_tool_mains_return_the_refresh_result(self):
+        # assemble·auto_enrich·generate는 작업 폴더가 필요해 직접 돌리지 않고, 결과를 그대로 돌려주는지 소스로 확인한다.
+        tools = Path(__file__).resolve().parent
+        for path, expected in [('listening/assemble.py', 'return 0 if refresh_after_write(repo) else 1'),
+                               ('reading/assemble.py', 'return 0 if refresh_after_write(repo) else 1'),
+                               ('auto_enrich.py', 'return 0 if all(results) else 1'),
+                               ('writing/generate.py', 'raise SystemExit(1)')]:
+            with self.subTest(path=path):
+                self.assertIn(expected, (tools / path).read_text(encoding='utf-8'))
+
+
 if __name__ == '__main__':
     unittest.main()

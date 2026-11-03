@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import index from './data/mine-refresh.json' with { type: 'json' };
 import vocab from './data/vocab.json' with { type: 'json' };
-import { fixPinyinText, hasHangul, makeMineRefresher, mergeEntries, sourceAddress, sourceLesson } from './mineRefresh.js';
+import { NO_MEANING, fixPinyinText, hasHangul, makeMineRefresher, mergeEntries, sourceAddress, sourceLesson } from './mineRefresh.js';
 import { ADDED_BY_UNKNOWN, patternEntry, studyCardEntry, wordEntry, wordKey } from './myVocab.js';
 
 const { refreshEntry, refreshItems, lookup } = makeMineRefresher(index, vocab, wordKey);
@@ -133,6 +133,29 @@ test('문장·패턴 항목과 메모는 건드리지 않는다', () => {
   // 나눌 때도 메모는 조각마다 남는다
   const splitMemo = { ...OLD_BIJIAOMANG, note: '꽤 바쁘다' };
   assert.ok(refreshEntry(splitMemo).every((entry) => entry.note === '꽤 바쁘다'));
+});
+
+test('빼야 할 단어라도 사용자가 직접 쓴 메모가 있으면 남긴다(뜻에 한글이 없으면 안내 문구), 메모 없이 모름 횟수만 있으면 뺀다', () => {
+  const name = saved('明', 'míng', '명나라', 'H31001 듣기 17번', { note: '小明 = 샤오밍(이름)', unknownCount: 3 });
+  assert.deepEqual(refreshEntry(name), [name]);
+  const noHangul = saved('使', 'shǐ', '使', 'H31329 듣기 10번', { note: '번호 소리?' });
+  const [kept] = refreshEntry(noHangul);
+  assert.equal(kept.meaningKo, NO_MEANING);
+  assert.equal(kept.note, '번호 소리?');
+  assert.deepEqual(refreshEntry(kept), [kept]);
+  const unknownJunk = saved('没有这个词', 'x', '没有这个词', 'H31007 독해 61번', { note: '내 메모' });
+  assert.equal(refreshEntry(unknownJunk)[0].meaningKo, NO_MEANING);
+  assert.deepEqual(refreshEntry(saved('明', 'míng', '명나라', 'H31001 듣기 17번', { unknownCount: 3, addedBy: ADDED_BY_UNKNOWN })), []);
+});
+
+test('나눈 조각에도 같은 출처의 규칙을 곧바로 적용한다(한 번에 고정점): 向东走 @ H31007 독해 59번 → 走만', () => {
+  const out = refreshEntry(saved('向东走', 'xiàngdōngzǒu', '向东走', 'H31007 독해 59번', { unknownCount: 1 }));
+  assert.deepEqual(out.map((entry) => entry.hanzi), ['走']);
+  assert.deepEqual(refreshItems(out), out);
+  // 메모가 있으면 빼는 조각도 남는다
+  const memo = refreshEntry(saved('向东走', 'xiàngdōngzǒu', '向东走', 'H31007 독해 59번', { note: '이름 牛向东' }));
+  assert.deepEqual(memo.map((entry) => entry.hanzi), ['向', '东', '走']);
+  memo.forEach((entry) => assert.deepEqual(refreshEntry(entry), [entry]));
 });
 
 test('어디에도 없는 단어: 뜻에 한글이 있으면 그대로, 없으면 뺀다', () => {
@@ -299,4 +322,34 @@ test('공개 데이터 문장 words에 나누기 표의 붙은 토큰이 남지 
     }
   }
   assert.deepEqual(left, []);
+});
+
+test('멱등(넓게): 지금 데이터의 모든 단어·보정 표의 모든 예전 토큰을 모든 출처에 담아 한 번 갱신한 결과는 다시 갱신해도 같다', () => {
+  const hanziSet = new Set(vocab.filter((card) => card.itemType === '단어').map((card) => card.hanzi));
+  QUESTIONS.forEach((list) => list.forEach((word) => hanziSet.add(word.hanzi)));
+  Object.keys(index.split).forEach((token) => hanziSet.add(token));
+  Object.values(index.split).flat().forEach((token) => hanziSet.add(token));
+  Object.values(index.moved).forEach((table) => Object.entries(table).forEach(([token, targets]) => {
+    hanziSet.add(token);
+    targets.forEach((target) => hanziSet.add(target));
+  }));
+  const kinds = { reading: '독해', listening: '듣기', writing: '쓰기' };
+  const sources = [...new Set([...Object.keys(index.moved), ...Object.keys(index.at)])].map((address) => {
+    const [kind, test, no] = address.split('/');
+    return `${test} ${kinds[kind]} ${no}번`;
+  });
+  sources.push('랜덤 학습 · HSK3 듣기', '랜덤 학습 · HSK3 독해', '랜덤 학습 · HSK3 추가 300', '랜덤 학습', '');
+  let checked = 0;
+  for (const source of sources) {
+    for (const note of ['', '메모']) {
+      const items = [...hanziSet].map((hanzi) => saved(hanzi, 'x', hanzi, source, { note, unknownCount: 1 }));
+      const once = refreshItems(items);
+      for (const entry of once) {
+        checked += 1;
+        assert.deepEqual(refreshEntry(entry), [entry], `${source} ${entry.hanzi}`);
+      }
+      assert.equal(refreshItems(once), once, source);
+    }
+  }
+  assert.ok(checked > 100000);
 });

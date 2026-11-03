@@ -612,9 +612,8 @@ def main():
         return 1
     print(f'공개 데이터 {count}개 파일의 핵심 단어를 동기화했습니다.')
     from mine_refresh import refresh_after_write  # 내 단어장 갱신 색인(src/data/mine-refresh.json)
-    for repo in sorted({job[3] for job in jobs}):
-        refresh_after_write(repo)
-    return 0
+    results = [refresh_after_write(repo) for repo in sorted({job[3] for job in jobs})]
+    return 0 if all(results) else 1  # 내 단어장 갱신 색인을 못 쓰면 1
 
 
 def enrich_all(args, translator, catalog):

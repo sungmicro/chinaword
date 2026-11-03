@@ -10,6 +10,8 @@
 //  2. 나뉜 묶음(split: 比较忙 → 比较·忙, 李先生 → 李·先生)은 조각으로 바꿉니다.
 //  3. 나머지는 vocab.json의 첫 «단어» 카드, 없으면 해설의 기본 뜻(base)으로 맞춥니다.
 //  4. 어디에도 없는 단어는 뜻에 한글이 있으면 그대로 두고, 없으면 뺍니다. 옮길 단어가 빈 목록이면 뺍니다.
+//     단, 사용자가 직접 쓴 메모가 있는 항목은 빼지 않고 남깁니다(뜻에 한글이 없으면 NO_MEANING 안내로).
+//     나눈 조각·바꾼 단어에도 같은 규칙을 곧바로 다시 적용합니다(고정점, 깊이 4까지).
 //  5. 예문 병음(examplePinyin, 모든 항목)과 문장 항목의 병음에 남은 붙은 토큰(bǐjiàománg)은 나눈 병음(bǐjiào máng)으로
 //     바꿉니다(색인 pinyin = tools/sentence_splits.json, tools/sentence_split.py fix_pinyin_text와 같은 규칙).
 // 조각·바꾼 단어는 원래 항목의 출처·담은 시각·담은 방법(addedBy)·메모·모름 횟수를 이어받고, 이미 담긴 단어와 겹치면
@@ -81,6 +83,12 @@ export function fixPinyinText(text, zh, fixes) {
   }
   return out;
 }
+
+// 빼야 할 단어(이름 글자·오인식 잔재)라도 사용자가 직접 쓴 메모가 있으면 남깁니다. 뜻에 한글이 없으면 이 안내로 바꿉니다.
+export const NO_MEANING = '(뜻 정보 없음 — 이름·오인식 글자)';
+const MAX_DEPTH = 4;
+const hasMemo = (entry) => Boolean(String(entry.note ?? '').trim());
+const keepWithMemo = (entry) => (hasHangul(entry.meaningKo) ? entry : { ...entry, meaningKo: NO_MEANING });
 
 const countOf = (entry) => (Number.isInteger(entry?.unknownCount) && entry.unknownCount > 0 ? entry.unknownCount : 0);
 
@@ -159,20 +167,28 @@ export function makeMineRefresher(index, vocab, wordKey) {
   }
 
   // 항목 하나 → 지금 데이터의 항목 0개 이상. 바뀌지 않았으면 같은 객체를 돌려줍니다.
+  // 한 번에 고정점까지: 나눈 조각·바꾼 단어에도 같은 출처의 moved·split·at을 곧바로 적용합니다
+  // (向东走 → 向·东·走 뒤에 그 문항의 向 → [] 같은 규칙). 두 번째 갱신에서 더 바뀌지 않습니다.
+  function resolveWord(entry, context, depth) {
+    const targets = depth < MAX_DEPTH ? targetsOf(entry.hanzi, context) : null;
+    if (targets) {
+      const pieces = targets.flatMap((hanzi) => {
+        const sense = lookup(hanzi, context);
+        return sense ? resolveWord(withSense(entry, hanzi, sense), context, depth + 1) : [];
+      });
+      return pieces.length || !hasMemo(entry) ? pieces : [keepWithMemo(entry)];
+    }
+    const sense = lookup(entry.hanzi, context);
+    if (sense) return [withSense(entry, entry.hanzi, sense)];
+    if (hasHangul(entry.meaningKo)) return [entry];
+    return hasMemo(entry) ? [keepWithMemo(entry)] : [];
+  }
+
   function refreshEntry(original) {
     const entry = fixPinyin(original);
     if (entry.kind !== 'word' || (entry.itemType && entry.itemType !== WORD_TYPE)) return [entry];
     const context = { address: sourceAddress(entry.source), lesson: sourceLesson(entry.source) };
-    const targets = targetsOf(entry.hanzi, context);
-    if (targets) {
-      return targets.flatMap((hanzi) => {
-        const sense = lookup(hanzi, context);
-        return sense ? [withSense(entry, hanzi, sense)] : [];
-      });
-    }
-    const sense = lookup(entry.hanzi, context);
-    if (sense) return [withSense(entry, entry.hanzi, sense)];
-    return hasHangul(entry.meaningKo) ? [entry] : [];
+    return resolveWord(entry, context, 0);
   }
 
   // 목록 전체. 바뀐 것이 없으면 같은 배열을 돌려줍니다.

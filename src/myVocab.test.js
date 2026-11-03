@@ -1,6 +1,7 @@
 import { beforeEach, test } from 'node:test';
 import assert from 'node:assert/strict';
 import {
+  MINE_BACKUP_KEY,
   MINE_KEY,
   MINE_LESSON,
   autoReadingUsage,
@@ -145,10 +146,11 @@ test('저장소: 불러올 때 단어를 지금 데이터로 갱신하고(나눈
   };
   const pattern = patternEntry(READING_GRAMMAR, 'H31001 독해 63번', NOW);
   let writes = 0;
-  const storage = memoryStorage({ [MINE_KEY]: JSON.stringify({ version: 1, items: [old, pattern] }) });
+  const original = JSON.stringify({ version: 1, items: [old, pattern] });
+  const storage = memoryStorage({ [MINE_KEY]: original });
   const setItem = storage.setItem;
   storage.setItem = (key, value) => {
-    writes += 1;
+    if (key === MINE_KEY) writes += 1;
     setItem(key, value);
   };
   useStorage(storage);
@@ -162,11 +164,19 @@ test('저장소: 불러올 때 단어를 지금 데이터로 갱신하고(나눈
   assert.equal(writes, 1);
   assert.deepEqual(JSON.parse(storage.getItem(MINE_KEY)).items.map((entry) => [entry.hanzi, entry.unknownCount]),
     [['比较', 1], ['忙', 1], [pattern.hanzi, undefined]]);
+  // 처음 바꾸기 전의 저장값은 백업 키에 그대로 남는다
+  assert.equal(storage.getItem(MINE_BACKUP_KEY), original);
   // 다시 열면(새로 불러오면) 바꿀 것이 없어 쓰지 않는다
   resetMineForTest();
   configureMineRefresh(refresh);
   assert.equal(loadMine().length, 3);
   assert.equal(writes, 1);
+  // 나중에 또 바뀌어도 백업은 덮지 않는다
+  storage.setItem(MINE_KEY, JSON.stringify({ version: 1, items: [old] }));
+  resetMineForTest();
+  configureMineRefresh(refresh);
+  loadMine();
+  assert.equal(storage.getItem(MINE_BACKUP_KEY), original);
 });
 
 test('wordEntry: 듣기 단어는 용법·예문 칸이 빈다', () => {

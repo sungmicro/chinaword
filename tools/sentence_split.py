@@ -199,7 +199,8 @@ def fix_pinyin_text(text, zh, fixes):
     return text
 
 
-def load_splits(path=SPLITS_PATH):
+def load_splits(path=None):
+    path = SPLITS_PATH if path is None else path
     if path.exists():
         return json.loads(path.read_text(encoding='utf-8'))['pinyin']
     return {}
@@ -214,7 +215,7 @@ def splits_text(pinyin):
     return json.dumps(data, ensure_ascii=False, indent=1) + '\n'
 
 
-def merge_splits(log, path=SPLITS_PATH):
+def merge_splits(log, path=None):
     """이번에 나눈 병음을 기록 표에 더한 내용(텍스트)을 돌려준다."""
     merged = load_splits(path)
     for token, table in log.items():
