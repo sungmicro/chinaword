@@ -3,9 +3,11 @@
 export const STUDY_GROUPS = {
   'HSK1&2': ['HSK1 150', 'HSK2 추가 150', 'HSK2 공식문제'],
   HSK3: ['HSK3 추가 300', 'HSK3 듣기', 'HSK3 독해'],
+  // HSK4는 HSK 3.0(2021) 4급 새 단어. 나머지 HSK 단원은 HSK 2.0 기준(tools/hsk30/build_level4.py).
+  HSK4: ['HSK4 (3.0)'],
   교재1: Array.from({ length: 8 }, (_, index) => `Lesson ${index + 1}`)
 };
-export const STUDY_GROUP_OPTIONS = ['전체', 'HSK1&2', 'HSK3', '교재1'];
+export const STUDY_GROUP_OPTIONS = ['전체', 'HSK1&2', 'HSK3', 'HSK4', '교재1'];
 
 export function normalizeStudyGroup(group) {
   return STUDY_GROUP_OPTIONS.includes(group) ? group : '전체';

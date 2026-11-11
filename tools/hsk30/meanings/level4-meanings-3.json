@@ -1,0 +1,1866 @@
+[
+ {
+  "key": "L4-0500",
+  "hanzi": "落",
+  "pinyin": "luò",
+  "partOfSpeech": "동사",
+  "meaningKo": "떨어지다, 내려앉다",
+  "note": ""
+ },
+ {
+  "key": "L4-0501",
+  "hanzi": "毛巾",
+  "pinyin": "máojīn",
+  "partOfSpeech": "명사",
+  "meaningKo": "수건",
+  "note": ""
+ },
+ {
+  "key": "L4-0502",
+  "hanzi": "毛衣",
+  "pinyin": "máoyī",
+  "partOfSpeech": "명사",
+  "meaningKo": "스웨터",
+  "note": ""
+ },
+ {
+  "key": "L4-0504",
+  "hanzi": "没错",
+  "pinyin": "méi cuò",
+  "partOfSpeech": "형용사",
+  "meaningKo": "맞다, 틀림없다",
+  "note": "품사가 비어 있다(이합사·구): partOfSpeech를 채운다"
+ },
+ {
+  "key": "L4-0505",
+  "hanzi": "没法儿",
+  "pinyin": "méifǎr",
+  "partOfSpeech": "동사",
+  "meaningKo": "방법이 없다",
+  "note": ""
+ },
+ {
+  "key": "L4-0507",
+  "hanzi": "美金",
+  "pinyin": "měijīn",
+  "partOfSpeech": "명사",
+  "meaningKo": "미국 달러",
+  "note": ""
+ },
+ {
+  "key": "L4-0508",
+  "hanzi": "美女",
+  "pinyin": "měinǚ",
+  "partOfSpeech": "명사",
+  "meaningKo": "미녀",
+  "note": ""
+ },
+ {
+  "key": "L4-0509",
+  "hanzi": "梦",
+  "pinyin": "mèng",
+  "partOfSpeech": "명사/동사",
+  "meaningKo": "꿈 / (동) 꿈꾸다",
+  "note": ""
+ },
+ {
+  "key": "L4-0510",
+  "hanzi": "梦见",
+  "pinyin": "mèngjiàn",
+  "partOfSpeech": "동사",
+  "meaningKo": "꿈에서 보다",
+  "note": "품사가 비어 있다(이합사·구): partOfSpeech를 채운다"
+ },
+ {
+  "key": "L4-0511",
+  "hanzi": "梦想",
+  "pinyin": "mèngxiǎng",
+  "partOfSpeech": "동사/명사",
+  "meaningKo": "간절히 바라다, 꿈꾸다 / (명) 꿈, 이상",
+  "note": ""
+ },
+ {
+  "key": "L4-0512",
+  "hanzi": "秘密",
+  "pinyin": "mìmì",
+  "partOfSpeech": "형용사/명사",
+  "meaningKo": "비밀이다, 은밀하다 / (명) 비밀",
+  "note": ""
+ },
+ {
+  "key": "L4-0513",
+  "hanzi": "秘书",
+  "pinyin": "mìshū",
+  "partOfSpeech": "명사",
+  "meaningKo": "비서",
+  "note": ""
+ },
+ {
+  "key": "L4-0514",
+  "hanzi": "密",
+  "pinyin": "mì",
+  "partOfSpeech": "형용사",
+  "meaningKo": "빽빽하다, 촘촘하다",
+  "note": ""
+ },
+ {
+  "key": "L4-0515",
+  "hanzi": "密码",
+  "pinyin": "mìmǎ",
+  "partOfSpeech": "명사",
+  "meaningKo": "비밀번호",
+  "note": ""
+ },
+ {
+  "key": "L4-0516",
+  "hanzi": "密切",
+  "pinyin": "mìqiè",
+  "partOfSpeech": "형용사/동사",
+  "meaningKo": "밀접하다 / (동) 긴밀히 하다",
+  "note": ""
+ },
+ {
+  "key": "L4-0517",
+  "hanzi": "免费",
+  "pinyin": "miǎnfèi",
+  "partOfSpeech": "동사",
+  "meaningKo": "무료이다, 공짜이다",
+  "note": "품사가 비어 있다(이합사·구): partOfSpeech를 채운다"
+ },
+ {
+  "key": "L4-0518",
+  "hanzi": "面临",
+  "pinyin": "miànlín",
+  "partOfSpeech": "동사",
+  "meaningKo": "직면하다, 맞닥뜨리다",
+  "note": ""
+ },
+ {
+  "key": "L4-0520",
+  "hanzi": "描述",
+  "pinyin": "miáoshù",
+  "partOfSpeech": "동사",
+  "meaningKo": "묘사하다, 서술하다",
+  "note": ""
+ },
+ {
+  "key": "L4-0521",
+  "hanzi": "描写",
+  "pinyin": "miáoxiě",
+  "partOfSpeech": "동사",
+  "meaningKo": "묘사하다, 그려내다",
+  "note": ""
+ },
+ {
+  "key": "L4-0522",
+  "hanzi": "名牌儿",
+  "pinyin": "míngpáir",
+  "partOfSpeech": "명사",
+  "meaningKo": "명품, 유명 브랜드",
+  "note": ""
+ },
+ {
+  "key": "L4-0524",
+  "hanzi": "名人",
+  "pinyin": "míngrén",
+  "partOfSpeech": "명사",
+  "meaningKo": "유명인",
+  "note": ""
+ },
+ {
+  "key": "L4-0525",
+  "hanzi": "摸",
+  "pinyin": "mō",
+  "partOfSpeech": "동사",
+  "meaningKo": "만지다, 더듬다",
+  "note": ""
+ },
+ {
+  "key": "L4-0526",
+  "hanzi": "模特儿",
+  "pinyin": "mótèr",
+  "partOfSpeech": "명사",
+  "meaningKo": "모델",
+  "note": ""
+ },
+ {
+  "key": "L4-0527",
+  "hanzi": "模型",
+  "pinyin": "móxíng",
+  "partOfSpeech": "명사",
+  "meaningKo": "모형",
+  "note": ""
+ },
+ {
+  "key": "L4-0528",
+  "hanzi": "末",
+  "pinyin": "mò",
+  "partOfSpeech": "명사",
+  "meaningKo": "끝, 말기",
+  "note": ""
+ },
+ {
+  "key": "L4-0529",
+  "hanzi": "默默",
+  "pinyin": "mòmò",
+  "partOfSpeech": "부사",
+  "meaningKo": "묵묵히, 말없이",
+  "note": ""
+ },
+ {
+  "key": "L4-0530",
+  "hanzi": "哪怕",
+  "pinyin": "nǎpà",
+  "partOfSpeech": "접속사",
+  "meaningKo": "설령 ~일지라도",
+  "note": ""
+ },
+ {
+  "key": "L4-0531",
+  "hanzi": "哪",
+  "pinyin": "na",
+  "partOfSpeech": "조사",
+  "meaningKo": "(어기조사) 啊의 변음",
+  "note": "앱에 같은 한자의 다른 읽기(nǎ) 카드가 있다. 이 카드는 na 읽기의 뜻만 쓴다"
+ },
+ {
+  "key": "L4-0532",
+  "hanzi": "男女",
+  "pinyin": "nánnǚ",
+  "partOfSpeech": "명사",
+  "meaningKo": "남녀",
+  "note": ""
+ },
+ {
+  "key": "L4-0533",
+  "hanzi": "男士",
+  "pinyin": "nánshì",
+  "partOfSpeech": "명사",
+  "meaningKo": "남성, 신사",
+  "note": ""
+ },
+ {
+  "key": "L4-0534",
+  "hanzi": "难免",
+  "pinyin": "nánmiǎn",
+  "partOfSpeech": "형용사",
+  "meaningKo": "피하기 어렵다, 불가피하다",
+  "note": ""
+ },
+ {
+  "key": "L4-0535",
+  "hanzi": "脑袋",
+  "pinyin": "nǎodai",
+  "partOfSpeech": "명사",
+  "meaningKo": "머리, 두뇌",
+  "note": ""
+ },
+ {
+  "key": "L4-0536",
+  "hanzi": "闹",
+  "pinyin": "nào",
+  "partOfSpeech": "형용사/동사",
+  "meaningKo": "시끄럽다 / (동) 떠들다, 소란을 피우다",
+  "note": ""
+ },
+ {
+  "key": "L4-0537",
+  "hanzi": "闹钟",
+  "pinyin": "nàozhōng",
+  "partOfSpeech": "명사",
+  "meaningKo": "알람 시계",
+  "note": ""
+ },
+ {
+  "key": "L4-0538",
+  "hanzi": "内部",
+  "pinyin": "nèibù",
+  "partOfSpeech": "명사",
+  "meaningKo": "내부",
+  "note": ""
+ },
+ {
+  "key": "L4-0539",
+  "hanzi": "内科",
+  "pinyin": "nèikē",
+  "partOfSpeech": "명사",
+  "meaningKo": "내과",
+  "note": ""
+ },
+ {
+  "key": "L4-0540",
+  "hanzi": "能干",
+  "pinyin": "nénggàn",
+  "partOfSpeech": "형용사",
+  "meaningKo": "유능하다, 일을 잘하다",
+  "note": ""
+ },
+ {
+  "key": "L4-0541",
+  "hanzi": "宁静",
+  "pinyin": "níngjìng",
+  "partOfSpeech": "형용사",
+  "meaningKo": "고요하다, 평온하다",
+  "note": ""
+ },
+ {
+  "key": "L4-0542",
+  "hanzi": "浓",
+  "pinyin": "nóng",
+  "partOfSpeech": "형용사",
+  "meaningKo": "진하다, 짙다",
+  "note": ""
+ },
+ {
+  "key": "L4-0543",
+  "hanzi": "女士",
+  "pinyin": "nǚshì",
+  "partOfSpeech": "명사",
+  "meaningKo": "여사, 숙녀",
+  "note": ""
+ },
+ {
+  "key": "L4-0544",
+  "hanzi": "暖气",
+  "pinyin": "nuǎnqì",
+  "partOfSpeech": "명사",
+  "meaningKo": "난방, 난방 장치",
+  "note": ""
+ },
+ {
+  "key": "L4-0545",
+  "hanzi": "拍照",
+  "pinyin": "pāizhào",
+  "partOfSpeech": "동사",
+  "meaningKo": "사진을 찍다",
+  "note": "품사가 비어 있다(이합사·구): partOfSpeech를 채운다"
+ },
+ {
+  "key": "L4-0546",
+  "hanzi": "排列",
+  "pinyin": "páiliè",
+  "partOfSpeech": "동사",
+  "meaningKo": "배열하다, 나열하다",
+  "note": ""
+ },
+ {
+  "key": "L4-0547",
+  "hanzi": "牌",
+  "pinyin": "pái",
+  "partOfSpeech": "명사",
+  "meaningKo": "패, 팻말, 상표",
+  "note": ""
+ },
+ {
+  "key": "L4-0548",
+  "hanzi": "盘",
+  "pinyin": "pán",
+  "partOfSpeech": "명사/양사",
+  "meaningKo": "쟁반, 접시 / (양) 판, 접시(음식을 담은 것)",
+  "note": "공식 목록 표기 盘（名、量）: 괄호 안 품사의 뜻을 먼저 쓴다"
+ },
+ {
+  "key": "L4-0550",
+  "hanzi": "胖子",
+  "pinyin": "pàngzi",
+  "partOfSpeech": "명사",
+  "meaningKo": "뚱뚱한 사람",
+  "note": ""
+ },
+ {
+  "key": "L4-0551",
+  "hanzi": "培训",
+  "pinyin": "péixùn",
+  "partOfSpeech": "동사",
+  "meaningKo": "교육하다, 연수하다",
+  "note": ""
+ },
+ {
+  "key": "L4-0552",
+  "hanzi": "培训班",
+  "pinyin": "péixùnbān",
+  "partOfSpeech": "명사",
+  "meaningKo": "교육 과정, 연수반",
+  "note": ""
+ },
+ {
+  "key": "L4-0553",
+  "hanzi": "培养",
+  "pinyin": "péiyǎng",
+  "partOfSpeech": "동사",
+  "meaningKo": "기르다, 양성하다",
+  "note": ""
+ },
+ {
+  "key": "L4-0554",
+  "hanzi": "培育",
+  "pinyin": "péiyù",
+  "partOfSpeech": "동사",
+  "meaningKo": "키우다, 육성하다",
+  "note": ""
+ },
+ {
+  "key": "L4-0555",
+  "hanzi": "批",
+  "pinyin": "pī",
+  "partOfSpeech": "동사/양사",
+  "meaningKo": "결재하다, 비판하다 / (양) 무리, 묶음",
+  "note": "공식 목록 표기 批（动）·批（量）: 괄호 안 품사의 뜻을 먼저 쓴다"
+ },
+ {
+  "key": "L4-0557",
+  "hanzi": "片面",
+  "pinyin": "piànmiàn",
+  "partOfSpeech": "형용사",
+  "meaningKo": "일방적이다, 단편적이다",
+  "note": ""
+ },
+ {
+  "key": "L4-0558",
+  "hanzi": "品质",
+  "pinyin": "pǐnzhì",
+  "partOfSpeech": "명사",
+  "meaningKo": "품질, 인품",
+  "note": ""
+ },
+ {
+  "key": "L4-0559",
+  "hanzi": "平方",
+  "pinyin": "píngfāng",
+  "partOfSpeech": "명사/양사",
+  "meaningKo": "제곱 / (양) 제곱미터",
+  "note": ""
+ },
+ {
+  "key": "L4-0560",
+  "hanzi": "平静",
+  "pinyin": "píngjìng",
+  "partOfSpeech": "형용사",
+  "meaningKo": "평온하다, 고요하다",
+  "note": ""
+ },
+ {
+  "key": "L4-0561",
+  "hanzi": "平均",
+  "pinyin": "píngjūn",
+  "partOfSpeech": "동사/형용사",
+  "meaningKo": "평균하다, 평균을 내다 / (형) 균등하다, 고르다",
+  "note": ""
+ },
+ {
+  "key": "L4-0562",
+  "hanzi": "平稳",
+  "pinyin": "píngwěn",
+  "partOfSpeech": "형용사",
+  "meaningKo": "안정되다, 평탄하다",
+  "note": ""
+ },
+ {
+  "key": "L4-0563",
+  "hanzi": "迫切",
+  "pinyin": "pòqiè",
+  "partOfSpeech": "형용사",
+  "meaningKo": "절박하다, 절실하다",
+  "note": ""
+ },
+ {
+  "key": "L4-0564",
+  "hanzi": "破产",
+  "pinyin": "pòchǎn",
+  "partOfSpeech": "동사",
+  "meaningKo": "파산하다",
+  "note": "품사가 비어 있다(이합사·구): partOfSpeech를 채운다"
+ },
+ {
+  "key": "L4-0566",
+  "hanzi": "期待",
+  "pinyin": "qīdài",
+  "partOfSpeech": "동사",
+  "meaningKo": "기대하다",
+  "note": ""
+ },
+ {
+  "key": "L4-0567",
+  "hanzi": "期间",
+  "pinyin": "qījiān",
+  "partOfSpeech": "명사",
+  "meaningKo": "기간",
+  "note": ""
+ },
+ {
+  "key": "L4-0568",
+  "hanzi": "期末",
+  "pinyin": "qīmò",
+  "partOfSpeech": "명사",
+  "meaningKo": "기말",
+  "note": ""
+ },
+ {
+  "key": "L4-0569",
+  "hanzi": "期限",
+  "pinyin": "qīxiàn",
+  "partOfSpeech": "명사",
+  "meaningKo": "기한",
+  "note": ""
+ },
+ {
+  "key": "L4-0570",
+  "hanzi": "期中",
+  "pinyin": "qīzhōng",
+  "partOfSpeech": "명사",
+  "meaningKo": "학기 중간, 중간(고사)",
+  "note": ""
+ },
+ {
+  "key": "L4-0571",
+  "hanzi": "其余",
+  "pinyin": "qíyú",
+  "partOfSpeech": "대명사",
+  "meaningKo": "나머지",
+  "note": ""
+ },
+ {
+  "key": "L4-0572",
+  "hanzi": "企业",
+  "pinyin": "qǐyè",
+  "partOfSpeech": "명사",
+  "meaningKo": "기업",
+  "note": ""
+ },
+ {
+  "key": "L4-0573",
+  "hanzi": "气球",
+  "pinyin": "qìqiú",
+  "partOfSpeech": "명사",
+  "meaningKo": "풍선",
+  "note": ""
+ },
+ {
+  "key": "L4-0574",
+  "hanzi": "汽水",
+  "pinyin": "qìshuǐ",
+  "partOfSpeech": "명사",
+  "meaningKo": "탄산음료",
+  "note": ""
+ },
+ {
+  "key": "L4-0575",
+  "hanzi": "汽油",
+  "pinyin": "qìyóu",
+  "partOfSpeech": "명사",
+  "meaningKo": "휘발유",
+  "note": ""
+ },
+ {
+  "key": "L4-0576",
+  "hanzi": "器官",
+  "pinyin": "qìguān",
+  "partOfSpeech": "명사",
+  "meaningKo": "기관(신체의 기관)",
+  "note": ""
+ },
+ {
+  "key": "L4-0577",
+  "hanzi": "前头",
+  "pinyin": "qiántou",
+  "partOfSpeech": "명사",
+  "meaningKo": "앞, 앞쪽",
+  "note": ""
+ },
+ {
+  "key": "L4-0578",
+  "hanzi": "前途",
+  "pinyin": "qiántú",
+  "partOfSpeech": "명사",
+  "meaningKo": "앞날, 전망",
+  "note": ""
+ },
+ {
+  "key": "L4-0579",
+  "hanzi": "浅",
+  "pinyin": "qiǎn",
+  "partOfSpeech": "형용사",
+  "meaningKo": "얕다, 옅다",
+  "note": ""
+ },
+ {
+  "key": "L4-0580",
+  "hanzi": "巧克力",
+  "pinyin": "qiǎokèlì",
+  "partOfSpeech": "명사",
+  "meaningKo": "초콜릿",
+  "note": ""
+ },
+ {
+  "key": "L4-0581",
+  "hanzi": "切",
+  "pinyin": "qiē",
+  "partOfSpeech": "동사",
+  "meaningKo": "썰다, 자르다",
+  "note": ""
+ },
+ {
+  "key": "L4-0582",
+  "hanzi": "亲爱",
+  "pinyin": "qīn'ài",
+  "partOfSpeech": "형용사",
+  "meaningKo": "사랑하는, 친애하는",
+  "note": ""
+ },
+ {
+  "key": "L4-0583",
+  "hanzi": "亲密",
+  "pinyin": "qīnmì",
+  "partOfSpeech": "형용사",
+  "meaningKo": "친밀하다",
+  "note": ""
+ },
+ {
+  "key": "L4-0584",
+  "hanzi": "青春",
+  "pinyin": "qīngchūn",
+  "partOfSpeech": "명사",
+  "meaningKo": "청춘",
+  "note": ""
+ },
+ {
+  "key": "L4-0585",
+  "hanzi": "轻松",
+  "pinyin": "qīngsōng",
+  "partOfSpeech": "형용사",
+  "meaningKo": "가볍다, 편안하다",
+  "note": ""
+ },
+ {
+  "key": "L4-0586",
+  "hanzi": "轻易",
+  "pinyin": "qīngyì",
+  "partOfSpeech": "형용사/부사",
+  "meaningKo": "수월하다, 쉽다 / (부) 함부로, 쉽게",
+  "note": ""
+ },
+ {
+  "key": "L4-0587",
+  "hanzi": "清醒",
+  "pinyin": "qīngxǐng",
+  "partOfSpeech": "형용사/동사",
+  "meaningKo": "정신이 또렷하다 / (동) 정신을 차리다",
+  "note": ""
+ },
+ {
+  "key": "L4-0588",
+  "hanzi": "情景",
+  "pinyin": "qíngjǐng",
+  "partOfSpeech": "명사",
+  "meaningKo": "광경, 장면",
+  "note": ""
+ },
+ {
+  "key": "L4-0589",
+  "hanzi": "穷",
+  "pinyin": "qióng",
+  "partOfSpeech": "형용사",
+  "meaningKo": "가난하다",
+  "note": ""
+ },
+ {
+  "key": "L4-0590",
+  "hanzi": "穷人",
+  "pinyin": "qióngrén",
+  "partOfSpeech": "명사",
+  "meaningKo": "가난한 사람",
+  "note": ""
+ },
+ {
+  "key": "L4-0591",
+  "hanzi": "秋季",
+  "pinyin": "qiūjì",
+  "partOfSpeech": "명사",
+  "meaningKo": "가을철",
+  "note": ""
+ },
+ {
+  "key": "L4-0592",
+  "hanzi": "趋势",
+  "pinyin": "qūshì",
+  "partOfSpeech": "명사",
+  "meaningKo": "추세",
+  "note": ""
+ },
+ {
+  "key": "L4-0593",
+  "hanzi": "圈",
+  "pinyin": "quān",
+  "partOfSpeech": "명사/동사",
+  "meaningKo": "원, 고리 / (동) 둘러싸다",
+  "note": ""
+ },
+ {
+  "key": "L4-0594",
+  "hanzi": "权利",
+  "pinyin": "quánlì",
+  "partOfSpeech": "명사",
+  "meaningKo": "권리",
+  "note": ""
+ },
+ {
+  "key": "L4-0595",
+  "hanzi": "却",
+  "pinyin": "què",
+  "partOfSpeech": "부사",
+  "meaningKo": "그러나, 오히려",
+  "note": ""
+ },
+ {
+  "key": "L4-0596",
+  "hanzi": "确认",
+  "pinyin": "quèrèn",
+  "partOfSpeech": "동사",
+  "meaningKo": "확인하다",
+  "note": ""
+ },
+ {
+  "key": "L4-0597",
+  "hanzi": "然而",
+  "pinyin": "rán'ér",
+  "partOfSpeech": "접속사",
+  "meaningKo": "그러나, 하지만",
+  "note": ""
+ },
+ {
+  "key": "L4-0598",
+  "hanzi": "燃料",
+  "pinyin": "ránliào",
+  "partOfSpeech": "명사",
+  "meaningKo": "연료",
+  "note": ""
+ },
+ {
+  "key": "L4-0599",
+  "hanzi": "燃烧",
+  "pinyin": "ránshāo",
+  "partOfSpeech": "동사",
+  "meaningKo": "타다, 연소하다",
+  "note": ""
+ },
+ {
+  "key": "L4-0600",
+  "hanzi": "热闹",
+  "pinyin": "rènao",
+  "partOfSpeech": "형용사/동사",
+  "meaningKo": "떠들썩하다, 북적이다 / (동) 즐겁게 놀다",
+  "note": ""
+ },
+ {
+  "key": "L4-0601",
+  "hanzi": "热心",
+  "pinyin": "rèxīn",
+  "partOfSpeech": "형용사",
+  "meaningKo": "열정적이다, 친절하다",
+  "note": ""
+ },
+ {
+  "key": "L4-0602",
+  "hanzi": "人家",
+  "pinyin": "rénjia",
+  "partOfSpeech": "대명사",
+  "meaningKo": "남, 다른 사람",
+  "note": ""
+ },
+ {
+  "key": "L4-0603",
+  "hanzi": "日记",
+  "pinyin": "rìjì",
+  "partOfSpeech": "명사",
+  "meaningKo": "일기",
+  "note": ""
+ },
+ {
+  "key": "L4-0604",
+  "hanzi": "日历",
+  "pinyin": "rìlì",
+  "partOfSpeech": "명사",
+  "meaningKo": "달력",
+  "note": ""
+ },
+ {
+  "key": "L4-0605",
+  "hanzi": "如今",
+  "pinyin": "rújīn",
+  "partOfSpeech": "명사",
+  "meaningKo": "지금, 오늘날",
+  "note": ""
+ },
+ {
+  "key": "L4-0606",
+  "hanzi": "弱",
+  "pinyin": "ruò",
+  "partOfSpeech": "형용사",
+  "meaningKo": "약하다",
+  "note": ""
+ },
+ {
+  "key": "L4-0608",
+  "hanzi": "散",
+  "pinyin": "sàn",
+  "partOfSpeech": "동사",
+  "meaningKo": "흩어지다, 해산하다",
+  "note": ""
+ },
+ {
+  "key": "L4-0609",
+  "hanzi": "扫",
+  "pinyin": "sǎo",
+  "partOfSpeech": "동사",
+  "meaningKo": "쓸다, 청소하다",
+  "note": ""
+ },
+ {
+  "key": "L4-0610",
+  "hanzi": "色",
+  "pinyin": "sè",
+  "partOfSpeech": "명사",
+  "meaningKo": "색, 색깔",
+  "note": ""
+ },
+ {
+  "key": "L4-0611",
+  "hanzi": "色彩",
+  "pinyin": "sècǎi",
+  "partOfSpeech": "명사",
+  "meaningKo": "색채",
+  "note": ""
+ },
+ {
+  "key": "L4-0612",
+  "hanzi": "森林",
+  "pinyin": "sēnlín",
+  "partOfSpeech": "명사",
+  "meaningKo": "숲, 삼림",
+  "note": ""
+ },
+ {
+  "key": "L4-0613",
+  "hanzi": "晒",
+  "pinyin": "shài",
+  "partOfSpeech": "동사",
+  "meaningKo": "햇볕을 쬐다, 말리다",
+  "note": ""
+ },
+ {
+  "key": "L4-0614",
+  "hanzi": "闪",
+  "pinyin": "shǎn",
+  "partOfSpeech": "동사",
+  "meaningKo": "번쩍이다, 반짝이다",
+  "note": ""
+ },
+ {
+  "key": "L4-0615",
+  "hanzi": "闪电",
+  "pinyin": "shǎndiàn",
+  "partOfSpeech": "명사",
+  "meaningKo": "번개",
+  "note": ""
+ },
+ {
+  "key": "L4-0616",
+  "hanzi": "善良",
+  "pinyin": "shànliáng",
+  "partOfSpeech": "형용사",
+  "meaningKo": "착하다, 선량하다",
+  "note": ""
+ },
+ {
+  "key": "L4-0617",
+  "hanzi": "善于",
+  "pinyin": "shànyú",
+  "partOfSpeech": "동사",
+  "meaningKo": "~을 잘하다",
+  "note": ""
+ },
+ {
+  "key": "L4-0618",
+  "hanzi": "伤害",
+  "pinyin": "shānghài",
+  "partOfSpeech": "동사",
+  "meaningKo": "해치다, 상처 입히다",
+  "note": ""
+ },
+ {
+  "key": "L4-0619",
+  "hanzi": "商务",
+  "pinyin": "shāngwù",
+  "partOfSpeech": "명사",
+  "meaningKo": "비즈니스, 상업 업무",
+  "note": ""
+ },
+ {
+  "key": "L4-0620",
+  "hanzi": "赏",
+  "pinyin": "shǎng",
+  "partOfSpeech": "동사",
+  "meaningKo": "감상하다, 상을 주다",
+  "note": ""
+ },
+ {
+  "key": "L4-0622",
+  "hanzi": "上楼",
+  "pinyin": "shàng lóu",
+  "partOfSpeech": "동사",
+  "meaningKo": "위층으로 올라가다",
+  "note": "품사가 비어 있다(이합사·구): partOfSpeech를 채운다"
+ },
+ {
+  "key": "L4-0623",
+  "hanzi": "上门",
+  "pinyin": "shàngmén",
+  "partOfSpeech": "동사",
+  "meaningKo": "방문하다, 찾아가다",
+  "note": "품사가 비어 있다(이합사·구): partOfSpeech를 채운다"
+ },
+ {
+  "key": "L4-0624",
+  "hanzi": "烧",
+  "pinyin": "shāo",
+  "partOfSpeech": "동사",
+  "meaningKo": "태우다, (물을) 끓이다, 열이 나다",
+  "note": ""
+ },
+ {
+  "key": "L4-0625",
+  "hanzi": "设施",
+  "pinyin": "shèshī",
+  "partOfSpeech": "명사",
+  "meaningKo": "시설",
+  "note": ""
+ },
+ {
+  "key": "L4-0626",
+  "hanzi": "设置",
+  "pinyin": "shèzhì",
+  "partOfSpeech": "동사",
+  "meaningKo": "설치하다, 설정하다",
+  "note": ""
+ },
+ {
+  "key": "L4-0627",
+  "hanzi": "申请",
+  "pinyin": "shēnqǐng",
+  "partOfSpeech": "동사",
+  "meaningKo": "신청하다",
+  "note": ""
+ },
+ {
+  "key": "L4-0628",
+  "hanzi": "身材",
+  "pinyin": "shēncái",
+  "partOfSpeech": "명사",
+  "meaningKo": "체격, 몸매",
+  "note": ""
+ },
+ {
+  "key": "L4-0629",
+  "hanzi": "身份",
+  "pinyin": "shēnfèn",
+  "partOfSpeech": "명사",
+  "meaningKo": "신분",
+  "note": ""
+ },
+ {
+  "key": "L4-0630",
+  "hanzi": "身高",
+  "pinyin": "shēngāo",
+  "partOfSpeech": "명사",
+  "meaningKo": "키, 신장",
+  "note": ""
+ },
+ {
+  "key": "L4-0631",
+  "hanzi": "深厚",
+  "pinyin": "shēnhòu",
+  "partOfSpeech": "형용사",
+  "meaningKo": "깊다, 두텁다",
+  "note": ""
+ },
+ {
+  "key": "L4-0632",
+  "hanzi": "神话",
+  "pinyin": "shénhuà",
+  "partOfSpeech": "명사",
+  "meaningKo": "신화",
+  "note": ""
+ },
+ {
+  "key": "L4-0633",
+  "hanzi": "神秘",
+  "pinyin": "shénmì",
+  "partOfSpeech": "형용사",
+  "meaningKo": "신비하다",
+  "note": ""
+ },
+ {
+  "key": "L4-0634",
+  "hanzi": "甚至",
+  "pinyin": "shènzhì",
+  "partOfSpeech": "접속사",
+  "meaningKo": "심지어",
+  "note": ""
+ },
+ {
+  "key": "L4-0635",
+  "hanzi": "失败",
+  "pinyin": "shībài",
+  "partOfSpeech": "동사/형용사",
+  "meaningKo": "실패하다 / (형) 성공적이지 못하다",
+  "note": ""
+ },
+ {
+  "key": "L4-0636",
+  "hanzi": "失望",
+  "pinyin": "shīwàng",
+  "partOfSpeech": "형용사",
+  "meaningKo": "실망하다",
+  "note": ""
+ },
+ {
+  "key": "L4-0637",
+  "hanzi": "失业",
+  "pinyin": "shīyè",
+  "partOfSpeech": "동사",
+  "meaningKo": "실업하다, 직장을 잃다",
+  "note": "품사가 비어 있다(이합사·구): partOfSpeech를 채운다"
+ },
+ {
+  "key": "L4-0638",
+  "hanzi": "诗",
+  "pinyin": "shī",
+  "partOfSpeech": "명사",
+  "meaningKo": "시",
+  "note": ""
+ },
+ {
+  "key": "L4-0639",
+  "hanzi": "诗人",
+  "pinyin": "shīrén",
+  "partOfSpeech": "명사",
+  "meaningKo": "시인",
+  "note": ""
+ },
+ {
+  "key": "L4-0640",
+  "hanzi": "湿",
+  "pinyin": "shī",
+  "partOfSpeech": "형용사",
+  "meaningKo": "축축하다, 젖다",
+  "note": ""
+ },
+ {
+  "key": "L4-0641",
+  "hanzi": "实施",
+  "pinyin": "shíshī",
+  "partOfSpeech": "동사",
+  "meaningKo": "실시하다",
+  "note": ""
+ },
+ {
+  "key": "L4-0642",
+  "hanzi": "实用",
+  "pinyin": "shíyòng",
+  "partOfSpeech": "형용사",
+  "meaningKo": "실용적이다",
+  "note": ""
+ },
+ {
+  "key": "L4-0643",
+  "hanzi": "食堂",
+  "pinyin": "shítáng",
+  "partOfSpeech": "명사",
+  "meaningKo": "구내식당",
+  "note": ""
+ },
+ {
+  "key": "L4-0644",
+  "hanzi": "使劲",
+  "pinyin": "shǐjìn",
+  "partOfSpeech": "동사",
+  "meaningKo": "힘껏 하다, 힘을 쓰다",
+  "note": "품사가 비어 있다(이합사·구): partOfSpeech를 채운다"
+ },
+ {
+  "key": "L4-0645",
+  "hanzi": "士兵",
+  "pinyin": "shìbīng",
+  "partOfSpeech": "명사",
+  "meaningKo": "병사",
+  "note": ""
+ },
+ {
+  "key": "L4-0646",
+  "hanzi": "市区",
+  "pinyin": "shìqū",
+  "partOfSpeech": "명사",
+  "meaningKo": "시내, 도심",
+  "note": ""
+ },
+ {
+  "key": "L4-0647",
+  "hanzi": "似的",
+  "pinyin": "shìde",
+  "partOfSpeech": "조사",
+  "meaningKo": "~같다, ~처럼",
+  "note": ""
+ },
+ {
+  "key": "L4-0648",
+  "hanzi": "事物",
+  "pinyin": "shìwù",
+  "partOfSpeech": "명사",
+  "meaningKo": "사물",
+  "note": ""
+ },
+ {
+  "key": "L4-0649",
+  "hanzi": "事先",
+  "pinyin": "shìxiān",
+  "partOfSpeech": "명사",
+  "meaningKo": "사전, 미리",
+  "note": ""
+ },
+ {
+  "key": "L4-0650",
+  "hanzi": "试卷",
+  "pinyin": "shìjuàn",
+  "partOfSpeech": "명사",
+  "meaningKo": "시험지",
+  "note": ""
+ },
+ {
+  "key": "L4-0651",
+  "hanzi": "是否",
+  "pinyin": "shìfǒu",
+  "partOfSpeech": "부사",
+  "meaningKo": "~인지 아닌지",
+  "note": ""
+ },
+ {
+  "key": "L4-0652",
+  "hanzi": "收回",
+  "pinyin": "shōuhuí",
+  "partOfSpeech": "동사",
+  "meaningKo": "거두어들이다, 회수하다",
+  "note": "품사가 비어 있다(이합사·구): partOfSpeech를 채운다"
+ },
+ {
+  "key": "L4-0653",
+  "hanzi": "收获",
+  "pinyin": "shōuhuò",
+  "partOfSpeech": "동사/명사",
+  "meaningKo": "수확하다, 얻다 / (명) 수확, 성과",
+  "note": ""
+ },
+ {
+  "key": "L4-0654",
+  "hanzi": "收益",
+  "pinyin": "shōuyì",
+  "partOfSpeech": "명사",
+  "meaningKo": "수익",
+  "note": ""
+ },
+ {
+  "key": "L4-0655",
+  "hanzi": "手工",
+  "pinyin": "shǒugōng",
+  "partOfSpeech": "명사",
+  "meaningKo": "수공, 수작업",
+  "note": ""
+ },
+ {
+  "key": "L4-0656",
+  "hanzi": "手里",
+  "pinyin": "shǒu li",
+  "partOfSpeech": "명사",
+  "meaningKo": "손안, 수중",
+  "note": "품사가 비어 있다(이합사·구): partOfSpeech를 채운다"
+ },
+ {
+  "key": "L4-0657",
+  "hanzi": "手术",
+  "pinyin": "shǒushù",
+  "partOfSpeech": "명사",
+  "meaningKo": "수술",
+  "note": ""
+ },
+ {
+  "key": "L4-0659",
+  "hanzi": "守",
+  "pinyin": "shǒu",
+  "partOfSpeech": "동사",
+  "meaningKo": "지키다",
+  "note": ""
+ },
+ {
+  "key": "L4-0660",
+  "hanzi": "首",
+  "pinyin": "shǒu",
+  "partOfSpeech": "양사",
+  "meaningKo": "곡, 수(시·노래를 세는 단위)",
+  "note": "공식 목록 표기 首（量）: 괄호 안 품사의 뜻을 먼저 쓴다"
+ },
+ {
+  "key": "L4-0661",
+  "hanzi": "受不了",
+  "pinyin": "shòubuliǎo",
+  "partOfSpeech": "동사",
+  "meaningKo": "견딜 수 없다",
+  "note": ""
+ },
+ {
+  "key": "L4-0662",
+  "hanzi": "售货员",
+  "pinyin": "shòuhuòyuán",
+  "partOfSpeech": "명사",
+  "meaningKo": "판매원",
+  "note": ""
+ },
+ {
+  "key": "L4-0664",
+  "hanzi": "舒适",
+  "pinyin": "shūshì",
+  "partOfSpeech": "형용사",
+  "meaningKo": "편안하다, 쾌적하다",
+  "note": ""
+ },
+ {
+  "key": "L4-0665",
+  "hanzi": "熟练",
+  "pinyin": "shúliàn",
+  "partOfSpeech": "형용사",
+  "meaningKo": "능숙하다, 숙련되다",
+  "note": ""
+ },
+ {
+  "key": "L4-0666",
+  "hanzi": "暑假",
+  "pinyin": "shǔjià",
+  "partOfSpeech": "명사",
+  "meaningKo": "여름 방학",
+  "note": ""
+ },
+ {
+  "key": "L4-0667",
+  "hanzi": "树林",
+  "pinyin": "shùlín",
+  "partOfSpeech": "명사",
+  "meaningKo": "숲",
+  "note": ""
+ },
+ {
+  "key": "L4-0668",
+  "hanzi": "树叶",
+  "pinyin": "shùyè",
+  "partOfSpeech": "명사",
+  "meaningKo": "나뭇잎",
+  "note": ""
+ },
+ {
+  "key": "L4-0669",
+  "hanzi": "数据",
+  "pinyin": "shùjù",
+  "partOfSpeech": "명사",
+  "meaningKo": "데이터, 자료",
+  "note": ""
+ },
+ {
+  "key": "L4-0670",
+  "hanzi": "数码",
+  "pinyin": "shùmǎ",
+  "partOfSpeech": "명사",
+  "meaningKo": "디지털",
+  "note": ""
+ },
+ {
+  "key": "L4-0671",
+  "hanzi": "刷",
+  "pinyin": "shuā",
+  "partOfSpeech": "동사",
+  "meaningKo": "솔질하다, (이를) 닦다, (카드를) 긁다",
+  "note": ""
+ },
+ {
+  "key": "L4-0673",
+  "hanzi": "刷子",
+  "pinyin": "shuāzi",
+  "partOfSpeech": "명사",
+  "meaningKo": "솔, 브러시",
+  "note": ""
+ },
+ {
+  "key": "L4-0674",
+  "hanzi": "帅",
+  "pinyin": "shuài",
+  "partOfSpeech": "형용사",
+  "meaningKo": "멋있다, 잘생기다",
+  "note": ""
+ },
+ {
+  "key": "L4-0675",
+  "hanzi": "帅哥",
+  "pinyin": "shuàigē",
+  "partOfSpeech": "명사",
+  "meaningKo": "미남, 잘생긴 남자",
+  "note": ""
+ },
+ {
+  "key": "L4-0676",
+  "hanzi": "率先",
+  "pinyin": "shuàixiān",
+  "partOfSpeech": "부사",
+  "meaningKo": "앞장서서, 솔선하여",
+  "note": ""
+ },
+ {
+  "key": "L4-0677",
+  "hanzi": "睡着",
+  "pinyin": "shuìzháo",
+  "partOfSpeech": "동사",
+  "meaningKo": "잠들다",
+  "note": "품사가 비어 있다(이합사·구): partOfSpeech를 채운다"
+ },
+ {
+  "key": "L4-0678",
+  "hanzi": "顺序",
+  "pinyin": "shùnxù",
+  "partOfSpeech": "명사",
+  "meaningKo": "순서",
+  "note": ""
+ },
+ {
+  "key": "L4-0679",
+  "hanzi": "说不定",
+  "pinyin": "shuōbudìng",
+  "partOfSpeech": "동사/부사",
+  "meaningKo": "단정할 수 없다 / (부) 아마도, ~일지도 모른다",
+  "note": ""
+ },
+ {
+  "key": "L4-0680",
+  "hanzi": "说服",
+  "pinyin": "shuōfú",
+  "partOfSpeech": "동사",
+  "meaningKo": "설득하다",
+  "note": ""
+ },
+ {
+  "key": "L4-0681",
+  "hanzi": "思考",
+  "pinyin": "sīkǎo",
+  "partOfSpeech": "동사",
+  "meaningKo": "깊이 생각하다",
+  "note": ""
+ },
+ {
+  "key": "L4-0682",
+  "hanzi": "似乎",
+  "pinyin": "sìhū",
+  "partOfSpeech": "부사",
+  "meaningKo": "~인 것 같다, 마치 ~같다",
+  "note": ""
+ },
+ {
+  "key": "L4-0683",
+  "hanzi": "松",
+  "pinyin": "sōng",
+  "partOfSpeech": "형용사/동사",
+  "meaningKo": "느슨하다, 헐겁다 / (동) 풀다",
+  "note": ""
+ },
+ {
+  "key": "L4-0684",
+  "hanzi": "松树",
+  "pinyin": "sōngshù",
+  "partOfSpeech": "명사",
+  "meaningKo": "소나무",
+  "note": ""
+ },
+ {
+  "key": "L4-0685",
+  "hanzi": "塑料",
+  "pinyin": "sùliào",
+  "partOfSpeech": "명사",
+  "meaningKo": "플라스틱",
+  "note": ""
+ },
+ {
+  "key": "L4-0686",
+  "hanzi": "塑料袋",
+  "pinyin": "sùliàodài",
+  "partOfSpeech": "명사",
+  "meaningKo": "비닐봉지",
+  "note": ""
+ },
+ {
+  "key": "L4-0687",
+  "hanzi": "酸",
+  "pinyin": "suān",
+  "partOfSpeech": "형용사",
+  "meaningKo": "시다",
+  "note": ""
+ },
+ {
+  "key": "L4-0688",
+  "hanzi": "酸奶",
+  "pinyin": "suānnǎi",
+  "partOfSpeech": "명사",
+  "meaningKo": "요구르트",
+  "note": ""
+ },
+ {
+  "key": "L4-0689",
+  "hanzi": "随手",
+  "pinyin": "suíshǒu",
+  "partOfSpeech": "부사",
+  "meaningKo": "손 가는 대로, 겸사겸사",
+  "note": ""
+ },
+ {
+  "key": "L4-0692",
+  "hanzi": "缩短",
+  "pinyin": "suōduǎn",
+  "partOfSpeech": "동사",
+  "meaningKo": "단축하다, 줄이다",
+  "note": ""
+ },
+ {
+  "key": "L4-0693",
+  "hanzi": "缩小",
+  "pinyin": "suōxiǎo",
+  "partOfSpeech": "동사",
+  "meaningKo": "축소하다, 줄이다",
+  "note": ""
+ },
+ {
+  "key": "L4-0694",
+  "hanzi": "台阶",
+  "pinyin": "táijiē",
+  "partOfSpeech": "명사",
+  "meaningKo": "계단, 층계",
+  "note": ""
+ },
+ {
+  "key": "L4-0695",
+  "hanzi": "台上",
+  "pinyin": "táishàng",
+  "partOfSpeech": "명사",
+  "meaningKo": "무대 위, 단상",
+  "note": ""
+ },
+ {
+  "key": "L4-0696",
+  "hanzi": "躺",
+  "pinyin": "tǎng",
+  "partOfSpeech": "동사",
+  "meaningKo": "눕다",
+  "note": ""
+ },
+ {
+  "key": "L4-0697",
+  "hanzi": "套餐",
+  "pinyin": "tàocān",
+  "partOfSpeech": "명사",
+  "meaningKo": "세트 메뉴",
+  "note": ""
+ },
+ {
+  "key": "L4-0698",
+  "hanzi": "特价",
+  "pinyin": "tèjià",
+  "partOfSpeech": "명사",
+  "meaningKo": "특가",
+  "note": ""
+ },
+ {
+  "key": "L4-0699",
+  "hanzi": "特殊",
+  "pinyin": "tèshū",
+  "partOfSpeech": "형용사",
+  "meaningKo": "특수하다",
+  "note": ""
+ },
+ {
+  "key": "L4-0700",
+  "hanzi": "特征",
+  "pinyin": "tèzhēng",
+  "partOfSpeech": "명사",
+  "meaningKo": "특징",
+  "note": ""
+ },
+ {
+  "key": "L4-0701",
+  "hanzi": "提供",
+  "pinyin": "tígōng",
+  "partOfSpeech": "동사",
+  "meaningKo": "제공하다",
+  "note": ""
+ },
+ {
+  "key": "L4-0702",
+  "hanzi": "提醒",
+  "pinyin": "tíxǐng",
+  "partOfSpeech": "동사",
+  "meaningKo": "일깨우다, 상기시키다",
+  "note": "품사가 비어 있다(이합사·구): partOfSpeech를 채운다"
+ },
+ {
+  "key": "L4-0703",
+  "hanzi": "体操",
+  "pinyin": "tǐcāo",
+  "partOfSpeech": "명사",
+  "meaningKo": "체조",
+  "note": ""
+ },
+ {
+  "key": "L4-0704",
+  "hanzi": "体检",
+  "pinyin": "tǐjiǎn",
+  "partOfSpeech": "동사",
+  "meaningKo": "건강 검진을 받다",
+  "note": ""
+ },
+ {
+  "key": "L4-0705",
+  "hanzi": "体重",
+  "pinyin": "tǐzhòng",
+  "partOfSpeech": "명사",
+  "meaningKo": "체중",
+  "note": ""
+ },
+ {
+  "key": "L4-0706",
+  "hanzi": "替",
+  "pinyin": "tì",
+  "partOfSpeech": "동사/개사",
+  "meaningKo": "대신하다 / (개) ~을 위해, ~대신",
+  "note": ""
+ },
+ {
+  "key": "L4-0707",
+  "hanzi": "替代",
+  "pinyin": "tìdài",
+  "partOfSpeech": "동사",
+  "meaningKo": "대체하다",
+  "note": ""
+ },
+ {
+  "key": "L4-0708",
+  "hanzi": "天真",
+  "pinyin": "tiānzhēn",
+  "partOfSpeech": "형용사",
+  "meaningKo": "순진하다, 천진하다",
+  "note": ""
+ },
+ {
+  "key": "L4-0709",
+  "hanzi": "填",
+  "pinyin": "tián",
+  "partOfSpeech": "동사",
+  "meaningKo": "채우다, 기입하다",
+  "note": ""
+ },
+ {
+  "key": "L4-0710",
+  "hanzi": "填空",
+  "pinyin": "tiánkòng",
+  "partOfSpeech": "동사",
+  "meaningKo": "빈칸을 채우다",
+  "note": "품사가 비어 있다(이합사·구): partOfSpeech를 채운다"
+ },
+ {
+  "key": "L4-0711",
+  "hanzi": "挑",
+  "pinyin": "tiāo",
+  "partOfSpeech": "동사",
+  "meaningKo": "고르다, 선택하다",
+  "note": ""
+ },
+ {
+  "key": "L4-0712",
+  "hanzi": "挑选",
+  "pinyin": "tiāoxuǎn",
+  "partOfSpeech": "동사",
+  "meaningKo": "고르다, 선별하다",
+  "note": ""
+ },
+ {
+  "key": "L4-0713",
+  "hanzi": "调皮",
+  "pinyin": "tiáopí",
+  "partOfSpeech": "형용사",
+  "meaningKo": "장난스럽다, 짓궂다",
+  "note": ""
+ },
+ {
+  "key": "L4-0714",
+  "hanzi": "挑",
+  "pinyin": "tiǎo",
+  "partOfSpeech": "동사",
+  "meaningKo": "(장대로) 들어 올리다, 돋우다",
+  "note": ""
+ },
+ {
+  "key": "L4-0715",
+  "hanzi": "挑战",
+  "pinyin": "tiǎozhàn",
+  "partOfSpeech": "동사/명사",
+  "meaningKo": "도전하다 / (명) 도전",
+  "note": "품사가 비어 있다(이합사·구): partOfSpeech를 채운다"
+ },
+ {
+  "key": "L4-0716",
+  "hanzi": "贴",
+  "pinyin": "tiē",
+  "partOfSpeech": "동사",
+  "meaningKo": "붙이다",
+  "note": ""
+ },
+ {
+  "key": "L4-0717",
+  "hanzi": "停下",
+  "pinyin": "tíngxia",
+  "partOfSpeech": "동사",
+  "meaningKo": "멈추다, 멈춰 서다",
+  "note": "품사가 비어 있다(이합사·구): partOfSpeech를 채운다"
+ },
+ {
+  "key": "L4-0719",
+  "hanzi": "通知书",
+  "pinyin": "tōngzhīshū",
+  "partOfSpeech": "명사",
+  "meaningKo": "통지서",
+  "note": ""
+ },
+ {
+  "key": "L4-0720",
+  "hanzi": "同情",
+  "pinyin": "tóngqíng",
+  "partOfSpeech": "동사",
+  "meaningKo": "동정하다",
+  "note": ""
+ },
+ {
+  "key": "L4-0721",
+  "hanzi": "童话",
+  "pinyin": "tónghuà",
+  "partOfSpeech": "명사",
+  "meaningKo": "동화",
+  "note": ""
+ },
+ {
+  "key": "L4-0722",
+  "hanzi": "童年",
+  "pinyin": "tóngnián",
+  "partOfSpeech": "명사",
+  "meaningKo": "어린 시절",
+  "note": ""
+ },
+ {
+  "key": "L4-0723",
+  "hanzi": "统计",
+  "pinyin": "tǒngjì",
+  "partOfSpeech": "동사",
+  "meaningKo": "통계를 내다, 집계하다",
+  "note": ""
+ },
+ {
+  "key": "L4-0724",
+  "hanzi": "统一",
+  "pinyin": "tǒngyī",
+  "partOfSpeech": "동사/형용사",
+  "meaningKo": "통일하다 / (형) 통일되다, 일치하다",
+  "note": ""
+ },
+ {
+  "key": "L4-0725",
+  "hanzi": "痛快",
+  "pinyin": "tòngkuài",
+  "partOfSpeech": "형용사",
+  "meaningKo": "통쾌하다, 후련하다",
+  "note": ""
+ },
+ {
+  "key": "L4-0726",
+  "hanzi": "投",
+  "pinyin": "tóu",
+  "partOfSpeech": "동사",
+  "meaningKo": "던지다, 넣다",
+  "note": ""
+ },
+ {
+  "key": "L4-0727",
+  "hanzi": "投入",
+  "pinyin": "tóurù",
+  "partOfSpeech": "동사/명사",
+  "meaningKo": "투입하다, 몰두하다 / (명) 투입",
+  "note": ""
+ },
+ {
+  "key": "L4-0728",
+  "hanzi": "投诉",
+  "pinyin": "tóusù",
+  "partOfSpeech": "동사",
+  "meaningKo": "항의하다, 신고하다",
+  "note": ""
+ },
+ {
+  "key": "L4-0729",
+  "hanzi": "投资",
+  "pinyin": "tóuzī",
+  "partOfSpeech": "명사",
+  "meaningKo": "투자",
+  "note": ""
+ },
+ {
+  "key": "L4-0730",
+  "hanzi": "透",
+  "pinyin": "tòu",
+  "partOfSpeech": "동사/형용사",
+  "meaningKo": "스며들다, 통하다 / (형) 철저하다, 완전하다",
+  "note": ""
+ },
+ {
+  "key": "L4-0731",
+  "hanzi": "透明",
+  "pinyin": "tòumíng",
+  "partOfSpeech": "형용사",
+  "meaningKo": "투명하다",
+  "note": ""
+ },
+ {
+  "key": "L4-0732",
+  "hanzi": "图案",
+  "pinyin": "tú'àn",
+  "partOfSpeech": "명사",
+  "meaningKo": "도안, 무늬",
+  "note": ""
+ },
+ {
+  "key": "L4-0733",
+  "hanzi": "途中",
+  "pinyin": "túzhōng",
+  "partOfSpeech": "명사",
+  "meaningKo": "도중",
+  "note": ""
+ },
+ {
+  "key": "L4-0734",
+  "hanzi": "土地",
+  "pinyin": "tǔdì",
+  "partOfSpeech": "명사",
+  "meaningKo": "토지, 땅",
+  "note": ""
+ },
+ {
+  "key": "L4-0735",
+  "hanzi": "推迟",
+  "pinyin": "tuīchí",
+  "partOfSpeech": "동사",
+  "meaningKo": "미루다, 연기하다",
+  "note": ""
+ },
+ {
+  "key": "L4-0736",
+  "hanzi": "推销",
+  "pinyin": "tuīxiāo",
+  "partOfSpeech": "동사",
+  "meaningKo": "판촉하다, 팔다",
+  "note": ""
+ },
+ {
+  "key": "L4-0737",
+  "hanzi": "脱",
+  "pinyin": "tuō",
+  "partOfSpeech": "동사",
+  "meaningKo": "벗다",
+  "note": ""
+ },
+ {
+  "key": "L4-0739",
+  "hanzi": "外汇",
+  "pinyin": "wàihuì",
+  "partOfSpeech": "명사",
+  "meaningKo": "외환",
+  "note": ""
+ },
+ {
+  "key": "L4-0740",
+  "hanzi": "外交官",
+  "pinyin": "wàijiāoguān",
+  "partOfSpeech": "명사",
+  "meaningKo": "외교관",
+  "note": ""
+ },
+ {
+  "key": "L4-0741",
+  "hanzi": "外套",
+  "pinyin": "wàitào",
+  "partOfSpeech": "명사",
+  "meaningKo": "외투, 겉옷",
+  "note": ""
+ },
+ {
+  "key": "L4-0742",
+  "hanzi": "弯",
+  "pinyin": "wān",
+  "partOfSpeech": "형용사/동사",
+  "meaningKo": "굽다, 구부러지다 / (동) 구부리다",
+  "note": ""
+ },
+ {
+  "key": "L4-0743",
+  "hanzi": "晚点",
+  "pinyin": "wǎndiǎn",
+  "partOfSpeech": "동사",
+  "meaningKo": "연착하다, 지연되다",
+  "note": "품사가 비어 있다(이합사·구): partOfSpeech를 채운다"
+ },
+ {
+  "key": "L4-0744",
+  "hanzi": "万一",
+  "pinyin": "wànyī",
+  "partOfSpeech": "명사/접속사",
+  "meaningKo": "만일의 경우 / (접) 만약, 만일",
+  "note": ""
+ },
+ {
+  "key": "L4-0746",
+  "hanzi": "网络",
+  "pinyin": "wǎngluò",
+  "partOfSpeech": "명사",
+  "meaningKo": "네트워크, 인터넷",
+  "note": ""
+ },
+ {
+  "key": "L4-0747",
+  "hanzi": "网址",
+  "pinyin": "wǎngzhǐ",
+  "partOfSpeech": "명사",
+  "meaningKo": "웹 주소",
+  "note": ""
+ },
+ {
+  "key": "L4-0748",
+  "hanzi": "微笑",
+  "pinyin": "wēixiào",
+  "partOfSpeech": "동사",
+  "meaningKo": "미소 짓다",
+  "note": ""
+ },
+ {
+  "key": "L4-0749",
+  "hanzi": "微信",
+  "pinyin": "wēixìn",
+  "partOfSpeech": "명사",
+  "meaningKo": "위챗(WeChat)",
+  "note": ""
+ }
+]

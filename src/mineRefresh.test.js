@@ -353,3 +353,15 @@ test('멱등(넓게): 지금 데이터의 모든 단어·보정 표의 모든 �
   }
   assert.ok(checked > 100000);
 });
+
+test('단어 카드를 담았다가 갱신해도 병음·뜻이 그대로다(같은 과 다음절·다음 읽기 한자 포함)', () => {
+  const bad = [];
+  for (const card of vocab) {
+    if (card.itemType !== '단어') continue;
+    const out = refreshEntry(studyCardEntry(card));
+    if (out.length !== 1 || out[0].pinyin !== card.pinyin || out[0].meaningKo !== card.meaningKo) {
+      bad.push(`${card.id} ${card.hanzi} ${card.pinyin}`);
+    }
+  }
+  assert.deepEqual(bad, []);
+});

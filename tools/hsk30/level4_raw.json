@@ -1,0 +1,9022 @@
+{
+ "_about": "HSK 3.0(2021) 4급 새 단어 1000행. tools/hsk30/build_level4.py raw가 만든다. 손으로 고치지 않는다. pinyin은 chinesetest.cn 표기에서 ∥·를 뺀 것(一·不 변조 포함), pinyinPdf는 변조 없는 표기, pos는 영문 약어(N V Adj Adv Conj M Pron Prep Aux Intj Num, 빈 값은 이합사·구), ocr은 공식 PDF 표기(같은 한자의 다른 품사는 批（动）처럼 괄호로 적힌다).",
+ "sources": [
+  {
+   "name": "ivankra/hsk30 hsk30.csv (공식 PDF + chinesetest.cn 병음·품사)",
+   "url": "https://github.com/ivankra/hsk30/blob/master/hsk30.csv",
+   "commit": "4ff9e3915ce87baaecd7ebe263085573a4ea3192"
+  },
+  {
+   "name": "elkmovie/hsk30 wordlist.txt (공식 PDF OCR, 한자만) — 4급 1000행 대조",
+   "url": "https://github.com/elkmovie/hsk30/blob/main/wordlist.txt",
+   "commit": "7f3d4fdcfcb6e826001df062747c943d1fa8160e"
+  },
+  {
+   "name": "원문: 教育部 《国际中文教育中文水平等级标准》(2021)",
+   "url": "http://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/s5987/202103/t20210329_523304.html"
+  }
+ ],
+ "count": 1000,
+ "items": [
+  {
+   "no": 1,
+   "officialId": "L4-0001",
+   "hanzi": "阿姨",
+   "pinyin": "āyí",
+   "pinyinPdf": "āyí",
+   "pos": "N",
+   "ocr": "阿姨"
+  },
+  {
+   "no": 2,
+   "officialId": "L4-0002",
+   "hanzi": "啊",
+   "pinyin": "ā",
+   "pinyinPdf": "ā",
+   "pos": "Intj",
+   "ocr": "啊"
+  },
+  {
+   "no": 3,
+   "officialId": "L4-0003",
+   "hanzi": "矮",
+   "pinyin": "ǎi",
+   "pinyinPdf": "ǎi",
+   "pos": "Adj",
+   "ocr": "矮"
+  },
+  {
+   "no": 4,
+   "officialId": "L4-0004",
+   "hanzi": "矮小",
+   "pinyin": "ǎixiǎo",
+   "pinyinPdf": "ǎixiǎo",
+   "pos": "Adj",
+   "ocr": "矮小"
+  },
+  {
+   "no": 5,
+   "officialId": "L4-0005",
+   "hanzi": "爱国",
+   "pinyin": "àiguó",
+   "pinyinPdf": "àiguó",
+   "pos": "",
+   "ocr": "爱国"
+  },
+  {
+   "no": 6,
+   "officialId": "L4-0006",
+   "hanzi": "爱护",
+   "pinyin": "àihù",
+   "pinyinPdf": "àihù",
+   "pos": "V",
+   "ocr": "爱护"
+  },
+  {
+   "no": 7,
+   "officialId": "L4-0007",
+   "hanzi": "安",
+   "pinyin": "ān",
+   "pinyinPdf": "ān",
+   "pos": "V/Adj",
+   "ocr": "安"
+  },
+  {
+   "no": 8,
+   "officialId": "L4-0008",
+   "hanzi": "安置",
+   "pinyin": "ānzhì",
+   "pinyinPdf": "ānzhì",
+   "pos": "V",
+   "ocr": "安置"
+  },
+  {
+   "no": 9,
+   "officialId": "L4-0009",
+   "hanzi": "按时",
+   "pinyin": "ànshí",
+   "pinyinPdf": "ànshí",
+   "pos": "Adv",
+   "ocr": "按时"
+  },
+  {
+   "no": 10,
+   "officialId": "L4-0010",
+   "hanzi": "暗",
+   "pinyin": "àn",
+   "pinyinPdf": "àn",
+   "pos": "Adj",
+   "ocr": "暗"
+  },
+  {
+   "no": 11,
+   "officialId": "L4-0011",
+   "hanzi": "暗示",
+   "pinyin": "ànshì",
+   "pinyinPdf": "ànshì",
+   "pos": "V",
+   "ocr": "暗示"
+  },
+  {
+   "no": 12,
+   "officialId": "L4-0012",
+   "hanzi": "巴士",
+   "pinyin": "bāshì",
+   "pinyinPdf": "bāshì",
+   "pos": "N",
+   "ocr": "巴士"
+  },
+  {
+   "no": 13,
+   "officialId": "L4-0013",
+   "hanzi": "百货",
+   "pinyin": "bǎihuò",
+   "pinyinPdf": "bǎihuò",
+   "pos": "N",
+   "ocr": "百货"
+  },
+  {
+   "no": 14,
+   "officialId": "L4-0014",
+   "hanzi": "摆",
+   "pinyin": "bǎi",
+   "pinyinPdf": "bǎi",
+   "pos": "V",
+   "ocr": "摆"
+  },
+  {
+   "no": 15,
+   "officialId": "L4-0015",
+   "hanzi": "摆动",
+   "pinyin": "bǎidòng",
+   "pinyinPdf": "bǎidòng",
+   "pos": "V",
+   "ocr": "摆动"
+  },
+  {
+   "no": 16,
+   "officialId": "L4-0016",
+   "hanzi": "摆脱",
+   "pinyin": "bǎituō",
+   "pinyinPdf": "bǎituō",
+   "pos": "V",
+   "ocr": "摆脱"
+  },
+  {
+   "no": 17,
+   "officialId": "L4-0017",
+   "hanzi": "败",
+   "pinyin": "bài",
+   "pinyinPdf": "bài",
+   "pos": "V",
+   "ocr": "败"
+  },
+  {
+   "no": 18,
+   "officialId": "L4-0018",
+   "hanzi": "办事",
+   "pinyin": "bànshì",
+   "pinyinPdf": "bànshì",
+   "pos": "",
+   "ocr": "办事"
+  },
+  {
+   "no": 19,
+   "officialId": "L4-0019",
+   "hanzi": "包裹",
+   "pinyin": "bāoguǒ",
+   "pinyinPdf": "bāoguǒ",
+   "pos": "N/V",
+   "ocr": "包裹"
+  },
+  {
+   "no": 20,
+   "officialId": "L4-0020",
+   "hanzi": "包含",
+   "pinyin": "bāohán",
+   "pinyinPdf": "bāohán",
+   "pos": "V",
+   "ocr": "包含"
+  },
+  {
+   "no": 21,
+   "officialId": "L4-0021",
+   "hanzi": "包括",
+   "pinyin": "bāokuò",
+   "pinyinPdf": "bāokuò",
+   "pos": "V",
+   "ocr": "包括"
+  },
+  {
+   "no": 22,
+   "officialId": "L4-0022",
+   "hanzi": "薄",
+   "pinyin": "báo",
+   "pinyinPdf": "báo",
+   "pos": "Adj",
+   "ocr": "薄"
+  },
+  {
+   "no": 23,
+   "officialId": "L4-0023",
+   "hanzi": "宝",
+   "pinyin": "bǎo",
+   "pinyinPdf": "bǎo",
+   "pos": "N",
+   "ocr": "宝"
+  },
+  {
+   "no": 24,
+   "officialId": "L4-0024",
+   "hanzi": "宝宝",
+   "pinyin": "bǎobao",
+   "pinyinPdf": "bǎobao",
+   "pos": "N",
+   "ocr": "宝宝"
+  },
+  {
+   "no": 25,
+   "officialId": "L4-0025",
+   "hanzi": "宝贝",
+   "pinyin": "bǎobèi",
+   "pinyinPdf": "bǎobèi",
+   "pos": "N",
+   "ocr": "宝贝"
+  },
+  {
+   "no": 26,
+   "officialId": "L4-0026",
+   "hanzi": "宝贵",
+   "pinyin": "bǎoguì",
+   "pinyinPdf": "bǎoguì",
+   "pos": "Adj",
+   "ocr": "宝贵"
+  },
+  {
+   "no": 27,
+   "officialId": "L4-0027",
+   "hanzi": "宝石",
+   "pinyin": "bǎoshí",
+   "pinyinPdf": "bǎoshí",
+   "pos": "N",
+   "ocr": "宝石"
+  },
+  {
+   "no": 28,
+   "officialId": "L4-0028",
+   "hanzi": "保密",
+   "pinyin": "bǎomì",
+   "pinyinPdf": "bǎomì",
+   "pos": "",
+   "ocr": "保密"
+  },
+  {
+   "no": 29,
+   "officialId": "L4-0029",
+   "hanzi": "保守",
+   "pinyin": "bǎoshǒu",
+   "pinyinPdf": "bǎoshǒu",
+   "pos": "V/Adj",
+   "ocr": "保守"
+  },
+  {
+   "no": 30,
+   "officialId": "L4-0030",
+   "hanzi": "抱",
+   "pinyin": "bào",
+   "pinyinPdf": "bào",
+   "pos": "V",
+   "ocr": "抱"
+  },
+  {
+   "no": 31,
+   "officialId": "L4-0031",
+   "hanzi": "背景",
+   "pinyin": "bèijǐng",
+   "pinyinPdf": "bèijǐng",
+   "pos": "N",
+   "ocr": "背景"
+  },
+  {
+   "no": 32,
+   "officialId": "L4-0032",
+   "hanzi": "倍",
+   "pinyin": "bèi",
+   "pinyinPdf": "bèi",
+   "pos": "M",
+   "ocr": "倍"
+  },
+  {
+   "no": 33,
+   "officialId": "L4-0033",
+   "hanzi": "被迫",
+   "pinyin": "bèipò",
+   "pinyinPdf": "bèipò",
+   "pos": "V",
+   "ocr": "被迫"
+  },
+  {
+   "no": 34,
+   "officialId": "L4-0034",
+   "hanzi": "本科",
+   "pinyin": "běnkē",
+   "pinyinPdf": "běnkē",
+   "pos": "N",
+   "ocr": "本科"
+  },
+  {
+   "no": 35,
+   "officialId": "L4-0035",
+   "hanzi": "笨",
+   "pinyin": "bèn",
+   "pinyinPdf": "bèn",
+   "pos": "Adj",
+   "ocr": "笨"
+  },
+  {
+   "no": 36,
+   "officialId": "L4-0036",
+   "hanzi": "比分",
+   "pinyin": "bǐfēn",
+   "pinyinPdf": "bǐfēn",
+   "pos": "N",
+   "ocr": "比分"
+  },
+  {
+   "no": 37,
+   "officialId": "L4-0037",
+   "hanzi": "毕业",
+   "pinyin": "bìyè",
+   "pinyinPdf": "bìyè",
+   "pos": "",
+   "ocr": "毕业"
+  },
+  {
+   "no": 38,
+   "officialId": "L4-0038",
+   "hanzi": "毕业生",
+   "pinyin": "bìyèshēng",
+   "pinyinPdf": "bìyèshēng",
+   "pos": "N",
+   "ocr": "毕业生"
+  },
+  {
+   "no": 39,
+   "officialId": "L4-0039",
+   "hanzi": "避",
+   "pinyin": "bì",
+   "pinyinPdf": "bì",
+   "pos": "V",
+   "ocr": "避"
+  },
+  {
+   "no": 40,
+   "officialId": "L4-0040",
+   "hanzi": "避免",
+   "pinyin": "bìmiǎn",
+   "pinyinPdf": "bìmiǎn",
+   "pos": "V",
+   "ocr": "避免"
+  },
+  {
+   "no": 41,
+   "officialId": "L4-0041",
+   "hanzi": "编",
+   "pinyin": "biān",
+   "pinyinPdf": "biān",
+   "pos": "V",
+   "ocr": "编"
+  },
+  {
+   "no": 42,
+   "officialId": "L4-0042",
+   "hanzi": "辩论",
+   "pinyin": "biànlùn",
+   "pinyinPdf": "biànlùn",
+   "pos": "V/N",
+   "ocr": "辩论"
+  },
+  {
+   "no": 43,
+   "officialId": "L4-0043",
+   "hanzi": "标志",
+   "pinyin": "biāozhì",
+   "pinyinPdf": "biāozhì",
+   "pos": "V/N",
+   "ocr": "标志"
+  },
+  {
+   "no": 44,
+   "officialId": "L4-0044",
+   "hanzi": "表情",
+   "pinyin": "biǎoqíng",
+   "pinyinPdf": "biǎoqíng",
+   "pos": "N",
+   "ocr": "表情"
+  },
+  {
+   "no": 45,
+   "officialId": "L4-0045",
+   "hanzi": "表扬",
+   "pinyin": "biǎoyáng",
+   "pinyinPdf": "biǎoyáng",
+   "pos": "V",
+   "ocr": "表扬"
+  },
+  {
+   "no": 46,
+   "officialId": "L4-0046",
+   "hanzi": "别",
+   "pinyin": "bié",
+   "pinyinPdf": "bié",
+   "pos": "V",
+   "ocr": "别（动）"
+  },
+  {
+   "no": 47,
+   "officialId": "L4-0047",
+   "hanzi": "冰",
+   "pinyin": "bīng",
+   "pinyinPdf": "bīng",
+   "pos": "N",
+   "ocr": "冰"
+  },
+  {
+   "no": 48,
+   "officialId": "L4-0048",
+   "hanzi": "冰箱",
+   "pinyin": "bīngxiāng",
+   "pinyinPdf": "bīngxiāng",
+   "pos": "N",
+   "ocr": "冰箱"
+  },
+  {
+   "no": 49,
+   "officialId": "L4-0049",
+   "hanzi": "冰雪",
+   "pinyin": "bīngxuě",
+   "pinyinPdf": "bīngxuě",
+   "pos": "N/Adj",
+   "ocr": "冰雪"
+  },
+  {
+   "no": 50,
+   "officialId": "L4-0050",
+   "hanzi": "兵",
+   "pinyin": "bīng",
+   "pinyinPdf": "bīng",
+   "pos": "N",
+   "ocr": "兵"
+  },
+  {
+   "no": 51,
+   "officialId": "L4-0051",
+   "hanzi": "并",
+   "pinyin": "bìng",
+   "pinyinPdf": "bìng",
+   "pos": "V",
+   "ocr": "并（动）"
+  },
+  {
+   "no": 52,
+   "officialId": "L4-0052",
+   "hanzi": "不要紧",
+   "pinyin": "búyàojǐn",
+   "pinyinPdf": "bùyàojǐn",
+   "pos": "Adj",
+   "ocr": "不要紧"
+  },
+  {
+   "no": 53,
+   "officialId": "L4-0053",
+   "hanzi": "不在乎",
+   "pinyin": "búzàihu",
+   "pinyinPdf": "bùzàihu",
+   "pos": "V",
+   "ocr": "不在乎"
+  },
+  {
+   "no": 54,
+   "officialId": "L4-0054",
+   "hanzi": "不管",
+   "pinyin": "bùguǎn",
+   "pinyinPdf": "bùguǎn",
+   "pos": "Conj",
+   "ocr": "不管"
+  },
+  {
+   "no": 55,
+   "officialId": "L4-0055",
+   "hanzi": "不然",
+   "pinyin": "bùrán",
+   "pinyinPdf": "bùrán",
+   "pos": "Conj",
+   "ocr": "不然"
+  },
+  {
+   "no": 56,
+   "officialId": "L4-0056",
+   "hanzi": "布置",
+   "pinyin": "bùzhì",
+   "pinyinPdf": "bùzhì",
+   "pos": "V",
+   "ocr": "布置"
+  },
+  {
+   "no": 57,
+   "officialId": "L4-0057",
+   "hanzi": "步行",
+   "pinyin": "bùxíng",
+   "pinyinPdf": "bùxíng",
+   "pos": "V",
+   "ocr": "步行"
+  },
+  {
+   "no": 58,
+   "officialId": "L4-0058",
+   "hanzi": "擦",
+   "pinyin": "cā",
+   "pinyinPdf": "cā",
+   "pos": "V",
+   "ocr": "擦"
+  },
+  {
+   "no": 59,
+   "officialId": "L4-0059",
+   "hanzi": "才",
+   "pinyin": "cái",
+   "pinyinPdf": "cái",
+   "pos": "N",
+   "ocr": "才（名）"
+  },
+  {
+   "no": 60,
+   "officialId": "L4-0060",
+   "hanzi": "材料",
+   "pinyin": "cáiliào",
+   "pinyinPdf": "cáiliào",
+   "pos": "N",
+   "ocr": "材料"
+  },
+  {
+   "no": 61,
+   "officialId": "L4-0061",
+   "hanzi": "财产",
+   "pinyin": "cáichǎn",
+   "pinyinPdf": "cáichǎn",
+   "pos": "N",
+   "ocr": "财产"
+  },
+  {
+   "no": 62,
+   "officialId": "L4-0062",
+   "hanzi": "财富",
+   "pinyin": "cáifù",
+   "pinyinPdf": "cáifù",
+   "pos": "N",
+   "ocr": "财富"
+  },
+  {
+   "no": 63,
+   "officialId": "L4-0063",
+   "hanzi": "采访",
+   "pinyin": "cǎifǎng",
+   "pinyinPdf": "cǎifǎng",
+   "pos": "V/N",
+   "ocr": "采访"
+  },
+  {
+   "no": 64,
+   "officialId": "L4-0064",
+   "hanzi": "参考",
+   "pinyin": "cānkǎo",
+   "pinyinPdf": "cānkǎo",
+   "pos": "V",
+   "ocr": "参考"
+  },
+  {
+   "no": 65,
+   "officialId": "L4-0065",
+   "hanzi": "参与",
+   "pinyin": "cānyù",
+   "pinyinPdf": "cānyù",
+   "pos": "V",
+   "ocr": "参与"
+  },
+  {
+   "no": 66,
+   "officialId": "L4-0066",
+   "hanzi": "操场",
+   "pinyin": "cāochǎng",
+   "pinyinPdf": "cāochǎng",
+   "pos": "N",
+   "ocr": "操场"
+  },
+  {
+   "no": 67,
+   "officialId": "L4-0067",
+   "hanzi": "操作",
+   "pinyin": "cāozuò",
+   "pinyinPdf": "cāozuò",
+   "pos": "V",
+   "ocr": "操作"
+  },
+  {
+   "no": 68,
+   "officialId": "L4-0068",
+   "hanzi": "测",
+   "pinyin": "cè",
+   "pinyinPdf": "cè",
+   "pos": "V",
+   "ocr": "测"
+  },
+  {
+   "no": 69,
+   "officialId": "L4-0069",
+   "hanzi": "测量",
+   "pinyin": "cèliáng",
+   "pinyinPdf": "cèliáng",
+   "pos": "V",
+   "ocr": "测量"
+  },
+  {
+   "no": 70,
+   "officialId": "L4-0070",
+   "hanzi": "测试",
+   "pinyin": "cèshì",
+   "pinyinPdf": "cèshì",
+   "pos": "V/N",
+   "ocr": "测试"
+  },
+  {
+   "no": 71,
+   "officialId": "L4-0071",
+   "hanzi": "曾",
+   "pinyin": "céng",
+   "pinyinPdf": "céng",
+   "pos": "Adv",
+   "ocr": "曾"
+  },
+  {
+   "no": 72,
+   "officialId": "L4-0072",
+   "hanzi": "茶叶",
+   "pinyin": "cháyè",
+   "pinyinPdf": "cháyè",
+   "pos": "N",
+   "ocr": "茶叶"
+  },
+  {
+   "no": 73,
+   "officialId": "L4-0073",
+   "hanzi": "产品",
+   "pinyin": "chǎnpǐn",
+   "pinyinPdf": "chǎnpǐn",
+   "pos": "N",
+   "ocr": "产品"
+  },
+  {
+   "no": 74,
+   "officialId": "L4-0074",
+   "hanzi": "长途",
+   "pinyin": "chángtú",
+   "pinyinPdf": "chángtú",
+   "pos": "Adj/N",
+   "ocr": "长途"
+  },
+  {
+   "no": 75,
+   "officialId": "L4-0075",
+   "hanzi": "常识",
+   "pinyin": "chángshí",
+   "pinyinPdf": "chángshí",
+   "pos": "N",
+   "ocr": "常识"
+  },
+  {
+   "no": 76,
+   "officialId": "L4-0076",
+   "hanzi": "唱片",
+   "pinyin": "chàngpiàn",
+   "pinyinPdf": "chàngpiàn",
+   "pos": "N",
+   "ocr": "唱片"
+  },
+  {
+   "no": 77,
+   "officialId": "L4-0077",
+   "hanzi": "抄",
+   "pinyin": "chāo",
+   "pinyinPdf": "chāo",
+   "pos": "V",
+   "ocr": "抄"
+  },
+  {
+   "no": 78,
+   "officialId": "L4-0078",
+   "hanzi": "抄写",
+   "pinyin": "chāoxiě",
+   "pinyinPdf": "chāoxiě",
+   "pos": "V",
+   "ocr": "抄写"
+  },
+  {
+   "no": 79,
+   "officialId": "L4-0079",
+   "hanzi": "潮",
+   "pinyin": "cháo",
+   "pinyinPdf": "cháo",
+   "pos": "N/Adj",
+   "ocr": "潮"
+  },
+  {
+   "no": 80,
+   "officialId": "L4-0080",
+   "hanzi": "潮流",
+   "pinyin": "cháoliú",
+   "pinyinPdf": "cháoliú",
+   "pos": "N",
+   "ocr": "潮流"
+  },
+  {
+   "no": 81,
+   "officialId": "L4-0081",
+   "hanzi": "潮湿",
+   "pinyin": "cháoshī",
+   "pinyinPdf": "cháoshī",
+   "pos": "Adj",
+   "ocr": "潮湿"
+  },
+  {
+   "no": 82,
+   "officialId": "L4-0082",
+   "hanzi": "彻底",
+   "pinyin": "chèdǐ",
+   "pinyinPdf": "chèdǐ",
+   "pos": "Adj",
+   "ocr": "彻底"
+  },
+  {
+   "no": 83,
+   "officialId": "L4-0083",
+   "hanzi": "沉",
+   "pinyin": "chén",
+   "pinyinPdf": "chén",
+   "pos": "V/Adj",
+   "ocr": "沉"
+  },
+  {
+   "no": 84,
+   "officialId": "L4-0084",
+   "hanzi": "沉默",
+   "pinyin": "chénmò",
+   "pinyinPdf": "chénmò",
+   "pos": "Adj/V",
+   "ocr": "沉默"
+  },
+  {
+   "no": 85,
+   "officialId": "L4-0085",
+   "hanzi": "沉重",
+   "pinyin": "chénzhòng",
+   "pinyinPdf": "chénzhòng",
+   "pos": "Adj",
+   "ocr": "沉重"
+  },
+  {
+   "no": 86,
+   "officialId": "L4-0086",
+   "hanzi": "称赞",
+   "pinyin": "chēngzàn",
+   "pinyinPdf": "chēngzàn",
+   "pos": "V",
+   "ocr": "称赞"
+  },
+  {
+   "no": 87,
+   "officialId": "L4-0087",
+   "hanzi": "成人",
+   "pinyin": "chéngrén",
+   "pinyinPdf": "chéngrén",
+   "pos": "N",
+   "ocr": "成人"
+  },
+  {
+   "no": 88,
+   "officialId": "L4-0088",
+   "hanzi": "诚实",
+   "pinyin": "chéngshí",
+   "pinyinPdf": "chéngshí",
+   "pos": "Adj",
+   "ocr": "诚实"
+  },
+  {
+   "no": 89,
+   "officialId": "L4-0089",
+   "hanzi": "诚信",
+   "pinyin": "chéngxìn",
+   "pinyinPdf": "chéngxìn",
+   "pos": "Adj",
+   "ocr": "诚信"
+  },
+  {
+   "no": 90,
+   "officialId": "L4-0090",
+   "hanzi": "承担",
+   "pinyin": "chéngdān",
+   "pinyinPdf": "chéngdān",
+   "pos": "V",
+   "ocr": "承担"
+  },
+  {
+   "no": 91,
+   "officialId": "L4-0091",
+   "hanzi": "承认",
+   "pinyin": "chéngrèn",
+   "pinyinPdf": "chéngrèn",
+   "pos": "V",
+   "ocr": "承认"
+  },
+  {
+   "no": 92,
+   "officialId": "L4-0092",
+   "hanzi": "承受",
+   "pinyin": "chéngshòu",
+   "pinyinPdf": "chéngshòu",
+   "pos": "V",
+   "ocr": "承受"
+  },
+  {
+   "no": 93,
+   "officialId": "L4-0093",
+   "hanzi": "程序",
+   "pinyin": "chéngxù",
+   "pinyinPdf": "chéngxù",
+   "pos": "N",
+   "ocr": "程序"
+  },
+  {
+   "no": 94,
+   "officialId": "L4-0094",
+   "hanzi": "吃惊",
+   "pinyin": "chījīng",
+   "pinyinPdf": "chījīng",
+   "pos": "",
+   "ocr": "吃惊"
+  },
+  {
+   "no": 95,
+   "officialId": "L4-0095",
+   "hanzi": "迟到",
+   "pinyin": "chídào",
+   "pinyinPdf": "chídào",
+   "pos": "V",
+   "ocr": "迟到"
+  },
+  {
+   "no": 96,
+   "officialId": "L4-0096",
+   "hanzi": "尺",
+   "pinyin": "chǐ",
+   "pinyinPdf": "chǐ",
+   "pos": "N/M",
+   "ocr": "尺"
+  },
+  {
+   "no": 97,
+   "officialId": "L4-0097",
+   "hanzi": "尺寸",
+   "pinyin": "chǐcùn",
+   "pinyinPdf": "chǐcùn",
+   "pos": "N",
+   "ocr": "尺寸"
+  },
+  {
+   "no": 98,
+   "officialId": "L4-0098",
+   "hanzi": "尺子",
+   "pinyin": "chǐzi",
+   "pinyinPdf": "chǐzi",
+   "pos": "N",
+   "ocr": "尺子"
+  },
+  {
+   "no": 99,
+   "officialId": "L4-0099",
+   "hanzi": "冲",
+   "pinyin": "chōng",
+   "pinyinPdf": "chōng",
+   "pos": "V",
+   "ocr": "冲"
+  },
+  {
+   "no": 100,
+   "officialId": "L4-0100",
+   "hanzi": "充电",
+   "pinyin": "chōngdiàn",
+   "pinyinPdf": "chōngdiàn",
+   "pos": "",
+   "ocr": "充电"
+  },
+  {
+   "no": 101,
+   "officialId": "L4-0101",
+   "hanzi": "充电器",
+   "pinyin": "chōngdiànqì",
+   "pinyinPdf": "chōngdiànqì",
+   "pos": "N",
+   "ocr": "充电器"
+  },
+  {
+   "no": 102,
+   "officialId": "L4-0102",
+   "hanzi": "充分",
+   "pinyin": "chōngfèn",
+   "pinyinPdf": "chōngfèn",
+   "pos": "Adj",
+   "ocr": "充分"
+  },
+  {
+   "no": 103,
+   "officialId": "L4-0103",
+   "hanzi": "虫子",
+   "pinyin": "chóngzi",
+   "pinyinPdf": "chóngzi",
+   "pos": "N",
+   "ocr": "虫子"
+  },
+  {
+   "no": 104,
+   "officialId": "L4-0104",
+   "hanzi": "抽",
+   "pinyin": "chōu",
+   "pinyinPdf": "chōu",
+   "pos": "V",
+   "ocr": "抽"
+  },
+  {
+   "no": 105,
+   "officialId": "L4-0105",
+   "hanzi": "抽奖",
+   "pinyin": "chōujiǎng",
+   "pinyinPdf": "chōujiǎng",
+   "pos": "",
+   "ocr": "抽奖"
+  },
+  {
+   "no": 106,
+   "officialId": "L4-0106",
+   "hanzi": "抽烟",
+   "pinyin": "chōuyān",
+   "pinyinPdf": "chōuyān",
+   "pos": "V",
+   "ocr": "抽烟"
+  },
+  {
+   "no": 107,
+   "officialId": "L4-0107",
+   "hanzi": "出口",
+   "pinyin": "chūkǒu",
+   "pinyinPdf": "chūkǒu",
+   "pos": "",
+   "ocr": "出口"
+  },
+  {
+   "no": 108,
+   "officialId": "L4-0108",
+   "hanzi": "出色",
+   "pinyin": "chūsè",
+   "pinyinPdf": "chūsè",
+   "pos": "Adj",
+   "ocr": "出色"
+  },
+  {
+   "no": 109,
+   "officialId": "L4-0109",
+   "hanzi": "出售",
+   "pinyin": "chūshòu",
+   "pinyinPdf": "chūshòu",
+   "pos": "V",
+   "ocr": "出售"
+  },
+  {
+   "no": 110,
+   "officialId": "L4-0110",
+   "hanzi": "出席",
+   "pinyin": "chūxí",
+   "pinyinPdf": "chūxí",
+   "pos": "V",
+   "ocr": "出席"
+  },
+  {
+   "no": 111,
+   "officialId": "L4-0111",
+   "hanzi": "处于",
+   "pinyin": "chǔyú",
+   "pinyinPdf": "chǔyú",
+   "pos": "V",
+   "ocr": "处于"
+  },
+  {
+   "no": 112,
+   "officialId": "L4-0112",
+   "hanzi": "处",
+   "pinyin": "chù",
+   "pinyinPdf": "chù",
+   "pos": "N",
+   "ocr": "处"
+  },
+  {
+   "no": 113,
+   "officialId": "L4-0113",
+   "hanzi": "穿上",
+   "pinyin": "chuānshang",
+   "pinyinPdf": "chuānshang",
+   "pos": "",
+   "ocr": "穿上"
+  },
+  {
+   "no": 114,
+   "officialId": "L4-0114",
+   "hanzi": "传统",
+   "pinyin": "chuántǒng",
+   "pinyinPdf": "chuántǒng",
+   "pos": "N/Adj",
+   "ocr": "传统"
+  },
+  {
+   "no": 115,
+   "officialId": "L4-0115",
+   "hanzi": "窗户",
+   "pinyin": "chuānghu",
+   "pinyinPdf": "chuānghu",
+   "pos": "N",
+   "ocr": "窗户"
+  },
+  {
+   "no": 116,
+   "officialId": "L4-0116",
+   "hanzi": "窗台",
+   "pinyin": "chuāngtái",
+   "pinyinPdf": "chuāngtái",
+   "pos": "N",
+   "ocr": "窗台"
+  },
+  {
+   "no": 117,
+   "officialId": "L4-0117",
+   "hanzi": "窗子",
+   "pinyin": "chuāngzi",
+   "pinyinPdf": "chuāngzi",
+   "pos": "N",
+   "ocr": "窗子"
+  },
+  {
+   "no": 118,
+   "officialId": "L4-0118",
+   "hanzi": "春季",
+   "pinyin": "chūnjì",
+   "pinyinPdf": "chūnjì",
+   "pos": "N",
+   "ocr": "春季"
+  },
+  {
+   "no": 119,
+   "officialId": "L4-0119",
+   "hanzi": "纯",
+   "pinyin": "chún",
+   "pinyinPdf": "chún",
+   "pos": "Adj",
+   "ocr": "纯"
+  },
+  {
+   "no": 120,
+   "officialId": "L4-0120",
+   "hanzi": "纯净水",
+   "pinyin": "chúnjìngshuǐ",
+   "pinyinPdf": "chúnjìngshuǐ",
+   "pos": "N",
+   "ocr": "纯净水"
+  },
+  {
+   "no": 121,
+   "officialId": "L4-0121",
+   "hanzi": "词汇",
+   "pinyin": "cíhuì",
+   "pinyinPdf": "cíhuì",
+   "pos": "N",
+   "ocr": "词汇"
+  },
+  {
+   "no": 122,
+   "officialId": "L4-0122",
+   "hanzi": "此",
+   "pinyin": "cǐ",
+   "pinyinPdf": "cǐ",
+   "pos": "Pron",
+   "ocr": "此"
+  },
+  {
+   "no": 123,
+   "officialId": "L4-0123",
+   "hanzi": "此外",
+   "pinyin": "cǐwài",
+   "pinyinPdf": "cǐwài",
+   "pos": "Conj",
+   "ocr": "此外"
+  },
+  {
+   "no": 124,
+   "officialId": "L4-0124",
+   "hanzi": "次",
+   "pinyin": "cì",
+   "pinyinPdf": "cì",
+   "pos": "Adj",
+   "ocr": "次（形）"
+  },
+  {
+   "no": 125,
+   "officialId": "L4-0125",
+   "hanzi": "刺",
+   "pinyin": "cì",
+   "pinyinPdf": "cì",
+   "pos": "V/N",
+   "ocr": "刺"
+  },
+  {
+   "no": 126,
+   "officialId": "L4-0126",
+   "hanzi": "刺激",
+   "pinyin": "cìjī",
+   "pinyinPdf": "cìjī",
+   "pos": "V/N",
+   "ocr": "刺激"
+  },
+  {
+   "no": 127,
+   "officialId": "L4-0127",
+   "hanzi": "从此",
+   "pinyin": "cóngcǐ",
+   "pinyinPdf": "cóngcǐ",
+   "pos": "Adv",
+   "ocr": "从此"
+  },
+  {
+   "no": 128,
+   "officialId": "L4-0128",
+   "hanzi": "粗",
+   "pinyin": "cū",
+   "pinyinPdf": "cū",
+   "pos": "Adj",
+   "ocr": "粗"
+  },
+  {
+   "no": 129,
+   "officialId": "L4-0129",
+   "hanzi": "粗心",
+   "pinyin": "cūxīn",
+   "pinyinPdf": "cūxīn",
+   "pos": "Adj",
+   "ocr": "粗心"
+  },
+  {
+   "no": 130,
+   "officialId": "L4-0130",
+   "hanzi": "促进",
+   "pinyin": "cùjìn",
+   "pinyinPdf": "cùjìn",
+   "pos": "V",
+   "ocr": "促进"
+  },
+  {
+   "no": 131,
+   "officialId": "L4-0131",
+   "hanzi": "促使",
+   "pinyin": "cùshǐ",
+   "pinyinPdf": "cùshǐ",
+   "pos": "V",
+   "ocr": "促使"
+  },
+  {
+   "no": 132,
+   "officialId": "L4-0132",
+   "hanzi": "促销",
+   "pinyin": "cùxiāo",
+   "pinyinPdf": "cùxiāo",
+   "pos": "V",
+   "ocr": "促销"
+  },
+  {
+   "no": 133,
+   "officialId": "L4-0133",
+   "hanzi": "措施",
+   "pinyin": "cuòshī",
+   "pinyinPdf": "cuòshī",
+   "pos": "N",
+   "ocr": "措施"
+  },
+  {
+   "no": 134,
+   "officialId": "L4-0134",
+   "hanzi": "打",
+   "pinyin": "dá",
+   "pinyinPdf": "dá",
+   "pos": "M",
+   "ocr": "打"
+  },
+  {
+   "no": 135,
+   "officialId": "L4-0135",
+   "hanzi": "答案",
+   "pinyin": "dá'àn",
+   "pinyinPdf": "dá'àn",
+   "pos": "N",
+   "ocr": "答案"
+  },
+  {
+   "no": 136,
+   "officialId": "L4-0136",
+   "hanzi": "打败",
+   "pinyin": "dǎbài",
+   "pinyinPdf": "dǎbài",
+   "pos": "V",
+   "ocr": "打败"
+  },
+  {
+   "no": 137,
+   "officialId": "L4-0137",
+   "hanzi": "打雷",
+   "pinyin": "dǎléi",
+   "pinyinPdf": "dǎléi",
+   "pos": "",
+   "ocr": "打雷"
+  },
+  {
+   "no": 138,
+   "officialId": "L4-0138",
+   "hanzi": "打扫",
+   "pinyin": "dǎsǎo",
+   "pinyinPdf": "dǎsǎo",
+   "pos": "V",
+   "ocr": "打扫"
+  },
+  {
+   "no": 139,
+   "officialId": "L4-0139",
+   "hanzi": "打折",
+   "pinyin": "dǎzhé",
+   "pinyinPdf": "dǎzhé",
+   "pos": "",
+   "ocr": "打折"
+  },
+  {
+   "no": 140,
+   "officialId": "L4-0140",
+   "hanzi": "打针",
+   "pinyin": "dǎzhēn",
+   "pinyinPdf": "dǎzhēn",
+   "pos": "",
+   "ocr": "打针"
+  },
+  {
+   "no": 141,
+   "officialId": "L4-0141",
+   "hanzi": "大巴",
+   "pinyin": "dàbā",
+   "pinyinPdf": "dàbā",
+   "pos": "N",
+   "ocr": "大巴"
+  },
+  {
+   "no": 142,
+   "officialId": "L4-0142",
+   "hanzi": "大多",
+   "pinyin": "dàduō",
+   "pinyinPdf": "dàduō",
+   "pos": "Adv",
+   "ocr": "大多"
+  },
+  {
+   "no": 143,
+   "officialId": "L4-0143",
+   "hanzi": "大方",
+   "pinyin": "dàfang",
+   "pinyinPdf": "dàfang",
+   "pos": "Adj",
+   "ocr": "大方"
+  },
+  {
+   "no": 144,
+   "officialId": "L4-0144",
+   "hanzi": "大哥",
+   "pinyin": "dàgē",
+   "pinyinPdf": "dàgē",
+   "pos": "N",
+   "ocr": "大哥"
+  },
+  {
+   "no": 145,
+   "officialId": "L4-0145",
+   "hanzi": "大规模",
+   "pinyin": "dà guīmó",
+   "pinyinPdf": "dà guīmó",
+   "pos": "",
+   "ocr": "大规模"
+  },
+  {
+   "no": 146,
+   "officialId": "L4-0146",
+   "hanzi": "大会",
+   "pinyin": "dàhuì",
+   "pinyinPdf": "dàhuì",
+   "pos": "N",
+   "ocr": "大会"
+  },
+  {
+   "no": 147,
+   "officialId": "L4-0147",
+   "hanzi": "大姐",
+   "pinyin": "dàjiě",
+   "pinyinPdf": "dàjiě",
+   "pos": "N",
+   "ocr": "大姐"
+  },
+  {
+   "no": 148,
+   "officialId": "L4-0148",
+   "hanzi": "大楼",
+   "pinyin": "dà lóu",
+   "pinyinPdf": "dà lóu",
+   "pos": "",
+   "ocr": "大楼"
+  },
+  {
+   "no": 149,
+   "officialId": "L4-0149",
+   "hanzi": "大陆",
+   "pinyin": "dàlù",
+   "pinyinPdf": "dàlù",
+   "pos": "N",
+   "ocr": "大陆"
+  },
+  {
+   "no": 150,
+   "officialId": "L4-0150",
+   "hanzi": "大妈",
+   "pinyin": "dàmā",
+   "pinyinPdf": "dàmā",
+   "pos": "N",
+   "ocr": "大妈"
+  },
+  {
+   "no": 151,
+   "officialId": "L4-0151",
+   "hanzi": "大型",
+   "pinyin": "dàxíng",
+   "pinyinPdf": "dàxíng",
+   "pos": "Adj",
+   "ocr": "大型"
+  },
+  {
+   "no": 152,
+   "officialId": "L4-0152",
+   "hanzi": "大爷",
+   "pinyin": "dàye",
+   "pinyinPdf": "dàye",
+   "pos": "N",
+   "ocr": "大爷"
+  },
+  {
+   "no": 153,
+   "officialId": "L4-0153",
+   "hanzi": "大众",
+   "pinyin": "dàzhòng",
+   "pinyinPdf": "dàzhòng",
+   "pos": "N",
+   "ocr": "大众"
+  },
+  {
+   "no": 154,
+   "officialId": "L4-0154",
+   "hanzi": "代替",
+   "pinyin": "dàitì",
+   "pinyinPdf": "dàitì",
+   "pos": "V",
+   "ocr": "代替"
+  },
+  {
+   "no": 155,
+   "officialId": "L4-0155",
+   "hanzi": "待遇",
+   "pinyin": "dàiyù",
+   "pinyinPdf": "dàiyù",
+   "pos": "N",
+   "ocr": "待遇"
+  },
+  {
+   "no": 156,
+   "officialId": "L4-0156",
+   "hanzi": "袋",
+   "pinyin": "dài",
+   "pinyinPdf": "dài",
+   "pos": "N/M",
+   "ocr": "袋"
+  },
+  {
+   "no": 157,
+   "officialId": "L4-0157",
+   "hanzi": "戴",
+   "pinyin": "dài",
+   "pinyinPdf": "dài",
+   "pos": "V",
+   "ocr": "戴"
+  },
+  {
+   "no": 158,
+   "officialId": "L4-0158",
+   "hanzi": "担保",
+   "pinyin": "dānbǎo",
+   "pinyinPdf": "dānbǎo",
+   "pos": "V/N",
+   "ocr": "担保"
+  },
+  {
+   "no": 159,
+   "officialId": "L4-0159",
+   "hanzi": "担任",
+   "pinyin": "dānrèn",
+   "pinyinPdf": "dānrèn",
+   "pos": "V",
+   "ocr": "担任"
+  },
+  {
+   "no": 160,
+   "officialId": "L4-0160",
+   "hanzi": "担心",
+   "pinyin": "dānxīn",
+   "pinyinPdf": "dānxīn",
+   "pos": "",
+   "ocr": "担心"
+  },
+  {
+   "no": 161,
+   "officialId": "L4-0161",
+   "hanzi": "单",
+   "pinyin": "dān",
+   "pinyinPdf": "dān",
+   "pos": "Adj/Adv",
+   "ocr": "单"
+  },
+  {
+   "no": 162,
+   "officialId": "L4-0162",
+   "hanzi": "单纯",
+   "pinyin": "dānchún",
+   "pinyinPdf": "dānchún",
+   "pos": "Adj",
+   "ocr": "单纯"
+  },
+  {
+   "no": 163,
+   "officialId": "L4-0163",
+   "hanzi": "单调",
+   "pinyin": "dāndiào",
+   "pinyinPdf": "dāndiào",
+   "pos": "Adj",
+   "ocr": "单调"
+  },
+  {
+   "no": 164,
+   "officialId": "L4-0164",
+   "hanzi": "单独",
+   "pinyin": "dāndú",
+   "pinyinPdf": "dāndú",
+   "pos": "Adv",
+   "ocr": "单独"
+  },
+  {
+   "no": 165,
+   "officialId": "L4-0165",
+   "hanzi": "淡",
+   "pinyin": "dàn",
+   "pinyinPdf": "dàn",
+   "pos": "Adj",
+   "ocr": "淡"
+  },
+  {
+   "no": 166,
+   "officialId": "L4-0166",
+   "hanzi": "导游",
+   "pinyin": "dǎoyóu",
+   "pinyinPdf": "dǎoyóu",
+   "pos": "V/N",
+   "ocr": "导游"
+  },
+  {
+   "no": 167,
+   "officialId": "L4-0167",
+   "hanzi": "导致",
+   "pinyin": "dǎozhì",
+   "pinyinPdf": "dǎozhì",
+   "pos": "V",
+   "ocr": "导致"
+  },
+  {
+   "no": 168,
+   "officialId": "L4-0168",
+   "hanzi": "倒闭",
+   "pinyin": "dǎobì",
+   "pinyinPdf": "dǎobì",
+   "pos": "V",
+   "ocr": "倒闭"
+  },
+  {
+   "no": 169,
+   "officialId": "L4-0169",
+   "hanzi": "倒车",
+   "pinyin": "dǎochē",
+   "pinyinPdf": "dǎochē",
+   "pos": "",
+   "ocr": "倒车"
+  },
+  {
+   "no": 170,
+   "officialId": "L4-0170",
+   "hanzi": "倒车",
+   "pinyin": "dàochē",
+   "pinyinPdf": "dàochē",
+   "pos": "",
+   "ocr": "倒车"
+  },
+  {
+   "no": 171,
+   "officialId": "L4-0171",
+   "hanzi": "得意",
+   "pinyin": "déyì",
+   "pinyinPdf": "déyì",
+   "pos": "Adj",
+   "ocr": "得意"
+  },
+  {
+   "no": 172,
+   "officialId": "L4-0172",
+   "hanzi": "得",
+   "pinyin": "děi",
+   "pinyinPdf": "děi",
+   "pos": "V",
+   "ocr": "得"
+  },
+  {
+   "no": 173,
+   "officialId": "L4-0173",
+   "hanzi": "灯光",
+   "pinyin": "dēngguāng",
+   "pinyinPdf": "dēngguāng",
+   "pos": "N",
+   "ocr": "灯光"
+  },
+  {
+   "no": 174,
+   "officialId": "L4-0174",
+   "hanzi": "登",
+   "pinyin": "dēng",
+   "pinyinPdf": "dēng",
+   "pos": "V",
+   "ocr": "登"
+  },
+  {
+   "no": 175,
+   "officialId": "L4-0175",
+   "hanzi": "登记",
+   "pinyin": "dēngjì",
+   "pinyinPdf": "dēngjì",
+   "pos": "",
+   "ocr": "登记"
+  },
+  {
+   "no": 176,
+   "officialId": "L4-0176",
+   "hanzi": "登录",
+   "pinyin": "dēnglù",
+   "pinyinPdf": "dēnglù",
+   "pos": "V",
+   "ocr": "登录"
+  },
+  {
+   "no": 177,
+   "officialId": "L4-0177",
+   "hanzi": "登山",
+   "pinyin": "dēngshān",
+   "pinyinPdf": "dēngshān",
+   "pos": "",
+   "ocr": "登山"
+  },
+  {
+   "no": 178,
+   "officialId": "L4-0178",
+   "hanzi": "的确",
+   "pinyin": "díquè",
+   "pinyinPdf": "díquè",
+   "pos": "Adv",
+   "ocr": "的确"
+  },
+  {
+   "no": 179,
+   "officialId": "L4-0179",
+   "hanzi": "敌人",
+   "pinyin": "dírén",
+   "pinyinPdf": "dírén",
+   "pos": "N",
+   "ocr": "敌人"
+  },
+  {
+   "no": 180,
+   "officialId": "L4-0180",
+   "hanzi": "底",
+   "pinyin": "dǐ",
+   "pinyinPdf": "dǐ",
+   "pos": "N",
+   "ocr": "底"
+  },
+  {
+   "no": 181,
+   "officialId": "L4-0181",
+   "hanzi": "地方",
+   "pinyin": "dìfāng",
+   "pinyinPdf": "dìfāng",
+   "pos": "N",
+   "ocr": "地方"
+  },
+  {
+   "no": 182,
+   "officialId": "L4-0182",
+   "hanzi": "地面",
+   "pinyin": "dìmiàn",
+   "pinyinPdf": "dìmiàn",
+   "pos": "N",
+   "ocr": "地面"
+  },
+  {
+   "no": 183,
+   "officialId": "L4-0183",
+   "hanzi": "地位",
+   "pinyin": "dìwèi",
+   "pinyinPdf": "dìwèi",
+   "pos": "N",
+   "ocr": "地位"
+  },
+  {
+   "no": 184,
+   "officialId": "L4-0184",
+   "hanzi": "地下",
+   "pinyin": "dìxià",
+   "pinyinPdf": "dìxià",
+   "pos": "N",
+   "ocr": "地下"
+  },
+  {
+   "no": 185,
+   "officialId": "L4-0185",
+   "hanzi": "地址",
+   "pinyin": "dìzhǐ",
+   "pinyinPdf": "dìzhǐ",
+   "pos": "N",
+   "ocr": "地址"
+  },
+  {
+   "no": 186,
+   "officialId": "L4-0186",
+   "hanzi": "典型",
+   "pinyin": "diǎnxíng",
+   "pinyinPdf": "diǎnxíng",
+   "pos": "N/Adj",
+   "ocr": "典型"
+  },
+  {
+   "no": 187,
+   "officialId": "L4-0187",
+   "hanzi": "点名",
+   "pinyin": "diǎnmíng",
+   "pinyinPdf": "diǎnmíng",
+   "pos": "",
+   "ocr": "点名"
+  },
+  {
+   "no": 188,
+   "officialId": "L4-0188",
+   "hanzi": "电灯",
+   "pinyin": "diàndēng",
+   "pinyinPdf": "diàndēng",
+   "pos": "N",
+   "ocr": "电灯"
+  },
+  {
+   "no": 189,
+   "officialId": "L4-0189",
+   "hanzi": "电动车",
+   "pinyin": "diàndòngchē",
+   "pinyinPdf": "diàndòngchē",
+   "pos": "N",
+   "ocr": "电动车"
+  },
+  {
+   "no": 190,
+   "officialId": "L4-0190",
+   "hanzi": "电梯",
+   "pinyin": "diàntī",
+   "pinyinPdf": "diàntī",
+   "pos": "N",
+   "ocr": "电梯"
+  },
+  {
+   "no": 191,
+   "officialId": "L4-0191",
+   "hanzi": "电源",
+   "pinyin": "diànyuán",
+   "pinyinPdf": "diànyuán",
+   "pos": "N",
+   "ocr": "电源"
+  },
+  {
+   "no": 192,
+   "officialId": "L4-0192",
+   "hanzi": "顶",
+   "pinyin": "dǐng",
+   "pinyinPdf": "dǐng",
+   "pos": "N/V/M",
+   "ocr": "顶"
+  },
+  {
+   "no": 193,
+   "officialId": "L4-0193",
+   "hanzi": "定",
+   "pinyin": "dìng",
+   "pinyinPdf": "dìng",
+   "pos": "V",
+   "ocr": "定"
+  },
+  {
+   "no": 194,
+   "officialId": "L4-0194",
+   "hanzi": "冬季",
+   "pinyin": "dōngjì",
+   "pinyinPdf": "dōngjì",
+   "pos": "N",
+   "ocr": "冬季"
+  },
+  {
+   "no": 195,
+   "officialId": "L4-0195",
+   "hanzi": "动画片",
+   "pinyin": "dònghuàpiàn",
+   "pinyinPdf": "dònghuàpiàn",
+   "pos": "N",
+   "ocr": "动画片"
+  },
+  {
+   "no": 196,
+   "officialId": "L4-0196",
+   "hanzi": "动摇",
+   "pinyin": "dòngyáo",
+   "pinyinPdf": "dòngyáo",
+   "pos": "V",
+   "ocr": "动摇"
+  },
+  {
+   "no": 197,
+   "officialId": "L4-0197",
+   "hanzi": "豆腐",
+   "pinyin": "dòufu",
+   "pinyinPdf": "dòufu",
+   "pos": "N",
+   "ocr": "豆腐"
+  },
+  {
+   "no": 198,
+   "officialId": "L4-0198",
+   "hanzi": "独立",
+   "pinyin": "dúlì",
+   "pinyinPdf": "dúlì",
+   "pos": "V",
+   "ocr": "独立"
+  },
+  {
+   "no": 199,
+   "officialId": "L4-0199",
+   "hanzi": "独特",
+   "pinyin": "dútè",
+   "pinyinPdf": "dútè",
+   "pos": "Adj",
+   "ocr": "独特"
+  },
+  {
+   "no": 200,
+   "officialId": "L4-0200",
+   "hanzi": "独自",
+   "pinyin": "dúzì",
+   "pinyinPdf": "dúzì",
+   "pos": "Adv",
+   "ocr": "独自"
+  },
+  {
+   "no": 201,
+   "officialId": "L4-0201",
+   "hanzi": "堵",
+   "pinyin": "dǔ",
+   "pinyinPdf": "dǔ",
+   "pos": "V",
+   "ocr": "堵"
+  },
+  {
+   "no": 202,
+   "officialId": "L4-0202",
+   "hanzi": "堵车",
+   "pinyin": "dǔchē",
+   "pinyinPdf": "dǔchē",
+   "pos": "",
+   "ocr": "堵车"
+  },
+  {
+   "no": 203,
+   "officialId": "L4-0203",
+   "hanzi": "肚子",
+   "pinyin": "dùzi",
+   "pinyinPdf": "dùzi",
+   "pos": "N",
+   "ocr": "肚子"
+  },
+  {
+   "no": 204,
+   "officialId": "L4-0204",
+   "hanzi": "度过",
+   "pinyin": "dùguò",
+   "pinyinPdf": "dùguò",
+   "pos": "V",
+   "ocr": "度过"
+  },
+  {
+   "no": 205,
+   "officialId": "L4-0205",
+   "hanzi": "锻炼",
+   "pinyin": "duànliàn",
+   "pinyinPdf": "duànliàn",
+   "pos": "V",
+   "ocr": "锻炼"
+  },
+  {
+   "no": 206,
+   "officialId": "L4-0206",
+   "hanzi": "对比",
+   "pinyin": "duìbǐ",
+   "pinyinPdf": "duìbǐ",
+   "pos": "V/N",
+   "ocr": "对比"
+  },
+  {
+   "no": 207,
+   "officialId": "L4-0207",
+   "hanzi": "对付",
+   "pinyin": "duìfu",
+   "pinyinPdf": "duìfu",
+   "pos": "V",
+   "ocr": "对付"
+  },
+  {
+   "no": 208,
+   "officialId": "L4-0208",
+   "hanzi": "对于",
+   "pinyin": "duìyú",
+   "pinyinPdf": "duìyú",
+   "pos": "Prep",
+   "ocr": "对于"
+  },
+  {
+   "no": 209,
+   "officialId": "L4-0209",
+   "hanzi": "多次",
+   "pinyin": "duō cì",
+   "pinyinPdf": "duō cì",
+   "pos": "",
+   "ocr": "多次"
+  },
+  {
+   "no": 210,
+   "officialId": "L4-0210",
+   "hanzi": "多年",
+   "pinyin": "duō nián",
+   "pinyinPdf": "duō nián",
+   "pos": "",
+   "ocr": "多年"
+  },
+  {
+   "no": 211,
+   "officialId": "L4-0211",
+   "hanzi": "多样",
+   "pinyin": "duōyàng",
+   "pinyinPdf": "duōyàng",
+   "pos": "Adj",
+   "ocr": "多样"
+  },
+  {
+   "no": 212,
+   "officialId": "L4-0212",
+   "hanzi": "多种",
+   "pinyin": "duō zhǒng",
+   "pinyinPdf": "duō zhǒng",
+   "pos": "",
+   "ocr": "多种"
+  },
+  {
+   "no": 213,
+   "officialId": "L4-0213",
+   "hanzi": "恶心",
+   "pinyin": "ěxin",
+   "pinyinPdf": "ěxin",
+   "pos": "Adj/V",
+   "ocr": "恶心"
+  },
+  {
+   "no": 214,
+   "officialId": "L4-0214",
+   "hanzi": "儿童",
+   "pinyin": "értóng",
+   "pinyinPdf": "értóng",
+   "pos": "N",
+   "ocr": "儿童"
+  },
+  {
+   "no": 215,
+   "officialId": "L4-0215",
+   "hanzi": "而",
+   "pinyin": "ér",
+   "pinyinPdf": "ér",
+   "pos": "Conj",
+   "ocr": "而"
+  },
+  {
+   "no": 216,
+   "officialId": "L4-0216",
+   "hanzi": "而是",
+   "pinyin": "ér shì",
+   "pinyinPdf": "ér shì",
+   "pos": "",
+   "ocr": "而是"
+  },
+  {
+   "no": 217,
+   "officialId": "L4-0217",
+   "hanzi": "耳机",
+   "pinyin": "ěrjī",
+   "pinyinPdf": "ěrjī",
+   "pos": "N",
+   "ocr": "耳机"
+  },
+  {
+   "no": 218,
+   "officialId": "L4-0218",
+   "hanzi": "二手",
+   "pinyin": "èrshǒu",
+   "pinyinPdf": "èrshǒu",
+   "pos": "Adj",
+   "ocr": "二手"
+  },
+  {
+   "no": 219,
+   "officialId": "L4-0219",
+   "hanzi": "发挥",
+   "pinyin": "fāhuī",
+   "pinyinPdf": "fāhuī",
+   "pos": "V",
+   "ocr": "发挥"
+  },
+  {
+   "no": 220,
+   "officialId": "L4-0220",
+   "hanzi": "发票",
+   "pinyin": "fāpiào",
+   "pinyinPdf": "fāpiào",
+   "pos": "N",
+   "ocr": "发票"
+  },
+  {
+   "no": 221,
+   "officialId": "L4-0221",
+   "hanzi": "发烧",
+   "pinyin": "fāshāo",
+   "pinyinPdf": "fāshāo",
+   "pos": "",
+   "ocr": "发烧"
+  },
+  {
+   "no": 222,
+   "officialId": "L4-0222",
+   "hanzi": "法",
+   "pinyin": "fǎ",
+   "pinyinPdf": "fǎ",
+   "pos": "N",
+   "ocr": "法"
+  },
+  {
+   "no": 223,
+   "officialId": "L4-0223",
+   "hanzi": "法官",
+   "pinyin": "fǎguān",
+   "pinyinPdf": "fǎguān",
+   "pos": "N",
+   "ocr": "法官"
+  },
+  {
+   "no": 224,
+   "officialId": "L4-0224",
+   "hanzi": "法律",
+   "pinyin": "fǎlǜ",
+   "pinyinPdf": "fǎlǜ",
+   "pos": "N",
+   "ocr": "法律"
+  },
+  {
+   "no": 225,
+   "officialId": "L4-0225",
+   "hanzi": "法院",
+   "pinyin": "fǎyuàn",
+   "pinyinPdf": "fǎyuàn",
+   "pos": "N",
+   "ocr": "法院"
+  },
+  {
+   "no": 226,
+   "officialId": "L4-0226",
+   "hanzi": "翻",
+   "pinyin": "fān",
+   "pinyinPdf": "fān",
+   "pos": "V",
+   "ocr": "翻"
+  },
+  {
+   "no": 227,
+   "officialId": "L4-0227",
+   "hanzi": "翻译",
+   "pinyin": "fānyì",
+   "pinyinPdf": "fānyì",
+   "pos": "V/N",
+   "ocr": "翻译"
+  },
+  {
+   "no": 228,
+   "officialId": "L4-0228",
+   "hanzi": "烦",
+   "pinyin": "fán",
+   "pinyinPdf": "fán",
+   "pos": "Adj/V",
+   "ocr": "烦"
+  },
+  {
+   "no": 229,
+   "officialId": "L4-0229",
+   "hanzi": "反",
+   "pinyin": "fǎn",
+   "pinyinPdf": "fǎn",
+   "pos": "Adj/V/Adv",
+   "ocr": "反"
+  },
+  {
+   "no": 230,
+   "officialId": "L4-0230",
+   "hanzi": "反而",
+   "pinyin": "fǎn'ér",
+   "pinyinPdf": "fǎn'ér",
+   "pos": "Adv",
+   "ocr": "反而"
+  },
+  {
+   "no": 231,
+   "officialId": "L4-0231",
+   "hanzi": "反映",
+   "pinyin": "fǎnyìng",
+   "pinyinPdf": "fǎnyìng",
+   "pos": "V/N",
+   "ocr": "反映"
+  },
+  {
+   "no": 232,
+   "officialId": "L4-0232",
+   "hanzi": "方",
+   "pinyin": "fāng",
+   "pinyinPdf": "fāng",
+   "pos": "Adj/N",
+   "ocr": "方"
+  },
+  {
+   "no": 233,
+   "officialId": "L4-0233",
+   "hanzi": "方案",
+   "pinyin": "fāng'àn",
+   "pinyinPdf": "fāng'àn",
+   "pos": "N",
+   "ocr": "方案"
+  },
+  {
+   "no": 234,
+   "officialId": "L4-0234",
+   "hanzi": "方针",
+   "pinyin": "fāngzhēn",
+   "pinyinPdf": "fāngzhēn",
+   "pos": "N",
+   "ocr": "方针"
+  },
+  {
+   "no": 235,
+   "officialId": "L4-0235",
+   "hanzi": "放松",
+   "pinyin": "fàngsōng",
+   "pinyinPdf": "fàngsōng",
+   "pos": "V",
+   "ocr": "放松"
+  },
+  {
+   "no": 236,
+   "officialId": "L4-0236",
+   "hanzi": "非",
+   "pinyin": "fēi",
+   "pinyinPdf": "fēi",
+   "pos": "Adv",
+   "ocr": "非"
+  },
+  {
+   "no": 237,
+   "officialId": "L4-0237",
+   "hanzi": "肥",
+   "pinyin": "féi",
+   "pinyinPdf": "féi",
+   "pos": "Adj",
+   "ocr": "肥"
+  },
+  {
+   "no": 238,
+   "officialId": "L4-0238",
+   "hanzi": "分布",
+   "pinyin": "fēnbù",
+   "pinyinPdf": "fēnbù",
+   "pos": "V",
+   "ocr": "分布"
+  },
+  {
+   "no": 239,
+   "officialId": "L4-0239",
+   "hanzi": "分散",
+   "pinyin": "fēnsàn",
+   "pinyinPdf": "fēnsàn",
+   "pos": "V/Adj",
+   "ocr": "分散"
+  },
+  {
+   "no": 240,
+   "officialId": "L4-0240",
+   "hanzi": "分手",
+   "pinyin": "fēnshǒu",
+   "pinyinPdf": "fēnshǒu",
+   "pos": "",
+   "ocr": "分手"
+  },
+  {
+   "no": 241,
+   "officialId": "L4-0241",
+   "hanzi": "分为",
+   "pinyin": "fēnwéi",
+   "pinyinPdf": "fēnwéi",
+   "pos": "",
+   "ocr": "分为"
+  },
+  {
+   "no": 242,
+   "officialId": "L4-0242",
+   "hanzi": "…分之…",
+   "pinyin": "…fēn zhī…",
+   "pinyinPdf": "…fēn zhī…",
+   "pos": "",
+   "ocr": "…分之…"
+  },
+  {
+   "no": 243,
+   "officialId": "L4-0243",
+   "hanzi": "纷纷",
+   "pinyin": "fēnfēn",
+   "pinyinPdf": "fēnfēn",
+   "pos": "Adv",
+   "ocr": "纷纷"
+  },
+  {
+   "no": 244,
+   "officialId": "L4-0244",
+   "hanzi": "奋斗",
+   "pinyin": "fèndòu",
+   "pinyinPdf": "fèndòu",
+   "pos": "V",
+   "ocr": "奋斗"
+  },
+  {
+   "no": 245,
+   "officialId": "L4-0245",
+   "hanzi": "风格",
+   "pinyin": "fēnggé",
+   "pinyinPdf": "fēnggé",
+   "pos": "N",
+   "ocr": "风格"
+  },
+  {
+   "no": 246,
+   "officialId": "L4-0246",
+   "hanzi": "风景",
+   "pinyin": "fēngjǐng",
+   "pinyinPdf": "fēngjǐng",
+   "pos": "N",
+   "ocr": "风景"
+  },
+  {
+   "no": 247,
+   "officialId": "L4-0247",
+   "hanzi": "风俗",
+   "pinyin": "fēngsú",
+   "pinyinPdf": "fēngsú",
+   "pos": "N",
+   "ocr": "风俗"
+  },
+  {
+   "no": 248,
+   "officialId": "L4-0248",
+   "hanzi": "封闭",
+   "pinyin": "fēngbì",
+   "pinyinPdf": "fēngbì",
+   "pos": "V/Adj",
+   "ocr": "封闭"
+  },
+  {
+   "no": 249,
+   "officialId": "L4-0249",
+   "hanzi": "否则",
+   "pinyin": "fǒuzé",
+   "pinyinPdf": "fǒuzé",
+   "pos": "Conj",
+   "ocr": "否则"
+  },
+  {
+   "no": 250,
+   "officialId": "L4-0250",
+   "hanzi": "夫妇",
+   "pinyin": "fūfù",
+   "pinyinPdf": "fūfù",
+   "pos": "N",
+   "ocr": "夫妇"
+  },
+  {
+   "no": 251,
+   "officialId": "L4-0251",
+   "hanzi": "夫妻",
+   "pinyin": "fūqī",
+   "pinyinPdf": "fūqī",
+   "pos": "N",
+   "ocr": "夫妻"
+  },
+  {
+   "no": 252,
+   "officialId": "L4-0252",
+   "hanzi": "夫人",
+   "pinyin": "fūrén",
+   "pinyinPdf": "fūrén",
+   "pos": "N",
+   "ocr": "夫人"
+  },
+  {
+   "no": 253,
+   "officialId": "L4-0253",
+   "hanzi": "符号",
+   "pinyin": "fúhào",
+   "pinyinPdf": "fúhào",
+   "pos": "N",
+   "ocr": "符号"
+  },
+  {
+   "no": 254,
+   "officialId": "L4-0254",
+   "hanzi": "符合",
+   "pinyin": "fúhé",
+   "pinyinPdf": "fúhé",
+   "pos": "V",
+   "ocr": "符合"
+  },
+  {
+   "no": 255,
+   "officialId": "L4-0255",
+   "hanzi": "付出",
+   "pinyin": "fùchū",
+   "pinyinPdf": "fùchū",
+   "pos": "V",
+   "ocr": "付出"
+  },
+  {
+   "no": 256,
+   "officialId": "L4-0256",
+   "hanzi": "负担",
+   "pinyin": "fùdān",
+   "pinyinPdf": "fùdān",
+   "pos": "V/N",
+   "ocr": "负担"
+  },
+  {
+   "no": 257,
+   "officialId": "L4-0257",
+   "hanzi": "附近",
+   "pinyin": "fùjìn",
+   "pinyinPdf": "fùjìn",
+   "pos": "N",
+   "ocr": "附近"
+  },
+  {
+   "no": 258,
+   "officialId": "L4-0258",
+   "hanzi": "复制",
+   "pinyin": "fùzhì",
+   "pinyinPdf": "fùzhì",
+   "pos": "V",
+   "ocr": "复制"
+  },
+  {
+   "no": 259,
+   "officialId": "L4-0259",
+   "hanzi": "改善",
+   "pinyin": "gǎishàn",
+   "pinyinPdf": "gǎishàn",
+   "pos": "V",
+   "ocr": "改善"
+  },
+  {
+   "no": 260,
+   "officialId": "L4-0260",
+   "hanzi": "改正",
+   "pinyin": "gǎizhèng",
+   "pinyinPdf": "gǎizhèng",
+   "pos": "V",
+   "ocr": "改正"
+  },
+  {
+   "no": 261,
+   "officialId": "L4-0261",
+   "hanzi": "盖",
+   "pinyin": "gài",
+   "pinyinPdf": "gài",
+   "pos": "V",
+   "ocr": "盖"
+  },
+  {
+   "no": 262,
+   "officialId": "L4-0262",
+   "hanzi": "概括",
+   "pinyin": "gàikuò",
+   "pinyinPdf": "gàikuò",
+   "pos": "V/Adj",
+   "ocr": "概括"
+  },
+  {
+   "no": 263,
+   "officialId": "L4-0263",
+   "hanzi": "感兴趣",
+   "pinyin": "gǎn xìngqù",
+   "pinyinPdf": "gǎn xìngqù",
+   "pos": "",
+   "ocr": "感兴趣"
+  },
+  {
+   "no": 264,
+   "officialId": "L4-0264",
+   "hanzi": "高潮",
+   "pinyin": "gāocháo",
+   "pinyinPdf": "gāocháo",
+   "pos": "N",
+   "ocr": "高潮"
+  },
+  {
+   "no": 265,
+   "officialId": "L4-0265",
+   "hanzi": "高价",
+   "pinyin": "gāojià",
+   "pinyinPdf": "gāojià",
+   "pos": "N",
+   "ocr": "高价"
+  },
+  {
+   "no": 266,
+   "officialId": "L4-0266",
+   "hanzi": "高尚",
+   "pinyin": "gāoshàng",
+   "pinyinPdf": "gāoshàng",
+   "pos": "Adj",
+   "ocr": "高尚"
+  },
+  {
+   "no": 267,
+   "officialId": "L4-0267",
+   "hanzi": "高铁",
+   "pinyin": "gāotiě",
+   "pinyinPdf": "gāotiě",
+   "pos": "N",
+   "ocr": "高铁"
+  },
+  {
+   "no": 268,
+   "officialId": "L4-0268",
+   "hanzi": "格外",
+   "pinyin": "géwài",
+   "pinyinPdf": "géwài",
+   "pos": "Adv",
+   "ocr": "格外"
+  },
+  {
+   "no": 269,
+   "officialId": "L4-0269",
+   "hanzi": "隔",
+   "pinyin": "gé",
+   "pinyinPdf": "gé",
+   "pos": "V",
+   "ocr": "隔"
+  },
+  {
+   "no": 270,
+   "officialId": "L4-0270",
+   "hanzi": "隔开",
+   "pinyin": "gékāi",
+   "pinyinPdf": "gékāi",
+   "pos": "V",
+   "ocr": "隔开"
+  },
+  {
+   "no": 271,
+   "officialId": "L4-0271",
+   "hanzi": "个别",
+   "pinyin": "gèbié",
+   "pinyinPdf": "gèbié",
+   "pos": "Adj",
+   "ocr": "个别"
+  },
+  {
+   "no": 272,
+   "officialId": "L4-0272",
+   "hanzi": "个体",
+   "pinyin": "gètǐ",
+   "pinyinPdf": "gètǐ",
+   "pos": "N",
+   "ocr": "个体"
+  },
+  {
+   "no": 273,
+   "officialId": "L4-0273",
+   "hanzi": "各个",
+   "pinyin": "gègè",
+   "pinyinPdf": "gègè",
+   "pos": "Pron/Adv",
+   "ocr": "各个"
+  },
+  {
+   "no": 274,
+   "officialId": "L4-0274",
+   "hanzi": "根",
+   "pinyin": "gēn",
+   "pinyinPdf": "gēn",
+   "pos": "M/N",
+   "ocr": "根"
+  },
+  {
+   "no": 275,
+   "officialId": "L4-0275",
+   "hanzi": "根据",
+   "pinyin": "gēnjù",
+   "pinyinPdf": "gēnjù",
+   "pos": "V/Prep/N",
+   "ocr": "根据"
+  },
+  {
+   "no": 276,
+   "officialId": "L4-0276",
+   "hanzi": "工程",
+   "pinyin": "gōngchéng",
+   "pinyinPdf": "gōngchéng",
+   "pos": "N",
+   "ocr": "工程"
+  },
+  {
+   "no": 277,
+   "officialId": "L4-0277",
+   "hanzi": "公元",
+   "pinyin": "gōngyuán",
+   "pinyinPdf": "gōngyuán",
+   "pos": "N",
+   "ocr": "公元"
+  },
+  {
+   "no": 278,
+   "officialId": "L4-0278",
+   "hanzi": "供应",
+   "pinyin": "gōngyìng",
+   "pinyinPdf": "gōngyìng",
+   "pos": "V",
+   "ocr": "供应"
+  },
+  {
+   "no": 279,
+   "officialId": "L4-0279",
+   "hanzi": "共",
+   "pinyin": "gòng",
+   "pinyinPdf": "gòng",
+   "pos": "Adv",
+   "ocr": "共"
+  },
+  {
+   "no": 280,
+   "officialId": "L4-0280",
+   "hanzi": "构成",
+   "pinyin": "gòuchéng",
+   "pinyinPdf": "gòuchéng",
+   "pos": "V",
+   "ocr": "构成"
+  },
+  {
+   "no": 281,
+   "officialId": "L4-0281",
+   "hanzi": "构造",
+   "pinyin": "gòuzào",
+   "pinyinPdf": "gòuzào",
+   "pos": "N",
+   "ocr": "构造"
+  },
+  {
+   "no": 282,
+   "officialId": "L4-0282",
+   "hanzi": "购买",
+   "pinyin": "gòumǎi",
+   "pinyinPdf": "gòumǎi",
+   "pos": "V",
+   "ocr": "购买"
+  },
+  {
+   "no": 283,
+   "officialId": "L4-0283",
+   "hanzi": "购物",
+   "pinyin": "gòuwù",
+   "pinyinPdf": "gòuwù",
+   "pos": "V",
+   "ocr": "购物"
+  },
+  {
+   "no": 284,
+   "officialId": "L4-0284",
+   "hanzi": "骨头",
+   "pinyin": "gǔtou",
+   "pinyinPdf": "gǔtou",
+   "pos": "N",
+   "ocr": "骨头"
+  },
+  {
+   "no": 285,
+   "officialId": "L4-0285",
+   "hanzi": "固定",
+   "pinyin": "gùdìng",
+   "pinyinPdf": "gùdìng",
+   "pos": "Adj/V",
+   "ocr": "固定"
+  },
+  {
+   "no": 286,
+   "officialId": "L4-0286",
+   "hanzi": "瓜",
+   "pinyin": "guā",
+   "pinyinPdf": "guā",
+   "pos": "N",
+   "ocr": "瓜"
+  },
+  {
+   "no": 287,
+   "officialId": "L4-0287",
+   "hanzi": "怪",
+   "pinyin": "guài",
+   "pinyinPdf": "guài",
+   "pos": "Adj/Adv",
+   "ocr": "怪（形、副）"
+  },
+  {
+   "no": 288,
+   "officialId": "L4-0288",
+   "hanzi": "关",
+   "pinyin": "guān",
+   "pinyinPdf": "guān",
+   "pos": "N",
+   "ocr": "关（名）"
+  },
+  {
+   "no": 289,
+   "officialId": "L4-0289",
+   "hanzi": "关闭",
+   "pinyin": "guānbì",
+   "pinyinPdf": "guānbì",
+   "pos": "V",
+   "ocr": "关闭"
+  },
+  {
+   "no": 290,
+   "officialId": "L4-0290",
+   "hanzi": "关于",
+   "pinyin": "guānyú",
+   "pinyinPdf": "guānyú",
+   "pos": "Prep",
+   "ocr": "关于"
+  },
+  {
+   "no": 291,
+   "officialId": "L4-0291",
+   "hanzi": "官",
+   "pinyin": "guān",
+   "pinyinPdf": "guān",
+   "pos": "N",
+   "ocr": "官"
+  },
+  {
+   "no": 292,
+   "officialId": "L4-0292",
+   "hanzi": "官方",
+   "pinyin": "guānfāng",
+   "pinyinPdf": "guānfāng",
+   "pos": "N",
+   "ocr": "官方"
+  },
+  {
+   "no": 293,
+   "officialId": "L4-0293",
+   "hanzi": "光临",
+   "pinyin": "guānglín",
+   "pinyinPdf": "guānglín",
+   "pos": "V",
+   "ocr": "光临"
+  },
+  {
+   "no": 294,
+   "officialId": "L4-0294",
+   "hanzi": "光盘",
+   "pinyin": "guāngpán",
+   "pinyinPdf": "guāngpán",
+   "pos": "N",
+   "ocr": "光盘"
+  },
+  {
+   "no": 295,
+   "officialId": "L4-0295",
+   "hanzi": "逛",
+   "pinyin": "guàng",
+   "pinyinPdf": "guàng",
+   "pos": "V",
+   "ocr": "逛"
+  },
+  {
+   "no": 296,
+   "officialId": "L4-0296",
+   "hanzi": "归",
+   "pinyin": "guī",
+   "pinyinPdf": "guī",
+   "pos": "V",
+   "ocr": "归"
+  },
+  {
+   "no": 297,
+   "officialId": "L4-0297",
+   "hanzi": "规律",
+   "pinyin": "guīlǜ",
+   "pinyinPdf": "guīlǜ",
+   "pos": "N",
+   "ocr": "规律"
+  },
+  {
+   "no": 298,
+   "officialId": "L4-0298",
+   "hanzi": "规模",
+   "pinyin": "guīmó",
+   "pinyinPdf": "guīmó",
+   "pos": "N",
+   "ocr": "规模"
+  },
+  {
+   "no": 299,
+   "officialId": "L4-0299",
+   "hanzi": "规则",
+   "pinyin": "guīzé",
+   "pinyinPdf": "guīzé",
+   "pos": "N/Adj",
+   "ocr": "规则"
+  },
+  {
+   "no": 300,
+   "officialId": "L4-0300",
+   "hanzi": "果实",
+   "pinyin": "guǒshí",
+   "pinyinPdf": "guǒshí",
+   "pos": "N",
+   "ocr": "果实"
+  },
+  {
+   "no": 301,
+   "officialId": "L4-0301",
+   "hanzi": "过分",
+   "pinyin": "guòfèn",
+   "pinyinPdf": "guòfèn",
+   "pos": "",
+   "ocr": "过分"
+  },
+  {
+   "no": 302,
+   "officialId": "L4-0302",
+   "hanzi": "海水",
+   "pinyin": "hǎishuǐ",
+   "pinyinPdf": "hǎishuǐ",
+   "pos": "N",
+   "ocr": "海水"
+  },
+  {
+   "no": 303,
+   "officialId": "L4-0303",
+   "hanzi": "海鲜",
+   "pinyin": "hǎixiān",
+   "pinyinPdf": "hǎixiān",
+   "pos": "N",
+   "ocr": "海鲜"
+  },
+  {
+   "no": 304,
+   "officialId": "L4-0304",
+   "hanzi": "含",
+   "pinyin": "hán",
+   "pinyinPdf": "hán",
+   "pos": "V",
+   "ocr": "含"
+  },
+  {
+   "no": 305,
+   "officialId": "L4-0305",
+   "hanzi": "含量",
+   "pinyin": "hánliàng",
+   "pinyinPdf": "hánliàng",
+   "pos": "N",
+   "ocr": "含量"
+  },
+  {
+   "no": 306,
+   "officialId": "L4-0306",
+   "hanzi": "含义",
+   "pinyin": "hányì",
+   "pinyinPdf": "hányì",
+   "pos": "N",
+   "ocr": "含义"
+  },
+  {
+   "no": 307,
+   "officialId": "L4-0307",
+   "hanzi": "含有",
+   "pinyin": "hányǒu",
+   "pinyinPdf": "hányǒu",
+   "pos": "V",
+   "ocr": "含有"
+  },
+  {
+   "no": 308,
+   "officialId": "L4-0308",
+   "hanzi": "寒假",
+   "pinyin": "hánjià",
+   "pinyinPdf": "hánjià",
+   "pos": "N",
+   "ocr": "寒假"
+  },
+  {
+   "no": 309,
+   "officialId": "L4-0309",
+   "hanzi": "寒冷",
+   "pinyin": "hánlěng",
+   "pinyinPdf": "hánlěng",
+   "pos": "Adj",
+   "ocr": "寒冷"
+  },
+  {
+   "no": 310,
+   "officialId": "L4-0310",
+   "hanzi": "行业",
+   "pinyin": "hángyè",
+   "pinyinPdf": "hángyè",
+   "pos": "N",
+   "ocr": "行业"
+  },
+  {
+   "no": 311,
+   "officialId": "L4-0311",
+   "hanzi": "航班",
+   "pinyin": "hángbān",
+   "pinyinPdf": "hángbān",
+   "pos": "N",
+   "ocr": "航班"
+  },
+  {
+   "no": 312,
+   "officialId": "L4-0312",
+   "hanzi": "航空",
+   "pinyin": "hángkōng",
+   "pinyinPdf": "hángkōng",
+   "pos": "V",
+   "ocr": "航空"
+  },
+  {
+   "no": 313,
+   "officialId": "L4-0313",
+   "hanzi": "毫米",
+   "pinyin": "háomǐ",
+   "pinyinPdf": "háomǐ",
+   "pos": "M",
+   "ocr": "毫米"
+  },
+  {
+   "no": 314,
+   "officialId": "L4-0314",
+   "hanzi": "毫升",
+   "pinyin": "háoshēng",
+   "pinyinPdf": "háoshēng",
+   "pos": "M",
+   "ocr": "毫升"
+  },
+  {
+   "no": 315,
+   "officialId": "L4-0315",
+   "hanzi": "好友",
+   "pinyin": "hǎoyǒu",
+   "pinyinPdf": "hǎoyǒu",
+   "pos": "N",
+   "ocr": "好友"
+  },
+  {
+   "no": 316,
+   "officialId": "L4-0316",
+   "hanzi": "号码",
+   "pinyin": "hàomǎ",
+   "pinyinPdf": "hàomǎ",
+   "pos": "N",
+   "ocr": "号码"
+  },
+  {
+   "no": 317,
+   "officialId": "L4-0317",
+   "hanzi": "好",
+   "pinyin": "hào",
+   "pinyinPdf": "hào",
+   "pos": "V",
+   "ocr": "好"
+  },
+  {
+   "no": 318,
+   "officialId": "L4-0318",
+   "hanzi": "合同",
+   "pinyin": "hétóng",
+   "pinyinPdf": "hétóng",
+   "pos": "N",
+   "ocr": "合同"
+  },
+  {
+   "no": 319,
+   "officialId": "L4-0319",
+   "hanzi": "黑暗",
+   "pinyin": "hēi'àn",
+   "pinyinPdf": "hēi'àn",
+   "pos": "Adj",
+   "ocr": "黑暗"
+  },
+  {
+   "no": 320,
+   "officialId": "L4-0320",
+   "hanzi": "红包",
+   "pinyin": "hóngbāo",
+   "pinyinPdf": "hóngbāo",
+   "pos": "N",
+   "ocr": "红包"
+  },
+  {
+   "no": 321,
+   "officialId": "L4-0321",
+   "hanzi": "后头",
+   "pinyin": "hòutou",
+   "pinyinPdf": "hòutou",
+   "pos": "N",
+   "ocr": "后头"
+  },
+  {
+   "no": 322,
+   "officialId": "L4-0322",
+   "hanzi": "厚",
+   "pinyin": "hòu",
+   "pinyinPdf": "hòu",
+   "pos": "Adj",
+   "ocr": "厚"
+  },
+  {
+   "no": 323,
+   "officialId": "L4-0323",
+   "hanzi": "呼吸",
+   "pinyin": "hūxī",
+   "pinyinPdf": "hūxī",
+   "pos": "V",
+   "ocr": "呼吸"
+  },
+  {
+   "no": 324,
+   "officialId": "L4-0324",
+   "hanzi": "忽视",
+   "pinyin": "hūshì",
+   "pinyinPdf": "hūshì",
+   "pos": "V",
+   "ocr": "忽视"
+  },
+  {
+   "no": 325,
+   "officialId": "L4-0325",
+   "hanzi": "户",
+   "pinyin": "hù",
+   "pinyinPdf": "hù",
+   "pos": "M",
+   "ocr": "户"
+  },
+  {
+   "no": 326,
+   "officialId": "L4-0326",
+   "hanzi": "护士",
+   "pinyin": "hùshi",
+   "pinyinPdf": "hùshi",
+   "pos": "N",
+   "ocr": "护士"
+  },
+  {
+   "no": 327,
+   "officialId": "L4-0327",
+   "hanzi": "花",
+   "pinyin": "huā",
+   "pinyinPdf": "huā",
+   "pos": "Adj",
+   "ocr": "花（形）"
+  },
+  {
+   "no": 328,
+   "officialId": "L4-0328",
+   "hanzi": "划",
+   "pinyin": "huá",
+   "pinyinPdf": "huá",
+   "pos": "V",
+   "ocr": "划"
+  },
+  {
+   "no": 329,
+   "officialId": "L4-0329",
+   "hanzi": "划",
+   "pinyin": "huà",
+   "pinyinPdf": "huà",
+   "pos": "V",
+   "ocr": "划"
+  },
+  {
+   "no": 330,
+   "officialId": "L4-0330",
+   "hanzi": "怀念",
+   "pinyin": "huáiniàn",
+   "pinyinPdf": "huáiniàn",
+   "pos": "V",
+   "ocr": "怀念"
+  },
+  {
+   "no": 331,
+   "officialId": "L4-0331",
+   "hanzi": "怀疑",
+   "pinyin": "huáiyí",
+   "pinyinPdf": "huáiyí",
+   "pos": "V",
+   "ocr": "怀疑"
+  },
+  {
+   "no": 332,
+   "officialId": "L4-0332",
+   "hanzi": "缓解",
+   "pinyin": "huǎnjiě",
+   "pinyinPdf": "huǎnjiě",
+   "pos": "V",
+   "ocr": "缓解"
+  },
+  {
+   "no": 333,
+   "officialId": "L4-0333",
+   "hanzi": "黄瓜",
+   "pinyin": "huángguā",
+   "pinyinPdf": "huángguā",
+   "pos": "N",
+   "ocr": "黄瓜"
+  },
+  {
+   "no": 334,
+   "officialId": "L4-0334",
+   "hanzi": "黄金",
+   "pinyin": "huángjīn",
+   "pinyinPdf": "huángjīn",
+   "pos": "N",
+   "ocr": "黄金"
+  },
+  {
+   "no": 335,
+   "officialId": "L4-0335",
+   "hanzi": "回复",
+   "pinyin": "huífù",
+   "pinyinPdf": "huífù",
+   "pos": "V",
+   "ocr": "回复"
+  },
+  {
+   "no": 336,
+   "officialId": "L4-0336",
+   "hanzi": "汇",
+   "pinyin": "huì",
+   "pinyinPdf": "huì",
+   "pos": "V",
+   "ocr": "汇"
+  },
+  {
+   "no": 337,
+   "officialId": "L4-0337",
+   "hanzi": "汇报",
+   "pinyin": "huìbào",
+   "pinyinPdf": "huìbào",
+   "pos": "V/N",
+   "ocr": "汇报"
+  },
+  {
+   "no": 338,
+   "officialId": "L4-0338",
+   "hanzi": "汇率",
+   "pinyin": "huìlǜ",
+   "pinyinPdf": "huìlǜ",
+   "pos": "N",
+   "ocr": "汇率"
+  },
+  {
+   "no": 339,
+   "officialId": "L4-0339",
+   "hanzi": "婚礼",
+   "pinyin": "hūnlǐ",
+   "pinyinPdf": "hūnlǐ",
+   "pos": "N",
+   "ocr": "婚礼"
+  },
+  {
+   "no": 340,
+   "officialId": "L4-0340",
+   "hanzi": "火",
+   "pinyin": "huǒ",
+   "pinyinPdf": "huǒ",
+   "pos": "Adj",
+   "ocr": "火（形）"
+  },
+  {
+   "no": 341,
+   "officialId": "L4-0341",
+   "hanzi": "伙",
+   "pinyin": "huǒ",
+   "pinyinPdf": "huǒ",
+   "pos": "M",
+   "ocr": "伙"
+  },
+  {
+   "no": 342,
+   "officialId": "L4-0342",
+   "hanzi": "伙伴",
+   "pinyin": "huǒbàn",
+   "pinyinPdf": "huǒbàn",
+   "pos": "N",
+   "ocr": "伙伴"
+  },
+  {
+   "no": 343,
+   "officialId": "L4-0343",
+   "hanzi": "或许",
+   "pinyin": "huòxǔ",
+   "pinyinPdf": "huòxǔ",
+   "pos": "Adv",
+   "ocr": "或许"
+  },
+  {
+   "no": 344,
+   "officialId": "L4-0344",
+   "hanzi": "货",
+   "pinyin": "huò",
+   "pinyinPdf": "huò",
+   "pos": "N",
+   "ocr": "货"
+  },
+  {
+   "no": 345,
+   "officialId": "L4-0345",
+   "hanzi": "获",
+   "pinyin": "huò",
+   "pinyinPdf": "huò",
+   "pos": "V",
+   "ocr": "获"
+  },
+  {
+   "no": 346,
+   "officialId": "L4-0346",
+   "hanzi": "获得",
+   "pinyin": "huòdé",
+   "pinyinPdf": "huòdé",
+   "pos": "V",
+   "ocr": "获得"
+  },
+  {
+   "no": 347,
+   "officialId": "L4-0347",
+   "hanzi": "获奖",
+   "pinyin": "huòjiǎng",
+   "pinyinPdf": "huòjiǎng",
+   "pos": "V",
+   "ocr": "获奖"
+  },
+  {
+   "no": 348,
+   "officialId": "L4-0348",
+   "hanzi": "获取",
+   "pinyin": "huòqǔ",
+   "pinyinPdf": "huòqǔ",
+   "pos": "V",
+   "ocr": "获取"
+  },
+  {
+   "no": 349,
+   "officialId": "L4-0349",
+   "hanzi": "几乎",
+   "pinyin": "jīhū",
+   "pinyinPdf": "jīhū",
+   "pos": "Adv",
+   "ocr": "几乎"
+  },
+  {
+   "no": 350,
+   "officialId": "L4-0350",
+   "hanzi": "机构",
+   "pinyin": "jīgòu",
+   "pinyinPdf": "jīgòu",
+   "pos": "N",
+   "ocr": "机构"
+  },
+  {
+   "no": 351,
+   "officialId": "L4-0351",
+   "hanzi": "机遇",
+   "pinyin": "jīyù",
+   "pinyinPdf": "jīyù",
+   "pos": "N",
+   "ocr": "机遇"
+  },
+  {
+   "no": 352,
+   "officialId": "L4-0352",
+   "hanzi": "积累",
+   "pinyin": "jīlěi",
+   "pinyinPdf": "jīlěi",
+   "pos": "V",
+   "ocr": "积累"
+  },
+  {
+   "no": 353,
+   "officialId": "L4-0353",
+   "hanzi": "激动",
+   "pinyin": "jīdòng",
+   "pinyinPdf": "jīdòng",
+   "pos": "Adj/V",
+   "ocr": "激动"
+  },
+  {
+   "no": 354,
+   "officialId": "L4-0354",
+   "hanzi": "激烈",
+   "pinyin": "jīliè",
+   "pinyinPdf": "jīliè",
+   "pos": "Adj",
+   "ocr": "激烈"
+  },
+  {
+   "no": 355,
+   "officialId": "L4-0355",
+   "hanzi": "及格",
+   "pinyin": "jígé",
+   "pinyinPdf": "jígé",
+   "pos": "",
+   "ocr": "及格"
+  },
+  {
+   "no": 356,
+   "officialId": "L4-0356",
+   "hanzi": "极",
+   "pinyin": "jí",
+   "pinyinPdf": "jí",
+   "pos": "Adv",
+   "ocr": "极"
+  },
+  {
+   "no": 357,
+   "officialId": "L4-0357",
+   "hanzi": "极其",
+   "pinyin": "jíqí",
+   "pinyinPdf": "jíqí",
+   "pos": "Adv",
+   "ocr": "极其"
+  },
+  {
+   "no": 358,
+   "officialId": "L4-0358",
+   "hanzi": "即将",
+   "pinyin": "jíjiāng",
+   "pinyinPdf": "jíjiāng",
+   "pos": "Adv",
+   "ocr": "即将"
+  },
+  {
+   "no": 359,
+   "officialId": "L4-0359",
+   "hanzi": "急忙",
+   "pinyin": "jímáng",
+   "pinyinPdf": "jímáng",
+   "pos": "Adv",
+   "ocr": "急忙"
+  },
+  {
+   "no": 360,
+   "officialId": "L4-0360",
+   "hanzi": "集合",
+   "pinyin": "jíhé",
+   "pinyinPdf": "jíhé",
+   "pos": "V",
+   "ocr": "集合"
+  },
+  {
+   "no": 361,
+   "officialId": "L4-0361",
+   "hanzi": "记载",
+   "pinyin": "jìzǎi",
+   "pinyinPdf": "jìzǎi",
+   "pos": "V",
+   "ocr": "记载"
+  },
+  {
+   "no": 362,
+   "officialId": "L4-0362",
+   "hanzi": "纪律",
+   "pinyin": "jìlǜ",
+   "pinyinPdf": "jìlǜ",
+   "pos": "N",
+   "ocr": "纪律"
+  },
+  {
+   "no": 363,
+   "officialId": "L4-0363",
+   "hanzi": "技巧",
+   "pinyin": "jìqiǎo",
+   "pinyinPdf": "jìqiǎo",
+   "pos": "N",
+   "ocr": "技巧"
+  },
+  {
+   "no": 364,
+   "officialId": "L4-0364",
+   "hanzi": "系",
+   "pinyin": "jì",
+   "pinyinPdf": "jì",
+   "pos": "V",
+   "ocr": "系"
+  },
+  {
+   "no": 365,
+   "officialId": "L4-0365",
+   "hanzi": "季",
+   "pinyin": "jì",
+   "pinyinPdf": "jì",
+   "pos": "N",
+   "ocr": "季"
+  },
+  {
+   "no": 366,
+   "officialId": "L4-0366",
+   "hanzi": "季度",
+   "pinyin": "jìdù",
+   "pinyinPdf": "jìdù",
+   "pos": "N",
+   "ocr": "季度"
+  },
+  {
+   "no": 367,
+   "officialId": "L4-0367",
+   "hanzi": "季节",
+   "pinyin": "jìjié",
+   "pinyinPdf": "jìjié",
+   "pos": "N",
+   "ocr": "季节"
+  },
+  {
+   "no": 368,
+   "officialId": "L4-0368",
+   "hanzi": "既",
+   "pinyin": "jì",
+   "pinyinPdf": "jì",
+   "pos": "Adv/Conj",
+   "ocr": "既"
+  },
+  {
+   "no": 369,
+   "officialId": "L4-0369",
+   "hanzi": "既然",
+   "pinyin": "jìrán",
+   "pinyinPdf": "jìrán",
+   "pos": "Conj",
+   "ocr": "既然"
+  },
+  {
+   "no": 370,
+   "officialId": "L4-0370",
+   "hanzi": "寄",
+   "pinyin": "jì",
+   "pinyinPdf": "jì",
+   "pos": "V",
+   "ocr": "寄"
+  },
+  {
+   "no": 371,
+   "officialId": "L4-0371",
+   "hanzi": "加班",
+   "pinyin": "jiābān",
+   "pinyinPdf": "jiābān",
+   "pos": "",
+   "ocr": "加班"
+  },
+  {
+   "no": 372,
+   "officialId": "L4-0372",
+   "hanzi": "加入",
+   "pinyin": "jiārù",
+   "pinyinPdf": "jiārù",
+   "pos": "V",
+   "ocr": "加入"
+  },
+  {
+   "no": 373,
+   "officialId": "L4-0373",
+   "hanzi": "加油站",
+   "pinyin": "jiāyóuzhàn",
+   "pinyinPdf": "jiāyóuzhàn",
+   "pos": "N",
+   "ocr": "加油站"
+  },
+  {
+   "no": 374,
+   "officialId": "L4-0374",
+   "hanzi": "家务",
+   "pinyin": "jiāwù",
+   "pinyinPdf": "jiāwù",
+   "pos": "N",
+   "ocr": "家务"
+  },
+  {
+   "no": 375,
+   "officialId": "L4-0375",
+   "hanzi": "假如",
+   "pinyin": "jiǎrú",
+   "pinyinPdf": "jiǎrú",
+   "pos": "Conj",
+   "ocr": "假如"
+  },
+  {
+   "no": 376,
+   "officialId": "L4-0376",
+   "hanzi": "坚固",
+   "pinyin": "jiāngù",
+   "pinyinPdf": "jiāngù",
+   "pos": "Adj",
+   "ocr": "坚固"
+  },
+  {
+   "no": 377,
+   "officialId": "L4-0377",
+   "hanzi": "检测",
+   "pinyin": "jiǎncè",
+   "pinyinPdf": "jiǎncè",
+   "pos": "V",
+   "ocr": "检测"
+  },
+  {
+   "no": 378,
+   "officialId": "L4-0378",
+   "hanzi": "减",
+   "pinyin": "jiǎn",
+   "pinyinPdf": "jiǎn",
+   "pos": "V",
+   "ocr": "减"
+  },
+  {
+   "no": 379,
+   "officialId": "L4-0379",
+   "hanzi": "减肥",
+   "pinyin": "jiǎnféi",
+   "pinyinPdf": "jiǎnféi",
+   "pos": "",
+   "ocr": "减肥"
+  },
+  {
+   "no": 380,
+   "officialId": "L4-0380",
+   "hanzi": "减少",
+   "pinyin": "jiǎnshǎo",
+   "pinyinPdf": "jiǎnshǎo",
+   "pos": "V",
+   "ocr": "减少"
+  },
+  {
+   "no": 381,
+   "officialId": "L4-0381",
+   "hanzi": "简历",
+   "pinyin": "jiǎnlì",
+   "pinyinPdf": "jiǎnlì",
+   "pos": "N",
+   "ocr": "简历"
+  },
+  {
+   "no": 382,
+   "officialId": "L4-0382",
+   "hanzi": "健身",
+   "pinyin": "jiànshēn",
+   "pinyinPdf": "jiànshēn",
+   "pos": "V",
+   "ocr": "健身"
+  },
+  {
+   "no": 383,
+   "officialId": "L4-0383",
+   "hanzi": "渐渐",
+   "pinyin": "jiànjiàn",
+   "pinyinPdf": "jiànjiàn",
+   "pos": "Adv",
+   "ocr": "渐渐"
+  },
+  {
+   "no": 384,
+   "officialId": "L4-0384",
+   "hanzi": "江",
+   "pinyin": "jiāng",
+   "pinyinPdf": "jiāng",
+   "pos": "N",
+   "ocr": "江"
+  },
+  {
+   "no": 385,
+   "officialId": "L4-0385",
+   "hanzi": "讲究",
+   "pinyin": "jiǎngjiu",
+   "pinyinPdf": "jiǎngjiu",
+   "pos": "V/Adj",
+   "ocr": "讲究"
+  },
+  {
+   "no": 386,
+   "officialId": "L4-0386",
+   "hanzi": "讲座",
+   "pinyin": "jiǎngzuò",
+   "pinyinPdf": "jiǎngzuò",
+   "pos": "N",
+   "ocr": "讲座"
+  },
+  {
+   "no": 387,
+   "officialId": "L4-0387",
+   "hanzi": "奖",
+   "pinyin": "jiǎng",
+   "pinyinPdf": "jiǎng",
+   "pos": "V/N",
+   "ocr": "奖"
+  },
+  {
+   "no": 388,
+   "officialId": "L4-0388",
+   "hanzi": "奖金",
+   "pinyin": "jiǎngjīn",
+   "pinyinPdf": "jiǎngjīn",
+   "pos": "N",
+   "ocr": "奖金"
+  },
+  {
+   "no": 389,
+   "officialId": "L4-0389",
+   "hanzi": "奖学金",
+   "pinyin": "jiǎngxuéjīn",
+   "pinyinPdf": "jiǎngxuéjīn",
+   "pos": "N",
+   "ocr": "奖学金"
+  },
+  {
+   "no": 390,
+   "officialId": "L4-0390",
+   "hanzi": "降",
+   "pinyin": "jiàng",
+   "pinyinPdf": "jiàng",
+   "pos": "V",
+   "ocr": "降"
+  },
+  {
+   "no": 391,
+   "officialId": "L4-0391",
+   "hanzi": "降低",
+   "pinyin": "jiàngdī",
+   "pinyinPdf": "jiàngdī",
+   "pos": "V",
+   "ocr": "降低"
+  },
+  {
+   "no": 392,
+   "officialId": "L4-0392",
+   "hanzi": "降价",
+   "pinyin": "jiàngjià",
+   "pinyinPdf": "jiàngjià",
+   "pos": "",
+   "ocr": "降价"
+  },
+  {
+   "no": 393,
+   "officialId": "L4-0393",
+   "hanzi": "降落",
+   "pinyin": "jiàngluò",
+   "pinyinPdf": "jiàngluò",
+   "pos": "V",
+   "ocr": "降落"
+  },
+  {
+   "no": 394,
+   "officialId": "L4-0394",
+   "hanzi": "降温",
+   "pinyin": "jiàngwēn",
+   "pinyinPdf": "jiàngwēn",
+   "pos": "",
+   "ocr": "降温"
+  },
+  {
+   "no": 395,
+   "officialId": "L4-0395",
+   "hanzi": "交换",
+   "pinyin": "jiāohuàn",
+   "pinyinPdf": "jiāohuàn",
+   "pos": "V",
+   "ocr": "交换"
+  },
+  {
+   "no": 396,
+   "officialId": "L4-0396",
+   "hanzi": "交际",
+   "pinyin": "jiāojì",
+   "pinyinPdf": "jiāojì",
+   "pos": "V",
+   "ocr": "交际"
+  },
+  {
+   "no": 397,
+   "officialId": "L4-0397",
+   "hanzi": "教授",
+   "pinyin": "jiàoshòu",
+   "pinyinPdf": "jiàoshòu",
+   "pos": "N",
+   "ocr": "教授"
+  },
+  {
+   "no": 398,
+   "officialId": "L4-0398",
+   "hanzi": "教训",
+   "pinyin": "jiàoxùn",
+   "pinyinPdf": "jiàoxùn",
+   "pos": "V/N",
+   "ocr": "教训"
+  },
+  {
+   "no": 399,
+   "officialId": "L4-0399",
+   "hanzi": "阶段",
+   "pinyin": "jiēduàn",
+   "pinyinPdf": "jiēduàn",
+   "pos": "N",
+   "ocr": "阶段"
+  },
+  {
+   "no": 400,
+   "officialId": "L4-0400",
+   "hanzi": "街道",
+   "pinyin": "jiēdào",
+   "pinyinPdf": "jiēdào",
+   "pos": "N",
+   "ocr": "街道"
+  },
+  {
+   "no": 401,
+   "officialId": "L4-0401",
+   "hanzi": "节省",
+   "pinyin": "jiéshěng",
+   "pinyinPdf": "jiéshěng",
+   "pos": "V",
+   "ocr": "节省"
+  },
+  {
+   "no": 402,
+   "officialId": "L4-0402",
+   "hanzi": "结",
+   "pinyin": "jié",
+   "pinyinPdf": "jié",
+   "pos": "V/N",
+   "ocr": "结"
+  },
+  {
+   "no": 403,
+   "officialId": "L4-0403",
+   "hanzi": "结构",
+   "pinyin": "jiégòu",
+   "pinyinPdf": "jiégòu",
+   "pos": "N",
+   "ocr": "结构"
+  },
+  {
+   "no": 404,
+   "officialId": "L4-0404",
+   "hanzi": "结论",
+   "pinyin": "jiélùn",
+   "pinyinPdf": "jiélùn",
+   "pos": "N",
+   "ocr": "结论"
+  },
+  {
+   "no": 405,
+   "officialId": "L4-0405",
+   "hanzi": "姐妹",
+   "pinyin": "jiěmèi",
+   "pinyinPdf": "jiěmèi",
+   "pos": "N",
+   "ocr": "姐妹"
+  },
+  {
+   "no": 406,
+   "officialId": "L4-0406",
+   "hanzi": "解释",
+   "pinyin": "jiěshì",
+   "pinyinPdf": "jiěshì",
+   "pos": "V",
+   "ocr": "解释"
+  },
+  {
+   "no": 407,
+   "officialId": "L4-0407",
+   "hanzi": "尽快",
+   "pinyin": "jǐnkuài",
+   "pinyinPdf": "jǐnkuài",
+   "pos": "Adv",
+   "ocr": "尽快"
+  },
+  {
+   "no": 408,
+   "officialId": "L4-0408",
+   "hanzi": "紧密",
+   "pinyin": "jǐnmì",
+   "pinyinPdf": "jǐnmì",
+   "pos": "Adj",
+   "ocr": "紧密"
+  },
+  {
+   "no": 409,
+   "officialId": "L4-0409",
+   "hanzi": "尽力",
+   "pinyin": "jìnlì",
+   "pinyinPdf": "jìnlì",
+   "pos": "",
+   "ocr": "尽力"
+  },
+  {
+   "no": 410,
+   "officialId": "L4-0410",
+   "hanzi": "进口",
+   "pinyin": "jìnkǒu",
+   "pinyinPdf": "jìnkǒu",
+   "pos": "V/N",
+   "ocr": "进口"
+  },
+  {
+   "no": 411,
+   "officialId": "L4-0411",
+   "hanzi": "近代",
+   "pinyin": "jìndài",
+   "pinyinPdf": "jìndài",
+   "pos": "N",
+   "ocr": "近代"
+  },
+  {
+   "no": 412,
+   "officialId": "L4-0412",
+   "hanzi": "禁止",
+   "pinyin": "jìnzhǐ",
+   "pinyinPdf": "jìnzhǐ",
+   "pos": "V",
+   "ocr": "禁止"
+  },
+  {
+   "no": 413,
+   "officialId": "L4-0413",
+   "hanzi": "经典",
+   "pinyin": "jīngdiǎn",
+   "pinyinPdf": "jīngdiǎn",
+   "pos": "N",
+   "ocr": "经典"
+  },
+  {
+   "no": 414,
+   "officialId": "L4-0414",
+   "hanzi": "精力",
+   "pinyin": "jīnglì",
+   "pinyinPdf": "jīnglì",
+   "pos": "N",
+   "ocr": "精力"
+  },
+  {
+   "no": 415,
+   "officialId": "L4-0415",
+   "hanzi": "竟然",
+   "pinyin": "jìngrán",
+   "pinyinPdf": "jìngrán",
+   "pos": "Adv",
+   "ocr": "竟然"
+  },
+  {
+   "no": 416,
+   "officialId": "L4-0416",
+   "hanzi": "镜头",
+   "pinyin": "jìngtóu",
+   "pinyinPdf": "jìngtóu",
+   "pos": "N",
+   "ocr": "镜头"
+  },
+  {
+   "no": 417,
+   "officialId": "L4-0417",
+   "hanzi": "镜子",
+   "pinyin": "jìngzi",
+   "pinyinPdf": "jìngzi",
+   "pos": "N",
+   "ocr": "镜子"
+  },
+  {
+   "no": 418,
+   "officialId": "L4-0418",
+   "hanzi": "究竟",
+   "pinyin": "jiūjìng",
+   "pinyinPdf": "jiūjìng",
+   "pos": "Adv",
+   "ocr": "究竟"
+  },
+  {
+   "no": 419,
+   "officialId": "L4-0419",
+   "hanzi": "酒吧",
+   "pinyin": "jiǔbā",
+   "pinyinPdf": "jiǔbā",
+   "pos": "N",
+   "ocr": "酒吧"
+  },
+  {
+   "no": 420,
+   "officialId": "L4-0420",
+   "hanzi": "居民",
+   "pinyin": "jūmín",
+   "pinyinPdf": "jūmín",
+   "pos": "N",
+   "ocr": "居民"
+  },
+  {
+   "no": 421,
+   "officialId": "L4-0421",
+   "hanzi": "居住",
+   "pinyin": "jūzhù",
+   "pinyinPdf": "jūzhù",
+   "pos": "V",
+   "ocr": "居住"
+  },
+  {
+   "no": 422,
+   "officialId": "L4-0422",
+   "hanzi": "局",
+   "pinyin": "jú",
+   "pinyinPdf": "jú",
+   "pos": "N",
+   "ocr": "局（名）"
+  },
+  {
+   "no": 423,
+   "officialId": "L4-0423",
+   "hanzi": "巨大",
+   "pinyin": "jùdà",
+   "pinyinPdf": "jùdà",
+   "pos": "Adj",
+   "ocr": "巨大"
+  },
+  {
+   "no": 424,
+   "officialId": "L4-0424",
+   "hanzi": "具备",
+   "pinyin": "jùbèi",
+   "pinyinPdf": "jùbèi",
+   "pos": "V",
+   "ocr": "具备"
+  },
+  {
+   "no": 425,
+   "officialId": "L4-0425",
+   "hanzi": "距离",
+   "pinyin": "jùlí",
+   "pinyinPdf": "jùlí",
+   "pos": "V/N",
+   "ocr": "距离"
+  },
+  {
+   "no": 426,
+   "officialId": "L4-0426",
+   "hanzi": "聚",
+   "pinyin": "jù",
+   "pinyinPdf": "jù",
+   "pos": "V",
+   "ocr": "聚"
+  },
+  {
+   "no": 427,
+   "officialId": "L4-0427",
+   "hanzi": "聚会",
+   "pinyin": "jùhuì",
+   "pinyinPdf": "jùhuì",
+   "pos": "V/N",
+   "ocr": "聚会"
+  },
+  {
+   "no": 428,
+   "officialId": "L4-0428",
+   "hanzi": "卷",
+   "pinyin": "juǎn",
+   "pinyinPdf": "juǎn",
+   "pos": "V",
+   "ocr": "卷"
+  },
+  {
+   "no": 429,
+   "officialId": "L4-0429",
+   "hanzi": "卷",
+   "pinyin": "juàn",
+   "pinyinPdf": "juàn",
+   "pos": "M",
+   "ocr": "卷"
+  },
+  {
+   "no": 430,
+   "officialId": "L4-0430",
+   "hanzi": "角色",
+   "pinyin": "juésè",
+   "pinyinPdf": "juésè",
+   "pos": "N",
+   "ocr": "角色"
+  },
+  {
+   "no": 431,
+   "officialId": "L4-0431",
+   "hanzi": "开花",
+   "pinyin": "kāihuā",
+   "pinyinPdf": "kāihuā",
+   "pos": "",
+   "ocr": "开花"
+  },
+  {
+   "no": 432,
+   "officialId": "L4-0432",
+   "hanzi": "开水",
+   "pinyin": "kāishuǐ",
+   "pinyinPdf": "kāishuǐ",
+   "pos": "N",
+   "ocr": "开水"
+  },
+  {
+   "no": 433,
+   "officialId": "L4-0433",
+   "hanzi": "看不起",
+   "pinyin": "kànbuqǐ",
+   "pinyinPdf": "kànbuqǐ",
+   "pos": "V",
+   "ocr": "看不起"
+  },
+  {
+   "no": 434,
+   "officialId": "L4-0434",
+   "hanzi": "看来",
+   "pinyin": "kànlái",
+   "pinyinPdf": "kànlái",
+   "pos": "",
+   "ocr": "看来"
+  },
+  {
+   "no": 435,
+   "officialId": "L4-0435",
+   "hanzi": "看望",
+   "pinyin": "kànwàng",
+   "pinyinPdf": "kànwàng",
+   "pos": "V",
+   "ocr": "看望"
+  },
+  {
+   "no": 436,
+   "officialId": "L4-0436",
+   "hanzi": "考察",
+   "pinyin": "kǎochá",
+   "pinyinPdf": "kǎochá",
+   "pos": "V/N",
+   "ocr": "考察"
+  },
+  {
+   "no": 437,
+   "officialId": "L4-0437",
+   "hanzi": "考虑",
+   "pinyin": "kǎolǜ",
+   "pinyinPdf": "kǎolǜ",
+   "pos": "V",
+   "ocr": "考虑"
+  },
+  {
+   "no": 438,
+   "officialId": "L4-0438",
+   "hanzi": "棵",
+   "pinyin": "kē",
+   "pinyinPdf": "kē",
+   "pos": "M",
+   "ocr": "棵"
+  },
+  {
+   "no": 439,
+   "officialId": "L4-0439",
+   "hanzi": "可见",
+   "pinyin": "kějiàn",
+   "pinyinPdf": "kějiàn",
+   "pos": "Conj",
+   "ocr": "可见"
+  },
+  {
+   "no": 440,
+   "officialId": "L4-0440",
+   "hanzi": "空间",
+   "pinyin": "kōngjiān",
+   "pinyinPdf": "kōngjiān",
+   "pos": "N",
+   "ocr": "空间"
+  },
+  {
+   "no": 441,
+   "officialId": "L4-0441",
+   "hanzi": "空",
+   "pinyin": "kòng",
+   "pinyinPdf": "kòng",
+   "pos": "V/Adj",
+   "ocr": "空"
+  },
+  {
+   "no": 442,
+   "officialId": "L4-0442",
+   "hanzi": "口袋",
+   "pinyin": "kǒudai",
+   "pinyinPdf": "kǒudai",
+   "pos": "N",
+   "ocr": "口袋"
+  },
+  {
+   "no": 443,
+   "officialId": "L4-0443",
+   "hanzi": "口语",
+   "pinyin": "kǒuyǔ",
+   "pinyinPdf": "kǒuyǔ",
+   "pos": "N",
+   "ocr": "口语"
+  },
+  {
+   "no": 444,
+   "officialId": "L4-0444",
+   "hanzi": "苦",
+   "pinyin": "kǔ",
+   "pinyinPdf": "kǔ",
+   "pos": "Adj",
+   "ocr": "苦"
+  },
+  {
+   "no": 445,
+   "officialId": "L4-0445",
+   "hanzi": "会计",
+   "pinyin": "kuàijì",
+   "pinyinPdf": "kuàijì",
+   "pos": "N",
+   "ocr": "会计"
+  },
+  {
+   "no": 446,
+   "officialId": "L4-0446",
+   "hanzi": "快递",
+   "pinyin": "kuàidì",
+   "pinyinPdf": "kuàidì",
+   "pos": "N",
+   "ocr": "快递"
+  },
+  {
+   "no": 447,
+   "officialId": "L4-0447",
+   "hanzi": "宽",
+   "pinyin": "kuān",
+   "pinyinPdf": "kuān",
+   "pos": "Adj",
+   "ocr": "宽"
+  },
+  {
+   "no": 448,
+   "officialId": "L4-0448",
+   "hanzi": "宽广",
+   "pinyin": "kuānguǎng",
+   "pinyinPdf": "kuānguǎng",
+   "pos": "Adj",
+   "ocr": "宽广"
+  },
+  {
+   "no": 449,
+   "officialId": "L4-0449",
+   "hanzi": "矿泉水",
+   "pinyin": "kuàngquánshuǐ",
+   "pinyinPdf": "kuàngquánshuǐ",
+   "pos": "N",
+   "ocr": "矿泉水"
+  },
+  {
+   "no": 450,
+   "officialId": "L4-0450",
+   "hanzi": "扩大",
+   "pinyin": "kuòdà",
+   "pinyinPdf": "kuòdà",
+   "pos": "V",
+   "ocr": "扩大"
+  },
+  {
+   "no": 451,
+   "officialId": "L4-0451",
+   "hanzi": "扩展",
+   "pinyin": "kuòzhǎn",
+   "pinyinPdf": "kuòzhǎn",
+   "pos": "V",
+   "ocr": "扩展"
+  },
+  {
+   "no": 452,
+   "officialId": "L4-0452",
+   "hanzi": "括号",
+   "pinyin": "kuòhào",
+   "pinyinPdf": "kuòhào",
+   "pos": "N",
+   "ocr": "括号"
+  },
+  {
+   "no": 453,
+   "officialId": "L4-0453",
+   "hanzi": "垃圾",
+   "pinyin": "lājī",
+   "pinyinPdf": "lājī",
+   "pos": "N",
+   "ocr": "垃圾"
+  },
+  {
+   "no": 454,
+   "officialId": "L4-0454",
+   "hanzi": "拉开",
+   "pinyin": "lākāi",
+   "pinyinPdf": "lākāi",
+   "pos": "",
+   "ocr": "拉开"
+  },
+  {
+   "no": 455,
+   "officialId": "L4-0455",
+   "hanzi": "辣",
+   "pinyin": "là",
+   "pinyinPdf": "là",
+   "pos": "Adj",
+   "ocr": "辣"
+  },
+  {
+   "no": 456,
+   "officialId": "L4-0456",
+   "hanzi": "来不及",
+   "pinyin": "láibují",
+   "pinyinPdf": "láibují",
+   "pos": "V",
+   "ocr": "来不及"
+  },
+  {
+   "no": 457,
+   "officialId": "L4-0457",
+   "hanzi": "来得及",
+   "pinyin": "láidejí",
+   "pinyinPdf": "láidejí",
+   "pos": "V",
+   "ocr": "来得及"
+  },
+  {
+   "no": 458,
+   "officialId": "L4-0458",
+   "hanzi": "来源",
+   "pinyin": "láiyuán",
+   "pinyinPdf": "láiyuán",
+   "pos": "N",
+   "ocr": "来源"
+  },
+  {
+   "no": 459,
+   "officialId": "L4-0459",
+   "hanzi": "老公",
+   "pinyin": "lǎogōng",
+   "pinyinPdf": "lǎogōng",
+   "pos": "N",
+   "ocr": "老公"
+  },
+  {
+   "no": 460,
+   "officialId": "L4-0460",
+   "hanzi": "老家",
+   "pinyin": "lǎojiā",
+   "pinyinPdf": "lǎojiā",
+   "pos": "N",
+   "ocr": "老家"
+  },
+  {
+   "no": 461,
+   "officialId": "L4-0461",
+   "hanzi": "老婆",
+   "pinyin": "lǎopo",
+   "pinyinPdf": "lǎopo",
+   "pos": "N",
+   "ocr": "老婆"
+  },
+  {
+   "no": 462,
+   "officialId": "L4-0462",
+   "hanzi": "老实",
+   "pinyin": "lǎoshi",
+   "pinyinPdf": "lǎoshi",
+   "pos": "Adj",
+   "ocr": "老实"
+  },
+  {
+   "no": 463,
+   "officialId": "L4-0463",
+   "hanzi": "乐趣",
+   "pinyin": "lèqù",
+   "pinyinPdf": "lèqù",
+   "pos": "N",
+   "ocr": "乐趣"
+  },
+  {
+   "no": 464,
+   "officialId": "L4-0464",
+   "hanzi": "泪",
+   "pinyin": "lèi",
+   "pinyinPdf": "lèi",
+   "pos": "N",
+   "ocr": "泪"
+  },
+  {
+   "no": 465,
+   "officialId": "L4-0465",
+   "hanzi": "泪水",
+   "pinyin": "lèishuǐ",
+   "pinyinPdf": "lèishuǐ",
+   "pos": "N",
+   "ocr": "泪水"
+  },
+  {
+   "no": 466,
+   "officialId": "L4-0466",
+   "hanzi": "类型",
+   "pinyin": "lèixíng",
+   "pinyinPdf": "lèixíng",
+   "pos": "N",
+   "ocr": "类型"
+  },
+  {
+   "no": 467,
+   "officialId": "L4-0467",
+   "hanzi": "冷静",
+   "pinyin": "lěngjìng",
+   "pinyinPdf": "lěngjìng",
+   "pos": "Adj",
+   "ocr": "冷静"
+  },
+  {
+   "no": 468,
+   "officialId": "L4-0468",
+   "hanzi": "厘米",
+   "pinyin": "límǐ",
+   "pinyinPdf": "límǐ",
+   "pos": "M",
+   "ocr": "厘米"
+  },
+  {
+   "no": 469,
+   "officialId": "L4-0469",
+   "hanzi": "离不开",
+   "pinyin": "lí bu kāi",
+   "pinyinPdf": "lí bu kāi",
+   "pos": "",
+   "ocr": "离不开"
+  },
+  {
+   "no": 470,
+   "officialId": "L4-0470",
+   "hanzi": "力气",
+   "pinyin": "lìqi",
+   "pinyinPdf": "lìqi",
+   "pos": "N",
+   "ocr": "力气"
+  },
+  {
+   "no": 471,
+   "officialId": "L4-0471",
+   "hanzi": "历史",
+   "pinyin": "lìshǐ",
+   "pinyinPdf": "lìshǐ",
+   "pos": "N",
+   "ocr": "历史"
+  },
+  {
+   "no": 472,
+   "officialId": "L4-0472",
+   "hanzi": "立即",
+   "pinyin": "lìjí",
+   "pinyinPdf": "lìjí",
+   "pos": "Adv",
+   "ocr": "立即"
+  },
+  {
+   "no": 473,
+   "officialId": "L4-0473",
+   "hanzi": "利息",
+   "pinyin": "lìxī",
+   "pinyinPdf": "lìxī",
+   "pos": "N",
+   "ocr": "利息"
+  },
+  {
+   "no": 474,
+   "officialId": "L4-0474",
+   "hanzi": "利益",
+   "pinyin": "lìyì",
+   "pinyinPdf": "lìyì",
+   "pos": "N",
+   "ocr": "利益"
+  },
+  {
+   "no": 475,
+   "officialId": "L4-0475",
+   "hanzi": "俩",
+   "pinyin": "liǎ",
+   "pinyinPdf": "liǎ",
+   "pos": "",
+   "ocr": "俩"
+  },
+  {
+   "no": 476,
+   "officialId": "L4-0476",
+   "hanzi": "良好",
+   "pinyin": "liánghǎo",
+   "pinyinPdf": "liánghǎo",
+   "pos": "Adj",
+   "ocr": "良好"
+  },
+  {
+   "no": 477,
+   "officialId": "L4-0477",
+   "hanzi": "量",
+   "pinyin": "liáng",
+   "pinyinPdf": "liáng",
+   "pos": "V",
+   "ocr": "量"
+  },
+  {
+   "no": 478,
+   "officialId": "L4-0478",
+   "hanzi": "粮食",
+   "pinyin": "liángshi",
+   "pinyinPdf": "liángshi",
+   "pos": "N",
+   "ocr": "粮食"
+  },
+  {
+   "no": 479,
+   "officialId": "L4-0479",
+   "hanzi": "两边",
+   "pinyin": "liǎngbiān",
+   "pinyinPdf": "liǎngbiān",
+   "pos": "N",
+   "ocr": "两边"
+  },
+  {
+   "no": 480,
+   "officialId": "L4-0480",
+   "hanzi": "疗养",
+   "pinyin": "liáoyǎng",
+   "pinyinPdf": "liáoyǎng",
+   "pos": "V",
+   "ocr": "疗养"
+  },
+  {
+   "no": 481,
+   "officialId": "L4-0481",
+   "hanzi": "了不起",
+   "pinyin": "liǎobuqǐ",
+   "pinyinPdf": "liǎobuqǐ",
+   "pos": "Adj",
+   "ocr": "了不起"
+  },
+  {
+   "no": 482,
+   "officialId": "L4-0482",
+   "hanzi": "了解",
+   "pinyin": "liǎojiě",
+   "pinyinPdf": "liǎojiě",
+   "pos": "V",
+   "ocr": "了解"
+  },
+  {
+   "no": 483,
+   "officialId": "L4-0483",
+   "hanzi": "列",
+   "pinyin": "liè",
+   "pinyinPdf": "liè",
+   "pos": "V/M",
+   "ocr": "列"
+  },
+  {
+   "no": 484,
+   "officialId": "L4-0484",
+   "hanzi": "列车",
+   "pinyin": "lièchē",
+   "pinyinPdf": "lièchē",
+   "pos": "N",
+   "ocr": "列车"
+  },
+  {
+   "no": 485,
+   "officialId": "L4-0485",
+   "hanzi": "列入",
+   "pinyin": "lièrù",
+   "pinyinPdf": "lièrù",
+   "pos": "V",
+   "ocr": "列入"
+  },
+  {
+   "no": 486,
+   "officialId": "L4-0486",
+   "hanzi": "列为",
+   "pinyin": "lièwéi",
+   "pinyinPdf": "lièwéi",
+   "pos": "",
+   "ocr": "列为"
+  },
+  {
+   "no": 487,
+   "officialId": "L4-0487",
+   "hanzi": "临时",
+   "pinyin": "línshí",
+   "pinyinPdf": "línshí",
+   "pos": "Adj/Adv",
+   "ocr": "临时"
+  },
+  {
+   "no": 488,
+   "officialId": "L4-0488",
+   "hanzi": "零食",
+   "pinyin": "língshí",
+   "pinyinPdf": "língshí",
+   "pos": "N",
+   "ocr": "零食"
+  },
+  {
+   "no": 489,
+   "officialId": "L4-0489",
+   "hanzi": "流传",
+   "pinyin": "liúchuán",
+   "pinyinPdf": "liúchuán",
+   "pos": "V",
+   "ocr": "流传"
+  },
+  {
+   "no": 490,
+   "officialId": "L4-0490",
+   "hanzi": "楼梯",
+   "pinyin": "lóutī",
+   "pinyinPdf": "lóutī",
+   "pos": "N",
+   "ocr": "楼梯"
+  },
+  {
+   "no": 491,
+   "officialId": "L4-0491",
+   "hanzi": "陆地",
+   "pinyin": "lùdì",
+   "pinyinPdf": "lùdì",
+   "pos": "N",
+   "ocr": "陆地"
+  },
+  {
+   "no": 492,
+   "officialId": "L4-0492",
+   "hanzi": "陆续",
+   "pinyin": "lùxù",
+   "pinyinPdf": "lùxù",
+   "pos": "Adv",
+   "ocr": "陆续"
+  },
+  {
+   "no": 493,
+   "officialId": "L4-0493",
+   "hanzi": "录取",
+   "pinyin": "lùqǔ",
+   "pinyinPdf": "lùqǔ",
+   "pos": "V",
+   "ocr": "录取"
+  },
+  {
+   "no": 494,
+   "officialId": "L4-0494",
+   "hanzi": "律师",
+   "pinyin": "lǜshī",
+   "pinyinPdf": "lǜshī",
+   "pos": "N",
+   "ocr": "律师"
+  },
+  {
+   "no": 495,
+   "officialId": "L4-0495",
+   "hanzi": "轮",
+   "pinyin": "lún",
+   "pinyinPdf": "lún",
+   "pos": "N/V/M",
+   "ocr": "轮"
+  },
+  {
+   "no": 496,
+   "officialId": "L4-0496",
+   "hanzi": "轮船",
+   "pinyin": "lúnchuán",
+   "pinyinPdf": "lúnchuán",
+   "pos": "N",
+   "ocr": "轮船"
+  },
+  {
+   "no": 497,
+   "officialId": "L4-0497",
+   "hanzi": "轮椅",
+   "pinyin": "lúnyǐ",
+   "pinyinPdf": "lúnyǐ",
+   "pos": "N",
+   "ocr": "轮椅"
+  },
+  {
+   "no": 498,
+   "officialId": "L4-0498",
+   "hanzi": "轮子",
+   "pinyin": "lúnzi",
+   "pinyinPdf": "lúnzi",
+   "pos": "N",
+   "ocr": "轮子"
+  },
+  {
+   "no": 499,
+   "officialId": "L4-0499",
+   "hanzi": "论文",
+   "pinyin": "lùnwén",
+   "pinyinPdf": "lùnwén",
+   "pos": "N",
+   "ocr": "论文"
+  },
+  {
+   "no": 500,
+   "officialId": "L4-0500",
+   "hanzi": "落",
+   "pinyin": "luò",
+   "pinyinPdf": "luò",
+   "pos": "V",
+   "ocr": "落"
+  },
+  {
+   "no": 501,
+   "officialId": "L4-0501",
+   "hanzi": "毛巾",
+   "pinyin": "máojīn",
+   "pinyinPdf": "máojīn",
+   "pos": "N",
+   "ocr": "毛巾"
+  },
+  {
+   "no": 502,
+   "officialId": "L4-0502",
+   "hanzi": "毛衣",
+   "pinyin": "máoyī",
+   "pinyinPdf": "máoyī",
+   "pos": "N",
+   "ocr": "毛衣"
+  },
+  {
+   "no": 503,
+   "officialId": "L4-0503",
+   "hanzi": "帽子",
+   "pinyin": "màozi",
+   "pinyinPdf": "màozi",
+   "pos": "N",
+   "ocr": "帽子"
+  },
+  {
+   "no": 504,
+   "officialId": "L4-0504",
+   "hanzi": "没错",
+   "pinyin": "méi cuò",
+   "pinyinPdf": "méi cuò",
+   "pos": "",
+   "ocr": "没错"
+  },
+  {
+   "no": 505,
+   "officialId": "L4-0505",
+   "hanzi": "没法儿",
+   "pinyin": "méifǎr",
+   "pinyinPdf": "méifǎr",
+   "pos": "V",
+   "ocr": "没法儿"
+  },
+  {
+   "no": 506,
+   "officialId": "L4-0506",
+   "hanzi": "没想到",
+   "pinyin": "méi xiǎngdào",
+   "pinyinPdf": "méi xiǎngdào",
+   "pos": "",
+   "ocr": "没想到"
+  },
+  {
+   "no": 507,
+   "officialId": "L4-0507",
+   "hanzi": "美金",
+   "pinyin": "měijīn",
+   "pinyinPdf": "měijīn",
+   "pos": "N",
+   "ocr": "美金"
+  },
+  {
+   "no": 508,
+   "officialId": "L4-0508",
+   "hanzi": "美女",
+   "pinyin": "měinǚ",
+   "pinyinPdf": "měinǚ",
+   "pos": "N",
+   "ocr": "美女"
+  },
+  {
+   "no": 509,
+   "officialId": "L4-0509",
+   "hanzi": "梦",
+   "pinyin": "mèng",
+   "pinyinPdf": "mèng",
+   "pos": "N/V",
+   "ocr": "梦"
+  },
+  {
+   "no": 510,
+   "officialId": "L4-0510",
+   "hanzi": "梦见",
+   "pinyin": "mèngjiàn",
+   "pinyinPdf": "mèngjiàn",
+   "pos": "",
+   "ocr": "梦见"
+  },
+  {
+   "no": 511,
+   "officialId": "L4-0511",
+   "hanzi": "梦想",
+   "pinyin": "mèngxiǎng",
+   "pinyinPdf": "mèngxiǎng",
+   "pos": "V/N",
+   "ocr": "梦想"
+  },
+  {
+   "no": 512,
+   "officialId": "L4-0512",
+   "hanzi": "秘密",
+   "pinyin": "mìmì",
+   "pinyinPdf": "mìmì",
+   "pos": "Adj/N",
+   "ocr": "秘密"
+  },
+  {
+   "no": 513,
+   "officialId": "L4-0513",
+   "hanzi": "秘书",
+   "pinyin": "mìshū",
+   "pinyinPdf": "mìshū",
+   "pos": "N",
+   "ocr": "秘书"
+  },
+  {
+   "no": 514,
+   "officialId": "L4-0514",
+   "hanzi": "密",
+   "pinyin": "mì",
+   "pinyinPdf": "mì",
+   "pos": "Adj",
+   "ocr": "密"
+  },
+  {
+   "no": 515,
+   "officialId": "L4-0515",
+   "hanzi": "密码",
+   "pinyin": "mìmǎ",
+   "pinyinPdf": "mìmǎ",
+   "pos": "N",
+   "ocr": "密码"
+  },
+  {
+   "no": 516,
+   "officialId": "L4-0516",
+   "hanzi": "密切",
+   "pinyin": "mìqiè",
+   "pinyinPdf": "mìqiè",
+   "pos": "Adj/V",
+   "ocr": "密切"
+  },
+  {
+   "no": 517,
+   "officialId": "L4-0517",
+   "hanzi": "免费",
+   "pinyin": "miǎnfèi",
+   "pinyinPdf": "miǎnfèi",
+   "pos": "",
+   "ocr": "免费"
+  },
+  {
+   "no": 518,
+   "officialId": "L4-0518",
+   "hanzi": "面临",
+   "pinyin": "miànlín",
+   "pinyinPdf": "miànlín",
+   "pos": "V",
+   "ocr": "面临"
+  },
+  {
+   "no": 519,
+   "officialId": "L4-0519",
+   "hanzi": "面试",
+   "pinyin": "miànshì",
+   "pinyinPdf": "miànshì",
+   "pos": "V",
+   "ocr": "面试"
+  },
+  {
+   "no": 520,
+   "officialId": "L4-0520",
+   "hanzi": "描述",
+   "pinyin": "miáoshù",
+   "pinyinPdf": "miáoshù",
+   "pos": "V",
+   "ocr": "描述"
+  },
+  {
+   "no": 521,
+   "officialId": "L4-0521",
+   "hanzi": "描写",
+   "pinyin": "miáoxiě",
+   "pinyinPdf": "miáoxiě",
+   "pos": "V",
+   "ocr": "描写"
+  },
+  {
+   "no": 522,
+   "officialId": "L4-0522",
+   "hanzi": "名牌儿",
+   "pinyin": "míngpáir",
+   "pinyinPdf": "míngpáir",
+   "pos": "N",
+   "ocr": "名牌儿"
+  },
+  {
+   "no": 523,
+   "officialId": "L4-0523",
+   "hanzi": "名片",
+   "pinyin": "míngpiàn",
+   "pinyinPdf": "míngpiàn",
+   "pos": "N",
+   "ocr": "名片"
+  },
+  {
+   "no": 524,
+   "officialId": "L4-0524",
+   "hanzi": "名人",
+   "pinyin": "míngrén",
+   "pinyinPdf": "míngrén",
+   "pos": "N",
+   "ocr": "名人"
+  },
+  {
+   "no": 525,
+   "officialId": "L4-0525",
+   "hanzi": "摸",
+   "pinyin": "mō",
+   "pinyinPdf": "mō",
+   "pos": "V",
+   "ocr": "摸"
+  },
+  {
+   "no": 526,
+   "officialId": "L4-0526",
+   "hanzi": "模特儿",
+   "pinyin": "mótèr",
+   "pinyinPdf": "mótèr",
+   "pos": "N",
+   "ocr": "模特儿"
+  },
+  {
+   "no": 527,
+   "officialId": "L4-0527",
+   "hanzi": "模型",
+   "pinyin": "móxíng",
+   "pinyinPdf": "móxíng",
+   "pos": "N",
+   "ocr": "模型"
+  },
+  {
+   "no": 528,
+   "officialId": "L4-0528",
+   "hanzi": "末",
+   "pinyin": "mò",
+   "pinyinPdf": "mò",
+   "pos": "N",
+   "ocr": "末"
+  },
+  {
+   "no": 529,
+   "officialId": "L4-0529",
+   "hanzi": "默默",
+   "pinyin": "mòmò",
+   "pinyinPdf": "mòmò",
+   "pos": "Adv",
+   "ocr": "默默"
+  },
+  {
+   "no": 530,
+   "officialId": "L4-0530",
+   "hanzi": "哪怕",
+   "pinyin": "nǎpà",
+   "pinyinPdf": "nǎpà",
+   "pos": "Conj",
+   "ocr": "哪怕"
+  },
+  {
+   "no": 531,
+   "officialId": "L4-0531",
+   "hanzi": "哪",
+   "pinyin": "na",
+   "pinyinPdf": "na",
+   "pos": "Aux",
+   "ocr": "哪"
+  },
+  {
+   "no": 532,
+   "officialId": "L4-0532",
+   "hanzi": "男女",
+   "pinyin": "nánnǚ",
+   "pinyinPdf": "nánnǚ",
+   "pos": "N",
+   "ocr": "男女"
+  },
+  {
+   "no": 533,
+   "officialId": "L4-0533",
+   "hanzi": "男士",
+   "pinyin": "nánshì",
+   "pinyinPdf": "nánshì",
+   "pos": "N",
+   "ocr": "男士"
+  },
+  {
+   "no": 534,
+   "officialId": "L4-0534",
+   "hanzi": "难免",
+   "pinyin": "nánmiǎn",
+   "pinyinPdf": "nánmiǎn",
+   "pos": "Adj",
+   "ocr": "难免"
+  },
+  {
+   "no": 535,
+   "officialId": "L4-0535",
+   "hanzi": "脑袋",
+   "pinyin": "nǎodai",
+   "pinyinPdf": "nǎodai",
+   "pos": "N",
+   "ocr": "脑袋"
+  },
+  {
+   "no": 536,
+   "officialId": "L4-0536",
+   "hanzi": "闹",
+   "pinyin": "nào",
+   "pinyinPdf": "nào",
+   "pos": "Adj/V",
+   "ocr": "闹"
+  },
+  {
+   "no": 537,
+   "officialId": "L4-0537",
+   "hanzi": "闹钟",
+   "pinyin": "nàozhōng",
+   "pinyinPdf": "nàozhōng",
+   "pos": "N",
+   "ocr": "闹钟"
+  },
+  {
+   "no": 538,
+   "officialId": "L4-0538",
+   "hanzi": "内部",
+   "pinyin": "nèibù",
+   "pinyinPdf": "nèibù",
+   "pos": "N",
+   "ocr": "内部"
+  },
+  {
+   "no": 539,
+   "officialId": "L4-0539",
+   "hanzi": "内科",
+   "pinyin": "nèikē",
+   "pinyinPdf": "nèikē",
+   "pos": "N",
+   "ocr": "内科"
+  },
+  {
+   "no": 540,
+   "officialId": "L4-0540",
+   "hanzi": "能干",
+   "pinyin": "nénggàn",
+   "pinyinPdf": "nénggàn",
+   "pos": "Adj",
+   "ocr": "能干"
+  },
+  {
+   "no": 541,
+   "officialId": "L4-0541",
+   "hanzi": "宁静",
+   "pinyin": "níngjìng",
+   "pinyinPdf": "níngjìng",
+   "pos": "Adj",
+   "ocr": "宁静"
+  },
+  {
+   "no": 542,
+   "officialId": "L4-0542",
+   "hanzi": "浓",
+   "pinyin": "nóng",
+   "pinyinPdf": "nóng",
+   "pos": "Adj",
+   "ocr": "浓"
+  },
+  {
+   "no": 543,
+   "officialId": "L4-0543",
+   "hanzi": "女士",
+   "pinyin": "nǚshì",
+   "pinyinPdf": "nǚshì",
+   "pos": "N",
+   "ocr": "女士"
+  },
+  {
+   "no": 544,
+   "officialId": "L4-0544",
+   "hanzi": "暖气",
+   "pinyin": "nuǎnqì",
+   "pinyinPdf": "nuǎnqì",
+   "pos": "N",
+   "ocr": "暖气"
+  },
+  {
+   "no": 545,
+   "officialId": "L4-0545",
+   "hanzi": "拍照",
+   "pinyin": "pāizhào",
+   "pinyinPdf": "pāizhào",
+   "pos": "",
+   "ocr": "拍照"
+  },
+  {
+   "no": 546,
+   "officialId": "L4-0546",
+   "hanzi": "排列",
+   "pinyin": "páiliè",
+   "pinyinPdf": "páiliè",
+   "pos": "V",
+   "ocr": "排列"
+  },
+  {
+   "no": 547,
+   "officialId": "L4-0547",
+   "hanzi": "牌",
+   "pinyin": "pái",
+   "pinyinPdf": "pái",
+   "pos": "N",
+   "ocr": "牌"
+  },
+  {
+   "no": 548,
+   "officialId": "L4-0548",
+   "hanzi": "盘",
+   "pinyin": "pán",
+   "pinyinPdf": "pán",
+   "pos": "N/M",
+   "ocr": "盘（名、量）"
+  },
+  {
+   "no": 549,
+   "officialId": "L4-0549",
+   "hanzi": "盘子",
+   "pinyin": "pánzi",
+   "pinyinPdf": "pánzi",
+   "pos": "N",
+   "ocr": "盘子"
+  },
+  {
+   "no": 550,
+   "officialId": "L4-0550",
+   "hanzi": "胖子",
+   "pinyin": "pàngzi",
+   "pinyinPdf": "pàngzi",
+   "pos": "N",
+   "ocr": "胖子"
+  },
+  {
+   "no": 551,
+   "officialId": "L4-0551",
+   "hanzi": "培训",
+   "pinyin": "péixùn",
+   "pinyinPdf": "péixùn",
+   "pos": "V",
+   "ocr": "培训"
+  },
+  {
+   "no": 552,
+   "officialId": "L4-0552",
+   "hanzi": "培训班",
+   "pinyin": "péixùnbān",
+   "pinyinPdf": "péixùnbān",
+   "pos": "N",
+   "ocr": "培训班"
+  },
+  {
+   "no": 553,
+   "officialId": "L4-0553",
+   "hanzi": "培养",
+   "pinyin": "péiyǎng",
+   "pinyinPdf": "péiyǎng",
+   "pos": "V",
+   "ocr": "培养"
+  },
+  {
+   "no": 554,
+   "officialId": "L4-0554",
+   "hanzi": "培育",
+   "pinyin": "péiyù",
+   "pinyinPdf": "péiyù",
+   "pos": "V",
+   "ocr": "培育"
+  },
+  {
+   "no": 555,
+   "officialId": "L4-0555",
+   "hanzi": "批",
+   "pinyin": "pī",
+   "pinyinPdf": "pī",
+   "pos": "V",
+   "ocr": "批（动）"
+  },
+  {
+   "no": 556,
+   "officialId": "L4-0556",
+   "hanzi": "批",
+   "pinyin": "pī",
+   "pinyinPdf": "pī",
+   "pos": "M",
+   "ocr": "批（量）"
+  },
+  {
+   "no": 557,
+   "officialId": "L4-0557",
+   "hanzi": "片面",
+   "pinyin": "piànmiàn",
+   "pinyinPdf": "piànmiàn",
+   "pos": "Adj",
+   "ocr": "片面"
+  },
+  {
+   "no": 558,
+   "officialId": "L4-0558",
+   "hanzi": "品质",
+   "pinyin": "pǐnzhì",
+   "pinyinPdf": "pǐnzhì",
+   "pos": "N",
+   "ocr": "品质"
+  },
+  {
+   "no": 559,
+   "officialId": "L4-0559",
+   "hanzi": "平方",
+   "pinyin": "píngfāng",
+   "pinyinPdf": "píngfāng",
+   "pos": "N/M",
+   "ocr": "平方"
+  },
+  {
+   "no": 560,
+   "officialId": "L4-0560",
+   "hanzi": "平静",
+   "pinyin": "píngjìng",
+   "pinyinPdf": "píngjìng",
+   "pos": "Adj",
+   "ocr": "平静"
+  },
+  {
+   "no": 561,
+   "officialId": "L4-0561",
+   "hanzi": "平均",
+   "pinyin": "píngjūn",
+   "pinyinPdf": "píngjūn",
+   "pos": "V/Adj",
+   "ocr": "平均"
+  },
+  {
+   "no": 562,
+   "officialId": "L4-0562",
+   "hanzi": "平稳",
+   "pinyin": "píngwěn",
+   "pinyinPdf": "píngwěn",
+   "pos": "Adj",
+   "ocr": "平稳"
+  },
+  {
+   "no": 563,
+   "officialId": "L4-0563",
+   "hanzi": "迫切",
+   "pinyin": "pòqiè",
+   "pinyinPdf": "pòqiè",
+   "pos": "Adj",
+   "ocr": "迫切"
+  },
+  {
+   "no": 564,
+   "officialId": "L4-0564",
+   "hanzi": "破产",
+   "pinyin": "pòchǎn",
+   "pinyinPdf": "pòchǎn",
+   "pos": "",
+   "ocr": "破产"
+  },
+  {
+   "no": 565,
+   "officialId": "L4-0565",
+   "hanzi": "妻子",
+   "pinyin": "qīzi",
+   "pinyinPdf": "qīzi",
+   "pos": "N",
+   "ocr": "妻子"
+  },
+  {
+   "no": 566,
+   "officialId": "L4-0566",
+   "hanzi": "期待",
+   "pinyin": "qīdài",
+   "pinyinPdf": "qīdài",
+   "pos": "V",
+   "ocr": "期待"
+  },
+  {
+   "no": 567,
+   "officialId": "L4-0567",
+   "hanzi": "期间",
+   "pinyin": "qījiān",
+   "pinyinPdf": "qījiān",
+   "pos": "N",
+   "ocr": "期间"
+  },
+  {
+   "no": 568,
+   "officialId": "L4-0568",
+   "hanzi": "期末",
+   "pinyin": "qīmò",
+   "pinyinPdf": "qīmò",
+   "pos": "N",
+   "ocr": "期末"
+  },
+  {
+   "no": 569,
+   "officialId": "L4-0569",
+   "hanzi": "期限",
+   "pinyin": "qīxiàn",
+   "pinyinPdf": "qīxiàn",
+   "pos": "N",
+   "ocr": "期限"
+  },
+  {
+   "no": 570,
+   "officialId": "L4-0570",
+   "hanzi": "期中",
+   "pinyin": "qīzhōng",
+   "pinyinPdf": "qīzhōng",
+   "pos": "N",
+   "ocr": "期中"
+  },
+  {
+   "no": 571,
+   "officialId": "L4-0571",
+   "hanzi": "其余",
+   "pinyin": "qíyú",
+   "pinyinPdf": "qíyú",
+   "pos": "Pron",
+   "ocr": "其余"
+  },
+  {
+   "no": 572,
+   "officialId": "L4-0572",
+   "hanzi": "企业",
+   "pinyin": "qǐyè",
+   "pinyinPdf": "qǐyè",
+   "pos": "N",
+   "ocr": "企业"
+  },
+  {
+   "no": 573,
+   "officialId": "L4-0573",
+   "hanzi": "气球",
+   "pinyin": "qìqiú",
+   "pinyinPdf": "qìqiú",
+   "pos": "N",
+   "ocr": "气球"
+  },
+  {
+   "no": 574,
+   "officialId": "L4-0574",
+   "hanzi": "汽水",
+   "pinyin": "qìshuǐ",
+   "pinyinPdf": "qìshuǐ",
+   "pos": "N",
+   "ocr": "汽水"
+  },
+  {
+   "no": 575,
+   "officialId": "L4-0575",
+   "hanzi": "汽油",
+   "pinyin": "qìyóu",
+   "pinyinPdf": "qìyóu",
+   "pos": "N",
+   "ocr": "汽油"
+  },
+  {
+   "no": 576,
+   "officialId": "L4-0576",
+   "hanzi": "器官",
+   "pinyin": "qìguān",
+   "pinyinPdf": "qìguān",
+   "pos": "N",
+   "ocr": "器官"
+  },
+  {
+   "no": 577,
+   "officialId": "L4-0577",
+   "hanzi": "前头",
+   "pinyin": "qiántou",
+   "pinyinPdf": "qiántou",
+   "pos": "N",
+   "ocr": "前头"
+  },
+  {
+   "no": 578,
+   "officialId": "L4-0578",
+   "hanzi": "前途",
+   "pinyin": "qiántú",
+   "pinyinPdf": "qiántú",
+   "pos": "N",
+   "ocr": "前途"
+  },
+  {
+   "no": 579,
+   "officialId": "L4-0579",
+   "hanzi": "浅",
+   "pinyin": "qiǎn",
+   "pinyinPdf": "qiǎn",
+   "pos": "Adj",
+   "ocr": "浅"
+  },
+  {
+   "no": 580,
+   "officialId": "L4-0580",
+   "hanzi": "巧克力",
+   "pinyin": "qiǎokèlì",
+   "pinyinPdf": "qiǎokèlì",
+   "pos": "N",
+   "ocr": "巧克力"
+  },
+  {
+   "no": 581,
+   "officialId": "L4-0581",
+   "hanzi": "切",
+   "pinyin": "qiē",
+   "pinyinPdf": "qiē",
+   "pos": "V",
+   "ocr": "切"
+  },
+  {
+   "no": 582,
+   "officialId": "L4-0582",
+   "hanzi": "亲爱",
+   "pinyin": "qīn'ài",
+   "pinyinPdf": "qīn'ài",
+   "pos": "Adj",
+   "ocr": "亲爱"
+  },
+  {
+   "no": 583,
+   "officialId": "L4-0583",
+   "hanzi": "亲密",
+   "pinyin": "qīnmì",
+   "pinyinPdf": "qīnmì",
+   "pos": "Adj",
+   "ocr": "亲密"
+  },
+  {
+   "no": 584,
+   "officialId": "L4-0584",
+   "hanzi": "青春",
+   "pinyin": "qīngchūn",
+   "pinyinPdf": "qīngchūn",
+   "pos": "N",
+   "ocr": "青春"
+  },
+  {
+   "no": 585,
+   "officialId": "L4-0585",
+   "hanzi": "轻松",
+   "pinyin": "qīngsōng",
+   "pinyinPdf": "qīngsōng",
+   "pos": "Adj",
+   "ocr": "轻松"
+  },
+  {
+   "no": 586,
+   "officialId": "L4-0586",
+   "hanzi": "轻易",
+   "pinyin": "qīngyì",
+   "pinyinPdf": "qīngyì",
+   "pos": "Adj/Adv",
+   "ocr": "轻易"
+  },
+  {
+   "no": 587,
+   "officialId": "L4-0587",
+   "hanzi": "清醒",
+   "pinyin": "qīngxǐng",
+   "pinyinPdf": "qīngxǐng",
+   "pos": "Adj/V",
+   "ocr": "清醒"
+  },
+  {
+   "no": 588,
+   "officialId": "L4-0588",
+   "hanzi": "情景",
+   "pinyin": "qíngjǐng",
+   "pinyinPdf": "qíngjǐng",
+   "pos": "N",
+   "ocr": "情景"
+  },
+  {
+   "no": 589,
+   "officialId": "L4-0589",
+   "hanzi": "穷",
+   "pinyin": "qióng",
+   "pinyinPdf": "qióng",
+   "pos": "Adj",
+   "ocr": "穷"
+  },
+  {
+   "no": 590,
+   "officialId": "L4-0590",
+   "hanzi": "穷人",
+   "pinyin": "qióngrén",
+   "pinyinPdf": "qióngrén",
+   "pos": "N",
+   "ocr": "穷人"
+  },
+  {
+   "no": 591,
+   "officialId": "L4-0591",
+   "hanzi": "秋季",
+   "pinyin": "qiūjì",
+   "pinyinPdf": "qiūjì",
+   "pos": "N",
+   "ocr": "秋季"
+  },
+  {
+   "no": 592,
+   "officialId": "L4-0592",
+   "hanzi": "趋势",
+   "pinyin": "qūshì",
+   "pinyinPdf": "qūshì",
+   "pos": "N",
+   "ocr": "趋势"
+  },
+  {
+   "no": 593,
+   "officialId": "L4-0593",
+   "hanzi": "圈",
+   "pinyin": "quān",
+   "pinyinPdf": "quān",
+   "pos": "N/V",
+   "ocr": "圈"
+  },
+  {
+   "no": 594,
+   "officialId": "L4-0594",
+   "hanzi": "权利",
+   "pinyin": "quánlì",
+   "pinyinPdf": "quánlì",
+   "pos": "N",
+   "ocr": "权利"
+  },
+  {
+   "no": 595,
+   "officialId": "L4-0595",
+   "hanzi": "却",
+   "pinyin": "què",
+   "pinyinPdf": "què",
+   "pos": "Adv",
+   "ocr": "却"
+  },
+  {
+   "no": 596,
+   "officialId": "L4-0596",
+   "hanzi": "确认",
+   "pinyin": "quèrèn",
+   "pinyinPdf": "quèrèn",
+   "pos": "V",
+   "ocr": "确认"
+  },
+  {
+   "no": 597,
+   "officialId": "L4-0597",
+   "hanzi": "然而",
+   "pinyin": "rán'ér",
+   "pinyinPdf": "rán'ér",
+   "pos": "Conj",
+   "ocr": "然而"
+  },
+  {
+   "no": 598,
+   "officialId": "L4-0598",
+   "hanzi": "燃料",
+   "pinyin": "ránliào",
+   "pinyinPdf": "ránliào",
+   "pos": "N",
+   "ocr": "燃料"
+  },
+  {
+   "no": 599,
+   "officialId": "L4-0599",
+   "hanzi": "燃烧",
+   "pinyin": "ránshāo",
+   "pinyinPdf": "ránshāo",
+   "pos": "V",
+   "ocr": "燃烧"
+  },
+  {
+   "no": 600,
+   "officialId": "L4-0600",
+   "hanzi": "热闹",
+   "pinyin": "rènao",
+   "pinyinPdf": "rènao",
+   "pos": "Adj/V",
+   "ocr": "热闹"
+  },
+  {
+   "no": 601,
+   "officialId": "L4-0601",
+   "hanzi": "热心",
+   "pinyin": "rèxīn",
+   "pinyinPdf": "rèxīn",
+   "pos": "Adj",
+   "ocr": "热心"
+  },
+  {
+   "no": 602,
+   "officialId": "L4-0602",
+   "hanzi": "人家",
+   "pinyin": "rénjia",
+   "pinyinPdf": "rénjia",
+   "pos": "Pron",
+   "ocr": "人家"
+  },
+  {
+   "no": 603,
+   "officialId": "L4-0603",
+   "hanzi": "日记",
+   "pinyin": "rìjì",
+   "pinyinPdf": "rìjì",
+   "pos": "N",
+   "ocr": "日记"
+  },
+  {
+   "no": 604,
+   "officialId": "L4-0604",
+   "hanzi": "日历",
+   "pinyin": "rìlì",
+   "pinyinPdf": "rìlì",
+   "pos": "N",
+   "ocr": "日历"
+  },
+  {
+   "no": 605,
+   "officialId": "L4-0605",
+   "hanzi": "如今",
+   "pinyin": "rújīn",
+   "pinyinPdf": "rújīn",
+   "pos": "N",
+   "ocr": "如今"
+  },
+  {
+   "no": 606,
+   "officialId": "L4-0606",
+   "hanzi": "弱",
+   "pinyin": "ruò",
+   "pinyinPdf": "ruò",
+   "pos": "Adj",
+   "ocr": "弱"
+  },
+  {
+   "no": 607,
+   "officialId": "L4-0607",
+   "hanzi": "伞",
+   "pinyin": "sǎn",
+   "pinyinPdf": "sǎn",
+   "pos": "N",
+   "ocr": "伞"
+  },
+  {
+   "no": 608,
+   "officialId": "L4-0608",
+   "hanzi": "散",
+   "pinyin": "sàn",
+   "pinyinPdf": "sàn",
+   "pos": "V",
+   "ocr": "散"
+  },
+  {
+   "no": 609,
+   "officialId": "L4-0609",
+   "hanzi": "扫",
+   "pinyin": "sǎo",
+   "pinyinPdf": "sǎo",
+   "pos": "V",
+   "ocr": "扫"
+  },
+  {
+   "no": 610,
+   "officialId": "L4-0610",
+   "hanzi": "色",
+   "pinyin": "sè",
+   "pinyinPdf": "sè",
+   "pos": "N",
+   "ocr": "色"
+  },
+  {
+   "no": 611,
+   "officialId": "L4-0611",
+   "hanzi": "色彩",
+   "pinyin": "sècǎi",
+   "pinyinPdf": "sècǎi",
+   "pos": "N",
+   "ocr": "色彩"
+  },
+  {
+   "no": 612,
+   "officialId": "L4-0612",
+   "hanzi": "森林",
+   "pinyin": "sēnlín",
+   "pinyinPdf": "sēnlín",
+   "pos": "N",
+   "ocr": "森林"
+  },
+  {
+   "no": 613,
+   "officialId": "L4-0613",
+   "hanzi": "晒",
+   "pinyin": "shài",
+   "pinyinPdf": "shài",
+   "pos": "V",
+   "ocr": "晒"
+  },
+  {
+   "no": 614,
+   "officialId": "L4-0614",
+   "hanzi": "闪",
+   "pinyin": "shǎn",
+   "pinyinPdf": "shǎn",
+   "pos": "V",
+   "ocr": "闪"
+  },
+  {
+   "no": 615,
+   "officialId": "L4-0615",
+   "hanzi": "闪电",
+   "pinyin": "shǎndiàn",
+   "pinyinPdf": "shǎndiàn",
+   "pos": "N",
+   "ocr": "闪电"
+  },
+  {
+   "no": 616,
+   "officialId": "L4-0616",
+   "hanzi": "善良",
+   "pinyin": "shànliáng",
+   "pinyinPdf": "shànliáng",
+   "pos": "Adj",
+   "ocr": "善良"
+  },
+  {
+   "no": 617,
+   "officialId": "L4-0617",
+   "hanzi": "善于",
+   "pinyin": "shànyú",
+   "pinyinPdf": "shànyú",
+   "pos": "V",
+   "ocr": "善于"
+  },
+  {
+   "no": 618,
+   "officialId": "L4-0618",
+   "hanzi": "伤害",
+   "pinyin": "shānghài",
+   "pinyinPdf": "shānghài",
+   "pos": "V",
+   "ocr": "伤害"
+  },
+  {
+   "no": 619,
+   "officialId": "L4-0619",
+   "hanzi": "商务",
+   "pinyin": "shāngwù",
+   "pinyinPdf": "shāngwù",
+   "pos": "N",
+   "ocr": "商务"
+  },
+  {
+   "no": 620,
+   "officialId": "L4-0620",
+   "hanzi": "赏",
+   "pinyin": "shǎng",
+   "pinyinPdf": "shǎng",
+   "pos": "V",
+   "ocr": "赏"
+  },
+  {
+   "no": 621,
+   "officialId": "L4-0621",
+   "hanzi": "上个月",
+   "pinyin": "shàng ge yuè",
+   "pinyinPdf": "shàng ge yuè",
+   "pos": "",
+   "ocr": "上个月"
+  },
+  {
+   "no": 622,
+   "officialId": "L4-0622",
+   "hanzi": "上楼",
+   "pinyin": "shàng lóu",
+   "pinyinPdf": "shàng lóu",
+   "pos": "",
+   "ocr": "上楼"
+  },
+  {
+   "no": 623,
+   "officialId": "L4-0623",
+   "hanzi": "上门",
+   "pinyin": "shàngmén",
+   "pinyinPdf": "shàngmén",
+   "pos": "",
+   "ocr": "上门"
+  },
+  {
+   "no": 624,
+   "officialId": "L4-0624",
+   "hanzi": "烧",
+   "pinyin": "shāo",
+   "pinyinPdf": "shāo",
+   "pos": "V",
+   "ocr": "烧"
+  },
+  {
+   "no": 625,
+   "officialId": "L4-0625",
+   "hanzi": "设施",
+   "pinyin": "shèshī",
+   "pinyinPdf": "shèshī",
+   "pos": "N",
+   "ocr": "设施"
+  },
+  {
+   "no": 626,
+   "officialId": "L4-0626",
+   "hanzi": "设置",
+   "pinyin": "shèzhì",
+   "pinyinPdf": "shèzhì",
+   "pos": "V",
+   "ocr": "设置"
+  },
+  {
+   "no": 627,
+   "officialId": "L4-0627",
+   "hanzi": "申请",
+   "pinyin": "shēnqǐng",
+   "pinyinPdf": "shēnqǐng",
+   "pos": "V",
+   "ocr": "申请"
+  },
+  {
+   "no": 628,
+   "officialId": "L4-0628",
+   "hanzi": "身材",
+   "pinyin": "shēncái",
+   "pinyinPdf": "shēncái",
+   "pos": "N",
+   "ocr": "身材"
+  },
+  {
+   "no": 629,
+   "officialId": "L4-0629",
+   "hanzi": "身份",
+   "pinyin": "shēnfèn",
+   "pinyinPdf": "shēnfèn",
+   "pos": "N",
+   "ocr": "身份"
+  },
+  {
+   "no": 630,
+   "officialId": "L4-0630",
+   "hanzi": "身高",
+   "pinyin": "shēngāo",
+   "pinyinPdf": "shēngāo",
+   "pos": "N",
+   "ocr": "身高"
+  },
+  {
+   "no": 631,
+   "officialId": "L4-0631",
+   "hanzi": "深厚",
+   "pinyin": "shēnhòu",
+   "pinyinPdf": "shēnhòu",
+   "pos": "Adj",
+   "ocr": "深厚"
+  },
+  {
+   "no": 632,
+   "officialId": "L4-0632",
+   "hanzi": "神话",
+   "pinyin": "shénhuà",
+   "pinyinPdf": "shénhuà",
+   "pos": "N",
+   "ocr": "神话"
+  },
+  {
+   "no": 633,
+   "officialId": "L4-0633",
+   "hanzi": "神秘",
+   "pinyin": "shénmì",
+   "pinyinPdf": "shénmì",
+   "pos": "Adj",
+   "ocr": "神秘"
+  },
+  {
+   "no": 634,
+   "officialId": "L4-0634",
+   "hanzi": "甚至",
+   "pinyin": "shènzhì",
+   "pinyinPdf": "shènzhì",
+   "pos": "Conj",
+   "ocr": "甚至"
+  },
+  {
+   "no": 635,
+   "officialId": "L4-0635",
+   "hanzi": "失败",
+   "pinyin": "shībài",
+   "pinyinPdf": "shībài",
+   "pos": "V/Adj",
+   "ocr": "失败"
+  },
+  {
+   "no": 636,
+   "officialId": "L4-0636",
+   "hanzi": "失望",
+   "pinyin": "shīwàng",
+   "pinyinPdf": "shīwàng",
+   "pos": "Adj",
+   "ocr": "失望"
+  },
+  {
+   "no": 637,
+   "officialId": "L4-0637",
+   "hanzi": "失业",
+   "pinyin": "shīyè",
+   "pinyinPdf": "shīyè",
+   "pos": "",
+   "ocr": "失业"
+  },
+  {
+   "no": 638,
+   "officialId": "L4-0638",
+   "hanzi": "诗",
+   "pinyin": "shī",
+   "pinyinPdf": "shī",
+   "pos": "N",
+   "ocr": "诗"
+  },
+  {
+   "no": 639,
+   "officialId": "L4-0639",
+   "hanzi": "诗人",
+   "pinyin": "shīrén",
+   "pinyinPdf": "shīrén",
+   "pos": "N",
+   "ocr": "诗人"
+  },
+  {
+   "no": 640,
+   "officialId": "L4-0640",
+   "hanzi": "湿",
+   "pinyin": "shī",
+   "pinyinPdf": "shī",
+   "pos": "Adj",
+   "ocr": "湿"
+  },
+  {
+   "no": 641,
+   "officialId": "L4-0641",
+   "hanzi": "实施",
+   "pinyin": "shíshī",
+   "pinyinPdf": "shíshī",
+   "pos": "V",
+   "ocr": "实施"
+  },
+  {
+   "no": 642,
+   "officialId": "L4-0642",
+   "hanzi": "实用",
+   "pinyin": "shíyòng",
+   "pinyinPdf": "shíyòng",
+   "pos": "Adj",
+   "ocr": "实用"
+  },
+  {
+   "no": 643,
+   "officialId": "L4-0643",
+   "hanzi": "食堂",
+   "pinyin": "shítáng",
+   "pinyinPdf": "shítáng",
+   "pos": "N",
+   "ocr": "食堂"
+  },
+  {
+   "no": 644,
+   "officialId": "L4-0644",
+   "hanzi": "使劲",
+   "pinyin": "shǐjìn",
+   "pinyinPdf": "shǐjìn",
+   "pos": "",
+   "ocr": "使劲"
+  },
+  {
+   "no": 645,
+   "officialId": "L4-0645",
+   "hanzi": "士兵",
+   "pinyin": "shìbīng",
+   "pinyinPdf": "shìbīng",
+   "pos": "N",
+   "ocr": "士兵"
+  },
+  {
+   "no": 646,
+   "officialId": "L4-0646",
+   "hanzi": "市区",
+   "pinyin": "shìqū",
+   "pinyinPdf": "shìqū",
+   "pos": "N",
+   "ocr": "市区"
+  },
+  {
+   "no": 647,
+   "officialId": "L4-0647",
+   "hanzi": "似的",
+   "pinyin": "shìde",
+   "pinyinPdf": "shìde",
+   "pos": "Aux",
+   "ocr": "似的"
+  },
+  {
+   "no": 648,
+   "officialId": "L4-0648",
+   "hanzi": "事物",
+   "pinyin": "shìwù",
+   "pinyinPdf": "shìwù",
+   "pos": "N",
+   "ocr": "事物"
+  },
+  {
+   "no": 649,
+   "officialId": "L4-0649",
+   "hanzi": "事先",
+   "pinyin": "shìxiān",
+   "pinyinPdf": "shìxiān",
+   "pos": "N",
+   "ocr": "事先"
+  },
+  {
+   "no": 650,
+   "officialId": "L4-0650",
+   "hanzi": "试卷",
+   "pinyin": "shìjuàn",
+   "pinyinPdf": "shìjuàn",
+   "pos": "N",
+   "ocr": "试卷"
+  },
+  {
+   "no": 651,
+   "officialId": "L4-0651",
+   "hanzi": "是否",
+   "pinyin": "shìfǒu",
+   "pinyinPdf": "shìfǒu",
+   "pos": "Adv",
+   "ocr": "是否"
+  },
+  {
+   "no": 652,
+   "officialId": "L4-0652",
+   "hanzi": "收回",
+   "pinyin": "shōuhuí",
+   "pinyinPdf": "shōuhuí",
+   "pos": "",
+   "ocr": "收回"
+  },
+  {
+   "no": 653,
+   "officialId": "L4-0653",
+   "hanzi": "收获",
+   "pinyin": "shōuhuò",
+   "pinyinPdf": "shōuhuò",
+   "pos": "V/N",
+   "ocr": "收获"
+  },
+  {
+   "no": 654,
+   "officialId": "L4-0654",
+   "hanzi": "收益",
+   "pinyin": "shōuyì",
+   "pinyinPdf": "shōuyì",
+   "pos": "N",
+   "ocr": "收益"
+  },
+  {
+   "no": 655,
+   "officialId": "L4-0655",
+   "hanzi": "手工",
+   "pinyin": "shǒugōng",
+   "pinyinPdf": "shǒugōng",
+   "pos": "N",
+   "ocr": "手工"
+  },
+  {
+   "no": 656,
+   "officialId": "L4-0656",
+   "hanzi": "手里",
+   "pinyin": "shǒu li",
+   "pinyinPdf": "shǒu li",
+   "pos": "",
+   "ocr": "手里"
+  },
+  {
+   "no": 657,
+   "officialId": "L4-0657",
+   "hanzi": "手术",
+   "pinyin": "shǒushù",
+   "pinyinPdf": "shǒushù",
+   "pos": "N",
+   "ocr": "手术"
+  },
+  {
+   "no": 658,
+   "officialId": "L4-0658",
+   "hanzi": "手套",
+   "pinyin": "shǒutào",
+   "pinyinPdf": "shǒutào",
+   "pos": "N",
+   "ocr": "手套"
+  },
+  {
+   "no": 659,
+   "officialId": "L4-0659",
+   "hanzi": "守",
+   "pinyin": "shǒu",
+   "pinyinPdf": "shǒu",
+   "pos": "V",
+   "ocr": "守"
+  },
+  {
+   "no": 660,
+   "officialId": "L4-0660",
+   "hanzi": "首",
+   "pinyin": "shǒu",
+   "pinyinPdf": "shǒu",
+   "pos": "M",
+   "ocr": "首（量）"
+  },
+  {
+   "no": 661,
+   "officialId": "L4-0661",
+   "hanzi": "受不了",
+   "pinyin": "shòubuliǎo",
+   "pinyinPdf": "shòubuliǎo",
+   "pos": "V",
+   "ocr": "受不了"
+  },
+  {
+   "no": 662,
+   "officialId": "L4-0662",
+   "hanzi": "售货员",
+   "pinyin": "shòuhuòyuán",
+   "pinyinPdf": "shòuhuòyuán",
+   "pos": "N",
+   "ocr": "售货员"
+  },
+  {
+   "no": 663,
+   "officialId": "L4-0663",
+   "hanzi": "叔叔",
+   "pinyin": "shūshu",
+   "pinyinPdf": "shūshu",
+   "pos": "N",
+   "ocr": "叔叔"
+  },
+  {
+   "no": 664,
+   "officialId": "L4-0664",
+   "hanzi": "舒适",
+   "pinyin": "shūshì",
+   "pinyinPdf": "shūshì",
+   "pos": "Adj",
+   "ocr": "舒适"
+  },
+  {
+   "no": 665,
+   "officialId": "L4-0665",
+   "hanzi": "熟练",
+   "pinyin": "shúliàn",
+   "pinyinPdf": "shúliàn",
+   "pos": "Adj",
+   "ocr": "熟练"
+  },
+  {
+   "no": 666,
+   "officialId": "L4-0666",
+   "hanzi": "暑假",
+   "pinyin": "shǔjià",
+   "pinyinPdf": "shǔjià",
+   "pos": "N",
+   "ocr": "暑假"
+  },
+  {
+   "no": 667,
+   "officialId": "L4-0667",
+   "hanzi": "树林",
+   "pinyin": "shùlín",
+   "pinyinPdf": "shùlín",
+   "pos": "N",
+   "ocr": "树林"
+  },
+  {
+   "no": 668,
+   "officialId": "L4-0668",
+   "hanzi": "树叶",
+   "pinyin": "shùyè",
+   "pinyinPdf": "shùyè",
+   "pos": "N",
+   "ocr": "树叶"
+  },
+  {
+   "no": 669,
+   "officialId": "L4-0669",
+   "hanzi": "数据",
+   "pinyin": "shùjù",
+   "pinyinPdf": "shùjù",
+   "pos": "N",
+   "ocr": "数据"
+  },
+  {
+   "no": 670,
+   "officialId": "L4-0670",
+   "hanzi": "数码",
+   "pinyin": "shùmǎ",
+   "pinyinPdf": "shùmǎ",
+   "pos": "N",
+   "ocr": "数码"
+  },
+  {
+   "no": 671,
+   "officialId": "L4-0671",
+   "hanzi": "刷",
+   "pinyin": "shuā",
+   "pinyinPdf": "shuā",
+   "pos": "V",
+   "ocr": "刷"
+  },
+  {
+   "no": 672,
+   "officialId": "L4-0672",
+   "hanzi": "刷牙",
+   "pinyin": "shuā yá",
+   "pinyinPdf": "shuā yá",
+   "pos": "",
+   "ocr": "刷牙"
+  },
+  {
+   "no": 673,
+   "officialId": "L4-0673",
+   "hanzi": "刷子",
+   "pinyin": "shuāzi",
+   "pinyinPdf": "shuāzi",
+   "pos": "N",
+   "ocr": "刷子"
+  },
+  {
+   "no": 674,
+   "officialId": "L4-0674",
+   "hanzi": "帅",
+   "pinyin": "shuài",
+   "pinyinPdf": "shuài",
+   "pos": "Adj",
+   "ocr": "帅"
+  },
+  {
+   "no": 675,
+   "officialId": "L4-0675",
+   "hanzi": "帅哥",
+   "pinyin": "shuàigē",
+   "pinyinPdf": "shuàigē",
+   "pos": "N",
+   "ocr": "帅哥"
+  },
+  {
+   "no": 676,
+   "officialId": "L4-0676",
+   "hanzi": "率先",
+   "pinyin": "shuàixiān",
+   "pinyinPdf": "shuàixiān",
+   "pos": "Adv",
+   "ocr": "率先"
+  },
+  {
+   "no": 677,
+   "officialId": "L4-0677",
+   "hanzi": "睡着",
+   "pinyin": "shuìzháo",
+   "pinyinPdf": "shuìzháo",
+   "pos": "",
+   "ocr": "睡着"
+  },
+  {
+   "no": 678,
+   "officialId": "L4-0678",
+   "hanzi": "顺序",
+   "pinyin": "shùnxù",
+   "pinyinPdf": "shùnxù",
+   "pos": "N",
+   "ocr": "顺序"
+  },
+  {
+   "no": 679,
+   "officialId": "L4-0679",
+   "hanzi": "说不定",
+   "pinyin": "shuōbudìng",
+   "pinyinPdf": "shuōbudìng",
+   "pos": "V/Adv",
+   "ocr": "说不定"
+  },
+  {
+   "no": 680,
+   "officialId": "L4-0680",
+   "hanzi": "说服",
+   "pinyin": "shuōfú",
+   "pinyinPdf": "shuōfú",
+   "pos": "V",
+   "ocr": "说服"
+  },
+  {
+   "no": 681,
+   "officialId": "L4-0681",
+   "hanzi": "思考",
+   "pinyin": "sīkǎo",
+   "pinyinPdf": "sīkǎo",
+   "pos": "V",
+   "ocr": "思考"
+  },
+  {
+   "no": 682,
+   "officialId": "L4-0682",
+   "hanzi": "似乎",
+   "pinyin": "sìhū",
+   "pinyinPdf": "sìhū",
+   "pos": "Adv",
+   "ocr": "似乎"
+  },
+  {
+   "no": 683,
+   "officialId": "L4-0683",
+   "hanzi": "松",
+   "pinyin": "sōng",
+   "pinyinPdf": "sōng",
+   "pos": "Adj/V",
+   "ocr": "松"
+  },
+  {
+   "no": 684,
+   "officialId": "L4-0684",
+   "hanzi": "松树",
+   "pinyin": "sōngshù",
+   "pinyinPdf": "sōngshù",
+   "pos": "N",
+   "ocr": "松树"
+  },
+  {
+   "no": 685,
+   "officialId": "L4-0685",
+   "hanzi": "塑料",
+   "pinyin": "sùliào",
+   "pinyinPdf": "sùliào",
+   "pos": "N",
+   "ocr": "塑料"
+  },
+  {
+   "no": 686,
+   "officialId": "L4-0686",
+   "hanzi": "塑料袋",
+   "pinyin": "sùliàodài",
+   "pinyinPdf": "sùliàodài",
+   "pos": "N",
+   "ocr": "塑料袋"
+  },
+  {
+   "no": 687,
+   "officialId": "L4-0687",
+   "hanzi": "酸",
+   "pinyin": "suān",
+   "pinyinPdf": "suān",
+   "pos": "Adj",
+   "ocr": "酸"
+  },
+  {
+   "no": 688,
+   "officialId": "L4-0688",
+   "hanzi": "酸奶",
+   "pinyin": "suānnǎi",
+   "pinyinPdf": "suānnǎi",
+   "pos": "N",
+   "ocr": "酸奶"
+  },
+  {
+   "no": 689,
+   "officialId": "L4-0689",
+   "hanzi": "随手",
+   "pinyin": "suíshǒu",
+   "pinyinPdf": "suíshǒu",
+   "pos": "Adv",
+   "ocr": "随手"
+  },
+  {
+   "no": 690,
+   "officialId": "L4-0690",
+   "hanzi": "孙女",
+   "pinyin": "sūnnǚ",
+   "pinyinPdf": "sūnnǚ",
+   "pos": "N",
+   "ocr": "孙女"
+  },
+  {
+   "no": 691,
+   "officialId": "L4-0691",
+   "hanzi": "孙子",
+   "pinyin": "sūnzi",
+   "pinyinPdf": "sūnzi",
+   "pos": "N",
+   "ocr": "孙子"
+  },
+  {
+   "no": 692,
+   "officialId": "L4-0692",
+   "hanzi": "缩短",
+   "pinyin": "suōduǎn",
+   "pinyinPdf": "suōduǎn",
+   "pos": "V",
+   "ocr": "缩短"
+  },
+  {
+   "no": 693,
+   "officialId": "L4-0693",
+   "hanzi": "缩小",
+   "pinyin": "suōxiǎo",
+   "pinyinPdf": "suōxiǎo",
+   "pos": "V",
+   "ocr": "缩小"
+  },
+  {
+   "no": 694,
+   "officialId": "L4-0694",
+   "hanzi": "台阶",
+   "pinyin": "táijiē",
+   "pinyinPdf": "táijiē",
+   "pos": "N",
+   "ocr": "台阶"
+  },
+  {
+   "no": 695,
+   "officialId": "L4-0695",
+   "hanzi": "台上",
+   "pinyin": "táishàng",
+   "pinyinPdf": "táishàng",
+   "pos": "N",
+   "ocr": "台上"
+  },
+  {
+   "no": 696,
+   "officialId": "L4-0696",
+   "hanzi": "躺",
+   "pinyin": "tǎng",
+   "pinyinPdf": "tǎng",
+   "pos": "V",
+   "ocr": "躺"
+  },
+  {
+   "no": 697,
+   "officialId": "L4-0697",
+   "hanzi": "套餐",
+   "pinyin": "tàocān",
+   "pinyinPdf": "tàocān",
+   "pos": "N",
+   "ocr": "套餐"
+  },
+  {
+   "no": 698,
+   "officialId": "L4-0698",
+   "hanzi": "特价",
+   "pinyin": "tèjià",
+   "pinyinPdf": "tèjià",
+   "pos": "N",
+   "ocr": "特价"
+  },
+  {
+   "no": 699,
+   "officialId": "L4-0699",
+   "hanzi": "特殊",
+   "pinyin": "tèshū",
+   "pinyinPdf": "tèshū",
+   "pos": "Adj",
+   "ocr": "特殊"
+  },
+  {
+   "no": 700,
+   "officialId": "L4-0700",
+   "hanzi": "特征",
+   "pinyin": "tèzhēng",
+   "pinyinPdf": "tèzhēng",
+   "pos": "N",
+   "ocr": "特征"
+  },
+  {
+   "no": 701,
+   "officialId": "L4-0701",
+   "hanzi": "提供",
+   "pinyin": "tígōng",
+   "pinyinPdf": "tígōng",
+   "pos": "V",
+   "ocr": "提供"
+  },
+  {
+   "no": 702,
+   "officialId": "L4-0702",
+   "hanzi": "提醒",
+   "pinyin": "tíxǐng",
+   "pinyinPdf": "tíxǐng",
+   "pos": "",
+   "ocr": "提醒"
+  },
+  {
+   "no": 703,
+   "officialId": "L4-0703",
+   "hanzi": "体操",
+   "pinyin": "tǐcāo",
+   "pinyinPdf": "tǐcāo",
+   "pos": "N",
+   "ocr": "体操"
+  },
+  {
+   "no": 704,
+   "officialId": "L4-0704",
+   "hanzi": "体检",
+   "pinyin": "tǐjiǎn",
+   "pinyinPdf": "tǐjiǎn",
+   "pos": "V",
+   "ocr": "体检"
+  },
+  {
+   "no": 705,
+   "officialId": "L4-0705",
+   "hanzi": "体重",
+   "pinyin": "tǐzhòng",
+   "pinyinPdf": "tǐzhòng",
+   "pos": "N",
+   "ocr": "体重"
+  },
+  {
+   "no": 706,
+   "officialId": "L4-0706",
+   "hanzi": "替",
+   "pinyin": "tì",
+   "pinyinPdf": "tì",
+   "pos": "V/Prep",
+   "ocr": "替"
+  },
+  {
+   "no": 707,
+   "officialId": "L4-0707",
+   "hanzi": "替代",
+   "pinyin": "tìdài",
+   "pinyinPdf": "tìdài",
+   "pos": "V",
+   "ocr": "替代"
+  },
+  {
+   "no": 708,
+   "officialId": "L4-0708",
+   "hanzi": "天真",
+   "pinyin": "tiānzhēn",
+   "pinyinPdf": "tiānzhēn",
+   "pos": "Adj",
+   "ocr": "天真"
+  },
+  {
+   "no": 709,
+   "officialId": "L4-0709",
+   "hanzi": "填",
+   "pinyin": "tián",
+   "pinyinPdf": "tián",
+   "pos": "V",
+   "ocr": "填"
+  },
+  {
+   "no": 710,
+   "officialId": "L4-0710",
+   "hanzi": "填空",
+   "pinyin": "tiánkòng",
+   "pinyinPdf": "tiánkòng",
+   "pos": "",
+   "ocr": "填空"
+  },
+  {
+   "no": 711,
+   "officialId": "L4-0711",
+   "hanzi": "挑",
+   "pinyin": "tiāo",
+   "pinyinPdf": "tiāo",
+   "pos": "V",
+   "ocr": "挑"
+  },
+  {
+   "no": 712,
+   "officialId": "L4-0712",
+   "hanzi": "挑选",
+   "pinyin": "tiāoxuǎn",
+   "pinyinPdf": "tiāoxuǎn",
+   "pos": "V",
+   "ocr": "挑选"
+  },
+  {
+   "no": 713,
+   "officialId": "L4-0713",
+   "hanzi": "调皮",
+   "pinyin": "tiáopí",
+   "pinyinPdf": "tiáopí",
+   "pos": "Adj",
+   "ocr": "调皮"
+  },
+  {
+   "no": 714,
+   "officialId": "L4-0714",
+   "hanzi": "挑",
+   "pinyin": "tiǎo",
+   "pinyinPdf": "tiǎo",
+   "pos": "V",
+   "ocr": "挑"
+  },
+  {
+   "no": 715,
+   "officialId": "L4-0715",
+   "hanzi": "挑战",
+   "pinyin": "tiǎozhàn",
+   "pinyinPdf": "tiǎozhàn",
+   "pos": "",
+   "ocr": "挑战"
+  },
+  {
+   "no": 716,
+   "officialId": "L4-0716",
+   "hanzi": "贴",
+   "pinyin": "tiē",
+   "pinyinPdf": "tiē",
+   "pos": "V",
+   "ocr": "贴"
+  },
+  {
+   "no": 717,
+   "officialId": "L4-0717",
+   "hanzi": "停下",
+   "pinyin": "tíngxia",
+   "pinyinPdf": "tíngxia",
+   "pos": "",
+   "ocr": "停下"
+  },
+  {
+   "no": 718,
+   "officialId": "L4-0718",
+   "hanzi": "挺",
+   "pinyin": "tǐng",
+   "pinyinPdf": "tǐng",
+   "pos": "V",
+   "ocr": "挺（动）"
+  },
+  {
+   "no": 719,
+   "officialId": "L4-0719",
+   "hanzi": "通知书",
+   "pinyin": "tōngzhīshū",
+   "pinyinPdf": "tōngzhīshū",
+   "pos": "N",
+   "ocr": "通知书"
+  },
+  {
+   "no": 720,
+   "officialId": "L4-0720",
+   "hanzi": "同情",
+   "pinyin": "tóngqíng",
+   "pinyinPdf": "tóngqíng",
+   "pos": "V",
+   "ocr": "同情"
+  },
+  {
+   "no": 721,
+   "officialId": "L4-0721",
+   "hanzi": "童话",
+   "pinyin": "tónghuà",
+   "pinyinPdf": "tónghuà",
+   "pos": "N",
+   "ocr": "童话"
+  },
+  {
+   "no": 722,
+   "officialId": "L4-0722",
+   "hanzi": "童年",
+   "pinyin": "tóngnián",
+   "pinyinPdf": "tóngnián",
+   "pos": "N",
+   "ocr": "童年"
+  },
+  {
+   "no": 723,
+   "officialId": "L4-0723",
+   "hanzi": "统计",
+   "pinyin": "tǒngjì",
+   "pinyinPdf": "tǒngjì",
+   "pos": "V",
+   "ocr": "统计"
+  },
+  {
+   "no": 724,
+   "officialId": "L4-0724",
+   "hanzi": "统一",
+   "pinyin": "tǒngyī",
+   "pinyinPdf": "tǒngyī",
+   "pos": "V/Adj",
+   "ocr": "统一"
+  },
+  {
+   "no": 725,
+   "officialId": "L4-0725",
+   "hanzi": "痛快",
+   "pinyin": "tòngkuài",
+   "pinyinPdf": "tòngkuài",
+   "pos": "Adj",
+   "ocr": "痛快"
+  },
+  {
+   "no": 726,
+   "officialId": "L4-0726",
+   "hanzi": "投",
+   "pinyin": "tóu",
+   "pinyinPdf": "tóu",
+   "pos": "V",
+   "ocr": "投"
+  },
+  {
+   "no": 727,
+   "officialId": "L4-0727",
+   "hanzi": "投入",
+   "pinyin": "tóurù",
+   "pinyinPdf": "tóurù",
+   "pos": "V/N",
+   "ocr": "投入"
+  },
+  {
+   "no": 728,
+   "officialId": "L4-0728",
+   "hanzi": "投诉",
+   "pinyin": "tóusù",
+   "pinyinPdf": "tóusù",
+   "pos": "V",
+   "ocr": "投诉"
+  },
+  {
+   "no": 729,
+   "officialId": "L4-0729",
+   "hanzi": "投资",
+   "pinyin": "tóuzī",
+   "pinyinPdf": "tóuzī",
+   "pos": "N",
+   "ocr": "投资"
+  },
+  {
+   "no": 730,
+   "officialId": "L4-0730",
+   "hanzi": "透",
+   "pinyin": "tòu",
+   "pinyinPdf": "tòu",
+   "pos": "V/Adj",
+   "ocr": "透"
+  },
+  {
+   "no": 731,
+   "officialId": "L4-0731",
+   "hanzi": "透明",
+   "pinyin": "tòumíng",
+   "pinyinPdf": "tòumíng",
+   "pos": "Adj",
+   "ocr": "透明"
+  },
+  {
+   "no": 732,
+   "officialId": "L4-0732",
+   "hanzi": "图案",
+   "pinyin": "tú'àn",
+   "pinyinPdf": "tú'àn",
+   "pos": "N",
+   "ocr": "图案"
+  },
+  {
+   "no": 733,
+   "officialId": "L4-0733",
+   "hanzi": "途中",
+   "pinyin": "túzhōng",
+   "pinyinPdf": "túzhōng",
+   "pos": "N",
+   "ocr": "途中"
+  },
+  {
+   "no": 734,
+   "officialId": "L4-0734",
+   "hanzi": "土地",
+   "pinyin": "tǔdì",
+   "pinyinPdf": "tǔdì",
+   "pos": "N",
+   "ocr": "土地"
+  },
+  {
+   "no": 735,
+   "officialId": "L4-0735",
+   "hanzi": "推迟",
+   "pinyin": "tuīchí",
+   "pinyinPdf": "tuīchí",
+   "pos": "V",
+   "ocr": "推迟"
+  },
+  {
+   "no": 736,
+   "officialId": "L4-0736",
+   "hanzi": "推销",
+   "pinyin": "tuīxiāo",
+   "pinyinPdf": "tuīxiāo",
+   "pos": "V",
+   "ocr": "推销"
+  },
+  {
+   "no": 737,
+   "officialId": "L4-0737",
+   "hanzi": "脱",
+   "pinyin": "tuō",
+   "pinyinPdf": "tuō",
+   "pos": "V",
+   "ocr": "脱"
+  },
+  {
+   "no": 738,
+   "officialId": "L4-0738",
+   "hanzi": "袜子",
+   "pinyin": "wàzi",
+   "pinyinPdf": "wàzi",
+   "pos": "N",
+   "ocr": "袜子"
+  },
+  {
+   "no": 739,
+   "officialId": "L4-0739",
+   "hanzi": "外汇",
+   "pinyin": "wàihuì",
+   "pinyinPdf": "wàihuì",
+   "pos": "N",
+   "ocr": "外汇"
+  },
+  {
+   "no": 740,
+   "officialId": "L4-0740",
+   "hanzi": "外交官",
+   "pinyin": "wàijiāoguān",
+   "pinyinPdf": "wàijiāoguān",
+   "pos": "N",
+   "ocr": "外交官"
+  },
+  {
+   "no": 741,
+   "officialId": "L4-0741",
+   "hanzi": "外套",
+   "pinyin": "wàitào",
+   "pinyinPdf": "wàitào",
+   "pos": "N",
+   "ocr": "外套"
+  },
+  {
+   "no": 742,
+   "officialId": "L4-0742",
+   "hanzi": "弯",
+   "pinyin": "wān",
+   "pinyinPdf": "wān",
+   "pos": "Adj/V",
+   "ocr": "弯"
+  },
+  {
+   "no": 743,
+   "officialId": "L4-0743",
+   "hanzi": "晚点",
+   "pinyin": "wǎndiǎn",
+   "pinyinPdf": "wǎndiǎn",
+   "pos": "",
+   "ocr": "晚点"
+  },
+  {
+   "no": 744,
+   "officialId": "L4-0744",
+   "hanzi": "万一",
+   "pinyin": "wànyī",
+   "pinyinPdf": "wànyī",
+   "pos": "N/Conj",
+   "ocr": "万一"
+  },
+  {
+   "no": 745,
+   "officialId": "L4-0745",
+   "hanzi": "王",
+   "pinyin": "wáng",
+   "pinyinPdf": "wáng",
+   "pos": "N",
+   "ocr": "王"
+  },
+  {
+   "no": 746,
+   "officialId": "L4-0746",
+   "hanzi": "网络",
+   "pinyin": "wǎngluò",
+   "pinyinPdf": "wǎngluò",
+   "pos": "N",
+   "ocr": "网络"
+  },
+  {
+   "no": 747,
+   "officialId": "L4-0747",
+   "hanzi": "网址",
+   "pinyin": "wǎngzhǐ",
+   "pinyinPdf": "wǎngzhǐ",
+   "pos": "N",
+   "ocr": "网址"
+  },
+  {
+   "no": 748,
+   "officialId": "L4-0748",
+   "hanzi": "微笑",
+   "pinyin": "wēixiào",
+   "pinyinPdf": "wēixiào",
+   "pos": "V",
+   "ocr": "微笑"
+  },
+  {
+   "no": 749,
+   "officialId": "L4-0749",
+   "hanzi": "微信",
+   "pinyin": "wēixìn",
+   "pinyinPdf": "wēixìn",
+   "pos": "N",
+   "ocr": "微信"
+  },
+  {
+   "no": 750,
+   "officialId": "L4-0750",
+   "hanzi": "围巾",
+   "pinyin": "wéijīn",
+   "pinyinPdf": "wéijīn",
+   "pos": "N",
+   "ocr": "围巾"
+  },
+  {
+   "no": 751,
+   "officialId": "L4-0751",
+   "hanzi": "维持",
+   "pinyin": "wéichí",
+   "pinyinPdf": "wéichí",
+   "pos": "V",
+   "ocr": "维持"
+  },
+  {
+   "no": 752,
+   "officialId": "L4-0752",
+   "hanzi": "维护",
+   "pinyin": "wéihù",
+   "pinyinPdf": "wéihù",
+   "pos": "V",
+   "ocr": "维护"
+  },
+  {
+   "no": 753,
+   "officialId": "L4-0753",
+   "hanzi": "维修",
+   "pinyin": "wéixiū",
+   "pinyinPdf": "wéixiū",
+   "pos": "V",
+   "ocr": "维修"
+  },
+  {
+   "no": 754,
+   "officialId": "L4-0754",
+   "hanzi": "尾巴",
+   "pinyin": "wěiba",
+   "pinyinPdf": "wěiba",
+   "pos": "N",
+   "ocr": "尾巴"
+  },
+  {
+   "no": 755,
+   "officialId": "L4-0755",
+   "hanzi": "未必",
+   "pinyin": "wèibì",
+   "pinyinPdf": "wèibì",
+   "pos": "Adv",
+   "ocr": "未必"
+  },
+  {
+   "no": 756,
+   "officialId": "L4-0756",
+   "hanzi": "未来",
+   "pinyin": "wèilái",
+   "pinyinPdf": "wèilái",
+   "pos": "N",
+   "ocr": "未来"
+  },
+  {
+   "no": 757,
+   "officialId": "L4-0757",
+   "hanzi": "位于",
+   "pinyin": "wèiyú",
+   "pinyinPdf": "wèiyú",
+   "pos": "V",
+   "ocr": "位于"
+  },
+  {
+   "no": 758,
+   "officialId": "L4-0758",
+   "hanzi": "位置",
+   "pinyin": "wèizhì",
+   "pinyinPdf": "wèizhì",
+   "pos": "N",
+   "ocr": "位置"
+  },
+  {
+   "no": 759,
+   "officialId": "L4-0759",
+   "hanzi": "味儿",
+   "pinyin": "wèir",
+   "pinyinPdf": "wèir",
+   "pos": "N",
+   "ocr": "味儿"
+  },
+  {
+   "no": 760,
+   "officialId": "L4-0760",
+   "hanzi": "喂",
+   "pinyin": "wèi",
+   "pinyinPdf": "wèi",
+   "pos": "V",
+   "ocr": "喂（动）"
+  },
+  {
+   "no": 761,
+   "officialId": "L4-0761",
+   "hanzi": "稳",
+   "pinyin": "wěn",
+   "pinyinPdf": "wěn",
+   "pos": "Adj",
+   "ocr": "稳"
+  },
+  {
+   "no": 762,
+   "officialId": "L4-0762",
+   "hanzi": "稳定",
+   "pinyin": "wěndìng",
+   "pinyinPdf": "wěndìng",
+   "pos": "Adj",
+   "ocr": "稳定"
+  },
+  {
+   "no": 763,
+   "officialId": "L4-0763",
+   "hanzi": "问候",
+   "pinyin": "wènhòu",
+   "pinyinPdf": "wènhòu",
+   "pos": "V",
+   "ocr": "问候"
+  },
+  {
+   "no": 764,
+   "officialId": "L4-0764",
+   "hanzi": "无",
+   "pinyin": "wú",
+   "pinyinPdf": "wú",
+   "pos": "V",
+   "ocr": "无"
+  },
+  {
+   "no": 765,
+   "officialId": "L4-0765",
+   "hanzi": "无法",
+   "pinyin": "wúfǎ",
+   "pinyinPdf": "wúfǎ",
+   "pos": "V",
+   "ocr": "无法"
+  },
+  {
+   "no": 766,
+   "officialId": "L4-0766",
+   "hanzi": "无聊",
+   "pinyin": "wúliáo",
+   "pinyinPdf": "wúliáo",
+   "pos": "Adj",
+   "ocr": "无聊"
+  },
+  {
+   "no": 767,
+   "officialId": "L4-0767",
+   "hanzi": "无论",
+   "pinyin": "wúlùn",
+   "pinyinPdf": "wúlùn",
+   "pos": "Conj",
+   "ocr": "无论"
+  },
+  {
+   "no": 768,
+   "officialId": "L4-0768",
+   "hanzi": "无数",
+   "pinyin": "wúshù",
+   "pinyinPdf": "wúshù",
+   "pos": "Adj",
+   "ocr": "无数"
+  },
+  {
+   "no": 769,
+   "officialId": "L4-0769",
+   "hanzi": "无所谓",
+   "pinyin": "wúsuǒwèi",
+   "pinyinPdf": "wúsuǒwèi",
+   "pos": "V",
+   "ocr": "无所谓"
+  },
+  {
+   "no": 770,
+   "officialId": "L4-0770",
+   "hanzi": "无限",
+   "pinyin": "wúxiàn",
+   "pinyinPdf": "wúxiàn",
+   "pos": "Adj",
+   "ocr": "无限"
+  },
+  {
+   "no": 771,
+   "officialId": "L4-0771",
+   "hanzi": "五颜六色",
+   "pinyin": "wǔyán-liùsè",
+   "pinyinPdf": "wǔyán-liùsè",
+   "pos": "",
+   "ocr": "五颜六色"
+  },
+  {
+   "no": 772,
+   "officialId": "L4-0772",
+   "hanzi": "误会",
+   "pinyin": "wùhuì",
+   "pinyinPdf": "wùhuì",
+   "pos": "V/N",
+   "ocr": "误会"
+  },
+  {
+   "no": 773,
+   "officialId": "L4-0773",
+   "hanzi": "西瓜",
+   "pinyin": "xīguā",
+   "pinyinPdf": "xīguā",
+   "pos": "N",
+   "ocr": "西瓜"
+  },
+  {
+   "no": 774,
+   "officialId": "L4-0774",
+   "hanzi": "吸",
+   "pinyin": "xī",
+   "pinyinPdf": "xī",
+   "pos": "V",
+   "ocr": "吸"
+  },
+  {
+   "no": 775,
+   "officialId": "L4-0775",
+   "hanzi": "吸管",
+   "pinyin": "xīguǎn",
+   "pinyinPdf": "xīguǎn",
+   "pos": "N",
+   "ocr": "吸管"
+  },
+  {
+   "no": 776,
+   "officialId": "L4-0776",
+   "hanzi": "吸收",
+   "pinyin": "xīshōu",
+   "pinyinPdf": "xīshōu",
+   "pos": "V",
+   "ocr": "吸收"
+  },
+  {
+   "no": 777,
+   "officialId": "L4-0777",
+   "hanzi": "吸烟",
+   "pinyin": "xīyān",
+   "pinyinPdf": "xīyān",
+   "pos": "V",
+   "ocr": "吸烟"
+  },
+  {
+   "no": 778,
+   "officialId": "L4-0778",
+   "hanzi": "吸引",
+   "pinyin": "xīyǐn",
+   "pinyinPdf": "xīyǐn",
+   "pos": "V",
+   "ocr": "吸引"
+  },
+  {
+   "no": 779,
+   "officialId": "L4-0779",
+   "hanzi": "喜爱",
+   "pinyin": "xǐ'ài",
+   "pinyinPdf": "xǐ'ài",
+   "pos": "V",
+   "ocr": "喜爱"
+  },
+  {
+   "no": 780,
+   "officialId": "L4-0780",
+   "hanzi": "系列",
+   "pinyin": "xìliè",
+   "pinyinPdf": "xìliè",
+   "pos": "N",
+   "ocr": "系列"
+  },
+  {
+   "no": 781,
+   "officialId": "L4-0781",
+   "hanzi": "系统",
+   "pinyin": "xìtǒng",
+   "pinyinPdf": "xìtǒng",
+   "pos": "N/Adj",
+   "ocr": "系统"
+  },
+  {
+   "no": 782,
+   "officialId": "L4-0782",
+   "hanzi": "细",
+   "pinyin": "xì",
+   "pinyinPdf": "xì",
+   "pos": "Adj",
+   "ocr": "细"
+  },
+  {
+   "no": 783,
+   "officialId": "L4-0783",
+   "hanzi": "细节",
+   "pinyin": "xìjié",
+   "pinyinPdf": "xìjié",
+   "pos": "N",
+   "ocr": "细节"
+  },
+  {
+   "no": 784,
+   "officialId": "L4-0784",
+   "hanzi": "细致",
+   "pinyin": "xìzhì",
+   "pinyinPdf": "xìzhì",
+   "pos": "Adj",
+   "ocr": "细致"
+  },
+  {
+   "no": 785,
+   "officialId": "L4-0785",
+   "hanzi": "下个月",
+   "pinyin": "xià ge yuè",
+   "pinyinPdf": "xià ge yuè",
+   "pos": "",
+   "ocr": "下个月"
+  },
+  {
+   "no": 786,
+   "officialId": "L4-0786",
+   "hanzi": "下降",
+   "pinyin": "xiàjiàng",
+   "pinyinPdf": "xiàjiàng",
+   "pos": "V",
+   "ocr": "下降"
+  },
+  {
+   "no": 787,
+   "officialId": "L4-0787",
+   "hanzi": "下楼",
+   "pinyin": "xià lóu",
+   "pinyinPdf": "xià lóu",
+   "pos": "",
+   "ocr": "下楼"
+  },
+  {
+   "no": 788,
+   "officialId": "L4-0788",
+   "hanzi": "下载",
+   "pinyin": "xiàzài",
+   "pinyinPdf": "xiàzài",
+   "pos": "V",
+   "ocr": "下载"
+  },
+  {
+   "no": 789,
+   "officialId": "L4-0789",
+   "hanzi": "夏季",
+   "pinyin": "xiàjì",
+   "pinyinPdf": "xiàjì",
+   "pos": "N",
+   "ocr": "夏季"
+  },
+  {
+   "no": 790,
+   "officialId": "L4-0790",
+   "hanzi": "鲜",
+   "pinyin": "xiān",
+   "pinyinPdf": "xiān",
+   "pos": "Adj",
+   "ocr": "鲜"
+  },
+  {
+   "no": 791,
+   "officialId": "L4-0791",
+   "hanzi": "鲜花",
+   "pinyin": "xiānhuā",
+   "pinyinPdf": "xiānhuā",
+   "pos": "N",
+   "ocr": "鲜花"
+  },
+  {
+   "no": 792,
+   "officialId": "L4-0792",
+   "hanzi": "鲜明",
+   "pinyin": "xiānmíng",
+   "pinyinPdf": "xiānmíng",
+   "pos": "Adj",
+   "ocr": "鲜明"
+  },
+  {
+   "no": 793,
+   "officialId": "L4-0793",
+   "hanzi": "咸",
+   "pinyin": "xián",
+   "pinyinPdf": "xián",
+   "pos": "Adj",
+   "ocr": "咸"
+  },
+  {
+   "no": 794,
+   "officialId": "L4-0794",
+   "hanzi": "显著",
+   "pinyin": "xiǎnzhù",
+   "pinyinPdf": "xiǎnzhù",
+   "pos": "Adj",
+   "ocr": "显著"
+  },
+  {
+   "no": 795,
+   "officialId": "L4-0795",
+   "hanzi": "县",
+   "pinyin": "xiàn",
+   "pinyinPdf": "xiàn",
+   "pos": "N",
+   "ocr": "县"
+  },
+  {
+   "no": 796,
+   "officialId": "L4-0796",
+   "hanzi": "限制",
+   "pinyin": "xiànzhì",
+   "pinyinPdf": "xiànzhì",
+   "pos": "V/N",
+   "ocr": "限制"
+  },
+  {
+   "no": 797,
+   "officialId": "L4-0797",
+   "hanzi": "相处",
+   "pinyin": "xiāngchǔ",
+   "pinyinPdf": "xiāngchǔ",
+   "pos": "V",
+   "ocr": "相处"
+  },
+  {
+   "no": 798,
+   "officialId": "L4-0798",
+   "hanzi": "相反",
+   "pinyin": "xiāngfǎn",
+   "pinyinPdf": "xiāngfǎn",
+   "pos": "Adj/Conj",
+   "ocr": "相反"
+  },
+  {
+   "no": 799,
+   "officialId": "L4-0799",
+   "hanzi": "箱",
+   "pinyin": "xiāng",
+   "pinyinPdf": "xiāng",
+   "pos": "M",
+   "ocr": "箱"
+  },
+  {
+   "no": 800,
+   "officialId": "L4-0800",
+   "hanzi": "箱子",
+   "pinyin": "xiāngzi",
+   "pinyinPdf": "xiāngzi",
+   "pos": "N",
+   "ocr": "箱子"
+  },
+  {
+   "no": 801,
+   "officialId": "L4-0801",
+   "hanzi": "想念",
+   "pinyin": "xiǎngniàn",
+   "pinyinPdf": "xiǎngniàn",
+   "pos": "V",
+   "ocr": "想念"
+  },
+  {
+   "no": 802,
+   "officialId": "L4-0802",
+   "hanzi": "想象",
+   "pinyin": "xiǎngxiàng",
+   "pinyinPdf": "xiǎngxiàng",
+   "pos": "N/V",
+   "ocr": "想象"
+  },
+  {
+   "no": 803,
+   "officialId": "L4-0803",
+   "hanzi": "项",
+   "pinyin": "xiàng",
+   "pinyinPdf": "xiàng",
+   "pos": "M",
+   "ocr": "项"
+  },
+  {
+   "no": 804,
+   "officialId": "L4-0804",
+   "hanzi": "项目",
+   "pinyin": "xiàngmù",
+   "pinyinPdf": "xiàngmù",
+   "pos": "N",
+   "ocr": "项目"
+  },
+  {
+   "no": 805,
+   "officialId": "L4-0805",
+   "hanzi": "相片",
+   "pinyin": "xiàngpiàn",
+   "pinyinPdf": "xiàngpiàn",
+   "pos": "N",
+   "ocr": "相片"
+  },
+  {
+   "no": 806,
+   "officialId": "L4-0806",
+   "hanzi": "消化",
+   "pinyin": "xiāohuà",
+   "pinyinPdf": "xiāohuà",
+   "pos": "V",
+   "ocr": "消化"
+  },
+  {
+   "no": 807,
+   "officialId": "L4-0807",
+   "hanzi": "销售",
+   "pinyin": "xiāoshòu",
+   "pinyinPdf": "xiāoshòu",
+   "pos": "V",
+   "ocr": "销售"
+  },
+  {
+   "no": 808,
+   "officialId": "L4-0808",
+   "hanzi": "小吃",
+   "pinyin": "xiǎochī",
+   "pinyinPdf": "xiǎochī",
+   "pos": "N",
+   "ocr": "小吃"
+  },
+  {
+   "no": 809,
+   "officialId": "L4-0809",
+   "hanzi": "小伙子",
+   "pinyin": "xiǎohuǒzi",
+   "pinyinPdf": "xiǎohuǒzi",
+   "pos": "N",
+   "ocr": "小伙子"
+  },
+  {
+   "no": 810,
+   "officialId": "L4-0810",
+   "hanzi": "小型",
+   "pinyin": "xiǎoxíng",
+   "pinyinPdf": "xiǎoxíng",
+   "pos": "Adj",
+   "ocr": "小型"
+  },
+  {
+   "no": 811,
+   "officialId": "L4-0811",
+   "hanzi": "效率",
+   "pinyin": "xiàolǜ",
+   "pinyinPdf": "xiàolǜ",
+   "pos": "N",
+   "ocr": "效率"
+  },
+  {
+   "no": 812,
+   "officialId": "L4-0812",
+   "hanzi": "些",
+   "pinyin": "xiē",
+   "pinyinPdf": "xiē",
+   "pos": "M",
+   "ocr": "些"
+  },
+  {
+   "no": 813,
+   "officialId": "L4-0813",
+   "hanzi": "心理",
+   "pinyin": "xīnlǐ",
+   "pinyinPdf": "xīnlǐ",
+   "pos": "N",
+   "ocr": "心理"
+  },
+  {
+   "no": 814,
+   "officialId": "L4-0814",
+   "hanzi": "新郎",
+   "pinyin": "xīnláng",
+   "pinyinPdf": "xīnláng",
+   "pos": "N",
+   "ocr": "新郎"
+  },
+  {
+   "no": 815,
+   "officialId": "L4-0815",
+   "hanzi": "新娘",
+   "pinyin": "xīnniáng",
+   "pinyinPdf": "xīnniáng",
+   "pos": "N",
+   "ocr": "新娘"
+  },
+  {
+   "no": 816,
+   "officialId": "L4-0816",
+   "hanzi": "新鲜",
+   "pinyin": "xīnxiān",
+   "pinyinPdf": "xīnxiān",
+   "pos": "Adj",
+   "ocr": "新鲜"
+  },
+  {
+   "no": 817,
+   "officialId": "L4-0817",
+   "hanzi": "新型",
+   "pinyin": "xīnxíng",
+   "pinyinPdf": "xīnxíng",
+   "pos": "Adj",
+   "ocr": "新型"
+  },
+  {
+   "no": 818,
+   "officialId": "L4-0818",
+   "hanzi": "兴奋",
+   "pinyin": "xīngfèn",
+   "pinyinPdf": "xīngfèn",
+   "pos": "Adj",
+   "ocr": "兴奋"
+  },
+  {
+   "no": 819,
+   "officialId": "L4-0819",
+   "hanzi": "形容",
+   "pinyin": "xíngróng",
+   "pinyinPdf": "xíngróng",
+   "pos": "V",
+   "ocr": "形容"
+  },
+  {
+   "no": 820,
+   "officialId": "L4-0820",
+   "hanzi": "形势",
+   "pinyin": "xíngshì",
+   "pinyinPdf": "xíngshì",
+   "pos": "N",
+   "ocr": "形势"
+  },
+  {
+   "no": 821,
+   "officialId": "L4-0821",
+   "hanzi": "型",
+   "pinyin": "xíng",
+   "pinyinPdf": "xíng",
+   "pos": "N",
+   "ocr": "型"
+  },
+  {
+   "no": 822,
+   "officialId": "L4-0822",
+   "hanzi": "型号",
+   "pinyin": "xínghào",
+   "pinyinPdf": "xínghào",
+   "pos": "N",
+   "ocr": "型号"
+  },
+  {
+   "no": 823,
+   "officialId": "L4-0823",
+   "hanzi": "醒",
+   "pinyin": "xǐng",
+   "pinyinPdf": "xǐng",
+   "pos": "V",
+   "ocr": "醒"
+  },
+  {
+   "no": 824,
+   "officialId": "L4-0824",
+   "hanzi": "兴趣",
+   "pinyin": "xìngqù",
+   "pinyinPdf": "xìngqù",
+   "pos": "N",
+   "ocr": "兴趣"
+  },
+  {
+   "no": 825,
+   "officialId": "L4-0825",
+   "hanzi": "性质",
+   "pinyin": "xìngzhì",
+   "pinyinPdf": "xìngzhì",
+   "pos": "N",
+   "ocr": "性质"
+  },
+  {
+   "no": 826,
+   "officialId": "L4-0826",
+   "hanzi": "兄弟",
+   "pinyin": "xiōngdì",
+   "pinyinPdf": "xiōngdì",
+   "pos": "N",
+   "ocr": "兄弟"
+  },
+  {
+   "no": 827,
+   "officialId": "L4-0827",
+   "hanzi": "胸部",
+   "pinyin": "xiōngbù",
+   "pinyinPdf": "xiōngbù",
+   "pos": "N",
+   "ocr": "胸部"
+  },
+  {
+   "no": 828,
+   "officialId": "L4-0828",
+   "hanzi": "修理",
+   "pinyin": "xiūlǐ",
+   "pinyinPdf": "xiūlǐ",
+   "pos": "V",
+   "ocr": "修理"
+  },
+  {
+   "no": 829,
+   "officialId": "L4-0829",
+   "hanzi": "选择",
+   "pinyin": "xuǎnzé",
+   "pinyinPdf": "xuǎnzé",
+   "pos": "V/N",
+   "ocr": "选择"
+  },
+  {
+   "no": 830,
+   "officialId": "L4-0830",
+   "hanzi": "学分",
+   "pinyin": "xuéfēn",
+   "pinyinPdf": "xuéfēn",
+   "pos": "N",
+   "ocr": "学分"
+  },
+  {
+   "no": 831,
+   "officialId": "L4-0831",
+   "hanzi": "学年",
+   "pinyin": "xuénián",
+   "pinyinPdf": "xuénián",
+   "pos": "N",
+   "ocr": "学年"
+  },
+  {
+   "no": 832,
+   "officialId": "L4-0832",
+   "hanzi": "学时",
+   "pinyin": "xuéshí",
+   "pinyinPdf": "xuéshí",
+   "pos": "N",
+   "ocr": "学时"
+  },
+  {
+   "no": 833,
+   "officialId": "L4-0833",
+   "hanzi": "学术",
+   "pinyin": "xuéshù",
+   "pinyinPdf": "xuéshù",
+   "pos": "N",
+   "ocr": "学术"
+  },
+  {
+   "no": 834,
+   "officialId": "L4-0834",
+   "hanzi": "学问",
+   "pinyin": "xuéwen",
+   "pinyinPdf": "xuéwen",
+   "pos": "N",
+   "ocr": "学问"
+  },
+  {
+   "no": 835,
+   "officialId": "L4-0835",
+   "hanzi": "寻找",
+   "pinyin": "xúnzhǎo",
+   "pinyinPdf": "xúnzhǎo",
+   "pos": "V",
+   "ocr": "寻找"
+  },
+  {
+   "no": 836,
+   "officialId": "L4-0836",
+   "hanzi": "迅速",
+   "pinyin": "xùnsù",
+   "pinyinPdf": "xùnsù",
+   "pos": "Adj",
+   "ocr": "迅速"
+  },
+  {
+   "no": 837,
+   "officialId": "L4-0837",
+   "hanzi": "牙",
+   "pinyin": "yá",
+   "pinyinPdf": "yá",
+   "pos": "N",
+   "ocr": "牙"
+  },
+  {
+   "no": 838,
+   "officialId": "L4-0838",
+   "hanzi": "牙刷",
+   "pinyin": "yáshuā",
+   "pinyinPdf": "yáshuā",
+   "pos": "N",
+   "ocr": "牙刷"
+  },
+  {
+   "no": 839,
+   "officialId": "L4-0839",
+   "hanzi": "亚运会",
+   "pinyin": "Yàyùnhuì",
+   "pinyinPdf": "Yàyùnhuì",
+   "pos": "N",
+   "ocr": "亚运会"
+  },
+  {
+   "no": 840,
+   "officialId": "L4-0840",
+   "hanzi": "呀",
+   "pinyin": "ya",
+   "pinyinPdf": "ya",
+   "pos": "Aux",
+   "ocr": "呀"
+  },
+  {
+   "no": 841,
+   "officialId": "L4-0841",
+   "hanzi": "延长",
+   "pinyin": "yáncháng",
+   "pinyinPdf": "yáncháng",
+   "pos": "V",
+   "ocr": "延长"
+  },
+  {
+   "no": 842,
+   "officialId": "L4-0842",
+   "hanzi": "延期",
+   "pinyin": "yánqī",
+   "pinyinPdf": "yánqī",
+   "pos": "",
+   "ocr": "延期"
+  },
+  {
+   "no": 843,
+   "officialId": "L4-0843",
+   "hanzi": "延续",
+   "pinyin": "yánxù",
+   "pinyinPdf": "yánxù",
+   "pos": "V",
+   "ocr": "延续"
+  },
+  {
+   "no": 844,
+   "officialId": "L4-0844",
+   "hanzi": "严",
+   "pinyin": "yán",
+   "pinyinPdf": "yán",
+   "pos": "Adj",
+   "ocr": "严"
+  },
+  {
+   "no": 845,
+   "officialId": "L4-0845",
+   "hanzi": "严格",
+   "pinyin": "yángé",
+   "pinyinPdf": "yángé",
+   "pos": "Adj/V",
+   "ocr": "严格"
+  },
+  {
+   "no": 846,
+   "officialId": "L4-0846",
+   "hanzi": "严重",
+   "pinyin": "yánzhòng",
+   "pinyinPdf": "yánzhòng",
+   "pos": "Adj",
+   "ocr": "严重"
+  },
+  {
+   "no": 847,
+   "officialId": "L4-0847",
+   "hanzi": "研究",
+   "pinyin": "yánjiū",
+   "pinyinPdf": "yánjiū",
+   "pos": "V",
+   "ocr": "研究"
+  },
+  {
+   "no": 848,
+   "officialId": "L4-0848",
+   "hanzi": "研究生",
+   "pinyin": "yánjiūshēng",
+   "pinyinPdf": "yánjiūshēng",
+   "pos": "N",
+   "ocr": "研究生"
+  },
+  {
+   "no": 849,
+   "officialId": "L4-0849",
+   "hanzi": "研制",
+   "pinyin": "yánzhì",
+   "pinyinPdf": "yánzhì",
+   "pos": "V",
+   "ocr": "研制"
+  },
+  {
+   "no": 850,
+   "officialId": "L4-0850",
+   "hanzi": "盐",
+   "pinyin": "yán",
+   "pinyinPdf": "yán",
+   "pos": "N",
+   "ocr": "盐"
+  },
+  {
+   "no": 851,
+   "officialId": "L4-0851",
+   "hanzi": "眼镜",
+   "pinyin": "yǎnjìng",
+   "pinyinPdf": "yǎnjìng",
+   "pos": "N",
+   "ocr": "眼镜"
+  },
+  {
+   "no": 852,
+   "officialId": "L4-0852",
+   "hanzi": "眼泪",
+   "pinyin": "yǎnlèi",
+   "pinyinPdf": "yǎnlèi",
+   "pos": "N",
+   "ocr": "眼泪"
+  },
+  {
+   "no": 853,
+   "officialId": "L4-0853",
+   "hanzi": "眼里",
+   "pinyin": "yǎnli",
+   "pinyinPdf": "yǎnli",
+   "pos": "N",
+   "ocr": "眼里"
+  },
+  {
+   "no": 854,
+   "officialId": "L4-0854",
+   "hanzi": "演讲",
+   "pinyin": "yǎnjiǎng",
+   "pinyinPdf": "yǎnjiǎng",
+   "pos": "V",
+   "ocr": "演讲"
+  },
+  {
+   "no": 855,
+   "officialId": "L4-0855",
+   "hanzi": "阳台",
+   "pinyin": "yángtái",
+   "pinyinPdf": "yángtái",
+   "pos": "N",
+   "ocr": "阳台"
+  },
+  {
+   "no": 856,
+   "officialId": "L4-0856",
+   "hanzi": "养成",
+   "pinyin": "yǎngchéng",
+   "pinyinPdf": "yǎngchéng",
+   "pos": "V",
+   "ocr": "养成"
+  },
+  {
+   "no": 857,
+   "officialId": "L4-0857",
+   "hanzi": "腰",
+   "pinyin": "yāo",
+   "pinyinPdf": "yāo",
+   "pos": "N",
+   "ocr": "腰"
+  },
+  {
+   "no": 858,
+   "officialId": "L4-0858",
+   "hanzi": "摇",
+   "pinyin": "yáo",
+   "pinyinPdf": "yáo",
+   "pos": "V",
+   "ocr": "摇"
+  },
+  {
+   "no": 859,
+   "officialId": "L4-0859",
+   "hanzi": "药物",
+   "pinyin": "yàowù",
+   "pinyinPdf": "yàowù",
+   "pos": "N",
+   "ocr": "药物"
+  },
+  {
+   "no": 860,
+   "officialId": "L4-0860",
+   "hanzi": "要",
+   "pinyin": "yào",
+   "pinyinPdf": "yào",
+   "pos": "Conj",
+   "ocr": "要（连）"
+  },
+  {
+   "no": 861,
+   "officialId": "L4-0861",
+   "hanzi": "业余",
+   "pinyin": "yèyú",
+   "pinyinPdf": "yèyú",
+   "pos": "Adj",
+   "ocr": "业余"
+  },
+  {
+   "no": 862,
+   "officialId": "L4-0862",
+   "hanzi": "叶子",
+   "pinyin": "yèzi",
+   "pinyinPdf": "yèzi",
+   "pos": "N",
+   "ocr": "叶子"
+  },
+  {
+   "no": 863,
+   "officialId": "L4-0863",
+   "hanzi": "医疗",
+   "pinyin": "yīliáo",
+   "pinyinPdf": "yīliáo",
+   "pos": "V",
+   "ocr": "医疗"
+  },
+  {
+   "no": 864,
+   "officialId": "L4-0864",
+   "hanzi": "医学",
+   "pinyin": "yīxué",
+   "pinyinPdf": "yīxué",
+   "pos": "N",
+   "ocr": "医学"
+  },
+  {
+   "no": 865,
+   "officialId": "L4-0865",
+   "hanzi": "依靠",
+   "pinyin": "yīkào",
+   "pinyinPdf": "yīkào",
+   "pos": "V/N",
+   "ocr": "依靠"
+  },
+  {
+   "no": 866,
+   "officialId": "L4-0866",
+   "hanzi": "依然",
+   "pinyin": "yīrán",
+   "pinyinPdf": "yīrán",
+   "pos": "Adv",
+   "ocr": "依然"
+  },
+  {
+   "no": 867,
+   "officialId": "L4-0867",
+   "hanzi": "一律",
+   "pinyin": "yílǜ",
+   "pinyinPdf": "yīlǜ",
+   "pos": "Adv",
+   "ocr": "一律"
+  },
+  {
+   "no": 868,
+   "officialId": "L4-0868",
+   "hanzi": "一再",
+   "pinyin": "yízài",
+   "pinyinPdf": "yīzài",
+   "pos": "Adv",
+   "ocr": "一再"
+  },
+  {
+   "no": 869,
+   "officialId": "L4-0869",
+   "hanzi": "一致",
+   "pinyin": "yízhì",
+   "pinyinPdf": "yīzhì",
+   "pos": "Adj/Adv",
+   "ocr": "一致"
+  },
+  {
+   "no": 870,
+   "officialId": "L4-0870",
+   "hanzi": "移",
+   "pinyin": "yí",
+   "pinyinPdf": "yí",
+   "pos": "V",
+   "ocr": "移"
+  },
+  {
+   "no": 871,
+   "officialId": "L4-0871",
+   "hanzi": "移动",
+   "pinyin": "yídòng",
+   "pinyinPdf": "yídòng",
+   "pos": "V",
+   "ocr": "移动"
+  },
+  {
+   "no": 872,
+   "officialId": "L4-0872",
+   "hanzi": "移民",
+   "pinyin": "yímín",
+   "pinyinPdf": "yímín",
+   "pos": "V/N",
+   "ocr": "移民"
+  },
+  {
+   "no": 873,
+   "officialId": "L4-0873",
+   "hanzi": "遗产",
+   "pinyin": "yíchǎn",
+   "pinyinPdf": "yíchǎn",
+   "pos": "N",
+   "ocr": "遗产"
+  },
+  {
+   "no": 874,
+   "officialId": "L4-0874",
+   "hanzi": "遗传",
+   "pinyin": "yíchuán",
+   "pinyinPdf": "yíchuán",
+   "pos": "V",
+   "ocr": "遗传"
+  },
+  {
+   "no": 875,
+   "officialId": "L4-0875",
+   "hanzi": "疑问",
+   "pinyin": "yíwèn",
+   "pinyinPdf": "yíwèn",
+   "pos": "N",
+   "ocr": "疑问"
+  },
+  {
+   "no": 876,
+   "officialId": "L4-0876",
+   "hanzi": "以及",
+   "pinyin": "yǐjí",
+   "pinyinPdf": "yǐjí",
+   "pos": "Conj",
+   "ocr": "以及"
+  },
+  {
+   "no": 877,
+   "officialId": "L4-0877",
+   "hanzi": "以内",
+   "pinyin": "yǐnèi",
+   "pinyinPdf": "yǐnèi",
+   "pos": "N",
+   "ocr": "以内"
+  },
+  {
+   "no": 878,
+   "officialId": "L4-0878",
+   "hanzi": "一般来说",
+   "pinyin": "yìbānláishuō",
+   "pinyinPdf": "yībānláishuō",
+   "pos": "",
+   "ocr": "一般来说"
+  },
+  {
+   "no": 879,
+   "officialId": "L4-0879",
+   "hanzi": "义务",
+   "pinyin": "yìwù",
+   "pinyinPdf": "yìwù",
+   "pos": "N",
+   "ocr": "义务"
+  },
+  {
+   "no": 880,
+   "officialId": "L4-0880",
+   "hanzi": "议论",
+   "pinyin": "yìlùn",
+   "pinyinPdf": "yìlùn",
+   "pos": "V/N",
+   "ocr": "议论"
+  },
+  {
+   "no": 881,
+   "officialId": "L4-0881",
+   "hanzi": "引",
+   "pinyin": "yǐn",
+   "pinyinPdf": "yǐn",
+   "pos": "V",
+   "ocr": "引"
+  },
+  {
+   "no": 882,
+   "officialId": "L4-0882",
+   "hanzi": "引导",
+   "pinyin": "yǐndǎo",
+   "pinyinPdf": "yǐndǎo",
+   "pos": "V",
+   "ocr": "引导"
+  },
+  {
+   "no": 883,
+   "officialId": "L4-0883",
+   "hanzi": "引进",
+   "pinyin": "yǐnjìn",
+   "pinyinPdf": "yǐnjìn",
+   "pos": "V",
+   "ocr": "引进"
+  },
+  {
+   "no": 884,
+   "officialId": "L4-0884",
+   "hanzi": "引起",
+   "pinyin": "yǐnqǐ",
+   "pinyinPdf": "yǐnqǐ",
+   "pos": "V",
+   "ocr": "引起"
+  },
+  {
+   "no": 885,
+   "officialId": "L4-0885",
+   "hanzi": "应",
+   "pinyin": "yīng",
+   "pinyinPdf": "yīng",
+   "pos": "V",
+   "ocr": "应"
+  },
+  {
+   "no": 886,
+   "officialId": "L4-0886",
+   "hanzi": "英勇",
+   "pinyin": "yīngyǒng",
+   "pinyinPdf": "yīngyǒng",
+   "pos": "Adj",
+   "ocr": "英勇"
+  },
+  {
+   "no": 887,
+   "officialId": "L4-0887",
+   "hanzi": "营业",
+   "pinyin": "yíngyè",
+   "pinyinPdf": "yíngyè",
+   "pos": "V",
+   "ocr": "营业"
+  },
+  {
+   "no": 888,
+   "officialId": "L4-0888",
+   "hanzi": "赢得",
+   "pinyin": "yíngdé",
+   "pinyinPdf": "yíngdé",
+   "pos": "V",
+   "ocr": "赢得"
+  },
+  {
+   "no": 889,
+   "officialId": "L4-0889",
+   "hanzi": "影子",
+   "pinyin": "yǐngzi",
+   "pinyinPdf": "yǐngzi",
+   "pos": "N",
+   "ocr": "影子"
+  },
+  {
+   "no": 890,
+   "officialId": "L4-0890",
+   "hanzi": "勇敢",
+   "pinyin": "yǒnggǎn",
+   "pinyinPdf": "yǒnggǎn",
+   "pos": "Adj",
+   "ocr": "勇敢"
+  },
+  {
+   "no": 891,
+   "officialId": "L4-0891",
+   "hanzi": "勇气",
+   "pinyin": "yǒngqì",
+   "pinyinPdf": "yǒngqì",
+   "pos": "N",
+   "ocr": "勇气"
+  },
+  {
+   "no": 892,
+   "officialId": "L4-0892",
+   "hanzi": "用途",
+   "pinyin": "yòngtú",
+   "pinyinPdf": "yòngtú",
+   "pos": "N",
+   "ocr": "用途"
+  },
+  {
+   "no": 893,
+   "officialId": "L4-0893",
+   "hanzi": "优良",
+   "pinyin": "yōuliáng",
+   "pinyinPdf": "yōuliáng",
+   "pos": "Adj",
+   "ocr": "优良"
+  },
+  {
+   "no": 894,
+   "officialId": "L4-0894",
+   "hanzi": "优美",
+   "pinyin": "yōuměi",
+   "pinyinPdf": "yōuměi",
+   "pos": "Adj",
+   "ocr": "优美"
+  },
+  {
+   "no": 895,
+   "officialId": "L4-0895",
+   "hanzi": "优秀",
+   "pinyin": "yōuxiù",
+   "pinyinPdf": "yōuxiù",
+   "pos": "Adj",
+   "ocr": "优秀"
+  },
+  {
+   "no": 896,
+   "officialId": "L4-0896",
+   "hanzi": "邮局",
+   "pinyin": "yóujú",
+   "pinyinPdf": "yóujú",
+   "pos": "N",
+   "ocr": "邮局"
+  },
+  {
+   "no": 897,
+   "officialId": "L4-0897",
+   "hanzi": "有劲儿",
+   "pinyin": "yǒujìnr",
+   "pinyinPdf": "yǒujìnr",
+   "pos": "",
+   "ocr": "有劲儿"
+  },
+  {
+   "no": 898,
+   "officialId": "L4-0898",
+   "hanzi": "有趣",
+   "pinyin": "yǒuqù",
+   "pinyinPdf": "yǒuqù",
+   "pos": "Adj",
+   "ocr": "有趣"
+  },
+  {
+   "no": 899,
+   "officialId": "L4-0899",
+   "hanzi": "有限",
+   "pinyin": "yǒuxiàn",
+   "pinyinPdf": "yǒuxiàn",
+   "pos": "Adj",
+   "ocr": "有限"
+  },
+  {
+   "no": 900,
+   "officialId": "L4-0900",
+   "hanzi": "幼儿园",
+   "pinyin": "yòu'éryuán",
+   "pinyinPdf": "yòu'éryuán",
+   "pos": "N",
+   "ocr": "幼儿园"
+  },
+  {
+   "no": 901,
+   "officialId": "L4-0901",
+   "hanzi": "于是",
+   "pinyin": "yúshì",
+   "pinyinPdf": "yúshì",
+   "pos": "Conj",
+   "ocr": "于是"
+  },
+  {
+   "no": 902,
+   "officialId": "L4-0902",
+   "hanzi": "语法",
+   "pinyin": "yǔfǎ",
+   "pinyinPdf": "yǔfǎ",
+   "pos": "N",
+   "ocr": "语法"
+  },
+  {
+   "no": 903,
+   "officialId": "L4-0903",
+   "hanzi": "语音",
+   "pinyin": "yǔyīn",
+   "pinyinPdf": "yǔyīn",
+   "pos": "N",
+   "ocr": "语音"
+  },
+  {
+   "no": 904,
+   "officialId": "L4-0904",
+   "hanzi": "玉",
+   "pinyin": "yù",
+   "pinyinPdf": "yù",
+   "pos": "N",
+   "ocr": "玉"
+  },
+  {
+   "no": 905,
+   "officialId": "L4-0905",
+   "hanzi": "玉米",
+   "pinyin": "yùmǐ",
+   "pinyinPdf": "yùmǐ",
+   "pos": "N",
+   "ocr": "玉米"
+  },
+  {
+   "no": 906,
+   "officialId": "L4-0906",
+   "hanzi": "预测",
+   "pinyin": "yùcè",
+   "pinyinPdf": "yùcè",
+   "pos": "V",
+   "ocr": "预测"
+  },
+  {
+   "no": 907,
+   "officialId": "L4-0907",
+   "hanzi": "预订",
+   "pinyin": "yùdìng",
+   "pinyinPdf": "yùdìng",
+   "pos": "V",
+   "ocr": "预订"
+  },
+  {
+   "no": 908,
+   "officialId": "L4-0908",
+   "hanzi": "遇",
+   "pinyin": "yù",
+   "pinyinPdf": "yù",
+   "pos": "V",
+   "ocr": "遇"
+  },
+  {
+   "no": 909,
+   "officialId": "L4-0909",
+   "hanzi": "遇到",
+   "pinyin": "yùdào",
+   "pinyinPdf": "yùdào",
+   "pos": "",
+   "ocr": "遇到"
+  },
+  {
+   "no": 910,
+   "officialId": "L4-0910",
+   "hanzi": "遇见",
+   "pinyin": "yùjiàn",
+   "pinyinPdf": "yùjiàn",
+   "pos": "V",
+   "ocr": "遇见"
+  },
+  {
+   "no": 911,
+   "officialId": "L4-0911",
+   "hanzi": "原料",
+   "pinyin": "yuánliào",
+   "pinyinPdf": "yuánliào",
+   "pos": "N",
+   "ocr": "原料"
+  },
+  {
+   "no": 912,
+   "officialId": "L4-0912",
+   "hanzi": "原则",
+   "pinyin": "yuánzé",
+   "pinyinPdf": "yuánzé",
+   "pos": "N",
+   "ocr": "原则"
+  },
+  {
+   "no": 913,
+   "officialId": "L4-0913",
+   "hanzi": "圆",
+   "pinyin": "yuán",
+   "pinyinPdf": "yuán",
+   "pos": "Adj/N",
+   "ocr": "圆"
+  },
+  {
+   "no": 914,
+   "officialId": "L4-0914",
+   "hanzi": "圆满",
+   "pinyin": "yuánmǎn",
+   "pinyinPdf": "yuánmǎn",
+   "pos": "Adj",
+   "ocr": "圆满"
+  },
+  {
+   "no": 915,
+   "officialId": "L4-0915",
+   "hanzi": "约会",
+   "pinyin": "yuēhuì",
+   "pinyinPdf": "yuēhuì",
+   "pos": "V/N",
+   "ocr": "约会"
+  },
+  {
+   "no": 916,
+   "officialId": "L4-0916",
+   "hanzi": "月底",
+   "pinyin": "yuèdǐ",
+   "pinyinPdf": "yuèdǐ",
+   "pos": "N",
+   "ocr": "月底"
+  },
+  {
+   "no": 917,
+   "officialId": "L4-0917",
+   "hanzi": "阅读",
+   "pinyin": "yuèdú",
+   "pinyinPdf": "yuèdú",
+   "pos": "V",
+   "ocr": "阅读"
+  },
+  {
+   "no": 918,
+   "officialId": "L4-0918",
+   "hanzi": "运动会",
+   "pinyin": "yùndònghuì",
+   "pinyinPdf": "yùndònghuì",
+   "pos": "N",
+   "ocr": "运动会"
+  },
+  {
+   "no": 919,
+   "officialId": "L4-0919",
+   "hanzi": "运动员",
+   "pinyin": "yùndòngyuán",
+   "pinyinPdf": "yùndòngyuán",
+   "pos": "N",
+   "ocr": "运动员"
+  },
+  {
+   "no": 920,
+   "officialId": "L4-0920",
+   "hanzi": "运气",
+   "pinyin": "yùnqi",
+   "pinyinPdf": "yùnqi",
+   "pos": "N",
+   "ocr": "运气"
+  },
+  {
+   "no": 921,
+   "officialId": "L4-0921",
+   "hanzi": "运用",
+   "pinyin": "yùnyòng",
+   "pinyinPdf": "yùnyòng",
+   "pos": "V",
+   "ocr": "运用"
+  },
+  {
+   "no": 922,
+   "officialId": "L4-0922",
+   "hanzi": "再三",
+   "pinyin": "zàisān",
+   "pinyinPdf": "zàisān",
+   "pos": "Adv",
+   "ocr": "再三"
+  },
+  {
+   "no": 923,
+   "officialId": "L4-0923",
+   "hanzi": "在乎",
+   "pinyin": "zàihu",
+   "pinyinPdf": "zàihu",
+   "pos": "V",
+   "ocr": "在乎"
+  },
+  {
+   "no": 924,
+   "officialId": "L4-0924",
+   "hanzi": "在于",
+   "pinyin": "zàiyú",
+   "pinyinPdf": "zàiyú",
+   "pos": "V",
+   "ocr": "在于"
+  },
+  {
+   "no": 925,
+   "officialId": "L4-0925",
+   "hanzi": "赞成",
+   "pinyin": "zànchéng",
+   "pinyinPdf": "zànchéng",
+   "pos": "V",
+   "ocr": "赞成"
+  },
+  {
+   "no": 926,
+   "officialId": "L4-0926",
+   "hanzi": "赞赏",
+   "pinyin": "zànshǎng",
+   "pinyinPdf": "zànshǎng",
+   "pos": "V",
+   "ocr": "赞赏"
+  },
+  {
+   "no": 927,
+   "officialId": "L4-0927",
+   "hanzi": "赞助",
+   "pinyin": "zànzhù",
+   "pinyinPdf": "zànzhù",
+   "pos": "V",
+   "ocr": "赞助"
+  },
+  {
+   "no": 928,
+   "officialId": "L4-0928",
+   "hanzi": "造型",
+   "pinyin": "zàoxíng",
+   "pinyinPdf": "zàoxíng",
+   "pos": "N",
+   "ocr": "造型"
+  },
+  {
+   "no": 929,
+   "officialId": "L4-0929",
+   "hanzi": "战斗",
+   "pinyin": "zhàndòu",
+   "pinyinPdf": "zhàndòu",
+   "pos": "V/N",
+   "ocr": "战斗"
+  },
+  {
+   "no": 930,
+   "officialId": "L4-0930",
+   "hanzi": "战胜",
+   "pinyin": "zhànshèng",
+   "pinyinPdf": "zhànshèng",
+   "pos": "V",
+   "ocr": "战胜"
+  },
+  {
+   "no": 931,
+   "officialId": "L4-0931",
+   "hanzi": "战士",
+   "pinyin": "zhànshì",
+   "pinyinPdf": "zhànshì",
+   "pos": "N",
+   "ocr": "战士"
+  },
+  {
+   "no": 932,
+   "officialId": "L4-0932",
+   "hanzi": "战争",
+   "pinyin": "zhànzhēng",
+   "pinyinPdf": "zhànzhēng",
+   "pos": "N",
+   "ocr": "战争"
+  },
+  {
+   "no": 933,
+   "officialId": "L4-0933",
+   "hanzi": "丈夫",
+   "pinyin": "zhàngfu",
+   "pinyinPdf": "zhàngfu",
+   "pos": "N",
+   "ocr": "丈夫"
+  },
+  {
+   "no": 934,
+   "officialId": "L4-0934",
+   "hanzi": "招呼",
+   "pinyin": "zhāohu",
+   "pinyinPdf": "zhāohu",
+   "pos": "V",
+   "ocr": "招呼"
+  },
+  {
+   "no": 935,
+   "officialId": "L4-0935",
+   "hanzi": "着",
+   "pinyin": "zháo",
+   "pinyinPdf": "zháo",
+   "pos": "V",
+   "ocr": "着"
+  },
+  {
+   "no": 936,
+   "officialId": "L4-0936",
+   "hanzi": "着火",
+   "pinyin": "zháohuǒ",
+   "pinyinPdf": "zháohuǒ",
+   "pos": "",
+   "ocr": "着火"
+  },
+  {
+   "no": 937,
+   "officialId": "L4-0937",
+   "hanzi": "着急",
+   "pinyin": "zháojí",
+   "pinyinPdf": "zháojí",
+   "pos": "",
+   "ocr": "着急"
+  },
+  {
+   "no": 938,
+   "officialId": "L4-0938",
+   "hanzi": "召开",
+   "pinyin": "zhàokāi",
+   "pinyinPdf": "zhàokāi",
+   "pos": "V",
+   "ocr": "召开"
+  },
+  {
+   "no": 939,
+   "officialId": "L4-0939",
+   "hanzi": "折",
+   "pinyin": "zhé",
+   "pinyinPdf": "zhé",
+   "pos": "V",
+   "ocr": "折"
+  },
+  {
+   "no": 940,
+   "officialId": "L4-0940",
+   "hanzi": "针",
+   "pinyin": "zhēn",
+   "pinyinPdf": "zhēn",
+   "pos": "N",
+   "ocr": "针"
+  },
+  {
+   "no": 941,
+   "officialId": "L4-0941",
+   "hanzi": "针对",
+   "pinyin": "zhēnduì",
+   "pinyinPdf": "zhēnduì",
+   "pos": "V",
+   "ocr": "针对"
+  },
+  {
+   "no": 942,
+   "officialId": "L4-0942",
+   "hanzi": "阵",
+   "pinyin": "zhèn",
+   "pinyinPdf": "zhèn",
+   "pos": "M",
+   "ocr": "阵"
+  },
+  {
+   "no": 943,
+   "officialId": "L4-0943",
+   "hanzi": "争论",
+   "pinyin": "zhēnglùn",
+   "pinyinPdf": "zhēnglùn",
+   "pos": "V",
+   "ocr": "争论"
+  },
+  {
+   "no": 944,
+   "officialId": "L4-0944",
+   "hanzi": "征服",
+   "pinyin": "zhēngfú",
+   "pinyinPdf": "zhēngfú",
+   "pos": "V",
+   "ocr": "征服"
+  },
+  {
+   "no": 945,
+   "officialId": "L4-0945",
+   "hanzi": "征求",
+   "pinyin": "zhēngqiú",
+   "pinyinPdf": "zhēngqiú",
+   "pos": "V",
+   "ocr": "征求"
+  },
+  {
+   "no": 946,
+   "officialId": "L4-0946",
+   "hanzi": "政府",
+   "pinyin": "zhèngfǔ",
+   "pinyinPdf": "zhèngfǔ",
+   "pos": "N",
+   "ocr": "政府"
+  },
+  {
+   "no": 947,
+   "officialId": "L4-0947",
+   "hanzi": "政治",
+   "pinyin": "zhèngzhì",
+   "pinyinPdf": "zhèngzhì",
+   "pos": "N",
+   "ocr": "政治"
+  },
+  {
+   "no": 948,
+   "officialId": "L4-0948",
+   "hanzi": "之后",
+   "pinyin": "zhīhòu",
+   "pinyinPdf": "zhīhòu",
+   "pos": "N",
+   "ocr": "之后"
+  },
+  {
+   "no": 949,
+   "officialId": "L4-0949",
+   "hanzi": "之间",
+   "pinyin": "zhījiān",
+   "pinyinPdf": "zhījiān",
+   "pos": "N",
+   "ocr": "之间"
+  },
+  {
+   "no": 950,
+   "officialId": "L4-0950",
+   "hanzi": "之前",
+   "pinyin": "zhīqián",
+   "pinyinPdf": "zhīqián",
+   "pos": "N",
+   "ocr": "之前"
+  },
+  {
+   "no": 951,
+   "officialId": "L4-0951",
+   "hanzi": "之一",
+   "pinyin": "zhīyī",
+   "pinyinPdf": "zhīyī",
+   "pos": "N",
+   "ocr": "之一"
+  },
+  {
+   "no": 952,
+   "officialId": "L4-0952",
+   "hanzi": "支",
+   "pinyin": "zhī",
+   "pinyinPdf": "zhī",
+   "pos": "V",
+   "ocr": "支（动）"
+  },
+  {
+   "no": 953,
+   "officialId": "L4-0953",
+   "hanzi": "植物",
+   "pinyin": "zhíwù",
+   "pinyinPdf": "zhíwù",
+   "pos": "N",
+   "ocr": "植物"
+  },
+  {
+   "no": 954,
+   "officialId": "L4-0954",
+   "hanzi": "指挥",
+   "pinyin": "zhǐhuī",
+   "pinyinPdf": "zhǐhuī",
+   "pos": "V/N",
+   "ocr": "指挥"
+  },
+  {
+   "no": 955,
+   "officialId": "L4-0955",
+   "hanzi": "制订",
+   "pinyin": "zhìdìng",
+   "pinyinPdf": "zhìdìng",
+   "pos": "V",
+   "ocr": "制订"
+  },
+  {
+   "no": 956,
+   "officialId": "L4-0956",
+   "hanzi": "质量",
+   "pinyin": "zhìliàng",
+   "pinyinPdf": "zhìliàng",
+   "pos": "N",
+   "ocr": "质量"
+  },
+  {
+   "no": 957,
+   "officialId": "L4-0957",
+   "hanzi": "治",
+   "pinyin": "zhì",
+   "pinyinPdf": "zhì",
+   "pos": "V",
+   "ocr": "治"
+  },
+  {
+   "no": 958,
+   "officialId": "L4-0958",
+   "hanzi": "治疗",
+   "pinyin": "zhìliáo",
+   "pinyinPdf": "zhìliáo",
+   "pos": "V",
+   "ocr": "治疗"
+  },
+  {
+   "no": 959,
+   "officialId": "L4-0959",
+   "hanzi": "智力",
+   "pinyin": "zhìlì",
+   "pinyinPdf": "zhìlì",
+   "pos": "N",
+   "ocr": "智力"
+  },
+  {
+   "no": 960,
+   "officialId": "L4-0960",
+   "hanzi": "智能",
+   "pinyin": "zhìnéng",
+   "pinyinPdf": "zhìnéng",
+   "pos": "N",
+   "ocr": "智能"
+  },
+  {
+   "no": 961,
+   "officialId": "L4-0961",
+   "hanzi": "中介",
+   "pinyin": "zhōngjiè",
+   "pinyinPdf": "zhōngjiè",
+   "pos": "N",
+   "ocr": "中介"
+  },
+  {
+   "no": 962,
+   "officialId": "L4-0962",
+   "hanzi": "种类",
+   "pinyin": "zhǒnglèi",
+   "pinyinPdf": "zhǒnglèi",
+   "pos": "N",
+   "ocr": "种类"
+  },
+  {
+   "no": 963,
+   "officialId": "L4-0963",
+   "hanzi": "中奖",
+   "pinyin": "zhòngjiǎng",
+   "pinyinPdf": "zhòngjiǎng",
+   "pos": "",
+   "ocr": "中奖"
+  },
+  {
+   "no": 964,
+   "officialId": "L4-0964",
+   "hanzi": "种",
+   "pinyin": "zhòng",
+   "pinyinPdf": "zhòng",
+   "pos": "V",
+   "ocr": "种"
+  },
+  {
+   "no": 965,
+   "officialId": "L4-0965",
+   "hanzi": "种植",
+   "pinyin": "zhòngzhí",
+   "pinyinPdf": "zhòngzhí",
+   "pos": "V",
+   "ocr": "种植"
+  },
+  {
+   "no": 966,
+   "officialId": "L4-0966",
+   "hanzi": "重量",
+   "pinyin": "zhòngliàng",
+   "pinyinPdf": "zhòngliàng",
+   "pos": "N",
+   "ocr": "重量"
+  },
+  {
+   "no": 967,
+   "officialId": "L4-0967",
+   "hanzi": "逐步",
+   "pinyin": "zhúbù",
+   "pinyinPdf": "zhúbù",
+   "pos": "Adv",
+   "ocr": "逐步"
+  },
+  {
+   "no": 968,
+   "officialId": "L4-0968",
+   "hanzi": "逐渐",
+   "pinyin": "zhújiàn",
+   "pinyinPdf": "zhújiàn",
+   "pos": "Adv",
+   "ocr": "逐渐"
+  },
+  {
+   "no": 969,
+   "officialId": "L4-0969",
+   "hanzi": "主题",
+   "pinyin": "zhǔtí",
+   "pinyinPdf": "zhǔtí",
+   "pos": "N",
+   "ocr": "主题"
+  },
+  {
+   "no": 970,
+   "officialId": "L4-0970",
+   "hanzi": "主席",
+   "pinyin": "zhǔxí",
+   "pinyinPdf": "zhǔxí",
+   "pos": "N",
+   "ocr": "主席"
+  },
+  {
+   "no": 971,
+   "officialId": "L4-0971",
+   "hanzi": "祝福",
+   "pinyin": "zhùfú",
+   "pinyinPdf": "zhùfú",
+   "pos": "V",
+   "ocr": "祝福"
+  },
+  {
+   "no": 972,
+   "officialId": "L4-0972",
+   "hanzi": "著名",
+   "pinyin": "zhùmíng",
+   "pinyinPdf": "zhùmíng",
+   "pos": "Adj",
+   "ocr": "著名"
+  },
+  {
+   "no": 973,
+   "officialId": "L4-0973",
+   "hanzi": "著作",
+   "pinyin": "zhùzuò",
+   "pinyinPdf": "zhùzuò",
+   "pos": "N",
+   "ocr": "著作"
+  },
+  {
+   "no": 974,
+   "officialId": "L4-0974",
+   "hanzi": "抓紧",
+   "pinyin": "zhuājǐn",
+   "pinyinPdf": "zhuājǐn",
+   "pos": "",
+   "ocr": "抓紧"
+  },
+  {
+   "no": 975,
+   "officialId": "L4-0975",
+   "hanzi": "专心",
+   "pinyin": "zhuānxīn",
+   "pinyinPdf": "zhuānxīn",
+   "pos": "Adj",
+   "ocr": "专心"
+  },
+  {
+   "no": 976,
+   "officialId": "L4-0976",
+   "hanzi": "转动",
+   "pinyin": "zhuǎndòng",
+   "pinyinPdf": "zhuǎndòng",
+   "pos": "V",
+   "ocr": "转动"
+  },
+  {
+   "no": 977,
+   "officialId": "L4-0977",
+   "hanzi": "转告",
+   "pinyin": "zhuǎngào",
+   "pinyinPdf": "zhuǎngào",
+   "pos": "V",
+   "ocr": "转告"
+  },
+  {
+   "no": 978,
+   "officialId": "L4-0978",
+   "hanzi": "转身",
+   "pinyin": "zhuǎnshēn",
+   "pinyinPdf": "zhuǎnshēn",
+   "pos": "",
+   "ocr": "转身"
+  },
+  {
+   "no": 979,
+   "officialId": "L4-0979",
+   "hanzi": "转弯",
+   "pinyin": "zhuǎnwān",
+   "pinyinPdf": "zhuǎnwān",
+   "pos": "",
+   "ocr": "转弯"
+  },
+  {
+   "no": 980,
+   "officialId": "L4-0980",
+   "hanzi": "转移",
+   "pinyin": "zhuǎnyí",
+   "pinyinPdf": "zhuǎnyí",
+   "pos": "V",
+   "ocr": "转移"
+  },
+  {
+   "no": 981,
+   "officialId": "L4-0981",
+   "hanzi": "装修",
+   "pinyin": "zhuāngxiū",
+   "pinyinPdf": "zhuāngxiū",
+   "pos": "V",
+   "ocr": "装修"
+  },
+  {
+   "no": 982,
+   "officialId": "L4-0982",
+   "hanzi": "装置",
+   "pinyin": "zhuāngzhì",
+   "pinyinPdf": "zhuāngzhì",
+   "pos": "V/N",
+   "ocr": "装置"
+  },
+  {
+   "no": 983,
+   "officialId": "L4-0983",
+   "hanzi": "追求",
+   "pinyin": "zhuīqiú",
+   "pinyinPdf": "zhuīqiú",
+   "pos": "V",
+   "ocr": "追求"
+  },
+  {
+   "no": 984,
+   "officialId": "L4-0984",
+   "hanzi": "准时",
+   "pinyin": "zhǔnshí",
+   "pinyinPdf": "zhǔnshí",
+   "pos": "Adj",
+   "ocr": "准时"
+  },
+  {
+   "no": 985,
+   "officialId": "L4-0985",
+   "hanzi": "资料",
+   "pinyin": "zīliào",
+   "pinyinPdf": "zīliào",
+   "pos": "N",
+   "ocr": "资料"
+  },
+  {
+   "no": 986,
+   "officialId": "L4-0986",
+   "hanzi": "资源",
+   "pinyin": "zīyuán",
+   "pinyinPdf": "zīyuán",
+   "pos": "N",
+   "ocr": "资源"
+  },
+  {
+   "no": 987,
+   "officialId": "L4-0987",
+   "hanzi": "自",
+   "pinyin": "zì",
+   "pinyinPdf": "zì",
+   "pos": "Prep",
+   "ocr": "自"
+  },
+  {
+   "no": 988,
+   "officialId": "L4-0988",
+   "hanzi": "自信",
+   "pinyin": "zìxìn",
+   "pinyinPdf": "zìxìn",
+   "pos": "V",
+   "ocr": "自信"
+  },
+  {
+   "no": 989,
+   "officialId": "L4-0989",
+   "hanzi": "字母",
+   "pinyin": "zìmǔ",
+   "pinyinPdf": "zìmǔ",
+   "pos": "N",
+   "ocr": "字母"
+  },
+  {
+   "no": 990,
+   "officialId": "L4-0990",
+   "hanzi": "综合",
+   "pinyin": "zōnghé",
+   "pinyinPdf": "zōnghé",
+   "pos": "V",
+   "ocr": "综合"
+  },
+  {
+   "no": 991,
+   "officialId": "L4-0991",
+   "hanzi": "总共",
+   "pinyin": "zǒnggòng",
+   "pinyinPdf": "zǒnggòng",
+   "pos": "Adv",
+   "ocr": "总共"
+  },
+  {
+   "no": 992,
+   "officialId": "L4-0992",
+   "hanzi": "总理",
+   "pinyin": "zǒnglǐ",
+   "pinyinPdf": "zǒnglǐ",
+   "pos": "N",
+   "ocr": "总理"
+  },
+  {
+   "no": 993,
+   "officialId": "L4-0993",
+   "hanzi": "总统",
+   "pinyin": "zǒngtǒng",
+   "pinyinPdf": "zǒngtǒng",
+   "pos": "N",
+   "ocr": "总统"
+  },
+  {
+   "no": 994,
+   "officialId": "L4-0994",
+   "hanzi": "总之",
+   "pinyin": "zǒngzhī",
+   "pinyinPdf": "zǒngzhī",
+   "pos": "Conj",
+   "ocr": "总之"
+  },
+  {
+   "no": 995,
+   "officialId": "L4-0995",
+   "hanzi": "阻止",
+   "pinyin": "zǔzhǐ",
+   "pinyinPdf": "zǔzhǐ",
+   "pos": "V",
+   "ocr": "阻止"
+  },
+  {
+   "no": 996,
+   "officialId": "L4-0996",
+   "hanzi": "嘴巴",
+   "pinyin": "zuǐba",
+   "pinyinPdf": "zuǐba",
+   "pos": "N",
+   "ocr": "嘴巴"
+  },
+  {
+   "no": 997,
+   "officialId": "L4-0997",
+   "hanzi": "最初",
+   "pinyin": "zuìchū",
+   "pinyinPdf": "zuìchū",
+   "pos": "N",
+   "ocr": "最初"
+  },
+  {
+   "no": 998,
+   "officialId": "L4-0998",
+   "hanzi": "作出",
+   "pinyin": "zuòchū",
+   "pinyinPdf": "zuòchū",
+   "pos": "",
+   "ocr": "作出"
+  },
+  {
+   "no": 999,
+   "officialId": "L4-0999",
+   "hanzi": "作为",
+   "pinyin": "zuòwéi",
+   "pinyinPdf": "zuòwéi",
+   "pos": "Prep/V",
+   "ocr": "作为"
+  },
+  {
+   "no": 1000,
+   "officialId": "L4-1000",
+   "hanzi": "做梦",
+   "pinyin": "zuòmèng",
+   "pinyinPdf": "zuòmèng",
+   "pos": "",
+   "ocr": "做梦"
+  }
+ ]
+}

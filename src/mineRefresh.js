@@ -115,7 +115,8 @@ export function makeMineRefresher(index, vocab, wordKey) {
     if (card.itemType !== WORD_TYPE) continue;
     if (!firstCard.has(card.hanzi)) firstCard.set(card.hanzi, card);
     const key = `${card.lesson}\u0000${card.hanzi}`;
-    if (!lessonCard.has(key)) lessonCard.set(key, card);
+    if (!lessonCard.has(key)) lessonCard.set(key, []);
+    lessonCard.get(key).push(card);
   }
   const senseAt = (number) => {
     const [pinyin, meaningKo, partOfSpeech] = index.senses[number];
@@ -127,7 +128,7 @@ export function makeMineRefresher(index, vocab, wordKey) {
     const here = context.address && index.at[context.address];
     if (has(here, hanzi)) return senseAt(here[hanzi]);
     const inLesson = context.lesson && lessonCard.get(`${context.lesson}\u0000${hanzi}`);
-    if (inLesson) return fieldsOf(inLesson);
+    if (inLesson) return fieldsOf(inLesson.find((card) => card.pinyin === context.pinyin) ?? inLesson[0]);
     const card = firstCard.get(hanzi);
     if (card) return fieldsOf(card);
     if (has(index.base, hanzi)) return senseAt(index.base[hanzi]);
@@ -187,7 +188,7 @@ export function makeMineRefresher(index, vocab, wordKey) {
   function refreshEntry(original) {
     const entry = fixPinyin(original);
     if (entry.kind !== 'word' || (entry.itemType && entry.itemType !== WORD_TYPE)) return [entry];
-    const context = { address: sourceAddress(entry.source), lesson: sourceLesson(entry.source) };
+    const context = { address: sourceAddress(entry.source), lesson: sourceLesson(entry.source), pinyin: entry.pinyin };
     return resolveWord(entry, context, 0);
   }
 

@@ -2,7 +2,8 @@
  "_about": "단어장 카드 id 장부(tools/vocab_fixes.py CardIds가 쓴다). 오답노트(시험보기)가 카드 id로 기록되므로, 사라진 카드의 id는 retired에 남겨 다시 쓰지 않고, movedTo가 있으면 앱이 그 한자의 카드로 기록을 옮긴다. lastNo는 단원 접두사별로 지금까지 쓴 가장 큰 번호다. 시작값 HSK3L 405·HSK3R 347은 git 이력(bb1e588)에서 쓰인 가장 큰 번호라, 그 번호들도 다시 쓰지 않는다.",
  "lastNo": {
   "HSK3L": 412,
-  "HSK3R": 347
+  "HSK3R": 347,
+  "HSK4": 929
  },
  "retired": {
   "HSK3L-005": {
@@ -87,7 +88,7 @@
   },
   "HSK3L-339": {
    "hanzi": "散",
-   "movedTo": null
+   "movedTo": "散"
   },
   "HSK3L-359": {
    "hanzi": "小张",
@@ -103,7 +104,7 @@
   },
   "HSK3L-377": {
    "hanzi": "圆",
-   "movedTo": null
+   "movedTo": "圆"
   },
   "HSK3L-378": {
    "hanzi": "占",
