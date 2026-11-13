@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { randomIndex, selectStudyPool } from './studyPool.js';
 
-const items = [{ lesson: 'HSK1 150' }, { lesson: 'HSK3 독해' }, { lesson: 'Lesson 8' }, { lesson: 'Lesson 9' }];
+const items = [{ lesson: 'HSK 3.0 1급' }, { lesson: 'HSK 3.0 3급' }, { lesson: 'Lesson 8' }, { lesson: 'Lesson 9' }];
 const mine = [{ lesson: '내 단어장' }];
 
 test('내 단어장 우선 및 빈 목록일 때 그룹 복귀', () => {

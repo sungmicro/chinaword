@@ -125,6 +125,8 @@ def fix_vocab_checked(vocab, where, problems):
 # 잘못 끊긴 것(个人, 三四年), 남은 카드의 뜻이 다른 것(一米→米 '쌀', 一张→张 '장씨')은 null.
 # 사람이 정한 값은 vocab_fixes.json의 movedTo에 둔다(같은 단어가 남은 경우 말고는 이 표에 없으면 null).
 ID_REGISTRY = Path('src') / 'data' / 'vocab-retired.json'
+# HSK 3.0 대강 단원 이름(tools/hsk_outline/build_outline.py가 넣는다). auto_enrich의 «급수 단어» 판단도 이 이름을 쓴다.
+OUTLINE_LESSONS = ('HSK 3.0 1급', 'HSK 3.0 2급', 'HSK 3.0 3급', 'HSK 3.0 4급', 'HSK 3.0 5급(선택)')
 
 
 def load_id_registry(repo):

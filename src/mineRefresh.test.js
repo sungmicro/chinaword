@@ -67,7 +67,9 @@ test('比较忙(H31006 독해 52번): 比较·忙으로 나누고 모름 횟수�
 });
 
 test('이미 담긴 조각은 겹치지 않고, 모름 횟수는 큰 값·직접 담은 쪽·먼저 담겨 있던 항목의 출처를 남긴다', () => {
-  const mang = { ...wordEntry({ hanzi: '忙', pinyin: 'máng', meaningKo: '바쁘다', partOfSpeech: '형용사' }, 'H31001 듣기 3번', NOW), unknownCount: 3 };
+  // 2026-11-13: 忙은 HSK 3.0 1급 카드로 옮겨 듣기 해설 단어에서 빠졌다. 고정 뜻 대신 지금 카드 값을 쓴다.
+  const card = vocab.find((e) => e.hanzi === '忙' && e.itemType === '단어');
+  const mang = { ...wordEntry({ hanzi: '忙', pinyin: card.pinyin, meaningKo: card.meaningKo, partOfSpeech: card.partOfSpeech }, 'H31001 듣기 3번', NOW), unknownCount: 3 };
   const result = refreshItems([OLD_BIJIAOMANG, mang]);
   assert.deepEqual(result.map((entry) => entry.hanzi), ['比较', '忙']);
   const merged = result[1];
@@ -107,12 +109,12 @@ test('같은 단어는 병음·뜻·품사를 지금 값으로: 碗 wàn → wǎ
   const wan = saved('碗', 'wàn', '사발, 공기, 그릇', 'H31001 듣기 9번', { partOfSpeech: '명사' });
   const [fixed] = refreshEntry(wan);
   assert.equal(fixed.pinyin, 'wǎn');
-  assert.equal(fixed.key, wan.key); // 성조만 달라 열쇠는 같다
+  assert.equal(fixed.key, wordKey('碗', 'wǎn')); // 첫 성조가 달라 열쇠도 지금 병음으로
   const ma = saved('马', 'mǎ', '말하다, 이야기하다', 'H31110 듣기 34번', { partOfSpeech: '명사' });
   const now = QUESTIONS.get('H31110 듣기 34번').find((word) => word.hanzi === '马');
   assert.equal(refreshEntry(ma)[0].meaningKo, now.meaningKo);
   // 랜덤 학습으로 담은 단원 카드는 그 단원의 카드로
-  const card = vocab.find((entry) => entry.hanzi === '碗' && entry.lesson === 'HSK3 추가 300');
+  const card = vocab.find((entry) => entry.hanzi === '碗' && entry.lesson === 'HSK 3.0 3급');
   const fromStudy = { ...studyCardEntry({ ...card, pinyin: 'wàn' }, NOW), unknownCount: 1 };
   assert.equal(refreshEntry(fromStudy)[0].pinyin, card.pinyin);
 });
@@ -338,7 +340,7 @@ test('멱등(넓게): 지금 데이터의 모든 단어·보정 표의 모든 �
     const [kind, test, no] = address.split('/');
     return `${test} ${kinds[kind]} ${no}번`;
   });
-  sources.push('랜덤 학습 · HSK3 듣기', '랜덤 학습 · HSK3 독해', '랜덤 학습 · HSK3 추가 300', '랜덤 학습', '');
+  sources.push('랜덤 학습 · HSK3 듣기', '랜덤 학습 · HSK3 독해', '랜덤 학습 · HSK 3.0 3급', '랜덤 학습 · HSK3 추가 300', '랜덤 학습', '');
   let checked = 0;
   for (const source of sources) {
     for (const note of ['', '메모']) {
@@ -364,4 +366,33 @@ test('단어 카드를 담았다가 갱신해도 병음·뜻이 그대로다(같
     }
   }
   assert.deepEqual(bad, []);
+});
+
+test('단원 밖 갱신은 같은 읽기 카드를 먼저, 문항 주소가 있으면 첫 카드(好 hǎo·hào)', () => {
+  const fakeVocab = [
+    { hanzi: '好', pinyin: 'hǎo', meaningKo: '좋다', partOfSpeech: '형용사', itemType: '단어', lesson: 'A' },
+    { hanzi: '好', pinyin: 'hào', meaningKo: '좋아하다', partOfSpeech: '동사', itemType: '단어', lesson: 'B' }
+  ];
+  const fake = makeMineRefresher({ senses: [], base: {}, at: {}, split: {}, moved: {}, pinyin: {} }, fakeVocab, wordKey);
+  const entry = (pinyin, source) => ({ key: wordKey('好', pinyin), kind: 'word', hanzi: '好', pinyin, meaningKo: '뜻', partOfSpeech: '', note: '', source });
+  const check = (pinyin, source, expectPinyin, expectMeaning) => {
+    const [result] = fake.refreshEntry(entry(pinyin, source));
+    assert.deepEqual([result.pinyin, result.meaningKo], [expectPinyin, expectMeaning], source);
+  };
+  check('hào', '랜덤 학습 · 없는 단원', 'hào', '좋아하다');
+  check('hǎo', '랜덤 학습', 'hǎo', '좋다');
+  check('hào', 'H31001 듣기 1번', 'hǎo', '좋다');
+  check('hǎo', '랜덤 학습 · B', 'hào', '좋아하다');
+});
+
+test('같은 읽기 카드가 없으면 담은 성조를 바꾸지 않는다(好 hào에 hǎo 카드만)', () => {
+  const fakeVocab = [{ hanzi: '好', pinyin: 'hǎo', meaningKo: '좋다', partOfSpeech: '형용사', itemType: '단어', lesson: 'A' }];
+  const fake = makeMineRefresher({ senses: [], base: {}, at: {}, split: {}, moved: {}, pinyin: {} }, fakeVocab, wordKey);
+  const hao4 = { key: wordKey('好', 'hào'), kind: 'word', hanzi: '好', pinyin: 'hào', meaningKo: '좋아하다', partOfSpeech: '동사', note: '', source: '랜덤 학습 · 없는 단원' };
+  const hao3 = { ...hao4, key: wordKey('好', 'hǎo'), pinyin: 'hǎo', meaningKo: '좋다', partOfSpeech: '형용사' };
+  const [kept] = fake.refreshEntry(hao4);
+  assert.deepEqual([kept.pinyin, kept.meaningKo, kept.key], ['hào', '좋아하다', wordKey('好', 'hào')]);
+  // 두 항목이 합쳐지지 않는다.
+  const out = fake.refreshItems([hao3, hao4]);
+  assert.deepEqual(out.map((e) => [e.pinyin, e.meaningKo]), [['hǎo', '좋다'], ['hào', '좋아하다']]);
 });

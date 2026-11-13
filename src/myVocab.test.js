@@ -20,6 +20,8 @@ import {
   studyCardEntry,
   unknownCountOf,
   patternEntry,
+  pinyinKey,
+  rekeyItems,
   removeMine,
   resetMineForTest,
   subscribeMine,
@@ -67,7 +69,7 @@ test('wordsToPinyin: 예문 병음 한 줄', () => {
 
 test('wordEntry: 독해 단어도 듣기처럼 용법·예문 칸을 비운다', () => {
   assert.deepEqual(wordEntry(READING_WORD, 'H31001 독해 63번', NOW), {
-    key: 'word:满意:manyi', kind: 'word', hanzi: '满意', pinyin: 'mǎnyì', meaningKo: '만족하다', partOfSpeech: '형용사',
+    key: 'word:满意:manyi3', kind: 'word', hanzi: '满意', pinyin: 'mǎnyì', meaningKo: '만족하다', partOfSpeech: '형용사',
     note: '', exampleZh: '', examplePinyin: '', exampleKo: '',
     source: 'H31001 독해 63번', addedAt: '2026-10-12T05:00:00.000Z'
   });
@@ -75,7 +77,7 @@ test('wordEntry: 독해 단어도 듣기처럼 용법·예문 칸을 비운다',
 
 // 2026-11-02 전에 독해 해설에서 담은 단어 (자동 용법 + 지문 예문이 함께 저장됨)
 const OLD_READING_SAVED = {
-  key: 'word:满意:manyi', kind: 'word', hanzi: '满意', pinyin: 'mǎnyì', meaningKo: '만족하다', partOfSpeech: '형용사',
+  key: 'word:满意:manyi3', kind: 'word', hanzi: '满意', pinyin: 'mǎnyì', meaningKo: '만족하다', partOfSpeech: '형용사',
   note: '满意가 쓰인 문장을 함께 확인', exampleZh: '我对这儿很满意。', examplePinyin: 'Wǒ duì zhèr hěn mǎnyì.',
   exampleKo: '나는 여기가 마음에 든다.', source: 'H31006 독해 61번', addedAt: '2026-10-20T05:00:00.000Z'
 };
@@ -155,7 +157,7 @@ test('저장소: 불러올 때 단어를 지금 데이터로 갱신하고(나눈
   };
   useStorage(storage);
   const split = (items) => items.flatMap((entry) => entry.hanzi === '比较忙'
-    ? ['比较', '忙'].map((hanzi) => ({ ...entry, hanzi, key: `word:${hanzi}`, meaningKo: `${hanzi} 뜻` }))
+    ? [['比较', 'bǐjiào'], ['忙', 'máng']].map(([hanzi, pinyin]) => ({ ...entry, hanzi, pinyin, key: wordEntry({ hanzi, pinyin }, 's', NOW).key, meaningKo: `${hanzi} 뜻` }))
     : [entry]);
   const refresh = (items) => (items.some((entry) => entry.hanzi === '比较忙') ? split(items) : items);
   resetMineForTest();
@@ -201,7 +203,7 @@ test('patternEntry: 짧은 뜻이 있으면 뜻 자리에, 없으면 설명 전�
 test('toggleEntry: 같은 key는 하나만, 다시 누르면 뺀다, 새 항목이 앞', () => {
   let items = toggleEntry([], wordEntry(READING_WORD, 's1', NOW));
   items = toggleEntry(items, patternEntry(READING_GRAMMAR, 's2', NOW));
-  assert.deepEqual(items.map((i) => i.key), ['pattern:虽然A，但是B', 'word:满意:manyi']);
+  assert.deepEqual(items.map((i) => i.key), ['pattern:虽然A，但是B', 'word:满意:manyi3']);
   items = toggleEntry(items, wordEntry(READING_WORD, '다른 문항', NOW));
   assert.deepEqual(items.map((i) => i.key), ['pattern:虽然A，但是B']);
 });
@@ -225,10 +227,10 @@ test('저장소: 담기·빼기가 기기에 남고 구독자에게 알린다', 
   });
   toggleMine(wordEntry(READING_WORD, 's', NOW));
   assert.equal(loadMine().length, 1);
-  assert.equal(JSON.parse(localStorage.getItem(MINE_KEY)).items[0].key, 'word:满意:manyi');
+  assert.equal(JSON.parse(localStorage.getItem(MINE_KEY)).items[0].key, 'word:满意:manyi3');
   const snapshot = loadMine();
   assert.equal(loadMine(), snapshot); // 바뀌기 전에는 같은 배열 (useSyncExternalStore 조건)
-  removeMine('word:满意:manyi');
+  removeMine('word:满意:manyi3');
   assert.equal(loadMine().length, 0);
   assert.equal(calls, 2);
   off();
@@ -250,7 +252,64 @@ test('wordEntry: 다음자는 읽기로 구분하고, 성조 변조는 같은 �
   const huan = wordEntry({ hanzi: '还', pinyin: 'huán' }, 's', NOW).key;
   assert.notEqual(hai, huan);
   assert.equal(wordEntry({ hanzi: '不', pinyin: 'bù' }, 's', NOW).key, wordEntry({ hanzi: '不', pinyin: 'bú' }, 's', NOW).key);
-  assert.equal(wordEntry({ hanzi: '绿', pinyin: 'lǜ' }, 's', NOW).key, 'word:绿:lv');
+  assert.equal(wordEntry({ hanzi: '绿', pinyin: 'lǜ' }, 's', NOW).key, 'word:绿:lv4');
+});
+
+test('pinyinKey: 첫 성조만 보고, 一·不 변조와 둘째 음절 경성 표기 차이는 같은 단어', () => {
+  const table = [
+    ['好', 'hǎo', 'hao3'], ['好', 'hào', 'hao4'], ['过', 'guò', 'guo4'], ['过', 'guo', 'guo0'],
+    ['学生', 'xuésheng', 'xuesheng2'], ['学生', 'xuéshēng', 'xuesheng2'], ['绿', 'lǜ', 'lv4'],
+    ['女儿', 'nǚ’ér', 'nver3'], ['一块儿', 'yíkuàir', 'yikuair1'], ['一块儿', 'yīkuàir', 'yikuair1'],
+    ['不客气', 'bú kèqi', 'bukeqi4'], ['不', 'bú', 'bu4'], ['不', 'bù', 'bu4'], ['谁', 'shéi/shuí', 'shei2']
+  ];
+  for (const [hanzi, pinyin, expected] of table) assert.equal(pinyinKey(hanzi, pinyin), expected, `${hanzi} ${pinyin}`);
+  assert.notEqual(pinyinKey('好', 'hǎo'), pinyinKey('好', 'hào'));
+  assert.notEqual(pinyinKey('还', 'hái'), pinyinKey('还', 'huán'));
+  assert.equal(pinyinKey('谁', 'shéi/shuí'), pinyinKey('谁', 'shéi'));
+});
+
+test('rekeyItems: 예전 열쇠를 자기 병음으로 다시 만들고, 같아지면 먼저 나온 자리에 합친다', () => {
+  const two = rekeyItems([
+    { key: 'word:好:hao', kind: 'word', hanzi: '好', pinyin: 'hào', unknownCount: 2, addedBy: 'unknown', note: '' },
+    { key: 'word:好:hao', kind: 'word', hanzi: '好', pinyin: 'hǎo', note: '' }
+  ]);
+  assert.deepEqual(two.map((i) => i.key), ['word:好:hao4', 'word:好:hao3']);
+
+  const merged = rekeyItems([
+    { key: 'word:学生:xuesheng', kind: 'word', hanzi: '学生', pinyin: 'xuésheng', unknownCount: 1, addedBy: 'unknown', note: '' },
+    { key: 'word:学生:x', kind: 'word', hanzi: '学生', pinyin: 'xuéshēng', unknownCount: 3, note: '메모' }
+  ]);
+  assert.equal(merged.length, 1);
+  assert.equal(merged[0].key, 'word:学生:xuesheng2');
+  assert.equal(merged[0].unknownCount, 3);
+  assert.equal(merged[0].note, '메모');
+  assert.equal('addedBy' in merged[0], false);
+
+  const pattern = { key: 'pattern:虽然A，但是B', kind: 'pattern', hanzi: '虽然A，但是B' };
+  const word = { key: 'word:好:hao3', kind: 'word', hanzi: '好', pinyin: 'hǎo' };
+  const out = rekeyItems([pattern, { key: 'word:好:hao', kind: 'word', hanzi: '好', pinyin: 'hǎo' }]);
+  assert.equal(out[0], pattern);
+  const same = [pattern, word];
+  assert.equal(rekeyItems(same), same);
+});
+
+test('저장소: 예전 열쇠 저장값은 백업(mine-tonekey-1) 뒤 한 번 새 열쇠로 저장하고, 다시 불러오면 쓰지 않는다', () => {
+  const old = { version: 1, items: [{ key: 'word:好:hao', kind: 'word', hanzi: '好', pinyin: 'hào', meaningKo: '좋아하다' }] };
+  const raw = JSON.stringify(old);
+  const storage = memoryStorage({ [MINE_KEY]: raw });
+  let writes = 0;
+  const setItem = storage.setItem;
+  storage.setItem = (key, value) => { if (key === MINE_KEY) writes += 1; setItem(key, value); };
+  useStorage(storage);
+  resetMineForTest();
+  configureMineRefresh(undefined);
+  assert.deepEqual(loadMine().map((i) => i.key), ['word:好:hao4']);
+  assert.equal(storage.getItem(MINE_BACKUP_KEY), raw);
+  assert.equal(writes, 1);
+  assert.deepEqual(JSON.parse(storage.getItem(MINE_KEY)).items.map((i) => i.key), ['word:好:hao4']);
+  resetMineForTest();
+  loadMine();
+  assert.equal(writes, 1);
 });
 
 // --- 랜덤 학습 «모르겠어» / «이제 알겠어» ---
@@ -270,7 +329,7 @@ test('studyCardEntry: 단어장 카드를 «모르겠어» 경로로 담는 항�
 test('markUnknownEntry: 없으면 횟수 1로 맨 앞에, 있으면 자리·내용 그대로 횟수만 쌓는다', () => {
   const listening = wordEntry(LISTENING_WORD, 'H31001 듣기 25번', NOW);
   let items = markUnknownEntry([listening], studyCardEntry(VOCAB_CARD, NOW));
-  assert.deepEqual(items.map((i) => [i.key, unknownCountOf(i)]), [['word:满意:manyi', 1], ['word:门口:menkou', 0]]);
+  assert.deepEqual(items.map((i) => [i.key, unknownCountOf(i)]), [['word:满意:manyi3', 1], ['word:门口:menkou2', 0]]);
   items = markUnknownEntry(items, studyCardEntry(VOCAB_CARD, NOW));
   items = markUnknownEntry(items, studyCardEntry(VOCAB_CARD, NOW));
   assert.equal(items[0].unknownCount, 3);
@@ -314,13 +373,13 @@ test('저장소: «모르겠어» 두 번 → 내 단어장에 모름 2, «이�
   const saved = JSON.parse(localStorage.getItem(MINE_KEY));
   assert.equal(saved.version, 1);
   assert.deepEqual(saved.items.map((i) => [i.key, i.unknownCount, i.addedBy]), [
-    ['word:满意:manyi', 2, ADDED_BY_UNKNOWN], ['word:门口:menkou', undefined, undefined]
+    ['word:满意:manyi3', 2, ADDED_BY_UNKNOWN], ['word:门口:menkou2', undefined, undefined]
   ]);
   assert.equal(mineToStudyItems(loadMine())[0].unknownCount, 2);
-  resolveUnknown('word:满意:manyi');
-  assert.deepEqual(loadMine().map((i) => i.key), ['word:门口:menkou']);
+  resolveUnknown('word:满意:manyi3');
+  assert.deepEqual(loadMine().map((i) => i.key), ['word:门口:menkou2']);
   markUnknown({ hanzi: '门口', pinyin: 'ménkǒu', itemType: '단어' });
-  resolveUnknown('word:门口:menkou');
+  resolveUnknown('word:门口:menkou2');
   assert.deepEqual(JSON.parse(localStorage.getItem(MINE_KEY)).items, [wordEntry(LISTENING_WORD, 'H31001 듣기 25번', NOW)]);
 });
 
@@ -328,10 +387,10 @@ test('markKnownEntry: 모름 횟수를 1 줄이고, 0이 되면 «모름 표시 
   const manual = { ...wordEntry(LISTENING_WORD, 'H31001 듣기 25번', NOW), unknownCount: 1 };
   const viaUnknown = { ...studyCardEntry(VOCAB_CARD, NOW), unknownCount: 2 };
   let items = markKnownEntry([viaUnknown, manual], viaUnknown.key);
-  assert.deepEqual(items.map((i) => [i.key, unknownCountOf(i)]), [['word:满意:manyi', 1], ['word:门口:menkou', 1]]);
+  assert.deepEqual(items.map((i) => [i.key, unknownCountOf(i)]), [['word:满意:manyi3', 1], ['word:门口:menkou2', 1]]);
   assert.equal(items[0].addedBy, ADDED_BY_UNKNOWN); // 줄이기만 할 때는 담은 경로·자리 그대로
   items = markKnownEntry(items, viaUnknown.key); // 1 → 0: «모르겠어»로 담긴 것은 빠진다
-  assert.deepEqual(items.map((i) => i.key), ['word:门口:menkou']);
+  assert.deepEqual(items.map((i) => i.key), ['word:门口:menkou2']);
   items = markKnownEntry(items, manual.key); // 1 → 0: 직접 담은 것은 남고 횟수 칸만 지운다
   assert.deepEqual(items, [wordEntry(LISTENING_WORD, 'H31001 듣기 25번', NOW)]);
   assert.equal(markKnownEntry(items, manual.key), items); // 횟수 0이면 바꾸지 않는다
@@ -341,15 +400,15 @@ test('markKnownEntry: 모름 횟수를 1 줄이고, 0이 되면 «모름 표시 
 test('저장소: «모르겠어» 3번 → 모름 3, «알겠어» 1번 → 모름 2, 모름 0인 단어의 «알겠어»는 저장값을 바꾸지 않는다', () => {
   for (let i = 0; i < 3; i += 1) markUnknown(VOCAB_CARD);
   assert.equal(mineToStudyItems(loadMine())[0].unknownCount, 3);
-  markKnown('word:满意:manyi');
+  markKnown('word:满意:manyi3');
   assert.equal(mineToStudyItems(loadMine())[0].unknownCount, 2);
-  markKnown('word:满意:manyi');
-  markKnown('word:满意:manyi');
+  markKnown('word:满意:manyi3');
+  markKnown('word:满意:manyi3');
   assert.deepEqual(loadMine(), []);
   const before = localStorage.getItem(MINE_KEY);
   let calls = 0;
   subscribeMine(() => { calls += 1; });
-  markKnown('word:满意:manyi');
+  markKnown('word:满意:manyi3');
   assert.equal(localStorage.getItem(MINE_KEY), before);
   assert.equal(calls, 0);
 });
@@ -397,8 +456,8 @@ test('저장소: 백업을 쓸 수 없으면(저장 공간 부족) 원본을 덮
   }
 });
 
-test('저장소: 백업 키는 이전 ID(mine-refresh-1)이고, 이미 있으면 덮지 않는다', () => {
-  assert.equal(MINE_BACKUP_KEY, 'sungmi-vocab-mine-v1-backup-mine-refresh-1');
+test('저장소: 백업 키는 이전 ID(mine-tonekey-1)이고, 이미 있으면 덮지 않는다', () => {
+  assert.equal(MINE_BACKUP_KEY, 'sungmi-vocab-mine-v1-backup-mine-tonekey-1');
   const storage = memoryStorage({
     [MINE_KEY]: JSON.stringify({ version: 1, items: [{ key: 'word:a', kind: 'word', hanzi: 'a', meaningKo: '' }] }),
     [MINE_BACKUP_KEY]: 'earlier'

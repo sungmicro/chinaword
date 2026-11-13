@@ -67,6 +67,7 @@ class VocabCatalogTest(unittest.TestCase):
             {'level': 'HSK3', 'lesson': 'HSK3 추가 300', 'hanzi': '马上'},
             {'level': 'HSK3', 'lesson': 'HSK3 듣기', 'hanzi': '临时词'},
             {'level': 'HSK4', 'lesson': 'HSK4 추가 600', 'hanzi': '安排'},
+            {'level': 'HSK2', 'lesson': 'HSK 3.0 2급', 'hanzi': '帮助'},
         ]
         with tempfile.TemporaryDirectory() as directory:
             path = Path(directory) / 'vocab.json'
@@ -75,6 +76,7 @@ class VocabCatalogTest(unittest.TestCase):
 
         self.assertEqual({'马上'}, catalog.priority_words('H31001'))
         self.assertEqual({'安排'}, catalog.priority_words('H41001'))
+        self.assertEqual({'帮助'}, catalog.priority_words('H21001'))
 
 
 class VocabForTest(unittest.TestCase):

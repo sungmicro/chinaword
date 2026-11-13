@@ -1,0 +1,2953 @@
+[
+ {
+  "key": "301",
+  "head": "啊",
+  "hanzi": "啊",
+  "pinyin": "a",
+  "partOfSpeech": "조사",
+  "meaningKo": "~구나, ~니(감정·어기)",
+  "hanjaKo": "",
+  "codexKo": "(조) ~구나, ~니(감정·어기)",
+  "flags": [],
+  "sameAsApp": "",
+  "app": [
+   "HSK3 추가 300 a [조사] 긍정의미조사"
+  ]
+ },
+ {
+  "key": "302",
+  "head": "爱好",
+  "hanzi": "爱好",
+  "pinyin": "àihào",
+  "partOfSpeech": "동사/명사",
+  "meaningKo": "좋아하다, 즐기다 / (명) 취미",
+  "hanjaKo": "",
+  "codexKo": "(동) 좋아하다, 즐기다; (명) 취미",
+  "flags": [],
+  "sameAsApp": "",
+  "app": [
+   "HSK3 추가 300 àihào [명사] 취미 / (동) 애호하다"
+  ]
+ },
+ {
+  "key": "303",
+  "head": "白色",
+  "hanzi": "白色",
+  "pinyin": "báisè",
+  "partOfSpeech": "명사",
+  "meaningKo": "흰색",
+  "hanjaKo": "",
+  "codexKo": "(명) 흰색",
+  "flags": [],
+  "sameAsApp": "HSK3 독해",
+  "app": [
+   "HSK3 독해 báisè [명사] 흰색"
+  ]
+ },
+ {
+  "key": "304",
+  "head": "班",
+  "hanzi": "班",
+  "pinyin": "bān",
+  "partOfSpeech": "명사/양사",
+  "meaningKo": "반, 학급, 조 / (양) 편(정기 운행 차편)",
+  "hanjaKo": "",
+  "codexKo": "(명) 조, 그룹, 반",
+  "flags": [
+   "공식 품사 ['양사']의 뜻이 없음"
+  ],
+  "sameAsApp": "HSK3 추가 300",
+  "app": [
+   "HSK3 추가 300 bān [명사] 조, 그룹, 반"
+  ]
+ },
+ {
+  "key": "305",
+  "head": "帮",
+  "hanzi": "帮",
+  "pinyin": "bāng",
+  "partOfSpeech": "동사",
+  "meaningKo": "돕다",
+  "hanjaKo": "",
+  "codexKo": "(동) 돕다",
+  "flags": [],
+  "sameAsApp": "HSK3 듣기",
+  "app": [
+   "HSK3 듣기 bāng [동사] 돕다"
+  ]
+ },
+ {
+  "key": "306",
+  "head": "帮忙",
+  "hanzi": "帮忙",
+  "pinyin": "bāngmáng",
+  "partOfSpeech": "동사",
+  "meaningKo": "(일손을) 돕다",
+  "hanjaKo": "",
+  "codexKo": "(동) (일손을) 돕다",
+  "flags": [],
+  "sameAsApp": "HSK3 추가 300",
+  "app": [
+   "HSK3 추가 300 bāngmáng [동사] (일손을) 돕다"
+  ]
+ },
+ {
+  "key": "307",
+  "head": "包",
+  "hanzi": "包",
+  "pinyin": "bāo",
+  "partOfSpeech": "동사/명사/양사",
+  "meaningKo": "싸다, 맡다 / (명) 가방, 꾸러미 / (양) 봉지, 꾸러미",
+  "hanjaKo": "",
+  "codexKo": "(동) 싸다, 맡다; (명) 가방, 꾸러미; (양) 봉지, 꾸러미",
+  "flags": [],
+  "sameAsApp": "",
+  "app": [
+   "HSK3 추가 300 bāo [동사] (종이나 천으로) 싸다 / (명) 가방"
+  ]
+ },
+ {
+  "key": "308",
+  "head": "本子",
+  "hanzi": "本子",
+  "pinyin": "běnzi",
+  "partOfSpeech": "명사",
+  "meaningKo": "공책, 노트",
+  "hanjaKo": "",
+  "codexKo": "(명) 공책, 노트",
+  "flags": [],
+  "sameAsApp": "",
+  "app": []
+ },
+ {
+  "key": "309",
+  "head": "比",
+  "hanzi": "比",
+  "pinyin": "bǐ",
+  "partOfSpeech": "동사/개사",
+  "meaningKo": "비교하다, 겨루다 / (개) ~보다",
+  "hanjaKo": "",
+  "codexKo": "(동) 비교하다, 겨루다; (개) ~보다",
+  "flags": [],
+  "sameAsApp": "",
+  "app": [
+   "HSK2 추가 150 bǐ [비교/전치사] ~보다"
+  ]
+ },
+ {
+  "key": "310",
+  "head": "笔",
+  "hanzi": "笔",
+  "pinyin": "bǐ",
+  "partOfSpeech": "명사/양사",
+  "meaningKo": "펜 / (양) 건(돈·거래를 세는 단위)",
+  "hanjaKo": "",
+  "codexKo": "(명) 펜",
+  "flags": [
+   "공식 품사 ['양사']의 뜻이 없음"
+  ],
+  "sameAsApp": "Lesson 4",
+  "app": [
+   "Lesson 4 bǐ [단어] 펜"
+  ]
+ },
+ {
+  "key": "311",
+  "head": "别1",
+  "hanzi": "别",
+  "pinyin": "bié",
+  "partOfSpeech": "부사",
+  "meaningKo": "~하지 마라",
+  "hanjaKo": "",
+  "codexKo": "(부) ~하지 마라",
+  "flags": [],
+  "sameAsApp": "HSK2 추가 150",
+  "app": [
+   "HSK2 추가 150 bié [부사/금지] ~하지 마라"
+  ]
+ },
+ {
+  "key": "312",
+  "head": "不错",
+  "hanzi": "不错",
+  "pinyin": "búcuò",
+  "partOfSpeech": "형용사",
+  "meaningKo": "좋다, 괜찮다",
+  "hanjaKo": "",
+  "codexKo": "(형) 좋다, 괜찮다",
+  "flags": [],
+  "sameAsApp": "Lesson 5",
+  "app": [
+   "Lesson 5 búcuò [단어] 좋다, 괜찮다"
+  ]
+ },
+ {
+  "key": "313",
+  "head": "不好意思",
+  "hanzi": "不好意思",
+  "pinyin": "bù hǎoyìsi",
+  "partOfSpeech": "표현",
+  "meaningKo": "미안하다, 쑥스럽다",
+  "hanjaKo": "",
+  "codexKo": "(구) 미안하다, 쑥스럽다",
+  "flags": [],
+  "sameAsApp": "",
+  "app": [
+   "HSK3 듣기 bùhǎoyìsī [형용사] 미안"
+  ]
+ },
+ {
+  "key": "314",
+  "head": "长",
+  "hanzi": "长",
+  "pinyin": "cháng",
+  "partOfSpeech": "형용사",
+  "meaningKo": "길다",
+  "hanjaKo": "",
+  "codexKo": "(형) 길다",
+  "flags": [],
+  "sameAsApp": "HSK2 추가 150",
+  "app": [
+   "HSK2 추가 150 cháng [형용사] 길다"
+  ]
+ },
+ {
+  "key": "315",
+  "head": "车站",
+  "hanzi": "车站",
+  "pinyin": "chēzhàn",
+  "partOfSpeech": "명사",
+  "meaningKo": "역",
+  "hanjaKo": "",
+  "codexKo": "(명) 역",
+  "flags": [],
+  "sameAsApp": "HSK3 독해",
+  "app": [
+   "HSK3 독해 chēzhàn [명사] 역"
+  ]
+ },
+ {
+  "key": "316",
+  "head": "出",
+  "hanzi": "出",
+  "pinyin": "chū",
+  "partOfSpeech": "동사",
+  "meaningKo": "나가다, 나오다",
+  "hanjaKo": "",
+  "codexKo": "(동) 나가다, 나오다",
+  "flags": [],
+  "sameAsApp": "HSK2 추가 150",
+  "app": [
+   "HSK2 추가 150 chū [동사] 나가다, 나오다"
+  ]
+ },
+ {
+  "key": "317",
+  "head": "出国",
+  "hanzi": "出国",
+  "pinyin": "chūguó",
+  "partOfSpeech": "동사",
+  "meaningKo": "출국하다, 외국에 가다",
+  "hanjaKo": "",
+  "codexKo": "(동) 출국하다, 외국에 가다",
+  "flags": [],
+  "sameAsApp": "",
+  "app": []
+ },
+ {
+  "key": "318",
+  "head": "出来",
+  "hanzi": "出来",
+  "pinyin": "chūlái",
+  "partOfSpeech": "동사",
+  "meaningKo": "나오다",
+  "hanjaKo": "",
+  "codexKo": "(동) 나오다",
+  "flags": [],
+  "sameAsApp": "HSK3 독해",
+  "app": [
+   "HSK3 독해 chūlái [동사] 나오다"
+  ]
+ },
+ {
+  "key": "319",
+  "head": "出门",
+  "hanzi": "出门",
+  "pinyin": "chūmén",
+  "partOfSpeech": "동사",
+  "meaningKo": "외출하다",
+  "hanjaKo": "",
+  "codexKo": "(동) 외출하다",
+  "flags": [],
+  "sameAsApp": "HSK3 독해",
+  "app": [
+   "HSK3 독해 chūmén [동사] 외출하다"
+  ]
+ },
+ {
+  "key": "320",
+  "head": "出去",
+  "hanzi": "出去",
+  "pinyin": "chūqù",
+  "partOfSpeech": "동사",
+  "meaningKo": "나가다",
+  "hanjaKo": "",
+  "codexKo": "(동) 나가다",
+  "flags": [],
+  "sameAsApp": "HSK3 듣기",
+  "app": [
+   "HSK3 듣기 chūqu [동사] 나가다"
+  ]
+ },
+ {
+  "key": "321",
+  "head": "床",
+  "hanzi": "床",
+  "pinyin": "chuáng",
+  "partOfSpeech": "명사",
+  "meaningKo": "침대",
+  "hanjaKo": "",
+  "codexKo": "(명) 침대",
+  "flags": [],
+  "sameAsApp": "",
+  "app": [
+   "HSK3 듣기 chuáng [명사] 침대 (병상 번호)"
+  ]
+ },
+ {
+  "key": "322",
+  "head": "词",
+  "hanzi": "词",
+  "pinyin": "cí",
+  "partOfSpeech": "명사",
+  "meaningKo": "단어",
+  "hanjaKo": "",
+  "codexKo": "(명) 단어",
+  "flags": [],
+  "sameAsApp": "HSK3 듣기",
+  "app": [
+   "HSK3 듣기 cí [명사] 단어"
+  ]
+ },
+ {
+  "key": "323",
+  "head": "次",
+  "hanzi": "次",
+  "pinyin": "cì",
+  "partOfSpeech": "양사",
+  "meaningKo": "번, 회",
+  "hanjaKo": "",
+  "codexKo": "(양) 번, 회",
+  "flags": [],
+  "sameAsApp": "HSK2 추가 150",
+  "app": [
+   "HSK2 추가 150 cì [양사] 번, 회"
+  ]
+ },
+ {
+  "key": "324",
+  "head": "从",
+  "hanzi": "从",
+  "pinyin": "cóng",
+  "partOfSpeech": "개사/부사",
+  "meaningKo": "~에서, ~부터 / (부) 이제껏, 결코(부정과 호응)",
+  "hanjaKo": "",
+  "codexKo": "(개) ~에서, ~부터; (부) 이제껏, 결코(부정과 호응)",
+  "flags": [],
+  "sameAsApp": "",
+  "app": [
+   "HSK2 추가 150 cóng [전치사] ~부터, ~에서"
+  ]
+ },
+ {
+  "key": "325",
+  "head": "从小",
+  "hanzi": "从小",
+  "pinyin": "cóngxiǎo",
+  "partOfSpeech": "부사",
+  "meaningKo": "어릴 때부터",
+  "hanjaKo": "",
+  "codexKo": "(부) 어릴 때부터",
+  "flags": [],
+  "sameAsApp": "HSK3 독해",
+  "app": [
+   "HSK3 독해 cóngxiǎo [부사] 어릴 때부터"
+  ]
+ },
+ {
+  "key": "326",
+  "head": "错",
+  "hanzi": "错",
+  "pinyin": "cuò",
+  "partOfSpeech": "형용사",
+  "meaningKo": "틀리다, 잘못",
+  "hanjaKo": "",
+  "codexKo": "(형) 틀리다, 잘못",
+  "flags": [],
+  "sameAsApp": "HSK2 추가 150",
+  "app": [
+   "HSK2 추가 150 cuò [형용사/명사] 틀리다, 잘못"
+  ]
+ },
+ {
+  "key": "327",
+  "head": "打1",
+  "hanzi": "打",
+  "pinyin": "dǎ",
+  "partOfSpeech": "동사",
+  "meaningKo": "치다, 때리다, (전화 등을) 하다",
+  "hanjaKo": "",
+  "codexKo": "(동) 치다, 때리다, (전화 등을) 하다",
+  "flags": [],
+  "sameAsApp": "",
+  "app": [
+   "HSK3 듣기 dǎ [동사] 히트"
+  ]
+ },
+ {
+  "key": "328",
+  "head": "打车",
+  "hanzi": "打车",
+  "pinyin": "dǎchē",
+  "partOfSpeech": "동사",
+  "meaningKo": "택시를 타다",
+  "hanjaKo": "",
+  "codexKo": "(동) 택시를 타다",
+  "flags": [],
+  "sameAsApp": "",
+  "app": []
+ },
+ {
+  "key": "329",
+  "head": "打开",
+  "hanzi": "打开",
+  "pinyin": "dǎkāi",
+  "partOfSpeech": "동사",
+  "meaningKo": "열다, 켜다",
+  "hanjaKo": "",
+  "codexKo": "(동) 열다, 켜다",
+  "flags": [],
+  "sameAsApp": "HSK3 듣기",
+  "app": [
+   "HSK3 듣기 dǎkāi [동사] 열다, 켜다"
+  ]
+ },
+ {
+  "key": "330",
+  "head": "但",
+  "hanzi": "但",
+  "pinyin": "dàn",
+  "partOfSpeech": "접속사",
+  "meaningKo": "그러나, 하지만",
+  "hanjaKo": "",
+  "codexKo": "(접) 그러나, 하지만",
+  "flags": [],
+  "sameAsApp": "",
+  "app": []
+ },
+ {
+  "key": "331",
+  "head": "但是",
+  "hanzi": "但是",
+  "pinyin": "dànshì",
+  "partOfSpeech": "접속사",
+  "meaningKo": "하지만",
+  "hanjaKo": "",
+  "codexKo": "(접) 하지만",
+  "flags": [],
+  "sameAsApp": "HSK2 추가 150",
+  "app": [
+   "HSK2 추가 150 dànshì [접속사] 하지만"
+  ]
+ },
+ {
+  "key": "332",
+  "head": "地",
+  "hanzi": "地",
+  "pinyin": "de",
+  "partOfSpeech": "조사",
+  "meaningKo": "~하게, ~히(동작을 꾸미는 성분 뒤)",
+  "hanjaKo": "",
+  "codexKo": "(조) ~하게, ~히(동작을 꾸미는 성분 뒤)",
+  "flags": [],
+  "sameAsApp": "",
+  "app": [
+   "HSK3 추가 300 de [조사] 부사어구조조사"
+  ]
+ },
+ {
+  "key": "333",
+  "head": "得",
+  "hanzi": "得",
+  "pinyin": "de",
+  "partOfSpeech": "조사",
+  "meaningKo": "동사 뒤에서 정도·결과를 이어 줌",
+  "hanjaKo": "",
+  "codexKo": "(조) 동사 뒤에서 정도·결과를 이어 줌",
+  "flags": [],
+  "sameAsApp": "",
+  "app": [
+   "HSK2 추가 150 de [조사] 보어 표지",
+   "Lesson 5 de [단어] 동사·형용사 뒤에서 정도보어를 연결하는 조사"
+  ]
+ },
+ {
+  "key": "334",
+  "head": "等1",
+  "hanzi": "等",
+  "pinyin": "děng",
+  "partOfSpeech": "동사/개사",
+  "meaningKo": "기다리다 / (개) ~할 때까지",
+  "hanjaKo": "",
+  "codexKo": "(동) 기다리다; (개) ~할 때까지",
+  "flags": [],
+  "sameAsApp": "",
+  "app": [
+   "HSK2 추가 150 děng [동사] 기다리다"
+  ]
+ },
+ {
+  "key": "335",
+  "head": "地铁",
+  "hanzi": "地铁",
+  "pinyin": "dìtiě",
+  "partOfSpeech": "명사",
+  "meaningKo": "지하철",
+  "hanjaKo": "",
+  "codexKo": "(명) 지하철",
+  "flags": [],
+  "sameAsApp": "HSK3 추가 300",
+  "app": [
+   "HSK3 추가 300 dìtiě [명사] 지하철"
+  ]
+ },
+ {
+  "key": "336",
+  "head": "点2",
+  "hanzi": "点",
+  "pinyin": "diǎn",
+  "partOfSpeech": "동사/명사/양사",
+  "meaningKo": "불을 붙이다, 주문하다, 지적하다 / (명) 점 / (양) 방울·점",
+  "hanjaKo": "",
+  "codexKo": "(동) 불을 붙이다, 주문하다, 지적하다; (명) 점; (양) 방울·점",
+  "flags": [],
+  "sameAsApp": "",
+  "app": [
+   "HSK1 150 diǎn [명사/양사] 시, 점",
+   "Lesson 7 diǎn [단어] 시"
+  ]
+ },
+ {
+  "key": "337",
+  "head": "懂",
+  "hanzi": "懂",
+  "pinyin": "dǒng",
+  "partOfSpeech": "동사",
+  "meaningKo": "이해하다",
+  "hanjaKo": "",
+  "codexKo": "(동) 이해하다",
+  "flags": [],
+  "sameAsApp": "HSK2 추가 150",
+  "app": [
+   "HSK2 추가 150 dǒng [동사] 이해하다"
+  ]
+ },
+ {
+  "key": "338",
+  "head": "动",
+  "hanzi": "动",
+  "pinyin": "dòng",
+  "partOfSpeech": "동사",
+  "meaningKo": "움직이다, 건드리다",
+  "hanjaKo": "",
+  "codexKo": "(동) 움직이다, 건드리다",
+  "flags": [],
+  "sameAsApp": "",
+  "app": []
+ },
+ {
+  "key": "339",
+  "head": "饭馆",
+  "hanzi": "饭馆",
+  "pinyin": "fànguǎn",
+  "partOfSpeech": "명사",
+  "meaningKo": "음식점, 식당",
+  "hanjaKo": "",
+  "codexKo": "(명) 음식점, 식당",
+  "flags": [],
+  "sameAsApp": "",
+  "app": [
+   "HSK3 듣기 fànguǎn [명사] 레스토랑"
+  ]
+ },
+ {
+  "key": "340",
+  "head": "飞",
+  "hanzi": "飞",
+  "pinyin": "fēi",
+  "partOfSpeech": "동사",
+  "meaningKo": "날다",
+  "hanjaKo": "",
+  "codexKo": "(동) 날다",
+  "flags": [],
+  "sameAsApp": "HSK3 듣기",
+  "app": [
+   "HSK3 듣기 fēi [동사] 날다"
+  ]
+ },
+ {
+  "key": "341",
+  "head": "高",
+  "hanzi": "高",
+  "pinyin": "gāo",
+  "partOfSpeech": "형용사/명사",
+  "meaningKo": "높다, 키가 크다 / (명) 높이",
+  "hanjaKo": "",
+  "codexKo": "(형) 높다, 키가 크다; (명) 높이",
+  "flags": [],
+  "sameAsApp": "",
+  "app": [
+   "HSK2 추가 150 gāo [형용사] 높다, 키가 크다",
+   "Lesson 5 gāo [단어] 높다, 키가 크다"
+  ]
+ },
+ {
+  "key": "342",
+  "head": "高中",
+  "hanzi": "高中",
+  "pinyin": "gāozhōng",
+  "partOfSpeech": "명사",
+  "meaningKo": "고등학교",
+  "hanjaKo": "",
+  "codexKo": "(명) 고등학교",
+  "flags": [],
+  "sameAsApp": "",
+  "app": []
+ },
+ {
+  "key": "343",
+  "head": "告诉",
+  "hanzi": "告诉",
+  "pinyin": "gàosu",
+  "partOfSpeech": "동사",
+  "meaningKo": "알리다, 말해주다",
+  "hanjaKo": "",
+  "codexKo": "(동) 알리다, 말해주다",
+  "flags": [],
+  "sameAsApp": "HSK2 추가 150",
+  "app": [
+   "HSK2 추가 150 gàosu [동사] 알리다, 말해주다"
+  ]
+ },
+ {
+  "key": "344",
+  "head": "个子",
+  "hanzi": "个子",
+  "pinyin": "gèzi",
+  "partOfSpeech": "명사",
+  "meaningKo": "키, 체격",
+  "hanjaKo": "",
+  "codexKo": "(명) 키, 체격",
+  "flags": [],
+  "sameAsApp": "Lesson 5",
+  "app": [
+   "Lesson 5 gèzi [단어] 키, 체격"
+  ]
+ },
+ {
+  "key": "345",
+  "head": "跟",
+  "hanzi": "跟",
+  "pinyin": "gēn",
+  "partOfSpeech": "개사/접속사/명사/동사",
+  "meaningKo": "~와 함께, ~에게 / (접) ~와, 그리고 / (동) 따라가다",
+  "hanjaKo": "",
+  "codexKo": "(개) ~와 함께, ~에게; (접) ~와, 그리고",
+  "flags": [
+   "공식 품사 ['명사', '동사']의 뜻이 없음"
+  ],
+  "sameAsApp": "",
+  "app": [
+   "HSK3 추가 300 gēn [개사] ~와 / (동) 따라가다"
+  ]
+ },
+ {
+  "key": "346",
+  "head": "公交车",
+  "hanzi": "公交车",
+  "pinyin": "gōngjiāochē",
+  "partOfSpeech": "명사",
+  "meaningKo": "시내버스",
+  "hanjaKo": "",
+  "codexKo": "(명) 시내버스",
+  "flags": [],
+  "sameAsApp": "",
+  "app": []
+ },
+ {
+  "key": "347",
+  "head": "过",
+  "hanzi": "过",
+  "pinyin": "guò",
+  "partOfSpeech": "동사",
+  "meaningKo": "지나가다, 건너다, 보내다",
+  "hanjaKo": "",
+  "codexKo": "(동) 지나가다, 건너다, 보내다",
+  "flags": [],
+  "sameAsApp": "",
+  "app": [
+   "Lesson 5 guò [단어] 지내다, 보내다"
+  ]
+ },
+ {
+  "key": "348",
+  "head": "过来",
+  "hanzi": "过来",
+  "pinyin": "guòlái",
+  "partOfSpeech": "동사",
+  "meaningKo": "이쪽으로 오다, 돌아오다",
+  "hanjaKo": "",
+  "codexKo": "(동) 이쪽으로 오다, 돌아오다",
+  "flags": [],
+  "sameAsApp": "",
+  "app": [
+   "HSK3 듣기 guòlái [시간사] 여기로 오세요"
+  ]
+ },
+ {
+  "key": "349",
+  "head": "过年",
+  "hanzi": "过年",
+  "pinyin": "guònián",
+  "partOfSpeech": "동사",
+  "meaningKo": "설을 쇠다",
+  "hanjaKo": "",
+  "codexKo": "(동) 설을 쇠다",
+  "flags": [],
+  "sameAsApp": "",
+  "app": []
+ },
+ {
+  "key": "350",
+  "head": "过去1",
+  "hanzi": "过去",
+  "pinyin": "guòqù",
+  "partOfSpeech": "동사",
+  "meaningKo": "지나가다, 저쪽으로 가다",
+  "hanjaKo": "",
+  "codexKo": "(동) 지나가다, 저쪽으로 가다",
+  "flags": [],
+  "sameAsApp": "",
+  "app": [
+   "HSK3 추가 300 guòqù [명사] 과거 / (동) 지나가다"
+  ]
+ },
+ {
+  "key": "351",
+  "head": "过",
+  "hanzi": "过",
+  "pinyin": "guo",
+  "partOfSpeech": "조사",
+  "meaningKo": "~한 적이 있다(경험), 동작의 완료",
+  "hanjaKo": "",
+  "codexKo": "(조) ~한 적이 있다(경험), 동작의 완료",
+  "flags": [],
+  "sameAsApp": "",
+  "app": [
+   "HSK2 추가 150 guo [조사] 경험 표지: ~해 본 적 있다"
+  ]
+ },
+ {
+  "key": "352",
+  "head": "还是",
+  "hanzi": "还是",
+  "pinyin": "háishi",
+  "partOfSpeech": "부사/접속사",
+  "meaningKo": "여전히, 역시 / (접) 아니면(의문문)",
+  "hanjaKo": "",
+  "codexKo": "(부) 여전히, 역시; (접) 아니면(의문문)",
+  "flags": [],
+  "sameAsApp": "",
+  "app": [
+   "HSK3 추가 300 háishi [부사] 여전히, 변함없이 / (접) (의문문) 아니면",
+   "Lesson 5 háishi [단어] 아직도, 여전히"
+  ]
+ },
+ {
+  "key": "353",
+  "head": "黑色",
+  "hanzi": "黑色",
+  "pinyin": "hēisè",
+  "partOfSpeech": "명사",
+  "meaningKo": "검정색",
+  "hanjaKo": "",
+  "codexKo": "(명) 검정색",
+  "flags": [],
+  "sameAsApp": "HSK3 듣기",
+  "app": [
+   "HSK3 듣기 hēisè [명사] 검정색"
+  ]
+ },
+ {
+  "key": "354",
+  "head": "红茶",
+  "hanzi": "红茶",
+  "pinyin": "hóngchá",
+  "partOfSpeech": "명사",
+  "meaningKo": "홍차",
+  "hanjaKo": "",
+  "codexKo": "(명) 홍차",
+  "flags": [],
+  "sameAsApp": "",
+  "app": []
+ },
+ {
+  "key": "355",
+  "head": "红色",
+  "hanzi": "红色",
+  "pinyin": "hóngsè",
+  "partOfSpeech": "명사",
+  "meaningKo": "빨간색",
+  "hanjaKo": "",
+  "codexKo": "(명) 빨간색",
+  "flags": [],
+  "sameAsApp": "HSK3 듣기",
+  "app": [
+   "HSK3 듣기 hóngsè [명사] 빨간색"
+  ]
+ },
+ {
+  "key": "356",
+  "head": "后面",
+  "hanzi": "后面",
+  "pinyin": "hòumiàn",
+  "partOfSpeech": "명사",
+  "meaningKo": "뒤쪽, 뒤",
+  "hanjaKo": "",
+  "codexKo": "(명) 뒤쪽, 뒤",
+  "flags": [],
+  "sameAsApp": "HSK1 150",
+  "app": [
+   "HSK1 150 hòumiàn [명사] 뒤쪽, 뒤"
+  ]
+ },
+ {
+  "key": "357",
+  "head": "花1+花2",
+  "hanzi": "花",
+  "pinyin": "huā",
+  "partOfSpeech": "동사/명사",
+  "meaningKo": "돈·시간을 쓰다 / (명) 꽃",
+  "hanjaKo": "",
+  "codexKo": "(동) 돈·시간을 쓰다; (명) 꽃",
+  "flags": [],
+  "sameAsApp": "",
+  "app": [
+   "HSK3 추가 300 huā [동사] 쓰다, 소비하다 / (명) (~儿）꽃"
+  ]
+ },
+ {
+  "key": "359",
+  "head": "画",
+  "hanzi": "画",
+  "pinyin": "huà",
+  "partOfSpeech": "동사/명사",
+  "meaningKo": "그리다 / (명) 그림",
+  "hanjaKo": "",
+  "codexKo": "(동) 그리다; (명) 그림",
+  "flags": [],
+  "sameAsApp": "",
+  "app": [
+   "HSK3 추가 300 huà [동사] (그림을) 그리다"
+  ]
+ },
+ {
+  "key": "360",
+  "head": "坏",
+  "hanzi": "坏",
+  "pinyin": "huài",
+  "partOfSpeech": "형용사",
+  "meaningKo": "나쁘다",
+  "hanjaKo": "",
+  "codexKo": "(형) 나쁘다",
+  "flags": [],
+  "sameAsApp": "HSK3 추가 300",
+  "app": [
+   "HSK3 추가 300 huài [형용사] 나쁘다",
+   "Lesson 5 huài [단어] 나쁘다"
+  ]
+ },
+ {
+  "key": "361",
+  "head": "回来",
+  "hanzi": "回来",
+  "pinyin": "huílái",
+  "partOfSpeech": "동사",
+  "meaningKo": "돌아오다",
+  "hanjaKo": "",
+  "codexKo": "(동) 돌아오다",
+  "flags": [],
+  "sameAsApp": "HSK3 독해",
+  "app": [
+   "HSK3 독해 huílai [동사] 돌아오다"
+  ]
+ },
+ {
+  "key": "362",
+  "head": "回去",
+  "hanzi": "回去",
+  "pinyin": "huíqù",
+  "partOfSpeech": "동사",
+  "meaningKo": "돌아가다",
+  "hanjaKo": "",
+  "codexKo": "(동) 돌아가다",
+  "flags": [],
+  "sameAsApp": "HSK3 독해",
+  "app": [
+   "HSK3 독해 huíqu [동사] 돌아가다"
+  ]
+ },
+ {
+  "key": "363",
+  "head": "机场",
+  "hanzi": "机场",
+  "pinyin": "jīchǎng",
+  "partOfSpeech": "명사",
+  "meaningKo": "공항",
+  "hanjaKo": "",
+  "codexKo": "(명) 공항",
+  "flags": [],
+  "sameAsApp": "HSK2 추가 150",
+  "app": [
+   "HSK2 추가 150 jīchǎng [장소] 공항"
+  ]
+ },
+ {
+  "key": "364",
+  "head": "机票",
+  "hanzi": "机票",
+  "pinyin": "jīpiào",
+  "partOfSpeech": "명사",
+  "meaningKo": "항공권",
+  "hanjaKo": "",
+  "codexKo": "(명) 항공권",
+  "flags": [],
+  "sameAsApp": "",
+  "app": []
+ },
+ {
+  "key": "365",
+  "head": "记得",
+  "hanzi": "记得",
+  "pinyin": "jìde",
+  "partOfSpeech": "동사",
+  "meaningKo": "기억하고 있다",
+  "hanjaKo": "",
+  "codexKo": "(동) 기억하고 있다",
+  "flags": [],
+  "sameAsApp": "HSK3 추가 300",
+  "app": [
+   "HSK3 추가 300 jìde [동사] 기억하고 있다"
+  ]
+ },
+ {
+  "key": "366",
+  "head": "间",
+  "hanzi": "间",
+  "pinyin": "jiān",
+  "partOfSpeech": "양사/명사",
+  "meaningKo": "칸(방을 세는 단위) / (명) 사이",
+  "hanjaKo": "",
+  "codexKo": "(양) 칸(방을 세는 단위); (명) 사이",
+  "flags": [],
+  "sameAsApp": "",
+  "app": []
+ },
+ {
+  "key": "367",
+  "head": "教",
+  "hanzi": "教",
+  "pinyin": "jiāo",
+  "partOfSpeech": "동사",
+  "meaningKo": "가르치다",
+  "hanjaKo": "",
+  "codexKo": "(동) 가르치다",
+  "flags": [],
+  "sameAsApp": "HSK3 추가 300",
+  "app": [
+   "HSK3 추가 300 jiāo [동사] 가르치다"
+  ]
+ },
+ {
+  "key": "368",
+  "head": "教室",
+  "hanzi": "教室",
+  "pinyin": "jiàoshì",
+  "partOfSpeech": "명사",
+  "meaningKo": "교실",
+  "hanjaKo": "",
+  "codexKo": "(명) 교실",
+  "flags": [],
+  "sameAsApp": "HSK2 추가 150",
+  "app": [
+   "HSK2 추가 150 jiàoshì [장소] 교실"
+  ]
+ },
+ {
+  "key": "369",
+  "head": "介绍",
+  "hanzi": "介绍",
+  "pinyin": "jièshào",
+  "partOfSpeech": "동사",
+  "meaningKo": "소개하다",
+  "hanjaKo": "",
+  "codexKo": "(동) 소개하다",
+  "flags": [],
+  "sameAsApp": "HSK2 추가 150",
+  "app": [
+   "HSK2 추가 150 jièshào [동사] 소개하다"
+  ]
+ },
+ {
+  "key": "370",
+  "head": "进",
+  "hanzi": "进",
+  "pinyin": "jìn",
+  "partOfSpeech": "동사",
+  "meaningKo": "들어가다",
+  "hanjaKo": "",
+  "codexKo": "(동) 들어가다",
+  "flags": [],
+  "sameAsApp": "HSK2 추가 150",
+  "app": [
+   "HSK2 추가 150 jìn [동사] 들어가다"
+  ]
+ },
+ {
+  "key": "371",
+  "head": "进来",
+  "hanzi": "进来",
+  "pinyin": "jìnlái",
+  "partOfSpeech": "동사",
+  "meaningKo": "들어오다",
+  "hanjaKo": "",
+  "codexKo": "(동) 들어오다",
+  "flags": [],
+  "sameAsApp": "HSK3 듣기",
+  "app": [
+   "HSK3 듣기 jìnlai [동사] 들어오다"
+  ]
+ },
+ {
+  "key": "372",
+  "head": "进去",
+  "hanzi": "进去",
+  "pinyin": "jìnqù",
+  "partOfSpeech": "동사",
+  "meaningKo": "들어가다",
+  "hanjaKo": "",
+  "codexKo": "(동) 들어가다",
+  "flags": [],
+  "sameAsApp": "",
+  "app": []
+ },
+ {
+  "key": "373",
+  "head": "近",
+  "hanzi": "近",
+  "pinyin": "jìn",
+  "partOfSpeech": "형용사",
+  "meaningKo": "가깝다",
+  "hanjaKo": "",
+  "codexKo": "(형) 가깝다",
+  "flags": [],
+  "sameAsApp": "HSK2 추가 150",
+  "app": [
+   "HSK2 추가 150 jìn [형용사] 가깝다"
+  ]
+ },
+ {
+  "key": "374",
+  "head": "经常",
+  "hanzi": "经常",
+  "pinyin": "jīngcháng",
+  "partOfSpeech": "부사",
+  "meaningKo": "자주, 늘, 항상",
+  "hanjaKo": "",
+  "codexKo": "(부) 자주, 늘, 항상",
+  "flags": [],
+  "sameAsApp": "HSK3 추가 300",
+  "app": [
+   "HSK3 추가 300 jīngcháng [부사] 자주, 늘, 항상"
+  ]
+ },
+ {
+  "key": "375",
+  "head": "酒店",
+  "hanzi": "酒店",
+  "pinyin": "jiǔdiàn",
+  "partOfSpeech": "명사",
+  "meaningKo": "호텔, 음식점",
+  "hanjaKo": "",
+  "codexKo": "(명) 호텔, 음식점",
+  "flags": [],
+  "sameAsApp": "",
+  "app": []
+ },
+ {
+  "key": "376",
+  "head": "就",
+  "hanzi": "就",
+  "pinyin": "jiù",
+  "partOfSpeech": "부사",
+  "meaningKo": "곧, 바로, 단지",
+  "hanjaKo": "",
+  "codexKo": "(부) 곧, 바로, 단지",
+  "flags": [],
+  "sameAsApp": "",
+  "app": [
+   "HSK2 추가 150 jiù [부사] 곧, 바로, 강조"
+  ]
+ },
+ {
+  "key": "377",
+  "head": "咖啡",
+  "hanzi": "咖啡",
+  "pinyin": "kāfēi",
+  "partOfSpeech": "명사",
+  "meaningKo": "커피",
+  "hanjaKo": "",
+  "codexKo": "(명) 커피",
+  "flags": [],
+  "sameAsApp": "HSK2 추가 150",
+  "app": [
+   "HSK2 추가 150 kāfēi [음료] 커피"
+  ]
+ },
+ {
+  "key": "378",
+  "head": "开始",
+  "hanzi": "开始",
+  "pinyin": "kāishǐ",
+  "partOfSpeech": "동사/명사",
+  "meaningKo": "시작하다 / (명) 시작, 처음",
+  "hanjaKo": "",
+  "codexKo": "(동) 시작하다; (명) 시작, 처음",
+  "flags": [],
+  "sameAsApp": "",
+  "app": [
+   "HSK2 추가 150 kāishǐ [동사] 시작하다"
+  ]
+ },
+ {
+  "key": "379",
+  "head": "开学",
+  "hanzi": "开学",
+  "pinyin": "kāixué",
+  "partOfSpeech": "동사",
+  "meaningKo": "개학하다",
+  "hanjaKo": "",
+  "codexKo": "(동) 개학하다",
+  "flags": [],
+  "sameAsApp": "",
+  "app": []
+ },
+ {
+  "key": "380",
+  "head": "考",
+  "hanzi": "考",
+  "pinyin": "kǎo",
+  "partOfSpeech": "동사",
+  "meaningKo": "시험을 보다",
+  "hanjaKo": "",
+  "codexKo": "(동) 시험을 보다",
+  "flags": [],
+  "sameAsApp": "HSK3 독해",
+  "app": [
+   "HSK3 독해 kǎo [동사] 시험을 보다"
+  ]
+ },
+ {
+  "key": "381",
+  "head": "考试",
+  "hanzi": "考试",
+  "pinyin": "kǎoshì",
+  "partOfSpeech": "동사/명사",
+  "meaningKo": "시험을 보다 / (명) 시험",
+  "hanjaKo": "",
+  "codexKo": "(동) 시험을 보다; (명) 시험",
+  "flags": [],
+  "sameAsApp": "",
+  "app": [
+   "HSK2 추가 150 kǎoshì [명사/동사] 시험, 시험보다"
+  ]
+ },
+ {
+  "key": "382",
+  "head": "可能",
+  "hanzi": "可能",
+  "pinyin": "kěnéng",
+  "partOfSpeech": "형용사/명사/동사",
+  "meaningKo": "가능하다 / (명) 가능성 / (동) 아마 ~일 것이다",
+  "hanjaKo": "",
+  "codexKo": "(형) 가능하다; (명) 가능성; (동) ~할 수 있다",
+  "flags": [],
+  "sameAsApp": "",
+  "app": [
+   "HSK2 추가 150 kěnéng [부사/형용사] 아마, 가능하다"
+  ]
+ },
+ {
+  "key": "383",
+  "head": "裤子",
+  "hanzi": "裤子",
+  "pinyin": "kùzi",
+  "partOfSpeech": "명사",
+  "meaningKo": "바지",
+  "hanjaKo": "",
+  "codexKo": "(명) 바지",
+  "flags": [],
+  "sameAsApp": "HSK3 추가 300",
+  "app": [
+   "HSK3 추가 300 kùzi [명사] 바지",
+   "Lesson 4 kùzi [단어] 바지",
+   "Lesson 6 kùzi [단어] 바지"
+  ]
+ },
+ {
+  "key": "384",
+  "head": "快",
+  "hanzi": "快",
+  "pinyin": "kuài",
+  "partOfSpeech": "형용사/부사",
+  "meaningKo": "빠르다 / (부) 곧, 빨리",
+  "hanjaKo": "",
+  "codexKo": "(형) 빠르다; (부) 곧, 빨리",
+  "flags": [],
+  "sameAsApp": "",
+  "app": [
+   "HSK2 추가 150 kuài [형용사/부사] 빠르다, 곧"
+  ]
+ },
+ {
+  "key": "385",
+  "head": "快乐",
+  "hanzi": "快乐",
+  "pinyin": "kuàilè",
+  "partOfSpeech": "형용사",
+  "meaningKo": "즐겁다, 행복하다",
+  "hanjaKo": "",
+  "codexKo": "(형) 즐겁다, 행복하다",
+  "flags": [],
+  "sameAsApp": "HSK2 추가 150",
+  "app": [
+   "HSK2 추가 150 kuàilè [형용사] 즐겁다, 행복하다"
+  ]
+ },
+ {
+  "key": "386",
+  "head": "快要",
+  "hanzi": "快要",
+  "pinyin": "kuàiyào",
+  "partOfSpeech": "부사",
+  "meaningKo": "곧 ~하려 하다",
+  "hanjaKo": "",
+  "codexKo": "(부) 곧 ~하려 하다",
+  "flags": [],
+  "sameAsApp": "",
+  "app": []
+ },
+ {
+  "key": "387",
+  "head": "篮球",
+  "hanzi": "篮球",
+  "pinyin": "lánqiú",
+  "partOfSpeech": "명사",
+  "meaningKo": "농구",
+  "hanjaKo": "",
+  "codexKo": "(명) 농구",
+  "flags": [],
+  "sameAsApp": "HSK3 듣기",
+  "app": [
+   "HSK3 듣기 lánqiú [명사] 농구"
+  ]
+ },
+ {
+  "key": "388",
+  "head": "累",
+  "hanzi": "累",
+  "pinyin": "lèi",
+  "partOfSpeech": "형용사/동사",
+  "meaningKo": "피곤하다 / (동) 지치게 하다",
+  "hanjaKo": "",
+  "codexKo": "(형) 피곤하다; (동) 지치게 하다",
+  "flags": [],
+  "sameAsApp": "",
+  "app": [
+   "HSK2 추가 150 lèi [형용사] 피곤하다",
+   "Lesson 5 lèi [단어] 피곤하다, 힘들다"
+  ]
+ },
+ {
+  "key": "389",
+  "head": "离",
+  "hanzi": "离",
+  "pinyin": "lí",
+  "partOfSpeech": "동사",
+  "meaningKo": "~에서 떨어져 있다, 떠나다",
+  "hanjaKo": "",
+  "codexKo": "(동) 떨어지다, 떠나다",
+  "flags": [],
+  "sameAsApp": "",
+  "app": [
+   "HSK2 추가 150 lí [전치사] ~에서 떨어져"
+  ]
+ },
+ {
+  "key": "390",
+  "head": "里面",
+  "hanzi": "里面",
+  "pinyin": "lǐmiàn",
+  "partOfSpeech": "명사",
+  "meaningKo": "안쪽, 안",
+  "hanjaKo": "",
+  "codexKo": "(명) 안쪽, 안",
+  "flags": [],
+  "sameAsApp": "HSK1 150",
+  "app": [
+   "HSK1 150 lǐmiàn [명사] 안쪽, 안"
+  ]
+ },
+ {
+  "key": "391",
+  "head": "楼",
+  "hanzi": "楼",
+  "pinyin": "lóu",
+  "partOfSpeech": "명사",
+  "meaningKo": "건물, 층",
+  "hanjaKo": "",
+  "codexKo": "(명) 건물, 층",
+  "flags": [],
+  "sameAsApp": "HSK3 추가 300",
+  "app": [
+   "HSK3 추가 300 lóu [명사] 건물, 층"
+  ]
+ },
+ {
+  "key": "392",
+  "head": "路",
+  "hanzi": "路",
+  "pinyin": "lù",
+  "partOfSpeech": "명사",
+  "meaningKo": "길, 도로",
+  "hanjaKo": "",
+  "codexKo": "(명) 길, 도로",
+  "flags": [],
+  "sameAsApp": "HSK2 추가 150",
+  "app": [
+   "HSK2 추가 150 lù [명사] 길, 도로"
+  ]
+ },
+ {
+  "key": "393",
+  "head": "路上",
+  "hanzi": "路上",
+  "pinyin": "lùshang",
+  "partOfSpeech": "명사",
+  "meaningKo": "길에서",
+  "hanjaKo": "",
+  "codexKo": "(명) 길에서",
+  "flags": [],
+  "sameAsApp": "HSK3 듣기",
+  "app": [
+   "HSK3 듣기 lùshàng [장소사] 길에서"
+  ]
+ },
+ {
+  "key": "394",
+  "head": "旅游",
+  "hanzi": "旅游",
+  "pinyin": "lǚyóu",
+  "partOfSpeech": "동사",
+  "meaningKo": "여행하다, 여행",
+  "hanjaKo": "",
+  "codexKo": "(동) 여행하다, 여행",
+  "flags": [],
+  "sameAsApp": "HSK2 추가 150",
+  "app": [
+   "HSK2 추가 150 lǚyóu [동사/명사] 여행하다, 여행"
+  ]
+ },
+ {
+  "key": "395",
+  "head": "绿茶",
+  "hanzi": "绿茶",
+  "pinyin": "lǜchá",
+  "partOfSpeech": "명사",
+  "meaningKo": "녹차",
+  "hanjaKo": "",
+  "codexKo": "(명) 녹차",
+  "flags": [],
+  "sameAsApp": "",
+  "app": []
+ },
+ {
+  "key": "396",
+  "head": "绿色",
+  "hanzi": "绿色",
+  "pinyin": "lǜsè",
+  "partOfSpeech": "명사/형용사",
+  "meaningKo": "녹색 / (형) 친환경적이다",
+  "hanjaKo": "",
+  "codexKo": "(명) 녹색; (형) 친환경적이다",
+  "flags": [],
+  "sameAsApp": "",
+  "app": []
+ },
+ {
+  "key": "397",
+  "head": "慢",
+  "hanzi": "慢",
+  "pinyin": "màn",
+  "partOfSpeech": "형용사",
+  "meaningKo": "느리다",
+  "hanjaKo": "",
+  "codexKo": "(형) 느리다",
+  "flags": [],
+  "sameAsApp": "HSK2 추가 150",
+  "app": [
+   "HSK2 추가 150 màn [형용사] 느리다"
+  ]
+ },
+ {
+  "key": "398",
+  "head": "没意思",
+  "hanzi": "没意思",
+  "pinyin": "méi yìsi",
+  "partOfSpeech": "표현",
+  "meaningKo": "재미없다, 의미 없다",
+  "hanjaKo": "",
+  "codexKo": "(구) 재미없다, 의미 없다",
+  "flags": [],
+  "sameAsApp": "",
+  "app": []
+ },
+ {
+  "key": "399",
+  "head": "每",
+  "hanzi": "每",
+  "pinyin": "měi",
+  "partOfSpeech": "대명사/부사",
+  "meaningKo": "매, ~마다 / (부) 언제나, ~할 때마다",
+  "hanjaKo": "",
+  "codexKo": "(대) 매, ~마다; (부) 언제나, ~할 때마다",
+  "flags": [],
+  "sameAsApp": "",
+  "app": [
+   "HSK2 추가 150 měi [대명사/한정사] 매, ~마다"
+  ]
+ },
+ {
+  "key": "400",
+  "head": "门",
+  "hanzi": "门",
+  "pinyin": "mén",
+  "partOfSpeech": "명사",
+  "meaningKo": "문",
+  "hanjaKo": "",
+  "codexKo": "(명) 문",
+  "flags": [],
+  "sameAsApp": "HSK2 추가 150",
+  "app": [
+   "HSK2 추가 150 mén [명사] 문"
+  ]
+ },
+ {
+  "key": "401",
+  "head": "门口",
+  "hanzi": "门口",
+  "pinyin": "ménkǒu",
+  "partOfSpeech": "명사",
+  "meaningKo": "입구, 문 앞",
+  "hanjaKo": "",
+  "codexKo": "(명) 입구, 문 앞",
+  "flags": [],
+  "sameAsApp": "HSK3 독해",
+  "app": [
+   "HSK3 독해 ménkǒu [명사] 입구, 문 앞"
+  ]
+ },
+ {
+  "key": "402",
+  "head": "门票",
+  "hanzi": "门票",
+  "pinyin": "ménpiào",
+  "partOfSpeech": "명사",
+  "meaningKo": "입장권",
+  "hanjaKo": "",
+  "codexKo": "(명) 입장권",
+  "flags": [],
+  "sameAsApp": "HSK3 독해",
+  "app": [
+   "HSK3 독해 ménpiào [명사] 입장권"
+  ]
+ },
+ {
+  "key": "403",
+  "head": "面1",
+  "hanzi": "面",
+  "pinyin": "miàn",
+  "partOfSpeech": "접미사/동사/명사/양사",
+  "meaningKo": "~쪽(방향·장소 접미사) / (명) 얼굴, 국수 / (양) 면(거울 등)",
+  "hanjaKo": "",
+  "codexKo": "(접미) 방향·장소를 나타내는 접미사(~쪽)",
+  "flags": [
+   "공식 품사 ['동사', '명사', '양사']의 뜻이 없음"
+  ],
+  "sameAsApp": "",
+  "app": [
+   "HSK3 듣기 miàn [명사] 국수"
+  ]
+ },
+ {
+  "key": "404",
+  "head": "名",
+  "hanzi": "名",
+  "pinyin": "míng",
+  "partOfSpeech": "명사/양사",
+  "meaningKo": "이름, 명성 / (양) 명(사람을 세는 단위)",
+  "hanjaKo": "",
+  "codexKo": "(명) 이름, 명성; (양) 명(사람을 세는 단위)",
+  "flags": [],
+  "sameAsApp": "",
+  "app": []
+ },
+ {
+  "key": "405",
+  "head": "拿",
+  "hanzi": "拿",
+  "pinyin": "ná",
+  "partOfSpeech": "동사",
+  "meaningKo": "(손으로) 잡다, 쥐다",
+  "hanjaKo": "",
+  "codexKo": "(동) (손으로) 잡다, 쥐다",
+  "flags": [],
+  "sameAsApp": "HSK3 추가 300",
+  "app": [
+   "HSK3 추가 300 ná [동사] (손으로) 잡다, 쥐다"
+  ]
+ },
+ {
+  "key": "406",
+  "head": "那么",
+  "hanzi": "那么",
+  "pinyin": "nàme",
+  "partOfSpeech": "대명사/접속사",
+  "meaningKo": "그렇게, 그만큼 / (접) 그렇다면",
+  "hanjaKo": "",
+  "codexKo": "(대) 그렇게, 그만큼; (접) 그렇다면",
+  "flags": [],
+  "sameAsApp": "",
+  "app": [
+   "HSK3 듣기 nàme [대명사] 그런 다음"
+  ]
+ },
+ {
+  "key": "407",
+  "head": "那样",
+  "hanzi": "那样",
+  "pinyin": "nàyàng",
+  "partOfSpeech": "대명사",
+  "meaningKo": "그렇게, 그런 모양",
+  "hanjaKo": "",
+  "codexKo": "(대) 그렇게, 그런 모양",
+  "flags": [],
+  "sameAsApp": "",
+  "app": []
+ },
+ {
+  "key": "408",
+  "head": "奶茶",
+  "hanzi": "奶茶",
+  "pinyin": "nǎichá",
+  "partOfSpeech": "명사",
+  "meaningKo": "밀크티",
+  "hanjaKo": "",
+  "codexKo": "(명) 밀크티",
+  "flags": [],
+  "sameAsApp": "",
+  "app": []
+ },
+ {
+  "key": "409",
+  "head": "奶奶",
+  "hanzi": "奶奶",
+  "pinyin": "nǎinai",
+  "partOfSpeech": "명사",
+  "meaningKo": "할머니",
+  "hanjaKo": "",
+  "codexKo": "(명) 할머니",
+  "flags": [],
+  "sameAsApp": "HSK3 추가 300",
+  "app": [
+   "HSK3 추가 300 nǎinai [명사] 할머니",
+   "Lesson 4 nǎinai [단어] 할머니"
+  ]
+ },
+ {
+  "key": "410",
+  "head": "男孩儿",
+  "hanzi": "男孩儿",
+  "pinyin": "nánháir",
+  "partOfSpeech": "명사",
+  "meaningKo": "남자아이",
+  "hanjaKo": "",
+  "codexKo": "(명) 남자아이",
+  "flags": [],
+  "sameAsApp": "",
+  "app": []
+ },
+ {
+  "key": "411",
+  "head": "鸟",
+  "hanzi": "鸟",
+  "pinyin": "niǎo",
+  "partOfSpeech": "명사",
+  "meaningKo": "새",
+  "hanjaKo": "",
+  "codexKo": "(명) 새",
+  "flags": [],
+  "sameAsApp": "HSK3 추가 300",
+  "app": [
+   "HSK3 추가 300 niǎo [명사] 새"
+  ]
+ },
+ {
+  "key": "412",
+  "head": "女孩儿",
+  "hanzi": "女孩儿",
+  "pinyin": "nǚháir",
+  "partOfSpeech": "명사",
+  "meaningKo": "여자아이",
+  "hanjaKo": "",
+  "codexKo": "(명) 여자아이",
+  "flags": [],
+  "sameAsApp": "HSK3 듣기",
+  "app": [
+   "HSK3 듣기 nǚháir [명사] 여자아이"
+  ]
+ },
+ {
+  "key": "413",
+  "head": "旁边",
+  "hanzi": "旁边",
+  "pinyin": "pángbiān",
+  "partOfSpeech": "명사",
+  "meaningKo": "옆, 곁",
+  "hanjaKo": "",
+  "codexKo": "(명) 옆, 곁",
+  "flags": [],
+  "sameAsApp": "HSK2 추가 150",
+  "app": [
+   "HSK2 추가 150 pángbiān [위치] 옆, 곁"
+  ]
+ },
+ {
+  "key": "414",
+  "head": "跑",
+  "hanzi": "跑",
+  "pinyin": "pǎo",
+  "partOfSpeech": "동사",
+  "meaningKo": "달리다",
+  "hanjaKo": "",
+  "codexKo": "(동) 달리다",
+  "flags": [],
+  "sameAsApp": "HSK3 독해",
+  "app": [
+   "HSK3 독해 pǎo [동사] 달리다"
+  ]
+ },
+ {
+  "key": "415",
+  "head": "跑步",
+  "hanzi": "跑步",
+  "pinyin": "pǎobù",
+  "partOfSpeech": "동사",
+  "meaningKo": "달리기하다",
+  "hanjaKo": "",
+  "codexKo": "(동) 달리기하다",
+  "flags": [],
+  "sameAsApp": "HSK2 추가 150",
+  "app": [
+   "HSK2 추가 150 pǎobù [동사] 달리기하다"
+  ]
+ },
+ {
+  "key": "416",
+  "head": "票",
+  "hanzi": "票",
+  "pinyin": "piào",
+  "partOfSpeech": "명사",
+  "meaningKo": "표, 티켓",
+  "hanjaKo": "",
+  "codexKo": "(명) 표, 티켓",
+  "flags": [],
+  "sameAsApp": "HSK2 추가 150",
+  "app": [
+   "HSK2 추가 150 piào [명사] 표, 티켓"
+  ]
+ },
+ {
+  "key": "417",
+  "head": "妻子",
+  "hanzi": "妻子",
+  "pinyin": "qīzi",
+  "partOfSpeech": "명사",
+  "meaningKo": "아내",
+  "hanjaKo": "",
+  "codexKo": "(명) 아내",
+  "flags": [],
+  "sameAsApp": "HSK2 추가 150",
+  "app": [
+   "HSK2 추가 150 qīzi [가족] 아내",
+   "Lesson 4 qīzi [단어] 아내"
+  ]
+ },
+ {
+  "key": "418",
+  "head": "起来",
+  "hanzi": "起来",
+  "pinyin": "qǐlái",
+  "partOfSpeech": "동사",
+  "meaningKo": "일어나다, ~하기 시작하다(동사 뒤), ~해 내다(생각나다)",
+  "hanjaKo": "",
+  "codexKo": "(동) 일어나다; (동사 뒤) ~하기 시작하다, ~해 내다(想起来: 생각나다)",
+  "flags": [
+   "괄호 안이 품사가 아님: (동사 뒤)",
+   "뜻에 한자가 있음"
+  ],
+  "sameAsApp": "",
+  "app": [
+   "HSK3 독해 qǐlai [동사] 일어나다; (동사 뒤) ~하기 시작하다, ~해 내다(想起来: 생각나다)"
+  ]
+ },
+ {
+  "key": "419",
+  "head": "前面",
+  "hanzi": "前面",
+  "pinyin": "qiánmiàn",
+  "partOfSpeech": "명사",
+  "meaningKo": "앞쪽, 앞",
+  "hanjaKo": "",
+  "codexKo": "(명) 앞쪽, 앞",
+  "flags": [],
+  "sameAsApp": "HSK1 150",
+  "app": [
+   "HSK1 150 qiánmiàn [명사] 앞쪽, 앞"
+  ]
+ },
+ {
+  "key": "420",
+  "head": "晴",
+  "hanzi": "晴",
+  "pinyin": "qíng",
+  "partOfSpeech": "형용사",
+  "meaningKo": "맑다",
+  "hanjaKo": "",
+  "codexKo": "(형) 맑다",
+  "flags": [],
+  "sameAsApp": "HSK2 추가 150",
+  "app": [
+   "HSK2 추가 150 qíng [날씨] 맑다"
+  ]
+ },
+ {
+  "key": "421",
+  "head": "球",
+  "hanzi": "球",
+  "pinyin": "qiú",
+  "partOfSpeech": "명사",
+  "meaningKo": "공, 골(득점)",
+  "hanjaKo": "",
+  "codexKo": "(명) 공; (进球) 골",
+  "flags": [
+   "괄호 안이 품사가 아님: (进球)",
+   "뜻에 한자가 있음"
+  ],
+  "sameAsApp": "",
+  "app": [
+   "HSK3 독해 qiú [명사] 공; (进球) 골"
+  ]
+ },
+ {
+  "key": "422",
+  "head": "让",
+  "hanzi": "让",
+  "pinyin": "ràng",
+  "partOfSpeech": "동사/개사",
+  "meaningKo": "양보하다, ~하게 하다 / (개) ~에게, ~에 의해",
+  "hanjaKo": "",
+  "codexKo": "(동) 양보하다, ~하게 하다; (개) ~에게, ~에 의해",
+  "flags": [],
+  "sameAsApp": "",
+  "app": [
+   "HSK2 추가 150 ràng [동사] ~하게 하다, 양보하다"
+  ]
+ },
+ {
+  "key": "423",
+  "head": "肉",
+  "hanzi": "肉",
+  "pinyin": "ròu",
+  "partOfSpeech": "명사",
+  "meaningKo": "고기, 살",
+  "hanjaKo": "",
+  "codexKo": "(명) 고기, 살",
+  "flags": [],
+  "sameAsApp": "",
+  "app": []
+ },
+ {
+  "key": "424",
+  "head": "商场",
+  "hanzi": "商场",
+  "pinyin": "shāngchǎng",
+  "partOfSpeech": "명사",
+  "meaningKo": "백화점, 쇼핑센터",
+  "hanjaKo": "",
+  "codexKo": "(명) 백화점, 쇼핑센터",
+  "flags": [],
+  "sameAsApp": "",
+  "app": []
+ },
+ {
+  "key": "425",
+  "head": "上来",
+  "hanzi": "上来",
+  "pinyin": "shànglái",
+  "partOfSpeech": "동사",
+  "meaningKo": "올라오다",
+  "hanjaKo": "",
+  "codexKo": "(동) 올라오다",
+  "flags": [],
+  "sameAsApp": "",
+  "app": []
+ },
+ {
+  "key": "426",
+  "head": "上面",
+  "hanzi": "上面",
+  "pinyin": "shàngmiàn",
+  "partOfSpeech": "명사",
+  "meaningKo": "위에",
+  "hanjaKo": "",
+  "codexKo": "(명) 위에",
+  "flags": [],
+  "sameAsApp": "HSK3 독해",
+  "app": [
+   "HSK3 독해 shàngmiàn [방위사] 위에"
+  ]
+ },
+ {
+  "key": "427",
+  "head": "上去",
+  "hanzi": "上去",
+  "pinyin": "shàngqù",
+  "partOfSpeech": "동사",
+  "meaningKo": "올라가다",
+  "hanjaKo": "",
+  "codexKo": "(동) 올라가다",
+  "flags": [],
+  "sameAsApp": "",
+  "app": []
+ },
+ {
+  "key": "428",
+  "head": "上网",
+  "hanzi": "上网",
+  "pinyin": "shàngwǎng",
+  "partOfSpeech": "동사",
+  "meaningKo": "인터넷을 하다",
+  "hanjaKo": "",
+  "codexKo": "(동) 인터넷을 하다",
+  "flags": [],
+  "sameAsApp": "HSK3 추가 300",
+  "app": [
+   "HSK3 추가 300 shàngwǎng [동사] 인터넷을 하다"
+  ]
+ },
+ {
+  "key": "429",
+  "head": "身体",
+  "hanzi": "身体",
+  "pinyin": "shēntǐ",
+  "partOfSpeech": "명사",
+  "meaningKo": "몸, 신체",
+  "hanjaKo": "",
+  "codexKo": "(명) 몸, 신체",
+  "flags": [],
+  "sameAsApp": "HSK2 추가 150",
+  "app": [
+   "HSK2 추가 150 shēntǐ [명사] 몸, 신체",
+   "Lesson 8 shēntǐ [단어] 몸, 신체"
+  ]
+ },
+ {
+  "key": "430",
+  "head": "生日",
+  "hanzi": "生日",
+  "pinyin": "shēngrì",
+  "partOfSpeech": "명사",
+  "meaningKo": "생일",
+  "hanjaKo": "",
+  "codexKo": "(명) 생일",
+  "flags": [],
+  "sameAsApp": "HSK2 추가 150",
+  "app": [
+   "HSK2 추가 150 shēngrì [명사] 생일"
+  ]
+ },
+ {
+  "key": "431",
+  "head": "时",
+  "hanzi": "时",
+  "pinyin": "shí",
+  "partOfSpeech": "명사",
+  "meaningKo": "때, 시간",
+  "hanjaKo": "",
+  "codexKo": "(명) 때, 시간",
+  "flags": [],
+  "sameAsApp": "",
+  "app": []
+ },
+ {
+  "key": "432",
+  "head": "事情",
+  "hanzi": "事情",
+  "pinyin": "shìqing",
+  "partOfSpeech": "명사",
+  "meaningKo": "일, 사건",
+  "hanjaKo": "",
+  "codexKo": "(명) 일, 사건",
+  "flags": [],
+  "sameAsApp": "HSK2 추가 150",
+  "app": [
+   "HSK2 추가 150 shìqing [명사] 일, 사건"
+  ]
+ },
+ {
+  "key": "433",
+  "head": "手",
+  "hanzi": "手",
+  "pinyin": "shǒu",
+  "partOfSpeech": "명사",
+  "meaningKo": "손",
+  "hanjaKo": "",
+  "codexKo": "(명) 손",
+  "flags": [],
+  "sameAsApp": "Lesson 8",
+  "app": [
+   "Lesson 8 shǒu [단어] 손"
+  ]
+ },
+ {
+  "key": "434",
+  "head": "手表",
+  "hanzi": "手表",
+  "pinyin": "shǒubiǎo",
+  "partOfSpeech": "명사",
+  "meaningKo": "손목시계",
+  "hanjaKo": "",
+  "codexKo": "(명) 손목시계",
+  "flags": [],
+  "sameAsApp": "HSK2 추가 150",
+  "app": [
+   "HSK2 추가 150 shǒubiǎo [물건] 손목시계",
+   "Lesson 4 shǒubiǎo [단어] 손목시계",
+   "Lesson 6 shǒubiǎo [단어] 손목시계"
+  ]
+ },
+ {
+  "key": "435",
+  "head": "书包",
+  "hanzi": "书包",
+  "pinyin": "shūbāo",
+  "partOfSpeech": "명사",
+  "meaningKo": "책가방",
+  "hanjaKo": "",
+  "codexKo": "(명) 책가방",
+  "flags": [],
+  "sameAsApp": "",
+  "app": []
+ },
+ {
+  "key": "436",
+  "head": "舒服",
+  "hanzi": "舒服",
+  "pinyin": "shūfu",
+  "partOfSpeech": "형용사",
+  "meaningKo": "편안하다",
+  "hanjaKo": "",
+  "codexKo": "(형) 편안하다",
+  "flags": [],
+  "sameAsApp": "HSK3 추가 300",
+  "app": [
+   "HSK3 추가 300 shūfu [형용사] 편안하다",
+   "Lesson 5 shūfu [단어] 편안하다",
+   "Lesson 8 shūfu [단어] 편안하다"
+  ]
+ },
+ {
+  "key": "437",
+  "head": "送",
+  "hanzi": "送",
+  "pinyin": "sòng",
+  "partOfSpeech": "동사",
+  "meaningKo": "보내다, 선물하다",
+  "hanjaKo": "",
+  "codexKo": "(동) 보내다, 선물하다",
+  "flags": [],
+  "sameAsApp": "HSK2 추가 150",
+  "app": [
+   "HSK2 추가 150 sòng [동사] 보내다, 선물하다"
+  ]
+ },
+ {
+  "key": "438",
+  "head": "虽然",
+  "hanzi": "虽然",
+  "pinyin": "suīrán",
+  "partOfSpeech": "접속사",
+  "meaningKo": "비록 ~이지만",
+  "hanjaKo": "",
+  "codexKo": "(접) 비록 ~이지만",
+  "flags": [],
+  "sameAsApp": "HSK2 추가 150",
+  "app": [
+   "HSK2 추가 150 suīrán [접속사] 비록 ~이지만"
+  ]
+ },
+ {
+  "key": "439",
+  "head": "所以",
+  "hanzi": "所以",
+  "pinyin": "suǒyǐ",
+  "partOfSpeech": "접속사",
+  "meaningKo": "그래서, 그러므로",
+  "hanjaKo": "",
+  "codexKo": "(접) 그래서, 그러므로",
+  "flags": [],
+  "sameAsApp": "HSK2 추가 150",
+  "app": [
+   "HSK2 추가 150 suǒyǐ [접속사] 그래서, 그러므로"
+  ]
+ },
+ {
+  "key": "440",
+  "head": "疼",
+  "hanzi": "疼",
+  "pinyin": "téng",
+  "partOfSpeech": "형용사",
+  "meaningKo": "아프다",
+  "hanjaKo": "",
+  "codexKo": "(형) 아프다",
+  "flags": [],
+  "sameAsApp": "HSK3 추가 300",
+  "app": [
+   "HSK3 추가 300 téng [형용사] 아프다",
+   "Lesson 5 téng [단어] 아프다",
+   "Lesson 8 téng [단어] 아프다"
+  ]
+ },
+ {
+  "key": "441",
+  "head": "踢",
+  "hanzi": "踢",
+  "pinyin": "tī",
+  "partOfSpeech": "동사",
+  "meaningKo": "차다, 발로 차다",
+  "hanjaKo": "",
+  "codexKo": "(동) 차다, 발로 차다",
+  "flags": [],
+  "sameAsApp": "",
+  "app": [
+   "HSK3 듣기 tī [동사] 킥"
+  ]
+ },
+ {
+  "key": "442",
+  "head": "题",
+  "hanzi": "题",
+  "pinyin": "tí",
+  "partOfSpeech": "명사",
+  "meaningKo": "문제, 제목",
+  "hanjaKo": "",
+  "codexKo": "(명) 문제, 제목",
+  "flags": [],
+  "sameAsApp": "HSK2 추가 150",
+  "app": [
+   "HSK2 추가 150 tí [명사] 문제, 제목"
+  ]
+ },
+ {
+  "key": "443",
+  "head": "条",
+  "hanzi": "条",
+  "pinyin": "tiáo",
+  "partOfSpeech": "양사/명사",
+  "meaningKo": "가닥·마리·개(길쭉한 물건 등을 세는 단위)",
+  "hanjaKo": "",
+  "codexKo": "(양) 가닥·마리·개(길쭉한 물건 등을 세는 단위)",
+  "flags": [
+   "공식 품사 ['명사']의 뜻이 없음"
+  ],
+  "sameAsApp": "",
+  "app": [
+   "HSK3 추가 300 tiáo [명사] 가늘고 긴 것",
+   "Lesson 4 tiáo [단어] 바지, 치마 등을 세는 단위"
+  ]
+ },
+ {
+  "key": "444",
+  "head": "跳舞",
+  "hanzi": "跳舞",
+  "pinyin": "tiàowǔ",
+  "partOfSpeech": "동사",
+  "meaningKo": "춤추다",
+  "hanjaKo": "",
+  "codexKo": "(동) 춤추다",
+  "flags": [],
+  "sameAsApp": "HSK2 추가 150",
+  "app": [
+   "HSK2 추가 150 tiàowǔ [동사] 춤추다"
+  ]
+ },
+ {
+  "key": "445",
+  "head": "头",
+  "hanzi": "头",
+  "pinyin": "tóu",
+  "partOfSpeech": "명사/양사/형용사",
+  "meaningKo": "머리, 끝 / (양) 마리(가축을 세는 단위)",
+  "hanjaKo": "",
+  "codexKo": "(명) 머리, 끝; (양) 마리(가축을 세는 단위)",
+  "flags": [
+   "공식 품사 ['형용사']의 뜻이 없음"
+  ],
+  "sameAsApp": "",
+  "app": [
+   "Lesson 8 tóu [단어] 머리"
+  ]
+ },
+ {
+  "key": "446",
+  "head": "外国",
+  "hanzi": "外国",
+  "pinyin": "wàiguó",
+  "partOfSpeech": "명사",
+  "meaningKo": "외국",
+  "hanjaKo": "",
+  "codexKo": "(명) 외국",
+  "flags": [],
+  "sameAsApp": "",
+  "app": []
+ },
+ {
+  "key": "447",
+  "head": "外面",
+  "hanzi": "外面",
+  "pinyin": "wàimiàn",
+  "partOfSpeech": "명사",
+  "meaningKo": "바깥, 밖",
+  "hanjaKo": "",
+  "codexKo": "(명) 바깥, 밖",
+  "flags": [],
+  "sameAsApp": "HSK3 듣기",
+  "app": [
+   "HSK3 듣기 wàimiàn [명사] 바깥, 밖"
+  ]
+ },
+ {
+  "key": "448",
+  "head": "完",
+  "hanzi": "完",
+  "pinyin": "wán",
+  "partOfSpeech": "동사",
+  "meaningKo": "끝나다, 끝내다",
+  "hanjaKo": "",
+  "codexKo": "(동) 끝나다, 끝내다",
+  "flags": [],
+  "sameAsApp": "HSK2 추가 150",
+  "app": [
+   "HSK2 추가 150 wán [동사] 끝나다, 끝내다"
+  ]
+ },
+ {
+  "key": "449",
+  "head": "万",
+  "hanzi": "万",
+  "pinyin": "wàn",
+  "partOfSpeech": "수사",
+  "meaningKo": "만",
+  "hanjaKo": "",
+  "codexKo": "(수) 만",
+  "flags": [],
+  "sameAsApp": "HSK3 추가 300",
+  "app": [
+   "HSK3 추가 300 wàn [수사] 만"
+  ]
+ },
+ {
+  "key": "450",
+  "head": "网上",
+  "hanzi": "网上",
+  "pinyin": "wǎngshang",
+  "partOfSpeech": "명사",
+  "meaningKo": "온라인",
+  "hanjaKo": "",
+  "codexKo": "(명) 온라인",
+  "flags": [],
+  "sameAsApp": "HSK3 독해",
+  "app": [
+   "HSK3 독해 wǎngshàng [장소사] 온라인"
+  ]
+ },
+ {
+  "key": "451",
+  "head": "往",
+  "hanzi": "往",
+  "pinyin": "wǎng",
+  "partOfSpeech": "동사/개사",
+  "meaningKo": "향하다, 가다 / (개) ~쪽으로",
+  "hanjaKo": "",
+  "codexKo": "(동) 향하다, 가다; (개) ~쪽으로",
+  "flags": [],
+  "sameAsApp": "",
+  "app": []
+ },
+ {
+  "key": "452",
+  "head": "忘",
+  "hanzi": "忘",
+  "pinyin": "wàng",
+  "partOfSpeech": "동사",
+  "meaningKo": "잊다",
+  "hanjaKo": "",
+  "codexKo": "(동) 잊다",
+  "flags": [],
+  "sameAsApp": "HSK3 독해",
+  "app": [
+   "HSK3 독해 wàng [동사] 잊다"
+  ]
+ },
+ {
+  "key": "453",
+  "head": "为什么",
+  "hanzi": "为什么",
+  "pinyin": "wèi shénme",
+  "partOfSpeech": "표현",
+  "meaningKo": "왜",
+  "hanjaKo": "",
+  "codexKo": "(구) 왜",
+  "flags": [],
+  "sameAsApp": "HSK2 추가 150",
+  "app": [
+   "HSK2 추가 150 wèishénme [의문사] 왜"
+  ]
+ },
+ {
+  "key": "454",
+  "head": "位",
+  "hanzi": "位",
+  "pinyin": "wèi",
+  "partOfSpeech": "양사",
+  "meaningKo": "분(사람을 높여 세는 단위)",
+  "hanjaKo": "",
+  "codexKo": "(양) 분(사람을 높여 세는 단위)",
+  "flags": [],
+  "sameAsApp": "",
+  "app": [
+   "HSK3 추가 300 wèi [명사] 자리, 위치"
+  ]
+ },
+ {
+  "key": "455",
+  "head": "希望",
+  "hanzi": "希望",
+  "pinyin": "xīwàng",
+  "partOfSpeech": "동사",
+  "meaningKo": "희망하다, 바라다",
+  "hanjaKo": "",
+  "codexKo": "(동) 희망하다, 바라다",
+  "flags": [],
+  "sameAsApp": "HSK2 추가 150",
+  "app": [
+   "HSK2 추가 150 xīwàng [동사/명사] 희망하다, 바라다"
+  ]
+ },
+ {
+  "key": "456",
+  "head": "洗",
+  "hanzi": "洗",
+  "pinyin": "xǐ",
+  "partOfSpeech": "동사",
+  "meaningKo": "씻다, 빨다",
+  "hanjaKo": "",
+  "codexKo": "(동) 씻다, 빨다",
+  "flags": [],
+  "sameAsApp": "HSK2 추가 150",
+  "app": [
+   "HSK2 추가 150 xǐ [동사] 씻다, 빨다"
+  ]
+ },
+ {
+  "key": "457",
+  "head": "洗手间",
+  "hanzi": "洗手间",
+  "pinyin": "xǐshǒujiān",
+  "partOfSpeech": "명사",
+  "meaningKo": "화장실",
+  "hanjaKo": "",
+  "codexKo": "(명) 화장실",
+  "flags": [],
+  "sameAsApp": "HSK3 추가 300",
+  "app": [
+   "HSK3 추가 300 xǐshǒujiān [명사] 화장실"
+  ]
+ },
+ {
+  "key": "458",
+  "head": "下来",
+  "hanzi": "下来",
+  "pinyin": "xiàlái",
+  "partOfSpeech": "동사",
+  "meaningKo": "내려오다",
+  "hanjaKo": "",
+  "codexKo": "(동) 내려오다",
+  "flags": [],
+  "sameAsApp": "",
+  "app": []
+ },
+ {
+  "key": "459",
+  "head": "下面",
+  "hanzi": "下面",
+  "pinyin": "xiàmiàn",
+  "partOfSpeech": "명사",
+  "meaningKo": "아래, 밑, 다음",
+  "hanjaKo": "",
+  "codexKo": "(명) 아래, 밑; 다음",
+  "flags": [],
+  "sameAsApp": "",
+  "app": [
+   "HSK3 독해 xiàmiàn [방위사] 아래, 밑; 다음"
+  ]
+ },
+ {
+  "key": "460",
+  "head": "下去",
+  "hanzi": "下去",
+  "pinyin": "xiàqù",
+  "partOfSpeech": "동사",
+  "meaningKo": "내려가다, 계속해 나가다",
+  "hanjaKo": "",
+  "codexKo": "(동) 내려가다, 계속해 나가다",
+  "flags": [],
+  "sameAsApp": "",
+  "app": []
+ },
+ {
+  "key": "461",
+  "head": "小孩儿",
+  "hanzi": "小孩儿",
+  "pinyin": "xiǎoháir",
+  "partOfSpeech": "명사",
+  "meaningKo": "아이, 어린이",
+  "hanjaKo": "",
+  "codexKo": "(명) 아이, 어린이",
+  "flags": [],
+  "sameAsApp": "HSK3 독해",
+  "app": [
+   "HSK3 독해 xiǎoháir [명사] 아이, 어린이"
+  ]
+ },
+ {
+  "key": "462",
+  "head": "小时候",
+  "hanzi": "小时候",
+  "pinyin": "xiǎoshíhou",
+  "partOfSpeech": "명사",
+  "meaningKo": "어릴 때",
+  "hanjaKo": "",
+  "codexKo": "(명) 어릴 때",
+  "flags": [],
+  "sameAsApp": "HSK3 독해",
+  "app": [
+   "HSK3 독해 xiǎoshíhou [명사] 어릴 때"
+  ]
+ },
+ {
+  "key": "463",
+  "head": "笑",
+  "hanzi": "笑",
+  "pinyin": "xiào",
+  "partOfSpeech": "동사",
+  "meaningKo": "웃다",
+  "hanjaKo": "",
+  "codexKo": "(동) 웃다",
+  "flags": [],
+  "sameAsApp": "HSK2 추가 150",
+  "app": [
+   "HSK2 추가 150 xiào [동사] 웃다"
+  ]
+ },
+ {
+  "key": "464",
+  "head": "姓",
+  "hanzi": "姓",
+  "pinyin": "xìng",
+  "partOfSpeech": "명사/동사",
+  "meaningKo": "성 / (동) 성이 ~이다",
+  "hanjaKo": "",
+  "codexKo": "(명) 성; (동) 성이 ~이다",
+  "flags": [],
+  "sameAsApp": "",
+  "app": [
+   "HSK2 추가 150 xìng [동사/명사] 성이 ~이다, 성",
+   "Lesson 1 xìng [단어] 성이 ~이다"
+  ]
+ },
+ {
+  "key": "465",
+  "head": "姓名",
+  "hanzi": "姓名",
+  "pinyin": "xìngmíng",
+  "partOfSpeech": "명사",
+  "meaningKo": "성명, 이름",
+  "hanjaKo": "",
+  "codexKo": "(명) 성명, 이름",
+  "flags": [],
+  "sameAsApp": "",
+  "app": []
+ },
+ {
+  "key": "466",
+  "head": "颜色",
+  "hanzi": "颜色",
+  "pinyin": "yánsè",
+  "partOfSpeech": "명사",
+  "meaningKo": "색깔",
+  "hanjaKo": "",
+  "codexKo": "(명) 색깔",
+  "flags": [],
+  "sameAsApp": "HSK2 추가 150",
+  "app": [
+   "HSK2 추가 150 yánsè [명사] 색깔"
+  ]
+ },
+ {
+  "key": "467",
+  "head": "眼睛",
+  "hanzi": "眼睛",
+  "pinyin": "yǎnjing",
+  "partOfSpeech": "명사",
+  "meaningKo": "눈",
+  "hanjaKo": "",
+  "codexKo": "(명) 눈",
+  "flags": [],
+  "sameAsApp": "HSK2 추가 150",
+  "app": [
+   "HSK2 추가 150 yǎnjing [신체] 눈",
+   "Lesson 8 yǎnjing [단어] 눈"
+  ]
+ },
+ {
+  "key": "468",
+  "head": "药",
+  "hanzi": "药",
+  "pinyin": "yào",
+  "partOfSpeech": "명사",
+  "meaningKo": "약",
+  "hanjaKo": "",
+  "codexKo": "(명) 약",
+  "flags": [],
+  "sameAsApp": "HSK2 추가 150",
+  "app": [
+   "HSK2 추가 150 yào [명사] 약"
+  ]
+ },
+ {
+  "key": "469",
+  "head": "药店",
+  "hanzi": "药店",
+  "pinyin": "yàodiàn",
+  "partOfSpeech": "명사",
+  "meaningKo": "약국",
+  "hanjaKo": "",
+  "codexKo": "(명) 약국",
+  "flags": [],
+  "sameAsApp": "",
+  "app": []
+ },
+ {
+  "key": "470",
+  "head": "爷爷",
+  "hanzi": "爷爷",
+  "pinyin": "yéye",
+  "partOfSpeech": "명사",
+  "meaningKo": "할아버지",
+  "hanjaKo": "",
+  "codexKo": "(명) 할아버지",
+  "flags": [],
+  "sameAsApp": "HSK3 추가 300",
+  "app": [
+   "HSK3 추가 300 yéye [명사] 할아버지",
+   "Lesson 4 yéye [단어] 할아버지"
+  ]
+ },
+ {
+  "key": "471",
+  "head": "一会儿",
+  "hanzi": "一会儿",
+  "pinyin": "yíhuìr",
+  "partOfSpeech": "수량사/부사",
+  "meaningKo": "잠깐 / (부) 이따가, 잠시",
+  "hanjaKo": "",
+  "codexKo": "(수·양) 잠깐; (부) 이따가, 잠시",
+  "flags": [],
+  "sameAsApp": "",
+  "app": [
+   "HSK3 추가 300 yíhuìr [명사] 잠시동안, 잠시"
+  ]
+ },
+ {
+  "key": "472",
+  "head": "一起",
+  "hanzi": "一起",
+  "pinyin": "yìqǐ",
+  "partOfSpeech": "부사",
+  "meaningKo": "함께",
+  "hanjaKo": "",
+  "codexKo": "(부) 함께",
+  "flags": [],
+  "sameAsApp": "HSK2 추가 150",
+  "app": [
+   "HSK2 추가 150 yìqǐ [부사] 함께",
+   "Lesson 7 yìqǐ [단어] 함께, 같이"
+  ]
+ },
+ {
+  "key": "473",
+  "head": "已经",
+  "hanzi": "已经",
+  "pinyin": "yǐjīng",
+  "partOfSpeech": "부사",
+  "meaningKo": "이미, 벌써",
+  "hanjaKo": "",
+  "codexKo": "(부) 이미, 벌써",
+  "flags": [],
+  "sameAsApp": "HSK2 추가 150",
+  "app": [
+   "HSK2 추가 150 yǐjīng [부사] 이미, 벌써",
+   "Lesson 4 yǐjīng [단어] 이미, 벌써"
+  ]
+ },
+ {
+  "key": "474",
+  "head": "意思",
+  "hanzi": "意思",
+  "pinyin": "yìsi",
+  "partOfSpeech": "명사",
+  "meaningKo": "뜻, 의미",
+  "hanjaKo": "",
+  "codexKo": "(명) 뜻, 의미",
+  "flags": [],
+  "sameAsApp": "HSK2 추가 150",
+  "app": [
+   "HSK2 추가 150 yìsi [명사] 뜻, 의미"
+  ]
+ },
+ {
+  "key": "475",
+  "head": "因为",
+  "hanzi": "因为",
+  "pinyin": "yīnwèi",
+  "partOfSpeech": "개사/접속사",
+  "meaningKo": "~때문에 / (접) ~하므로",
+  "hanjaKo": "",
+  "codexKo": "(개) ~때문에; (접) ~하므로",
+  "flags": [],
+  "sameAsApp": "",
+  "app": [
+   "HSK2 추가 150 yīnwèi [접속사] 왜냐하면"
+  ]
+ },
+ {
+  "key": "476",
+  "head": "阴",
+  "hanzi": "阴",
+  "pinyin": "yīn",
+  "partOfSpeech": "형용사",
+  "meaningKo": "흐리다, 그늘지다",
+  "hanjaKo": "",
+  "codexKo": "(형) 흐리다, 그늘지다",
+  "flags": [],
+  "sameAsApp": "",
+  "app": [
+   "HSK2 추가 150 yīn [날씨] 흐리다, 그늘"
+  ]
+ },
+ {
+  "key": "477",
+  "head": "游",
+  "hanzi": "游",
+  "pinyin": "yóu",
+  "partOfSpeech": "동사",
+  "meaningKo": "헤엄치다, 유람하다",
+  "hanjaKo": "",
+  "codexKo": "(동) 헤엄치다, 유람하다",
+  "flags": [],
+  "sameAsApp": "",
+  "app": []
+ },
+ {
+  "key": "478",
+  "head": "游泳",
+  "hanzi": "游泳",
+  "pinyin": "yóuyǒng",
+  "partOfSpeech": "동사",
+  "meaningKo": "수영하다",
+  "hanjaKo": "",
+  "codexKo": "(동) 수영하다",
+  "flags": [],
+  "sameAsApp": "HSK2 추가 150",
+  "app": [
+   "HSK2 추가 150 yóuyǒng [동사] 수영하다"
+  ]
+ },
+ {
+  "key": "479",
+  "head": "有时",
+  "hanzi": "有时",
+  "pinyin": "yǒushí",
+  "partOfSpeech": "부사",
+  "meaningKo": "때때로",
+  "hanjaKo": "",
+  "codexKo": "(부) 때때로",
+  "flags": [],
+  "sameAsApp": "",
+  "app": []
+ },
+ {
+  "key": "480",
+  "head": "有意思",
+  "hanzi": "有意思",
+  "pinyin": "yǒu yìsi",
+  "partOfSpeech": "표현",
+  "meaningKo": "재미있다",
+  "hanjaKo": "",
+  "codexKo": "(구) 재미있다",
+  "flags": [],
+  "sameAsApp": "HSK3 듣기",
+  "app": [
+   "HSK3 듣기 yǒu yìsi [형용사] 재미있다"
+  ]
+ },
+ {
+  "key": "481",
+  "head": "右",
+  "hanzi": "右",
+  "pinyin": "yòu",
+  "partOfSpeech": "명사",
+  "meaningKo": "오른쪽",
+  "hanjaKo": "",
+  "codexKo": "(명) 오른쪽",
+  "flags": [],
+  "sameAsApp": "",
+  "app": []
+ },
+ {
+  "key": "482",
+  "head": "右边",
+  "hanzi": "右边",
+  "pinyin": "yòubian",
+  "partOfSpeech": "명사",
+  "meaningKo": "오른쪽",
+  "hanjaKo": "",
+  "codexKo": "(명) 오른쪽",
+  "flags": [],
+  "sameAsApp": "HSK2 추가 150",
+  "app": [
+   "HSK2 추가 150 yòubian [위치] 오른쪽"
+  ]
+ },
+ {
+  "key": "483",
+  "head": "鱼",
+  "hanzi": "鱼",
+  "pinyin": "yú",
+  "partOfSpeech": "명사",
+  "meaningKo": "물고기, 생선",
+  "hanjaKo": "",
+  "codexKo": "(명) 물고기, 생선",
+  "flags": [],
+  "sameAsApp": "HSK2 추가 150",
+  "app": [
+   "HSK2 추가 150 yú [음식] 물고기, 생선"
+  ]
+ },
+ {
+  "key": "484",
+  "head": "远",
+  "hanzi": "远",
+  "pinyin": "yuǎn",
+  "partOfSpeech": "형용사",
+  "meaningKo": "멀다",
+  "hanjaKo": "",
+  "codexKo": "(형) 멀다",
+  "flags": [],
+  "sameAsApp": "HSK2 추가 150",
+  "app": [
+   "HSK2 추가 150 yuǎn [형용사] 멀다"
+  ]
+ },
+ {
+  "key": "485",
+  "head": "运动",
+  "hanzi": "运动",
+  "pinyin": "yùndòng",
+  "partOfSpeech": "동사/명사",
+  "meaningKo": "운동하다, 움직이다 / (명) 운동",
+  "hanjaKo": "",
+  "codexKo": "(동) 운동하다, 움직이다; (명) 운동",
+  "flags": [],
+  "sameAsApp": "",
+  "app": [
+   "HSK2 추가 150 yùndòng [동사/명사] 운동하다, 운동"
+  ]
+ },
+ {
+  "key": "486",
+  "head": "站1",
+  "hanzi": "站",
+  "pinyin": "zhàn",
+  "partOfSpeech": "명사",
+  "meaningKo": "역, 정류장",
+  "hanjaKo": "",
+  "codexKo": "(명) 역, 정류장",
+  "flags": [],
+  "sameAsApp": "",
+  "app": [
+   "HSK3 추가 300 zhàn [동사] 서다 / (명) 정거장"
+  ]
+ },
+ {
+  "key": "487",
+  "head": "丈夫",
+  "hanzi": "丈夫",
+  "pinyin": "zhàngfu",
+  "partOfSpeech": "명사",
+  "meaningKo": "남편",
+  "hanjaKo": "",
+  "codexKo": "(명) 남편",
+  "flags": [],
+  "sameAsApp": "HSK2 추가 150",
+  "app": [
+   "HSK2 추가 150 zhàngfu [가족] 남편",
+   "Lesson 4 zhàngfu [단어] 남편"
+  ]
+ },
+ {
+  "key": "488",
+  "head": "这么",
+  "hanzi": "这么",
+  "pinyin": "zhème",
+  "partOfSpeech": "대명사",
+  "meaningKo": "이렇게",
+  "hanjaKo": "",
+  "codexKo": "(대) 이렇게",
+  "flags": [],
+  "sameAsApp": "HSK3 듣기",
+  "app": [
+   "HSK3 듣기 zhème [대사] 이렇게"
+  ]
+ },
+ {
+  "key": "489",
+  "head": "这样",
+  "hanzi": "这样",
+  "pinyin": "zhèyàng",
+  "partOfSpeech": "대명사",
+  "meaningKo": "이렇다, 이와 같다, 이렇게",
+  "hanjaKo": "",
+  "codexKo": "(대) 이렇다, 이와 같다, 이렇게",
+  "flags": [],
+  "sameAsApp": "Lesson 4",
+  "app": [
+   "Lesson 4 zhèyàng [단어] 이렇다, 이와 같다, 이렇게"
+  ]
+ },
+ {
+  "key": "490",
+  "head": "着",
+  "hanzi": "着",
+  "pinyin": "zhe",
+  "partOfSpeech": "조사",
+  "meaningKo": "~하고 있다(동작·상태의 지속)",
+  "hanjaKo": "",
+  "codexKo": "(조) ~하고 있다(동작·상태의 지속)",
+  "flags": [],
+  "sameAsApp": "",
+  "app": [
+   "HSK2 추가 150 zhe [조사] 동작·상태 지속 표지"
+  ]
+ },
+ {
+  "key": "491",
+  "head": "正",
+  "hanzi": "正",
+  "pinyin": "zhèng",
+  "partOfSpeech": "부사/형용사",
+  "meaningKo": "마침, 바로, 한창 ~하는 중이다 / (형) 바르다, 곧다",
+  "hanjaKo": "",
+  "codexKo": "(부) 마침, 바로",
+  "flags": [
+   "공식 품사 ['형용사']의 뜻이 없음"
+  ],
+  "sameAsApp": "",
+  "app": []
+ },
+ {
+  "key": "492",
+  "head": "周",
+  "hanzi": "周",
+  "pinyin": "zhōu",
+  "partOfSpeech": "명사",
+  "meaningKo": "주, 일주일",
+  "hanjaKo": "",
+  "codexKo": "(명) 주, 일주일",
+  "flags": [],
+  "sameAsApp": "",
+  "app": [
+   "HSK3 듣기 zhōu [고유명사] 저우(周, 성씨)"
+  ]
+ },
+ {
+  "key": "493",
+  "head": "准备",
+  "hanzi": "准备",
+  "pinyin": "zhǔnbèi",
+  "partOfSpeech": "동사",
+  "meaningKo": "준비하다",
+  "hanjaKo": "",
+  "codexKo": "(동) 준비하다",
+  "flags": [],
+  "sameAsApp": "HSK2 추가 150",
+  "app": [
+   "HSK2 추가 150 zhǔnbèi [동사] 준비하다"
+  ]
+ },
+ {
+  "key": "494",
+  "head": "自己",
+  "hanzi": "自己",
+  "pinyin": "zìjǐ",
+  "partOfSpeech": "대명사",
+  "meaningKo": "자기, 자신, 스스로",
+  "hanjaKo": "",
+  "codexKo": "(대) 자기, 자신, 스스로",
+  "flags": [],
+  "sameAsApp": "HSK3 추가 300",
+  "app": [
+   "HSK3 추가 300 zìjǐ [대사] 자기, 자신, 스스로"
+  ]
+ },
+ {
+  "key": "495",
+  "head": "走",
+  "hanzi": "走",
+  "pinyin": "zǒu",
+  "partOfSpeech": "동사",
+  "meaningKo": "걷다, 가다, 떠나다",
+  "hanjaKo": "",
+  "codexKo": "(동) 걷다, 가다, 떠나다",
+  "flags": [],
+  "sameAsApp": "HSK2 추가 150",
+  "app": [
+   "HSK2 추가 150 zǒu [동사] 걷다, 가다, 떠나다"
+  ]
+ },
+ {
+  "key": "496",
+  "head": "走路",
+  "hanzi": "走路",
+  "pinyin": "zǒulù",
+  "partOfSpeech": "동사",
+  "meaningKo": "걷다",
+  "hanjaKo": "",
+  "codexKo": "(동) 걷다",
+  "flags": [],
+  "sameAsApp": "HSK3 듣기",
+  "app": [
+   "HSK3 듣기 zǒulù [동사] 걷다"
+  ]
+ },
+ {
+  "key": "497",
+  "head": "足球",
+  "hanzi": "足球",
+  "pinyin": "zúqiú",
+  "partOfSpeech": "명사",
+  "meaningKo": "축구",
+  "hanjaKo": "",
+  "codexKo": "(명) 축구",
+  "flags": [],
+  "sameAsApp": "HSK3 듣기",
+  "app": [
+   "HSK3 듣기 zúqiú [명사] 축구"
+  ]
+ },
+ {
+  "key": "498",
+  "head": "最",
+  "hanzi": "最",
+  "pinyin": "zuì",
+  "partOfSpeech": "부사",
+  "meaningKo": "가장, 제일",
+  "hanjaKo": "",
+  "codexKo": "(부) 가장, 제일",
+  "flags": [],
+  "sameAsApp": "HSK2 추가 150",
+  "app": [
+   "HSK2 추가 150 zuì [부사] 가장, 제일"
+  ]
+ },
+ {
+  "key": "499",
+  "head": "左",
+  "hanzi": "左",
+  "pinyin": "zuǒ",
+  "partOfSpeech": "명사",
+  "meaningKo": "왼쪽",
+  "hanjaKo": "",
+  "codexKo": "(명) 왼쪽",
+  "flags": [],
+  "sameAsApp": "",
+  "app": []
+ },
+ {
+  "key": "500",
+  "head": "左边",
+  "hanzi": "左边",
+  "pinyin": "zuǒbian",
+  "partOfSpeech": "명사",
+  "meaningKo": "왼쪽",
+  "hanjaKo": "",
+  "codexKo": "(명) 왼쪽",
+  "flags": [],
+  "sameAsApp": "HSK2 추가 150",
+  "app": [
+   "HSK2 추가 150 zuǒbian [위치] 왼쪽"
+  ]
+ }
+]

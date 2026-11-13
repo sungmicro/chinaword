@@ -182,9 +182,16 @@ class FixesFileTest(unittest.TestCase):
         repo = Path(__file__).resolve().parent.parent
         registry = load_id_registry(repo)
         table = self.table['movedTo']
+        vocab = json.loads((repo / 'src' / 'data' / 'vocab.json').read_text(encoding='utf-8'))
+        alive = {entry['hanzi'] for entry in vocab}
         for entry_id, entry in registry['retired'].items():
-            self.assertIn(entry['hanzi'], table, entry_id)  # 은퇴 카드마다 사람이 정한 값이 있다
-            self.assertEqual(entry['movedTo'], table[entry['hanzi']], entry_id)
+            # 모든 은퇴 카드: 장부 movedTo = 지금 데이터 기준 규칙(같은 한자가 살아 있으면 그 한자, 아니면 표 값)
+            self.assertEqual(entry['movedTo'], moved_to(entry['hanzi'], alive, self.table), entry_id)
+            # 듣기·독해 은퇴 카드 중 같은 한자가 사라진 것은 사람이 정한 값이 표에 있다
+            # (HSK 대강으로 바꾸며 뺀 예전 HSK 카드와, 대강과 겹쳐 빠진 듣기·독해 카드는 기본 규칙만 따른다)
+            if entry_id.startswith(('HSK3L-', 'HSK3R-')) and entry['hanzi'] not in alive:
+                self.assertIn(entry['hanzi'], table, entry_id)
+                self.assertEqual(entry['movedTo'], table[entry['hanzi']], entry_id)
 
     def test_split_and_item_parts_exist(self):
         targets = [part for parts in self.table['split'].values() for part in parts]

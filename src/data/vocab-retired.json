@@ -1,30 +1,3115 @@
 {
  "_about": "단어장 카드 id 장부(tools/vocab_fixes.py CardIds가 쓴다). 오답노트(시험보기)가 카드 id로 기록되므로, 사라진 카드의 id는 retired에 남겨 다시 쓰지 않고, movedTo가 있으면 앱이 그 한자의 카드로 기록을 옮긴다. lastNo는 단원 접두사별로 지금까지 쓴 가장 큰 번호다. 시작값 HSK3L 405·HSK3R 347은 git 이력(bb1e588)에서 쓰인 가장 큰 번호라, 그 번호들도 다시 쓰지 않는다.",
  "lastNo": {
-  "HSK3L": 412,
+  "HSK3L": 436,
   "HSK3R": 347,
-  "HSK4": 929
+  "HSK4": 929,
+  "H1": 300,
+  "H2": 199,
+  "H3": 500,
+  "H4": 999,
+  "H5": 500
  },
  "retired": {
+  "HSK1-001": {
+   "hanzi": "爱",
+   "movedTo": "爱"
+  },
+  "HSK1-002": {
+   "hanzi": "八",
+   "movedTo": "八"
+  },
+  "HSK1-003": {
+   "hanzi": "爸爸",
+   "movedTo": "爸爸"
+  },
+  "HSK1-004": {
+   "hanzi": "杯子",
+   "movedTo": "杯子"
+  },
+  "HSK1-005": {
+   "hanzi": "北京",
+   "movedTo": "北京"
+  },
+  "HSK1-006": {
+   "hanzi": "本",
+   "movedTo": "本"
+  },
+  "HSK1-007": {
+   "hanzi": "不",
+   "movedTo": "不"
+  },
+  "HSK1-008": {
+   "hanzi": "不客气",
+   "movedTo": "不客气"
+  },
+  "HSK1-009": {
+   "hanzi": "菜",
+   "movedTo": "菜"
+  },
+  "HSK1-010": {
+   "hanzi": "茶",
+   "movedTo": "茶"
+  },
+  "HSK1-011": {
+   "hanzi": "吃",
+   "movedTo": "吃"
+  },
+  "HSK1-012": {
+   "hanzi": "出租车",
+   "movedTo": "出租车"
+  },
+  "HSK1-013": {
+   "hanzi": "打电话",
+   "movedTo": "打电话"
+  },
+  "HSK1-014": {
+   "hanzi": "大",
+   "movedTo": "大"
+  },
+  "HSK1-015": {
+   "hanzi": "的",
+   "movedTo": "的"
+  },
+  "HSK1-016": {
+   "hanzi": "点",
+   "movedTo": "点"
+  },
+  "HSK1-017": {
+   "hanzi": "电脑",
+   "movedTo": "电脑"
+  },
+  "HSK1-018": {
+   "hanzi": "电视",
+   "movedTo": "电视"
+  },
+  "HSK1-019": {
+   "hanzi": "电影",
+   "movedTo": "电影"
+  },
+  "HSK1-020": {
+   "hanzi": "东西",
+   "movedTo": "东西"
+  },
+  "HSK1-021": {
+   "hanzi": "都",
+   "movedTo": "都"
+  },
+  "HSK1-022": {
+   "hanzi": "读",
+   "movedTo": "读"
+  },
+  "HSK1-023": {
+   "hanzi": "对不起",
+   "movedTo": "对不起"
+  },
+  "HSK1-024": {
+   "hanzi": "多",
+   "movedTo": "多"
+  },
+  "HSK1-025": {
+   "hanzi": "多少",
+   "movedTo": "多少"
+  },
+  "HSK1-026": {
+   "hanzi": "儿子",
+   "movedTo": "儿子"
+  },
+  "HSK1-027": {
+   "hanzi": "二",
+   "movedTo": "二"
+  },
+  "HSK1-028": {
+   "hanzi": "饭店",
+   "movedTo": "饭店"
+  },
+  "HSK1-029": {
+   "hanzi": "飞机",
+   "movedTo": "飞机"
+  },
+  "HSK1-030": {
+   "hanzi": "分钟",
+   "movedTo": "分钟"
+  },
+  "HSK1-031": {
+   "hanzi": "高兴",
+   "movedTo": "高兴"
+  },
+  "HSK1-032": {
+   "hanzi": "个",
+   "movedTo": "个"
+  },
+  "HSK1-033": {
+   "hanzi": "工作",
+   "movedTo": "工作"
+  },
+  "HSK1-034": {
+   "hanzi": "狗",
+   "movedTo": "狗"
+  },
+  "HSK1-035": {
+   "hanzi": "汉语",
+   "movedTo": "汉语"
+  },
+  "HSK1-036": {
+   "hanzi": "好",
+   "movedTo": "好"
+  },
+  "HSK1-037": {
+   "hanzi": "喝",
+   "movedTo": "喝"
+  },
+  "HSK1-038": {
+   "hanzi": "和",
+   "movedTo": "和"
+  },
+  "HSK1-039": {
+   "hanzi": "很",
+   "movedTo": "很"
+  },
+  "HSK1-040": {
+   "hanzi": "后面",
+   "movedTo": "后面"
+  },
+  "HSK1-041": {
+   "hanzi": "回",
+   "movedTo": "回"
+  },
+  "HSK1-042": {
+   "hanzi": "会",
+   "movedTo": "会"
+  },
+  "HSK1-043": {
+   "hanzi": "几",
+   "movedTo": "几"
+  },
+  "HSK1-044": {
+   "hanzi": "家",
+   "movedTo": "家"
+  },
+  "HSK1-045": {
+   "hanzi": "叫",
+   "movedTo": "叫"
+  },
+  "HSK1-046": {
+   "hanzi": "今天",
+   "movedTo": "今天"
+  },
+  "HSK1-047": {
+   "hanzi": "九",
+   "movedTo": "九"
+  },
+  "HSK1-048": {
+   "hanzi": "开",
+   "movedTo": "开"
+  },
+  "HSK1-049": {
+   "hanzi": "看",
+   "movedTo": "看"
+  },
+  "HSK1-050": {
+   "hanzi": "看见",
+   "movedTo": "看见"
+  },
+  "HSK1-051": {
+   "hanzi": "块",
+   "movedTo": "块"
+  },
+  "HSK1-052": {
+   "hanzi": "来",
+   "movedTo": "来"
+  },
+  "HSK1-053": {
+   "hanzi": "老师",
+   "movedTo": "老师"
+  },
+  "HSK1-054": {
+   "hanzi": "了",
+   "movedTo": "了"
+  },
+  "HSK1-055": {
+   "hanzi": "冷",
+   "movedTo": "冷"
+  },
+  "HSK1-056": {
+   "hanzi": "里",
+   "movedTo": "里"
+  },
+  "HSK1-057": {
+   "hanzi": "里面",
+   "movedTo": "里面"
+  },
+  "HSK1-058": {
+   "hanzi": "六",
+   "movedTo": "六"
+  },
+  "HSK1-059": {
+   "hanzi": "妈妈",
+   "movedTo": "妈妈"
+  },
+  "HSK1-060": {
+   "hanzi": "吗",
+   "movedTo": "吗"
+  },
+  "HSK1-061": {
+   "hanzi": "买",
+   "movedTo": "买"
+  },
+  "HSK1-062": {
+   "hanzi": "猫",
+   "movedTo": "猫"
+  },
+  "HSK1-063": {
+   "hanzi": "没关系",
+   "movedTo": "没关系"
+  },
+  "HSK1-064": {
+   "hanzi": "没有",
+   "movedTo": "没有"
+  },
+  "HSK1-065": {
+   "hanzi": "米饭",
+   "movedTo": "米饭"
+  },
+  "HSK1-066": {
+   "hanzi": "明天",
+   "movedTo": "明天"
+  },
+  "HSK1-067": {
+   "hanzi": "名字",
+   "movedTo": "名字"
+  },
+  "HSK1-068": {
+   "hanzi": "哪",
+   "movedTo": "哪"
+  },
+  "HSK1-069": {
+   "hanzi": "哪儿",
+   "movedTo": "哪儿"
+  },
+  "HSK1-070": {
+   "hanzi": "那",
+   "movedTo": "那"
+  },
+  "HSK1-071": {
+   "hanzi": "呢",
+   "movedTo": "呢"
+  },
+  "HSK1-072": {
+   "hanzi": "能",
+   "movedTo": "能"
+  },
+  "HSK1-073": {
+   "hanzi": "你",
+   "movedTo": "你"
+  },
+  "HSK1-074": {
+   "hanzi": "年",
+   "movedTo": "年"
+  },
+  "HSK1-075": {
+   "hanzi": "女儿",
+   "movedTo": "女儿"
+  },
+  "HSK1-076": {
+   "hanzi": "朋友",
+   "movedTo": "朋友"
+  },
+  "HSK1-077": {
+   "hanzi": "漂亮",
+   "movedTo": "漂亮"
+  },
+  "HSK1-078": {
+   "hanzi": "苹果",
+   "movedTo": "苹果"
+  },
+  "HSK1-079": {
+   "hanzi": "七",
+   "movedTo": "七"
+  },
+  "HSK1-080": {
+   "hanzi": "钱",
+   "movedTo": "钱"
+  },
+  "HSK1-081": {
+   "hanzi": "前面",
+   "movedTo": "前面"
+  },
+  "HSK1-082": {
+   "hanzi": "请",
+   "movedTo": "请"
+  },
+  "HSK1-083": {
+   "hanzi": "去",
+   "movedTo": "去"
+  },
+  "HSK1-084": {
+   "hanzi": "热",
+   "movedTo": "热"
+  },
+  "HSK1-085": {
+   "hanzi": "人",
+   "movedTo": "人"
+  },
+  "HSK1-086": {
+   "hanzi": "认识",
+   "movedTo": "认识"
+  },
+  "HSK1-087": {
+   "hanzi": "三",
+   "movedTo": "三"
+  },
+  "HSK1-088": {
+   "hanzi": "商店",
+   "movedTo": "商店"
+  },
+  "HSK1-089": {
+   "hanzi": "上",
+   "movedTo": "上"
+  },
+  "HSK1-090": {
+   "hanzi": "上午",
+   "movedTo": "上午"
+  },
+  "HSK1-091": {
+   "hanzi": "少",
+   "movedTo": "少"
+  },
+  "HSK1-092": {
+   "hanzi": "谁",
+   "movedTo": "谁"
+  },
+  "HSK1-093": {
+   "hanzi": "什么",
+   "movedTo": "什么"
+  },
+  "HSK1-094": {
+   "hanzi": "十",
+   "movedTo": "十"
+  },
+  "HSK1-095": {
+   "hanzi": "是",
+   "movedTo": "是"
+  },
+  "HSK1-096": {
+   "hanzi": "时候",
+   "movedTo": "时候"
+  },
+  "HSK1-097": {
+   "hanzi": "书",
+   "movedTo": "书"
+  },
+  "HSK1-098": {
+   "hanzi": "水",
+   "movedTo": "水"
+  },
+  "HSK1-099": {
+   "hanzi": "水果",
+   "movedTo": "水果"
+  },
+  "HSK1-100": {
+   "hanzi": "睡觉",
+   "movedTo": "睡觉"
+  },
+  "HSK1-101": {
+   "hanzi": "说",
+   "movedTo": "说"
+  },
+  "HSK1-102": {
+   "hanzi": "四",
+   "movedTo": "四"
+  },
+  "HSK1-103": {
+   "hanzi": "岁",
+   "movedTo": "岁"
+  },
+  "HSK1-104": {
+   "hanzi": "他",
+   "movedTo": "他"
+  },
+  "HSK1-105": {
+   "hanzi": "她",
+   "movedTo": "她"
+  },
+  "HSK1-106": {
+   "hanzi": "太",
+   "movedTo": "太"
+  },
+  "HSK1-107": {
+   "hanzi": "天气",
+   "movedTo": "天气"
+  },
+  "HSK1-108": {
+   "hanzi": "听",
+   "movedTo": "听"
+  },
+  "HSK1-109": {
+   "hanzi": "同学",
+   "movedTo": "同学"
+  },
+  "HSK1-110": {
+   "hanzi": "喂",
+   "movedTo": "喂"
+  },
+  "HSK1-111": {
+   "hanzi": "我",
+   "movedTo": "我"
+  },
+  "HSK1-112": {
+   "hanzi": "我们",
+   "movedTo": "我们"
+  },
+  "HSK1-113": {
+   "hanzi": "五",
+   "movedTo": "五"
+  },
+  "HSK1-114": {
+   "hanzi": "喜欢",
+   "movedTo": "喜欢"
+  },
+  "HSK1-115": {
+   "hanzi": "下",
+   "movedTo": "下"
+  },
+  "HSK1-116": {
+   "hanzi": "下午",
+   "movedTo": "下午"
+  },
+  "HSK1-117": {
+   "hanzi": "下雨",
+   "movedTo": "下雨"
+  },
+  "HSK1-118": {
+   "hanzi": "先生",
+   "movedTo": "先生"
+  },
+  "HSK1-119": {
+   "hanzi": "现在",
+   "movedTo": "现在"
+  },
+  "HSK1-120": {
+   "hanzi": "想",
+   "movedTo": "想"
+  },
+  "HSK1-121": {
+   "hanzi": "小",
+   "movedTo": "小"
+  },
+  "HSK1-122": {
+   "hanzi": "小姐",
+   "movedTo": "小姐"
+  },
+  "HSK1-123": {
+   "hanzi": "些",
+   "movedTo": "些"
+  },
+  "HSK1-124": {
+   "hanzi": "写",
+   "movedTo": "写"
+  },
+  "HSK1-125": {
+   "hanzi": "谢谢",
+   "movedTo": "谢谢"
+  },
+  "HSK1-126": {
+   "hanzi": "星期",
+   "movedTo": "星期"
+  },
+  "HSK1-127": {
+   "hanzi": "学生",
+   "movedTo": "学生"
+  },
+  "HSK1-128": {
+   "hanzi": "学习",
+   "movedTo": "学习"
+  },
+  "HSK1-129": {
+   "hanzi": "学校",
+   "movedTo": "学校"
+  },
+  "HSK1-130": {
+   "hanzi": "一",
+   "movedTo": "一"
+  },
+  "HSK1-131": {
+   "hanzi": "衣服",
+   "movedTo": "衣服"
+  },
+  "HSK1-132": {
+   "hanzi": "医生",
+   "movedTo": "医生"
+  },
+  "HSK1-133": {
+   "hanzi": "医院",
+   "movedTo": "医院"
+  },
+  "HSK1-134": {
+   "hanzi": "椅子",
+   "movedTo": "椅子"
+  },
+  "HSK1-135": {
+   "hanzi": "有",
+   "movedTo": "有"
+  },
+  "HSK1-136": {
+   "hanzi": "月",
+   "movedTo": "月"
+  },
+  "HSK1-137": {
+   "hanzi": "在",
+   "movedTo": "在"
+  },
+  "HSK1-138": {
+   "hanzi": "再见",
+   "movedTo": "再见"
+  },
+  "HSK1-139": {
+   "hanzi": "怎么",
+   "movedTo": "怎么"
+  },
+  "HSK1-140": {
+   "hanzi": "怎么样",
+   "movedTo": "怎么样"
+  },
+  "HSK1-141": {
+   "hanzi": "这",
+   "movedTo": "这"
+  },
+  "HSK1-142": {
+   "hanzi": "这儿",
+   "movedTo": "这儿"
+  },
+  "HSK1-143": {
+   "hanzi": "那儿",
+   "movedTo": "那儿"
+  },
+  "HSK1-144": {
+   "hanzi": "中国",
+   "movedTo": "中国"
+  },
+  "HSK1-145": {
+   "hanzi": "中午",
+   "movedTo": "中午"
+  },
+  "HSK1-146": {
+   "hanzi": "住",
+   "movedTo": "住"
+  },
+  "HSK1-147": {
+   "hanzi": "桌子",
+   "movedTo": "桌子"
+  },
+  "HSK1-148": {
+   "hanzi": "字",
+   "movedTo": "字"
+  },
+  "HSK1-149": {
+   "hanzi": "昨天",
+   "movedTo": "昨天"
+  },
+  "HSK1-150": {
+   "hanzi": "坐",
+   "movedTo": "坐"
+  },
+  "HSK2-001": {
+   "hanzi": "吧",
+   "movedTo": "吧"
+  },
+  "HSK2-002": {
+   "hanzi": "白",
+   "movedTo": "白"
+  },
+  "HSK2-003": {
+   "hanzi": "百",
+   "movedTo": "百"
+  },
+  "HSK2-004": {
+   "hanzi": "帮助",
+   "movedTo": "帮助"
+  },
+  "HSK2-005": {
+   "hanzi": "报纸",
+   "movedTo": "报纸"
+  },
+  "HSK2-006": {
+   "hanzi": "比",
+   "movedTo": "比"
+  },
+  "HSK2-007": {
+   "hanzi": "别",
+   "movedTo": "别"
+  },
+  "HSK2-008": {
+   "hanzi": "宾馆",
+   "movedTo": "宾馆"
+  },
+  "HSK2-009": {
+   "hanzi": "长",
+   "movedTo": "长"
+  },
+  "HSK2-010": {
+   "hanzi": "唱歌",
+   "movedTo": "唱歌"
+  },
+  "HSK2-011": {
+   "hanzi": "出",
+   "movedTo": "出"
+  },
+  "HSK2-012": {
+   "hanzi": "穿",
+   "movedTo": "穿"
+  },
+  "HSK2-013": {
+   "hanzi": "次",
+   "movedTo": "次"
+  },
+  "HSK2-014": {
+   "hanzi": "从",
+   "movedTo": "从"
+  },
+  "HSK2-015": {
+   "hanzi": "错",
+   "movedTo": "错"
+  },
+  "HSK2-016": {
+   "hanzi": "打篮球",
+   "movedTo": "打篮球"
+  },
+  "HSK2-017": {
+   "hanzi": "大家",
+   "movedTo": "大家"
+  },
+  "HSK2-018": {
+   "hanzi": "到",
+   "movedTo": "到"
+  },
+  "HSK2-019": {
+   "hanzi": "得",
+   "movedTo": "得"
+  },
+  "HSK2-020": {
+   "hanzi": "等",
+   "movedTo": "等"
+  },
+  "HSK2-021": {
+   "hanzi": "弟弟",
+   "movedTo": "弟弟"
+  },
+  "HSK2-022": {
+   "hanzi": "第一",
+   "movedTo": "第一"
+  },
+  "HSK2-023": {
+   "hanzi": "懂",
+   "movedTo": "懂"
+  },
+  "HSK2-024": {
+   "hanzi": "对",
+   "movedTo": "对"
+  },
+  "HSK2-025": {
+   "hanzi": "房间",
+   "movedTo": "房间"
+  },
+  "HSK2-026": {
+   "hanzi": "非常",
+   "movedTo": "非常"
+  },
+  "HSK2-027": {
+   "hanzi": "服务员",
+   "movedTo": "服务员"
+  },
+  "HSK2-028": {
+   "hanzi": "高",
+   "movedTo": "高"
+  },
+  "HSK2-029": {
+   "hanzi": "告诉",
+   "movedTo": "告诉"
+  },
+  "HSK2-030": {
+   "hanzi": "哥哥",
+   "movedTo": "哥哥"
+  },
+  "HSK2-031": {
+   "hanzi": "给",
+   "movedTo": "给"
+  },
+  "HSK2-032": {
+   "hanzi": "公共汽车",
+   "movedTo": "公共汽车"
+  },
+  "HSK2-033": {
+   "hanzi": "公司",
+   "movedTo": "公司"
+  },
+  "HSK2-034": {
+   "hanzi": "贵",
+   "movedTo": "贵"
+  },
+  "HSK2-035": {
+   "hanzi": "过",
+   "movedTo": "过"
+  },
+  "HSK2-036": {
+   "hanzi": "还",
+   "movedTo": "还"
+  },
+  "HSK2-037": {
+   "hanzi": "孩子",
+   "movedTo": "孩子"
+  },
+  "HSK2-038": {
+   "hanzi": "好吃",
+   "movedTo": "好吃"
+  },
+  "HSK2-039": {
+   "hanzi": "号",
+   "movedTo": "号"
+  },
+  "HSK2-040": {
+   "hanzi": "黑",
+   "movedTo": "黑"
+  },
+  "HSK2-041": {
+   "hanzi": "红",
+   "movedTo": "红"
+  },
+  "HSK2-042": {
+   "hanzi": "欢迎",
+   "movedTo": "欢迎"
+  },
+  "HSK2-043": {
+   "hanzi": "回答",
+   "movedTo": "回答"
+  },
+  "HSK2-044": {
+   "hanzi": "机场",
+   "movedTo": "机场"
+  },
+  "HSK2-045": {
+   "hanzi": "鸡蛋",
+   "movedTo": "鸡蛋"
+  },
+  "HSK2-046": {
+   "hanzi": "件",
+   "movedTo": "件"
+  },
+  "HSK2-047": {
+   "hanzi": "教室",
+   "movedTo": "教室"
+  },
+  "HSK2-048": {
+   "hanzi": "姐姐",
+   "movedTo": "姐姐"
+  },
+  "HSK2-049": {
+   "hanzi": "介绍",
+   "movedTo": "介绍"
+  },
+  "HSK2-050": {
+   "hanzi": "进",
+   "movedTo": "进"
+  },
+  "HSK2-051": {
+   "hanzi": "近",
+   "movedTo": "近"
+  },
+  "HSK2-052": {
+   "hanzi": "就",
+   "movedTo": "就"
+  },
+  "HSK2-053": {
+   "hanzi": "觉得",
+   "movedTo": "觉得"
+  },
+  "HSK2-054": {
+   "hanzi": "咖啡",
+   "movedTo": "咖啡"
+  },
+  "HSK2-055": {
+   "hanzi": "开始",
+   "movedTo": "开始"
+  },
+  "HSK2-056": {
+   "hanzi": "考试",
+   "movedTo": "考试"
+  },
+  "HSK2-057": {
+   "hanzi": "可能",
+   "movedTo": "可能"
+  },
+  "HSK2-058": {
+   "hanzi": "可以",
+   "movedTo": "可以"
+  },
+  "HSK2-059": {
+   "hanzi": "课",
+   "movedTo": "课"
+  },
+  "HSK2-060": {
+   "hanzi": "快",
+   "movedTo": "快"
+  },
+  "HSK2-061": {
+   "hanzi": "快乐",
+   "movedTo": "快乐"
+  },
+  "HSK2-062": {
+   "hanzi": "累",
+   "movedTo": "累"
+  },
+  "HSK2-063": {
+   "hanzi": "离",
+   "movedTo": "离"
+  },
+  "HSK2-064": {
+   "hanzi": "两",
+   "movedTo": "两"
+  },
+  "HSK2-065": {
+   "hanzi": "路",
+   "movedTo": "路"
+  },
+  "HSK2-066": {
+   "hanzi": "旅游",
+   "movedTo": "旅游"
+  },
+  "HSK2-067": {
+   "hanzi": "卖",
+   "movedTo": "卖"
+  },
+  "HSK2-068": {
+   "hanzi": "慢",
+   "movedTo": "慢"
+  },
+  "HSK2-069": {
+   "hanzi": "忙",
+   "movedTo": "忙"
+  },
+  "HSK2-070": {
+   "hanzi": "每",
+   "movedTo": "每"
+  },
+  "HSK2-071": {
+   "hanzi": "妹妹",
+   "movedTo": "妹妹"
+  },
+  "HSK2-072": {
+   "hanzi": "门",
+   "movedTo": "门"
+  },
+  "HSK2-073": {
+   "hanzi": "面条",
+   "movedTo": "面条"
+  },
+  "HSK2-074": {
+   "hanzi": "男",
+   "movedTo": "男"
+  },
+  "HSK2-075": {
+   "hanzi": "您",
+   "movedTo": "您"
+  },
+  "HSK2-076": {
+   "hanzi": "牛奶",
+   "movedTo": "牛奶"
+  },
+  "HSK2-077": {
+   "hanzi": "女",
+   "movedTo": "女"
+  },
+  "HSK2-078": {
+   "hanzi": "旁边",
+   "movedTo": "旁边"
+  },
+  "HSK2-079": {
+   "hanzi": "跑步",
+   "movedTo": "跑步"
+  },
+  "HSK2-080": {
+   "hanzi": "便宜",
+   "movedTo": "便宜"
+  },
+  "HSK2-081": {
+   "hanzi": "票",
+   "movedTo": "票"
+  },
+  "HSK2-082": {
+   "hanzi": "妻子",
+   "movedTo": "妻子"
+  },
+  "HSK2-083": {
+   "hanzi": "起床",
+   "movedTo": "起床"
+  },
+  "HSK2-084": {
+   "hanzi": "千",
+   "movedTo": "千"
+  },
+  "HSK2-085": {
+   "hanzi": "铅笔",
+   "movedTo": "铅笔"
+  },
+  "HSK2-086": {
+   "hanzi": "晴",
+   "movedTo": "晴"
+  },
+  "HSK2-087": {
+   "hanzi": "去年",
+   "movedTo": "去年"
+  },
+  "HSK2-088": {
+   "hanzi": "让",
+   "movedTo": "让"
+  },
+  "HSK2-089": {
+   "hanzi": "日",
+   "movedTo": "日"
+  },
+  "HSK2-090": {
+   "hanzi": "上班",
+   "movedTo": "上班"
+  },
+  "HSK2-091": {
+   "hanzi": "身体",
+   "movedTo": "身体"
+  },
+  "HSK2-092": {
+   "hanzi": "生病",
+   "movedTo": "生病"
+  },
+  "HSK2-093": {
+   "hanzi": "生日",
+   "movedTo": "生日"
+  },
+  "HSK2-094": {
+   "hanzi": "时间",
+   "movedTo": "时间"
+  },
+  "HSK2-095": {
+   "hanzi": "事情",
+   "movedTo": "事情"
+  },
+  "HSK2-096": {
+   "hanzi": "手表",
+   "movedTo": "手表"
+  },
+  "HSK2-097": {
+   "hanzi": "手机",
+   "movedTo": "手机"
+  },
+  "HSK2-098": {
+   "hanzi": "送",
+   "movedTo": "送"
+  },
+  "HSK2-099": {
+   "hanzi": "虽然",
+   "movedTo": "虽然"
+  },
+  "HSK2-100": {
+   "hanzi": "但是",
+   "movedTo": "但是"
+  },
+  "HSK2-101": {
+   "hanzi": "它",
+   "movedTo": "它"
+  },
+  "HSK2-102": {
+   "hanzi": "踢足球",
+   "movedTo": "踢足球"
+  },
+  "HSK2-103": {
+   "hanzi": "题",
+   "movedTo": "题"
+  },
+  "HSK2-104": {
+   "hanzi": "跳舞",
+   "movedTo": "跳舞"
+  },
+  "HSK2-105": {
+   "hanzi": "外",
+   "movedTo": "外"
+  },
+  "HSK2-106": {
+   "hanzi": "完",
+   "movedTo": "完"
+  },
+  "HSK2-107": {
+   "hanzi": "玩",
+   "movedTo": "玩"
+  },
+  "HSK2-108": {
+   "hanzi": "晚上",
+   "movedTo": "晚上"
+  },
+  "HSK2-109": {
+   "hanzi": "为什么",
+   "movedTo": "为什么"
+  },
+  "HSK2-110": {
+   "hanzi": "问",
+   "movedTo": "问"
+  },
+  "HSK2-111": {
+   "hanzi": "问题",
+   "movedTo": "问题"
+  },
+  "HSK2-112": {
+   "hanzi": "西瓜",
+   "movedTo": "西瓜"
+  },
+  "HSK2-113": {
+   "hanzi": "希望",
+   "movedTo": "希望"
+  },
+  "HSK2-114": {
+   "hanzi": "洗",
+   "movedTo": "洗"
+  },
+  "HSK2-115": {
+   "hanzi": "小时",
+   "movedTo": "小时"
+  },
+  "HSK2-116": {
+   "hanzi": "笑",
+   "movedTo": "笑"
+  },
+  "HSK2-117": {
+   "hanzi": "新",
+   "movedTo": "新"
+  },
+  "HSK2-118": {
+   "hanzi": "姓",
+   "movedTo": "姓"
+  },
+  "HSK2-119": {
+   "hanzi": "休息",
+   "movedTo": "休息"
+  },
+  "HSK2-120": {
+   "hanzi": "雪",
+   "movedTo": "雪"
+  },
+  "HSK2-121": {
+   "hanzi": "颜色",
+   "movedTo": "颜色"
+  },
+  "HSK2-122": {
+   "hanzi": "眼睛",
+   "movedTo": "眼睛"
+  },
+  "HSK2-123": {
+   "hanzi": "羊肉",
+   "movedTo": "羊肉"
+  },
+  "HSK2-124": {
+   "hanzi": "药",
+   "movedTo": "药"
+  },
+  "HSK2-125": {
+   "hanzi": "要",
+   "movedTo": "要"
+  },
+  "HSK2-126": {
+   "hanzi": "也",
+   "movedTo": "也"
+  },
+  "HSK2-127": {
+   "hanzi": "已经",
+   "movedTo": "已经"
+  },
+  "HSK2-128": {
+   "hanzi": "一起",
+   "movedTo": "一起"
+  },
+  "HSK2-129": {
+   "hanzi": "意思",
+   "movedTo": "意思"
+  },
+  "HSK2-130": {
+   "hanzi": "因为",
+   "movedTo": "因为"
+  },
+  "HSK2-131": {
+   "hanzi": "阴",
+   "movedTo": "阴"
+  },
+  "HSK2-132": {
+   "hanzi": "游泳",
+   "movedTo": "游泳"
+  },
+  "HSK2-133": {
+   "hanzi": "右边",
+   "movedTo": "右边"
+  },
+  "HSK2-134": {
+   "hanzi": "鱼",
+   "movedTo": "鱼"
+  },
+  "HSK2-135": {
+   "hanzi": "远",
+   "movedTo": "远"
+  },
+  "HSK2-136": {
+   "hanzi": "运动",
+   "movedTo": "运动"
+  },
+  "HSK2-137": {
+   "hanzi": "再",
+   "movedTo": "再"
+  },
+  "HSK2-138": {
+   "hanzi": "早上",
+   "movedTo": "早上"
+  },
+  "HSK2-139": {
+   "hanzi": "丈夫",
+   "movedTo": "丈夫"
+  },
+  "HSK2-140": {
+   "hanzi": "找",
+   "movedTo": "找"
+  },
+  "HSK2-141": {
+   "hanzi": "着",
+   "movedTo": "着"
+  },
+  "HSK2-142": {
+   "hanzi": "真",
+   "movedTo": "真"
+  },
+  "HSK2-143": {
+   "hanzi": "正在",
+   "movedTo": "正在"
+  },
+  "HSK2-144": {
+   "hanzi": "知道",
+   "movedTo": "知道"
+  },
+  "HSK2-145": {
+   "hanzi": "准备",
+   "movedTo": "准备"
+  },
+  "HSK2-146": {
+   "hanzi": "走",
+   "movedTo": "走"
+  },
+  "HSK2-147": {
+   "hanzi": "最",
+   "movedTo": "最"
+  },
+  "HSK2-148": {
+   "hanzi": "左边",
+   "movedTo": "左边"
+  },
+  "HSK2-149": {
+   "hanzi": "所以",
+   "movedTo": "所以"
+  },
+  "HSK2-150": {
+   "hanzi": "自行车",
+   "movedTo": "自行车"
+  },
+  "HSK2EX-001": {
+   "hanzi": "我买了一个新电视。",
+   "movedTo": null
+  },
+  "HSK2EX-002": {
+   "hanzi": "对不起，我错了。",
+   "movedTo": null
+  },
+  "HSK2EX-003": {
+   "hanzi": "再见，欢迎您下次再来。",
+   "movedTo": null
+  },
+  "HSK2EX-004": {
+   "hanzi": "这是他给妻子买的。",
+   "movedTo": null
+  },
+  "HSK2EX-005": {
+   "hanzi": "女儿让我回家的时候买些鸡蛋。",
+   "movedTo": null
+  },
+  "HSK2EX-006": {
+   "hanzi": "他回来的时候，我正在洗衣服呢。",
+   "movedTo": null
+  },
+  "HSK2EX-007": {
+   "hanzi": "服务员，请给我来一杯咖啡。",
+   "movedTo": null
+  },
+  "HSK2EX-008": {
+   "hanzi": "爸爸，你别走。",
+   "movedTo": null
+  },
+  "HSK2EX-009": {
+   "hanzi": "王小姐的猫是黑色的。",
+   "movedTo": null
+  },
+  "HSK2EX-010": {
+   "hanzi": "今天要做的事情真多。",
+   "movedTo": null
+  },
+  "HSK2EX-011": {
+   "hanzi": "后面，最右边的是我，找到了吗？",
+   "movedTo": null
+  },
+  "HSK2EX-012": {
+   "hanzi": "找到了，你旁边那个女孩子是谁？",
+   "movedTo": null
+  },
+  "HSK2EX-013": {
+   "hanzi": "生日快乐！这是我送给你的。",
+   "movedTo": null
+  },
+  "HSK2EX-014": {
+   "hanzi": "谢谢你！",
+   "movedTo": null
+  },
+  "HSK2EX-015": {
+   "hanzi": "谁来回答这个问题？",
+   "movedTo": null
+  },
+  "HSK2EX-016": {
+   "hanzi": "老师，我！",
+   "movedTo": null
+  },
+  "HSK2EX-017": {
+   "hanzi": "再来点儿米饭吧，你吃得太少了。",
+   "movedTo": null
+  },
+  "HSK2EX-018": {
+   "hanzi": "好的，你也吃。",
+   "movedTo": null
+  },
+  "HSK2EX-019": {
+   "hanzi": "这几件怎么样？你试一试？",
+   "movedTo": null
+  },
+  "HSK2EX-020": {
+   "hanzi": "好，我喜欢这个颜色的。",
+   "movedTo": null
+  },
+  "HSK2EX-021": {
+   "hanzi": "你那儿有今天的报纸吗？",
+   "movedTo": null
+  },
+  "HSK2EX-022": {
+   "hanzi": "有。我现在很忙，你五分钟后再打，好吗？",
+   "movedTo": null
+  },
+  "HSK2EX-023": {
+   "hanzi": "告诉我，哪个最漂亮？",
+   "movedTo": null
+  },
+  "HSK2EX-024": {
+   "hanzi": "我觉得都漂亮。",
+   "movedTo": null
+  },
+  "HSK2EX-025": {
+   "hanzi": "您做什么工作？",
+   "movedTo": null
+  },
+  "HSK2EX-026": {
+   "hanzi": "我是小学老师。",
+   "movedTo": null
+  },
+  "HSK2EX-027": {
+   "hanzi": "现在是八点，不是七点。",
+   "movedTo": null
+  },
+  "HSK2EX-028": {
+   "hanzi": "真的吗？我的手表慢了？",
+   "movedTo": null
+  },
+  "HSK2EX-029": {
+   "hanzi": "这是李小姐的电影票，你能帮我给她吗？",
+   "movedTo": null
+  },
+  "HSK2EX-030": {
+   "hanzi": "没问题。",
+   "movedTo": null
+  },
+  "HSK2EX-031": {
+   "hanzi": "天气太热了，家里有西瓜吗？",
+   "movedTo": null
+  },
+  "HSK2EX-032": {
+   "hanzi": "没了，我现在出去买吧。",
+   "movedTo": null
+  },
+  "HSK2EX-033": {
+   "hanzi": "女的要去买什么？",
+   "movedTo": null
+  },
+  "HSK2EX-034": {
+   "hanzi": "您是第一次来我们这儿吗？",
+   "movedTo": null
+  },
+  "HSK2EX-035": {
+   "hanzi": "不是，去年九月我来过一次。",
+   "movedTo": null
+  },
+  "HSK2EX-036": {
+   "hanzi": "男的来过这里几次？",
+   "movedTo": null
+  },
+  "HSK2EX-037": {
+   "hanzi": "你妹妹现在还住在学校里？",
+   "movedTo": null
+  },
+  "HSK2EX-038": {
+   "hanzi": "对，她住学校里，上班很近。",
+   "movedTo": null
+  },
+  "HSK2EX-039": {
+   "hanzi": "妹妹现在住哪儿？",
+   "movedTo": null
+  },
+  "HSK2EX-040": {
+   "hanzi": "今天你准备几点起床？",
+   "movedTo": null
+  },
+  "HSK2EX-041": {
+   "hanzi": "我不睡了，现在就起。",
+   "movedTo": null
+  },
+  "HSK2EX-042": {
+   "hanzi": "男的是什么意思？",
+   "movedTo": null
+  },
+  "HSK2EX-043": {
+   "hanzi": "小刘，中午有人给我打电话吗？",
+   "movedTo": null
+  },
+  "HSK2EX-044": {
+   "hanzi": "您儿子打了个电话，问您晚上在哪儿吃饭。",
+   "movedTo": null
+  },
+  "HSK2EX-045": {
+   "hanzi": "电话是谁打的？",
+   "movedTo": null
+  },
+  "HSK2EX-046": {
+   "hanzi": "今天太晚了，我们别去小张家了。",
+   "movedTo": null
+  },
+  "HSK2EX-047": {
+   "hanzi": "好，明天再去吧。",
+   "movedTo": null
+  },
+  "HSK2EX-048": {
+   "hanzi": "他们今天为什么不去小张家？",
+   "movedTo": null
+  },
+  "HSK2EX-049": {
+   "hanzi": "鱼真便宜，现在三块钱一斤了。",
+   "movedTo": null
+  },
+  "HSK2EX-050": {
+   "hanzi": "我买两斤。",
+   "movedTo": null
+  },
+  "HSK2EX-051": {
+   "hanzi": "鱼多少钱一斤？",
+   "movedTo": null
+  },
+  "HSK2EX-052": {
+   "hanzi": "你多穿件儿衣服，外面阴天，可能会下雨。",
+   "movedTo": null
+  },
+  "HSK2EX-053": {
+   "hanzi": "没事儿，我很快就回来。",
+   "movedTo": null
+  },
+  "HSK2EX-054": {
+   "hanzi": "现在天气怎么样？",
+   "movedTo": null
+  },
+  "HSK2EX-055": {
+   "hanzi": "吃点儿水果吧？水果在桌子上。",
+   "movedTo": null
+  },
+  "HSK2EX-056": {
+   "hanzi": "不，我想喝点儿茶。",
+   "movedTo": null
+  },
+  "HSK2EX-057": {
+   "hanzi": "桌子上有什么？",
+   "movedTo": null
+  },
+  "HSK2EX-058": {
+   "hanzi": "明天下午你去唱歌吗？",
+   "movedTo": null
+  },
+  "HSK2EX-059": {
+   "hanzi": "我想去，但是我明天下午有课。",
+   "movedTo": null
+  },
+  "HSK2EX-060": {
+   "hanzi": "男的明天下午做什么？",
+   "movedTo": null
+  },
+  "HSK2EX-061": {
+   "hanzi": "你学汉语多长时间了？",
+   "movedTo": null
+  },
+  "HSK2EX-062": {
+   "hanzi": "快两年了。",
+   "movedTo": null
+  },
+  "HSK2EX-063": {
+   "hanzi": "你说得很不错。",
+   "movedTo": null
+  },
+  "HSK2EX-064": {
+   "hanzi": "听和说还可以，读和写不好。",
+   "movedTo": null
+  },
+  "HSK2EX-065": {
+   "hanzi": "他的汉语怎么样？",
+   "movedTo": null
+  },
+  "HSK2EX-066": {
+   "hanzi": "这个椅子怎么样？",
+   "movedTo": null
+  },
+  "HSK2EX-067": {
+   "hanzi": "颜色很好，但是，它太高了。",
+   "movedTo": null
+  },
+  "HSK2EX-068": {
+   "hanzi": "没关系，前面还有几个。",
+   "movedTo": null
+  },
+  "HSK2EX-069": {
+   "hanzi": "走，我们过去看看。",
+   "movedTo": null
+  },
+  "HSK2EX-070": {
+   "hanzi": "他们为什么没买这个椅子？",
+   "movedTo": null
+  },
+  "HSK2EX-071": {
+   "hanzi": "听说你们学校很大，老师很多。",
+   "movedTo": null
+  },
+  "HSK2EX-072": {
+   "hanzi": "是的，我们有两百多个老师。",
+   "movedTo": null
+  },
+  "HSK2EX-073": {
+   "hanzi": "那学生呢？",
+   "movedTo": null
+  },
+  "HSK2EX-074": {
+   "hanzi": "学生有两千多人。",
+   "movedTo": null
+  },
+  "HSK2EX-075": {
+   "hanzi": "这个学校有多少学生？",
+   "movedTo": null
+  },
+  "HSK2EX-076": {
+   "hanzi": "吃药了吗？现在身体怎么样？",
+   "movedTo": null
+  },
+  "HSK2EX-077": {
+   "hanzi": "吃了，现在好多了。",
+   "movedTo": null
+  },
+  "HSK2EX-078": {
+   "hanzi": "什么时候可以出院？",
+   "movedTo": null
+  },
+  "HSK2EX-079": {
+   "hanzi": "医生说下个星期。",
+   "movedTo": null
+  },
+  "HSK2EX-080": {
+   "hanzi": "他们最可能在哪儿？",
+   "movedTo": null
+  },
+  "HSK2EX-081": {
+   "hanzi": "请问，十四号到北京的车票还有吗？",
+   "movedTo": null
+  },
+  "HSK2EX-082": {
+   "hanzi": "对不起，十四号的已经卖完了。",
+   "movedTo": null
+  },
+  "HSK2EX-083": {
+   "hanzi": "那十五号早上的还有吗？",
+   "movedTo": null
+  },
+  "HSK2EX-084": {
+   "hanzi": "有，您要几张？",
+   "movedTo": null
+  },
+  "HSK2EX-085": {
+   "hanzi": "两张。",
+   "movedTo": null
+  },
+  "HSK2EX-086": {
+   "hanzi": "男的买了哪天的票？",
+   "movedTo": null
+  },
+  "HSK2EX-087": {
+   "hanzi": "给您介绍一下，这是我们公司的李先生。",
+   "movedTo": null
+  },
+  "HSK2EX-088": {
+   "hanzi": "看书时间长了，眼睛得休息休息。",
+   "movedTo": null
+  },
+  "HSK2EX-089": {
+   "hanzi": "那是我孩子，她爱跳舞。",
+   "movedTo": null
+  },
+  "HSK2EX-090": {
+   "hanzi": "今天下雪了，天气很冷。",
+   "movedTo": null
+  },
+  "HSK2EX-091": {
+   "hanzi": "因为我不会游泳，所以，小鱼，你好！",
+   "movedTo": null
+  },
+  "HSK2EX-092": {
+   "hanzi": "这个船非常大，可以坐几千人。",
+   "movedTo": null
+  },
+  "HSK2EX-093": {
+   "hanzi": "请进，这就是我的房间。",
+   "movedTo": null
+  },
+  "HSK2EX-094": {
+   "hanzi": "昨天的考试题太多，我没有做完。",
+   "movedTo": null
+  },
+  "HSK2EX-095": {
+   "hanzi": "我没去过中国，我希望今年能去中国旅游。",
+   "movedTo": null
+  },
+  "HSK2EX-096": {
+   "hanzi": "对不起，我不能和你一起去买自行车了。",
+   "movedTo": null
+  },
+  "HSK2EX-097": {
+   "hanzi": "没关系，我知道你很忙。",
+   "movedTo": null
+  },
+  "HSK2EX-098": {
+   "hanzi": "我上午去外面买了个新手机，九百多块钱，很便宜。",
+   "movedTo": null
+  },
+  "HSK2EX-099": {
+   "hanzi": "时间过得真快，我来北京十年了。",
+   "movedTo": null
+  },
+  "HSK2EX-100": {
+   "hanzi": "我女儿已经五岁多了，都开始学习写汉字了。",
+   "movedTo": null
+  },
+  "HSK2EX-101": {
+   "hanzi": "今天是七月十二日，再有三天就是我爸爸的生日了。",
+   "movedTo": null
+  },
+  "HSK2EX-102": {
+   "hanzi": "我想送他一个电脑。",
+   "movedTo": null
+  },
+  "HSK2EX-103": {
+   "hanzi": "喂，姐，我的飞机是十点零七的，再有二十分钟我就到机场了。",
+   "movedTo": null
+  },
+  "HSK2EX-104": {
+   "hanzi": "我们下午见。",
+   "movedTo": null
+  },
+  "HSK2EX-105": {
+   "hanzi": "昨天和朋友们在外面玩儿了一个晚上，很累，但是很高兴。",
+   "movedTo": null
+  },
+  "HSK2EX-106": {
+   "hanzi": "我们要向您学习！",
+   "movedTo": null
+  },
+  "HSK2EX-107": {
+   "hanzi": "她三年的时间里，写了四本书。",
+   "movedTo": null
+  },
+  "HSK2EX-108": {
+   "hanzi": "火车站离这儿远吗？",
+   "movedTo": null
+  },
+  "HSK2EX-109": {
+   "hanzi": "很近，从这儿坐出租车，六七分钟就到了。",
+   "movedTo": null
+  },
+  "HSK2EX-110": {
+   "hanzi": "已经快八点了，你还出去做什么？",
+   "movedTo": null
+  },
+  "HSK2EX-111": {
+   "hanzi": "小刘叫我一起去跑步。",
+   "movedTo": null
+  },
+  "HSK2EX-112": {
+   "hanzi": "小狗怎么了？为什么不吃东西？",
+   "movedTo": null
+  },
+  "HSK2EX-113": {
+   "hanzi": "它不认识你。",
+   "movedTo": null
+  },
+  "HSK2EX-114": {
+   "hanzi": "但是，你知道，你没有他高。",
+   "movedTo": null
+  },
+  "HSK2EX-115": {
+   "hanzi": "你比他大一岁。",
+   "movedTo": null
+  },
+  "HSK2EX-116": {
+   "hanzi": "大家好！我姓王，是新来的汉语老师。",
+   "movedTo": null
+  },
+  "HSK2EX-117": {
+   "hanzi": "你们听懂我说的话了吗？",
+   "movedTo": null
+  },
+  "HSK2EX-118": {
+   "hanzi": "这个月真的非常忙。",
+   "movedTo": null
+  },
+  "HSK2EX-119": {
+   "hanzi": "他现在每天工作十个小时，星期六也不休息。",
+   "movedTo": null
+  },
+  "HSK2EX-120": {
+   "hanzi": "开门，快开门。",
+   "movedTo": null
+  },
+  "HSK2EX-121": {
+   "hanzi": "等一下。你怎么回来这么晚？",
+   "movedTo": null
+  },
+  "HSK2EX-122": {
+   "hanzi": "她笑着对我说：“不客气。”",
+   "movedTo": null
+  },
+  "HSK2EX-123": {
+   "hanzi": "谢谢您给我们的帮助！",
+   "movedTo": null
+  },
+  "HSK2EX-124": {
+   "hanzi": "我的天！你们认识？这怎么可能？",
+   "movedTo": null
+  },
+  "HSK2EX-125": {
+   "hanzi": "他是我弟弟的中学同学。",
+   "movedTo": null
+  },
+  "HSK3-001": {
+   "hanzi": "啊",
+   "movedTo": "啊"
+  },
+  "HSK3-002": {
+   "hanzi": "矮",
+   "movedTo": "矮"
+  },
+  "HSK3-003": {
+   "hanzi": "爱好",
+   "movedTo": "爱好"
+  },
+  "HSK3-004": {
+   "hanzi": "安静",
+   "movedTo": "安静"
+  },
+  "HSK3-005": {
+   "hanzi": "阿姨",
+   "movedTo": "阿姨"
+  },
+  "HSK3-006": {
+   "hanzi": "把",
+   "movedTo": "把"
+  },
+  "HSK3-007": {
+   "hanzi": "半",
+   "movedTo": "半"
+  },
+  "HSK3-008": {
+   "hanzi": "班",
+   "movedTo": "班"
+  },
+  "HSK3-009": {
+   "hanzi": "搬",
+   "movedTo": "搬"
+  },
+  "HSK3-010": {
+   "hanzi": "办法",
+   "movedTo": "办法"
+  },
+  "HSK3-011": {
+   "hanzi": "帮忙",
+   "movedTo": "帮忙"
+  },
+  "HSK3-012": {
+   "hanzi": "办公室",
+   "movedTo": "办公室"
+  },
+  "HSK3-013": {
+   "hanzi": "饱",
+   "movedTo": "饱"
+  },
+  "HSK3-014": {
+   "hanzi": "包",
+   "movedTo": "包"
+  },
+  "HSK3-015": {
+   "hanzi": "被",
+   "movedTo": "被"
+  },
+  "HSK3-016": {
+   "hanzi": "北方",
+   "movedTo": "北方"
+  },
+  "HSK3-017": {
+   "hanzi": "变化",
+   "movedTo": "变化"
+  },
+  "HSK3-018": {
+   "hanzi": "表示",
+   "movedTo": "表示"
+  },
+  "HSK3-019": {
+   "hanzi": "表演",
+   "movedTo": "表演"
+  },
+  "HSK3-020": {
+   "hanzi": "别人",
+   "movedTo": "别人"
+  },
+  "HSK3-021": {
+   "hanzi": "比较",
+   "movedTo": "比较"
+  },
+  "HSK3-022": {
+   "hanzi": "冰箱",
+   "movedTo": "冰箱"
+  },
+  "HSK3-023": {
+   "hanzi": "比赛",
+   "movedTo": "比赛"
+  },
+  "HSK3-024": {
+   "hanzi": "必须",
+   "movedTo": "必须"
+  },
+  "HSK3-025": {
+   "hanzi": "鼻子",
+   "movedTo": "鼻子"
+  },
+  "HSK3-026": {
+   "hanzi": "才",
+   "movedTo": "才"
+  },
+  "HSK3-027": {
+   "hanzi": "菜单",
+   "movedTo": "菜单"
+  },
+  "HSK3-028": {
+   "hanzi": "参加",
+   "movedTo": "参加"
+  },
+  "HSK3-029": {
+   "hanzi": "草",
+   "movedTo": "草"
+  },
+  "HSK3-030": {
+   "hanzi": "层",
+   "movedTo": "层"
+  },
+  "HSK3-031": {
+   "hanzi": "差",
+   "movedTo": "差"
+  },
+  "HSK3-032": {
+   "hanzi": "超市",
+   "movedTo": "超市"
+  },
+  "HSK3-033": {
+   "hanzi": "城市",
+   "movedTo": "城市"
+  },
+  "HSK3-034": {
+   "hanzi": "成绩",
+   "movedTo": "成绩"
+  },
+  "HSK3-035": {
+   "hanzi": "衬衫",
+   "movedTo": "衬衫"
+  },
+  "HSK3-036": {
+   "hanzi": "迟到",
+   "movedTo": "迟到"
+  },
+  "HSK3-037": {
+   "hanzi": "船",
+   "movedTo": "船"
+  },
+  "HSK3-038": {
+   "hanzi": "厨房",
+   "movedTo": "厨房"
+  },
+  "HSK3-039": {
+   "hanzi": "除了",
+   "movedTo": "除了"
+  },
+  "HSK3-040": {
+   "hanzi": "春",
+   "movedTo": "春"
+  },
+  "HSK3-041": {
+   "hanzi": "出现",
+   "movedTo": "出现"
+  },
+  "HSK3-042": {
+   "hanzi": "词语",
+   "movedTo": "词语"
+  },
+  "HSK3-043": {
+   "hanzi": "聪明",
+   "movedTo": "聪明"
+  },
+  "HSK3-044": {
+   "hanzi": "带",
+   "movedTo": "带"
+  },
+  "HSK3-045": {
+   "hanzi": "蛋糕",
+   "movedTo": "蛋糕"
+  },
+  "HSK3-046": {
+   "hanzi": "当然",
+   "movedTo": "当然"
+  },
+  "HSK3-047": {
+   "hanzi": "担心",
+   "movedTo": "担心"
+  },
+  "HSK3-048": {
+   "hanzi": "打扫",
+   "movedTo": "打扫"
+  },
+  "HSK3-049": {
+   "hanzi": "打算",
+   "movedTo": "打算"
+  },
+  "HSK3-050": {
+   "hanzi": "地",
+   "movedTo": "地"
+  },
+  "HSK3-051": {
+   "hanzi": "灯",
+   "movedTo": "灯"
+  },
+  "HSK3-052": {
+   "hanzi": "低",
+   "movedTo": "低"
+  },
+  "HSK3-053": {
+   "hanzi": "电梯",
+   "movedTo": "电梯"
+  },
+  "HSK3-054": {
+   "hanzi": "电子邮件",
+   "movedTo": "电子邮件"
+  },
+  "HSK3-055": {
+   "hanzi": "地方",
+   "movedTo": "地方"
+  },
+  "HSK3-056": {
+   "hanzi": "地铁",
+   "movedTo": "地铁"
+  },
+  "HSK3-057": {
+   "hanzi": "地图",
+   "movedTo": "地图"
+  },
+  "HSK3-058": {
+   "hanzi": "东",
+   "movedTo": "东"
+  },
+  "HSK3-059": {
+   "hanzi": "冬",
+   "movedTo": "冬"
+  },
+  "HSK3-060": {
+   "hanzi": "动物",
+   "movedTo": "动物"
+  },
+  "HSK3-061": {
+   "hanzi": "短",
+   "movedTo": "短"
+  },
+  "HSK3-062": {
+   "hanzi": "段",
+   "movedTo": "段"
+  },
+  "HSK3-063": {
+   "hanzi": "锻炼",
+   "movedTo": "锻炼"
+  },
+  "HSK3-064": {
+   "hanzi": "多么",
+   "movedTo": "多么"
+  },
+  "HSK3-065": {
+   "hanzi": "饿",
+   "movedTo": "饿"
+  },
+  "HSK3-066": {
+   "hanzi": "耳朵",
+   "movedTo": "耳朵"
+  },
+  "HSK3-067": {
+   "hanzi": "而且",
+   "movedTo": "而且"
+  },
+  "HSK3-068": {
+   "hanzi": "放",
+   "movedTo": "放"
+  },
+  "HSK3-069": {
+   "hanzi": "方便",
+   "movedTo": "方便"
+  },
+  "HSK3-070": {
+   "hanzi": "放心",
+   "movedTo": "放心"
+  },
+  "HSK3-071": {
+   "hanzi": "发烧",
+   "movedTo": "发烧"
+  },
+  "HSK3-072": {
+   "hanzi": "发现",
+   "movedTo": "发现"
+  },
+  "HSK3-073": {
+   "hanzi": "分",
+   "movedTo": "分"
+  },
+  "HSK3-074": {
+   "hanzi": "附近",
+   "movedTo": "附近"
+  },
+  "HSK3-075": {
+   "hanzi": "复习",
+   "movedTo": "复习"
+  },
+  "HSK3-076": {
+   "hanzi": "敢",
+   "movedTo": "敢"
+  },
+  "HSK3-077": {
+   "hanzi": "刚才",
+   "movedTo": "刚才"
+  },
+  "HSK3-078": {
+   "hanzi": "干净",
+   "movedTo": "干净"
+  },
+  "HSK3-079": {
+   "hanzi": "感冒",
+   "movedTo": "感冒"
+  },
+  "HSK3-080": {
+   "hanzi": "跟",
+   "movedTo": "跟"
+  },
+  "HSK3-081": {
+   "hanzi": "更",
+   "movedTo": "更"
+  },
+  "HSK3-082": {
+   "hanzi": "根据",
+   "movedTo": "根据"
+  },
+  "HSK3-083": {
+   "hanzi": "公斤",
+   "movedTo": "公斤"
+  },
+  "HSK3-084": {
+   "hanzi": "公园",
+   "movedTo": "公园"
+  },
+  "HSK3-085": {
+   "hanzi": "刮风",
+   "movedTo": "刮风"
+  },
+  "HSK3-086": {
+   "hanzi": "关",
+   "movedTo": "关"
+  },
+  "HSK3-087": {
+   "hanzi": "关系",
+   "movedTo": "关系"
+  },
+  "HSK3-088": {
+   "hanzi": "关心",
+   "movedTo": "关心"
+  },
+  "HSK3-089": {
+   "hanzi": "关于",
+   "movedTo": "关于"
+  },
+  "HSK3-090": {
+   "hanzi": "国家",
+   "movedTo": "国家"
+  },
+  "HSK3-091": {
+   "hanzi": "过去",
+   "movedTo": "过去"
+  },
+  "HSK3-092": {
+   "hanzi": "果汁",
+   "movedTo": "果汁"
+  },
+  "HSK3-093": {
+   "hanzi": "故事",
+   "movedTo": "故事"
+  },
+  "HSK3-094": {
+   "hanzi": "害怕",
+   "movedTo": "害怕"
+  },
+  "HSK3-095": {
+   "hanzi": "还是",
+   "movedTo": "还是"
+  },
+  "HSK3-096": {
+   "hanzi": "河",
+   "movedTo": "河"
+  },
+  "HSK3-097": {
+   "hanzi": "黑板",
+   "movedTo": "黑板"
+  },
+  "HSK3-098": {
+   "hanzi": "画",
+   "movedTo": "画"
+  },
+  "HSK3-099": {
+   "hanzi": "花",
+   "movedTo": "花"
+  },
+  "HSK3-100": {
+   "hanzi": "坏",
+   "movedTo": "坏"
+  },
+  "HSK3-101": {
+   "hanzi": "换",
+   "movedTo": "换"
+  },
+  "HSK3-102": {
+   "hanzi": "黄",
+   "movedTo": "黄"
+  },
+  "HSK3-103": {
+   "hanzi": "环境",
+   "movedTo": "环境"
+  },
+  "HSK3-104": {
+   "hanzi": "花园",
+   "movedTo": "花园"
+  },
+  "HSK3-105": {
+   "hanzi": "会议",
+   "movedTo": "会议"
+  },
+  "HSK3-106": {
+   "hanzi": "火车站",
+   "movedTo": "火车站"
+  },
+  "HSK3-107": {
+   "hanzi": "或者",
+   "movedTo": "或者"
+  },
+  "HSK3-108": {
+   "hanzi": "护照",
+   "movedTo": "护照"
+  },
+  "HSK3-109": {
+   "hanzi": "极",
+   "movedTo": "极"
+  },
+  "HSK3-110": {
+   "hanzi": "检查",
+   "movedTo": "检查"
+  },
+  "HSK3-111": {
+   "hanzi": "简单",
+   "movedTo": "简单"
+  },
+  "HSK3-112": {
+   "hanzi": "讲",
+   "movedTo": "讲"
+  },
+  "HSK3-113": {
+   "hanzi": "健康",
+   "movedTo": "健康"
+  },
+  "HSK3-114": {
+   "hanzi": "见面",
+   "movedTo": "见面"
+  },
+  "HSK3-115": {
+   "hanzi": "教",
+   "movedTo": "教"
+  },
+  "HSK3-116": {
+   "hanzi": "角",
+   "movedTo": "角"
+  },
+  "HSK3-117": {
+   "hanzi": "脚",
+   "movedTo": "脚"
+  },
+  "HSK3-118": {
+   "hanzi": "记得",
+   "movedTo": "记得"
+  },
+  "HSK3-119": {
+   "hanzi": "借",
+   "movedTo": "借"
+  },
+  "HSK3-120": {
+   "hanzi": "接",
+   "movedTo": "接"
+  },
+  "HSK3-121": {
+   "hanzi": "街道",
+   "movedTo": "街道"
+  },
+  "HSK3-122": {
+   "hanzi": "结婚",
+   "movedTo": "结婚"
+  },
+  "HSK3-123": {
+   "hanzi": "解决",
+   "movedTo": "解决"
+  },
+  "HSK3-124": {
+   "hanzi": "节目",
+   "movedTo": "节目"
+  },
+  "HSK3-125": {
+   "hanzi": "节日",
+   "movedTo": "节日"
+  },
+  "HSK3-126": {
+   "hanzi": "结束",
+   "movedTo": "结束"
+  },
+  "HSK3-127": {
+   "hanzi": "几乎",
+   "movedTo": "几乎"
+  },
+  "HSK3-128": {
+   "hanzi": "机会",
+   "movedTo": "机会"
+  },
+  "HSK3-129": {
+   "hanzi": "季节",
+   "movedTo": "季节"
+  },
+  "HSK3-130": {
+   "hanzi": "经常",
+   "movedTo": "经常"
+  },
+  "HSK3-131": {
+   "hanzi": "经过",
+   "movedTo": "经过"
+  },
+  "HSK3-132": {
+   "hanzi": "经理",
+   "movedTo": "经理"
+  },
+  "HSK3-133": {
+   "hanzi": "旧",
+   "movedTo": "旧"
+  },
+  "HSK3-134": {
+   "hanzi": "久",
+   "movedTo": "久"
+  },
+  "HSK3-135": {
+   "hanzi": "决定",
+   "movedTo": "决定"
+  },
+  "HSK3-136": {
+   "hanzi": "举行",
+   "movedTo": "举行"
+  },
+  "HSK3-137": {
+   "hanzi": "句子",
+   "movedTo": "句子"
+  },
+  "HSK3-138": {
+   "hanzi": "刻",
+   "movedTo": "刻"
+  },
+  "HSK3-139": {
+   "hanzi": "渴",
+   "movedTo": "渴"
+  },
+  "HSK3-140": {
+   "hanzi": "可爱",
+   "movedTo": "可爱"
+  },
+  "HSK3-141": {
+   "hanzi": "客人",
+   "movedTo": "客人"
+  },
+  "HSK3-142": {
+   "hanzi": "空调",
+   "movedTo": "空调"
+  },
+  "HSK3-143": {
+   "hanzi": "口",
+   "movedTo": "口"
+  },
+  "HSK3-144": {
+   "hanzi": "哭",
+   "movedTo": "哭"
+  },
+  "HSK3-145": {
+   "hanzi": "筷子",
+   "movedTo": "筷子"
+  },
+  "HSK3-146": {
+   "hanzi": "裤子",
+   "movedTo": "裤子"
+  },
+  "HSK3-147": {
+   "hanzi": "蓝",
+   "movedTo": "蓝"
+  },
+  "HSK3-148": {
+   "hanzi": "老",
+   "movedTo": "老"
+  },
+  "HSK3-149": {
+   "hanzi": "脸",
+   "movedTo": "脸"
+  },
+  "HSK3-150": {
+   "hanzi": "辆",
+   "movedTo": "辆"
+  },
+  "HSK3-151": {
+   "hanzi": "练习",
+   "movedTo": "练习"
+  },
+  "HSK3-152": {
+   "hanzi": "了解",
+   "movedTo": "了解"
+  },
+  "HSK3-153": {
+   "hanzi": "离开",
+   "movedTo": "离开"
+  },
+  "HSK3-154": {
+   "hanzi": "邻居",
+   "movedTo": "邻居"
+  },
+  "HSK3-155": {
+   "hanzi": "历史",
+   "movedTo": "历史"
+  },
+  "HSK3-156": {
+   "hanzi": "礼物",
+   "movedTo": "礼物"
+  },
+  "HSK3-157": {
+   "hanzi": "楼",
+   "movedTo": "楼"
+  },
+  "HSK3-158": {
+   "hanzi": "绿",
+   "movedTo": "绿"
+  },
+  "HSK3-159": {
+   "hanzi": "马",
+   "movedTo": "马"
+  },
+  "HSK3-160": {
+   "hanzi": "满意",
+   "movedTo": "满意"
+  },
+  "HSK3-161": {
+   "hanzi": "帽子",
+   "movedTo": "帽子"
+  },
+  "HSK3-162": {
+   "hanzi": "马上",
+   "movedTo": "马上"
+  },
+  "HSK3-163": {
+   "hanzi": "米",
+   "movedTo": "米"
+  },
+  "HSK3-164": {
+   "hanzi": "面包",
+   "movedTo": "面包"
+  },
+  "HSK3-165": {
+   "hanzi": "明白",
+   "movedTo": "明白"
+  },
+  "HSK3-166": {
+   "hanzi": "拿",
+   "movedTo": "拿"
+  },
+  "HSK3-167": {
+   "hanzi": "奶奶",
+   "movedTo": "奶奶"
+  },
+  "HSK3-168": {
+   "hanzi": "南",
+   "movedTo": "南"
+  },
+  "HSK3-169": {
+   "hanzi": "难",
+   "movedTo": "难"
+  },
+  "HSK3-170": {
+   "hanzi": "难过",
+   "movedTo": "难过"
+  },
+  "HSK3-171": {
+   "hanzi": "年级",
+   "movedTo": "年级"
+  },
+  "HSK3-172": {
+   "hanzi": "年轻",
+   "movedTo": "年轻"
+  },
+  "HSK3-173": {
+   "hanzi": "鸟",
+   "movedTo": "鸟"
+  },
+  "HSK3-174": {
+   "hanzi": "努力",
+   "movedTo": "努力"
+  },
+  "HSK3-175": {
+   "hanzi": "胖",
+   "movedTo": "胖"
+  },
+  "HSK3-176": {
+   "hanzi": "盘子",
+   "movedTo": "盘子"
+  },
+  "HSK3-177": {
+   "hanzi": "爬山",
+   "movedTo": "爬山"
+  },
+  "HSK3-178": {
+   "hanzi": "啤酒",
+   "movedTo": "啤酒"
+  },
+  "HSK3-179": {
+   "hanzi": "葡萄",
+   "movedTo": "葡萄"
+  },
+  "HSK3-180": {
+   "hanzi": "普通话",
+   "movedTo": "普通话"
+  },
+  "HSK3-181": {
+   "hanzi": "骑",
+   "movedTo": "骑"
+  },
+  "HSK3-182": {
+   "hanzi": "奇怪",
+   "movedTo": "奇怪"
+  },
+  "HSK3-183": {
+   "hanzi": "清楚",
+   "movedTo": "清楚"
+  },
+  "HSK3-184": {
+   "hanzi": "其实",
+   "movedTo": "其实"
+  },
+  "HSK3-185": {
+   "hanzi": "其他",
+   "movedTo": "其他"
+  },
+  "HSK3-186": {
+   "hanzi": "秋",
+   "movedTo": "秋"
+  },
+  "HSK3-187": {
+   "hanzi": "裙子",
+   "movedTo": "裙子"
+  },
+  "HSK3-188": {
+   "hanzi": "然后",
+   "movedTo": "然后"
+  },
+  "HSK3-189": {
+   "hanzi": "认为",
+   "movedTo": "认为"
+  },
+  "HSK3-190": {
+   "hanzi": "认真",
+   "movedTo": "认真"
+  },
+  "HSK3-191": {
+   "hanzi": "热情",
+   "movedTo": "热情"
+  },
+  "HSK3-192": {
+   "hanzi": "容易",
+   "movedTo": "容易"
+  },
+  "HSK3-193": {
+   "hanzi": "如果",
+   "movedTo": "如果"
+  },
+  "HSK3-194": {
+   "hanzi": "伞",
+   "movedTo": "伞"
+  },
+  "HSK3-195": {
+   "hanzi": "上网",
+   "movedTo": "上网"
+  },
+  "HSK3-196": {
+   "hanzi": "生气",
+   "movedTo": "生气"
+  },
+  "HSK3-197": {
+   "hanzi": "声音",
+   "movedTo": "声音"
+  },
+  "HSK3-198": {
+   "hanzi": "使",
+   "movedTo": "使"
+  },
+  "HSK3-199": {
+   "hanzi": "世界",
+   "movedTo": "世界"
+  },
+  "HSK3-200": {
+   "hanzi": "瘦",
+   "movedTo": "瘦"
+  },
+  "HSK3-201": {
+   "hanzi": "树",
+   "movedTo": "树"
+  },
+  "HSK3-202": {
+   "hanzi": "双",
+   "movedTo": "双"
+  },
+  "HSK3-203": {
+   "hanzi": "刷牙",
+   "movedTo": "刷牙"
+  },
+  "HSK3-204": {
+   "hanzi": "舒服",
+   "movedTo": "舒服"
+  },
+  "HSK3-205": {
+   "hanzi": "水平",
+   "movedTo": "水平"
+  },
+  "HSK3-206": {
+   "hanzi": "叔叔",
+   "movedTo": "叔叔"
+  },
+  "HSK3-207": {
+   "hanzi": "数学",
+   "movedTo": "数学"
+  },
+  "HSK3-208": {
+   "hanzi": "司机",
+   "movedTo": "司机"
+  },
+  "HSK3-209": {
+   "hanzi": "太阳",
+   "movedTo": "太阳"
+  },
+  "HSK3-210": {
+   "hanzi": "糖",
+   "movedTo": "糖"
+  },
+  "HSK3-211": {
+   "hanzi": "特别",
+   "movedTo": "特别"
+  },
+  "HSK3-212": {
+   "hanzi": "疼",
+   "movedTo": "疼"
+  },
+  "HSK3-213": {
+   "hanzi": "甜",
+   "movedTo": "甜"
+  },
+  "HSK3-214": {
+   "hanzi": "条",
+   "movedTo": "条"
+  },
+  "HSK3-215": {
+   "hanzi": "提高",
+   "movedTo": "提高"
+  },
+  "HSK3-216": {
+   "hanzi": "体育",
+   "movedTo": "体育"
+  },
+  "HSK3-217": {
+   "hanzi": "同事",
+   "movedTo": "同事"
+  },
+  "HSK3-218": {
+   "hanzi": "同意",
+   "movedTo": "同意"
+  },
+  "HSK3-219": {
+   "hanzi": "头发",
+   "movedTo": "头发"
+  },
+  "HSK3-220": {
+   "hanzi": "腿",
+   "movedTo": "腿"
+  },
+  "HSK3-221": {
+   "hanzi": "突然",
+   "movedTo": "突然"
+  },
+  "HSK3-222": {
+   "hanzi": "图书馆",
+   "movedTo": "图书馆"
+  },
+  "HSK3-223": {
+   "hanzi": "万",
+   "movedTo": "万"
+  },
+  "HSK3-224": {
+   "hanzi": "碗",
+   "movedTo": "碗"
+  },
+  "HSK3-225": {
+   "hanzi": "完成",
+   "movedTo": "完成"
+  },
+  "HSK3-226": {
+   "hanzi": "忘记",
+   "movedTo": "忘记"
+  },
+  "HSK3-227": {
+   "hanzi": "为",
+   "movedTo": "为"
+  },
+  "HSK3-228": {
+   "hanzi": "位",
+   "movedTo": "位"
+  },
+  "HSK3-229": {
+   "hanzi": "为了",
+   "movedTo": "为了"
+  },
+  "HSK3-230": {
+   "hanzi": "文化",
+   "movedTo": "文化"
+  },
+  "HSK3-231": {
+   "hanzi": "西",
+   "movedTo": "西"
+  },
+  "HSK3-232": {
+   "hanzi": "夏",
+   "movedTo": "夏"
+  },
+  "HSK3-233": {
+   "hanzi": "先",
+   "movedTo": "先"
+  },
+  "HSK3-234": {
+   "hanzi": "向",
+   "movedTo": "向"
+  },
+  "HSK3-235": {
+   "hanzi": "像",
+   "movedTo": "像"
+  },
+  "HSK3-236": {
+   "hanzi": "香蕉",
+   "movedTo": "香蕉"
+  },
+  "HSK3-237": {
+   "hanzi": "相同",
+   "movedTo": "相同"
+  },
+  "HSK3-238": {
+   "hanzi": "相信",
+   "movedTo": "相信"
+  },
+  "HSK3-239": {
+   "hanzi": "小心",
+   "movedTo": "小心"
+  },
+  "HSK3-240": {
+   "hanzi": "校长",
+   "movedTo": "校长"
+  },
+  "HSK3-241": {
+   "hanzi": "鞋",
+   "movedTo": "鞋"
+  },
+  "HSK3-242": {
+   "hanzi": "习惯",
+   "movedTo": "习惯"
+  },
+  "HSK3-243": {
+   "hanzi": "信",
+   "movedTo": "信"
+  },
+  "HSK3-244": {
+   "hanzi": "行李箱",
+   "movedTo": "行李箱"
+  },
+  "HSK3-245": {
+   "hanzi": "兴趣",
+   "movedTo": "兴趣"
+  },
+  "HSK3-246": {
+   "hanzi": "新闻",
+   "movedTo": "新闻"
+  },
+  "HSK3-247": {
+   "hanzi": "新鲜",
+   "movedTo": "新鲜"
+  },
+  "HSK3-248": {
+   "hanzi": "熊猫",
+   "movedTo": "熊猫"
+  },
+  "HSK3-249": {
+   "hanzi": "洗手间",
+   "movedTo": "洗手间"
+  },
+  "HSK3-250": {
+   "hanzi": "洗澡",
+   "movedTo": "洗澡"
+  },
+  "HSK3-251": {
+   "hanzi": "选择",
+   "movedTo": "选择"
+  },
+  "HSK3-252": {
+   "hanzi": "需要",
+   "movedTo": "需要"
+  },
+  "HSK3-253": {
+   "hanzi": "眼镜",
+   "movedTo": "眼镜"
+  },
+  "HSK3-254": {
+   "hanzi": "要求",
+   "movedTo": "要求"
+  },
+  "HSK3-255": {
+   "hanzi": "爷爷",
+   "movedTo": "爷爷"
+  },
+  "HSK3-256": {
+   "hanzi": "一般",
+   "movedTo": "一般"
+  },
+  "HSK3-257": {
+   "hanzi": "一边",
+   "movedTo": "一边"
+  },
+  "HSK3-258": {
+   "hanzi": "一定",
+   "movedTo": "一定"
+  },
+  "HSK3-259": {
+   "hanzi": "一共",
+   "movedTo": "一共"
+  },
+  "HSK3-260": {
+   "hanzi": "以后",
+   "movedTo": "以后"
+  },
+  "HSK3-261": {
+   "hanzi": "一会儿",
+   "movedTo": "一会儿"
+  },
+  "HSK3-262": {
+   "hanzi": "应该",
+   "movedTo": "应该"
+  },
+  "HSK3-263": {
+   "hanzi": "影响",
+   "movedTo": "影响"
+  },
+  "HSK3-264": {
+   "hanzi": "银行",
+   "movedTo": "银行"
+  },
+  "HSK3-265": {
+   "hanzi": "音乐",
+   "movedTo": "音乐"
+  },
+  "HSK3-266": {
+   "hanzi": "以前",
+   "movedTo": "以前"
+  },
+  "HSK3-267": {
+   "hanzi": "以为",
+   "movedTo": "以为"
+  },
+  "HSK3-268": {
+   "hanzi": "一样",
+   "movedTo": "一样"
+  },
+  "HSK3-269": {
+   "hanzi": "一直",
+   "movedTo": "一直"
+  },
+  "HSK3-270": {
+   "hanzi": "用",
+   "movedTo": "用"
+  },
+  "HSK3-271": {
+   "hanzi": "又",
+   "movedTo": "又"
+  },
+  "HSK3-272": {
+   "hanzi": "有名",
+   "movedTo": "有名"
+  },
+  "HSK3-273": {
+   "hanzi": "游戏",
+   "movedTo": "游戏"
+  },
+  "HSK3-274": {
+   "hanzi": "元",
+   "movedTo": "元"
+  },
+  "HSK3-275": {
+   "hanzi": "愿意",
+   "movedTo": "愿意"
+  },
+  "HSK3-276": {
+   "hanzi": "遇到",
+   "movedTo": "遇到"
+  },
+  "HSK3-277": {
+   "hanzi": "越",
+   "movedTo": "越"
+  },
+  "HSK3-278": {
+   "hanzi": "月亮",
+   "movedTo": "月亮"
+  },
+  "HSK3-279": {
+   "hanzi": "云",
+   "movedTo": "云"
+  },
+  "HSK3-280": {
+   "hanzi": "站",
+   "movedTo": "站"
+  },
+  "HSK3-281": {
+   "hanzi": "张",
+   "movedTo": "张"
+  },
+  "HSK3-282": {
+   "hanzi": "照顾",
+   "movedTo": "照顾"
+  },
+  "HSK3-283": {
+   "hanzi": "着急",
+   "movedTo": "着急"
+  },
+  "HSK3-284": {
+   "hanzi": "照片",
+   "movedTo": "照片"
+  },
+  "HSK3-285": {
+   "hanzi": "照相机",
+   "movedTo": "照相机"
+  },
+  "HSK3-286": {
+   "hanzi": "只",
+   "movedTo": "只"
+  },
+  "HSK3-287": {
+   "hanzi": "种",
+   "movedTo": "种"
+  },
+  "HSK3-288": {
+   "hanzi": "中间",
+   "movedTo": "中间"
+  },
+  "HSK3-289": {
+   "hanzi": "重要",
+   "movedTo": "重要"
+  },
+  "HSK3-290": {
+   "hanzi": "终于",
+   "movedTo": "终于"
+  },
+  "HSK3-291": {
+   "hanzi": "周末",
+   "movedTo": "周末"
+  },
+  "HSK3-292": {
+   "hanzi": "祝",
+   "movedTo": "祝"
+  },
+  "HSK3-293": {
+   "hanzi": "主要",
+   "movedTo": "主要"
+  },
+  "HSK3-294": {
+   "hanzi": "注意",
+   "movedTo": "注意"
+  },
+  "HSK3-295": {
+   "hanzi": "字典",
+   "movedTo": "字典"
+  },
+  "HSK3-296": {
+   "hanzi": "自己",
+   "movedTo": "自己"
+  },
+  "HSK3-297": {
+   "hanzi": "总是",
+   "movedTo": "总是"
+  },
+  "HSK3-298": {
+   "hanzi": "最近",
+   "movedTo": "最近"
+  },
+  "HSK3-299": {
+   "hanzi": "作业",
+   "movedTo": "作业"
+  },
+  "HSK3-300": {
+   "hanzi": "作用",
+   "movedTo": "作用"
+  },
+  "HSK3L-001": {
+   "hanzi": "出去",
+   "movedTo": "出去"
+  },
   "HSK3L-005": {
    "hanzi": "多喝水",
    "movedTo": null
+  },
+  "HSK3L-006": {
+   "hanzi": "一块儿",
+   "movedTo": "一块儿"
+  },
+  "HSK3L-007": {
+   "hanzi": "这个",
+   "movedTo": "这个"
+  },
+  "HSK3L-011": {
+   "hanzi": "好看",
+   "movedTo": "好看"
+  },
+  "HSK3L-018": {
+   "hanzi": "只能",
+   "movedTo": "只能"
+  },
+  "HSK3L-020": {
+   "hanzi": "周",
+   "movedTo": "周"
   },
   "HSK3L-021": {
    "hanzi": "明",
    "movedTo": null
   },
+  "HSK3L-022": {
+   "hanzi": "一些",
+   "movedTo": "一些"
+  },
+  "HSK3L-028": {
+   "hanzi": "书店",
+   "movedTo": "书店"
+  },
+  "HSK3L-030": {
+   "hanzi": "那个",
+   "movedTo": "那个"
+  },
+  "HSK3L-031": {
+   "hanzi": "帮",
+   "movedTo": "帮"
+  },
+  "HSK3L-032": {
+   "hanzi": "女孩儿",
+   "movedTo": "女孩儿"
+  },
+  "HSK3L-033": {
+   "hanzi": "白天",
+   "movedTo": "白天"
+  },
+  "HSK3L-037": {
+   "hanzi": "踢",
+   "movedTo": "踢"
+  },
+  "HSK3L-041": {
+   "hanzi": "床",
+   "movedTo": "床"
+  },
+  "HSK3L-042": {
+   "hanzi": "病人",
+   "movedTo": "病人"
+  },
+  "HSK3L-043": {
+   "hanzi": "好多",
+   "movedTo": "好多"
+  },
   "HSK3L-047": {
    "hanzi": "这段话",
    "movedTo": null
+  },
+  "HSK3L-050": {
+   "hanzi": "有意思",
+   "movedTo": "有意思"
+  },
+  "HSK3L-057": {
+   "hanzi": "外面",
+   "movedTo": "外面"
+  },
+  "HSK3L-058": {
+   "hanzi": "房子",
+   "movedTo": "房子"
+  },
+  "HSK3L-062": {
+   "hanzi": "查",
+   "movedTo": "查"
+  },
+  "HSK3L-065": {
+   "hanzi": "说话",
+   "movedTo": "说话"
+  },
+  "HSK3L-067": {
+   "hanzi": "不要",
+   "movedTo": "不要"
+  },
+  "HSK3L-068": {
+   "hanzi": "词典",
+   "movedTo": "词典"
+  },
+  "HSK3L-070": {
+   "hanzi": "黑色",
+   "movedTo": "黑色"
+  },
+  "HSK3L-078": {
+   "hanzi": "面",
+   "movedTo": "面"
+  },
+  "HSK3L-080": {
+   "hanzi": "你好",
+   "movedTo": "你好"
+  },
+  "HSK3L-082": {
+   "hanzi": "这么",
+   "movedTo": "这么"
+  },
+  "HSK3L-083": {
+   "hanzi": "夏天",
+   "movedTo": "夏天"
   },
   "HSK3L-088": {
    "hanzi": "老李",
    "movedTo": null
   },
+  "HSK3L-096": {
+   "hanzi": "家电",
+   "movedTo": "家电"
+  },
+  "HSK3L-100": {
+   "hanzi": "山",
+   "movedTo": "山"
+  },
+  "HSK3L-105": {
+   "hanzi": "爬",
+   "movedTo": "爬"
+  },
+  "HSK3L-106": {
+   "hanzi": "那么",
+   "movedTo": "那么"
+  },
+  "HSK3L-108": {
+   "hanzi": "春天",
+   "movedTo": "春天"
+  },
+  "HSK3L-110": {
+   "hanzi": "上学",
+   "movedTo": "上学"
+  },
+  "HSK3L-118": {
+   "hanzi": "唱",
+   "movedTo": "唱"
+  },
   "HSK3L-119": {
    "hanzi": "真不错",
    "movedTo": "不错"
+  },
+  "HSK3L-121": {
+   "hanzi": "照",
+   "movedTo": "照"
+  },
+  "HSK3L-123": {
+   "hanzi": "上课",
+   "movedTo": "上课"
+  },
+  "HSK3L-126": {
+   "hanzi": "箱子",
+   "movedTo": "箱子"
+  },
+  "HSK3L-127": {
+   "hanzi": "打",
+   "movedTo": "打"
+  },
+  "HSK3L-129": {
+   "hanzi": "要是",
+   "movedTo": "要是"
+  },
+  "HSK3L-134": {
+   "hanzi": "南方",
+   "movedTo": "南方"
+  },
+  "HSK3L-136": {
+   "hanzi": "草地",
+   "movedTo": "草地"
+  },
+  "HSK3L-151": {
+   "hanzi": "打开",
+   "movedTo": "打开"
+  },
+  "HSK3L-157": {
+   "hanzi": "运动会",
+   "movedTo": "运动会"
+  },
+  "HSK3L-159": {
+   "hanzi": "店",
+   "movedTo": "店"
   },
   "HSK3L-161": {
    "hanzi": "欢迎您",
@@ -38,9 +3123,25 @@
    "hanzi": "李医生",
    "movedTo": null
   },
+  "HSK3L-172": {
+   "hanzi": "学",
+   "movedTo": "学"
+  },
+  "HSK3L-174": {
+   "hanzi": "下班",
+   "movedTo": "下班"
+  },
+  "HSK3L-176": {
+   "hanzi": "没事",
+   "movedTo": "没事"
+  },
   "HSK3L-182": {
    "hanzi": "老王",
    "movedTo": null
+  },
+  "HSK3L-189": {
+   "hanzi": "有点儿",
+   "movedTo": "有点儿"
   },
   "HSK3L-197": {
    "hanzi": "喜不喜欢",
@@ -50,13 +3151,37 @@
    "hanzi": "见过面",
    "movedTo": "见面"
   },
+  "HSK3L-202": {
+   "hanzi": "晚饭",
+   "movedTo": "晚饭"
+  },
   "HSK3L-204": {
    "hanzi": "李校长",
    "movedTo": null
   },
+  "HSK3L-207": {
+   "hanzi": "红色",
+   "movedTo": "红色"
+  },
+  "HSK3L-211": {
+   "hanzi": "用来",
+   "movedTo": "用来"
+  },
+  "HSK3L-212": {
+   "hanzi": "路上",
+   "movedTo": "路上"
+  },
   "HSK3L-224": {
    "hanzi": "老张",
    "movedTo": null
+  },
+  "HSK3L-236": {
+   "hanzi": "歌",
+   "movedTo": "歌"
+  },
+  "HSK3L-242": {
+   "hanzi": "词",
+   "movedTo": "词"
   },
   "HSK3L-248": {
    "hanzi": "李老师",
@@ -74,29 +3199,117 @@
    "hanzi": "不下雨",
    "movedTo": "下雨"
   },
+  "HSK3L-264": {
+   "hanzi": "午饭",
+   "movedTo": "午饭"
+  },
+  "HSK3L-270": {
+   "hanzi": "半天",
+   "movedTo": "半天"
+  },
+  "HSK3L-275": {
+   "hanzi": "读书",
+   "movedTo": "读书"
+  },
+  "HSK3L-280": {
+   "hanzi": "走路",
+   "movedTo": "走路"
+  },
+  "HSK3L-288": {
+   "hanzi": "星期日",
+   "movedTo": "星期日"
+  },
+  "HSK3L-290": {
+   "hanzi": "那些",
+   "movedTo": "那些"
+  },
   "HSK3L-294": {
    "hanzi": "真对不起",
    "movedTo": "对不起"
+  },
+  "HSK3L-297": {
+   "hanzi": "日子",
+   "movedTo": "日子"
+  },
+  "HSK3L-306": {
+   "hanzi": "那里",
+   "movedTo": "那里"
+  },
+  "HSK3L-307": {
+   "hanzi": "人才",
+   "movedTo": "人才"
+  },
+  "HSK3L-314": {
+   "hanzi": "过节",
+   "movedTo": "过节"
   },
   "HSK3L-319": {
    "hanzi": "晓",
    "movedTo": null
   },
+  "HSK3L-320": {
+   "hanzi": "错过",
+   "movedTo": "错过"
+  },
+  "HSK3L-321": {
+   "hanzi": "懂得",
+   "movedTo": "懂得"
+  },
+  "HSK3L-322": {
+   "hanzi": "名单",
+   "movedTo": "名单"
+  },
+  "HSK3L-328": {
+   "hanzi": "盒子",
+   "movedTo": "盒子"
+  },
+  "HSK3L-330": {
+   "hanzi": "请假",
+   "movedTo": "请假"
+  },
   "HSK3L-337": {
    "hanzi": "全",
-   "movedTo": null
+   "movedTo": "全"
   },
   "HSK3L-339": {
    "hanzi": "散",
-   "movedTo": "散"
+   "movedTo": null
+  },
+  "HSK3L-346": {
+   "hanzi": "不好意思",
+   "movedTo": "不好意思"
+  },
+  "HSK3L-349": {
+   "hanzi": "飞",
+   "movedTo": "飞"
+  },
+  "HSK3L-354": {
+   "hanzi": "饭馆",
+   "movedTo": "饭馆"
+  },
+  "HSK3L-358": {
+   "hanzi": "起",
+   "movedTo": "起"
   },
   "HSK3L-359": {
    "hanzi": "小张",
    "movedTo": null
   },
+  "HSK3L-361": {
+   "hanzi": "过来",
+   "movedTo": "过来"
+  },
   "HSK3L-365": {
    "hanzi": "识",
    "movedTo": null
+  },
+  "HSK3L-370": {
+   "hanzi": "大学生",
+   "movedTo": "大学生"
+  },
+  "HSK3L-372": {
+   "hanzi": "笔记",
+   "movedTo": "笔记"
   },
   "HSK3L-375": {
    "hanzi": "爹",
@@ -104,11 +3317,19 @@
   },
   "HSK3L-377": {
    "hanzi": "圆",
-   "movedTo": "圆"
+   "movedTo": null
   },
   "HSK3L-378": {
    "hanzi": "占",
    "movedTo": null
+  },
+  "HSK3L-379": {
+   "hanzi": "东北",
+   "movedTo": "东北"
+  },
+  "HSK3L-387": {
+   "hanzi": "楼梯",
+   "movedTo": "楼梯"
   },
   "HSK3L-388": {
    "hanzi": "原",
@@ -118,9 +3339,65 @@
    "hanzi": "院",
    "movedTo": null
   },
+  "HSK3L-390": {
+   "hanzi": "篮球",
+   "movedTo": "篮球"
+  },
+  "HSK3L-391": {
+   "hanzi": "运动员",
+   "movedTo": "运动员"
+  },
+  "HSK3L-392": {
+   "hanzi": "假",
+   "movedTo": "假"
+  },
   "HSK3L-395": {
    "hanzi": "为您服务",
    "movedTo": "服务"
+  },
+  "HSK3L-406": {
+   "hanzi": "足球",
+   "movedTo": "足球"
+  },
+  "HSK3L-407": {
+   "hanzi": "斤",
+   "movedTo": "斤"
+  },
+  "HSK3L-409": {
+   "hanzi": "进来",
+   "movedTo": "进来"
+  },
+  "HSK3L-410": {
+   "hanzi": "服务",
+   "movedTo": "服务"
+  },
+  "HSK3L-412": {
+   "hanzi": "选",
+   "movedTo": "选"
+  },
+  "HSK3R-002": {
+   "hanzi": "最好",
+   "movedTo": "最好"
+  },
+  "HSK3R-003": {
+   "hanzi": "面条儿",
+   "movedTo": "面条儿"
+  },
+  "HSK3R-005": {
+   "hanzi": "搬家",
+   "movedTo": "搬家"
+  },
+  "HSK3R-007": {
+   "hanzi": "小孩儿",
+   "movedTo": "小孩儿"
+  },
+  "HSK3R-012": {
+   "hanzi": "雨",
+   "movedTo": "雨"
+  },
+  "HSK3R-015": {
+   "hanzi": "有些",
+   "movedTo": "有些"
   },
   "HSK3R-016": {
    "hanzi": "儿",
@@ -130,13 +3407,49 @@
    "hanzi": "喝杯",
    "movedTo": "喝"
   },
+  "HSK3R-020": {
+   "hanzi": "女人",
+   "movedTo": "女人"
+  },
+  "HSK3R-023": {
+   "hanzi": "请问",
+   "movedTo": "请问"
+  },
+  "HSK3R-024": {
+   "hanzi": "表",
+   "movedTo": "表"
+  },
+  "HSK3R-027": {
+   "hanzi": "鲜花",
+   "movedTo": "鲜花"
+  },
+  "HSK3R-029": {
+   "hanzi": "这些",
+   "movedTo": "这些"
+  },
+  "HSK3R-030": {
+   "hanzi": "风",
+   "movedTo": "风"
+  },
   "HSK3R-031": {
    "hanzi": "刮得",
    "movedTo": "刮"
   },
+  "HSK3R-033": {
+   "hanzi": "一下",
+   "movedTo": "一下"
+  },
   "HSK3R-035": {
    "hanzi": "一件",
    "movedTo": "件"
+  },
+  "HSK3R-036": {
+   "hanzi": "一点儿",
+   "movedTo": "一点儿"
+  },
+  "HSK3R-038": {
+   "hanzi": "下面",
+   "movedTo": "下面"
   },
   "HSK3R-041": {
    "hanzi": "又坏了",
@@ -146,21 +3459,85 @@
    "hanzi": "很多",
    "movedTo": "多"
   },
+  "HSK3R-046": {
+   "hanzi": "这里",
+   "movedTo": "这里"
+  },
+  "HSK3R-047": {
+   "hanzi": "上面",
+   "movedTo": "上面"
+  },
+  "HSK3R-049": {
+   "hanzi": "开车",
+   "movedTo": "开车"
+  },
+  "HSK3R-055": {
+   "hanzi": "门口",
+   "movedTo": "门口"
+  },
+  "HSK3R-058": {
+   "hanzi": "考",
+   "movedTo": "考"
+  },
+  "HSK3R-059": {
+   "hanzi": "就是",
+   "movedTo": "就是"
+  },
   "HSK3R-060": {
    "hanzi": "王小姐",
    "movedTo": null
+  },
+  "HSK3R-064": {
+   "hanzi": "小时候",
+   "movedTo": "小时候"
   },
   "HSK3R-066": {
    "hanzi": "王经理",
    "movedTo": null
   },
+  "HSK3R-067": {
+   "hanzi": "好好",
+   "movedTo": "好好"
+  },
+  "HSK3R-069": {
+   "hanzi": "从小",
+   "movedTo": "从小"
+  },
+  "HSK3R-072": {
+   "hanzi": "有关",
+   "movedTo": "有关"
+  },
+  "HSK3R-076": {
+   "hanzi": "球",
+   "movedTo": "球"
+  },
   "HSK3R-079": {
    "hanzi": "一家",
    "movedTo": null
   },
+  "HSK3R-084": {
+   "hanzi": "做饭",
+   "movedTo": "做饭"
+  },
+  "HSK3R-089": {
+   "hanzi": "今年",
+   "movedTo": "今年"
+  },
+  "HSK3R-094": {
+   "hanzi": "回来",
+   "movedTo": "回来"
+  },
+  "HSK3R-097": {
+   "hanzi": "哪些",
+   "movedTo": "哪些"
+  },
   "HSK3R-099": {
    "hanzi": "足球比赛",
    "movedTo": null
+  },
+  "HSK3R-100": {
+   "hanzi": "跑",
+   "movedTo": "跑"
   },
   "HSK3R-104": {
    "hanzi": "多年",
@@ -169,6 +3546,14 @@
   "HSK3R-105": {
    "hanzi": "比较忙",
    "movedTo": "忙"
+  },
+  "HSK3R-107": {
+   "hanzi": "哪个",
+   "movedTo": "哪个"
+  },
+  "HSK3R-110": {
+   "hanzi": "门票",
+   "movedTo": "门票"
   },
   "HSK3R-112": {
    "hanzi": "一斤",
@@ -186,6 +3571,18 @@
    "hanzi": "白小姐",
    "movedTo": null
   },
+  "HSK3R-127": {
+   "hanzi": "大熊猫",
+   "movedTo": "大熊猫"
+  },
+  "HSK3R-129": {
+   "hanzi": "鲜",
+   "movedTo": "鲜"
+  },
+  "HSK3R-131": {
+   "hanzi": "汉字",
+   "movedTo": "汉字"
+  },
   "HSK3R-132": {
    "hanzi": "数学考试",
    "movedTo": null
@@ -193,6 +3590,10 @@
   "HSK3R-138": {
    "hanzi": "我会",
    "movedTo": "会"
+  },
+  "HSK3R-139": {
+   "hanzi": "不用",
+   "movedTo": "不用"
   },
   "HSK3R-140": {
    "hanzi": "这块",
@@ -210,6 +3611,26 @@
    "hanzi": "买点儿",
    "movedTo": "买"
   },
+  "HSK3R-148": {
+   "hanzi": "事",
+   "movedTo": "事"
+  },
+  "HSK3R-149": {
+   "hanzi": "睡",
+   "movedTo": "睡"
+  },
+  "HSK3R-150": {
+   "hanzi": "新年",
+   "movedTo": "新年"
+  },
+  "HSK3R-151": {
+   "hanzi": "晚会",
+   "movedTo": "晚会"
+  },
+  "HSK3R-154": {
+   "hanzi": "秋天",
+   "movedTo": "秋天"
+  },
   "HSK3R-157": {
    "hanzi": "三四年",
    "movedTo": null
@@ -218,9 +3639,37 @@
    "hanzi": "老马",
    "movedTo": null
   },
+  "HSK3R-161": {
+   "hanzi": "电影院",
+   "movedTo": "电影院"
+  },
+  "HSK3R-162": {
+   "hanzi": "见",
+   "movedTo": "见"
+  },
   "HSK3R-164": {
    "hanzi": "刘阿姨",
    "movedTo": null
+  },
+  "HSK3R-165": {
+   "hanzi": "怎么办",
+   "movedTo": "怎么办"
+  },
+  "HSK3R-167": {
+   "hanzi": "出来",
+   "movedTo": "出来"
+  },
+  "HSK3R-168": {
+   "hanzi": "客气",
+   "movedTo": "客气"
+  },
+  "HSK3R-171": {
+   "hanzi": "白色",
+   "movedTo": "白色"
+  },
+  "HSK3R-174": {
+   "hanzi": "动物园",
+   "movedTo": "动物园"
   },
   "HSK3R-175": {
    "hanzi": "是因为",
@@ -234,9 +3683,29 @@
    "hanzi": "太小",
    "movedTo": "小"
   },
+  "HSK3R-180": {
+   "hanzi": "病",
+   "movedTo": "病"
+  },
+  "HSK3R-186": {
+   "hanzi": "火车",
+   "movedTo": "火车"
+  },
   "HSK3R-191": {
    "hanzi": "小马",
    "movedTo": null
+  },
+  "HSK3R-198": {
+   "hanzi": "北",
+   "movedTo": "北"
+  },
+  "HSK3R-201": {
+   "hanzi": "只有",
+   "movedTo": "只有"
+  },
+  "HSK3R-206": {
+   "hanzi": "忘",
+   "movedTo": "忘"
   },
   "HSK3R-207": {
    "hanzi": "新手机",
@@ -245,6 +3714,10 @@
   "HSK3R-210": {
    "hanzi": "一个班",
    "movedTo": "班"
+  },
+  "HSK3R-211": {
+   "hanzi": "这边",
+   "movedTo": "这边"
   },
   "HSK3R-213": {
    "hanzi": "红颜色",
@@ -256,7 +3729,19 @@
   },
   "HSK3R-215": {
    "hanzi": "个人",
-   "movedTo": null
+   "movedTo": "个人"
+  },
+  "HSK3R-217": {
+   "hanzi": "回去",
+   "movedTo": "回去"
+  },
+  "HSK3R-221": {
+   "hanzi": "下课",
+   "movedTo": "下课"
+  },
+  "HSK3R-224": {
+   "hanzi": "大学",
+   "movedTo": "大学"
   },
   "HSK3R-227": {
    "hanzi": "世界地图",
@@ -266,6 +3751,14 @@
    "hanzi": "来得",
    "movedTo": "来"
   },
+  "HSK3R-229": {
+   "hanzi": "早",
+   "movedTo": "早"
+  },
+  "HSK3R-232": {
+   "hanzi": "小学",
+   "movedTo": "小学"
+  },
   "HSK3R-237": {
    "hanzi": "腿疼",
    "movedTo": null
@@ -273,6 +3766,10 @@
   "HSK3R-241": {
    "hanzi": "多分钟",
    "movedTo": null
+  },
+  "HSK3R-242": {
+   "hanzi": "冬天",
+   "movedTo": "冬天"
   },
   "HSK3R-245": {
    "hanzi": "带我去",
@@ -290,6 +3787,10 @@
    "hanzi": "很矮",
    "movedTo": "矮"
   },
+  "HSK3R-253": {
+   "hanzi": "行李",
+   "movedTo": "行李"
+  },
   "HSK3R-257": {
    "hanzi": "那件事",
    "movedTo": "事"
@@ -298,17 +3799,69 @@
    "hanzi": "就让",
    "movedTo": "让"
   },
+  "HSK3R-261": {
+   "hanzi": "刮",
+   "movedTo": "刮"
+  },
+  "HSK3R-265": {
+   "hanzi": "饮料",
+   "movedTo": "饮料"
+  },
+  "HSK3R-266": {
+   "hanzi": "最后",
+   "movedTo": "最后"
+  },
   "HSK3R-270": {
    "hanzi": "电视节目",
    "movedTo": null
+  },
+  "HSK3R-271": {
+   "hanzi": "小朋友",
+   "movedTo": "小朋友"
+  },
+  "HSK3R-272": {
+   "hanzi": "听说",
+   "movedTo": "听说"
+  },
+  "HSK3R-274": {
+   "hanzi": "跳",
+   "movedTo": "跳"
+  },
+  "HSK3R-275": {
+   "hanzi": "起来",
+   "movedTo": "起来"
+  },
+  "HSK3R-276": {
+   "hanzi": "起飞",
+   "movedTo": "起飞"
+  },
+  "HSK3R-279": {
+   "hanzi": "练",
+   "movedTo": "练"
+  },
+  "HSK3R-280": {
+   "hanzi": "那边",
+   "movedTo": "那边"
+  },
+  "HSK3R-281": {
+   "hanzi": "面试",
+   "movedTo": "面试"
   },
   "HSK3R-284": {
    "hanzi": "铅笔画",
    "movedTo": null
   },
+  "HSK3R-285": {
+   "hanzi": "出门",
+   "movedTo": "出门"
+  },
   "HSK3R-287": {
    "hanzi": "每天晚上",
    "movedTo": null
+  },
+  "HSK3R-289": {
+   "hanzi": "体育馆",
+   "movedTo": "体育馆"
   },
   "HSK3R-292": {
    "hanzi": "一张",
@@ -318,6 +3871,30 @@
    "hanzi": "李经理",
    "movedTo": null
   },
+  "HSK3R-294": {
+   "hanzi": "信用卡",
+   "movedTo": "信用卡"
+  },
+  "HSK3R-296": {
+   "hanzi": "网上",
+   "movedTo": "网上"
+  },
+  "HSK3R-297": {
+   "hanzi": "别的",
+   "movedTo": "别的"
+  },
+  "HSK3R-300": {
+   "hanzi": "相机",
+   "movedTo": "相机"
+  },
+  "HSK3R-301": {
+   "hanzi": "后来",
+   "movedTo": "后来"
+  },
+  "HSK3R-303": {
+   "hanzi": "只是",
+   "movedTo": "只是"
+  },
   "HSK3R-304": {
    "hanzi": "一个碗",
    "movedTo": "碗"
@@ -326,9 +3903,3737 @@
    "hanzi": "她家",
    "movedTo": "家"
   },
+  "HSK3R-307": {
+   "hanzi": "试",
+   "movedTo": "试"
+  },
   "HSK3R-309": {
    "hanzi": "李先生",
    "movedTo": null
+  },
+  "HSK3R-311": {
+   "hanzi": "中文",
+   "movedTo": "中文"
+  },
+  "HSK3R-312": {
+   "hanzi": "车站",
+   "movedTo": "车站"
+  },
+  "HSK4-001": {
+   "hanzi": "啊",
+   "movedTo": "啊"
+  },
+  "HSK4-002": {
+   "hanzi": "矮小",
+   "movedTo": null
+  },
+  "HSK4-003": {
+   "hanzi": "爱国",
+   "movedTo": null
+  },
+  "HSK4-004": {
+   "hanzi": "爱护",
+   "movedTo": "爱护"
+  },
+  "HSK4-005": {
+   "hanzi": "安",
+   "movedTo": null
+  },
+  "HSK4-006": {
+   "hanzi": "安置",
+   "movedTo": null
+  },
+  "HSK4-007": {
+   "hanzi": "按时",
+   "movedTo": "按时"
+  },
+  "HSK4-008": {
+   "hanzi": "暗",
+   "movedTo": null
+  },
+  "HSK4-009": {
+   "hanzi": "暗示",
+   "movedTo": null
+  },
+  "HSK4-010": {
+   "hanzi": "巴士",
+   "movedTo": null
+  },
+  "HSK4-011": {
+   "hanzi": "百货",
+   "movedTo": null
+  },
+  "HSK4-012": {
+   "hanzi": "摆",
+   "movedTo": null
+  },
+  "HSK4-013": {
+   "hanzi": "摆动",
+   "movedTo": null
+  },
+  "HSK4-014": {
+   "hanzi": "摆脱",
+   "movedTo": null
+  },
+  "HSK4-015": {
+   "hanzi": "败",
+   "movedTo": null
+  },
+  "HSK4-016": {
+   "hanzi": "办事",
+   "movedTo": "办事"
+  },
+  "HSK4-017": {
+   "hanzi": "包裹",
+   "movedTo": null
+  },
+  "HSK4-018": {
+   "hanzi": "包含",
+   "movedTo": "包含"
+  },
+  "HSK4-019": {
+   "hanzi": "包括",
+   "movedTo": "包括"
+  },
+  "HSK4-020": {
+   "hanzi": "薄",
+   "movedTo": null
+  },
+  "HSK4-021": {
+   "hanzi": "宝",
+   "movedTo": null
+  },
+  "HSK4-022": {
+   "hanzi": "宝宝",
+   "movedTo": null
+  },
+  "HSK4-023": {
+   "hanzi": "宝贝",
+   "movedTo": null
+  },
+  "HSK4-024": {
+   "hanzi": "宝贵",
+   "movedTo": "宝贵"
+  },
+  "HSK4-025": {
+   "hanzi": "宝石",
+   "movedTo": null
+  },
+  "HSK4-026": {
+   "hanzi": "保密",
+   "movedTo": null
+  },
+  "HSK4-027": {
+   "hanzi": "保守",
+   "movedTo": null
+  },
+  "HSK4-028": {
+   "hanzi": "抱",
+   "movedTo": "抱"
+  },
+  "HSK4-029": {
+   "hanzi": "背景",
+   "movedTo": "背景"
+  },
+  "HSK4-030": {
+   "hanzi": "倍",
+   "movedTo": "倍"
+  },
+  "HSK4-031": {
+   "hanzi": "被迫",
+   "movedTo": null
+  },
+  "HSK4-032": {
+   "hanzi": "本科",
+   "movedTo": "本科"
+  },
+  "HSK4-033": {
+   "hanzi": "笨",
+   "movedTo": "笨"
+  },
+  "HSK4-034": {
+   "hanzi": "比分",
+   "movedTo": null
+  },
+  "HSK4-035": {
+   "hanzi": "毕业",
+   "movedTo": "毕业"
+  },
+  "HSK4-036": {
+   "hanzi": "毕业生",
+   "movedTo": "毕业生"
+  },
+  "HSK4-037": {
+   "hanzi": "避",
+   "movedTo": null
+  },
+  "HSK4-038": {
+   "hanzi": "避免",
+   "movedTo": "避免"
+  },
+  "HSK4-039": {
+   "hanzi": "编",
+   "movedTo": null
+  },
+  "HSK4-040": {
+   "hanzi": "辩论",
+   "movedTo": null
+  },
+  "HSK4-041": {
+   "hanzi": "标志",
+   "movedTo": "标志"
+  },
+  "HSK4-042": {
+   "hanzi": "表情",
+   "movedTo": "表情"
+  },
+  "HSK4-043": {
+   "hanzi": "表扬",
+   "movedTo": "表扬"
+  },
+  "HSK4-044": {
+   "hanzi": "冰",
+   "movedTo": "冰"
+  },
+  "HSK4-045": {
+   "hanzi": "冰雪",
+   "movedTo": null
+  },
+  "HSK4-046": {
+   "hanzi": "兵",
+   "movedTo": null
+  },
+  "HSK4-047": {
+   "hanzi": "并",
+   "movedTo": "并"
+  },
+  "HSK4-048": {
+   "hanzi": "不要紧",
+   "movedTo": null
+  },
+  "HSK4-049": {
+   "hanzi": "不在乎",
+   "movedTo": null
+  },
+  "HSK4-050": {
+   "hanzi": "不管",
+   "movedTo": "不管"
+  },
+  "HSK4-051": {
+   "hanzi": "不然",
+   "movedTo": null
+  },
+  "HSK4-052": {
+   "hanzi": "布置",
+   "movedTo": null
+  },
+  "HSK4-053": {
+   "hanzi": "步行",
+   "movedTo": null
+  },
+  "HSK4-054": {
+   "hanzi": "擦",
+   "movedTo": "擦"
+  },
+  "HSK4-055": {
+   "hanzi": "材料",
+   "movedTo": "材料"
+  },
+  "HSK4-056": {
+   "hanzi": "财产",
+   "movedTo": null
+  },
+  "HSK4-057": {
+   "hanzi": "财富",
+   "movedTo": null
+  },
+  "HSK4-058": {
+   "hanzi": "采访",
+   "movedTo": "采访"
+  },
+  "HSK4-059": {
+   "hanzi": "参考",
+   "movedTo": "参考"
+  },
+  "HSK4-060": {
+   "hanzi": "参与",
+   "movedTo": "参与"
+  },
+  "HSK4-061": {
+   "hanzi": "操场",
+   "movedTo": "操场"
+  },
+  "HSK4-062": {
+   "hanzi": "操作",
+   "movedTo": "操作"
+  },
+  "HSK4-063": {
+   "hanzi": "测",
+   "movedTo": null
+  },
+  "HSK4-064": {
+   "hanzi": "测量",
+   "movedTo": null
+  },
+  "HSK4-065": {
+   "hanzi": "测试",
+   "movedTo": "测试"
+  },
+  "HSK4-066": {
+   "hanzi": "曾",
+   "movedTo": null
+  },
+  "HSK4-067": {
+   "hanzi": "茶叶",
+   "movedTo": "茶叶"
+  },
+  "HSK4-068": {
+   "hanzi": "产品",
+   "movedTo": "产品"
+  },
+  "HSK4-069": {
+   "hanzi": "长途",
+   "movedTo": null
+  },
+  "HSK4-070": {
+   "hanzi": "常识",
+   "movedTo": "常识"
+  },
+  "HSK4-071": {
+   "hanzi": "唱片",
+   "movedTo": null
+  },
+  "HSK4-072": {
+   "hanzi": "抄",
+   "movedTo": null
+  },
+  "HSK4-073": {
+   "hanzi": "抄写",
+   "movedTo": null
+  },
+  "HSK4-074": {
+   "hanzi": "潮",
+   "movedTo": null
+  },
+  "HSK4-075": {
+   "hanzi": "潮流",
+   "movedTo": null
+  },
+  "HSK4-076": {
+   "hanzi": "潮湿",
+   "movedTo": null
+  },
+  "HSK4-077": {
+   "hanzi": "彻底",
+   "movedTo": "彻底"
+  },
+  "HSK4-078": {
+   "hanzi": "沉",
+   "movedTo": null
+  },
+  "HSK4-079": {
+   "hanzi": "沉默",
+   "movedTo": "沉默"
+  },
+  "HSK4-080": {
+   "hanzi": "沉重",
+   "movedTo": null
+  },
+  "HSK4-081": {
+   "hanzi": "称赞",
+   "movedTo": "称赞"
+  },
+  "HSK4-082": {
+   "hanzi": "成人",
+   "movedTo": null
+  },
+  "HSK4-083": {
+   "hanzi": "诚实",
+   "movedTo": "诚实"
+  },
+  "HSK4-084": {
+   "hanzi": "诚信",
+   "movedTo": null
+  },
+  "HSK4-085": {
+   "hanzi": "承担",
+   "movedTo": "承担"
+  },
+  "HSK4-086": {
+   "hanzi": "承认",
+   "movedTo": "承认"
+  },
+  "HSK4-087": {
+   "hanzi": "承受",
+   "movedTo": "承受"
+  },
+  "HSK4-088": {
+   "hanzi": "程序",
+   "movedTo": "程序"
+  },
+  "HSK4-089": {
+   "hanzi": "吃惊",
+   "movedTo": "吃惊"
+  },
+  "HSK4-090": {
+   "hanzi": "尺",
+   "movedTo": null
+  },
+  "HSK4-091": {
+   "hanzi": "尺寸",
+   "movedTo": null
+  },
+  "HSK4-092": {
+   "hanzi": "尺子",
+   "movedTo": null
+  },
+  "HSK4-093": {
+   "hanzi": "冲",
+   "movedTo": null
+  },
+  "HSK4-094": {
+   "hanzi": "充电",
+   "movedTo": null
+  },
+  "HSK4-095": {
+   "hanzi": "充分",
+   "movedTo": "充分"
+  },
+  "HSK4-096": {
+   "hanzi": "虫子",
+   "movedTo": null
+  },
+  "HSK4-097": {
+   "hanzi": "抽",
+   "movedTo": null
+  },
+  "HSK4-098": {
+   "hanzi": "抽奖",
+   "movedTo": null
+  },
+  "HSK4-099": {
+   "hanzi": "抽烟",
+   "movedTo": null
+  },
+  "HSK4-100": {
+   "hanzi": "出口",
+   "movedTo": "出口"
+  },
+  "HSK4-101": {
+   "hanzi": "出色",
+   "movedTo": "出色"
+  },
+  "HSK4-102": {
+   "hanzi": "出售",
+   "movedTo": "出售"
+  },
+  "HSK4-103": {
+   "hanzi": "出席",
+   "movedTo": "出席"
+  },
+  "HSK4-104": {
+   "hanzi": "处于",
+   "movedTo": "处于"
+  },
+  "HSK4-105": {
+   "hanzi": "处",
+   "movedTo": null
+  },
+  "HSK4-106": {
+   "hanzi": "穿上",
+   "movedTo": null
+  },
+  "HSK4-107": {
+   "hanzi": "传统",
+   "movedTo": "传统"
+  },
+  "HSK4-108": {
+   "hanzi": "窗户",
+   "movedTo": "窗户"
+  },
+  "HSK4-109": {
+   "hanzi": "窗台",
+   "movedTo": null
+  },
+  "HSK4-110": {
+   "hanzi": "窗子",
+   "movedTo": null
+  },
+  "HSK4-111": {
+   "hanzi": "春季",
+   "movedTo": null
+  },
+  "HSK4-112": {
+   "hanzi": "纯",
+   "movedTo": null
+  },
+  "HSK4-113": {
+   "hanzi": "纯净水",
+   "movedTo": null
+  },
+  "HSK4-114": {
+   "hanzi": "词汇",
+   "movedTo": "词汇"
+  },
+  "HSK4-115": {
+   "hanzi": "此",
+   "movedTo": "此"
+  },
+  "HSK4-116": {
+   "hanzi": "此外",
+   "movedTo": "此外"
+  },
+  "HSK4-117": {
+   "hanzi": "刺",
+   "movedTo": null
+  },
+  "HSK4-118": {
+   "hanzi": "刺激",
+   "movedTo": "刺激"
+  },
+  "HSK4-119": {
+   "hanzi": "从此",
+   "movedTo": "从此"
+  },
+  "HSK4-120": {
+   "hanzi": "粗",
+   "movedTo": "粗"
+  },
+  "HSK4-121": {
+   "hanzi": "粗心",
+   "movedTo": "粗心"
+  },
+  "HSK4-122": {
+   "hanzi": "促进",
+   "movedTo": "促进"
+  },
+  "HSK4-123": {
+   "hanzi": "促使",
+   "movedTo": "促使"
+  },
+  "HSK4-124": {
+   "hanzi": "促销",
+   "movedTo": null
+  },
+  "HSK4-125": {
+   "hanzi": "措施",
+   "movedTo": "措施"
+  },
+  "HSK4-126": {
+   "hanzi": "答案",
+   "movedTo": "答案"
+  },
+  "HSK4-127": {
+   "hanzi": "打败",
+   "movedTo": "打败"
+  },
+  "HSK4-128": {
+   "hanzi": "打雷",
+   "movedTo": null
+  },
+  "HSK4-129": {
+   "hanzi": "打折",
+   "movedTo": "打折"
+  },
+  "HSK4-130": {
+   "hanzi": "打针",
+   "movedTo": "打针"
+  },
+  "HSK4-131": {
+   "hanzi": "大巴",
+   "movedTo": "大巴"
+  },
+  "HSK4-132": {
+   "hanzi": "大多",
+   "movedTo": null
+  },
+  "HSK4-133": {
+   "hanzi": "大方",
+   "movedTo": null
+  },
+  "HSK4-134": {
+   "hanzi": "大哥",
+   "movedTo": null
+  },
+  "HSK4-135": {
+   "hanzi": "大规模",
+   "movedTo": null
+  },
+  "HSK4-136": {
+   "hanzi": "大会",
+   "movedTo": null
+  },
+  "HSK4-137": {
+   "hanzi": "大姐",
+   "movedTo": null
+  },
+  "HSK4-138": {
+   "hanzi": "大楼",
+   "movedTo": null
+  },
+  "HSK4-139": {
+   "hanzi": "大陆",
+   "movedTo": null
+  },
+  "HSK4-140": {
+   "hanzi": "大妈",
+   "movedTo": null
+  },
+  "HSK4-141": {
+   "hanzi": "大型",
+   "movedTo": null
+  },
+  "HSK4-142": {
+   "hanzi": "大爷",
+   "movedTo": null
+  },
+  "HSK4-143": {
+   "hanzi": "大众",
+   "movedTo": null
+  },
+  "HSK4-144": {
+   "hanzi": "代替",
+   "movedTo": "代替"
+  },
+  "HSK4-145": {
+   "hanzi": "待遇",
+   "movedTo": "待遇"
+  },
+  "HSK4-146": {
+   "hanzi": "袋",
+   "movedTo": null
+  },
+  "HSK4-147": {
+   "hanzi": "戴",
+   "movedTo": "戴"
+  },
+  "HSK4-148": {
+   "hanzi": "担保",
+   "movedTo": null
+  },
+  "HSK4-149": {
+   "hanzi": "担任",
+   "movedTo": "担任"
+  },
+  "HSK4-150": {
+   "hanzi": "单",
+   "movedTo": null
+  },
+  "HSK4-151": {
+   "hanzi": "单纯",
+   "movedTo": null
+  },
+  "HSK4-152": {
+   "hanzi": "单调",
+   "movedTo": null
+  },
+  "HSK4-153": {
+   "hanzi": "单独",
+   "movedTo": "单独"
+  },
+  "HSK4-154": {
+   "hanzi": "淡",
+   "movedTo": null
+  },
+  "HSK4-155": {
+   "hanzi": "导游",
+   "movedTo": "导游"
+  },
+  "HSK4-156": {
+   "hanzi": "导致",
+   "movedTo": "导致"
+  },
+  "HSK4-157": {
+   "hanzi": "倒闭",
+   "movedTo": null
+  },
+  "HSK4-158": {
+   "hanzi": "倒车",
+   "movedTo": null
+  },
+  "HSK4-159": {
+   "hanzi": "倒车",
+   "movedTo": null
+  },
+  "HSK4-160": {
+   "hanzi": "得意",
+   "movedTo": "得意"
+  },
+  "HSK4-161": {
+   "hanzi": "得",
+   "movedTo": "得"
+  },
+  "HSK4-162": {
+   "hanzi": "灯光",
+   "movedTo": null
+  },
+  "HSK4-163": {
+   "hanzi": "登",
+   "movedTo": null
+  },
+  "HSK4-164": {
+   "hanzi": "登记",
+   "movedTo": "登记"
+  },
+  "HSK4-165": {
+   "hanzi": "登录",
+   "movedTo": "登录"
+  },
+  "HSK4-166": {
+   "hanzi": "登山",
+   "movedTo": null
+  },
+  "HSK4-167": {
+   "hanzi": "的确",
+   "movedTo": "的确"
+  },
+  "HSK4-168": {
+   "hanzi": "敌人",
+   "movedTo": null
+  },
+  "HSK4-169": {
+   "hanzi": "底",
+   "movedTo": "底"
+  },
+  "HSK4-170": {
+   "hanzi": "地方",
+   "movedTo": "地方"
+  },
+  "HSK4-171": {
+   "hanzi": "地面",
+   "movedTo": "地面"
+  },
+  "HSK4-172": {
+   "hanzi": "地位",
+   "movedTo": "地位"
+  },
+  "HSK4-173": {
+   "hanzi": "地下",
+   "movedTo": "地下"
+  },
+  "HSK4-174": {
+   "hanzi": "地址",
+   "movedTo": "地址"
+  },
+  "HSK4-175": {
+   "hanzi": "典型",
+   "movedTo": null
+  },
+  "HSK4-176": {
+   "hanzi": "点名",
+   "movedTo": "点名"
+  },
+  "HSK4-177": {
+   "hanzi": "电灯",
+   "movedTo": null
+  },
+  "HSK4-178": {
+   "hanzi": "电动车",
+   "movedTo": "电动车"
+  },
+  "HSK4-179": {
+   "hanzi": "电源",
+   "movedTo": null
+  },
+  "HSK4-180": {
+   "hanzi": "顶",
+   "movedTo": null
+  },
+  "HSK4-181": {
+   "hanzi": "定",
+   "movedTo": "定"
+  },
+  "HSK4-182": {
+   "hanzi": "冬季",
+   "movedTo": null
+  },
+  "HSK4-183": {
+   "hanzi": "动画片",
+   "movedTo": null
+  },
+  "HSK4-184": {
+   "hanzi": "动摇",
+   "movedTo": null
+  },
+  "HSK4-185": {
+   "hanzi": "豆腐",
+   "movedTo": null
+  },
+  "HSK4-186": {
+   "hanzi": "独立",
+   "movedTo": "独立"
+  },
+  "HSK4-187": {
+   "hanzi": "独特",
+   "movedTo": "独特"
+  },
+  "HSK4-188": {
+   "hanzi": "独自",
+   "movedTo": "独自"
+  },
+  "HSK4-189": {
+   "hanzi": "堵",
+   "movedTo": null
+  },
+  "HSK4-190": {
+   "hanzi": "堵车",
+   "movedTo": "堵车"
+  },
+  "HSK4-191": {
+   "hanzi": "度过",
+   "movedTo": null
+  },
+  "HSK4-192": {
+   "hanzi": "对比",
+   "movedTo": "对比"
+  },
+  "HSK4-193": {
+   "hanzi": "对付",
+   "movedTo": null
+  },
+  "HSK4-194": {
+   "hanzi": "对于",
+   "movedTo": "对于"
+  },
+  "HSK4-195": {
+   "hanzi": "多次",
+   "movedTo": null
+  },
+  "HSK4-196": {
+   "hanzi": "多样",
+   "movedTo": "多样"
+  },
+  "HSK4-197": {
+   "hanzi": "多种",
+   "movedTo": null
+  },
+  "HSK4-198": {
+   "hanzi": "恶心",
+   "movedTo": null
+  },
+  "HSK4-199": {
+   "hanzi": "儿童",
+   "movedTo": "儿童"
+  },
+  "HSK4-200": {
+   "hanzi": "而",
+   "movedTo": "而"
+  },
+  "HSK4-201": {
+   "hanzi": "而是",
+   "movedTo": null
+  },
+  "HSK4-202": {
+   "hanzi": "二手",
+   "movedTo": "二手"
+  },
+  "HSK4-203": {
+   "hanzi": "发挥",
+   "movedTo": "发挥"
+  },
+  "HSK4-204": {
+   "hanzi": "发票",
+   "movedTo": null
+  },
+  "HSK4-205": {
+   "hanzi": "法",
+   "movedTo": "法"
+  },
+  "HSK4-206": {
+   "hanzi": "法官",
+   "movedTo": null
+  },
+  "HSK4-207": {
+   "hanzi": "法律",
+   "movedTo": "法律"
+  },
+  "HSK4-208": {
+   "hanzi": "法院",
+   "movedTo": "法院"
+  },
+  "HSK4-209": {
+   "hanzi": "翻",
+   "movedTo": null
+  },
+  "HSK4-210": {
+   "hanzi": "翻译",
+   "movedTo": "翻译"
+  },
+  "HSK4-211": {
+   "hanzi": "烦",
+   "movedTo": "烦"
+  },
+  "HSK4-212": {
+   "hanzi": "反",
+   "movedTo": null
+  },
+  "HSK4-213": {
+   "hanzi": "反而",
+   "movedTo": "反而"
+  },
+  "HSK4-214": {
+   "hanzi": "反映",
+   "movedTo": "反映"
+  },
+  "HSK4-215": {
+   "hanzi": "方",
+   "movedTo": null
+  },
+  "HSK4-216": {
+   "hanzi": "方案",
+   "movedTo": "方案"
+  },
+  "HSK4-217": {
+   "hanzi": "方针",
+   "movedTo": null
+  },
+  "HSK4-218": {
+   "hanzi": "放松",
+   "movedTo": "放松"
+  },
+  "HSK4-219": {
+   "hanzi": "非",
+   "movedTo": null
+  },
+  "HSK4-220": {
+   "hanzi": "肥",
+   "movedTo": null
+  },
+  "HSK4-221": {
+   "hanzi": "分布",
+   "movedTo": "分布"
+  },
+  "HSK4-222": {
+   "hanzi": "分散",
+   "movedTo": null
+  },
+  "HSK4-223": {
+   "hanzi": "分手",
+   "movedTo": null
+  },
+  "HSK4-224": {
+   "hanzi": "分为",
+   "movedTo": "分为"
+  },
+  "HSK4-225": {
+   "hanzi": "…分之…",
+   "movedTo": null
+  },
+  "HSK4-226": {
+   "hanzi": "纷纷",
+   "movedTo": null
+  },
+  "HSK4-227": {
+   "hanzi": "奋斗",
+   "movedTo": "奋斗"
+  },
+  "HSK4-228": {
+   "hanzi": "风格",
+   "movedTo": "风格"
+  },
+  "HSK4-229": {
+   "hanzi": "风景",
+   "movedTo": "风景"
+  },
+  "HSK4-230": {
+   "hanzi": "风俗",
+   "movedTo": null
+  },
+  "HSK4-231": {
+   "hanzi": "封闭",
+   "movedTo": null
+  },
+  "HSK4-232": {
+   "hanzi": "否则",
+   "movedTo": "否则"
+  },
+  "HSK4-233": {
+   "hanzi": "夫妇",
+   "movedTo": null
+  },
+  "HSK4-234": {
+   "hanzi": "夫妻",
+   "movedTo": "夫妻"
+  },
+  "HSK4-235": {
+   "hanzi": "夫人",
+   "movedTo": null
+  },
+  "HSK4-236": {
+   "hanzi": "符号",
+   "movedTo": null
+  },
+  "HSK4-237": {
+   "hanzi": "符合",
+   "movedTo": "符合"
+  },
+  "HSK4-238": {
+   "hanzi": "付出",
+   "movedTo": "付出"
+  },
+  "HSK4-239": {
+   "hanzi": "负担",
+   "movedTo": "负担"
+  },
+  "HSK4-240": {
+   "hanzi": "复制",
+   "movedTo": "复制"
+  },
+  "HSK4-241": {
+   "hanzi": "改善",
+   "movedTo": "改善"
+  },
+  "HSK4-242": {
+   "hanzi": "改正",
+   "movedTo": "改正"
+  },
+  "HSK4-243": {
+   "hanzi": "盖",
+   "movedTo": null
+  },
+  "HSK4-244": {
+   "hanzi": "概括",
+   "movedTo": "概括"
+  },
+  "HSK4-245": {
+   "hanzi": "感兴趣",
+   "movedTo": "感兴趣"
+  },
+  "HSK4-246": {
+   "hanzi": "高潮",
+   "movedTo": null
+  },
+  "HSK4-247": {
+   "hanzi": "高价",
+   "movedTo": "高价"
+  },
+  "HSK4-248": {
+   "hanzi": "高尚",
+   "movedTo": null
+  },
+  "HSK4-249": {
+   "hanzi": "高铁",
+   "movedTo": "高铁"
+  },
+  "HSK4-250": {
+   "hanzi": "格外",
+   "movedTo": "格外"
+  },
+  "HSK4-251": {
+   "hanzi": "隔",
+   "movedTo": null
+  },
+  "HSK4-252": {
+   "hanzi": "隔开",
+   "movedTo": null
+  },
+  "HSK4-253": {
+   "hanzi": "个别",
+   "movedTo": "个别"
+  },
+  "HSK4-254": {
+   "hanzi": "个体",
+   "movedTo": null
+  },
+  "HSK4-255": {
+   "hanzi": "各个",
+   "movedTo": "各个"
+  },
+  "HSK4-256": {
+   "hanzi": "根",
+   "movedTo": null
+  },
+  "HSK4-257": {
+   "hanzi": "工程",
+   "movedTo": "工程"
+  },
+  "HSK4-258": {
+   "hanzi": "公元",
+   "movedTo": null
+  },
+  "HSK4-259": {
+   "hanzi": "供应",
+   "movedTo": null
+  },
+  "HSK4-260": {
+   "hanzi": "共",
+   "movedTo": "共"
+  },
+  "HSK4-261": {
+   "hanzi": "构成",
+   "movedTo": "构成"
+  },
+  "HSK4-262": {
+   "hanzi": "构造",
+   "movedTo": null
+  },
+  "HSK4-263": {
+   "hanzi": "购买",
+   "movedTo": "购买"
+  },
+  "HSK4-264": {
+   "hanzi": "购物",
+   "movedTo": "购物"
+  },
+  "HSK4-265": {
+   "hanzi": "骨头",
+   "movedTo": null
+  },
+  "HSK4-266": {
+   "hanzi": "固定",
+   "movedTo": "固定"
+  },
+  "HSK4-267": {
+   "hanzi": "瓜",
+   "movedTo": null
+  },
+  "HSK4-268": {
+   "hanzi": "怪",
+   "movedTo": null
+  },
+  "HSK4-269": {
+   "hanzi": "关闭",
+   "movedTo": null
+  },
+  "HSK4-270": {
+   "hanzi": "官",
+   "movedTo": null
+  },
+  "HSK4-271": {
+   "hanzi": "官方",
+   "movedTo": null
+  },
+  "HSK4-272": {
+   "hanzi": "光临",
+   "movedTo": null
+  },
+  "HSK4-273": {
+   "hanzi": "光盘",
+   "movedTo": null
+  },
+  "HSK4-274": {
+   "hanzi": "逛",
+   "movedTo": "逛"
+  },
+  "HSK4-275": {
+   "hanzi": "归",
+   "movedTo": null
+  },
+  "HSK4-276": {
+   "hanzi": "规律",
+   "movedTo": "规律"
+  },
+  "HSK4-277": {
+   "hanzi": "规模",
+   "movedTo": "规模"
+  },
+  "HSK4-278": {
+   "hanzi": "规则",
+   "movedTo": "规则"
+  },
+  "HSK4-279": {
+   "hanzi": "果实",
+   "movedTo": null
+  },
+  "HSK4-280": {
+   "hanzi": "过分",
+   "movedTo": null
+  },
+  "HSK4-281": {
+   "hanzi": "海水",
+   "movedTo": null
+  },
+  "HSK4-282": {
+   "hanzi": "海鲜",
+   "movedTo": null
+  },
+  "HSK4-283": {
+   "hanzi": "含",
+   "movedTo": null
+  },
+  "HSK4-284": {
+   "hanzi": "含量",
+   "movedTo": "含量"
+  },
+  "HSK4-285": {
+   "hanzi": "含义",
+   "movedTo": null
+  },
+  "HSK4-286": {
+   "hanzi": "含有",
+   "movedTo": "含有"
+  },
+  "HSK4-287": {
+   "hanzi": "寒假",
+   "movedTo": "寒假"
+  },
+  "HSK4-288": {
+   "hanzi": "寒冷",
+   "movedTo": "寒冷"
+  },
+  "HSK4-289": {
+   "hanzi": "行业",
+   "movedTo": "行业"
+  },
+  "HSK4-290": {
+   "hanzi": "航班",
+   "movedTo": "航班"
+  },
+  "HSK4-291": {
+   "hanzi": "航空",
+   "movedTo": null
+  },
+  "HSK4-292": {
+   "hanzi": "毫米",
+   "movedTo": null
+  },
+  "HSK4-293": {
+   "hanzi": "毫升",
+   "movedTo": null
+  },
+  "HSK4-294": {
+   "hanzi": "好友",
+   "movedTo": null
+  },
+  "HSK4-295": {
+   "hanzi": "号码",
+   "movedTo": "号码"
+  },
+  "HSK4-296": {
+   "hanzi": "好",
+   "movedTo": "好"
+  },
+  "HSK4-297": {
+   "hanzi": "合同",
+   "movedTo": "合同"
+  },
+  "HSK4-298": {
+   "hanzi": "黑暗",
+   "movedTo": null
+  },
+  "HSK4-299": {
+   "hanzi": "红包",
+   "movedTo": "红包"
+  },
+  "HSK4-300": {
+   "hanzi": "后头",
+   "movedTo": null
+  },
+  "HSK4-301": {
+   "hanzi": "厚",
+   "movedTo": "厚"
+  },
+  "HSK4-302": {
+   "hanzi": "呼吸",
+   "movedTo": "呼吸"
+  },
+  "HSK4-303": {
+   "hanzi": "忽视",
+   "movedTo": "忽视"
+  },
+  "HSK4-304": {
+   "hanzi": "户",
+   "movedTo": null
+  },
+  "HSK4-305": {
+   "hanzi": "划",
+   "movedTo": null
+  },
+  "HSK4-306": {
+   "hanzi": "划",
+   "movedTo": null
+  },
+  "HSK4-307": {
+   "hanzi": "怀念",
+   "movedTo": null
+  },
+  "HSK4-308": {
+   "hanzi": "怀疑",
+   "movedTo": "怀疑"
+  },
+  "HSK4-309": {
+   "hanzi": "缓解",
+   "movedTo": "缓解"
+  },
+  "HSK4-310": {
+   "hanzi": "黄瓜",
+   "movedTo": null
+  },
+  "HSK4-311": {
+   "hanzi": "黄金",
+   "movedTo": null
+  },
+  "HSK4-312": {
+   "hanzi": "回复",
+   "movedTo": "回复"
+  },
+  "HSK4-313": {
+   "hanzi": "汇",
+   "movedTo": null
+  },
+  "HSK4-314": {
+   "hanzi": "汇报",
+   "movedTo": null
+  },
+  "HSK4-315": {
+   "hanzi": "汇率",
+   "movedTo": "汇率"
+  },
+  "HSK4-316": {
+   "hanzi": "婚礼",
+   "movedTo": "婚礼"
+  },
+  "HSK4-317": {
+   "hanzi": "火",
+   "movedTo": "火"
+  },
+  "HSK4-318": {
+   "hanzi": "伙",
+   "movedTo": null
+  },
+  "HSK4-319": {
+   "hanzi": "伙伴",
+   "movedTo": "伙伴"
+  },
+  "HSK4-320": {
+   "hanzi": "或许",
+   "movedTo": "或许"
+  },
+  "HSK4-321": {
+   "hanzi": "货",
+   "movedTo": "货"
+  },
+  "HSK4-322": {
+   "hanzi": "获",
+   "movedTo": null
+  },
+  "HSK4-323": {
+   "hanzi": "获得",
+   "movedTo": "获得"
+  },
+  "HSK4-324": {
+   "hanzi": "获奖",
+   "movedTo": "获奖"
+  },
+  "HSK4-325": {
+   "hanzi": "获取",
+   "movedTo": "获取"
+  },
+  "HSK4-326": {
+   "hanzi": "机构",
+   "movedTo": "机构"
+  },
+  "HSK4-327": {
+   "hanzi": "机遇",
+   "movedTo": null
+  },
+  "HSK4-328": {
+   "hanzi": "积累",
+   "movedTo": "积累"
+  },
+  "HSK4-329": {
+   "hanzi": "激动",
+   "movedTo": "激动"
+  },
+  "HSK4-330": {
+   "hanzi": "激烈",
+   "movedTo": "激烈"
+  },
+  "HSK4-331": {
+   "hanzi": "及格",
+   "movedTo": null
+  },
+  "HSK4-332": {
+   "hanzi": "极其",
+   "movedTo": "极其"
+  },
+  "HSK4-333": {
+   "hanzi": "即将",
+   "movedTo": "即将"
+  },
+  "HSK4-334": {
+   "hanzi": "急忙",
+   "movedTo": null
+  },
+  "HSK4-335": {
+   "hanzi": "集合",
+   "movedTo": "集合"
+  },
+  "HSK4-336": {
+   "hanzi": "记载",
+   "movedTo": "记载"
+  },
+  "HSK4-337": {
+   "hanzi": "纪律",
+   "movedTo": null
+  },
+  "HSK4-338": {
+   "hanzi": "技巧",
+   "movedTo": null
+  },
+  "HSK4-339": {
+   "hanzi": "系",
+   "movedTo": null
+  },
+  "HSK4-340": {
+   "hanzi": "季",
+   "movedTo": "季"
+  },
+  "HSK4-341": {
+   "hanzi": "季度",
+   "movedTo": "季度"
+  },
+  "HSK4-342": {
+   "hanzi": "既",
+   "movedTo": "既"
+  },
+  "HSK4-343": {
+   "hanzi": "既然",
+   "movedTo": "既然"
+  },
+  "HSK4-344": {
+   "hanzi": "寄",
+   "movedTo": "寄"
+  },
+  "HSK4-345": {
+   "hanzi": "加入",
+   "movedTo": "加入"
+  },
+  "HSK4-346": {
+   "hanzi": "加油站",
+   "movedTo": "加油站"
+  },
+  "HSK4-347": {
+   "hanzi": "家务",
+   "movedTo": "家务"
+  },
+  "HSK4-348": {
+   "hanzi": "假如",
+   "movedTo": "假如"
+  },
+  "HSK4-349": {
+   "hanzi": "坚固",
+   "movedTo": null
+  },
+  "HSK4-350": {
+   "hanzi": "检测",
+   "movedTo": null
+  },
+  "HSK4-351": {
+   "hanzi": "减",
+   "movedTo": "减"
+  },
+  "HSK4-352": {
+   "hanzi": "减肥",
+   "movedTo": null
+  },
+  "HSK4-353": {
+   "hanzi": "减少",
+   "movedTo": "减少"
+  },
+  "HSK4-354": {
+   "hanzi": "简历",
+   "movedTo": "简历"
+  },
+  "HSK4-355": {
+   "hanzi": "健身",
+   "movedTo": "健身"
+  },
+  "HSK4-356": {
+   "hanzi": "渐渐",
+   "movedTo": "渐渐"
+  },
+  "HSK4-357": {
+   "hanzi": "江",
+   "movedTo": "江"
+  },
+  "HSK4-358": {
+   "hanzi": "讲究",
+   "movedTo": "讲究"
+  },
+  "HSK4-359": {
+   "hanzi": "讲座",
+   "movedTo": "讲座"
+  },
+  "HSK4-360": {
+   "hanzi": "奖",
+   "movedTo": "奖"
+  },
+  "HSK4-361": {
+   "hanzi": "奖金",
+   "movedTo": "奖金"
+  },
+  "HSK4-362": {
+   "hanzi": "奖学金",
+   "movedTo": "奖学金"
+  },
+  "HSK4-363": {
+   "hanzi": "降",
+   "movedTo": "降"
+  },
+  "HSK4-364": {
+   "hanzi": "降低",
+   "movedTo": "降低"
+  },
+  "HSK4-365": {
+   "hanzi": "降价",
+   "movedTo": "降价"
+  },
+  "HSK4-366": {
+   "hanzi": "降落",
+   "movedTo": "降落"
+  },
+  "HSK4-367": {
+   "hanzi": "降温",
+   "movedTo": "降温"
+  },
+  "HSK4-368": {
+   "hanzi": "交换",
+   "movedTo": "交换"
+  },
+  "HSK4-369": {
+   "hanzi": "交际",
+   "movedTo": null
+  },
+  "HSK4-370": {
+   "hanzi": "教授",
+   "movedTo": "教授"
+  },
+  "HSK4-371": {
+   "hanzi": "教训",
+   "movedTo": null
+  },
+  "HSK4-372": {
+   "hanzi": "阶段",
+   "movedTo": "阶段"
+  },
+  "HSK4-373": {
+   "hanzi": "节省",
+   "movedTo": "节省"
+  },
+  "HSK4-374": {
+   "hanzi": "结",
+   "movedTo": null
+  },
+  "HSK4-375": {
+   "hanzi": "结构",
+   "movedTo": "结构"
+  },
+  "HSK4-376": {
+   "hanzi": "结论",
+   "movedTo": "结论"
+  },
+  "HSK4-377": {
+   "hanzi": "姐妹",
+   "movedTo": "姐妹"
+  },
+  "HSK4-378": {
+   "hanzi": "解释",
+   "movedTo": "解释"
+  },
+  "HSK4-379": {
+   "hanzi": "尽快",
+   "movedTo": "尽快"
+  },
+  "HSK4-380": {
+   "hanzi": "紧密",
+   "movedTo": "紧密"
+  },
+  "HSK4-381": {
+   "hanzi": "尽力",
+   "movedTo": "尽力"
+  },
+  "HSK4-382": {
+   "hanzi": "进口",
+   "movedTo": "进口"
+  },
+  "HSK4-383": {
+   "hanzi": "近代",
+   "movedTo": "近代"
+  },
+  "HSK4-384": {
+   "hanzi": "禁止",
+   "movedTo": "禁止"
+  },
+  "HSK4-385": {
+   "hanzi": "经典",
+   "movedTo": "经典"
+  },
+  "HSK4-386": {
+   "hanzi": "精力",
+   "movedTo": "精力"
+  },
+  "HSK4-387": {
+   "hanzi": "竟然",
+   "movedTo": "竟然"
+  },
+  "HSK4-388": {
+   "hanzi": "镜头",
+   "movedTo": null
+  },
+  "HSK4-389": {
+   "hanzi": "究竟",
+   "movedTo": "究竟"
+  },
+  "HSK4-390": {
+   "hanzi": "酒吧",
+   "movedTo": null
+  },
+  "HSK4-391": {
+   "hanzi": "居民",
+   "movedTo": "居民"
+  },
+  "HSK4-392": {
+   "hanzi": "居住",
+   "movedTo": "居住"
+  },
+  "HSK4-393": {
+   "hanzi": "局",
+   "movedTo": null
+  },
+  "HSK4-394": {
+   "hanzi": "巨大",
+   "movedTo": "巨大"
+  },
+  "HSK4-395": {
+   "hanzi": "具备",
+   "movedTo": "具备"
+  },
+  "HSK4-396": {
+   "hanzi": "距离",
+   "movedTo": "距离"
+  },
+  "HSK4-397": {
+   "hanzi": "聚",
+   "movedTo": "聚"
+  },
+  "HSK4-398": {
+   "hanzi": "聚会",
+   "movedTo": "聚会"
+  },
+  "HSK4-399": {
+   "hanzi": "卷",
+   "movedTo": null
+  },
+  "HSK4-400": {
+   "hanzi": "卷",
+   "movedTo": null
+  },
+  "HSK4-401": {
+   "hanzi": "角色",
+   "movedTo": null
+  },
+  "HSK4-402": {
+   "hanzi": "开花",
+   "movedTo": "开花"
+  },
+  "HSK4-403": {
+   "hanzi": "开水",
+   "movedTo": null
+  },
+  "HSK4-404": {
+   "hanzi": "看不起",
+   "movedTo": null
+  },
+  "HSK4-405": {
+   "hanzi": "看来",
+   "movedTo": "看来"
+  },
+  "HSK4-406": {
+   "hanzi": "看望",
+   "movedTo": null
+  },
+  "HSK4-407": {
+   "hanzi": "考察",
+   "movedTo": null
+  },
+  "HSK4-408": {
+   "hanzi": "考虑",
+   "movedTo": "考虑"
+  },
+  "HSK4-409": {
+   "hanzi": "棵",
+   "movedTo": "棵"
+  },
+  "HSK4-410": {
+   "hanzi": "可见",
+   "movedTo": null
+  },
+  "HSK4-411": {
+   "hanzi": "空间",
+   "movedTo": null
+  },
+  "HSK4-412": {
+   "hanzi": "空",
+   "movedTo": "空"
+  },
+  "HSK4-413": {
+   "hanzi": "口袋",
+   "movedTo": null
+  },
+  "HSK4-414": {
+   "hanzi": "口语",
+   "movedTo": "口语"
+  },
+  "HSK4-415": {
+   "hanzi": "苦",
+   "movedTo": "苦"
+  },
+  "HSK4-416": {
+   "hanzi": "会计",
+   "movedTo": null
+  },
+  "HSK4-417": {
+   "hanzi": "快递",
+   "movedTo": "快递"
+  },
+  "HSK4-418": {
+   "hanzi": "宽",
+   "movedTo": null
+  },
+  "HSK4-419": {
+   "hanzi": "宽广",
+   "movedTo": null
+  },
+  "HSK4-420": {
+   "hanzi": "矿泉水",
+   "movedTo": "矿泉水"
+  },
+  "HSK4-421": {
+   "hanzi": "扩大",
+   "movedTo": "扩大"
+  },
+  "HSK4-422": {
+   "hanzi": "扩展",
+   "movedTo": null
+  },
+  "HSK4-423": {
+   "hanzi": "括号",
+   "movedTo": null
+  },
+  "HSK4-424": {
+   "hanzi": "垃圾",
+   "movedTo": "垃圾"
+  },
+  "HSK4-425": {
+   "hanzi": "拉开",
+   "movedTo": null
+  },
+  "HSK4-426": {
+   "hanzi": "辣",
+   "movedTo": "辣"
+  },
+  "HSK4-427": {
+   "hanzi": "来不及",
+   "movedTo": "来不及"
+  },
+  "HSK4-428": {
+   "hanzi": "来得及",
+   "movedTo": "来得及"
+  },
+  "HSK4-429": {
+   "hanzi": "来源",
+   "movedTo": "来源"
+  },
+  "HSK4-430": {
+   "hanzi": "老公",
+   "movedTo": null
+  },
+  "HSK4-431": {
+   "hanzi": "老家",
+   "movedTo": "老家"
+  },
+  "HSK4-432": {
+   "hanzi": "老婆",
+   "movedTo": null
+  },
+  "HSK4-433": {
+   "hanzi": "老实",
+   "movedTo": null
+  },
+  "HSK4-434": {
+   "hanzi": "乐趣",
+   "movedTo": null
+  },
+  "HSK4-435": {
+   "hanzi": "泪",
+   "movedTo": null
+  },
+  "HSK4-436": {
+   "hanzi": "泪水",
+   "movedTo": null
+  },
+  "HSK4-437": {
+   "hanzi": "类型",
+   "movedTo": null
+  },
+  "HSK4-438": {
+   "hanzi": "冷静",
+   "movedTo": "冷静"
+  },
+  "HSK4-439": {
+   "hanzi": "厘米",
+   "movedTo": null
+  },
+  "HSK4-440": {
+   "hanzi": "离不开",
+   "movedTo": null
+  },
+  "HSK4-441": {
+   "hanzi": "立即",
+   "movedTo": null
+  },
+  "HSK4-442": {
+   "hanzi": "利息",
+   "movedTo": null
+  },
+  "HSK4-443": {
+   "hanzi": "利益",
+   "movedTo": "利益"
+  },
+  "HSK4-444": {
+   "hanzi": "俩",
+   "movedTo": "俩"
+  },
+  "HSK4-445": {
+   "hanzi": "良好",
+   "movedTo": "良好"
+  },
+  "HSK4-446": {
+   "hanzi": "量",
+   "movedTo": "量"
+  },
+  "HSK4-447": {
+   "hanzi": "粮食",
+   "movedTo": null
+  },
+  "HSK4-448": {
+   "hanzi": "两边",
+   "movedTo": null
+  },
+  "HSK4-449": {
+   "hanzi": "疗养",
+   "movedTo": null
+  },
+  "HSK4-450": {
+   "hanzi": "了不起",
+   "movedTo": null
+  },
+  "HSK4-451": {
+   "hanzi": "列",
+   "movedTo": "列"
+  },
+  "HSK4-452": {
+   "hanzi": "列车",
+   "movedTo": null
+  },
+  "HSK4-453": {
+   "hanzi": "列入",
+   "movedTo": null
+  },
+  "HSK4-454": {
+   "hanzi": "列为",
+   "movedTo": null
+  },
+  "HSK4-455": {
+   "hanzi": "临时",
+   "movedTo": null
+  },
+  "HSK4-456": {
+   "hanzi": "零食",
+   "movedTo": "零食"
+  },
+  "HSK4-457": {
+   "hanzi": "流传",
+   "movedTo": null
+  },
+  "HSK4-458": {
+   "hanzi": "陆地",
+   "movedTo": null
+  },
+  "HSK4-459": {
+   "hanzi": "陆续",
+   "movedTo": null
+  },
+  "HSK4-460": {
+   "hanzi": "录取",
+   "movedTo": "录取"
+  },
+  "HSK4-461": {
+   "hanzi": "律师",
+   "movedTo": "律师"
+  },
+  "HSK4-462": {
+   "hanzi": "轮",
+   "movedTo": null
+  },
+  "HSK4-463": {
+   "hanzi": "轮船",
+   "movedTo": null
+  },
+  "HSK4-464": {
+   "hanzi": "轮椅",
+   "movedTo": null
+  },
+  "HSK4-465": {
+   "hanzi": "轮子",
+   "movedTo": null
+  },
+  "HSK4-466": {
+   "hanzi": "论文",
+   "movedTo": null
+  },
+  "HSK4-467": {
+   "hanzi": "落",
+   "movedTo": "落"
+  },
+  "HSK4-468": {
+   "hanzi": "毛巾",
+   "movedTo": "毛巾"
+  },
+  "HSK4-469": {
+   "hanzi": "毛衣",
+   "movedTo": "毛衣"
+  },
+  "HSK4-470": {
+   "hanzi": "没错",
+   "movedTo": null
+  },
+  "HSK4-471": {
+   "hanzi": "没法儿",
+   "movedTo": null
+  },
+  "HSK4-472": {
+   "hanzi": "美金",
+   "movedTo": null
+  },
+  "HSK4-473": {
+   "hanzi": "美女",
+   "movedTo": null
+  },
+  "HSK4-474": {
+   "hanzi": "梦",
+   "movedTo": "梦"
+  },
+  "HSK4-475": {
+   "hanzi": "梦见",
+   "movedTo": null
+  },
+  "HSK4-476": {
+   "hanzi": "梦想",
+   "movedTo": "梦想"
+  },
+  "HSK4-477": {
+   "hanzi": "秘密",
+   "movedTo": null
+  },
+  "HSK4-478": {
+   "hanzi": "秘书",
+   "movedTo": null
+  },
+  "HSK4-479": {
+   "hanzi": "密",
+   "movedTo": null
+  },
+  "HSK4-480": {
+   "hanzi": "密码",
+   "movedTo": "密码"
+  },
+  "HSK4-481": {
+   "hanzi": "密切",
+   "movedTo": "密切"
+  },
+  "HSK4-482": {
+   "hanzi": "免费",
+   "movedTo": "免费"
+  },
+  "HSK4-483": {
+   "hanzi": "面临",
+   "movedTo": null
+  },
+  "HSK4-484": {
+   "hanzi": "描述",
+   "movedTo": null
+  },
+  "HSK4-485": {
+   "hanzi": "描写",
+   "movedTo": null
+  },
+  "HSK4-486": {
+   "hanzi": "名牌儿",
+   "movedTo": null
+  },
+  "HSK4-487": {
+   "hanzi": "名人",
+   "movedTo": "名人"
+  },
+  "HSK4-488": {
+   "hanzi": "摸",
+   "movedTo": null
+  },
+  "HSK4-489": {
+   "hanzi": "模特儿",
+   "movedTo": null
+  },
+  "HSK4-490": {
+   "hanzi": "模型",
+   "movedTo": null
+  },
+  "HSK4-491": {
+   "hanzi": "末",
+   "movedTo": "末"
+  },
+  "HSK4-492": {
+   "hanzi": "默默",
+   "movedTo": null
+  },
+  "HSK4-493": {
+   "hanzi": "哪怕",
+   "movedTo": null
+  },
+  "HSK4-494": {
+   "hanzi": "哪",
+   "movedTo": "哪"
+  },
+  "HSK4-495": {
+   "hanzi": "男女",
+   "movedTo": null
+  },
+  "HSK4-496": {
+   "hanzi": "男士",
+   "movedTo": "男士"
+  },
+  "HSK4-497": {
+   "hanzi": "难免",
+   "movedTo": null
+  },
+  "HSK4-498": {
+   "hanzi": "脑袋",
+   "movedTo": null
+  },
+  "HSK4-499": {
+   "hanzi": "闹",
+   "movedTo": null
+  },
+  "HSK4-500": {
+   "hanzi": "闹钟",
+   "movedTo": null
+  },
+  "HSK4-501": {
+   "hanzi": "内部",
+   "movedTo": "内部"
+  },
+  "HSK4-502": {
+   "hanzi": "内科",
+   "movedTo": null
+  },
+  "HSK4-503": {
+   "hanzi": "能干",
+   "movedTo": null
+  },
+  "HSK4-504": {
+   "hanzi": "宁静",
+   "movedTo": null
+  },
+  "HSK4-505": {
+   "hanzi": "浓",
+   "movedTo": null
+  },
+  "HSK4-506": {
+   "hanzi": "女士",
+   "movedTo": "女士"
+  },
+  "HSK4-507": {
+   "hanzi": "暖气",
+   "movedTo": null
+  },
+  "HSK4-508": {
+   "hanzi": "拍照",
+   "movedTo": "拍照"
+  },
+  "HSK4-509": {
+   "hanzi": "排列",
+   "movedTo": null
+  },
+  "HSK4-510": {
+   "hanzi": "牌",
+   "movedTo": "牌"
+  },
+  "HSK4-511": {
+   "hanzi": "盘",
+   "movedTo": null
+  },
+  "HSK4-512": {
+   "hanzi": "胖子",
+   "movedTo": null
+  },
+  "HSK4-513": {
+   "hanzi": "培训",
+   "movedTo": null
+  },
+  "HSK4-514": {
+   "hanzi": "培训班",
+   "movedTo": null
+  },
+  "HSK4-515": {
+   "hanzi": "培养",
+   "movedTo": null
+  },
+  "HSK4-516": {
+   "hanzi": "培育",
+   "movedTo": null
+  },
+  "HSK4-517": {
+   "hanzi": "批",
+   "movedTo": null
+  },
+  "HSK4-518": {
+   "hanzi": "片面",
+   "movedTo": null
+  },
+  "HSK4-519": {
+   "hanzi": "品质",
+   "movedTo": null
+  },
+  "HSK4-520": {
+   "hanzi": "平方",
+   "movedTo": null
+  },
+  "HSK4-521": {
+   "hanzi": "平静",
+   "movedTo": null
+  },
+  "HSK4-522": {
+   "hanzi": "平均",
+   "movedTo": null
+  },
+  "HSK4-523": {
+   "hanzi": "平稳",
+   "movedTo": null
+  },
+  "HSK4-524": {
+   "hanzi": "迫切",
+   "movedTo": null
+  },
+  "HSK4-525": {
+   "hanzi": "破产",
+   "movedTo": null
+  },
+  "HSK4-526": {
+   "hanzi": "期待",
+   "movedTo": null
+  },
+  "HSK4-527": {
+   "hanzi": "期间",
+   "movedTo": "期间"
+  },
+  "HSK4-528": {
+   "hanzi": "期末",
+   "movedTo": "期末"
+  },
+  "HSK4-529": {
+   "hanzi": "期限",
+   "movedTo": null
+  },
+  "HSK4-530": {
+   "hanzi": "期中",
+   "movedTo": "期中"
+  },
+  "HSK4-531": {
+   "hanzi": "其余",
+   "movedTo": null
+  },
+  "HSK4-532": {
+   "hanzi": "企业",
+   "movedTo": null
+  },
+  "HSK4-533": {
+   "hanzi": "气球",
+   "movedTo": null
+  },
+  "HSK4-534": {
+   "hanzi": "汽水",
+   "movedTo": "汽水"
+  },
+  "HSK4-535": {
+   "hanzi": "汽油",
+   "movedTo": null
+  },
+  "HSK4-536": {
+   "hanzi": "器官",
+   "movedTo": null
+  },
+  "HSK4-537": {
+   "hanzi": "前头",
+   "movedTo": null
+  },
+  "HSK4-538": {
+   "hanzi": "前途",
+   "movedTo": null
+  },
+  "HSK4-539": {
+   "hanzi": "浅",
+   "movedTo": null
+  },
+  "HSK4-540": {
+   "hanzi": "巧克力",
+   "movedTo": "巧克力"
+  },
+  "HSK4-541": {
+   "hanzi": "切",
+   "movedTo": null
+  },
+  "HSK4-542": {
+   "hanzi": "亲爱",
+   "movedTo": null
+  },
+  "HSK4-543": {
+   "hanzi": "亲密",
+   "movedTo": null
+  },
+  "HSK4-544": {
+   "hanzi": "青春",
+   "movedTo": null
+  },
+  "HSK4-545": {
+   "hanzi": "轻松",
+   "movedTo": "轻松"
+  },
+  "HSK4-546": {
+   "hanzi": "轻易",
+   "movedTo": null
+  },
+  "HSK4-547": {
+   "hanzi": "清醒",
+   "movedTo": null
+  },
+  "HSK4-548": {
+   "hanzi": "情景",
+   "movedTo": null
+  },
+  "HSK4-549": {
+   "hanzi": "穷",
+   "movedTo": null
+  },
+  "HSK4-550": {
+   "hanzi": "穷人",
+   "movedTo": null
+  },
+  "HSK4-551": {
+   "hanzi": "秋季",
+   "movedTo": null
+  },
+  "HSK4-552": {
+   "hanzi": "趋势",
+   "movedTo": null
+  },
+  "HSK4-553": {
+   "hanzi": "圈",
+   "movedTo": null
+  },
+  "HSK4-554": {
+   "hanzi": "权利",
+   "movedTo": null
+  },
+  "HSK4-555": {
+   "hanzi": "却",
+   "movedTo": "却"
+  },
+  "HSK4-556": {
+   "hanzi": "确认",
+   "movedTo": null
+  },
+  "HSK4-557": {
+   "hanzi": "然而",
+   "movedTo": "然而"
+  },
+  "HSK4-558": {
+   "hanzi": "燃料",
+   "movedTo": null
+  },
+  "HSK4-559": {
+   "hanzi": "燃烧",
+   "movedTo": null
+  },
+  "HSK4-560": {
+   "hanzi": "热闹",
+   "movedTo": "热闹"
+  },
+  "HSK4-561": {
+   "hanzi": "热心",
+   "movedTo": null
+  },
+  "HSK4-562": {
+   "hanzi": "人家",
+   "movedTo": null
+  },
+  "HSK4-563": {
+   "hanzi": "日记",
+   "movedTo": "日记"
+  },
+  "HSK4-564": {
+   "hanzi": "日历",
+   "movedTo": null
+  },
+  "HSK4-565": {
+   "hanzi": "如今",
+   "movedTo": "如今"
+  },
+  "HSK4-566": {
+   "hanzi": "弱",
+   "movedTo": null
+  },
+  "HSK4-567": {
+   "hanzi": "散",
+   "movedTo": null
+  },
+  "HSK4-568": {
+   "hanzi": "扫",
+   "movedTo": "扫"
+  },
+  "HSK4-569": {
+   "hanzi": "色",
+   "movedTo": null
+  },
+  "HSK4-570": {
+   "hanzi": "色彩",
+   "movedTo": null
+  },
+  "HSK4-571": {
+   "hanzi": "森林",
+   "movedTo": "森林"
+  },
+  "HSK4-572": {
+   "hanzi": "晒",
+   "movedTo": null
+  },
+  "HSK4-573": {
+   "hanzi": "闪",
+   "movedTo": null
+  },
+  "HSK4-574": {
+   "hanzi": "闪电",
+   "movedTo": null
+  },
+  "HSK4-575": {
+   "hanzi": "善良",
+   "movedTo": null
+  },
+  "HSK4-576": {
+   "hanzi": "善于",
+   "movedTo": null
+  },
+  "HSK4-577": {
+   "hanzi": "伤害",
+   "movedTo": "伤害"
+  },
+  "HSK4-578": {
+   "hanzi": "商务",
+   "movedTo": null
+  },
+  "HSK4-579": {
+   "hanzi": "赏",
+   "movedTo": null
+  },
+  "HSK4-580": {
+   "hanzi": "上楼",
+   "movedTo": null
+  },
+  "HSK4-581": {
+   "hanzi": "上门",
+   "movedTo": "上门"
+  },
+  "HSK4-582": {
+   "hanzi": "烧",
+   "movedTo": null
+  },
+  "HSK4-583": {
+   "hanzi": "设施",
+   "movedTo": null
+  },
+  "HSK4-584": {
+   "hanzi": "设置",
+   "movedTo": null
+  },
+  "HSK4-585": {
+   "hanzi": "申请",
+   "movedTo": "申请"
+  },
+  "HSK4-586": {
+   "hanzi": "身材",
+   "movedTo": null
+  },
+  "HSK4-587": {
+   "hanzi": "身份",
+   "movedTo": null
+  },
+  "HSK4-588": {
+   "hanzi": "身高",
+   "movedTo": "身高"
+  },
+  "HSK4-589": {
+   "hanzi": "深厚",
+   "movedTo": null
+  },
+  "HSK4-590": {
+   "hanzi": "神话",
+   "movedTo": null
+  },
+  "HSK4-591": {
+   "hanzi": "神秘",
+   "movedTo": null
+  },
+  "HSK4-592": {
+   "hanzi": "甚至",
+   "movedTo": "甚至"
+  },
+  "HSK4-593": {
+   "hanzi": "失败",
+   "movedTo": "失败"
+  },
+  "HSK4-594": {
+   "hanzi": "失望",
+   "movedTo": "失望"
+  },
+  "HSK4-595": {
+   "hanzi": "失业",
+   "movedTo": null
+  },
+  "HSK4-596": {
+   "hanzi": "诗",
+   "movedTo": null
+  },
+  "HSK4-597": {
+   "hanzi": "诗人",
+   "movedTo": null
+  },
+  "HSK4-598": {
+   "hanzi": "湿",
+   "movedTo": null
+  },
+  "HSK4-599": {
+   "hanzi": "实施",
+   "movedTo": null
+  },
+  "HSK4-600": {
+   "hanzi": "实用",
+   "movedTo": null
+  },
+  "HSK4-601": {
+   "hanzi": "食堂",
+   "movedTo": "食堂"
+  },
+  "HSK4-602": {
+   "hanzi": "使劲",
+   "movedTo": null
+  },
+  "HSK4-603": {
+   "hanzi": "士兵",
+   "movedTo": null
+  },
+  "HSK4-604": {
+   "hanzi": "市区",
+   "movedTo": "市区"
+  },
+  "HSK4-605": {
+   "hanzi": "似的",
+   "movedTo": null
+  },
+  "HSK4-606": {
+   "hanzi": "事物",
+   "movedTo": null
+  },
+  "HSK4-607": {
+   "hanzi": "事先",
+   "movedTo": null
+  },
+  "HSK4-608": {
+   "hanzi": "试卷",
+   "movedTo": null
+  },
+  "HSK4-609": {
+   "hanzi": "是否",
+   "movedTo": "是否"
+  },
+  "HSK4-610": {
+   "hanzi": "收回",
+   "movedTo": null
+  },
+  "HSK4-611": {
+   "hanzi": "收获",
+   "movedTo": null
+  },
+  "HSK4-612": {
+   "hanzi": "收益",
+   "movedTo": null
+  },
+  "HSK4-613": {
+   "hanzi": "手工",
+   "movedTo": null
+  },
+  "HSK4-614": {
+   "hanzi": "手里",
+   "movedTo": null
+  },
+  "HSK4-615": {
+   "hanzi": "手术",
+   "movedTo": null
+  },
+  "HSK4-616": {
+   "hanzi": "守",
+   "movedTo": null
+  },
+  "HSK4-617": {
+   "hanzi": "首",
+   "movedTo": "首"
+  },
+  "HSK4-618": {
+   "hanzi": "受不了",
+   "movedTo": "受不了"
+  },
+  "HSK4-619": {
+   "hanzi": "售货员",
+   "movedTo": null
+  },
+  "HSK4-620": {
+   "hanzi": "舒适",
+   "movedTo": null
+  },
+  "HSK4-621": {
+   "hanzi": "熟练",
+   "movedTo": null
+  },
+  "HSK4-622": {
+   "hanzi": "暑假",
+   "movedTo": "暑假"
+  },
+  "HSK4-623": {
+   "hanzi": "树林",
+   "movedTo": "树林"
+  },
+  "HSK4-624": {
+   "hanzi": "树叶",
+   "movedTo": null
+  },
+  "HSK4-625": {
+   "hanzi": "数据",
+   "movedTo": null
+  },
+  "HSK4-626": {
+   "hanzi": "数码",
+   "movedTo": null
+  },
+  "HSK4-627": {
+   "hanzi": "刷",
+   "movedTo": "刷"
+  },
+  "HSK4-628": {
+   "hanzi": "刷子",
+   "movedTo": null
+  },
+  "HSK4-629": {
+   "hanzi": "帅",
+   "movedTo": "帅"
+  },
+  "HSK4-630": {
+   "hanzi": "帅哥",
+   "movedTo": null
+  },
+  "HSK4-631": {
+   "hanzi": "率先",
+   "movedTo": null
+  },
+  "HSK4-632": {
+   "hanzi": "睡着",
+   "movedTo": null
+  },
+  "HSK4-633": {
+   "hanzi": "顺序",
+   "movedTo": "顺序"
+  },
+  "HSK4-634": {
+   "hanzi": "说不定",
+   "movedTo": null
+  },
+  "HSK4-635": {
+   "hanzi": "说服",
+   "movedTo": null
+  },
+  "HSK4-636": {
+   "hanzi": "思考",
+   "movedTo": null
+  },
+  "HSK4-637": {
+   "hanzi": "似乎",
+   "movedTo": null
+  },
+  "HSK4-638": {
+   "hanzi": "松",
+   "movedTo": null
+  },
+  "HSK4-639": {
+   "hanzi": "松树",
+   "movedTo": null
+  },
+  "HSK4-640": {
+   "hanzi": "塑料",
+   "movedTo": "塑料"
+  },
+  "HSK4-641": {
+   "hanzi": "塑料袋",
+   "movedTo": null
+  },
+  "HSK4-642": {
+   "hanzi": "酸",
+   "movedTo": "酸"
+  },
+  "HSK4-643": {
+   "hanzi": "酸奶",
+   "movedTo": "酸奶"
+  },
+  "HSK4-644": {
+   "hanzi": "随手",
+   "movedTo": null
+  },
+  "HSK4-645": {
+   "hanzi": "缩短",
+   "movedTo": null
+  },
+  "HSK4-646": {
+   "hanzi": "缩小",
+   "movedTo": null
+  },
+  "HSK4-647": {
+   "hanzi": "台阶",
+   "movedTo": null
+  },
+  "HSK4-648": {
+   "hanzi": "台上",
+   "movedTo": null
+  },
+  "HSK4-649": {
+   "hanzi": "躺",
+   "movedTo": "躺"
+  },
+  "HSK4-650": {
+   "hanzi": "套餐",
+   "movedTo": null
+  },
+  "HSK4-651": {
+   "hanzi": "特价",
+   "movedTo": null
+  },
+  "HSK4-652": {
+   "hanzi": "特殊",
+   "movedTo": null
+  },
+  "HSK4-653": {
+   "hanzi": "特征",
+   "movedTo": null
+  },
+  "HSK4-654": {
+   "hanzi": "提供",
+   "movedTo": "提供"
+  },
+  "HSK4-655": {
+   "hanzi": "提醒",
+   "movedTo": "提醒"
+  },
+  "HSK4-656": {
+   "hanzi": "体操",
+   "movedTo": null
+  },
+  "HSK4-657": {
+   "hanzi": "体检",
+   "movedTo": "体检"
+  },
+  "HSK4-658": {
+   "hanzi": "体重",
+   "movedTo": "体重"
+  },
+  "HSK4-659": {
+   "hanzi": "替",
+   "movedTo": null
+  },
+  "HSK4-660": {
+   "hanzi": "替代",
+   "movedTo": null
+  },
+  "HSK4-661": {
+   "hanzi": "天真",
+   "movedTo": null
+  },
+  "HSK4-662": {
+   "hanzi": "填",
+   "movedTo": null
+  },
+  "HSK4-663": {
+   "hanzi": "填空",
+   "movedTo": null
+  },
+  "HSK4-664": {
+   "hanzi": "挑",
+   "movedTo": null
+  },
+  "HSK4-665": {
+   "hanzi": "挑选",
+   "movedTo": null
+  },
+  "HSK4-666": {
+   "hanzi": "调皮",
+   "movedTo": null
+  },
+  "HSK4-667": {
+   "hanzi": "挑",
+   "movedTo": null
+  },
+  "HSK4-668": {
+   "hanzi": "挑战",
+   "movedTo": "挑战"
+  },
+  "HSK4-669": {
+   "hanzi": "贴",
+   "movedTo": null
+  },
+  "HSK4-670": {
+   "hanzi": "停下",
+   "movedTo": null
+  },
+  "HSK4-671": {
+   "hanzi": "通知书",
+   "movedTo": null
+  },
+  "HSK4-672": {
+   "hanzi": "同情",
+   "movedTo": null
+  },
+  "HSK4-673": {
+   "hanzi": "童话",
+   "movedTo": null
+  },
+  "HSK4-674": {
+   "hanzi": "童年",
+   "movedTo": "童年"
+  },
+  "HSK4-675": {
+   "hanzi": "统计",
+   "movedTo": "统计"
+  },
+  "HSK4-676": {
+   "hanzi": "统一",
+   "movedTo": "统一"
+  },
+  "HSK4-677": {
+   "hanzi": "痛快",
+   "movedTo": null
+  },
+  "HSK4-678": {
+   "hanzi": "投",
+   "movedTo": null
+  },
+  "HSK4-679": {
+   "hanzi": "投入",
+   "movedTo": null
+  },
+  "HSK4-680": {
+   "hanzi": "投诉",
+   "movedTo": null
+  },
+  "HSK4-681": {
+   "hanzi": "投资",
+   "movedTo": null
+  },
+  "HSK4-682": {
+   "hanzi": "透",
+   "movedTo": null
+  },
+  "HSK4-683": {
+   "hanzi": "透明",
+   "movedTo": null
+  },
+  "HSK4-684": {
+   "hanzi": "图案",
+   "movedTo": null
+  },
+  "HSK4-685": {
+   "hanzi": "途中",
+   "movedTo": null
+  },
+  "HSK4-686": {
+   "hanzi": "土地",
+   "movedTo": null
+  },
+  "HSK4-687": {
+   "hanzi": "推迟",
+   "movedTo": "推迟"
+  },
+  "HSK4-688": {
+   "hanzi": "推销",
+   "movedTo": null
+  },
+  "HSK4-689": {
+   "hanzi": "脱",
+   "movedTo": "脱"
+  },
+  "HSK4-690": {
+   "hanzi": "外汇",
+   "movedTo": null
+  },
+  "HSK4-691": {
+   "hanzi": "外交官",
+   "movedTo": null
+  },
+  "HSK4-692": {
+   "hanzi": "外套",
+   "movedTo": "外套"
+  },
+  "HSK4-693": {
+   "hanzi": "弯",
+   "movedTo": null
+  },
+  "HSK4-694": {
+   "hanzi": "晚点",
+   "movedTo": "晚点"
+  },
+  "HSK4-695": {
+   "hanzi": "万一",
+   "movedTo": null
+  },
+  "HSK4-696": {
+   "hanzi": "网络",
+   "movedTo": "网络"
+  },
+  "HSK4-697": {
+   "hanzi": "网址",
+   "movedTo": "网址"
+  },
+  "HSK4-698": {
+   "hanzi": "微笑",
+   "movedTo": null
+  },
+  "HSK4-699": {
+   "hanzi": "微信",
+   "movedTo": null
+  },
+  "HSK4-700": {
+   "hanzi": "围巾",
+   "movedTo": null
+  },
+  "HSK4-701": {
+   "hanzi": "维持",
+   "movedTo": null
+  },
+  "HSK4-702": {
+   "hanzi": "维护",
+   "movedTo": null
+  },
+  "HSK4-703": {
+   "hanzi": "维修",
+   "movedTo": null
+  },
+  "HSK4-704": {
+   "hanzi": "尾巴",
+   "movedTo": null
+  },
+  "HSK4-705": {
+   "hanzi": "未必",
+   "movedTo": null
+  },
+  "HSK4-706": {
+   "hanzi": "未来",
+   "movedTo": null
+  },
+  "HSK4-707": {
+   "hanzi": "位于",
+   "movedTo": "位于"
+  },
+  "HSK4-708": {
+   "hanzi": "位置",
+   "movedTo": null
+  },
+  "HSK4-709": {
+   "hanzi": "味儿",
+   "movedTo": null
+  },
+  "HSK4-710": {
+   "hanzi": "稳",
+   "movedTo": null
+  },
+  "HSK4-711": {
+   "hanzi": "稳定",
+   "movedTo": null
+  },
+  "HSK4-712": {
+   "hanzi": "问候",
+   "movedTo": null
+  },
+  "HSK4-713": {
+   "hanzi": "无",
+   "movedTo": "无"
+  },
+  "HSK4-714": {
+   "hanzi": "无法",
+   "movedTo": "无法"
+  },
+  "HSK4-715": {
+   "hanzi": "无论",
+   "movedTo": "无论"
+  },
+  "HSK4-716": {
+   "hanzi": "无数",
+   "movedTo": null
+  },
+  "HSK4-717": {
+   "hanzi": "无所谓",
+   "movedTo": null
+  },
+  "HSK4-718": {
+   "hanzi": "无限",
+   "movedTo": null
+  },
+  "HSK4-719": {
+   "hanzi": "五颜六色",
+   "movedTo": null
+  },
+  "HSK4-720": {
+   "hanzi": "误会",
+   "movedTo": "误会"
+  },
+  "HSK4-721": {
+   "hanzi": "吸",
+   "movedTo": "吸"
+  },
+  "HSK4-722": {
+   "hanzi": "吸管",
+   "movedTo": null
+  },
+  "HSK4-723": {
+   "hanzi": "吸收",
+   "movedTo": "吸收"
+  },
+  "HSK4-724": {
+   "hanzi": "吸烟",
+   "movedTo": null
+  },
+  "HSK4-725": {
+   "hanzi": "吸引",
+   "movedTo": "吸引"
+  },
+  "HSK4-726": {
+   "hanzi": "喜爱",
+   "movedTo": "喜爱"
+  },
+  "HSK4-727": {
+   "hanzi": "系列",
+   "movedTo": null
+  },
+  "HSK4-728": {
+   "hanzi": "系统",
+   "movedTo": "系统"
+  },
+  "HSK4-729": {
+   "hanzi": "细",
+   "movedTo": "细"
+  },
+  "HSK4-730": {
+   "hanzi": "细节",
+   "movedTo": null
+  },
+  "HSK4-731": {
+   "hanzi": "细致",
+   "movedTo": null
+  },
+  "HSK4-732": {
+   "hanzi": "下降",
+   "movedTo": "下降"
+  },
+  "HSK4-733": {
+   "hanzi": "下楼",
+   "movedTo": null
+  },
+  "HSK4-734": {
+   "hanzi": "下载",
+   "movedTo": null
+  },
+  "HSK4-735": {
+   "hanzi": "夏季",
+   "movedTo": null
+  },
+  "HSK4-736": {
+   "hanzi": "鲜明",
+   "movedTo": null
+  },
+  "HSK4-737": {
+   "hanzi": "咸",
+   "movedTo": "咸"
+  },
+  "HSK4-738": {
+   "hanzi": "显著",
+   "movedTo": null
+  },
+  "HSK4-739": {
+   "hanzi": "县",
+   "movedTo": null
+  },
+  "HSK4-740": {
+   "hanzi": "限制",
+   "movedTo": "限制"
+  },
+  "HSK4-741": {
+   "hanzi": "相处",
+   "movedTo": null
+  },
+  "HSK4-742": {
+   "hanzi": "相反",
+   "movedTo": "相反"
+  },
+  "HSK4-743": {
+   "hanzi": "箱",
+   "movedTo": null
+  },
+  "HSK4-744": {
+   "hanzi": "想念",
+   "movedTo": null
+  },
+  "HSK4-745": {
+   "hanzi": "想象",
+   "movedTo": null
+  },
+  "HSK4-746": {
+   "hanzi": "项",
+   "movedTo": "项"
+  },
+  "HSK4-747": {
+   "hanzi": "项目",
+   "movedTo": "项目"
+  },
+  "HSK4-748": {
+   "hanzi": "相片",
+   "movedTo": null
+  },
+  "HSK4-749": {
+   "hanzi": "消化",
+   "movedTo": null
+  },
+  "HSK4-750": {
+   "hanzi": "销售",
+   "movedTo": null
+  },
+  "HSK4-751": {
+   "hanzi": "小吃",
+   "movedTo": "小吃"
+  },
+  "HSK4-752": {
+   "hanzi": "小伙子",
+   "movedTo": "小伙子"
+  },
+  "HSK4-753": {
+   "hanzi": "小型",
+   "movedTo": null
+  },
+  "HSK4-754": {
+   "hanzi": "效率",
+   "movedTo": "效率"
+  },
+  "HSK4-755": {
+   "hanzi": "心理",
+   "movedTo": "心理"
+  },
+  "HSK4-756": {
+   "hanzi": "新郎",
+   "movedTo": null
+  },
+  "HSK4-757": {
+   "hanzi": "新娘",
+   "movedTo": null
+  },
+  "HSK4-758": {
+   "hanzi": "新型",
+   "movedTo": null
+  },
+  "HSK4-759": {
+   "hanzi": "兴奋",
+   "movedTo": "兴奋"
+  },
+  "HSK4-760": {
+   "hanzi": "形容",
+   "movedTo": null
+  },
+  "HSK4-761": {
+   "hanzi": "形势",
+   "movedTo": "形势"
+  },
+  "HSK4-762": {
+   "hanzi": "型",
+   "movedTo": null
+  },
+  "HSK4-763": {
+   "hanzi": "型号",
+   "movedTo": null
+  },
+  "HSK4-764": {
+   "hanzi": "醒",
+   "movedTo": "醒"
+  },
+  "HSK4-765": {
+   "hanzi": "性质",
+   "movedTo": "性质"
+  },
+  "HSK4-766": {
+   "hanzi": "胸部",
+   "movedTo": null
+  },
+  "HSK4-767": {
+   "hanzi": "修理",
+   "movedTo": "修理"
+  },
+  "HSK4-768": {
+   "hanzi": "学分",
+   "movedTo": null
+  },
+  "HSK4-769": {
+   "hanzi": "学年",
+   "movedTo": null
+  },
+  "HSK4-770": {
+   "hanzi": "学时",
+   "movedTo": null
+  },
+  "HSK4-771": {
+   "hanzi": "学术",
+   "movedTo": "学术"
+  },
+  "HSK4-772": {
+   "hanzi": "学问",
+   "movedTo": null
+  },
+  "HSK4-773": {
+   "hanzi": "寻找",
+   "movedTo": "寻找"
+  },
+  "HSK4-774": {
+   "hanzi": "迅速",
+   "movedTo": null
+  },
+  "HSK4-775": {
+   "hanzi": "牙刷",
+   "movedTo": "牙刷"
+  },
+  "HSK4-776": {
+   "hanzi": "亚运会",
+   "movedTo": null
+  },
+  "HSK4-777": {
+   "hanzi": "呀",
+   "movedTo": null
+  },
+  "HSK4-778": {
+   "hanzi": "延长",
+   "movedTo": "延长"
+  },
+  "HSK4-779": {
+   "hanzi": "延期",
+   "movedTo": null
+  },
+  "HSK4-780": {
+   "hanzi": "延续",
+   "movedTo": null
+  },
+  "HSK4-781": {
+   "hanzi": "严",
+   "movedTo": null
+  },
+  "HSK4-782": {
+   "hanzi": "严格",
+   "movedTo": "严格"
+  },
+  "HSK4-783": {
+   "hanzi": "严重",
+   "movedTo": "严重"
+  },
+  "HSK4-784": {
+   "hanzi": "研究",
+   "movedTo": "研究"
+  },
+  "HSK4-785": {
+   "hanzi": "研究生",
+   "movedTo": "研究生"
+  },
+  "HSK4-786": {
+   "hanzi": "研制",
+   "movedTo": null
+  },
+  "HSK4-787": {
+   "hanzi": "盐",
+   "movedTo": "盐"
+  },
+  "HSK4-788": {
+   "hanzi": "眼泪",
+   "movedTo": null
+  },
+  "HSK4-789": {
+   "hanzi": "眼里",
+   "movedTo": null
+  },
+  "HSK4-790": {
+   "hanzi": "演讲",
+   "movedTo": "演讲"
+  },
+  "HSK4-791": {
+   "hanzi": "阳台",
+   "movedTo": null
+  },
+  "HSK4-792": {
+   "hanzi": "养成",
+   "movedTo": "养成"
+  },
+  "HSK4-793": {
+   "hanzi": "摇",
+   "movedTo": null
+  },
+  "HSK4-794": {
+   "hanzi": "药物",
+   "movedTo": null
+  },
+  "HSK4-795": {
+   "hanzi": "业余",
+   "movedTo": null
+  },
+  "HSK4-796": {
+   "hanzi": "叶子",
+   "movedTo": "叶子"
+  },
+  "HSK4-797": {
+   "hanzi": "医疗",
+   "movedTo": "医疗"
+  },
+  "HSK4-798": {
+   "hanzi": "医学",
+   "movedTo": null
+  },
+  "HSK4-799": {
+   "hanzi": "依靠",
+   "movedTo": null
+  },
+  "HSK4-800": {
+   "hanzi": "依然",
+   "movedTo": null
+  },
+  "HSK4-801": {
+   "hanzi": "一律",
+   "movedTo": null
+  },
+  "HSK4-802": {
+   "hanzi": "一再",
+   "movedTo": null
+  },
+  "HSK4-803": {
+   "hanzi": "一致",
+   "movedTo": null
+  },
+  "HSK4-804": {
+   "hanzi": "移",
+   "movedTo": null
+  },
+  "HSK4-805": {
+   "hanzi": "移动",
+   "movedTo": null
+  },
+  "HSK4-806": {
+   "hanzi": "移民",
+   "movedTo": null
+  },
+  "HSK4-807": {
+   "hanzi": "遗产",
+   "movedTo": null
+  },
+  "HSK4-808": {
+   "hanzi": "遗传",
+   "movedTo": null
+  },
+  "HSK4-809": {
+   "hanzi": "疑问",
+   "movedTo": null
+  },
+  "HSK4-810": {
+   "hanzi": "以及",
+   "movedTo": null
+  },
+  "HSK4-811": {
+   "hanzi": "以内",
+   "movedTo": "以内"
+  },
+  "HSK4-812": {
+   "hanzi": "一般来说",
+   "movedTo": null
+  },
+  "HSK4-813": {
+   "hanzi": "义务",
+   "movedTo": null
+  },
+  "HSK4-814": {
+   "hanzi": "议论",
+   "movedTo": null
+  },
+  "HSK4-815": {
+   "hanzi": "引",
+   "movedTo": null
+  },
+  "HSK4-816": {
+   "hanzi": "引导",
+   "movedTo": null
+  },
+  "HSK4-817": {
+   "hanzi": "引进",
+   "movedTo": null
+  },
+  "HSK4-818": {
+   "hanzi": "引起",
+   "movedTo": "引起"
+  },
+  "HSK4-819": {
+   "hanzi": "应",
+   "movedTo": null
+  },
+  "HSK4-820": {
+   "hanzi": "英勇",
+   "movedTo": null
+  },
+  "HSK4-821": {
+   "hanzi": "营业",
+   "movedTo": null
+  },
+  "HSK4-822": {
+   "hanzi": "赢得",
+   "movedTo": "赢得"
+  },
+  "HSK4-823": {
+   "hanzi": "影子",
+   "movedTo": null
+  },
+  "HSK4-824": {
+   "hanzi": "勇敢",
+   "movedTo": "勇敢"
+  },
+  "HSK4-825": {
+   "hanzi": "勇气",
+   "movedTo": null
+  },
+  "HSK4-826": {
+   "hanzi": "用途",
+   "movedTo": null
+  },
+  "HSK4-827": {
+   "hanzi": "优良",
+   "movedTo": null
+  },
+  "HSK4-828": {
+   "hanzi": "优美",
+   "movedTo": null
+  },
+  "HSK4-829": {
+   "hanzi": "优秀",
+   "movedTo": "优秀"
+  },
+  "HSK4-830": {
+   "hanzi": "邮局",
+   "movedTo": null
+  },
+  "HSK4-831": {
+   "hanzi": "有劲儿",
+   "movedTo": null
+  },
+  "HSK4-832": {
+   "hanzi": "有趣",
+   "movedTo": "有趣"
+  },
+  "HSK4-833": {
+   "hanzi": "有限",
+   "movedTo": null
+  },
+  "HSK4-834": {
+   "hanzi": "幼儿园",
+   "movedTo": null
+  },
+  "HSK4-835": {
+   "hanzi": "于是",
+   "movedTo": "于是"
+  },
+  "HSK4-836": {
+   "hanzi": "语法",
+   "movedTo": "语法"
+  },
+  "HSK4-837": {
+   "hanzi": "语音",
+   "movedTo": null
+  },
+  "HSK4-838": {
+   "hanzi": "玉",
+   "movedTo": null
+  },
+  "HSK4-839": {
+   "hanzi": "玉米",
+   "movedTo": null
+  },
+  "HSK4-840": {
+   "hanzi": "预测",
+   "movedTo": null
+  },
+  "HSK4-841": {
+   "hanzi": "预订",
+   "movedTo": null
+  },
+  "HSK4-842": {
+   "hanzi": "遇",
+   "movedTo": null
+  },
+  "HSK4-843": {
+   "hanzi": "遇见",
+   "movedTo": "遇见"
+  },
+  "HSK4-844": {
+   "hanzi": "原料",
+   "movedTo": null
+  },
+  "HSK4-845": {
+   "hanzi": "原则",
+   "movedTo": "原则"
+  },
+  "HSK4-846": {
+   "hanzi": "圆",
+   "movedTo": null
+  },
+  "HSK4-847": {
+   "hanzi": "圆满",
+   "movedTo": null
+  },
+  "HSK4-848": {
+   "hanzi": "约会",
+   "movedTo": "约会"
+  },
+  "HSK4-849": {
+   "hanzi": "月底",
+   "movedTo": null
+  },
+  "HSK4-850": {
+   "hanzi": "阅读",
+   "movedTo": "阅读"
+  },
+  "HSK4-851": {
+   "hanzi": "运气",
+   "movedTo": null
+  },
+  "HSK4-852": {
+   "hanzi": "运用",
+   "movedTo": null
+  },
+  "HSK4-853": {
+   "hanzi": "再三",
+   "movedTo": null
+  },
+  "HSK4-854": {
+   "hanzi": "在乎",
+   "movedTo": null
+  },
+  "HSK4-855": {
+   "hanzi": "在于",
+   "movedTo": null
+  },
+  "HSK4-856": {
+   "hanzi": "赞成",
+   "movedTo": null
+  },
+  "HSK4-857": {
+   "hanzi": "赞赏",
+   "movedTo": null
+  },
+  "HSK4-858": {
+   "hanzi": "赞助",
+   "movedTo": null
+  },
+  "HSK4-859": {
+   "hanzi": "造型",
+   "movedTo": null
+  },
+  "HSK4-860": {
+   "hanzi": "战斗",
+   "movedTo": null
+  },
+  "HSK4-861": {
+   "hanzi": "战胜",
+   "movedTo": null
+  },
+  "HSK4-862": {
+   "hanzi": "战士",
+   "movedTo": null
+  },
+  "HSK4-863": {
+   "hanzi": "战争",
+   "movedTo": null
+  },
+  "HSK4-864": {
+   "hanzi": "招呼",
+   "movedTo": null
+  },
+  "HSK4-865": {
+   "hanzi": "着",
+   "movedTo": "着"
+  },
+  "HSK4-866": {
+   "hanzi": "着火",
+   "movedTo": "着火"
+  },
+  "HSK4-867": {
+   "hanzi": "召开",
+   "movedTo": null
+  },
+  "HSK4-868": {
+   "hanzi": "折",
+   "movedTo": null
+  },
+  "HSK4-869": {
+   "hanzi": "针",
+   "movedTo": null
+  },
+  "HSK4-870": {
+   "hanzi": "针对",
+   "movedTo": null
+  },
+  "HSK4-871": {
+   "hanzi": "阵",
+   "movedTo": null
+  },
+  "HSK4-872": {
+   "hanzi": "争论",
+   "movedTo": null
+  },
+  "HSK4-873": {
+   "hanzi": "征服",
+   "movedTo": null
+  },
+  "HSK4-874": {
+   "hanzi": "征求",
+   "movedTo": null
+  },
+  "HSK4-875": {
+   "hanzi": "政府",
+   "movedTo": null
+  },
+  "HSK4-876": {
+   "hanzi": "政治",
+   "movedTo": null
+  },
+  "HSK4-877": {
+   "hanzi": "之后",
+   "movedTo": "之后"
+  },
+  "HSK4-878": {
+   "hanzi": "之间",
+   "movedTo": "之间"
+  },
+  "HSK4-879": {
+   "hanzi": "之前",
+   "movedTo": "之前"
+  },
+  "HSK4-880": {
+   "hanzi": "之一",
+   "movedTo": null
+  },
+  "HSK4-881": {
+   "hanzi": "支",
+   "movedTo": null
+  },
+  "HSK4-882": {
+   "hanzi": "植物",
+   "movedTo": "植物"
+  },
+  "HSK4-883": {
+   "hanzi": "指挥",
+   "movedTo": null
+  },
+  "HSK4-884": {
+   "hanzi": "制订",
+   "movedTo": null
+  },
+  "HSK4-885": {
+   "hanzi": "质量",
+   "movedTo": "质量"
+  },
+  "HSK4-886": {
+   "hanzi": "治",
+   "movedTo": null
+  },
+  "HSK4-887": {
+   "hanzi": "治疗",
+   "movedTo": "治疗"
+  },
+  "HSK4-888": {
+   "hanzi": "智力",
+   "movedTo": null
+  },
+  "HSK4-889": {
+   "hanzi": "智能",
+   "movedTo": null
+  },
+  "HSK4-890": {
+   "hanzi": "中介",
+   "movedTo": null
+  },
+  "HSK4-891": {
+   "hanzi": "种类",
+   "movedTo": null
+  },
+  "HSK4-892": {
+   "hanzi": "中奖",
+   "movedTo": null
+  },
+  "HSK4-893": {
+   "hanzi": "种",
+   "movedTo": "种"
+  },
+  "HSK4-894": {
+   "hanzi": "种植",
+   "movedTo": null
+  },
+  "HSK4-895": {
+   "hanzi": "重量",
+   "movedTo": null
+  },
+  "HSK4-896": {
+   "hanzi": "逐步",
+   "movedTo": null
+  },
+  "HSK4-897": {
+   "hanzi": "逐渐",
+   "movedTo": null
+  },
+  "HSK4-898": {
+   "hanzi": "主题",
+   "movedTo": "主题"
+  },
+  "HSK4-899": {
+   "hanzi": "主席",
+   "movedTo": null
+  },
+  "HSK4-900": {
+   "hanzi": "祝福",
+   "movedTo": null
+  },
+  "HSK4-901": {
+   "hanzi": "著名",
+   "movedTo": "著名"
+  },
+  "HSK4-902": {
+   "hanzi": "著作",
+   "movedTo": null
+  },
+  "HSK4-903": {
+   "hanzi": "抓紧",
+   "movedTo": null
+  },
+  "HSK4-904": {
+   "hanzi": "专心",
+   "movedTo": null
+  },
+  "HSK4-905": {
+   "hanzi": "转动",
+   "movedTo": null
+  },
+  "HSK4-906": {
+   "hanzi": "转告",
+   "movedTo": null
+  },
+  "HSK4-907": {
+   "hanzi": "转身",
+   "movedTo": null
+  },
+  "HSK4-908": {
+   "hanzi": "转弯",
+   "movedTo": null
+  },
+  "HSK4-909": {
+   "hanzi": "转移",
+   "movedTo": null
+  },
+  "HSK4-910": {
+   "hanzi": "装修",
+   "movedTo": null
+  },
+  "HSK4-911": {
+   "hanzi": "装置",
+   "movedTo": null
+  },
+  "HSK4-912": {
+   "hanzi": "追求",
+   "movedTo": null
+  },
+  "HSK4-913": {
+   "hanzi": "准时",
+   "movedTo": "准时"
+  },
+  "HSK4-914": {
+   "hanzi": "资料",
+   "movedTo": "资料"
+  },
+  "HSK4-915": {
+   "hanzi": "资源",
+   "movedTo": "资源"
+  },
+  "HSK4-916": {
+   "hanzi": "自",
+   "movedTo": "自"
+  },
+  "HSK4-917": {
+   "hanzi": "自信",
+   "movedTo": "自信"
+  },
+  "HSK4-918": {
+   "hanzi": "字母",
+   "movedTo": null
+  },
+  "HSK4-919": {
+   "hanzi": "综合",
+   "movedTo": "综合"
+  },
+  "HSK4-920": {
+   "hanzi": "总共",
+   "movedTo": "总共"
+  },
+  "HSK4-921": {
+   "hanzi": "总理",
+   "movedTo": null
+  },
+  "HSK4-922": {
+   "hanzi": "总统",
+   "movedTo": null
+  },
+  "HSK4-923": {
+   "hanzi": "总之",
+   "movedTo": "总之"
+  },
+  "HSK4-924": {
+   "hanzi": "阻止",
+   "movedTo": "阻止"
+  },
+  "HSK4-925": {
+   "hanzi": "嘴巴",
+   "movedTo": null
+  },
+  "HSK4-926": {
+   "hanzi": "最初",
+   "movedTo": "最初"
+  },
+  "HSK4-927": {
+   "hanzi": "作出",
+   "movedTo": "作出"
+  },
+  "HSK4-928": {
+   "hanzi": "作为",
+   "movedTo": "作为"
+  },
+  "HSK4-929": {
+   "hanzi": "做梦",
+   "movedTo": "做梦"
   }
  }
 }

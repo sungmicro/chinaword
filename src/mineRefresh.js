@@ -8,7 +8,7 @@
 //     그 문항 해설에 다른 뜻으로 있으면(at) 그 뜻으로 바꿉니다.
 //     출처가 «랜덤 학습 · <단원>»이면 그 단원의 같은 한자 «단어» 카드를 씁니다.
 //  2. 나뉜 묶음(split: 比较忙 → 比较·忙, 李先生 → 李·先生)은 조각으로 바꿉니다.
-//  3. 나머지는 vocab.json의 첫 «단어» 카드, 없으면 해설의 기본 뜻(base)으로 맞춥니다.
+//  3. 나머지는 vocab.json의 첫 «단어» 카드(문항 주소가 없으면 같은 읽기 카드를 먼저), 없으면 해설의 기본 뜻(base)으로 맞춥니다.
 //  4. 어디에도 없는 단어는 뜻에 한글이 있으면 그대로 두고, 없으면 뺍니다. 옮길 단어가 빈 목록이면 뺍니다.
 //     단, 사용자가 직접 쓴 메모가 있는 항목은 빼지 않고 남깁니다(뜻에 한글이 없으면 NO_MEANING 안내로).
 //     나눈 조각·바꾼 단어에도 같은 규칙을 곧바로 다시 적용합니다(고정점, 깊이 4까지).
@@ -111,9 +111,12 @@ export function mergeEntries(a, b) {
 export function makeMineRefresher(index, vocab, wordKey) {
   const firstCard = new Map();
   const lessonCard = new Map();
+  const cardsByHanzi = new Map();
   for (const card of vocab ?? []) {
     if (card.itemType !== WORD_TYPE) continue;
     if (!firstCard.has(card.hanzi)) firstCard.set(card.hanzi, card);
+    if (!cardsByHanzi.has(card.hanzi)) cardsByHanzi.set(card.hanzi, []);
+    cardsByHanzi.get(card.hanzi).push(card);
     const key = `${card.lesson}\u0000${card.hanzi}`;
     if (!lessonCard.has(key)) lessonCard.set(key, []);
     lessonCard.get(key).push(card);
@@ -123,13 +126,21 @@ export function makeMineRefresher(index, vocab, wordKey) {
     return { pinyin, meaningKo, partOfSpeech };
   };
 
+  const toneOf = (hanzi, pinyin) => wordKey(hanzi, pinyin).slice(-1);
+  const sameReading = (cards, hanzi, pinyin) => cards.find((card) => wordKey(hanzi, card.pinyin) === wordKey(hanzi, pinyin));
+
   // 그 맥락에서 이 한자의 지금 뜻. 없으면 null.
   function lookup(hanzi, context) {
     const here = context.address && index.at[context.address];
     if (has(here, hanzi)) return senseAt(here[hanzi]);
     const inLesson = context.lesson && lessonCard.get(`${context.lesson}\u0000${hanzi}`);
-    if (inLesson) return fieldsOf(inLesson.find((card) => card.pinyin === context.pinyin) ?? inLesson[0]);
+    if (inLesson) return fieldsOf(sameReading(inLesson, hanzi, context.pinyin) ?? inLesson[0]);
+    const same = !context.address && sameReading(cardsByHanzi.get(hanzi) ?? [], hanzi, context.pinyin);
+    if (same) return fieldsOf(same);
     const card = firstCard.get(hanzi);
+    // 문항 주소가 없고 담은 읽기와 첫 성조가 다른 카드뿐이면(好 hào인데 hǎo 카드만) 담은 값을 그대로 둡니다.
+    if (card && !context.address && hanzi === context.hanzi && context.pinyin && hasHangul(context.meaningKo)
+        && toneOf(hanzi, card.pinyin) !== toneOf(hanzi, context.pinyin)) return null;
     if (card) return fieldsOf(card);
     if (has(index.base, hanzi)) return senseAt(index.base[hanzi]);
     return null;
@@ -188,7 +199,7 @@ export function makeMineRefresher(index, vocab, wordKey) {
   function refreshEntry(original) {
     const entry = fixPinyin(original);
     if (entry.kind !== 'word' || (entry.itemType && entry.itemType !== WORD_TYPE)) return [entry];
-    const context = { address: sourceAddress(entry.source), lesson: sourceLesson(entry.source), pinyin: entry.pinyin };
+    const context = { address: sourceAddress(entry.source), lesson: sourceLesson(entry.source), hanzi: entry.hanzi, pinyin: entry.pinyin, meaningKo: entry.meaningKo };
     return resolveWord(entry, context, 0);
   }
 

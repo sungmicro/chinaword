@@ -208,6 +208,7 @@ function HiddenAnswer({ card, promptType, canSpeak, speaking, onSpeak }) {
           </button>
         );
       })}
+      {card.hanjaKo ? <p className="answerHanja">{card.hanjaKo}</p> : null}
       {card.mineKey ? <MineDetails card={card} /> : null}
     </div>
   );
@@ -309,6 +310,7 @@ function VocabList({ items, mineItems, onRemoveMine, onResolveUnknown, canSpeak,
                     <p className={`vocabHanzi ${hanziLengthClass(item.hanzi)}${sentenceModifier(item.itemType)}`}>{item.hanzi}</p>
                     {item.pinyin ? <p className="vocabPinyin">{item.pinyin}</p> : null}
                     {item.meaningKo ? <p className="vocabMeaning">{item.meaningKo}</p> : null}
+                    {item.hanjaKo ? <p className="vocabHanja">{item.hanjaKo}</p> : null}
                     {item.mineKey && item.note ? <p className="mineNote">{item.note}</p> : null}
                     {item.mineKey && item.exampleZh ? (
                       <p className="mineExampleZh">
@@ -480,8 +482,10 @@ function StudyCard({ card, promptType, revealed, onReveal, onNext, canSpeak, spe
 
 function App() {
   const studyItems = useMemo(() => buildStudyItems(vocabData), []);
+  // 내 단어장 항목은 훈음을 저장하지 않으므로, 같은 단어(열쇠)의 단어장 카드 훈음을 붙여 보여줍니다.
+  const hanjaByKey = useMemo(() => new Map(studyItems.filter((item) => item.hanjaKo).map((item) => [wordKey(item.hanzi, item.pinyin), item.hanjaKo])), [studyItems]);
   const mine = useMyVocab();
-  const mineItems = useMemo(() => mineToStudyItems(mine.items), [mine.items]);
+  const mineItems = useMemo(() => mineToStudyItems(mine.items).map((item) => { const hanjaKo = hanjaByKey.get(item.mineKey); return hanjaKo ? { ...item, hanjaKo } : item; }), [mine.items, hanjaByKey]);
   const [mineOnly, setMineOnly] = useState(() => loadJson('sungmi-vocab-study-mine-v1', false) === true);
   const [studyGroup, setStudyGroup] = useState(() => normalizeStudyGroup(loadJson('sungmi-vocab-study-group-v1', '전체')));
   // 담은 것이 없으면 «내 단어장만»은 켜지지 않습니다. 켜 둔 채 마지막 항목을 빼면 꺼집니다.

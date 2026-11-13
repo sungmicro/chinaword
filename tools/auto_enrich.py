@@ -19,7 +19,7 @@ import jieba
 import jieba.posseg as posseg
 from pypinyin import Style, lazy_pinyin
 
-from vocab_fixes import (BANNED_PART, VocabProblems, fix_vocab, fix_vocab_checked, has_hangul,  # noqa: F401
+from vocab_fixes import (BANNED_PART, OUTLINE_LESSONS, VocabProblems, fix_vocab, fix_vocab_checked, has_hangul,  # noqa: F401
                          write_files_atomically)
 
 sys.path.insert(0, str(Path(__file__).resolve().parent / 'listening'))
@@ -75,7 +75,7 @@ class VocabCatalog:
             if score > self.entry_scores.get(word, -1):
                 self.entries[word] = entry
                 self.entry_scores[word] = score
-            if level and lesson.startswith(f'{level} 추가'):
+            if level and (lesson.startswith(f'{level} 추가') or lesson in OUTLINE_LESSONS):
                 self.new_by_level.setdefault(level, set()).add(word)
                 self.official_words.add(word)
             if lesson == 'HSK1 150':
@@ -85,7 +85,7 @@ class VocabCatalog:
     def _score(entry):
         lesson = entry.get('lesson', '')
         level = entry.get('level', '')
-        if level and (lesson.startswith(f'{level} 추가') or lesson == f'{level} 150'):
+        if level and (lesson.startswith(f'{level} 추가') or lesson == f'{level} 150' or lesson in OUTLINE_LESSONS):
             return 3
         if level.startswith('HSK') and not lesson.endswith(('듣기', '독해')):
             return 2

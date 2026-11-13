@@ -3,6 +3,7 @@
 // 첫 로그인 때 기기에 있던 항목을 계정으로 올립니다.
 import { useSyncExternalStore } from 'react';
 import { readJson, writeJson } from './practiceStore.js';
+import { mergeEntries } from './mineRefresh.js';
 
 export const MINE_KEY = 'sungmi-vocab-mine-v1';
 export const MINE_LESSON = '내 단어장';
@@ -19,18 +20,47 @@ export function wordsToPinyin(words) {
   return out.charAt(0).toUpperCase() + out.slice(1);
 }
 
-// 성조를 뗀 음절. 같은 한자라도 읽기가 다르면(还 hái/huán) 다른 단어로, 변조만 다르면(不 bù/bú) 같은 단어로 봅니다.
-function toneless(pinyin) {
-  return String(pinyin ?? '')
-    .toLowerCase()
-    .replace(/[üǖǘǚǜ]/g, 'v')
-    .normalize('NFD')
-    .replace(/[\u0300-\u036f]/g, '')
-    .replace(/[^a-z]/g, '');
+// 같은 단어인지 보는 병음 열쇠: 성조 뗀 글자(ü는 v) + 첫 성조 숫자(부호가 없으면 0). 첫 읽기만(shéi/shuí → shéi).
+// 첫 성조가 다르면 다른 단어(好 hǎo·hào, 过 guò·guo, 还 hái·huán), 둘째 음절부터의 경성 표기 차이(学生 xuésheng·xuéshēng)와
+// 一·不의 변조(不 bù·bú, 一块儿 yíkuàir)는 같은 단어로 봅니다. tools/hsk_outline/build_outline.py tone_key와 같은 규칙.
+const TONE_MARKS = { '\u0304': '1', '\u0301': '2', '\u030c': '3', '\u0300': '4' };
+
+export function pinyinKey(hanzi, pinyin) {
+  const text = String(pinyin ?? '').split('/')[0].toLowerCase().normalize('NFD');
+  let digit = '0';
+  for (const char of text) {
+    if (TONE_MARKS[char]) { digit = TONE_MARKS[char]; break; }
+  }
+  const word = String(hanzi ?? '');
+  if (word.startsWith('一')) digit = '1';
+  else if (word.startsWith('不')) digit = '4';
+  return text.replace(/u\u0308/g, 'v').replace(/[^a-z]/g, '') + digit;
 }
 
-export const wordKey = (hanzi, pinyin) => `word:${hanzi}:${toneless(pinyin)}`;
+export const wordKey = (hanzi, pinyin) => `word:${hanzi}:${pinyinKey(hanzi, pinyin)}`;
 export const patternKey = (pattern) => `pattern:${pattern}`;
+
+// 2026-11-13 전에는 열쇠가 성조를 뗀 병음(word:好:hao)이었습니다. 불러올 때 단어 항목(kind 'word', 문장 포함)을
+// 자기 병음으로 다시 열쇠를 만들고, 같은 열쇠가 둘이 되면 먼저 나온 자리에 mergeEntries로 합칩니다(모름 횟수는 큰 값,
+// 메모는 합치고, 한쪽이라도 직접 담았으면 직접 담은 것). 패턴 항목은 그대로. 바뀐 것이 없으면 같은 배열을 돌려줍니다.
+export function rekeyItems(items) {
+  const out = [];
+  const position = new Map();
+  let changed = false;
+  for (const entry of items) {
+    const key = entry.kind === 'word' ? wordKey(entry.hanzi, entry.pinyin) : entry.key;
+    const next = key === entry.key ? entry : { ...entry, key };
+    if (next !== entry) changed = true;
+    if (position.has(key)) {
+      out[position.get(key)] = mergeEntries(out[position.get(key)], next);
+      changed = true;
+    } else {
+      position.set(key, out.length);
+      out.push(next);
+    }
+  }
+  return changed ? out : items;
+}
 
 // 해설의 단어 하나를 담는 순간 그대로 저장합니다. 듣기·독해·쓰기 모두 한자·병음·뜻·품사만 있고 용법·예문 칸은 비웁니다.
 export function wordEntry(word, source, now = new Date()) {
@@ -211,8 +241,9 @@ export function configureMineRefresh(refresh) {
 }
 
 // 갱신(src/mineRefresh.js)이 처음 바꾸기 전의 저장값을 이전(migration) ID별로 한 번만 그대로 남겨 둡니다.
+// 2026-11-13 성조 열쇠 이전 + HSK 대강 갱신 전 저장값. 예전 mine-refresh-1 백업은 그대로 남는다.
 // 같은 ID의 백업이 있으면 덮지 않습니다. 크기는 내 단어장 저장값과 같습니다(항목 100개에 약 30KB).
-export const MINE_MIGRATION_ID = 'mine-refresh-1';
+export const MINE_MIGRATION_ID = 'mine-tonekey-1';
 export const MINE_BACKUP_KEY = `${MINE_KEY}-backup-${MINE_MIGRATION_ID}`;
 
 // 백업이 있거나(이미 했거나 원본이 없음) 이번에 성공하면 true. 저장 공간 부족 등으로 실패하면 false.
@@ -236,7 +267,7 @@ let refreshUnsaved = false;
 export function loadMine() {
   if (current === null) {
     const saved = sanitize(readJson(MINE_KEY, {}));
-    current = refreshItems(saved.map(dropAutoReadingUsage));
+    current = refreshItems(rekeyItems(saved.map(dropAutoReadingUsage)));
     refreshUnsaved = false;
     // 지우거나 바꾼 것이 있으면 원래 저장값을 백업한 뒤에만 한 번 저장합니다(다음부터는 바꿀 것이 없어 쓰지 않습니다).
     if (current.length !== saved.length || current.some((entry, index) => entry !== saved[index])) {
