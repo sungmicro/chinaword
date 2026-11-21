@@ -43,3 +43,9 @@ Make mobile compact quiz layout
 - «기출» 그룹은 HSK3 모의고사 듣기·독해 해설에서 나온 단어 중 다른 단원에 없는 것이다(tools/listening·reading assemble.py update_vocab). 대강과 겹치는 단어는 대강 카드만 남기고, 그 시험 예문은 대강 카드로 옮겼다(카드 source의 «예문: …»).
 - 병음·품사·급수는 공식 API, 한국어 뜻과 4·5급 한국 한자 훈음(카드의 hanjaKo)은 Codex 1차본을 앱 형식으로 바꾸고 다른 에이전트가 검토했다. 원자료와 출처는 tools/hsk_outline/outline_raw.json.
 - 뜻을 고치면 tools/hsk_outline/meanings/*.json을 고친 뒤 `~/venv-store/hsk-listening/bin/python tools/hsk_outline/build_outline.py check --repo .` → `apply --repo .`(듣기·독해 단원도 함께 다시 만든다). vocab.json을 손으로 고치지 않는다(카드 id 장부·card_ids.json·내 단어장 갱신 색인도 apply가 함께 쓴다).
+
+## 시험 탭 구조와 HSK 3.0 샘플 데이터
+
+- 시험 탭은 3급·4급(HSK 3.0 공식 샘플, `public/hsk30/S30-*`)과 기출(2.0, 기존 H3xxxx 듣기·독해·쓰기)로 나뉜다. 목록은 `src/examCatalog.js`와 `src/data/hsk30-index.json`이 정한다.
+- 3.0 샘플 데이터는 `tools/hsk30/`에서 `paper30`(시험지) → `audio30`(음원·대본) → `assemble30`(공개 JSON 조립) 순으로 만든다. 중간 산출물은 `~/hsk30-work`에 둔다.
+- 조립: `~/venv-store/hsk-listening/bin/python tools/hsk30/assemble30.py` (검사만: `--repo . --check`). 조립이 끝나면 내 단어장 갱신 색인도 함께 다시 쓴다.

@@ -1,28 +1,30 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { ChevronLeft, ChevronRight, Eye, Languages, RotateCcw } from 'lucide-react';
-import testIndex from './data/reading-index.json';
 import { UNKNOWN, fetchCached, readJson, tally, writeJson } from './practiceStore';
 import { ChoiceButton, ExplainGrammar, ExplainVocab, Ruby, Verdict } from './hskParts';
+import { clozeKoVisible, examUrl, groupLabel, partChips, partKind, tabPrefs, withTabPrefs } from './examCatalog';
 
 // HSK 공식 모의고사 독해. 문항마다 '읽기 → 고르기(또는 모르겠음) → 정답·해설'.
-// 회차 데이터 public/reading/<회차>.json은 tools/reading/assemble.py가 만듭니다.
+// 기출(2.0) 회차 데이터 public/reading/<회차>.json은 tools/reading/assemble.py가,
+// 3급·4급 공식 샘플 public/hsk30/S30-x-reading.json은 tools/hsk30이 만듭니다.
+// 부분의 형식(kind): match(문장 짝) · wordbank(단어 빈칸) · passage(지문+질문) · cloze(글 속 빈칸에 문장 고르기).
 
 const ANSWER_KEY = 'sungmi-vocab-reading-v1';
 const PREF_KEY = 'sungmi-vocab-reading-prefs-v1';
-const PART_CHIPS = ['전체', 1, 2, 3];
 
-const fetchTest = (id) => fetchCached(`/reading/${id}.json`, id);
+const fetchTest = (entry) => fetchCached(examUrl(entry), entry.id);
 const hanziOf = (words) => words.map(([hanzi]) => hanzi).join('');
+const SLOT = /^slot:(\d+)$/;
 
-// 1·2부분은 다섯 문항이 묶음 보기를 같이 쓰고, 3부분은 문항마다 A·B·C가 있습니다.
+// passage는 문항마다 보기가 있고, 나머지는 여러 문항이 묶음 보기(groups)를 같이 씁니다.
 function choicesOf(test, item) {
-  if (item.part === 3) return { options: item.options ?? [], example: null };
+  if (partKind(test, item) === 'passage') return { options: item.options ?? [], example: null };
   const group = test.groups.find((entry) => entry.id === item.group);
   return { options: group?.options ?? [], example: group?.example ?? null };
 }
 
-function answerText(item, options) {
-  if (item.part !== 2) return item.answer;
+function answerText(test, item, options) {
+  if (partKind(test, item) !== 'wordbank') return item.answer;
   const word = options.find((option) => option.label === item.answer);
   return word ? `${item.answer} ${hanziOf(word.words)}` : item.answer;
 }
@@ -62,9 +64,35 @@ function Question({ question, showPinyin, revealed }) {
   );
 }
 
-function Choices({ item, options, example, picked, revealed, showPinyin, onPick }) {
+// cloze: 글 전체에서 빈칸 토큰 ["（58）", "", "slot:58"]을 찾아, 지금 문항 빈칸은 강조하고
+// 이미 답을 본 빈칸은 정답 문장으로 채웁니다. filled = { 58: [[한자, 병음], …] }
+function ClozePassage({ item, filled, showPinyin, revealed }) {
+  const mark = (words) =>
+    words.flatMap((word) => {
+      const slot = SLOT.exec(word[2] ?? '');
+      if (!slot) return [word];
+      const no = Number(slot[1]);
+      if (filled[no]) return filled[no].map(([hanzi, pinyin]) => [hanzi, pinyin, 'clozeFill']);
+      return [[`（${no}）`, '', no === item.no ? 'clozeCurrent' : 'clozeSlot']];
+    });
+  return (
+    <div className="readLines clozePassage">
+      {item.lines.map((line, index) => (
+        <div className="readLine" key={index}>
+          {line.speaker ? <span className="listenSpeaker">{line.speaker}</span> : null}
+          <div className="listenLineBody">
+            <Ruby words={mark(line.words)} tight showPinyin={showPinyin || revealed} />
+            {revealed && clozeKoVisible(line.words, filled) ? <p className="listenKo">{line.ko}</p> : null}
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function Choices({ item, kind: partType, options, example, picked, revealed, showPinyin, onPick }) {
   const shared = { item, picked, revealed, onPick };
-  const wordBank = item.part === 2;
+  const wordBank = partType === 'wordbank';
   const kind = wordBank ? 'readWord' : 'option';
   return (
     <div className={`listenChoices ${wordBank ? 'readBank' : 'listenOptions'}`}>
@@ -113,12 +141,12 @@ function PairDialogue({ item, options }) {
   );
 }
 
-function Explanation({ item, options, source }) {
+function Explanation({ item, kind, options, source }) {
   const { basis, distractors, vocab, grammar } = item.explain;
   const optionOf = (label) => options.find((option) => option.label === label);
   return (
     <section className="listenReveal">
-      {item.part === 1 ? <PairDialogue item={item} options={options} /> : null}
+      {kind === 'match' ? <PairDialogue item={item} options={options} /> : null}
 
       <h3>정답 근거</h3>
       <div className="readBasis">
@@ -152,12 +180,15 @@ function Explanation({ item, options, source }) {
   );
 }
 
-export default function Reading() {
-  const initial = useMemo(() => readJson(PREF_KEY, {}), []);
+export default function Reading({ tab = 'past', exams = [] }) {
+  const initial = useMemo(() => {
+    const saved = readJson(PREF_KEY, {});
+    return { positions: saved.positions, showPinyin: saved.showPinyin, ...tabPrefs(saved, tab) };
+  }, [tab]);
   const [testId, setTestId] = useState(
-    testIndex.some((entry) => entry.id === initial.testId) ? initial.testId : testIndex[0]?.id
+    exams.some((entry) => entry.id === initial.testId) ? initial.testId : exams[0]?.id
   );
-  const [part, setPart] = useState(PART_CHIPS.includes(initial.part) ? initial.part : '전체');
+  const [part, setPart] = useState(initial.part ?? '전체');
   const [positions, setPositions] = useState(
     initial.positions && typeof initial.positions === 'object' ? initial.positions : {}
   );
@@ -169,22 +200,30 @@ export default function Reading() {
   const [attempt, setAttempt] = useState(0); // '다시 받기'를 누를 때마다 늘려 같은 회차를 다시 받습니다.
   const bodyRef = useRef(null);
 
+  const entry = exams.find((exam) => exam.id === testId);
+
   useEffect(() => {
-    if (!testId) return undefined;
+    if (!entry) return undefined;
     let alive = true;
     setTest(null);
     setError('');
-    fetchTest(testId)
+    fetchTest(entry)
       .then((data) => alive && setTest(data))
       .catch((err) => alive && setError(err.message));
     return () => {
       alive = false;
     };
-  }, [testId, attempt]);
+  }, [entry, attempt]);
 
   useEffect(() => {
-    writeJson(PREF_KEY, { testId, part, positions, showPinyin });
-  }, [testId, part, positions, showPinyin]);
+    writeJson(PREF_KEY, withTabPrefs(readJson(PREF_KEY, {}), tab, { testId, part }, { positions, showPinyin }));
+  }, [tab, testId, part, positions, showPinyin]);
+
+  const chips = partChips(test);
+  // 저장된 부분이 이 시험지에 없으면 전체로 돌립니다.
+  useEffect(() => {
+    if (test && !chips.includes(part)) setPart('전체');
+  }, [test, chips, part]);
 
   const items = useMemo(
     () => (test ? test.items.filter((entry) => part === '전체' || entry.part === part) : []),
@@ -205,6 +244,19 @@ export default function Reading() {
   const counts = tally(allItems, picks);
   const { options, example } = item && test ? choicesOf(test, item) : { options: [], example: null };
   const guide = test?.parts.find((entry) => entry.part === item?.part)?.guide;
+  const kind = item && test ? partKind(test, item) : null;
+  const badge = item ? item.passageGroup ?? (kind === 'cloze' ? item.group : null) : null;
+
+  // cloze: 같은 글의 문항 중 답을 고른(또는 해설을 펼친) 빈칸은 정답 문장으로 채웁니다.
+  const filled = {};
+  if (kind === 'cloze') {
+    for (const other of allItems) {
+      if (other.group !== item.group) continue;
+      const open = other.no === item.no ? revealed : Boolean(picks[other.no] || shown[`${testId}-${other.no}`]);
+      const answer = options.find((option) => option.label === other.answer);
+      if (open && answer) filled[other.no] = answer.words;
+    }
+  }
 
   function goTo(nextIndex) {
     const next = items[nextIndex];
@@ -235,20 +287,20 @@ export default function Reading() {
     <section className="listenPanel">
       <div className="listenControls">
         <div className="lessonChips listenTests" aria-label="회차 선택">
-          {testIndex.map((entry) => (
+          {exams.map((exam) => (
             <button
-              key={entry.id}
+              key={exam.id}
               type="button"
-              className={`lessonChip ${testId === entry.id ? 'active' : ''}`}
-              onClick={() => setTestId(entry.id)}
+              className={`lessonChip ${testId === exam.id ? 'active' : ''}`}
+              onClick={() => setTestId(exam.id)}
             >
-              {entry.id}
+              {exam.label}
             </button>
           ))}
         </div>
         <div className="listenToolbar">
           <div className="memoToggles" aria-label="부분 선택">
-            {PART_CHIPS.map((chip) => (
+            {chips.map((chip) => (
               <button
                 key={chip}
                 type="button"
@@ -286,7 +338,8 @@ export default function Reading() {
             </button>
           </div>
         ) : null}
-        {!error && !item ? <p className="listEmpty">불러오는 중…</p> : null}
+        {!entry ? <p className="listEmpty">아직 준비 중인 시험지예요.</p> : null}
+        {entry && !error && !item ? <p className="listEmpty">불러오는 중…</p> : null}
         {item ? (
           <article className="listenCard">
             <div className="quizProgress">
@@ -294,12 +347,18 @@ export default function Reading() {
                 {item.no}번 · {item.part}부분
               </span>
               <span>{guide}</span>
+              {badge ? <span className="groupBadge">{groupLabel(badge)}</span> : null}
             </div>
 
-            <Lines item={item} showPinyin={showPinyin} revealed={revealed} />
+            {kind === 'cloze' ? (
+              <ClozePassage item={item} filled={filled} showPinyin={showPinyin} revealed={revealed} />
+            ) : (
+              <Lines item={item} showPinyin={showPinyin} revealed={revealed} />
+            )}
             {item.question ? <Question question={item.question} showPinyin={showPinyin} revealed={revealed} /> : null}
             <Choices
               item={item}
+              kind={kind}
               options={options}
               example={example}
               picked={picked}
@@ -307,11 +366,11 @@ export default function Reading() {
               showPinyin={showPinyin}
               onPick={pick}
             />
-            <Verdict item={item} picked={picked} answerText={answerText(item, options)} />
+            <Verdict item={item} picked={picked} answerText={answerText(test, item, options)} />
 
             {revealed ? (
               <>
-                <Explanation item={item} options={options} source={`${testId} 독해 ${item.no}번`} />
+                <Explanation item={item} kind={kind} options={options} source={`${testId} 독해 ${item.no}번`} />
                 <button type="button" className="subButton listenRetry" onClick={retry}>
                   <RotateCcw size={15} /> 이 문제 다시 풀기
                 </button>

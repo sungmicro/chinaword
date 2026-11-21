@@ -6,8 +6,8 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from mine_refresh import (INDEX_PATH, IndexProblems, build_index, check_mine_refresh, index_text, merged_moves,
-                          write_mine_refresh)
+from mine_refresh import (INDEX_PATH, IndexProblems, build_index, check_mine_refresh, index_text, load_questions,
+                          merged_moves, write_mine_refresh)
 
 REPO = Path(__file__).resolve().parents[1]
 
@@ -127,6 +127,17 @@ class BuildIndexTest(unittest.TestCase):
                 mine_refresh.load_fixes, mine_refresh.MOVES_PATH = original
         self.assertEqual(json.loads(first), json.loads(index_text(json.loads(first))))
 
+
+
+class Hsk30QuestionsTest(unittest.TestCase):
+    def test_hsk30_samples_are_scanned_with_app_source_addresses(self):
+        # 앱 출처 «S30-3 듣기 12번» → listening/S30-3/12 (src/mineRefresh.js sourceAddress)
+        questions = load_questions(REPO)
+        for address in ('listening/S30-3/12', 'reading/S30-3/31', 'writing/S30-3/61', 'writing/S30-3/66',
+                        'listening/S30-4/32', 'reading/S30-4/58', 'writing/S30-4/70'):
+            self.assertIn(address, questions)
+        self.assertTrue(all(questions[a] for a in questions if '/S30-' in a))
+        self.assertIn('reading/H31001/41', questions)  # 기존 회차는 그대로
 
 
 class FailurePropagationTest(unittest.TestCase):

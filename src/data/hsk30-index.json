@@ -1,0 +1,36 @@
+[
+  {
+    "id": "S30-3",
+    "level": 3,
+    "title": "HSK 3.0 3급 샘플",
+    "listening": {
+      "file": "S30-3-listening.json",
+      "count": 30
+    },
+    "reading": {
+      "file": "S30-3-reading.json",
+      "count": 30
+    },
+    "writing": {
+      "file": "S30-3-writing.json",
+      "count": 10
+    }
+  },
+  {
+    "id": "S30-4",
+    "level": 4,
+    "title": "HSK 3.0 4급 샘플",
+    "listening": {
+      "file": "S30-4-listening.json",
+      "count": 32
+    },
+    "reading": {
+      "file": "S30-4-reading.json",
+      "count": 32
+    },
+    "writing": {
+      "file": "S30-4-writing.json",
+      "count": 6
+    }
+  }
+]

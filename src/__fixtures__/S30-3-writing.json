@@ -1,0 +1,109 @@
+{
+ "items": [
+  {
+   "id": "S30-3-61",
+   "exam": "S30-3",
+   "no": 61,
+   "part": 1,
+   "kind": "hanzi",
+   "sentence": "我们一起去___吧。",
+   "pinyin": "fāng",
+   "answers": [
+    "方"
+   ],
+   "explain": {
+    "words": [
+     [
+      "我们",
+      "wǒmen"
+     ],
+     [
+      "一起",
+      "yìqǐ"
+     ],
+     [
+      "去",
+      "qù"
+     ],
+     [
+      "地方",
+      "dìfang"
+     ],
+     [
+      "吧",
+      "ba"
+     ],
+     [
+      "。",
+      ""
+     ]
+    ],
+    "ko": "우리 같이 가자.",
+    "vocab": [
+     {
+      "hanzi": "地方",
+      "pinyin": "dìfang",
+      "partOfSpeech": "명사",
+      "meaningKo": "곳, 장소"
+     }
+    ]
+   }
+  },
+  {
+   "id": "S30-3-66",
+   "exam": "S30-3",
+   "no": 66,
+   "part": 2,
+   "kind": "picture",
+   "word": "看",
+   "wordPinyin": "kàn",
+   "image": "S30-3-w66.jpg",
+   "answers": [
+    "他正在看书。"
+   ],
+   "explain": {
+    "answers": [
+     {
+      "words": [
+       [
+        "他",
+        "tā"
+       ],
+       [
+        "正在",
+        "zhèngzài"
+       ],
+       [
+        "看",
+        "kàn"
+       ],
+       [
+        "书",
+        "shū"
+       ],
+       [
+        "。",
+        ""
+       ]
+      ],
+      "ko": "그는 책을 읽고 있다."
+     }
+    ],
+    "vocab": [
+     {
+      "hanzi": "正在",
+      "pinyin": "zhèngzài",
+      "partOfSpeech": "부사",
+      "meaningKo": "~하고 있는 중이다"
+     }
+    ],
+    "grammar": [
+     {
+      "pattern": "正在 + 동사",
+      "note": "동작이 진행 중임을 나타낸다."
+     }
+    ]
+   }
+  }
+ ]
+}

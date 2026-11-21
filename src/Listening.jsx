@@ -1,10 +1,10 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { ChevronLeft, ChevronRight, Eye, Headphones, Play, Repeat, RotateCcw, Square } from 'lucide-react';
-import testIndex from './data/listening-index.json';
 import { ChoiceButton, ExplainGrammar, ExplainVocab, Ruby, Verdict } from './hskParts';
+import { groupLabel, nextLetter, partChips, tabPrefs, withTabPrefs } from './examCatalog';
 import {
   UNKNOWN,
-  fetchTest,
+  fetchExam,
   loadAnswers,
   loadPrefs,
   saveAnswers,
@@ -15,8 +15,8 @@ import {
 
 // HSK 공식 모의고사 듣기. 문항마다 '듣기 → 고르기(또는 모르겠음) → 대본·해설 확인'.
 // 음원은 회차마다 문제 낭독만 이어 붙인 mp3 하나이고, 문항은 그 안의 구간입니다.
+// 탭(3급·4급·기출(2.0))마다 시험지 목록(exams, examCatalog)이 다르고, 음원·사진은 그 목록의 base 아래에 있습니다.
 
-const PART_CHIPS = ['전체', 1, 2, 3, 4];
 const SPEAKER_LABELS = { 男: '남', 女: '여', 问: '질문', '★': '★' };
 const TRUE_FALSE = [
   { value: '√', label: '✓ 맞다' },
@@ -28,7 +28,7 @@ function answerLabel(item) {
   return item.answer;
 }
 
-function Choices({ item, picked, revealed, onPick }) {
+function Choices({ item, base, picked, revealed, onPick }) {
   const { choices } = item;
   const shared = { item, picked, revealed, onPick };
 
@@ -37,12 +37,12 @@ function Choices({ item, picked, revealed, onPick }) {
       <div className="listenChoices">
         <img
           className="listenPicture"
-          src={`/listening/${choices.image}`}
+          src={`${base}/${choices.image}`}
           alt={`${item.no}번 보기 사진 ${choices.labels.join(', ')}`}
         />
         <div className="listenLetters">
           {choices.labels.map((label) => (
-            <ChoiceButton key={label} value={label} className="letter" {...shared}>
+            <ChoiceButton key={label} value={label} className="letter" blocked={label === choices.example} {...shared}>
               {label}
             </ChoiceButton>
           ))}
@@ -90,7 +90,7 @@ function Choices({ item, picked, revealed, onPick }) {
         </ChoiceButton>
       ))}
       <ChoiceButton value={UNKNOWN} className="option unknownChoice" {...shared}>
-        <span className="optionLabel">D</span>
+        <span className="optionLabel">{nextLetter(choices.options.map((option) => option.label))}</span>
         <span className="optionText">모르겠음</span>
       </ChoiceButton>
     </div>
@@ -126,10 +126,13 @@ function Explanation({ item, source }) {
   );
 }
 
-export default function Listening() {
-  const initial = useMemo(loadPrefs, []);
+export default function Listening({ tab = 'past', exams = [] }) {
+  const initial = useMemo(() => {
+    const saved = loadPrefs();
+    return { positions: saved.positions, ...tabPrefs(saved, tab) };
+  }, [tab]);
   const [testId, setTestId] = useState(
-    testIndex.some((test) => test.id === initial.testId) ? initial.testId : testIndex[0]?.id
+    exams.some((test) => test.id === initial.testId) ? initial.testId : exams[0]?.id
   );
   const [part, setPart] = useState(initial.part ?? '전체');
   const [positions, setPositions] = useState(initial.positions ?? {});
@@ -139,28 +142,38 @@ export default function Listening() {
   const [error, setError] = useState('');
   const bodyRef = useRef(null);
 
+  const entry = exams.find((test) => test.id === testId);
+  const base = entry?.base ?? '/listening';
+
   useEffect(() => {
+    if (!entry) return undefined;
     let alive = true;
     setTest(null);
     setError('');
-    fetchTest(testId)
+    fetchExam(entry)
       .then((data) => alive && setTest(data))
       .catch((err) => alive && setError(err.message));
     return () => {
       alive = false;
     };
-  }, [testId]);
+  }, [entry]);
 
   useEffect(() => {
-    savePrefs({ testId, part, positions });
-  }, [testId, part, positions]);
+    savePrefs(withTabPrefs(loadPrefs(), tab, { testId, part }, { positions }));
+  }, [tab, testId, part, positions]);
+
+  const chips = partChips(test);
+  // 저장된 부분이 이 시험지에 없으면(예: 4급은 2부분까지) 전체로 돌립니다.
+  useEffect(() => {
+    if (test && !chips.includes(part)) setPart('전체');
+  }, [test, chips, part]);
 
   const items = useMemo(
     () => (test ? test.items.filter((item) => part === '전체' || item.part === part) : []),
     [test, part]
   );
   const allItems = test?.items ?? [];
-  const { playing, playItem, playRun, stop } = useClipPlayer(test ? `/listening/${test.audio}` : null, allItems);
+  const { playing, playItem, playRun, stop } = useClipPlayer(test ? `${base}/${test.audio}` : null, allItems);
 
   const savedNo = positions[testId];
   const index = Math.max(0, items.findIndex((item) => item.no === savedNo));
@@ -227,20 +240,20 @@ export default function Listening() {
     <section className="listenPanel">
       <div className="listenControls">
         <div className="lessonChips listenTests" aria-label="회차 선택">
-          {testIndex.map((entry) => (
+          {exams.map((exam) => (
             <button
-              key={entry.id}
+              key={exam.id}
               type="button"
-              className={`lessonChip ${testId === entry.id ? 'active' : ''}`}
-              onClick={() => changeTest(entry.id)}
+              className={`lessonChip ${testId === exam.id ? 'active' : ''}`}
+              onClick={() => changeTest(exam.id)}
             >
-              {entry.id}
+              {exam.label}
             </button>
           ))}
         </div>
         <div className="listenToolbar">
           <div className="memoToggles" aria-label="부분 선택">
-            {PART_CHIPS.map((chip) => (
+            {chips.map((chip) => (
               <button
                 key={chip}
                 type="button"
@@ -272,7 +285,8 @@ export default function Listening() {
 
       <div className="listenBody" ref={bodyRef}>
         {error ? <p className="listEmpty">{error}</p> : null}
-        {!error && !item ? <p className="listEmpty">불러오는 중…</p> : null}
+        {!entry ? <p className="listEmpty">아직 준비 중인 시험지예요.</p> : null}
+        {entry && !error && !item ? <p className="listEmpty">불러오는 중…</p> : null}
         {item ? (
           <article className="listenCard">
             <div className="quizProgress">
@@ -280,6 +294,7 @@ export default function Listening() {
                 {item.no}번 · {item.part}부분
               </span>
               <span>{guide}</span>
+              {item.group ? <span className="groupBadge">{groupLabel(item.group)}</span> : null}
             </div>
 
             <div className="listenPlayRow">
@@ -296,7 +311,7 @@ export default function Listening() {
               </button>
             </div>
 
-            <Choices item={item} picked={picked} revealed={revealed} onPick={pick} />
+            <Choices item={item} base={base} picked={picked} revealed={revealed} onPick={pick} />
             <Verdict item={item} picked={picked} answerText={answerLabel(item)} />
 
             {revealed ? (

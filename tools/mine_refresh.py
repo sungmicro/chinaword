@@ -38,7 +38,7 @@ from vocab_fixes import has_hangul, load_fixes, write_files_atomically  # noqa: 
 INDEX_PATH = Path('src') / 'data' / 'mine-refresh.json'
 MOVES_PATH = Path(__file__).with_name('mine_moves.json')
 WORD_TYPE = '단어'
-ABOUT = ('내 단어장 갱신 색인. tools/mine_refresh.py가 공개 해설 데이터(public/reading·listening·writing), '
+ABOUT = ('내 단어장 갱신 색인. tools/mine_refresh.py가 공개 해설 데이터(public/reading·listening·writing·hsk30), '
          'src/data/vocab.json, tools/vocab_fixes.json(split·items), tools/mine_moves.json, tools/sentence_splits.json에서 만든다. 손으로 고치지 않는다. '
          '앱(src/mineRefresh.js)이 내 단어장을 불러올 때 단어 항목을 지금 데이터의 병음·뜻·품사로 바꾸고, 나뉜 묶음은 조각으로, '
          '예문 병음의 붙은 토큰(bǐjiàománg)은 나눈 병음으로 바꾼다.')
@@ -69,6 +69,20 @@ def load_questions(repo):
             vocab = (item.get('study') or {}).get('vocab')
             if vocab:
                 questions[f'writing/{item["exam"]}/{item["no"]}'] = vocab
+    # HSK 3.0 공식 샘플(public/hsk30): 앱이 적는 출처가 «S30-3 듣기 12번»이라 주소는 listening/S30-3/12 형식이다.
+    # 독해 해설은 explain.vocab, 듣기는 vocab, 쓰기는 explain.vocab(해설이 없는 문항은 건너뛴다).
+    for kind in ('listening', 'reading', 'writing'):
+        for path in sorted((repo / 'public' / 'hsk30').glob(f'S30-*-{kind}.json')):
+            data = json.loads(path.read_text(encoding='utf-8'))
+            for item in data['items']:
+                if kind == 'listening':
+                    vocab = item.get('vocab')
+                    test_id = data['id']
+                else:
+                    vocab = (item.get('explain') or {}).get('vocab')
+                    test_id = data['id'] if kind == 'reading' else item['exam']
+                if vocab:
+                    questions[f'{kind}/{test_id}/{item["no"]}'] = vocab
     return questions
 
 

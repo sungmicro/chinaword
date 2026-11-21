@@ -1,6 +1,7 @@
 // 듣기 탭 도우미: 풀이 기록, 문항 구간 재생. 독해와 같이 쓰는 부분은 practiceStore.js에 있습니다.
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { fetchCached, readJson, writeJson } from './practiceStore';
+import { examUrl } from './examCatalog';
 
 export { UNKNOWN, gradeOf, tally } from './practiceStore';
 
@@ -13,8 +14,8 @@ export const saveAnswers = (answers) => writeJson(ANSWER_KEY, answers);
 export const loadPrefs = () => readJson(PREF_KEY, {});
 export const savePrefs = (prefs) => writeJson(PREF_KEY, prefs);
 
-// 회차 데이터(대본·해설, 약 85KB)는 그 회차를 고를 때만 받아옵니다.
-export const fetchTest = (id) => fetchCached(`/listening/${id}.json`, id);
+// 회차 데이터(대본·해설, 약 85KB)는 그 회차를 고를 때만 받아옵니다. entry는 examCatalog의 시험지 항목입니다.
+export const fetchExam = (entry) => fetchCached(examUrl(entry), entry.id);
 
 // 이어 붙인 음원에서 지금 시각이 몇 번 문항인지 찾습니다 (문항 사이 쉼은 앞 문항에 붙입니다).
 function itemAt(items, time) {

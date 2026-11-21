@@ -27,6 +27,18 @@ function loadQuestions() {
   for (const item of writing.items) {
     if (item.study?.vocab?.length) questions.set(`${item.exam} 쓰기 ${item.no}번`, item.study.vocab);
   }
+  // HSK 3.0 샘플: 출처 «S30-3 듣기 12번»(주소 listening/S30-3/12, tools/mine_refresh.py와 같은 규칙)
+  const hsk30 = new URL('../public/hsk30/', import.meta.url);
+  for (const kind of ['listening', 'reading', 'writing']) {
+    for (const name of fs.readdirSync(hsk30).filter((file) => new RegExp(`^S30-.*-${kind}\\.json$`).test(file)).sort()) {
+      const data = JSON.parse(fs.readFileSync(new URL(name, hsk30), 'utf8'));
+      for (const item of data.items) {
+        const words = kind === 'listening' ? item.vocab : item.explain?.vocab;
+        const testId = kind === 'writing' ? item.exam : data.id;
+        if (words?.length) questions.set(`${testId} ${{ listening: '듣기', reading: '독해', writing: '쓰기' }[kind]} ${item.no}번`, words);
+      }
+    }
+  }
   return questions;
 }
 const QUESTIONS = loadQuestions();

@@ -69,3 +69,36 @@ test('저장된 쓰기 설정 복원: 새 형식은 그대로, 예전 연속 번
   assert.deepEqual(restoreWritingPrefs({ testId: 'NOPE', part: 3 }, items), { testId: 'H31001', part: 1, positions: {} });
   assert.equal(restoreWritingPrefs({ testId: 'H31001', part: 7 }, items).part, 1);
 });
+
+test('3.0 쓰기: part가 적힌 문항은 그 부분, 부분 칩·안내는 데이터에서 나온다', async () => {
+  const { WRITING_KIND_GUIDES, countEssayChars, restoreTabWritingPrefs, usesWord, writingPart, writingPartChips, writingPartGuide } = await import('./writingTools.js');
+  const w3 = JSON.parse(fs.readFileSync(new URL('./__fixtures__/S30-3-writing.json', import.meta.url))).items;
+  const w4 = JSON.parse(fs.readFileSync(new URL('./__fixtures__/S30-4-writing.json', import.meta.url))).items;
+  assert.equal(writingPart(w3.find((x) => x.kind === 'hanzi')), 1);
+  assert.equal(writingPart(w3.find((x) => x.kind === 'picture')), 2);
+  assert.equal(writingPart(w4.find((x) => x.kind === 'picture')), 1);
+  assert.equal(writingPart(w4.find((x) => x.kind === 'essay')), 2);
+  // 기출(2.0)은 part 없이 형식으로 정한다(예전 그대로).
+  assert.equal(writingPart(items.find((x) => x.kind === 'reorder')), 1);
+  assert.equal(writingPart(items.find((x) => x.kind === 'hanzi')), 2);
+  assert.deepEqual(writingPartChips(items), WRITING_PART_CHIPS);
+  assert.deepEqual(writingPartChips(w4), ['전체', 1, 2]);
+  assert.equal(writingPartGuide(items, 1), '문장 순서 맞추기');
+  assert.equal(writingPartGuide(items, 2), '병음 보고 한자 쓰기');
+  assert.equal(writingPartGuide(w3, 1), WRITING_KIND_GUIDES.hanzi);
+  assert.equal(writingPartGuide(w4, 2), '짧은 글 쓰기');
+  assert.equal(writingPartGuide(w4, 2, [{ part: 2, guide: '80자 이상 짧은 글' }]), '80자 이상 짧은 글');
+  assert.equal(countEssayChars('我 每天\n跑步。'), 6);
+  assert.equal(countEssayChars(undefined), 0);
+  assert.ok(usesWord('他正在看书。', '正在'));
+  assert.ok(!usesWord('他看书。', '正在'));
+
+  const saved = { testId: 'H31005', part: 2, positions: { H31005: 78, 'S30-4': 70 }, levels: { hsk4: { testId: 'S30-4', part: 2 } } };
+  assert.deepEqual(restoreTabWritingPrefs(saved, items, 'past'), { testId: 'H31005', part: 2, positions: saved.positions });
+  assert.deepEqual(restoreTabWritingPrefs(saved, w4, 'hsk4'), { testId: 'S30-4', part: 2, positions: saved.positions });
+  // 처음 여는 3급은 기출 설정을 가져오지 않는다.
+  assert.deepEqual(restoreTabWritingPrefs(saved, w3, 'hsk3'), { testId: 'S30-3', part: 1, positions: saved.positions });
+  // 예전 연속 번호(index)는 기출(2.0)에서만 쓴다.
+  assert.deepEqual(restoreTabWritingPrefs({ index: 17 }, items, 'past'), { testId: 'H31002', part: 2, positions: { H31002: 78 } });
+  assert.equal(restoreTabWritingPrefs({ index: 17 }, w3, 'hsk3').testId, 'S30-3');
+});

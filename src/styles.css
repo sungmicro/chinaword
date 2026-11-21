@@ -2084,3 +2084,187 @@ code {
     font-size: 0.72rem;
   }
 }
+
+/* 3급·4급·기출(2.0) 탭 아래 듣기·독해·쓰기 서브탭 */
+.subTabs {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.subTab {
+  min-width: 0;
+  min-height: 36px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--muted);
+  font-size: 0.88rem;
+  font-weight: 850;
+}
+
+.subTab.active {
+  border-color: transparent;
+  background: var(--accent-strong);
+  color: #fff8ef;
+}
+
+/* 여러 문항이 같은 글·대화를 쓰는 묶음 표시 */
+.quizProgress span.groupBadge {
+  background: #e6eef8;
+  color: #2c4a6e;
+}
+
+/* 독해 cloze: 글 속 빈칸 */
+.ruby-clozeSlot .rubyHanzi {
+  color: var(--muted);
+}
+
+.ruby-clozeCurrent .rubyHanzi {
+  padding: 0 4px;
+  border-radius: 6px;
+  background: #fff1c9;
+  color: var(--accent-strong);
+  font-weight: 700;
+  outline: 2px solid #e8c36a;
+}
+
+.ruby-clozeFill .rubyHanzi {
+  background: #e8f5ec;
+  color: #235535;
+}
+
+/* 쓰기: 사진 보고 문장 쓰기 · 짧은 글 */
+.writingPicture {
+  display: block;
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #fff;
+}
+
+.writingWord {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 0;
+}
+
+.writingWordLabel {
+  padding: 2px 10px;
+  border-radius: 999px;
+  background: #f2e4d4;
+  color: var(--accent-strong);
+  font-size: 0.8rem;
+  font-weight: 900;
+}
+
+.writingWord ruby {
+  font-family: var(--hanzi-font);
+  font-weight: var(--hanzi-weight);
+  font-size: 1.6rem;
+}
+
+.writingWord rt {
+  font-family: system-ui;
+  font-size: 0.5em;
+}
+
+.writingInput {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #fff;
+  color: var(--text);
+  font-family: var(--hanzi-font);
+  font-size: 1.2rem;
+  line-height: 1.7;
+  resize: vertical;
+}
+
+.writingInput:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+.writingHint,
+.essayCount {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+.writingHint.ok,
+.essayCount.ok {
+  color: #2f6b3f;
+}
+
+.essayPrompt {
+  min-width: 0;
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: #fbf5ee;
+  overflow-wrap: anywhere;
+}
+
+.essayModel {
+  min-width: 0;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #f1f7ef;
+}
+
+.essayModel summary {
+  cursor: pointer;
+  color: var(--accent-strong);
+  font-weight: 900;
+}
+
+.essayModel[open] summary {
+  margin-bottom: 10px;
+}
+
+.essayModelLines {
+  display: grid;
+  gap: 12px;
+  margin: 10px 0;
+}
+
+.essayModelLines .ruby {
+  max-width: 100%;
+}
+
+.essayModel .writingStudyVocab h3 {
+  margin: 12px 0 8px;
+  font-size: 15px;
+}
+
+@media (max-width: 680px) {
+  .subTabs {
+    gap: 4px;
+    margin-bottom: 6px;
+  }
+
+  .subTab {
+    min-height: 32px;
+    font-size: 0.8rem;
+  }
+
+  .writingWord ruby {
+    font-size: 1.35rem;
+  }
+
+  .writingInput {
+    font-size: 1.05rem;
+  }
+}

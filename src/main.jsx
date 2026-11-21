@@ -20,6 +20,10 @@ import {
 import Listening from './Listening';
 import Reading from './Reading';
 import Writing from './Writing';
+import listeningIndex from './data/listening-index.json';
+import readingIndex from './data/reading-index.json';
+import hsk30Index from './data/hsk30-index.json';
+import { EXAM_TABS, SUB_KEY, SUB_OPTIONS, VIEW_KEY, VIEW_OPTIONS, buildCatalog, restoreView } from './examCatalog';
 import './styles.css';
 
 // 내 단어장을 처음 불러올 때 예전에 담은 단어를 지금 데이터(뜻·병음 보정, 나뉜 묶음)에 맞춥니다.
@@ -40,13 +44,15 @@ const MODE_OPTIONS = [
   { key: 'meaningKo', label: '뜻만' }
 ];
 
-const VIEW_OPTIONS = [
-  { key: 'study', label: '랜덤 학습' },
-  { key: 'list', label: '단어장' },
-  { key: 'listen', label: '듣기' },
-  { key: 'read', label: '독해' },
-  { key: 'write', label: '쓰기' }
-];
+// 3급·4급(HSK 3.0 공식 샘플)·기출(2.0)(H31 기출) 탭의 듣기·독해·쓰기 시험지 목록.
+const CATALOG = buildCatalog({ listening: listeningIndex, reading: readingIndex, hsk30: hsk30Index });
+
+const SUB_HINTS = {
+  listen: '문제 듣기는 멈춤을 누를 때까지 되풀이합니다 · 이어 듣기는 화면을 꺼도 계속 재생됩니다',
+  read: '답을 고르면 정답 근거·오답 이유·핵심 단어·문장 구조가 열립니다 · ＋ 담기로 내 단어장에 모아요',
+  write: '회차를 고르고 1부분(문장 순서)·2부분(한자 쓰기)을 나눠 풀어 보세요'
+};
+const NEW_WRITE_HINT = '부분을 골라 써 보세요 · 쓴 문장은 이 기기에 저장됩니다';
 
 function loadJson(key, fallback) {
   try {
@@ -501,10 +507,12 @@ function App() {
   const [promptType, setPromptType] = useState(() => resolvePromptType(pool[currentIndex], promptMode));
   const [revealed, setRevealed] = useState(false);
   const [speakingText, setSpeakingText] = useState(null);
-  const [view, setView] = useState(() => {
-    const saved = loadJson('sungmi-vocab-view-v1', 'study');
-    return VIEW_OPTIONS.some((option) => option.key === saved) ? saved : 'study';
-  });
+  // 예전 듣기·독해·쓰기 탭(listen·read·write)에 있던 사람은 기출(2.0)의 그 서브탭으로 엽니다.
+  const [initialView] = useState(() => restoreView(loadJson(VIEW_KEY, 'study'), loadJson(SUB_KEY, null)));
+  const [view, setView] = useState(initialView.view);
+  const [subs, setSubs] = useState(initialView.subs);
+  const examTab = EXAM_TABS.includes(view) ? view : null;
+  const sub = examTab ? subs[examTab] : null;
   // 내 단어장 항목의 모름 횟수만 바뀐 것처럼 카드 목록(id 순서)이 그대로면 보던 카드를 유지합니다.
   const poolKey = useMemo(() => pool.map((item) => item.id).join('\n'), [pool]);
   const previousPoolKey = useRef(poolKey);
@@ -528,8 +536,12 @@ function App() {
   }, [promptMode]);
 
   useEffect(() => {
-    saveJson('sungmi-vocab-view-v1', view);
+    saveJson(VIEW_KEY, view);
   }, [view]);
+
+  useEffect(() => {
+    saveJson(SUB_KEY, subs);
+  }, [subs]);
 
   useEffect(() => {
     saveJson('sungmi-vocab-study-group-v1', studyGroup);
@@ -578,7 +590,7 @@ function App() {
   useEffect(() => {
     stopSpeaking();
     setSpeakingText(null);
-  }, [currentIndex, currentCard?.id, poolKey, view]);
+  }, [currentIndex, currentCard?.id, poolKey, view, sub]);
 
   const statsText = useMemo(() => {
     const breakdown = typeBreakdown(studyItems);
@@ -677,6 +689,23 @@ function App() {
           ))}
         </div>
 
+        {examTab ? (
+          <div className="subTabs" role="tablist" aria-label="영역 선택">
+            {SUB_OPTIONS.map((option) => (
+              <button
+                key={option.key}
+                type="button"
+                role="tab"
+                aria-selected={sub === option.key}
+                className={`subTab ${sub === option.key ? 'active' : ''}`}
+                onClick={() => setSubs((prev) => ({ ...prev, [examTab]: option.key }))}
+              >
+                {option.label}
+              </button>
+            ))}
+          </div>
+        ) : null}
+
         {view === 'study' ? (
           <PromptModeButtons promptMode={promptMode} onChange={changePromptMode} />
         ) : null}
@@ -738,12 +767,12 @@ function App() {
           speakingText={speakingText}
           onSpeak={handleSpeak}
         />
-      ) : view === 'listen' ? (
-        <Listening />
-      ) : view === 'read' ? (
-        <Reading />
+      ) : sub === 'listen' ? (
+        <Listening key={`${examTab}-listen`} tab={examTab} exams={CATALOG[examTab].listen} />
+      ) : sub === 'read' ? (
+        <Reading key={`${examTab}-read`} tab={examTab} exams={CATALOG[examTab].read} />
       ) : (
-        <Writing />
+        <Writing key={`${examTab}-write`} tab={examTab} exams={CATALOG[examTab].write} />
       )}
 
       <p className="keyboardHint">
@@ -751,11 +780,9 @@ function App() {
           ? 'Space 또는 Enter: 정답 보기 / 다음 카드 · S: 발음 듣기 · 모르겠어: 모름 +1 · 알겠어: 모름 −1 하고 다음 카드'
           : view === 'list'
             ? '단어를 누르면 발음이 재생됩니다'
-            : view === 'listen'
-                ? '문제 듣기는 멈춤을 누를 때까지 되풀이합니다 · 이어 듣기는 화면을 꺼도 계속 재생됩니다'
-                : view === 'read'
-                  ? '답을 고르면 정답 근거·오답 이유·핵심 단어·문장 구조가 열립니다 · ＋ 담기로 내 단어장에 모아요'
-                  : '회차를 고르고 1부분(문장 순서)·2부분(한자 쓰기)을 나눠 풀어 보세요'}
+            : sub === 'write' && examTab !== 'past'
+              ? NEW_WRITE_HINT
+              : SUB_HINTS[sub]}
       </p>
     </main>
   );
